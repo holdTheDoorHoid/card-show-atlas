@@ -158,7 +158,7 @@ interface Lab {
   start: DayState;
 }
 
-/** Exact optimum: most value, then least driving. Practical up to about 12 to 14 candidates. */
+/** Exact optimum: most value, then least driving. Practical up to about 10 to 12 candidates. */
 export function solveShopExact(inst: ShopInstance): ShopSolution {
   const { n, D, tt, win, dwell, cap } = inst;
   if (n > 20) throw new PlannerError('too_many_for_exact', 'Too many stops for the exact search.');
@@ -674,6 +674,6 @@ export function solveShopHeuristic(inst: ShopInstance, opts: HeuristicOptions = 
 }
 
 /** Exact search for small sets, heuristic beyond `exactLimit`. */
-export function solveShop(inst: ShopInstance, exactLimit = 12, heuristic: HeuristicOptions = {}): ShopSolution {
+export function solveShop(inst: ShopInstance, exactLimit = 10, heuristic: HeuristicOptions = {}): ShopSolution {
   return inst.n <= exactLimit ? solveShopExact(inst) : solveShopHeuristic(inst, heuristic);
 }

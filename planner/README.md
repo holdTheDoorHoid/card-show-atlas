@@ -246,7 +246,7 @@ planWeekendRun(shows, settings, {
   maxShows: 3,
   alternatives: 3,
   // shopping only:
-  dwellMinutes: 90, interests: ['pokemon'], values: { 'some-show-id': 80 }, people: 1, exactLimit: 12, seed: 1,
+  dwellMinutes: 90, interests: ['pokemon'], values: { 'some-show-id': 80 }, people: 1, exactLimit: 10, seed: 1,
 });
 // { mode, best: Plan | null, alternatives: Plan[], excluded: [{ id, name, reason }], warnings, candidates, exact, ms }
 ```
@@ -464,9 +464,9 @@ shows' priority scores, where the travel factor uses the leg actually driven to 
 only break ties. Waitlisted and tentative shows are planned and marked, not penalized.
 
 **Speed.** Season benchmark (`npm run bench`, about 2,000 candidates over six months, five cases on
-fresh data in one fresh process, so the first case also pays for JIT warm up): the first case took
-about 0.4 s of CPU and 0.7 to 1.1 s of wall clock time while other work held the machine at a load
-average of 33 to 43 on 8 cores; the other cases took 0.1 to 0.3 s of CPU. The five cases cover a
+fresh data in one fresh process, so the first case also pays for JIT warm up): across several runs the first case took
+0.4 to 0.5 s of CPU and 0.7 to 1.6 s of wall clock time while other work held the machine at a load
+average of 29 to 43 on 8 cores; the other cases took 0.1 to 0.4 s of CPU. The five cases cover a
 dense region with and without limits, a nationwide spread across four time zones, going home
 between shows, and score mode. The test fails when the planner's own CPU time passes 2 seconds, and
 also when wall time does unless the machine is overloaded (load average above the core count), in
@@ -484,9 +484,10 @@ driving cap and window, home each night or a hotel near the last stop. The goal 
 set of visits (value from size, what you collect and free entry, or your own `values`), then the
 least driving.
 
-* **Exact** up to `exactLimit` candidates (12): label setting over (visited set, position, day) with
+* **Exact** up to `exactLimit` candidates (10): label setting over (visited set, position, day) with
   dominance on time, hours driven today and total driving. Equal to brute force (every order and every
-  split into days) on 300 random instances.
+  split into days) on 300 random instances. Its worst case (every show open every day, close
+  together, equal value) grows fast past 10, which is why the default stops there.
 * **Heuristic** beyond that: three greedy insertion starts (value squared per added hour, value per
   added hour, value first), then local search (2 opt within a day, relocate and swap stops anywhere,
   swap a visited stop for a better unvisited one, drop one or two stops and refill), inside an

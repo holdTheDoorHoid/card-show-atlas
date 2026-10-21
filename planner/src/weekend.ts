@@ -60,7 +60,7 @@ export interface WeekendRunOptions extends CommonPlanOptions {
   values?: Record<string, number>;
   /** Shopping: people paying admission. Default 1. */
   people?: number;
-  /** Shopping: exact search up to this many candidates. Default 12. */
+  /** Shopping: exact search up to this many candidates. Default 10. */
   exactLimit?: number;
   /** Shopping heuristic seed, for repeatable results. Default 1. */
   seed?: number;
@@ -323,15 +323,17 @@ function shoppingRun(
   t0: number,
 ): WeekendRunResult {
   const overnight = options.overnight ?? 'stay';
-  const exactLimit = options.exactLimit ?? 12;
+  const exactLimit = options.exactLimit ?? 10;
   const maxStops = options.maxShows ?? Infinity;
-  const solveWith = (stops: number, mode: 'home' | 'stay', lastDate: string, skip: Set<string>) => {
+  // The best plan gets the full heuristic budget; each alternative a smaller one, so a run with
+  // alternatives stays around a second even above the exact limit.
+  const solveWith = (stops: number, mode: 'home' | 'stay', lastDate: string, skip: Set<string>, budgetMs = 150) => {
     const cands = kept.filter((c) => !skip.has(c.show.id) && c.days.some((d) => d.date <= lastDate && d.date >= options.dates.start));
     const built = buildShopInstance(cands, settings, options, start, end, r, stops, mode, lastDate);
-    const sol = solveShop(built.inst, exactLimit, { seed: options.seed ?? 1 });
+    const sol = solveShop(built.inst, exactLimit, { seed: options.seed ?? 1, timeBudgetMs: budgetMs });
     return { built, sol };
   };
-  const first = solveWith(maxStops, overnight, options.dates.end, new Set());
+  const first = solveWith(maxStops, overnight, options.dates.end, new Set(), 400);
   const describe = (x: ReturnType<typeof solveWith>, title: string) => describeShopping(x.built.inst, x.built.meta, x.sol, settings, r, options, title);
   const best = first.sol.value > 0 ? describe(first, 'Best plan') : null;
   const warnings: string[] = [];

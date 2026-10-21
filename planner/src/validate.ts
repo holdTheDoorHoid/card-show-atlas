@@ -43,7 +43,9 @@ export function validateSettings(s: VendorSettings, needs: SettingsNeeds = {}): 
       if (!isNum(v) || v < 0) throw new PlannerError('bad_settings', 'Typical sales must be zero or more for every show size.');
     }
   }
-  if (!Array.isArray(s.sells)) throw new PlannerError('bad_settings', 'What you sell must be a list.');
+  if (s.sells !== undefined && s.sells !== null && !Array.isArray(s.sells)) {
+    throw new PlannerError('bad_settings', 'What you sell must be a list.');
+  }
   if (needs.needFuel !== false) {
     if (!s.fuel_price || !isNum(s.fuel_price.amount) || s.fuel_price.amount < 0) {
       throw new PlannerError('no_fuel_price', 'Add a fuel price in your settings.');
