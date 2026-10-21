@@ -1,0 +1,301 @@
+---
+import Base from '../../../layouts/Base.astro';
+import MiniMap from '../../../islands/MiniMap';
+import ShowActions from '../../../islands/ShowActions';
+import PlainShowList from '../../../components/PlainShowList.astro';
+import { SizeBadge, TypeBadge } from '../../../islands/ui';
+import { GOOGLE_FORM_URL } from '../../../lib/config';
+import { todayISO, formatMonthDay } from '../../../lib/dates';
+import { displayHost, formatMoney, safeUrl } from '../../../lib/format';
+import { icsShowFrom } from '../../../lib/ics';
+import { EVENT_TYPE_INFO, SHOW_STATUS_LABEL } from '../../../lib/labels';
+import { snapshotFromShow } from '../../../lib/myshows';
+import { regionName, regionSlug } from '../../../lib/regions';
+import {
+  addressLines,
+  approximateNotice,
+  dayRows,
+  directionsUrl,
+  entryLines,
+  firstDay,
+  isPast,
+  jsonLdFor,
+  lastCheckedText,
+  openStreetMapUrl,
+  placeLine,
+  sizeView,
+  sourceViews,
+  staleNotice,
+  statusNotice,
+  vendorView,
+  verificationView,
+  whenHeadline,
+} from '../../../lib/showview';
+import { absoluteUrl, fixShowUrl, issueFormUrl, removeShowUrl, showPath, withBase } from '../../../lib/urls';
+import { allVocabEntries } from '../../../lib/vocab';
+import { loadSiteData } from '../../../server/data';
+
+export function getStaticPaths() {
+  const data = loadSiteData();
+  return data.shows.map((s) => ({ params: { id: s.id }, props: { id: s.id } }));
+}
+
+const data = loadSiteData();
+const show = data.byId.get(Astro.props.id)!;
+const today = todayISO(new Date());
+const pageUrl = absoluteUrl(showPath(show.id));
+const past = isPast(show, today);
+const notice = statusNotice(show);
+const stale = staleNotice(show, today);
+const approx = approximateNotice(show);
+const size = sizeView(show);
+const vendor = vendorView(show);
+const verification = verificationView(show, data.sourceById);
+const sources = sourceViews(show, data.sourceById);
+const days = dayRows(show);
+const series = data.seriesById.get(show.series_id);
+const others = (series?.editions ?? []).filter((e) => e.id !== show.id);
+const upcomingOthers = others.filter((e) => !isPast(e, today));
+const pastOthers = others.filter((e) => isPast(e, today)).reverse();
+const directions = directionsUrl(show);
+const osm = openStreetMapUrl(show);
+const googleForm = safeUrl(GOOGLE_FORM_URL);
+const regionHref = withBase(`states/${regionSlug(show.venue.country, show.venue.region.toLowerCase())}/`);
+const vocabList = allVocabEntries(data.vocab);
+const sellGroups = [
+  { title: 'Card games', ids: show.sells.tcg },
+  { title: 'Sports cards', ids: show.sells.sports },
+  { title: 'Other', ids: show.sells.other },
+].filter((g) => g.ids.length > 0);
+const nameOf = (id: string) => vocabList.find((v) => v.id === id)?.name ?? id.replace(/_/g, ' ');
+const v = show.vendor;
+const contact = v.contact;
+const contactHref = contact ? (contact.includes('@') && !contact.includes(' ') ? `mailto:${contact}` : safeUrl(contact)) : null;
+const links = [
+  { label: 'Official page', url: safeUrl(show.links.official) },
+  { label: 'Tickets', url: safeUrl(show.links.tickets) },
+  { label: 'Facebook', url: safeUrl(show.links.facebook) },
+  { label: 'Instagram', url: safeUrl(show.links.instagram) },
+].filter((l) => l.url);
+const title = `${show.name}, ${whenHeadline(show)}, ${show.venue.city} ${show.venue.region}`;
+const description = `${show.name} in ${show.venue.city}, ${show.venue.region} on ${whenHeadline(show)}. ${size.badge === 'Size unknown' ? '' : `${size.badge} show. `}Hours, entry, what is sold and vendor tables.`;
+const icsInput = icsShowFrom(show, pageUrl);
+const lowestPrice = v.tables.map((t) => t.price).filter((p): p is number => p !== null).sort((a, b) => a - b)[0] ?? null;
+const firstTable = v.tables.find((t) => t.price === lowestPrice) ?? v.tables[0];
+---
+
+<Base title={title} description={description} path={showPath(show.id)} jsonLd={jsonLdFor(show, pageUrl)}>
+  <div class="container page">
+    <nav class="crumbs" aria-label="Breadcrumb">
+      <a href={withBase('states/')}>Browse</a>
+      {' / '}
+      <a href={regionHref}>{regionName(show.venue.country, show.venue.region)}</a>
+    </nav>
+
+    <header class="show-head">
+      <div class="badges">
+        <TypeBadge type={show.event_type} />
+        <SizeBadge size={show.estimate?.size_class} />
+        {show.status !== 'scheduled' && <span class={`badge ${show.status === 'cancelled' ? 'badge-bad' : 'badge-warn'}`}>{SHOW_STATUS_LABEL[show.status]}</span>}
+        <span class={`badge ${verification.kind === 'ok' ? 'badge-ok' : verification.kind === 'accent' ? 'badge-accent' : ''}`}>{verification.text}</span>
+      </div>
+      <h1 style="margin-top:0.6rem">{show.name}</h1>
+      <p class="when">{whenHeadline(show)}</p>
+      <p class="where">{placeLine(show)}</p>
+    </header>
+
+    {notice && <p class={`notice notice-${notice.kind}`} role="status">{notice.text}</p>}
+    {past && <p class="notice" role="status">This show has already happened.{upcomingOthers.length > 0 && <> The next one is <a href={withBase(showPath(upcomingOthers[0]!.id))}>{formatMonthDay(firstDay(upcomingOthers[0]!), true)}</a>.</>}</p>}
+    {stale && <p class="notice notice-warn" role="status">{stale} Check the organizer before you travel.</p>}
+
+    <ShowActions
+      client:load
+      id={show.id}
+      name={show.name}
+      ics={icsInput}
+      snapshot={snapshotFromShow(show)}
+      deadline={v.deadline}
+      tablePrice={lowestPrice}
+      tableLabel={firstTable?.label ?? ''}
+      past={past}
+    />
+
+    <div class="show-grid">
+      <div style="display:grid;gap:1rem">
+        <section class="card show-section" aria-labelledby="when-where">
+          <h2 id="when-where">When and where</h2>
+          <table class="price-table">
+            <caption class="sr-only">Days and hours</caption>
+            <thead><tr><th scope="col">Day</th><th scope="col">Hours</th></tr></thead>
+            <tbody>
+              {days.map((d) => <tr><td>{d.label}</td><td>{d.hours}{d.zone && ` ${d.zone}`}</td></tr>)}
+            </tbody>
+          </table>
+          <h3>Place</h3>
+          <p style="margin-bottom:0.4rem">{addressLines(show).map((l, i) => <>{i > 0 && <br />}{l}</>)}</p>
+          {approx && <p class="notice notice-warn small">{approx}</p>}
+          <div class="btn-row">
+            {directions && <a class="btn btn-small" href={directions} target="_blank" rel="noopener noreferrer">Directions</a>}
+            {osm && <a class="btn btn-small" href={osm} target="_blank" rel="noopener noreferrer">Open in OpenStreetMap</a>}
+          </div>
+          {show.venue.lat !== null && show.venue.lon !== null && <MiniMap client:visible lat={show.venue.lat} lon={show.venue.lon} type={show.event_type} precision={show.venue.geo_precision} name={show.name} />}
+        </section>
+
+        <section class="card show-section" aria-labelledby="entry-sold">
+          <h2 id="entry-sold">Entry and what is sold</h2>
+          <dl class="dl">
+            <dt>Entry</dt>
+            <dd>{entryLines(show).map((l, i) => <>{i > 0 && <br />}{l}</>)}</dd>
+            <dt>Kind of event</dt>
+            <dd>{EVENT_TYPE_INFO[show.event_type].label}. {EVENT_TYPE_INFO[show.event_type].blurb}</dd>
+          </dl>
+          <h3>What is sold</h3>
+          {sellGroups.length === 0 ? (
+            <p class="muted">The organizer has not said what is sold.</p>
+          ) : (
+            <dl class="dl">
+              {sellGroups.map((g) => (
+                <>
+                  <dt>{g.title}</dt>
+                  <dd>{g.ids.map(nameOf).join(', ')}</dd>
+                </>
+              ))}
+            </dl>
+          )}
+          {show.summary && <p style="margin-top:0.8rem">{show.summary}</p>}
+        </section>
+
+        <section class="card show-section" aria-labelledby="size-title">
+          <h2 id="size-title">Size and crowd</h2>
+          <p style="display:flex;gap:0.6rem;align-items:center;flex-wrap:wrap">
+            <SizeBadge size={show.estimate?.size_class} />
+            <span class="muted">{size.confidence}</span>
+          </p>
+          <p><strong>How we know:</strong> {size.how}</p>
+          {size.range && <p>{size.range}.</p>}
+          <dl class="dl">
+            {show.size.tables !== null && (<><dt>Vendor tables</dt><dd>{show.size.tables}</dd></>)}
+            {show.size.booths !== null && (<><dt>Booths</dt><dd>{show.size.booths}</dd></>)}
+            {show.size.players !== null && (<><dt>Players</dt><dd>{show.size.players}</dd></>)}
+            {show.size.reported_attendance && (<><dt>Reported crowd</dt><dd>{show.size.reported_attendance.value.toLocaleString('en-US')}{show.size.reported_attendance.year ? ` in ${show.size.reported_attendance.year}` : ''}</dd></>)}
+            {size.traffic && (<><dt>Traffic per table</dt><dd>{size.traffic}. A big show with many tables can be a worse room than a mid sized one.</dd></>)}
+            {show.size.first_year !== null && (<><dt>Running since</dt><dd>{show.size.first_year}</dd></>)}
+            {show.size.edition !== null && (<><dt>Edition</dt><dd>Number {show.size.edition}</dd></>)}
+          </dl>
+        </section>
+      </div>
+
+      <div style="display:grid;gap:1rem;align-content:start">
+        <section class="card show-section" aria-labelledby="vendor-title">
+          <h2 id="vendor-title">For vendors</h2>
+          {!vendor.hasInfo ? (
+            <p class="muted">We do not have table prices or an application link yet. Ask the organizer, or <a href={issueFormUrl('organizer.yml', { show: show.name }, `Organizer: ${show.name}`)} target="_blank" rel="noopener noreferrer">tell us if you run this show</a>.</p>
+          ) : (
+            <>
+              <p><span class={`badge ${vendor.statusKind === 'ok' ? 'badge-ok' : vendor.statusKind === 'bad' ? 'badge-bad' : vendor.statusKind === 'warn' ? 'badge-warn' : ''}`}>{vendor.statusText}</span></p>
+              {v.tables.length > 0 && (
+                <table class="price-table">
+                  <caption class="sr-only">Table prices</caption>
+                  <thead><tr><th scope="col">Table</th><th scope="col">Price</th></tr></thead>
+                  <tbody>
+                    {v.tables.map((t) => (
+                      <tr>
+                        <td>{t.label}{t.notes && <><br /><span class="muted small">{t.notes}</span></>}</td>
+                        <td>{t.price !== null ? formatMoney(t.price, t.currency) : 'Ask'}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              )}
+              <dl class="dl" style="margin-top:0.8rem">
+                {v.opens && (<><dt>Applications open</dt><dd>{formatMonthDay(v.opens, true)}</dd></>)}
+                {v.deadline && (<><dt>Apply by</dt><dd><strong>{formatMonthDay(v.deadline, true)}</strong></dd></>)}
+                {v.electricity && (<><dt>Electricity</dt><dd>{v.electricity}</dd></>)}
+                {v.setup && (<><dt>Setup from</dt><dd>{v.setup}</dd></>)}
+                {contact && (<><dt>Vendor contact</dt><dd>{contactHref ? <a href={contactHref}>{contact}</a> : contact}</dd></>)}
+              </dl>
+              {v.notes && <p>{v.notes}</p>}
+              {safeUrl(v.application_url) && (
+                <p><a class="btn btn-primary" href={safeUrl(v.application_url)!} target="_blank" rel="noopener noreferrer">Apply to vend ({displayHost(v.application_url!)})</a></p>
+              )}
+            </>
+          )}
+        </section>
+
+        <section class="card show-section" aria-labelledby="org-title">
+          <h2 id="org-title">Organizer and links</h2>
+          <dl class="dl">
+            {show.organizer.name && (
+              <>
+                <dt>Organizer</dt>
+                <dd>
+                  {data.promoters.some((p) => p.id === (show.organizer.promoter_id ?? '')) ? (
+                    <a href={withBase(`promoters/${show.organizer.promoter_id}/`)}>{show.organizer.name}</a>
+                  ) : (
+                    show.organizer.name
+                  )}
+                </dd>
+              </>
+            )}
+            {series && (<><dt>Series</dt><dd><a href={withBase(`series/${series.id}/`)}>{series.name}</a>{series.cadence ? `, ${series.cadence}` : ''}</dd></>)}
+          </dl>
+          {links.length > 0 || safeUrl(show.organizer.url) ? (
+            <ul>
+              {links.map((l) => <li><a href={l.url!} target="_blank" rel="noopener noreferrer">{l.label}</a> <span class="muted small">({displayHost(l.url!)})</span></li>)}
+              {safeUrl(show.organizer.url) && <li><a href={safeUrl(show.organizer.url)!} target="_blank" rel="noopener noreferrer">Organizer website</a></li>}
+            </ul>
+          ) : (
+            <p class="muted">No official links are listed yet.</p>
+          )}
+        </section>
+
+        <section class="card show-section" aria-labelledby="src-title">
+          <h2 id="src-title">Where this comes from</h2>
+          <p><span class={`badge ${verification.kind === 'ok' ? 'badge-ok' : verification.kind === 'accent' ? 'badge-accent' : ''}`}>{verification.text}</span></p>
+          <p class="muted">{verification.explain}</p>
+          <ul class="source-list">
+            {sources.map((s) => (
+              <li>
+                {s.url && safeUrl(s.url) ? <a href={safeUrl(s.url)!} target="_blank" rel="noopener noreferrer">{s.credit}</a> : s.credit}
+                <br />
+                <span class="muted small">{s.fields ? `Gave us: ${s.fields}. ` : ''}{s.retrieved ? `Seen ${s.retrieved}.` : ''}</span>
+              </li>
+            ))}
+            {sources.length === 0 && <li class="muted">No source is recorded for this listing.</li>}
+          </ul>
+          <p class="small"><strong>Last checked:</strong> {lastCheckedText(show)}. Facts only: we link to the source and do not copy anyone's write up.</p>
+        </section>
+      </div>
+    </div>
+
+    {others.length > 0 && (
+      <section class="show-section" aria-labelledby="eds-title" style="margin-top:1.5rem">
+        <h2 id="eds-title">Other editions of {series?.name ?? 'this show'}</h2>
+        <p class="muted">{series?.cadence ? `Usually ${series.cadence}.` : 'This show comes back, so you can plan ahead.'} <a href={withBase(`series/${show.series_id}/`)}>See the whole series</a>.</p>
+        {upcomingOthers.length > 0 && (
+          <>
+            <h3>Coming up</h3>
+            <PlainShowList shows={upcomingOthers.slice(0, 12)} region={false} />
+          </>
+        )}
+        {pastOthers.length > 0 && (
+          <details>
+            <summary style="cursor:pointer;min-height:44px;display:flex;align-items:center">Recent past editions ({pastOthers.length})</summary>
+            <PlainShowList shows={pastOthers.slice(0, 12)} region={false} />
+          </details>
+        )}
+      </section>
+    )}
+
+    <section class="card show-section" style="margin-top:1.5rem" aria-labelledby="help-title">
+      <h2 id="help-title">Help keep it right</h2>
+      <p>Spot a mistake, or run this show? Tell us. We check every change before it goes live, and we only publish contact details the organizer has published.</p>
+      <div class="btn-row">
+        <a class="btn" href={fixShowUrl(show.id, show.name)} target="_blank" rel="noopener noreferrer">Suggest an edit on GitHub</a>
+        {googleForm && <a class="btn btn-primary" href={googleForm} target="_blank" rel="noopener noreferrer">Suggest an edit without an account</a>}
+        <a class="btn" href={issueFormUrl('organizer.yml', { show: show.name }, `Organizer: ${show.name}`)} target="_blank" rel="noopener noreferrer">I run this show</a>
+      </div>
+      <p class="small muted"><a href={removeShowUrl(show.id, show.name)} target="_blank" rel="noopener noreferrer">Ask us to remove this show or some details</a>. <a href={withBase('add/#remove')}>How removals work</a>.</p>
+    </section>
+  </div>
+</Base>

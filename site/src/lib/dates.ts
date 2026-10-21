@@ -118,20 +118,22 @@ export function formatMonthDay(iso: string, withYear = false): string {
 }
 
 /** "Nov 14", "Nov 14 to 15", "Nov 30 to Dec 1", "Dec 30, 2026 to Jan 2, 2027" */
-export function formatRange(first: string, last: string = first): string {
+export function formatRange(first: string, last: string = first, refYear?: number): string {
   const a = parseISODate(first);
   const b = parseISODate(last);
   if (!a || !b) return first;
-  if (first === last) return formatMonthDay(first);
+  const yearTag = refYear !== undefined && a.y !== refYear ? `, ${a.y}` : '';
+  if (first === last) return `${formatMonthDay(first)}${yearTag}`;
   if (a.y !== b.y) return `${formatMonthDay(first, true)} to ${formatMonthDay(last, true)}`;
-  if (a.m === b.m) return `${MONTHS_SHORT[a.m - 1]} ${a.d} to ${b.d}`;
-  return `${formatMonthDay(first)} to ${formatMonthDay(last)}`;
+  if (a.m === b.m) return `${MONTHS_SHORT[a.m - 1]} ${a.d} to ${b.d}${yearTag}`;
+  return `${formatMonthDay(first)} to ${formatMonthDay(last)}${yearTag}`;
 }
 
-/** "Sat, Nov 14" for one day, "Sat to Sun, Nov 14 to 15" style is too long for a row, so: "Nov 14 to 15". */
-export function formatRowDate(first: string, last: string = first): string {
-  if (first === last) return formatDay(first);
-  return formatRange(first, last);
+/** "Sat, Nov 14" for one day, "Nov 14 to 15" for several. A year is added when it is not `refYear`. */
+export function formatRowDate(first: string, last: string = first, refYear?: number): string {
+  const p = parseISODate(first);
+  if (first === last) return p && refYear !== undefined && p.y !== refYear ? formatDay(first, true) : formatDay(first);
+  return formatRange(first, last, refYear);
 }
 
 /** "9 am", "1:30 pm", "noon" is not used: the clock is clearer. */

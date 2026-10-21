@@ -183,3 +183,28 @@ export function sortResults(
 function negate(n: number | null): number | null {
   return n === null ? null : -n;
 }
+
+const EVENT_TYPE_IDS: readonly string[] = ['card_show', 'convention', 'tournament', 'pop_culture_con'];
+const SIZE_IDS: readonly string[] = ['small', 'medium', 'large', 'major'];
+
+/** Read filters saved in the browser, ignoring anything that is not valid. */
+export function sanitizeFilters(raw: unknown): Filters {
+  if (!raw || typeof raw !== 'object') return { ...DEFAULT_FILTERS };
+  const o = raw as Record<string, unknown>;
+  const list = (v: unknown, allowed?: readonly string[]) =>
+    Array.isArray(v) ? v.filter((x): x is string => typeof x === 'string' && (!allowed || allowed.includes(x))).slice(0, 80) : [];
+  return {
+    sells: list(o.sells),
+    sellsKnownOnly: o.sellsKnownOnly === true,
+    hideSportsOnly: o.hideSportsOnly === true,
+    types: list(o.types, EVENT_TYPE_IDS) as EventType[],
+    sizes: list(o.sizes, SIZE_IDS) as SizeClass[],
+    free: o.free === true,
+    vendorOpen: o.vendorOpen === true,
+  };
+}
+
+/** Add or remove one value in a list. */
+export function toggled<T>(list: readonly T[], value: T): T[] {
+  return list.includes(value) ? list.filter((x) => x !== value) : [...list, value];
+}

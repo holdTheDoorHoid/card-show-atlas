@@ -1,0 +1,32 @@
+---
+import { formatRowDate } from '../lib/dates';
+import type { Show } from '../lib/types';
+import { showPath, withBase } from '../lib/urls';
+import { SHOW_STATUS_LABEL } from '../lib/labels';
+
+interface Props {
+  shows: Show[];
+  /** show the state or province, for lists that cross states */
+  region?: boolean;
+}
+const { shows, region = true } = Astro.props;
+const refYear = new Date().getFullYear();
+---
+
+<ul class="plain-list">
+  {
+    shows.map((s) => (
+      <li>
+        <a href={withBase(showPath(s.id))}>
+          <span class="pl-date">{formatRowDate(s.days[0]?.date ?? '', s.days[s.days.length - 1]?.date, refYear)}</span>
+          <span class="pl-name">{s.name}</span>
+          <span class="pl-meta">
+            {s.venue.city}
+            {region ? `, ${s.venue.region}` : ''}
+            {s.status !== 'scheduled' ? `, ${SHOW_STATUS_LABEL[s.status].toLowerCase()}` : ''}
+          </span>
+        </a>
+      </li>
+    ))
+  }
+</ul>

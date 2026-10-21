@@ -1,0 +1,20 @@
+---
+import { GITHUB_REPO } from '../lib/config';
+import { withBase } from '../lib/urls';
+---
+
+<footer class="site-footer">
+  <div class="container">
+    <ul>
+      <li><a href={withBase('about/')}>About and sources</a></li>
+      <li><a href={withBase('add/')}>Add or fix a show</a></li>
+      <li><a href={withBase('add/#remove')}>Removal requests</a></li>
+      <li><a href={withBase('states/')}>Browse by state</a></li>
+      <li><a href={`https://github.com/${GITHUB_REPO}`}>GitHub</a></li>
+    </ul>
+    <p class="muted small">
+      Your location and your lists stay on this device. No accounts, no tracking. Show data is shared under CC BY 4.0
+      and the code under MIT. Map data from OpenStreetMap contributors.
+    </p>
+  </div>
+</footer>

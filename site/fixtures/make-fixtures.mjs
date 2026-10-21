@@ -119,7 +119,7 @@ export function generateFixtures({ base }) {
 
   const addPlan = (cadence, type) => {
     const city = nextCity();
-    const [cityName, region, country] = city;
+    const [cityName, region] = city;
     const make = type === 'convention' ? CONVENTION_NAMES : type === 'tournament' ? TOURNAMENT_NAMES : type === 'pop_culture_con' ? CON_NAMES : CARD_SHOW_NAMES;
     let name = `Sample ${pick(make)(cityName)}`;
     let seriesId = slugify(`${name} ${cityName} ${region}`);

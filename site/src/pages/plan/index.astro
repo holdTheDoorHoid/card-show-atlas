@@ -1,0 +1,13 @@
+---
+import Base from '../../layouts/Base.astro';
+import PlanApp from '../../islands/PlanApp';
+---
+
+<Base title="Plan a trip" description="Route planning for card shows is coming: weekend runs, a season planner and a profit estimate on every plan." path="plan/">
+  <div class="container page narrow">
+    <h1>Plan a trip</h1>
+    <PlanApp client:only="preact">
+      <p slot="fallback" class="loading" role="status">Loading...</p>
+    </PlanApp>
+  </div>
+</Base>

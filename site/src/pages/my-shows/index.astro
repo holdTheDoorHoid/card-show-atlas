@@ -1,0 +1,17 @@
+---
+import Base from '../../layouts/Base.astro';
+import MyShowsApp from '../../islands/MyShowsApp';
+---
+
+<Base title="My shows" description="Track the shows you are watching, applied to and booked, with deadlines, a calendar file and a backup." path="my-shows/" noindex>
+  <div class="container page">
+    <h1>My shows</h1>
+    <p class="muted">For vendors: keep track of the shows you want to do, when to apply, what you paid and how it went.</p>
+    <MyShowsApp client:only="preact">
+      <p slot="fallback" class="loading" role="status">Loading your list...</p>
+    </MyShowsApp>
+    <noscript>
+      <p class="notice notice-warn">My shows needs JavaScript, because your list is saved in your browser.</p>
+    </noscript>
+  </div>
+</Base>

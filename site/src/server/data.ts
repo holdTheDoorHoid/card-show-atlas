@@ -47,6 +47,7 @@ export interface SiteData {
   shows: Show[];
   byId: Map<string, Show>;
   series: SeriesView[];
+  seriesById: Map<string, SeriesView>;
   promoters: PromoterView[];
   regions: RegionView[];
   sourceById: Map<string, ManifestSource>;
@@ -197,6 +198,7 @@ export function loadSiteDataFrom(root: string, mode: BuildMode): SiteData {
     shows,
     byId: new Map(shows.map((s) => [s.id, s])),
     series,
+    seriesById: new Map(series.map((x) => [x.id, x])),
     promoters,
     regions: buildRegions(shows),
     sourceById: new Map(manifest.sources.map((s) => [s.id, s])),

@@ -1,0 +1,15 @@
+---
+import Base from '../layouts/Base.astro';
+import { withBase } from '../lib/urls';
+---
+
+<Base title="Page not found" path="404.html" noindex>
+  <div class="container page narrow">
+    <h1>We could not find that page</h1>
+    <p>The show may be over and have been removed from the lists, or the link may be mistyped.</p>
+    <div class="btn-row">
+      <a class="btn btn-primary" href={withBase('')}>Find shows near you</a>
+      <a class="btn" href={withBase('states/')}>Browse by state</a>
+    </div>
+  </div>
+</Base>

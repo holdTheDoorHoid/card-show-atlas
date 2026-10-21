@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { bestMatchScore, countActiveFilters, DEFAULT_FILTERS, filterRows, selectResults, sortResults, type Filters } from './filters.ts';
+import { bestMatchScore, countActiveFilters, DEFAULT_FILTERS, filterRows, sanitizeFilters, selectResults, sortResults, toggled, type Filters } from './filters.ts';
 import { makeRow } from './testing.ts';
 import { DEFAULT_VOCAB, SPORTS_ANY } from './vocab.ts';
 
@@ -126,5 +126,24 @@ describe('sorting', () => {
     const out = sortResults(results, 'match', ctx).map((r) => r.row.i);
     // a: right next door but small. b: an hour away and large. d: close, size unknown. c: major but 210 miles.
     expect(out).toEqual(['a', 'b', 'd', 'c']);
+  });
+});
+
+describe('saved filters', () => {
+  it('reads what it saved and ignores what it does not understand', () => {
+    const saved = JSON.parse(JSON.stringify(f({ sells: ['pokemon', SPORTS_ANY], types: ['convention'], sizes: ['large'], free: true, hideSportsOnly: true })));
+    expect(sanitizeFilters(saved)).toEqual(f({ sells: ['pokemon', SPORTS_ANY], types: ['convention'], sizes: ['large'], free: true, hideSportsOnly: true }));
+    expect(sanitizeFilters(null)).toEqual(DEFAULT_FILTERS);
+    expect(sanitizeFilters('x')).toEqual(DEFAULT_FILTERS);
+    const odd = sanitizeFilters({ types: ['card_show', 'bake_sale', 5], sizes: ['huge'], sells: 'pokemon', free: 'yes' });
+    expect(odd.types).toEqual(['card_show']);
+    expect(odd.sizes).toEqual([]);
+    expect(odd.sells).toEqual([]);
+    expect(odd.free).toBe(false);
+  });
+
+  it('toggles a value in a list', () => {
+    expect(toggled(['a'], 'b')).toEqual(['a', 'b']);
+    expect(toggled(['a', 'b'], 'a')).toEqual(['b']);
   });
 });

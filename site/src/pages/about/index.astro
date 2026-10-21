@@ -1,0 +1,131 @@
+---
+import Base from '../../layouts/Base.astro';
+import { displayHost, safeUrl } from '../../lib/format';
+import { SIZE_INFO, SIZE_ORDER } from '../../lib/labels';
+import { withBase } from '../../lib/urls';
+import { loadSiteData } from '../../server/data';
+
+const data = loadSiteData();
+const sources = data.manifest.sources;
+---
+
+<Base title="About, sources and credits" description="How Card Show Atlas gathers its listings, how it estimates show size, and who deserves credit for the data." path="about/">
+  <div class="container page">
+    <div class="prose">
+      <h1>About Card Show Atlas</h1>
+      <p>
+        Card Show Atlas is a free guide to trading card shows in the US and Canada: sports cards, Pokémon, Magic, Yu-Gi-Oh, One Piece, Lorcana and more. It is
+        for people who want to know what is on near them this weekend, and for vendors who need to pick shows, remember deadlines and work out what a trip
+        will cost.
+      </p>
+      <p class="notice notice-warn">
+        <strong>Early preview.</strong> The list is still being built. Details can be wrong or out of date, so check the organizer's own page or post before
+        you drive.
+      </p>
+
+      <h2 id="how">How the listings are gathered</h2>
+      <ul>
+        <li>
+          <strong>Public listings.</strong> Some listing sites and organizers publish their schedules. We read them automatically only when their rules and
+          robots.txt allow it. Where they do not, we use them only as leads and confirm on the organizer's own page.
+        </li>
+        <li>
+          <strong>Research.</strong> Automated scripts and AI research assistants look for missing details, such as dates, venues, table prices and
+          application deadlines, and record the links they found them on. A person can correct anything they get wrong.
+        </li>
+        <li>
+          <strong>You.</strong> Visitors and organizers send in shows and fixes. Every submission is checked before it is published.
+        </li>
+      </ul>
+      <p>
+        We keep facts: names, dates, venues, prices. We never copy anyone's write up. Every show page names each source that listed it, links to it, and says
+        when it was last checked. A show stays "Listed by" a site until the organizer's own page confirms it, and then it shows as "Confirmed by organizer".
+      </p>
+      <p>
+        Listings refresh every day, and shows coming up in the next two months are re-checked more often. A show that no source has mentioned for a while
+        gets a "may be out of date" note instead of disappearing. Past shows drop off the lists and the map, but stay in our records because they help us
+        estimate crowds.
+      </p>
+      <p>
+        Contact details are only the ones an organizer has published for the show: its own email, page or business phone. Never a personal number or a home
+        address, even if a source shows one.
+      </p>
+
+      <h2 id="size">How show size is estimated</h2>
+      <p>
+        Most shows never say how many people come, so we estimate it, and we always say how. We use the best information we have, in this order:
+      </p>
+      <ol>
+        <li>An attendance number from the organizer or the press.</li>
+        <li>Player counts for tournaments.</li>
+        <li>The number of vendor tables or booths.</li>
+        <li>The size of the venue.</li>
+        <li>History: how long the show has run and how past editions did.</li>
+        <li>Entry price, number of days and kind of event.</li>
+        <li>How many people live within about an hour's drive.</li>
+      </ol>
+      <p>
+        From that we give each show a likely crowd with a low and a high number, and a label for how sure we are: <em>Reported</em>, <em>Estimated</em> or
+        <em>Rough guess</em>. When a show lists its tables, the crowd is the tables times an "people per table" factor that depends on the kind of event and the
+        number of days. We start from stated assumptions and refine them as more shows publish both numbers.
+      </p>
+      <table class="price-table">
+        <caption class="sr-only">Size labels</caption>
+        <thead><tr><th scope="col">Label</th><th scope="col">Roughly</th></tr></thead>
+        <tbody>
+          {SIZE_ORDER.map((s) => <tr><td>{SIZE_INFO[s].label}</td><td>{SIZE_INFO[s].blurb}</td></tr>)}
+        </tbody>
+      </table>
+      <p class="muted small">The exact cut points will be adjusted once real data arrives.</p>
+      <p>
+        Vendors also see <strong>traffic per table</strong>: the expected crowd divided by the number of tables. A huge show with 600 tables can be a worse
+        room than a medium one with 60.
+      </p>
+
+      <h2 id="privacy">Privacy</h2>
+      <p>
+        Your location, your My shows list and your vendor settings stay on your device, in your browser. There are no accounts, no tracking and no analytics.
+        Clearing your browser data deletes them, which is why My shows has a backup button.
+      </p>
+
+      <h2 id="licences">Licences and credits</h2>
+      <ul>
+        <li>The code is under the MIT licence. The show data is shared under CC BY 4.0.</li>
+        <li>
+          Maps use tiles and data from <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a> (data under the Open Database
+          Licence), drawn with <a href="https://leafletjs.com">Leaflet</a> and <a href="https://github.com/mapbox/supercluster">Supercluster</a>.
+        </li>
+        <li>
+          ZIP and postal code locations come from <a href="https://www.geonames.org">GeoNames</a> (CC BY 4.0).
+        </li>
+        <li>
+          Population figures used for crowd estimates come from the US Census Bureau and Statistics Canada.
+        </li>
+      </ul>
+
+      <h3 id="sources">Listing sources</h3>
+      {
+        sources.length === 0 ? (
+          <p class="muted">Every source used for the listings is credited here as soon as the first shows are loaded.</p>
+        ) : (
+          <ul>
+            {sources.map((s) => (
+              <li>
+                {safeUrl(s.url) ? <a href={safeUrl(s.url)!}>{s.name}</a> : s.name}
+                {s.url && safeUrl(s.url) ? <span class="muted"> ({displayHost(s.url)})</span> : ''}
+                {s.credit ? <>. {s.credit}</> : ''}
+              </li>
+            ))}
+          </ul>
+        )
+      }
+      {data.manifest.built && <p class="muted small">Data last built: {data.manifest.built.slice(0, 10)}.</p>}
+
+      <h2 id="contact">Add, fix or remove</h2>
+      <p>
+        Missing a show, or spotted a mistake? See <a href={withBase('add/')}>Add or fix a show</a>. To ask for a show or some of its details to be removed,
+        see <a href={withBase('add/#remove')}>removal requests</a>. Requests are honored.
+      </p>
+    </div>
+  </div>
+</Base>

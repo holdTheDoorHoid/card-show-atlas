@@ -94,3 +94,14 @@ describe('formatting', () => {
     expect(timeZoneAbbreviation('Not/AZone', '2026-07-14')).toBe('');
   });
 });
+
+describe('years in dates', () => {
+  it('adds the year only when it is not the current one', () => {
+    expect(formatRowDate('2027-01-10', '2027-01-10', 2026)).toBe('Sun, Jan 10, 2027');
+    expect(formatRowDate('2026-11-14', '2026-11-14', 2026)).toBe('Sat, Nov 14');
+    expect(formatRowDate('2027-01-09', '2027-01-10', 2026)).toBe('Jan 9 to 10, 2027');
+    expect(formatRange('2027-01-30', '2027-02-01', 2026)).toBe('Jan 30 to Feb 1, 2027');
+    expect(formatRange('2026-12-30', '2027-01-02', 2026)).toBe('Dec 30, 2026 to Jan 2, 2027');
+    expect(formatRange('2026-11-14', '2026-11-15')).toBe('Nov 14 to 15');
+  });
+});

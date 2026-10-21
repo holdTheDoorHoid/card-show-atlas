@@ -1,0 +1,45 @@
+---
+import Base from '../../layouts/Base.astro';
+import BrowseTabs from '../../components/BrowseTabs.astro';
+import { countryName, regionName } from '../../lib/regions';
+import { withBase } from '../../lib/urls';
+import { loadSiteData } from '../../server/data';
+
+const data = loadSiteData();
+const countries = [...new Set(data.regions.map((r) => r.country))];
+---
+
+<Base title="Browse card shows by state or province" description="Card shows in every US state and Canadian province, listed in date order." path="states/">
+  <div class="container page">
+    <h1>Browse card shows</h1>
+    <BrowseTabs current="states" />
+    {
+      data.empty ? (
+        <div class="card empty">
+          <h2>Shows are being added</h2>
+          <p>Check back soon. Once shows are listed, each state and province gets its own page here.</p>
+          <p><a href={withBase('add/')}>Tell us about a show</a></p>
+        </div>
+      ) : (
+        countries.map((c) => (
+          <section>
+            <h2>{countryName(c)}</h2>
+            <ul class="tile-grid">
+              {data.regions
+                .filter((r) => r.country === c)
+                .sort((a, b) => regionName(c, a.code).localeCompare(regionName(c, b.code)))
+                .map((r) => (
+                  <li>
+                    <a href={withBase(`states/${r.slug}/`)}>
+                      <span>{regionName(c, r.code)}</span>
+                      <span class="count">{r.shows.length}</span>
+                    </a>
+                  </li>
+                ))}
+            </ul>
+          </section>
+        ))
+      )
+    }
+  </div>
+</Base>
