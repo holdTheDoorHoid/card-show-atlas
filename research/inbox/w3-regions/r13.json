@@ -1,0 +1,115 @@
+{
+  "wave": "w3-regions",
+  "agent": "r13",
+  "model": "haiku",
+  "searches_used": 6,
+  "fetches_used": 34,
+  "records": [
+    {
+      "kind": "edition",
+      "name": "Shreveport Card Show, February 2027",
+      "event_type": "card_show",
+      "status": "scheduled",
+      "days": [
+        {"date": "2027-02-20", "open": "09:00"},
+        {"date": "2027-02-21", "close": "16:00"}
+      ],
+      "venue": {"name": "Acrosports and The Fieldhouse", "address": "735 American Way", "city": "Shreveport", "region": "LA", "postal": "71106", "country": "US"},
+      "sells": {"tcg": [], "sports": [], "other": []},
+      "organizer": {"name": "Shreveport Card Show", "url": "https://shreveportcardshow.simpletix.com/"},
+      "links": {"official": "https://shreveportcardshow.simpletix.com/"},
+      "summary": "A two day card show in Shreveport, Louisiana, on Feb 20 and 21, 2027, at Acrosports and The Fieldhouse. The organizer's ticket page gives a 9 am start on Feb 20 and a 4 pm finish on Feb 21. It lists no admission or vendor prices.",
+      "evidence": [{"url": "https://shreveportcardshow.simpletix.com/", "seen": "2026-10-21", "supports": ["name", "days", "venue"]}],
+      "agent_confidence": "high"
+    },
+    {
+      "kind": "edition",
+      "name": "Shreveport Card Show, The Big Show, April 2027",
+      "event_type": "card_show",
+      "status": "scheduled",
+      "days": [
+        {"date": "2027-04-03", "open": "08:00"},
+        {"date": "2027-04-04", "close": "16:00"}
+      ],
+      "venue": {"city": "Shreveport", "region": "LA", "country": "US"},
+      "sells": {"tcg": [], "sports": [], "other": []},
+      "organizer": {"name": "Shreveport Card Show", "url": "https://shreveportcardshow.simpletix.com/"},
+      "links": {"official": "https://shreveportcardshow.simpletix.com/"},
+      "summary": "A two day Shreveport card show billed as The Big Show, on Apr 3 and 4, 2027. The organizer's ticket page names only a convention center with no address. It lists no admission or vendor prices.",
+      "evidence": [{"url": "https://shreveportcardshow.simpletix.com/", "seen": "2026-10-21", "supports": ["name", "days"]}],
+      "agent_confidence": "high"
+    },
+    {
+      "kind": "edition",
+      "name": "Shreveport Card Show, August 2027",
+      "event_type": "card_show",
+      "status": "scheduled",
+      "days": [
+        {"date": "2027-08-14", "open": "09:00"},
+        {"date": "2027-08-15", "close": "16:00"}
+      ],
+      "venue": {"city": "Shreveport", "region": "LA", "country": "US"},
+      "sells": {"tcg": [], "sports": [], "other": []},
+      "organizer": {"name": "Shreveport Card Show", "url": "https://shreveportcardshow.simpletix.com/"},
+      "links": {"official": "https://shreveportcardshow.simpletix.com/"},
+      "summary": "A two day Shreveport card show on Aug 14 and 15, 2027, with a 9 am start and a 4 pm finish on the organizer's ticket page. The page names no venue and lists no admission or vendor prices.",
+      "evidence": [{"url": "https://shreveportcardshow.simpletix.com/", "seen": "2026-10-21", "supports": ["name", "days"]}],
+      "agent_confidence": "high"
+    },
+    {
+      "kind": "edition",
+      "name": "Shreveport Card Show, October 2027",
+      "event_type": "card_show",
+      "status": "scheduled",
+      "days": [
+        {"date": "2027-10-02", "open": "09:00"},
+        {"date": "2027-10-03", "close": "16:00"}
+      ],
+      "venue": {"city": "Shreveport", "region": "LA", "country": "US"},
+      "sells": {"tcg": [], "sports": [], "other": []},
+      "organizer": {"name": "Shreveport Card Show", "url": "https://shreveportcardshow.simpletix.com/"},
+      "links": {"official": "https://shreveportcardshow.simpletix.com/"},
+      "summary": "A two day Shreveport card show on Oct 2 and 3, 2027, with a 9 am start and a 4 pm finish on the organizer's ticket page. The page names no venue and lists no admission or vendor prices.",
+      "evidence": [{"url": "https://shreveportcardshow.simpletix.com/", "seen": "2026-10-21", "supports": ["name", "days"]}],
+      "agent_confidence": "high"
+    }
+  ],
+  "leads_only": [
+    {"name": "G.A.S. Card Show, Independence", "url": "https://www.treasurehunter.show/show/gas-card-show-independence-independence-mo-2026-10-31", "note": "Missouri, Independence, Stoney Creek Hotel Conference Center. Listed Sat Oct 31 to Sun Nov 1 2026, seen only in a listing site snippet. The organizer domains I guessed did not resolve (gascardshow.com, gascardshows.com). Hotel site did not resolve."},
+    {"name": "Sports Card Show and Signing, St. Louis", "url": "https://www.treasurehunter.show/show/sports-card-show-signing-st-louis-mo-2026-11-01", "note": "Missouri, St. Louis, Orlando Gardens South County. Listed Sun Nov 1 2026, 9 am to 3 pm, seen only in a listing site snippet. The venue site (orlandosevents.com) lists no card show."},
+    {"name": "Show Me Card Show, Carthage", "url": "https://www.treasurehunter.show/show/show-me-card-show-carthage-mo-2026-11-07", "note": "Missouri, Carthage, Carthage Memorial Hall. Listed Sat Nov 7 2026, 9 am to 7 pm, seen only in a listing site snippet. City of Carthage pages fetched showed no event listing."},
+    {"name": "Show Me Cardboard Show, Maryville", "url": "https://www.treasurehunter.show/show/show-me-cardboard-show-maryville-mo-2026-11-14", "note": "Missouri, Maryville, Mozingo Lake Recreation Park. One listing says Sat Nov 14 2026 10 am to 7 pm, another listing on the same site says Nov 13 at 3 pm. Date conflict, unresolved. Seen only in listing site snippets."},
+    {"name": "CITY Card Show, St. Louis", "url": "https://www.treasurehunter.show/show/city-card-show-st-louis-mo-2026-11-15", "note": "Missouri, St. Louis, Rockwell Brewing. Listed Sun Nov 15 2026, 11 am to 5 pm, free admission and 25 vendor tables per the listing. Seen only in a listing site snippet. The brewery domain did not resolve. A Oct 4 2026 edition is past."},
+    {"name": "Warriors Sports Card Show, Belton", "url": "https://www.treasurehunter.show/show/warriors-sports-card-show-belton-mo-2026-12-05", "note": "Missouri, Belton. Listed Sat Dec 5 2026, seen only in a listing site snippet. Organizer and venue not found."},
+    {"name": "The Collectibles Card Show, Carthage", "url": "https://www.treasurehunter.show/show/the-collectibles-card-show-carthage-mo-2026-10-24", "note": "Missouri, Carthage. Listed Sat Oct 24 2026, seen only in a listing site snippet. Organizer and venue not found."},
+    {"name": "Pokemon Celebration Show, Kansas City", "url": "https://thecardshopfinder.com/event/pokemon-celebration-show-kansas-city-2026-10/", "note": "Missouri side of the Kansas City metro, Wingate by Wyndham Kansas City Northeast. Listed Sat Oct 24 2026, seen only in a listing site snippet. Admission not stated in what I saw."},
+    {"name": "G.A.S. Card Show, Overland Park (November)", "url": "https://www.treasurehunter.show/show/gas-card-show-overland-park-overland-park-ks-2026-11-14", "note": "Kansas, Overland Park, American Legion Post 370. Listing sites conflict: Sat Nov 7 2026 (free, over 50 tables) on one, Sat Nov 14 2026 (time TBA) on the other. Unresolved, seen only in listing site snippets."},
+    {"name": "McPherson Sports Card and Memorabilia Show", "url": "https://www.treasurehunter.show/show/mcpherson-sports-card-and-memorabilia-show-mcpherson-ks-2026-11-14", "note": "Kansas, McPherson, McPherson Community Building. Listed Sat Nov 14 2026, 9 am to 3 pm, seen only in a listing site snippet. City site search not successful."},
+    {"name": "Northeast Kansas Card Show, Thanksgiving weekend", "url": "https://thecardshopfinder.com/event/northeast-kansas-card-show-thanksgiving-lawrence-2026-11/", "note": "Kansas, Lawrence. Listed Sat Nov 28 2026. The listing itself says the venue was not confirmed. Seen only in a listing site snippet."},
+    {"name": "Kansas Comic Con 2026, Wichita", "url": "https://www.treasurehunter.show/show/kansas-comic-con-2026-wichita-ks-2026-10-31", "note": "Kansas, Wichita, Century II. Listed Oct 31 to Nov 1 2026. Described as a comics convention with vendor booths. Card vendors not confirmed. Out of scope unless card dealers are confirmed."},
+    {"name": "Quad Con Comic, Toy and TCG Show, Davenport", "url": "https://www.treasurehunter.show/show/quad-con-comic-toy-tcg-show-davenport-ia-2026-12-06", "note": "Iowa, Davenport. Listed Sun Dec 6 2026 (one listing says Dec 5), 10 am to 5 pm, comics, sports cards, TCG and toys. Seen only in a listing site snippet. Organizer not found."},
+    {"name": "Capital City Card Convention, Des Moines", "url": "https://www.treasurehunter.show/show/capital-city-card-convention-des-moines-ia-2026-09-25", "note": "Iowa, Des Moines, Iowa Events Center. Sept 25 to 27 2026, already past. Iowa Events Center upcoming list (checked 2026-10-21, no years shown) has no card convention in its Oct 21 to Nov 10 range. No later edition found."},
+    {"name": "Sports Cards and Collectible Show, Mason City", "url": "https://www.treasurehunter.show/show/sports-cards-and-collectible-show-mason-city-ia-2026-11-06", "note": "Iowa, Mason City, Southbridge Mall. Listings conflict: Nov 6 to 7 or Nov 6 to 8 2026, 11 am to 7 pm. Sports, Pokemon and TCG. Seen only in listing site snippets. Mall site did not resolve."},
+    {"name": "Iowa City Card and Collectible Show", "note": "Iowa, Iowa City, Johnson County Fairgrounds. Listed Sun Nov 29 2026, 10 am, sports cards. Seen in a listing site snippet, exact page URL not captured. The fair domain I tried (johnsoncountyfair.com) redirected to jocofairin.com, which does not look like the Iowa City fairgrounds, so I did not use it. No organizer page found."},
+    {"name": "2026 Fall Sports and Trading Card Show, Davenport", "url": "https://www.treasurehunter.show/show/2026-fall-sports-trading-card-show-davenport-ia-2026-10-24", "note": "Iowa, Davenport, Modern Woodmen Park. Listed Sat Oct 24 2026, 11 am to 4 pm, seen only in a listing site snippet. The venue site returned a server error and then redirected to the team's site, which lists no card show."},
+    {"name": "Louisiana Card Con, Mandeville (fall)", "url": "https://thecardshopfinder.com/event/louisiana-card-con-mandeville-2026-10/", "note": "Louisiana, Mandeville. Listing sites conflict: Oct 3 to 4 2026 (past) on one, Oct 31 to Nov 1 2026 on another. Unresolved. Organizer not found."},
+    {"name": "Gulf South Card Show, Hammond", "url": "https://thecardshopfinder.com/event/gulf-south-card-show-hammond-2026-11/", "note": "Louisiana, Hammond, Chappapeela Sports Park. Listed Sat Nov 7 and Sun Nov 8 2026. Seen only in listing site snippets. City of Hammond domain redirects to a parked domain, so no city page was usable."},
+    {"name": "NOLA Card Show, Kenner (November)", "url": "https://thecardshopfinder.com/event/nola-card-show-kenner-2026-11/", "note": "Louisiana, Kenner, Pontchartrain Center. Listed Sat Nov 21 and Sun Nov 22 2026, 10 am to 3 pm both days. Seen only in listing site snippets. Weaker lead: the venue's own calendar (checked 2026-10-21) lists a holiday market Nov 6 to 8, a book sale Oct 23 to 25 and a fitness expo Nov 21, but no card show."},
+    {"name": "Lafayette Card Show, holiday weekend", "url": "https://thecardshopfinder.com/shows/lafayette-card-show-lafayette/", "note": "Louisiana, Lafayette, Evangeline Shrine Club. Listed Sat Dec 5 and Sun Dec 6 2026. The series usually runs on one Saturday, so this may be an expanded edition. Seen only in listing site snippets."},
+    {"name": "Capital City Collectibles and Card Show, Baton Rouge", "url": "https://downtownbatonrouge.org/discover-downtown/events/capital-city-collectibles-card-show", "note": "Louisiana, Baton Rouge, Raising Cane's River Center. Downtown Baton Rouge page and River Center event page both show Sat 20 Jul, 2 pm to 3 pm, $30 adult tickets, with no year. July 20 is a Saturday in 2024, not 2026, so this is probably a past show. Not recorded."},
+    {"name": "New Orleans Card and Collectors Convention", "url": "https://www.visitjeffersonparish.com/events/new-orleans-card-collectors-convention", "note": "Louisiana, New Orleans area. An earlier listing showed a Sept 2026 date, but the tourism calendar page now returns 404, so the listing appears removed. Not recorded."},
+    {"name": "Omaha Card Show, monthly at Firefighters Hall", "url": "https://thecardshopfinder.com/event/omaha-card-show-october-omaha-2026-10/", "note": "Nebraska, Omaha, Firefighters Hall, 6005 Grover St. Listed Sun Jul 12, Sun Aug 16, Sun Sep 13 and Sun Oct 11 2026. These do not follow one weekday rule (Aug is the third Sunday, the others the second), and no Nov or Dec date was found. Series candidate, needs the organizer's page to set the rule. Organizer domain (omahacardshow.com) did not resolve."},
+    {"name": "Wax and Draft: Sports, TCG and More, Omaha", "url": "https://www.treasurehunter.show/show/wax-and-draft-sports-tcg-more-omaha-ne-2026-10-25-1774322591510", "note": "Nebraska, Omaha, Infusion Brewery Company. Listed Sun Oct 25 2026, 11 am to 4 pm, sports and TCG tables. Seen only in a listing site snippet. The brewery's own site lists no such event, so the lead is weak."},
+    {"name": "PokeKon Fest, All Pokemon Show, Lincoln", "url": "https://thecardshopfinder.com/event/pokekon-fest-all-pokemon-show-lincoln-2026-11/", "note": "Nebraska, Lincoln, Country Inn and Suites by Radisson. Listed Sat Nov 28 2026, 10 am to 5 pm, all Pokemon. Seen only in a listing site snippet. The PokeKon organizer domains I tried did not resolve or refused connection."},
+    {"name": "Holliday Card Show and Collector's Showcase, Lincoln", "url": "https://thecardshopfinder.com/event/holliday-card-show-collectors-showcase-lincoln-2026-12/", "note": "Nebraska, Lincoln, Let's Pickle. Listed Sun Dec 6 2026, doors 9 am, sports and TCG. Admission not yet published per the listing. Seen only in a listing site snippet. The venue site returned no event content."},
+    {"name": "Springdale GG2 Sports Card and More Show", "note": "Arkansas, Springdale, Holiday Inn and NWA Convention Center. Listed Fri Dec 18, 11 am. The listing does not state a year, so no date is recorded. The Dec 18 weekday matches 2026. City of Springdale site showed no calendar. Seen in a nearby-shows list, no URL captured."},
+    {"name": "Fort Smith Card Show, 2027 dates", "note": "Arkansas, Fort Smith. Three 2027 dates listed: Sat Mar 13, Sat May 15 and Sun Jul 18 (weekdays checked). Venue and organizer not confirmed. The Fort Smith city site returned 403, and the convention center domain did not resolve. Seen in a nearby-shows list, no URL captured."},
+    {"name": "Arkansas Card Show, Little Rock (2026 edition)", "url": "https://www.eventeny.com/events/the-arkansas-card-show-2026-25922", "note": "Arkansas, Little Rock, Statehouse Convention Center. Apr 18 and 19 2026 per the organizer's Eventeny page, now ended. No size or table counts given, so not recorded. Organizer VXV Events LLC lists no 2027 date."}
+  ],
+  "blocked": [
+    {"url": "https://www.modernwoodmenpark.com (www host)", "status": 521, "note": "Venue site returned a server error with a retry-after of 120 seconds. Retry later if needed for the Davenport Oct 24 show."},
+    {"url": "https://www.pokekon.com/", "status": 0, "note": "Connection refused. Unreachable from this run."},
+    {"url": "https://www.fortsmithar.gov/", "status": 403, "note": "Bot or access block on city site."}
+  ],
+  "notes": "Searches: all 6 WebSearch calls used (MO, KS, IA, LA, AR, NE). Fetches: 34 used. Treasure Hunter (treasurehunter.show) and CardShopFinder (thecardshopfinder.com) are on the never-fetch list, so every show from those sites is a lead only, and none of their snippets was recorded as a fact. Organizer domains I guessed mostly did not resolve (omahacardshow.com, gascardshow.com, gascardshows.com, pokekonfest.com, southbridgemall.com, fortsmithconvention.com, stoneycreekhotel.com, rockwellbrewing.com). The only organizer-owned page that yielded verified future dates was the Shreveport Card Show SimpleTix storefront (4 editions in 2027). Venue names and addresses are recorded only where the organizer or venue page states them; Aug, Oct and Big Show editions carry city only because the storefront gives no venue. Known shows: TCG-Kon Rogers (Arkansas) shows Sat Dec 26 2026 10 am to 5 pm in one listing snippet, not verified on an organizer page, so nothing new recorded. TCG-Kon St. Louis and the two excluded St. Louis shows were not researched. Out of region and not recorded: Gulf Coast Card Show, Daphne, Alabama, Jun 27 2026 (past). Past shows without size data were not recorded (Shreveport Aug 1 and 2 2026, Arkansas Card Show Apr 2026, Fayetteville PokeKon Fest Oct 18 2026, Fort Smith Vintage Sports Oct 8 to 11 2026, Lincoln Fall Card Show Aug 29 to 30 2026, Omaha Husker Bound Sep 12 2026)."
+}

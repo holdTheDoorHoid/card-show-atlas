@@ -1,0 +1,165 @@
+{
+  "wave": "w3-regions",
+  "agent": "r15",
+  "model": "haiku",
+  "searches_used": 6,
+  "fetches_used": 41,
+  "records": [
+    {
+      "kind": "edition",
+      "name": "Denver Card Show October 2026",
+      "event_type": "convention",
+      "status": "scheduled",
+      "days": [
+        {"date": "2026-10-23", "open": "16:00", "close": "20:00"},
+        {"date": "2026-10-24", "open": "10:00", "close": "17:00"},
+        {"date": "2026-10-25", "open": "11:00", "close": "17:00"}
+      ],
+      "venue": {"name": "Livestock Center", "address": "4850 National Western Dr", "city": "Denver", "region": "CO", "postal": "80216", "country": "US"},
+      "sells": {"tcg": [], "sports": [], "other": []},
+      "admission": {"free": true, "currency": "USD", "notes": "General entry free. Daily VIP $20 ($25 at door). Weekend VIP $75 ($90 at door). VIP buys early entry. Parking $15 a day."},
+      "size": {"tables": 1000},
+      "vendor": {"application_url": "https://pear.denvercardshows.com/post/oct-event-vendor-tables", "status": "unknown", "contact": "denvercardshows@gmail.com"},
+      "organizer": {"name": "Denver Card Shows", "url": "https://www.denvercardshows.com/"},
+      "links": {"official": "https://www.denvercardshows.com/"},
+      "summary": "A three day collectibles and card show with more than 1,000 dealer tables at the Livestock Center in Denver. General entry is free, and paid VIP passes buy early entry. Event type set to convention on size and length.",
+      "evidence": [{"url": "https://www.denvercardshows.com/", "seen": "2026-10-21", "supports": ["name", "days", "venue", "admission", "size.tables", "vendor"]}],
+      "agent_confidence": "high"
+    },
+    {
+      "kind": "edition",
+      "name": "Denver Card Show December 2026",
+      "event_type": "convention",
+      "status": "scheduled",
+      "days": [
+        {"date": "2026-12-11"},
+        {"date": "2026-12-12"},
+        {"date": "2026-12-13"}
+      ],
+      "venue": {"name": "Livestock Center", "address": "4850 National Western Dr", "city": "Denver", "region": "CO", "postal": "80216", "country": "US"},
+      "sells": {"tcg": [], "sports": [], "other": []},
+      "admission": {"free": true, "currency": "USD", "notes": "Page gives general entry free and VIP prices without tying them to a month. December hours not published."},
+      "size": {"tables": 1000},
+      "vendor": {"application_url": "https://pear.denvercardshows.com/post/oct-event-vendor-tables", "status": "unknown", "contact": "denvercardshows@gmail.com"},
+      "organizer": {"name": "Denver Card Shows", "url": "https://www.denvercardshows.com/"},
+      "links": {"official": "https://www.denvercardshows.com/"},
+      "summary": "A three day collectibles and card show in Denver in mid December, listed on the organizer's own page. Hours and sellers are not yet published.",
+      "evidence": [{"url": "https://www.denvercardshows.com/", "seen": "2026-10-21", "supports": ["name", "days", "venue"]}],
+      "agent_confidence": "medium"
+    },
+    {
+      "kind": "edition",
+      "name": "Arizona State Card Show Fall League Show",
+      "event_type": "convention",
+      "status": "scheduled",
+      "days": [
+        {"date": "2026-11-13", "open": "14:00", "close": "20:00"},
+        {"date": "2026-11-14", "open": "11:00", "close": "19:00"},
+        {"date": "2026-11-15", "open": "11:00", "close": "17:00"}
+      ],
+      "venue": {"name": "Phoenix Convention Center", "address": "100 North Third Street", "city": "Phoenix", "region": "AZ", "postal": "85004", "country": "US"},
+      "sells": {"tcg": [], "sports": [], "other": []},
+      "admission": {"free": false, "currency": "USD", "notes": "Single day, buddy, 3 day and early admission passes plus VIP passes, sold through Etix. Prices are not shown on the organizer page."},
+      "size": {"tables": 600},
+      "vendor": {"status": "unknown"},
+      "organizer": {"name": "Collectibles on College", "url": "https://www.collectiblesoncollege.com/"},
+      "links": {"official": "https://www.collectiblesoncollege.com/"},
+      "summary": "A three day Arizona card and collectibles show with more than 600 dealer tables at the Phoenix Convention Center in mid November. The organizer also calls it the 12th state show. Event type set to convention on size and length.",
+      "evidence": [
+        {"url": "https://www.collectiblesoncollege.com/", "seen": "2026-10-21", "supports": ["name", "days", "size.tables", "admission"]},
+        {"url": "https://www.phoenixconventioncenter.com/", "seen": "2026-10-21", "supports": ["venue.address"]}
+      ],
+      "agent_confidence": "high"
+    },
+    {
+      "kind": "edition",
+      "name": "Boise Card Show Sports Only Show",
+      "event_type": "card_show",
+      "status": "scheduled",
+      "days": [
+        {"date": "2026-10-24", "open": "10:00", "close": "16:30"}
+      ],
+      "venue": {"name": "Stueckle Sky Center", "city": "Boise", "region": "ID", "country": "US"},
+      "sells": {"tcg": [], "sports": ["multi_sport"], "other": []},
+      "vendor": {"status": "unknown", "application_url": "https://www.tickettailor.com/events/boisecardshow/2444268"},
+      "organizer": {"name": "Boise Card & Collectible Show", "url": "https://www.tickettailor.com/events/boisecardshow/"},
+      "links": {"official": "https://www.tickettailor.com/events/boisecardshow/2444268"},
+      "summary": "A one day sports cards only show in Boise on a Saturday in late October, for buying, selling and trading. The ticket listing shows sold out, and dealer details were still to come.",
+      "evidence": [{"url": "https://www.tickettailor.com/events/boisecardshow/2444268", "seen": "2026-10-21", "supports": ["name", "days", "venue", "sells"]}],
+      "agent_confidence": "high"
+    },
+    {
+      "kind": "edition",
+      "name": "Southern Colorado Card Show",
+      "event_type": "card_show",
+      "status": "scheduled",
+      "days": [
+        {"date": "2025-11-22", "open": "09:00", "close": "16:00"}
+      ],
+      "venue": {"name": "Pueblo Community College", "address": "900 W. Orman Ave.", "city": "Pueblo", "region": "CO", "country": "US"},
+      "sells": {"tcg": [], "sports": [], "other": []},
+      "admission": {"free": true, "currency": "USD"},
+      "size": {"tables": 90},
+      "summary": "A free one day card show on the college campus in Pueblo in November 2025, with about 90 tables. Recorded as a past edition for crowd size only.",
+      "evidence": [{"url": "https://pueblostarjournal.org/?p=32909", "seen": "2026-10-21", "supports": ["name", "days", "venue", "admission", "size.tables"]}],
+      "agent_confidence": "medium"
+    },
+    {
+      "kind": "edition",
+      "name": "Sin City Card Show",
+      "event_type": "card_show",
+      "status": "scheduled",
+      "days": [
+        {"date": "2026-10-17", "open": "10:00", "close": "17:00"},
+        {"date": "2026-10-18", "open": "10:00", "close": "17:00"}
+      ],
+      "venue": {"name": "Rio Casino Hotel", "city": "Las Vegas", "region": "NV", "country": "US"},
+      "sells": {"tcg": [], "sports": [], "other": []},
+      "size": {"tables": 100},
+      "organizer": {"name": "Sin City Card Show", "url": "https://www.sincitycardshow.com/"},
+      "links": {"official": "https://www.sincitycardshow.com/"},
+      "summary": "A two day Las Vegas card show at the Rio with more than 100 vendor tables, held in mid October 2026. Recorded as a past edition for crowd size only.",
+      "evidence": [{"url": "https://www.sincitycardshow.com/", "seen": "2026-10-21", "supports": ["name", "days", "venue", "size.tables"]}],
+      "agent_confidence": "high"
+    },
+    {
+      "kind": "edition",
+      "name": "Colorado Cosmic Con Cards Comics and Toy Show",
+      "event_type": "pop_culture_con",
+      "status": "scheduled",
+      "days": [
+        {"date": "2026-11-14", "open": "10:00", "close": "18:00"},
+        {"date": "2026-11-15", "open": "10:00", "close": "17:00"}
+      ],
+      "venue": {"name": "Norris Penrose Event Center", "address": "1045 Lower Gold Camp Rd", "city": "Colorado Springs", "region": "CO", "postal": "80905", "country": "US"},
+      "sells": {"tcg": [], "sports": [], "other": ["comics", "toys"]},
+      "admission": {"free": false, "currency": "USD", "adult": 15, "child": 10, "notes": "2 day pass $15 adult, $10 child. Saturday only $10 adult, $7 child. Sunday only $7 adult, $5 child."},
+      "vendor": {"application_url": "https://forms.gle/nDVX7XnYJgr5acoA9", "status": "unknown"},
+      "organizer": {"name": "Colorado Cosmic Con", "url": "https://www.coloradocosmiccon.com/"},
+      "links": {"official": "https://www.coloradocosmiccon.com/"},
+      "summary": "A comics, toys and cards show on the November 14 and 15 weekend at the Norris Penrose Event Center in Colorado Springs. The title names cards, but the page does not confirm card dealers, so confidence is medium.",
+      "evidence": [{"url": "https://www.coloradocosmiccon.com/", "seen": "2026-10-21", "supports": ["name", "days", "venue", "admission", "vendor"]}],
+      "agent_confidence": "medium"
+    }
+  ],
+  "leads_only": [
+    {"name": "Colorado Collectible Show (weekly, Aurora)", "url": "https://www.coloradocollectibleshow.com/", "note": "Organizer site says weekly: Saturday and Sunday 10 am to 5 pm, plus Thursday 5 pm to 7 pm. Free entry. Venue is La Plaza Colorado, 15200 E Colfax Ave, Aurora CO 80011. The page has no dated calendar, and the series schema holds one weekday. Needs a dated list or organizer confirmation before recording."},
+    {"name": "Southern Colorado Card Show, Pueblo, Nov 14 2026", "url": "https://thecardshopfinder.com/event/southern-colorado-card-show-pueblo-2026-11/", "note": "Listing site only, not fetched. Lists Saturday Nov 14 2026 at the Pueblo Community College ballroom, about 90 tables, free. The 2025 edition is recorded from the Pueblo Star-Journal. No organizer site found (sococardshow.com does not resolve). Confirm the 2026 date."},
+    {"name": "Pikes Peak Card Show, Colorado Springs, Nov 7 2026", "url": "https://thecardshopfinder.com/event/pikes-peak-card-show-colorado-springs-2026-11/", "note": "Listing site only, not fetched. Conflict: the Norris Penrose venue calendar lists Pikes Peak editions only on Sep 12, Oct 10 and Oct 11 2026, all past, and no Nov 7 date. Not recorded until confirmed."},
+    {"name": "New Mexico Card Show, Expo New Mexico, Dec 5 and 6 2026", "url": "https://www.newmexicocardshow.com/", "note": "Organizer page gives Saturday Dec 5 and Sunday Dec 6, 10 am to 5 pm, free entry, Creative Arts Building at Expo New Mexico, 300 San Pedro NE, Albuquerque NM 87108. The page writes the dates without a year; its only 2026 is a copyright footer. Weekdays match 2026, but the year was not written, so not recorded. Confirm the year, then record. Vendor email is on the page."},
+    {"name": "Southwest Card and Collectible Show, Las Cruces, Oct 24 2026", "url": "https://thecardshopfinder.com/event/southwest-card-and-collectible-show-las-cruces-2026-10/", "note": "Listing site only, not fetched. Listing says Saturday Oct 24 2026 at the Las Cruces Convention Center, free entry, 140 plus tables. Organizer site does not resolve, and the venue events page returned 404. Verify before recording; the date is imminent."},
+    {"name": "New Mexico Card Show monthly series, Marriott Uptown, Albuquerque", "url": "https://thecardshopfinder.com/event/new-mexico-card-show-september-marriott-uptown-albuquerque-2026-09/", "note": "Listing site only. Listings from June to September 2026 suggest a monthly series at the Marriott Uptown. No October to December 2026 date found. Check whether the series continues."},
+    {"name": "DNA The Heavy Hitter Show, Kearns UT, Oct 25 2026", "url": "https://www.treasurehunter.show/show/dna-the-heavy-hitter-show-kearns-ut-2026-10-25", "note": "Listing site only, not fetched. Listing says Sunday Oct 25 2026, sports card vendors, at the Utah Olympic Oval. The venue calendar (utaholympiclegacy.com) lists no card events. Conflict; verify with the organizer."},
+    {"name": "Croma TCG Lehi Mini Show, Nov 24 2026", "url": "https://www.treasurehunter.show/show/croma-tcg-lehi-mini-show-lehi-ut-2026-11-24", "note": "Listing site only. Tuesday Nov 24 2026, 5 pm to 9 pm, Lehi UT. Looks like a single store's event, which is out of scope. The store site lists no card show. Likely out of scope."},
+    {"name": "Diamond in the Ruff card show, Sun City West AZ, Nov 22 and Dec 6 2026", "url": "https://thecardshopfinder.com/shows/diamond-in-the-ruff-card-show-sun-city-west/", "note": "Listing site only, not fetched. Sports card show. Listing gives Sunday Nov 22 and Sunday Dec 6 2026 at a Sun City West Foundation building. No organizer site found. Verify dates and venue."},
+    {"name": "The 520 Card Show, Tucson Convention Center, Oct 24 to 25 and Nov 21 to 22 2026", "url": "https://www.tucsonconventioncenter.com/", "note": "Listing sites say Oct 24 to 25 and Nov 21 to 22 2026 at the Tucson Convention Center, sports and TCG vendors. The organizer domain the520cardshow.com is parked, and the venue home page lists no card events. Unverified."},
+    {"name": "Overtime Sports Collectible Card Show, Encore Tucson, Dec 5 2026", "url": "https://www.treasurehunter.show/show/overtime-sports-collectible-card-show-tucson-az-2026-08-08", "note": "Listing site only. Listing says Saturday Dec 5 2026, 10 am, Encore Tucson, sports cards. Not verified. Do not confuse with overtimesportscards.ca, an Alberta business that is unrelated."},
+    {"name": "Carson City Card Con, Nov 7 and 8 2026", "url": "https://thecardshopfinder.com/events/nv/reno/", "note": "Listing index only; the event page was not captured. Sports card show at the Multi-Purpose Athletic Center in Carson City. Organizer site does not resolve (carsoncardcon.com). Verify."},
+    {"name": "Sin City Card Show Fall, Silverado Ranch, Nov 8 2026", "url": "https://thecardshopfinder.com/event/sin-city-card-show-fall-las-vegas-2026-11/", "note": "Listing site only. Conflict: the organizer's own site lists only Oct 17 and 18 2026 at the Rio, with no November date. Not recorded until confirmed."},
+    {"name": "Denver Card Show 2027 dates", "url": "https://www.denvercardshows.com/", "note": "Organizer page lists Fri to Sun ranges for Feb 18 to 21, Apr 8 to 11, Jun 24 to 27, Aug 26 to 29, Oct 21 to 24 and Dec 9 to 12 2027. Each start date is a Thursday in 2027, so the weekdays conflict and no 2027 date was recorded. Confirm with the organizer."},
+    {"name": "Collectibles on College Tempe Monthly Show and The Cactus Show Scottsdale", "url": "https://www.collectiblesoncollege.com/", "note": "Named on the organizer homepage with no dates. A Tempe monthly show is listed for Oct 3 2026 by a listing site. Confirm November and later dates."},
+    {"name": "The Cactus TCG Show, Mesa AZ", "url": "https://www.azfamily.com/2026/08/14/mesa-card-show-expecting-huge-boost-trading-card-games-surge-popularity/", "note": "News article dated Aug 14 2026 about the Mesa show. A listing site showed Aug 15 and 16 2026 at the Phoenix Mesa Delta Marriott, described as monthly. No later 2026 date found. Confirm the next date."}
+  ],
+  "blocked": [],
+  "notes": "Searches: all 6 used (hard cap reached). Fetches: 41 of 60. Listing sites (thecardshopfinder.com, treasurehunter.show, cardpulse.club) were used only as leads and never fetched. No 403s or bot checks were met. Several organizer or venue domains returned 404 or did not resolve: sococardshow.com, southwestcardshow.com, carsoncardcon.com, lascrucesconventioncenter.com/events, tucsonconventioncenter.com/events, boisestate.edu Stueckle page. the520cardshow.com is parked. Denver: the organizer's Tickettailor page lists no events, but denvercardshows.com lists Oct 23 to 25 and Dec 11 to 13 2026. A June 2026 Denver ticket page gives the venue as 4850 Packing House Dr; the organizer's current page gives 4850 National Western Dr, which I used. Denver and Arizona are typed convention on multi-day length and size (1,000 and 600 tables). The Denver page names no guests, tournaments or sellers. Denver December hours are not on the page, so those days carry no times, and the 1,000 table figure is page-level (medium confidence). Arizona venue address comes from the Phoenix Convention Center site. Boise: ticket page says Sold out, dealer details coming soon, no street address found. Southern Colorado 2025: past edition recorded for size; status is set to scheduled because the enum has no past state. Sin City: organizer page shows Oct 17 and 18 2026 only; past edition recorded for size. Colorado Cosmic Con: recorded as pop_culture_con; card dealers are not confirmed. Past editions without table or attendance figures were not recorded: Pikes Peak Sep 12, Oct 10 and Oct 11 2026; SLC TCG Farmington Jul 11 and Sep 5 2026; Nampa Jan 17, Aug 8 and Oct 10 2026; Denver Jun 26 to 28 2026; Reno and Las Vegas summer and fall shows. Expo New Mexico events page shows no card events. Idaho: no Meridian or Idaho Falls card show found; the Expo Idaho calendar was only partly readable (10 events, 2 visible, neither a card show). Utah: no Ogden or St. George upcoming show found. Nevada: no Henderson or North Las Vegas show found."
+}

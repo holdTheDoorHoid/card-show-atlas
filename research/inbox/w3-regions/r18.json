@@ -1,0 +1,144 @@
+{
+  "wave": "w3-regions",
+  "agent": "r18",
+  "model": "haiku",
+  "searches_used": 6,
+  "fetches_used": 26,
+  "records": [
+    {
+      "kind": "edition",
+      "name": "The Vault Card Show (Vancouver)",
+      "event_type": "card_show",
+      "status": "scheduled",
+      "days": [{"date": "2026-11-08", "open": "11:00", "close": "17:00"}],
+      "venue": {"name": "The Vancouver Flea Market", "address": "703 Terminal Ave", "city": "Vancouver", "region": "BC", "postal": "V6A 2M5", "country": "CA"},
+      "sells": {"tcg": ["pokemon", "one_piece", "mtg", "yugioh"], "sports": ["multi_sport"], "other": []},
+      "admission": {"free": false, "notes": "Shown with a dollar sign, currency not named on the page: early bird 10 for the first 100 tickets until Nov 1, general 15, children 10 and under free with a paying adult."},
+      "size": {"tables": 70},
+      "vendor": {"status": "unknown"},
+      "organizer": {"name": "The Vault Card Show", "url": "https://www.thevaultcardshow.ca"},
+      "links": {"official": "https://www.thevaultcardshow.ca"},
+      "summary": "A Sunday card show at the Vancouver Flea Market with 70 or more tables of Pokemon, One Piece, Magic, Yu-Gi-Oh and sports cards. Free booster packs go to the first 50 people in line.",
+      "evidence": [
+        {"url": "https://www.tickettailor.com/events/thevaultcardshow/2420501", "seen": "2026-10-21", "supports": ["name", "days", "venue", "admission", "size.tables", "sells"]},
+        {"url": "https://www.thevaultcardshow.ca", "seen": "2026-10-21", "supports": ["days", "venue"]}
+      ],
+      "agent_confidence": "high"
+    },
+    {
+      "kind": "edition",
+      "name": "Tri Cities Bossa Card Show",
+      "event_type": "card_show",
+      "status": "scheduled",
+      "days": [{"date": "2026-06-21", "open": "11:00", "close": "16:00"}],
+      "venue": {"name": "Executive Plaza Hotel Coquitlam", "address": "405 North Road #1", "city": "Coquitlam", "region": "BC", "country": "CA"},
+      "sells": {"tcg": ["pokemon", "other_tcg"], "sports": ["multi_sport"], "other": ["memorabilia"]},
+      "admission": {"free": true, "notes": "Free entry for all ages, no ticket needed. Free parking with plate registration at check-in. The ticket listing shows Sold Out, but entry is described as free."},
+      "size": {"tables": 100},
+      "vendor": {"status": "sold_out"},
+      "organizer": {"name": "Bossa Productions", "url": "https://bossashows.com"},
+      "links": {"official": "https://www.showpass.com/tri-cities-bossa-card-show-june-21-2026/"},
+      "summary": "A Sunday sports card and Pokemon show in a Coquitlam hotel conference centre with over 100 advertised vendor tables. Past event, recorded for crowd estimates.",
+      "evidence": [
+        {"url": "https://www.showpass.com/tri-cities-bossa-card-show-june-21-2026/", "seen": "2026-10-21", "supports": ["name", "days", "venue", "admission", "size.tables", "vendor.status", "sells"]}
+      ],
+      "agent_confidence": "medium"
+    },
+    {
+      "kind": "edition",
+      "name": "Vancity Card Show",
+      "event_type": "card_show",
+      "status": "scheduled",
+      "days": [{"date": "2026-10-02"}, {"date": "2026-10-03"}, {"date": "2026-10-04"}],
+      "venue": {"name": "Vancouver Convention Centre West", "address": "1055 Canada Pl", "city": "Vancouver", "region": "BC", "postal": "V6C 0C3", "country": "CA"},
+      "size": {"tables": 800},
+      "organizer": {"name": "Vancity Card Show LTD.", "url": "https://vancityshow.com"},
+      "links": {"official": "https://vancityshow.com"},
+      "summary": "A three day Vancouver card and collectibles show in early October with 800 or more vendor tables. Past edition, recorded for crowd estimates.",
+      "evidence": [
+        {"url": "https://vancityshow.com", "seen": "2026-10-21", "supports": ["name", "days", "venue", "size.tables", "organizer"]}
+      ],
+      "agent_confidence": "high"
+    },
+    {
+      "kind": "edition",
+      "name": "Vancity Card Show",
+      "event_type": "card_show",
+      "status": "scheduled",
+      "days": [
+        {"date": "2025-09-19", "open": "14:00", "close": "20:00"},
+        {"date": "2025-09-20", "open": "10:00", "close": "18:00"},
+        {"date": "2025-09-21", "open": "10:00", "close": "17:00"}
+      ],
+      "venue": {"name": "Vancouver Convention Centre West", "address": "1055 Canada Place", "city": "Vancouver", "region": "BC", "country": "CA"},
+      "sells": {"tcg": ["pokemon", "other_tcg"], "sports": ["multi_sport"], "other": ["memorabilia"]},
+      "admission": {"free": false, "notes": "Tickets from 12 with a dollar sign, currency not named on the page. Children under 12 admitted free."},
+      "size": {"tables": 500},
+      "organizer": {"name": "Vancity Card Show LTD.", "url": "https://vancityshow.com"},
+      "summary": "A Friday to Sunday card and collectibles show in September 2025 at the Vancouver Convention Centre with more than 500 vendor tables. Past edition, recorded for crowd estimates.",
+      "evidence": [
+        {"url": "https://www.likevancouver.ca/blog/vancity-card-show-2025-vancouvers-biggest-collectibles-event-is-back", "seen": "2026-10-21", "supports": ["name", "days", "venue", "admission", "size.tables", "sells"]}
+      ],
+      "agent_confidence": "medium"
+    },
+    {
+      "kind": "edition",
+      "name": "Sport Card Expo Montreal",
+      "event_type": "card_show",
+      "status": "scheduled",
+      "days": [{"date": "2025-05-23"}, {"date": "2025-05-24"}, {"date": "2025-05-25"}],
+      "venue": {"name": "Complexe Multi-Sports de Laval", "address": "955 Av. de Bois-de-Boulogne", "city": "Laval", "region": "QC", "postal": "H7N 4G1", "country": "CA"},
+      "sells": {"sports": ["multi_sport"]},
+      "admission": {"free": false, "notes": "Three day pass 25, Friday 15, Saturday 15, Sunday 10. Shown with a dollar sign, currency not named in the article."},
+      "size": {"tables": 50},
+      "organizer": {"name": "Sport Card & Memorabilia Expo", "url": "https://sportcardexpomontreal.com"},
+      "links": {"official": "https://sportcardexpomontreal.com"},
+      "summary": "A three day Laval show in late May 2025 with more than 50 collectibles tables and autograph appearances by two Canadiens players.",
+      "evidence": [
+        {"url": "https://thehockeynews.com/nhl/montreal-canadiens/latest-news/canadiens-alexandre-carrier-and-josh-anderson-to-appear-at-card-show", "seen": "2026-10-21", "supports": ["name", "days", "venue", "admission", "size.tables"]},
+        {"url": "https://sportcardexpomontreal.com", "seen": "2026-10-21", "supports": ["venue", "organizer", "sells"]}
+      ],
+      "agent_confidence": "medium"
+    },
+    {
+      "kind": "edition",
+      "name": "Saskatchewan Card & Collector Experience",
+      "event_type": "card_show",
+      "status": "scheduled",
+      "days": [{"date": "2027-09-25"}, {"date": "2027-09-26"}],
+      "venue": {"name": "Prairieland Park, Hall B", "address": "503 Ruth Street West", "city": "Saskatoon", "region": "SK", "postal": "S7K 4E4", "country": "CA"},
+      "organizer": {"url": "https://saskcardexp.ca"},
+      "links": {"official": "https://saskcardexp.ca"},
+      "summary": "A two day Saskatoon card show where collectors buy, sell and trade, listed among the organizer's announced dates for late September 2027. The 2027 dates appear in a list of future dates, not on a dedicated edition page.",
+      "evidence": [
+        {"url": "https://saskcardexp.ca", "seen": "2026-10-21", "supports": ["name", "days", "venue"]}
+      ],
+      "agent_confidence": "medium"
+    }
+  ],
+  "leads_only": [
+    {"name": "Sport Card Expo Calgary 2026", "url": "https://sportcardexpocalgary.com", "note": "Sept 18 to 20 2026 at Genesis Centre, Calgary AB per the organizer page. Already past. The page gives no table or attendance count and no 2027 date. A search snippet named BMO Centre instead; the organizer page was used. Not recorded."},
+    {"name": "Sport Card Expo Edmonton 2026", "url": "https://sportcardexpoedmonton.com", "note": "April 3 to 5 2026 at Millennium Place, Sherwood Park AB. Past. No table or attendance count and no vendor deadline. The site still lists this as its next show, so it may be stale. No 2027 date found. Not recorded."},
+    {"name": "Sport Card Expo Halifax 2026", "url": "https://sportcardexpohalifax.com", "note": "July 10 to 12 2026 at Zatzman Sportsplex, Dartmouth NS per the organizer page. Past. No table or attendance count. No 2027 date found. Not recorded."},
+    {"name": "Sport Card Expo Montreal (fall 2026)", "url": "https://sportcardexpomontreal.com", "note": "Sept 25 to 27 2026 at Complexe Multi-Sports de Laval, QC per the organizer page. Past. No table count on the page. A PreGrade guide says Place Bonaventure in Montreal; the organizer page was used. Not recorded."},
+    {"name": "Sport Card Expo Montreal (spring 2026)", "url": "https://www.cardpulse.club/card-shows/sport-card-expo-montreal-may-2026", "note": "Search snippet only, not fetched (listing site). Claims May 15 to 17 2026 at Laval with about 200 tables. Past. The claim has no fetchable source, so it is not recorded. Check the organizer site if the spring edition is needed."},
+    {"name": "Collectors Supershow 2027", "url": "https://collectorssupershow.com", "note": "Feb 12 to 14 2027 at The International Centre per the organizer page. The page gives no city or province; the venue is generally in Ontario, so route to the Ontario sweep. Sports, TCG and pop culture vendors; separate vendor application links exist for sports and for TCG. No prices, hours or deadline on the page. Not recorded."},
+    {"name": "Festival Hobby, Dec 2026 edition", "url": "https://festivalhobby.com", "note": "Dec 5 and 6 2026 at Palais des congres per the organizer page. The page gives no city, street, hours or vendor details. The Dec 2025 Festival Hobby listing used Palais des Congres, 1001 Place Jean-Paul-Riopelle, Montreal, so this is probably Montreal QC, not confirmed. HIGH PRIORITY: confirm city and vendor details on the next run."},
+    {"name": "Festival Hobby 2025 (Collectors and Sports-Card Expo)", "url": "https://www.cfqr600.com/everything-mtl/event/festival-hobby-2025-collectors-and-sports-card-expo/", "note": "Dec 6 and 7 2025 at Palais des Congres, 1001 Place Jean-Paul-Riopelle, Montreal QC. Past. Free admission. No table count or attendance. Sports cards, Pokemon and Magic, and grading. Not recorded."},
+    {"name": "Quebec City Comiccon, Carnaval Edition 2026", "url": "https://www.comicconquebec.com/?p=417088", "note": "Feb 14 and 15 2026 at the Centre des congres, Quebec City QC. Pop culture con with a Festival Hobby card zone. Past. The page gives more than 80 exhibitors, not tables, and no attendance. Not recorded. Check for a 2027 edition."},
+    {"name": "Mega Collectibles Summer Show 2026", "url": "https://www.planomato.com/en/halifax/p/mega-collectibles-summer-show", "note": "Sat Aug 1 2026 from 9 am at the Canadian Museum of Immigration at Pier 21, Halifax NS. Street address and province not on the page. Sells Pokemon, One Piece, Magic, sports cards and toys. Past. No table count, admission or attendance. No organizer website given. Not recorded."},
+    {"name": "Saskatchewan Card & Collector Experience 2026", "url": "https://saskcardexp.ca", "note": "Sept 26 and 27 2026 at Prairieland Park Hall B, Saskatoon SK. Past. Second annual. No table, exhibitor or attendance count. The 2027 edition is recorded separately."},
+    {"name": "Southern Alberta Trading Card Show 2025", "url": "https://www.lethbridgeherald.com/news/lethbridge-news/2025/09/24/world-class-exhibitors-coming-to-card-show/", "note": "Lethbridge Trade and Convention Centre, Lethbridge AB. The article is dated Sept 24 2025 and says the show is on that weekend, with no exact dates, so no date is recorded. Over 100 vendor tables, 10 am to 6 pm, 5 admission with currency not named. Organizers include the owner of The Vault Sports Cards and Collectibles in Lethbridge. Check for a 2026 or later edition."},
+    {"name": "Vault card show, Richmond Olympic Oval, Jan 2 and 3 2027", "url": "https://www.thevaultcardshow.ca", "note": "Two day show at the Richmond Olympic Oval, 6111 River Rd, Richmond BC, listed under January on the Vault site with tickets coming soon. The page does not clearly tie this event to The Vault, so it is not recorded. Confirm the organizer and hours later."},
+    {"name": "Bossa Sports Collectors Show (monthly)", "url": "https://www.showpass.com/tri-cities-bossa-card-show-june-21-2026/", "note": "The organizer describes a monthly show, but no recurrence pattern or fall 2026 date appears on the pages checked. bossashows.com returned 403. A separate Sat June 20 2026 Tri-Cities show with 10 early bird tickets is mentioned, not verified. Candidate for a series record if a pattern is confirmed."},
+    {"name": "Newfoundland Sportscards, Gaming and Collectables Show (2022)", "url": "https://vocm.com/?p=179892", "note": "Holiday Inn on Portugal Cove Road, St. John's NL. The article is dated June 18 2022 and says the show runs on the weekend of publication, so no exact date is recorded. 70 vendor tables. Organizer Maverick Sports and Collectables. Too old for a future lead; check for a newer edition."},
+    {"name": "Sport Card Expo Toronto (fall 2026)", "url": "https://sportcardexpotoronto.com", "note": "Nov 5 to 8 2026 at the International Centre, Mississauga ON, per a PreGrade guide and search snippets; not fetched. Out of region (Ontario). Passed to the Ontario sweep."},
+    {"name": "The Showcase Card Show, Anaheim", "url": "https://www.tickettailor.com/events/theshowcasecardshow/2189878", "note": "July 4 and 5 2026 at the Anaheim Marriott, Anaheim CA. Past. Out of region (US). Passed to the US sweep."}
+  ],
+  "blocked": [
+    {"url": "https://www.todocanada.ca/city/vancouver/event/vancity-card-show/", "status": 403, "note": "Access blocked; the Vancity 2026 record uses the organizer site instead."},
+    {"url": "https://bossashows.com", "status": 403, "note": "Organizer site blocked; Bossa recurrence and fall dates not verified."},
+    {"url": "https://novascotia.com/de/wp-json/wp/v2/tribe_events/170560", "status": 404, "note": "Nova Scotia tourism event page not found; could not verify what it lists."}
+  ],
+  "notes": "Budget: 6 of 6 WebSearch calls used (hard cap reached). 26 of 60 WebFetch used. Sport Card Expo: all four organizer sites (Calgary, Edmonton, Halifax, Montreal) show only 2026 editions that have already happened, with no table counts, vendor applications or 2027 dates, so none is recorded; they are leads_only. Collectors Supershow: the only future date in region-adjacent results is Feb 12 to 14 2027 at The International Centre with no city on the page; it is leads_only for the Ontario sweep. Festival Hobby Dec 5 and 6 2026 may be in Montreal but the page does not say so; high priority lead. Venue conflicts, organizer page used in each case: Calgary (Genesis Centre on organizer site, BMO Centre in a snippet); Montreal (Laval on organizer site, Place Bonaventure in the PreGrade guide); Vancity 2026 (Vancouver Convention Centre West on organizer site, Croatian Cultural Centre in the PreGrade guide). Currency: several pages show dollar prices without naming the currency (Vault, Vancity 2025, Sport Card Expo Montreal 2025, Lethbridge, Festival Hobby, Quebec City). Per the currency rule I did not assign CAD; prices are in admission notes with the currency left unnamed. The Vancity 2025 date (Sept 19 to 21) and other weekdays were checked with Bash. Known list item Treasure Cup Montreal (Carta Magica) was not re-researched; no new dates or vendor info came up. Shops, not shows, skipped: Imperial Garden Sports Collectibles (Grande Prairie AB) and Backyard Rink Sports Cards (Prince George BC). A Burnaby coin and stamp show on Nov 21 2026 is not card-focused and was skipped. Gaps with no dated card show found for Nov to Dec 2026: Winnipeg, Regina, Red Deer, Grande Prairie, Victoria, Kelowna, Surrey, Prince George, Moncton, Saint John, Charlottetown, Newfoundland (beyond the 2022 item), and Quebec outside Montreal and Quebec City. Searches for these returned only stamp, coin, TCG-hotel or out-of-region results. Listing sites (cardpulse, treasurehunter, thecardshopfinder) were used for leads only, never fetched."
+}

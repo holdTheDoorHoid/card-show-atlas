@@ -1,0 +1,133 @@
+{
+  "wave": "w3-regions",
+  "agent": "r12",
+  "model": "haiku",
+  "searches_used": 6,
+  "fetches_used": 53,
+  "records": [
+    {
+      "kind": "edition",
+      "name": "Gadsden Collector Con #6",
+      "event_type": "convention",
+      "status": "scheduled",
+      "days": [
+        {"date": "2027-01-16", "open": "09:00", "close": "18:00"},
+        {"date": "2027-01-17", "open": "11:00", "close": "17:00"}
+      ],
+      "venue": {"name": "The Venue at Coosa Landing", "city": "Gadsden", "region": "AL", "country": "US"},
+      "admission": {"free": false, "adult": 10, "child": 0, "currency": "USD", "notes": "Saturday general admission $10. Saturday VIP $15 with entry 9 to 11 am. Sunday $5. Kids 12 and under free with an adult. Tickets not yet on sale when checked."},
+      "organizer": {"url": "https://www.gadsdencollectorcon.com"},
+      "links": {"official": "https://www.gadsdencollectorcon.com"},
+      "summary": "A two day collectibles convention in Gadsden, Alabama, in mid January 2027, with a Saturday VIP entry window and 100 or more vendors listed by the organizer.",
+      "evidence": [
+        {"url": "https://www.gadsdencollectorcon.com", "seen": "2026-10-21", "supports": ["name", "days", "hours", "venue", "admission"]}
+      ],
+      "agent_confidence": "high"
+    },
+    {
+      "kind": "edition",
+      "name": "Mid South Card Con",
+      "event_type": "card_show",
+      "status": "scheduled",
+      "days": [{"date": "2026-11-14"}],
+      "venue": {"name": "Biloxi Civic Center", "address": "578 Howard Avenue", "city": "Biloxi", "region": "MS", "country": "US"},
+      "admission": {"free": false, "adult": 5, "currency": "USD", "notes": "Entry fee listed as 5 dollars. Vendor table prices not posted."},
+      "size": {"tables": 115},
+      "vendor": {"status": "unknown"},
+      "organizer": {"name": "Mid South Card Con", "url": "https://www.midsouthcardcon.com"},
+      "links": {"official": "https://www.midsouthcardcon.com"},
+      "summary": "A card show at the Biloxi Civic Center on November 14, 2026, with 115 vendor tables listed and a five dollar entry fee. The organizer has a dealer table sign up page.",
+      "evidence": [
+        {"url": "https://www.midsouthcardcon.com", "seen": "2026-10-21", "supports": ["name", "days", "venue", "admission", "size.tables"]}
+      ],
+      "agent_confidence": "high"
+    },
+    {
+      "kind": "edition",
+      "name": "Mississippi Card Show 2027",
+      "event_type": "card_show",
+      "status": "scheduled",
+      "days": [
+        {"date": "2027-08-21"},
+        {"date": "2027-08-22"}
+      ],
+      "venue": {"name": "Mississippi Trade Mart", "city": "Jackson", "region": "MS", "country": "US"},
+      "organizer": {"name": "VXV Events LLC", "url": "https://www.vxvevents.com"},
+      "links": {"official": "https://www.vxvevents.com/events"},
+      "summary": "The organizer's events page lists a two day Jackson card show at the Mississippi Trade Mart in late August 2027. Hours, admission and vendor details are not posted yet.",
+      "evidence": [
+        {"url": "https://www.vxvevents.com/events", "seen": "2026-10-21", "supports": ["name", "days", "venue", "organizer"]}
+      ],
+      "agent_confidence": "high"
+    },
+    {
+      "kind": "edition",
+      "name": "Gulf Coast Card Show Summer 2026",
+      "event_type": "card_show",
+      "days": [{"date": "2026-06-27", "open": "09:00", "close": "18:00"}],
+      "venue": {"name": "Daphne Civic Center", "city": "Daphne", "region": "AL", "country": "US"},
+      "admission": {"free": true, "currency": "USD"},
+      "size": {"tables": 120},
+      "summary": "A card show at the Daphne Civic Center in late June 2026 with more than 120 tables and free admission. Dealers came from six states, including Alabama, Florida, Georgia, Louisiana, Mississippi and Tennessee.",
+      "evidence": [
+        {"url": "https://www.fox10tv.com/2026/06/24/gulf-coast-card-show-summer-2026/", "seen": "2026-10-21", "supports": ["name", "days", "hours", "venue", "admission", "size.tables"]}
+      ],
+      "agent_confidence": "medium"
+    },
+    {
+      "kind": "edition",
+      "name": "The Mississippi Card Show 2026",
+      "event_type": "card_show",
+      "days": [
+        {"date": "2026-08-22"},
+        {"date": "2026-08-23"}
+      ],
+      "venue": {"name": "Mississippi Trade Mart", "address": "1200 Mississippi St", "city": "Jackson", "region": "MS", "postal": "39202", "country": "US"},
+      "size": {
+        "reported_attendance": {"value": 2000, "year": 2026, "source_url": "https://www.wlbt.com/2026/08/24/mississippi-card-show-draws-over-2000-card-fans-jackson/"}
+      },
+      "organizer": {"name": "VXV Events LLC"},
+      "summary": "A two day card show in Jackson, Mississippi, held in August 2026 at the Mississippi Trade Mart. It drew over 2,000 visitors and more than 70 vendors, and the organizers are planning a 2027 edition. Hours on the listing were 10 am to 5 pm across both days.",
+      "evidence": [
+        {"url": "https://www.eventeny.com/events/the-mississippi-card-show-20059/", "seen": "2026-10-21", "supports": ["name", "days", "venue", "organizer"]},
+        {"url": "https://www.wlbt.com/2026/08/24/mississippi-card-show-draws-over-2000-card-fans-jackson/", "seen": "2026-10-21", "supports": ["size.reported_attendance"]}
+      ],
+      "agent_confidence": "medium"
+    }
+  ],
+  "leads_only": [
+    {"name": "Jackson Sports Card Show", "url": "https://thecardshopfinder.com/event/jackson-sports-card-show-jackson-2026-11/", "note": "Jackson TN, Sat Nov 7 2026, Clarion Hotel. Listing site only. Guessed organizer domain did not resolve."},
+    {"name": "Sports Cards, TCG & Collectibles Show (Maryville)", "url": "https://www.treasurehunter.show/show/sports-cards-tcg-collectibles-show-maryville-tn-2026-11-14", "note": "Maryville TN, Sat Nov 14 2026, American Legion Post 13. Listing site only."},
+    {"name": "Mid-South Card Show (Bartlett)", "url": "https://thecardshopfinder.com/event/mid-south-card-show-november-bartlett-2026-11/", "note": "Bartlett TN, Sat Nov 21 2026, The Venue at Bartlett Station, 80 plus dealer tables per listing. Listing site only."},
+    {"name": "Smoky Mountain Trading Card Fest", "url": "https://www.treasurehunter.show/show/smoky-mountain-trading-card-fest-morristown-tn-2026-11-28", "note": "Morristown TN, Sat Nov 28 2026, Morristown Landing. Listing site only. Morristown Landing events page lists no card show."},
+    {"name": "Murfreesboro Card Show", "url": "https://www.treasurehunter.show/show/murfreesboro-card-show-murfreesboro-tn-2026-12-19", "note": "Murfreesboro TN, Sat Dec 19 2026. Listing site only."},
+    {"name": "NASH-IONAL Nashville Sports Card Show (Fall)", "url": "https://thecardshopfinder.com/event/nash-ional-fall-nashville-2026-10/", "note": "Nashville TN, Fri Oct 23 to Sun Oct 25 2026, Fairgrounds Nashville per listing. Listing site only. Organizer and venue domains did not resolve. Imminent, so worth a call."},
+    {"name": "Gadsden Mall Show", "url": "https://www.treasurehunter.show/show/gadsden-mall-show-gadsden-al-2026-11-27", "note": "Gadsden AL, Fri Nov 27 to Mon Nov 30 2026, 1001 Rainbow Dr, 100 plus vendor tables per listing. Listing site only. Mall site returned HTTP 403."},
+    {"name": "Gadsden Collector Con (GCC Card Show, Dec 5)", "url": "https://www.treasurehunter.show/show/gadsden-collector-con-gadsden-al-2026-12-05", "note": "Sat Dec 5 2026. The organizer's own Application and Rules page lists a GCC Card Show on Dec 5 2026, so the date is organizer confirmed. Venue and hours not confirmed on the organizer site. Listing site gives The Venue at Coosa Landing, 10 am to 4 pm. Do not record until venue is confirmed."},
+    {"name": "Card Show: Pokemon, TCG & Sports (Albertville)", "url": "https://www.treasurehunter.show/show/gadsden-mall-show-gadsden-al-2026-11-27", "note": "Albertville AL, Sat Oct 24 2026, Sand Mountain Park. Seen only in a listing site sidebar on 2026-10-21 (URL given is the page it appeared on). Park events page lists a fall festival and car show that day, no card show."},
+    {"name": "The TCG CON (Trussville)", "url": "https://www.treasurehunter.show/show/gadsden-mall-show-gadsden-al-2026-11-27", "note": "Trussville AL, Sat Oct 31 2026, Trussville Civic Center. Seen only in a listing site sidebar on 2026-10-21 (URL given is the page it appeared on). Guessed organizer domain returned an SSL error."},
+    {"name": "Scottsboro Sports Card & Memorabilia Show (November)", "url": "https://www.treasurehunter.show/show/gadsden-mall-show-gadsden-al-2026-11-27", "note": "Scottsboro AL, Sat Nov 7 2026. Seen only in a listing site sidebar on 2026-10-21 (URL given is the page it appeared on). A separate Sept 26 Scottsboro show is past."},
+    {"name": "Fort Payne Card Show by Tatershed (2027 series)", "url": "https://www.treasurehunter.show/show/fort-payne-card-show-by-tatershed-fort-payne-al-2027-05-15", "note": "Fort Payne AL, VFW Fairgrounds. Listing site shows Sat May 15 2027 and Sat Aug 28 2027, and a Mar 6 2027 date seen in a search summary. Organizer domain returned no content. A Nov 14 2026 date appeared only in a sidebar."},
+    {"name": "HobbyVerse Collectible Show", "url": "https://www.treasurehunter.show/show/hobbyverse-collectible-show-guntersville-al-2027-10-09", "note": "Guntersville AL, Sat Oct 9 2027, Parks & Recreation Center. Listing site only."},
+    {"name": "Madison County Card Show (November 2026)", "url": "https://www.treasurehunter.show/show/madison-county-card-show-canton-ms-2026-11-07", "note": "Canton MS, Sat Nov 7 2026, Canton Multipurpose & Equine Center, 9 am to 3 pm per listing. Listing site only. Guessed organizer domain did not resolve."},
+    {"name": "Madison County Card Show (February 2027)", "url": "https://www.treasurehunter.show/show/madison-county-card-show-canton-ms-2027-02-27", "note": "Canton MS, Sat Feb 27 2027, Canton Multipurpose & Equine Center. Listing site only."},
+    {"name": "The Flip Biloxi", "url": "https://thecardshopfinder.com/event/the-flip-biloxi-biloxi-2026-12/", "note": "Biloxi MS, Sat Dec 12 2026, Mississippi Coast Coliseum, 10 am to about 5 pm per listing. Listing site only. Two guessed organizer domains failed (certificate and empty page)."},
+    {"name": "Magnolia Sports Cards Show (Tupelo)", "url": "https://thecardshopfinder.com/event/magnolia-sports-cards-show-tupelo-2026-12/", "note": "Tupelo MS, Sat Dec 5 2026, Tupelo Furniture Market Building 4 per listing. Listing site only. magnoliasportscards.com is an unrelated consulting firm, so this organizer is unconfirmed."},
+    {"name": "Pokemon & TCG Card Show (Brandon)", "url": "https://www.treasurehunter.show/show/pokemon-tcg-card-show-brandon-ms-2026-12-19", "note": "Brandon MS, Sat Dec 19 2026, Brandon Public Library per listing. Listing site only. Library events page lists only board meetings."},
+    {"name": "Kentucky Card Show (Lexington, November)", "url": "https://thecardshopfinder.com/event/kentucky-card-show-lexington-2026-11/", "note": "Lexington KY, Sun Nov 1 2026, Oleika Temple per listing. Listing site only. kentuckycardshow.com says its upcoming shows are on a ticket site (ontreasure.com, never fetch list). Its Aug 7 2026 Hyatt Regency show is past with no size given."},
+    {"name": "Lexington KY Sports Cards & Collectibles Show", "url": "https://thecardshopfinder.com/event/lexington-ky-sports-cards-and-collectibles-show-lexington-2026-11/", "note": "Lexington KY, Sat Oct 24 2026 and Sat Nov 21 2026 at Alltech Arena, Kentucky Horse Park, and Sat Dec 19 2026 per listing. Listing site only. Horse Park events page did not list it."},
+    {"name": "Sports & Pokemon Card Show (LexCardX)", "url": "https://www.treasurehunter.show/show/sports-pokemon-card-show-lexcardx-2026-lexington-ky-2026-12-06", "note": "Lexington KY, Sun Dec 6 2026, Central Bank Center Exhibit Hall C per listing. Listing site only. Guessed organizer domain did not resolve. Central Bank Center events page was partly loaded and did not show it."},
+    {"name": "PokeKon Fest (Bowling Green KY)", "url": "https://www.treasurehunter.show/show/pokekon-fest-bowling-green-ky-2026-11-14", "note": "Bowling Green KY, Sat Nov 14 2026, National Corvette Museum Convention Center per listing. Listing site only. Separate from the known PokeKon Hebron. corvettemuseum.org events page returned HTTP 403."},
+    {"name": "Owensboro Card Show (Shiloh's Lounge)", "url": "https://www.treasurehunter.show/show/owensboro-card-show-owensboro-ky-2026-10-31", "note": "Owensboro KY, Sat Oct 31 2026 and Sat Dec 26 2026, Shiloh's Lounge & Grill per listing. Listing site says it repeats the last Saturday of each month. Listing site only."},
+    {"name": "Owensboro Card Show (Convention Center)", "url": "https://www.treasurehunter.show/show/owensboro-card-show-owensboro-ky-2026-11-07", "note": "Owensboro KY, Sat Nov 7 2026, Owensboro Convention Center per listing. Listing site only. Convention center events page returned HTTP 404."},
+    {"name": "Kentucky Card Fest (Covington)", "url": "https://www.treasurehunter.show/show/kentucky-card-fest-covington-ky-2026-10-24", "note": "Covington KY, Sat Oct 24 2026, Northern Kentucky Convention Center per listing. Listing site only. Guessed venue domain did not resolve."},
+    {"name": "Etown Card Expo", "url": "https://thecardshopfinder.com/event/etown-card-expo-elizabethtown-2027-04/", "note": "Elizabethtown KY, Sat Apr 10 2027, BlueGrass SportsPlex per listing. Listing site only, far out."},
+    {"name": "Big Hit Sports Cards (semiannual card shows)", "url": "https://www.bighitsportscards.com", "note": "Spanish Fort AL shop. Site says it runs semiannual card shows, no dates given. Also listed as contact for the Gulf Coast Card Show, organizer not named on that page. Outreach lead."}
+  ],
+  "blocked": [
+    {"url": "https://expofp.com/owensboro-convention-center/boundless-cards-expo-trade-night-2026-08-28", "status": 403, "note": "HTTP 403 on fetch. Boundless Cards Expo, Owensboro, Aug 2026 (past)."},
+    {"url": "https://www.gadsdenmall.com", "status": 403, "note": "HTTP 403 on fetch. Gadsden Mall site, for the Nov 27 to 30 2026 show."},
+    {"url": "https://www.corvettemuseum.org/events", "status": 403, "note": "HTTP 403 on fetch. National Corvette Museum events, for PokeKon Fest Bowling Green."}
+  ],
+  "notes": "Searches: 6 of 6 used (cap reached). Fetches: 53 of 60. Records: 5 (2 upcoming in region, 1 Mississippi 2027 edition, 1 Gulf Coast past edition with size, 1 Mississippi 2026 past edition with attendance). Most leads are on listing sites I may not fetch, and guessed organizer or venue domains mostly failed (DNS errors, 404s, empty pages), so most leads remain leads_only. Gadsden Collector Con: the treasurehunter listing says Jan 15 to 16 2027, but the organizer's own site says Jan 16 to 17 2027 (Sat and Sun), so the record uses the organizer's dates. The organizer's Application and Rules page also lists a GCC Card Show on Dec 5 2026, left as a lead until its venue is confirmed. The Gadsden Collector Con is typed as convention, since the organizer page does not say card show. Gulf Coast Card Show: the news page gives venue and hours but not the city; city Daphne is taken from the venue name. Its organizer is not named on the page, so none is recorded. Mississippi 2026: the source says more than 70 vendors, not tables, so no table count is recorded. Two visitlex.com event URLs returned unrelated Breeders Cup and Keeneland listings, so Visit Lexington was not a source. VXV Events also runs non-region shows (Arkansas Card Show) and comic cons in region (Mississippi Comic Con, Iron City Comic Con, Anime Blues Con, South Alabama Comic Con) that are not card shows and are left out. Kentucky Card Show Expo (Hyatt Regency Lexington, Aug 7 2026) is past with no size, so not recorded. No phone numbers recorded."
+}

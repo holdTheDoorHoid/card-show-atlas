@@ -1,0 +1,62 @@
+{
+  "wave": "w3-regions",
+  "agent": "r17",
+  "model": "haiku",
+  "searches_used": 6,
+  "fetches_used": 12,
+  "records": [
+    {
+      "kind": "edition",
+      "name": "London Collectable Expo",
+      "event_type": "card_show",
+      "days": [{"date": "2026-03-01", "open": "09:30", "close": "14:30"}],
+      "venue": {"name": "Centennial Hall", "city": "London", "region": "ON", "country": "CA"},
+      "sells": {"tcg": [], "sports": ["multi_sport"], "other": ["non_sport"]},
+      "admission": {"free": false, "adult": 5, "child": 0, "currency": "CAD", "notes": "Children under 12 free when accompanied by an adult. The page shows the price with a dollar sign and does not name the currency; CAD set from the Ontario region brief."},
+      "size": {"tables": 90},
+      "vendor": {"contact": "londoncollectorshow@gmail.com"},
+      "summary": "A one day expo with over 90 tables of sports and non sports cards at Centennial Hall in London, Ontario, held on a Sunday in March 2026. Past edition, kept for crowd estimates.",
+      "evidence": [{"url": "https://www.ledc.com/event/london-collectable-expo", "seen": "2026-10-21", "supports": ["name", "days", "venue", "admission", "size.tables", "sells", "vendor.contact"]}],
+      "agent_confidence": "medium"
+    },
+    {
+      "kind": "edition",
+      "name": "Doug Laurie Sports Cards, Comics and Collectibles Show",
+      "event_type": "card_show",
+      "days": [
+        {"date": "2023-07-21"},
+        {"date": "2023-07-22", "open": "10:00", "close": "15:00"}
+      ],
+      "venue": {"name": "Doug Laurie Sports, Kozlov Centre", "address": "400 Bayfield Street, Unit 35", "city": "Barrie", "region": "ON", "postal": "L4M 5A1", "country": "CA"},
+      "sells": {"tcg": [], "sports": ["multi_sport"], "other": ["comics"]},
+      "admission": {"free": true, "currency": "CAD"},
+      "size": {"tables": 40},
+      "vendor": {"contact": "wfrazer@douglauriesports.com"},
+      "organizer": {"name": "Doug Laurie Sports", "url": "https://douglauriesports.com/"},
+      "summary": "A two day sports cards, comics and collectibles show with more than 40 vendor tables in Barrie, held in July 2023 and free to enter. Past edition, kept for crowd estimates.",
+      "evidence": [{"url": "https://business.barriechamber.com/events/details/doug-laurie-sports-cards-comics-collectibles-show-5699", "seen": "2026-10-21", "supports": ["name", "days", "venue", "admission", "size.tables", "vendor.contact", "organizer"]}],
+      "agent_confidence": "medium"
+    }
+  ],
+  "leads_only": [
+    {"name": "Greater Toronto Sports Card Show (Fall edition, POP UP Entertainment)", "url": "https://www.eventbrite.ca/e/1983381091235", "note": "Lead checked. Eventbrite listing only, a links only site, so no facts recorded. Snippets: Sunday Sep 13 at 10 am, Montecassino Hotel and Event Centre, 3710 Chesswood Drive, North York, 150 plus vendor tables, six hours. No year shown in the snippet, but the weekday fits 2026, so likely past. Organizer is POP UP Entertainment per the listing (inferred). No organizer website or 2026 or 2027 date found. A Vaughan edition at Montecassino Woodbridge on Sunday Aug 9 is also listed, also past. Not recorded."},
+    {"name": "London Pokemon and TCG Show, Centennial Hall", "url": "https://www.todocanada.ca/city/london/event/london-pokemon-and-tcg-show/", "note": "The page returned 403, so it is also under blocked. A search summary said Sunday Nov 1 at Centennial Hall, 70 tables, $5 admission, trading card games (Pokemon, Magic, Lorcana, Yu-Gi-Oh, One Piece). No year in the summary, and nothing was read from the page, so not recorded. Find the organizer or venue page and recheck. Sports cards not named."},
+    {"name": "CARDEX Hamilton (Pokemon and sports card event, Hamilton Convention Centre)", "url": "https://www.chch.com/?p=176966", "note": "CHCH article read. It gives Nov 22 and nearly 200 tables, but no year. The page metadata date is Nov 12, 2025, so this is probably the 2025 edition, not 2026. Not recorded. No organizer page found. Recheck for a 2026 edition."},
+    {"name": "COLLECTEX (Lime Ridge Mall, Hamilton)", "url": "https://canadianstampnews.com/event/collectex/", "note": "Canadian Stamp News event page read. Lime Ridge Mall, 999 Upper Wentworth St, Hamilton. Gives 500 tables and sports cards among stamps, coins, comics and more. Date is Mar 1 with no year, and hours and admission are not on the page. An earlier search summary put it in 2026 and listed hours and free admission, but those were not on the page. Organizer contact is an Instagram page and an email on the page; not recorded. Not recorded as an edition."},
+    {"name": "Spotlight Card Show, Ontario", "url": "https://thecardshopfinder.com/event/spotlight-card-show-ontario-2026-08/", "note": "Listing site on the never fetch list, snippet only. Dated Aug 22 and 23, 2026, so past as of Oct 21. The title says Ontario, which may mean Ontario, California. Not recorded."},
+    {"name": "Stouffville Card Show (Town of Whitchurch-Stouffville)", "url": "https://townofws.ca/play/events/card-show/", "note": "Town page read. Saturday Oct 17, 10 am to 3 pm, Leisure Centre gymnasium, free with a food bank donation, vendors contact the town. No year on the page, so not recorded. The weekday fits 2026 and that date has passed. A search summary said 2027 details are still to come, but the page does not say that."},
+    {"name": "Simcoe Sports Card Summit (Barrie)", "url": "https://www.tourismbarrie.com/festivals-events/details/2025/11/29/default-calendar/simcoe-sports-card-summit", "note": "Calendar page returned 404. A search summary said Nov 29 2025 at the Allandale Recreation Centre with 30 plus vendors. Past 2025 edition, unverified, not recorded. Check for a 2026 edition."},
+    {"name": "Woodstock sports card show", "url": "https://www.tourismoxford.ca/events_and_experiences/festivals_and_events/woodstock_sports_card_show.aspx", "note": "Tourism page returned 404. Search snippets show earlier editions (Apr 24 2022 and Jun 16 2024, over 100 tables per a summary) and no 2026 or 2027 date. Not recorded."},
+    {"name": "Woodstock card, comic, coin and pop culture show (Father's Day)", "url": "https://auctionsontario.ca/events/woodstock-card-comic-coin-pop-culture-show-fathers-day/", "note": "Auction house event page returned 404. No date or size confirmed. Not recorded."},
+    {"name": "HobbyCon Ottawa, free Pokemon and TCG show", "url": "https://accrue.com/events/hobbycon-ottawa-free-pokmon-tcg-show-nov-1-2025-HQwEGdXNnn6L4k5xZg", "note": "Listing not read (the accrue site returned 403 on other pages). Title says Nov 1 2025, so past, not sports, and no size. Not recorded. Check for a 2026 Ottawa edition."},
+    {"name": "Northern National Collectors Convention, Windsor (2023)", "url": "https://www.am800cklw.com/news/windsor-to-host-inaugural-northern-national-collectors-convention-1.19604882.html", "note": "News item from a search result, not fetched. Search summary says it ran at Caesars Windsor, Sep 29 to Oct 1 2023. Past, and no 2026 or 2027 edition found. Not recorded."},
+    {"name": "Doug Laurie Sports (organizer site)", "url": "https://douglauriesports.com/", "note": "Organizer site for the Barrie show recorded above. Not fetched in this pass. Check for a newer July show edition, 2026 or 2027 dates, and other card shows by this organizer."},
+    {"name": "360 Cards Comics Collectibles, The September Show", "url": "https://accrue.com/events/360-cards-comics-collectibles-the-september-show-88ZuKXpXszNLpLhxmo", "note": "Accrue listing that surfaced in a Kitchener search. Location, year and date are not confirmed in the snippet, and the page was not read (accrue returned 403 on other pages). Check whether it is in Ontario and in range."}
+  ],
+  "blocked": [
+    {"url": "https://www.todocanada.ca/city/london/event/london-pokemon-and-tcg-show/", "status": 403, "note": "Event listing site, fetch refused. The London Pokemon and TCG Show is left as a lead above."},
+    {"url": "https://accrue.com/events/gta-card-show-FjwPEY4EnpmkgZNRu5", "status": 403, "note": "Event listing site, fetch refused. Title says GTA card show; no facts read."},
+    {"url": "https://accrue.com/events/gta-card-show-8Fw624MCdDVmAZMrCR", "status": 403, "note": "Same listing site, fetch refused. Title says GTA card show; no facts read."}
+  ],
+  "notes": "Lead checked: Greater Toronto Sports Card Show. Only an Eventbrite listing (never fetch site) and an organizer name (POP UP Entertainment, inferred) turned up, with no organizer website and no 2026 or 2027 date, so it is in leads_only. Recorded two past Ontario editions whose pages write the year and give a table count: London Collectable Expo (Mar 1 2026, over 90 tables) and the Doug Laurie Sports show in Barrie (Jul 21 and 22 2023, over 40 tables). The London record uses CAD from the region brief because the page shows $ without a currency name. The Barrie page gives conflicting Friday hours (11 to 6 vs 11 to 5), so only the Friday date is recorded. No upcoming Ontario card show with a written date was confirmed. The Nov 1 London Pokemon and TCG show (todocanada 403) and the Nov 22 Hamilton CARDEX (probably 2025) are unverified. Searches covered Toronto area, London, Hamilton, Ottawa, Barrie, Stouffville, Windsor, Kitchener, Oshawa and Niagara. Kitchener, Windsor, Oshawa and Niagara returned only past or non Ontario items, and no 2027 Ontario card show was found. Skipped as out of scope or covered elsewhere: Sport Card Expo Toronto in Mississauga (Nov 5 to 8 2026, excluded by brief), an R&B Sports show in Ottawa, Kansas (US), and The Vault Card Show in Vancouver, BC. The Toronto Comic Book Show and the Greater Toronto Video Game Show at Montecassino are not card shows. The Pregrade guide's undated Toronto area, Ottawa and Hamilton regional entries were not recorded. Three 404 pages: tourismbarrie, tourismoxford, auctionsontario. Budget: 6 of 6 searches used; 12 fetches used (3 of them 403 or 404 on listing sites, counted above)."
+}

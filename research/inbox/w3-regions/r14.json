@@ -1,0 +1,150 @@
+{
+  "wave": "w3-regions",
+  "agent": "r14",
+  "model": "haiku",
+  "searches_used": 6,
+  "fetches_used": 42,
+  "records": [
+    {
+      "kind": "edition",
+      "name": "Minnesota Card Show",
+      "event_type": "convention",
+      "status": "scheduled",
+      "days": [
+        {"date": "2026-09-17", "open": "16:00", "close": "20:00"},
+        {"date": "2026-09-18", "open": "11:00", "close": "20:00"},
+        {"date": "2026-09-19", "open": "10:00", "close": "19:00"},
+        {"date": "2026-09-20", "open": "09:00", "close": "15:00"}
+      ],
+      "venue": {"name": "Saint Paul RiverCentre", "address": "175 West Kellogg Boulevard", "city": "Saint Paul", "region": "MN", "postal": "55102", "country": "US"},
+      "sells": {"tcg": [], "sports": [], "other": []},
+      "size": {"tables": 610},
+      "organizer": {"name": "Minnesota Card Show", "url": "https://cardshowmn.com"},
+      "links": {"official": "https://cardshowmn.com", "venue": "https://www.rivercentre.org/events/detail/minnesota-card-show-4"},
+      "summary": "A four day show at Saint Paul RiverCentre with more than 600 dealer tables and celebrity guest signings. Past edition, kept for crowd size.",
+      "evidence": [
+        {"url": "https://www.rivercentre.org/events/detail/minnesota-card-show-4", "seen": "2026-10-21", "supports": ["name", "days", "venue", "size.tables"]},
+        {"url": "https://cardshowmn.com", "seen": "2026-10-21", "supports": ["name", "days"]}
+      ],
+      "agent_confidence": "high"
+    },
+    {
+      "kind": "edition",
+      "name": "Minnesota Card Show",
+      "event_type": "convention",
+      "status": "scheduled",
+      "days": [
+        {"date": "2026-04-16", "open": "16:00", "close": "20:00"},
+        {"date": "2026-04-17", "open": "11:00", "close": "20:00"},
+        {"date": "2026-04-18", "open": "10:00", "close": "19:00"},
+        {"date": "2026-04-19", "open": "09:00", "close": "15:00"}
+      ],
+      "venue": {"name": "Saint Paul RiverCentre", "address": "175 West Kellogg Boulevard", "city": "Saint Paul", "region": "MN", "postal": "55102", "country": "US"},
+      "sells": {"tcg": [], "sports": [], "other": []},
+      "size": {"tables": 610},
+      "organizer": {"name": "Minnesota Card Show", "url": "https://cardshowmn.com"},
+      "links": {"venue": "https://www.rivercentre.org/events/detail/minnesota-card-show-3"},
+      "summary": "A four day show at Saint Paul RiverCentre with more than 600 dealer tables and celebrity guest signings. Past edition, kept for crowd size.",
+      "evidence": [
+        {"url": "https://www.rivercentre.org/events/detail/minnesota-card-show-3", "seen": "2026-10-21", "supports": ["name", "days", "venue", "size.tables"]}
+      ],
+      "agent_confidence": "medium"
+    },
+    {
+      "kind": "edition",
+      "name": "Montana Card Show",
+      "event_type": "card_show",
+      "status": "scheduled",
+      "days": [
+        {"date": "2027-06-26", "open": "10:00", "close": "17:00"},
+        {"date": "2027-06-27", "open": "10:00", "close": "17:00"}
+      ],
+      "venue": {"name": "MetraPark Montana Pavilion", "city": "Billings", "region": "MT", "country": "US"},
+      "sells": {"tcg": [], "sports": [], "other": []},
+      "admission": {"free": true, "currency": "USD"},
+      "vendor": {"status": "open", "application_url": "https://www.tickettailor.com/events/montanafuncon/2410177"},
+      "organizer": {"name": "Montana Fun Con", "url": "https://www.tickettailor.com/events/montanafuncon"},
+      "links": {"official": "https://www.tickettailor.com/events/montanafuncon/2410177"},
+      "summary": "A free two day card show held during Billings Fun Con 2027, with table sales open to vendors.",
+      "evidence": [
+        {"url": "https://www.tickettailor.com/events/montanafuncon/2410177", "seen": "2026-10-21", "supports": ["name", "days", "venue", "admission", "vendor.status", "vendor.application_url"]},
+        {"url": "https://www.tickettailor.com/events/montanafuncon", "seen": "2026-10-21", "supports": ["name", "days"]}
+      ],
+      "agent_confidence": "high"
+    },
+    {
+      "kind": "edition",
+      "name": "Dakota Card Show: Sioux Falls",
+      "event_type": "card_show",
+      "status": "scheduled",
+      "days": [
+        {"date": "2026-10-03"},
+        {"date": "2026-10-04"}
+      ],
+      "venue": {"name": "Sioux Falls Convention Center", "city": "Sioux Falls", "region": "SD", "country": "US"},
+      "sells": {"tcg": [], "sports": [], "other": []},
+      "size": {"tables": 380},
+      "vendor": {"status": "sold_out", "contact": "Jaxson@dakotacardshow.com"},
+      "organizer": {"name": "Dakota Card Show", "url": "https://www.dakotacardshows.com"},
+      "links": {"official": "https://www.dakotacardshows.com"},
+      "summary": "A two day show at the Sioux Falls Convention Center with 380 or more tables, sold out for vendors. Past edition, kept for crowd size.",
+      "evidence": [
+        {"url": "https://www.dakotacardshows.com", "seen": "2026-10-21", "supports": ["name", "days", "venue", "size.tables", "vendor.status", "vendor.contact"]}
+      ],
+      "agent_confidence": "high"
+    },
+    {
+      "kind": "edition",
+      "name": "Grand Forks Sports Card Show",
+      "event_type": "card_show",
+      "status": "scheduled",
+      "days": [
+        {"date": "2026-10-24", "open": "10:00"}
+      ],
+      "venue": {"name": "Alerus Center", "city": "Grand Forks", "region": "ND", "country": "US"},
+      "sells": {"tcg": [], "sports": ["multi_sport"], "other": []},
+      "size": {"tables": 75},
+      "links": {"official": "https://www.aleruscenter.com/events"},
+      "summary": "A one day sports card show at the Alerus Center in Grand Forks, about 75 tables per the regional calendar.",
+      "evidence": [
+        {"url": "https://www.aleruscenter.com/events", "seen": "2026-10-21", "supports": ["name", "days", "venue"]},
+        {"url": "https://www.cardsota.com/all-events/", "seen": "2026-10-21", "supports": ["days.open", "size.tables"]}
+      ],
+      "agent_confidence": "medium"
+    }
+  ],
+  "leads_only": [
+    {"name": "Minnesota Card Show (April 2027)", "url": "https://cardshowmn.com", "note": "Organizer page gives April 15 to 18, 2027 with the year written. No venue is named on the organizer site (2026 editions were at Saint Paul RiverCentre). Record once the venue is confirmed. Dealer contact published: Jaxson@mncardshows.com. Tables not yet on sale."},
+    {"name": "Minnesota Card Show monthly series (FM Monthly and MN Monthly)", "url": "https://cardshowmn.com", "note": "Organizer page lists FM Monthly on Oct 24, 2026 and Nov 28, 2026 at Courts and Pints, and MN Monthly on Nov 21, 2026 at Heritage Center, each with year. No city or address is given for either venue."},
+    {"name": "Card Collectors Anonymous MN Card Show (Saint Paul)", "url": "https://thecardshopfinder.com/event/card-collectors-anonymous-mn-saint-paul-2026-11/", "note": "Aggregator lists Nov 8, 2026 (a Sunday). Organizer domain cardcollectorsanonymous.com does not resolve. Venue, hours and admission not verified."},
+    {"name": "The Andover Card Show", "url": "https://thecardshopfinder.com/event/the-andover-card-show-andover-2026-11/", "note": "Aggregator lists Nov 21, 2026 (a Saturday). Andover city homepage did not list it. Organizer not found."},
+    {"name": "TruPlayerz Card Show (Rosemount)", "url": "https://thecardshopfinder.com/event/truplayerz-card-show-rosemount-2026-11/", "note": "Aggregator lists Nov 21, 2026 in Rosemount. The TruPlayerz website lists a Sept 13, 2026 show (past) and never mentions Rosemount, so the November date and place are unconfirmed."},
+    {"name": "Bloomington Armory Sportscard and Sports Collectible Show (December)", "url": "https://thecardshopfinder.com/event/bloomington-armory-sportscard-show-bloomington-2026-12/", "note": "Aggregator lists Dec 12, 2026 (a Saturday) at the Bloomington Armory. City of Bloomington homepage did not list it. Organizer not found."},
+    {"name": "TCSCC Club Show (Bloomington Armory)", "url": "https://www.cardsota.com/all-events/", "note": "Calendar row: Sat 7 Nov at 9 am, Armory in Bloomington, 60 tables, mostly sports. Calendar shows no year, so not recorded. Confirm the year with the organizer."},
+    {"name": "Maplewood Mall Sportscard and Sports Collectible Show (December)", "url": "https://thecardshopfinder.com/event/maplewood-mall-sportscard-show-maplewood-2026-12/", "note": "Aggregator lists Dec 19 to 22, 2026 at Maplewood Mall. Mall homepage did not list it. Organizer not found."},
+    {"name": "North Metro Card Show (Cambridge)", "url": "https://www.treasurehunter.show/show/north-metro-card-show-cambridge-mn-2026-12-17", "note": "Aggregator listing for Dec 17, 2026 (a Thursday), venue reported as Cambridge Primary School. Organizer site not found. Calendar also shows a Cambridge Card Show at the same school on Sat 24 Oct; check whether one organizer runs both."},
+    {"name": "Sports Card Show at the Bowl (Shakopee)", "url": "https://www.treasurehunter.show/show/sports-card-show-at-the-bowl-shakopee-mn-2027-02-07", "note": "Aggregator listings for Feb 7, Mar 7 and Apr 4, 2027 (all Sundays), with the year in the listing URLs. Organizer and venue page not found. A Shakopee edition on Oct 4, 2026 is past."},
+    {"name": "Station Kicks Poke Station Card Show (Northtown Mall, Blaine)", "url": "https://www.cardsota.com/all-events/", "note": "Calendar rows: Fri 30 Oct, Sat 31 Oct and Sun 1 Nov, 40 tables, mostly TCG. No year on the calendar. Organizer site did not resolve."},
+    {"name": "EGL Pop Up Marathon (Northtown Mall, Blaine)", "url": "https://www.cardsota.com/all-events/", "note": "Calendar row: Fri 6 Nov at 11 am, 30 or more tables, all TCG. No year on the calendar."},
+    {"name": "PokeConnect Card Show (Maplewood Mall)", "url": "https://www.cardsota.com/all-events/", "note": "Calendar row: Fri 6 Nov at 10 am at Maplewood Mall. No year on the calendar. Organizer not found."},
+    {"name": "Halloween Sports Card Show (Rosemount American Legion)", "url": "https://www.cardsota.com/all-events/", "note": "Calendar row: Sat 31 Oct at 9:30 am, Rosemount American Legion. No year on the calendar."},
+    {"name": "Kaboom Cards and Collectibles Show (Pan Asian Center, Maplewood)", "url": "https://www.cardsota.com/all-events/", "note": "Calendar rows: Sat 24 Oct and Sun 25 Oct at Pan Asian Center. No year on the calendar. Organizer domain did not resolve."},
+    {"name": "Granite City Card Show (Sartell)", "url": "https://www.cardsota.com/all-events/", "note": "Calendar row: Sat 24 Oct at 9 am, Sartell Community Center. No year on the calendar."},
+    {"name": "Cambridge Card Show (Cambridge Primary School)", "url": "https://www.cardsota.com/all-events/", "note": "Calendar row: Sat 24 Oct at 9 am, 40 or more tables, about 70 pct sports. No year on the calendar."},
+    {"name": "Fall Brainerd Lakes Card Show (Armory)", "url": "https://www.cardsota.com/all-events/", "note": "Calendar rows: Fri 23 Oct at noon and Sat 24 Oct at 10 am, 60 or more tables, about half TCG. No year. The calendar did not name the state, so the Minnesota location is assumed and needs checking."},
+    {"name": "Mankato Card Show: Exclusively Sports Cards", "url": "https://www.cardsota.com/all-events/", "note": "Calendar rows: Fri 23 Oct at 9 am and Sat 24 Oct at 9 am at The Venue in Mankato. No year. State assumed from the calendar."},
+    {"name": "Sports and Trading Card Show (River Hills Mall, Mankato)", "url": "https://www.cardsota.com/all-events/", "note": "Calendar rows: Sat 24 Oct at 11 am (venue not shown) and Sun 25 Oct at 12 pm at River Hills Mall, 200 or more tables. No year. State assumed from the calendar."},
+    {"name": "Biweekly Card Show (Wow! Zone, Mankato)", "url": "https://www.cardsota.com/all-events/", "note": "Calendar row: Sun 1 Nov at 9 am at Wow! Zone in Mankato. No year on the calendar."},
+    {"name": "Rochester Med City Sports Card Show", "url": "https://www.kttc.com/2026/02/23/med-city-sports-card-show-collects-big-crowd", "note": "Recurring Rochester show. A February 2026 report covers the March 2026 edition (past, no size recorded). No 2027 date found. The local event listing returned HTTP 403."},
+    {"name": "Dakota Card Show: Fargo", "url": "https://www.dakotacardshows.com", "note": "Organizer site lists a Fargo show at Veterans Memorial Arena with the date TBD and no year. Organizer page shows the Fargo tables as sold out. Record once a date is published."},
+    {"name": "Magic City Card Show (Minot)", "url": "https://www.kxnet.com/north-dakota-news/magic-city-card-show-arrives-to-north-dakota-state-fair-center/amp", "note": "Undated article (only a relative timestamp), venue North Dakota State Fair Center in Minot. No date or year, so no record. Look for the next edition."},
+    {"name": "Playmakers card shows (Uptown Rapid Mall, Rapid City)", "url": "https://www.kotatv.com/2026/03/23/card-show-brings-collectors-together-uptown-rapid/", "note": "Article dated Mar 23, 2026 says shows run every other month at Uptown Rapid Mall, with no future dates. Organizer is Playmakers Sports Cards, Memorabilia and Gaming. Dates are posted on Facebook only."},
+    {"name": "Zootown Sports Cards trade shows (Missoula)", "url": "https://930kmpt.com/ixp/117/p/missoula-sports-card-show/", "note": "Organizer runs two large trade shows a year. The April 18 to 19 Missoula show (2026, from the article date) is past and gives no size. No future dates found. The organizer website returned HTTP 404."},
+    {"name": "Action Cards and Collectibles shows (Great Falls)", "url": "https://krtv.com/news/great-falls-news/great-falls-hosts-cards-and-collectibles-show", "note": "Organizer Scott Swanke (Action Cards and Collectibles) planned an October show and an April show at the Civic Center. Articles give no years, so no dates recorded. Confirm years with the organizer."}
+  ],
+  "blocked": [
+    {"url": "https://twincitiesfamily.com/?p=10045157", "status": 403, "note": "Minnesota family events listing, access denied"},
+    {"url": "https://rochesterlocal.com/event/med-city-sports-card-show-chip-shots-2", "status": 403, "note": "Rochester event listing, access denied"}
+  ],
+  "notes": "Searches: all 6 used, so discovery stopped there. Fetches: 42 of 60. Upcoming coverage is thin: no upcoming shows found in Wyoming or South Dakota, only the Oct 24 Grand Forks show in North Dakota, and only the June 2027 Billings show in Montana. Most other shows surfaced on never-fetch listing sites (treasurehunter, cardshopfinder, cantonfair), so they are leads, not checked. Past shows not recorded because no size appeared on an allowed page: Black Hills Card Show in Rapid City (Sept 2026), Great Plains Cards and Collectibles in Garretson (Sept 6, 2026), AMA Fall show in Sioux Falls (Sept 12 to 13, 2026), Kirkwood Mall in Bismarck (Aug 8 to 9, 2026), The 4 C's in Bismarck (Sept 11, 2026), Missoula Sports Cards and Collectibles show (Apr 18 to 19, 2026), Cheyenne shows (May 22 to 24 and Aug 8 to 9, 2026), Minneapolis Trading Card Fest (Oct 17 to 18, 2026), Collect-A-Con Minneapolis (July 18 to 19, 2026), and Duluth shows (June 2026). The cardsota all-events calendar (not a never-fetch site) lists about 20 Minnesota rows and the Grand Forks row. Its rows carry weekday and day but no year. The weekdays match 2026, but I did not write years, so those rows are leads. Search-summary claims with no checkable source URL were not recorded: a Pokemon event at Hyatt Regency Bloomington on Dec 13, 2026; a sports card show at a Holiday Inn in Fargo on June 20 (no year); the venue for the Card Collectors Anonymous show; and the Andover Community Center venue. Montana Fun Con page shows ZIP 59102 for MetraPark, which I did not record because no street address was given and I could not confirm the ZIP. Event type is convention for the Minnesota Card Show (four days, dealers plus guest signings) and card_show for the Montana show (a card show run during Billings Fun Con). Dead or unreachable: cardcollectorsanonymous.com, stationkicks.com, kaboomcards.com and visitfargomoorhead.com (host does not resolve), zootownsportscards.com and visitcheyenne.com and visitsiouxfalls.com (HTTP 404), visitmissoula.org (TLS name mismatch), and the visitsaintpaul.com event page (redirect target 404). Tourism calendars for Grand Forks, Bismarck, Rapid City and Sioux Falls listed no card shows. Out of scope for this brief per the known list: SCG CON Minneapolis and the Star Wars Unlimited Minneapolis qualifier."
+}

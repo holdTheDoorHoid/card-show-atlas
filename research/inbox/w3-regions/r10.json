@@ -1,0 +1,208 @@
+{
+  "wave": "w3-regions",
+  "agent": "r10",
+  "model": "haiku",
+  "searches_used": 6,
+  "fetches_used": 22,
+  "records": [
+    {
+      "kind": "edition",
+      "name": "The Hollywood Show Chicago 2026",
+      "event_type": "convention",
+      "status": "scheduled",
+      "days": [
+        {"date": "2026-11-20", "open": "15:30", "close": "20:30"},
+        {"date": "2026-11-21", "open": "09:30", "close": "17:00"},
+        {"date": "2026-11-22", "open": "10:00", "close": "16:00"}
+      ],
+      "venue": {"name": "Donald E. Stephens Convention Center", "address": "5555 N. River Road", "city": "Rosemont", "region": "IL", "postal": "60018", "country": "US"},
+      "sells": {"tcg": [], "sports": ["multi_sport"], "other": ["memorabilia"]},
+      "vendor": {"application_url": "https://www.hollywoodshow.com/chicago/chicago-vendor-info", "contact": "gina@hollywoodshow.com", "status": "unknown"},
+      "organizer": {"name": "The Hollywood Show", "url": "https://www.hollywoodshow.com"},
+      "links": {"official": "https://www.hollywoodshow.com/chicago/"},
+      "summary": "A three day convention in Rosemont with dealers selling vintage sports cards, modern trading cards, memorabilia and autographed items. Friday general admission runs 3:30 pm to 8:30 pm, with an early bird session from 1 pm. The ticket also covers the Chicago Sports Spectacular.",
+      "evidence": [
+        {"url": "https://www.hollywoodshow.com/chicago/", "seen": "2026-10-21", "supports": ["name", "days", "venue", "sells", "vendor.application_url", "vendor.contact"]}
+      ],
+      "agent_confidence": "medium"
+    },
+    {
+      "kind": "edition",
+      "name": "Premier Card Shows Janesville 2026",
+      "event_type": "card_show",
+      "status": "scheduled",
+      "days": [{"date": "2026-10-24", "open": "09:00", "close": "15:00"}],
+      "venue": {"name": "Woodman's Sports & Conference", "address": "2510 Milton Ave", "city": "Janesville", "region": "WI", "postal": "53545", "country": "US"},
+      "size": {"tables": 150},
+      "vendor": {"application_url": "https://www.premiercardshows.com/registration-form", "contact": "PREMIERCARDSHOWS@GMAIL.COM", "status": "unknown"},
+      "organizer": {"name": "Premier Card Shows", "url": "https://www.premiercardshows.com"},
+      "links": {"official": "https://www.premiercardshows.com"},
+      "summary": "A one day trading card show in Janesville with about 150 tables, 9 am to 3 pm, run by Premier Card Shows.",
+      "evidence": [
+        {"url": "https://www.premiercardshows.com", "seen": "2026-10-21", "supports": ["name", "days", "venue", "size.tables", "vendor.application_url", "vendor.contact"]}
+      ],
+      "agent_confidence": "high"
+    },
+    {
+      "kind": "edition",
+      "name": "Premier Card Shows Hoffman Estates 2026",
+      "event_type": "card_show",
+      "status": "scheduled",
+      "days": [{"date": "2026-10-31", "open": "11:30", "close": "15:30"}],
+      "venue": {"name": "Now Arena", "address": "5333 Prairie Stone Pkwy", "city": "Hoffman Estates", "region": "IL", "postal": "60192", "country": "US"},
+      "size": {"tables": 104},
+      "vendor": {"application_url": "https://www.premiercardshows.com/registration-form", "contact": "PREMIERCARDSHOWS@GMAIL.COM", "status": "unknown"},
+      "organizer": {"name": "Premier Card Shows", "url": "https://www.premiercardshows.com"},
+      "links": {"official": "https://www.premiercardshows.com"},
+      "summary": "A one day trading card show at Now Arena in Hoffman Estates with about 104 tables, 11:30 am to 3:30 pm, run by Premier Card Shows.",
+      "evidence": [
+        {"url": "https://www.premiercardshows.com", "seen": "2026-10-21", "supports": ["name", "days", "venue", "size.tables", "vendor.application_url", "vendor.contact"]}
+      ],
+      "agent_confidence": "high"
+    },
+    {
+      "kind": "edition",
+      "name": "Madison Card Show July 2026",
+      "event_type": "card_show",
+      "status": "scheduled",
+      "days": [{"date": "2026-07-25", "open": "09:00", "close": "17:00"}],
+      "venue": {"name": "Alliant Energy Center", "city": "Madison", "region": "WI", "country": "US"},
+      "size": {"tables": 275},
+      "admission": {"free": false, "adult": 5, "currency": "USD", "notes": "Parking listed at $8 on the organizer page"},
+      "organizer": {"name": "Madison Card Show", "url": "https://madisoncardshow.com"},
+      "links": {"official": "https://madisoncardshow.com"},
+      "summary": "A one day card show in the Alliant Energy Center exhibition hall in Madison, with 275 dealer tables and a 9 am to 5 pm day. This past edition is recorded for its crowd size.",
+      "evidence": [
+        {"url": "https://madisoncardshow.com", "seen": "2026-10-21", "supports": ["name", "size.tables", "admission"]},
+        {"url": "https://madisoncardshow.com/2026/01/09/madison-card-show-announces-2026-schedule/", "seen": "2026-10-21", "supports": ["days", "venue"]}
+      ],
+      "agent_confidence": "high"
+    },
+    {
+      "kind": "edition",
+      "name": "Madison Card Show October 2026",
+      "event_type": "card_show",
+      "status": "scheduled",
+      "days": [{"date": "2026-10-31", "open": "09:00", "close": "15:00"}],
+      "venue": {"name": "Madison Marriott South", "city": "Madison", "region": "WI", "country": "US"},
+      "organizer": {"name": "Madison Card Show", "url": "https://madisoncardshow.com"},
+      "links": {"official": "https://madisoncardshow.com"},
+      "summary": "A one day card show at Madison Marriott South, 9 am to 3 pm, listed on the organizer's 2026 schedule. The organizer homepage, dated October 12, 2026, does not list it yet.",
+      "evidence": [
+        {"url": "https://madisoncardshow.com/2026/01/09/madison-card-show-announces-2026-schedule/", "seen": "2026-10-21", "supports": ["name", "days", "venue"]}
+      ],
+      "agent_confidence": "medium"
+    },
+    {
+      "kind": "edition",
+      "name": "Madison Pokemon Show November 2026",
+      "event_type": "card_show",
+      "status": "scheduled",
+      "days": [{"date": "2026-11-01", "open": "09:00", "close": "15:00"}],
+      "venue": {"name": "Madison Marriott South", "city": "Madison", "region": "WI", "country": "US"},
+      "sells": {"tcg": ["pokemon"], "sports": [], "other": []},
+      "organizer": {"name": "Madison Card Show", "url": "https://madisoncardshow.com"},
+      "links": {"official": "https://madisoncardshow.com"},
+      "summary": "A one day Pokemon card show at Madison Marriott South, 9 am to 3 pm, on the organizer's 2026 schedule. The organizer homepage does not list it yet.",
+      "evidence": [
+        {"url": "https://madisoncardshow.com/2026/01/09/madison-card-show-announces-2026-schedule/", "seen": "2026-10-21", "supports": ["name", "days", "venue", "sells"]}
+      ],
+      "agent_confidence": "medium"
+    },
+    {
+      "kind": "edition",
+      "name": "Madison Card Show November 2026",
+      "event_type": "card_show",
+      "status": "scheduled",
+      "days": [{"date": "2026-11-28", "open": "09:00", "close": "17:00"}],
+      "venue": {"name": "Alliant Energy Center", "city": "Madison", "region": "WI", "country": "US"},
+      "organizer": {"name": "Madison Card Show", "url": "https://madisoncardshow.com"},
+      "links": {"official": "https://madisoncardshow.com"},
+      "summary": "A one day card show at the Alliant Energy Center, 9 am to 5 pm, on the organizer's 2026 schedule. The organizer homepage does not list it yet.",
+      "evidence": [
+        {"url": "https://madisoncardshow.com/2026/01/09/madison-card-show-announces-2026-schedule/", "seen": "2026-10-21", "supports": ["name", "days", "venue"]}
+      ],
+      "agent_confidence": "medium"
+    },
+    {
+      "kind": "edition",
+      "name": "Madison Card Show December 2026",
+      "event_type": "card_show",
+      "status": "scheduled",
+      "days": [{"date": "2026-12-26", "open": "09:00", "close": "17:00"}],
+      "venue": {"name": "Alliant Energy Center", "city": "Madison", "region": "WI", "country": "US"},
+      "organizer": {"name": "Madison Card Show", "url": "https://madisoncardshow.com"},
+      "links": {"official": "https://madisoncardshow.com"},
+      "summary": "A one day card show at the Alliant Energy Center, 9 am to 5 pm, on the organizer's 2026 schedule. The organizer homepage does not list it yet.",
+      "evidence": [
+        {"url": "https://madisoncardshow.com/2026/01/09/madison-card-show-announces-2026-schedule/", "seen": "2026-10-21", "supports": ["name", "days", "venue"]}
+      ],
+      "agent_confidence": "medium"
+    },
+    {
+      "kind": "series",
+      "name": "The Waukesha Card Show",
+      "event_type": "card_show",
+      "venue": {"name": "Waukesha Expo Center", "address": "1000 Northview Rd", "city": "Waukesha", "region": "WI", "postal": "53188", "country": "US"},
+      "cadence": "Dates listed by the organizer, mostly Saturdays from November 2026 to May 2027, with no fixed rule shown",
+      "rule": {"freq": "none"},
+      "known_dates": ["2026-11-14", "2026-12-19", "2027-01-23", "2027-02-20", "2027-03-13", "2027-04-10", "2027-05-22"],
+      "cancelled_dates": [],
+      "sells": {"tcg": [], "sports": [], "other": ["non_sport"]},
+      "vendor": {
+        "tables": [{"label": "8 ft table", "price": 60, "currency": "USD", "notes": "One table includes 1 chair. $50 each for two or more tables."}],
+        "application_url": "https://waukeshacardshow.com/dealers",
+        "contact": "shawn@waukeshacardshow.com",
+        "status": "unknown"
+      },
+      "organizer": {"name": "The Waukesha Card Show", "url": "https://waukeshacardshow.com"},
+      "links": {"official": "https://waukeshacardshow.com"},
+      "summary": "A recurring card show at the Waukesha Expo Center Forum hall. The organizer lists over 200 tables for the November 14, 2026 show, which runs 10 am to 3 pm with $2 admission, free for ages 12 and under and free for everyone after 2 pm.",
+      "evidence": [
+        {"url": "https://waukeshacardshow.com", "seen": "2026-10-21", "supports": ["known_dates", "venue", "admission", "cadence"]},
+        {"url": "https://waukeshacardshow.com/dealers", "seen": "2026-10-21", "supports": ["vendor.tables", "vendor.contact"]}
+      ],
+      "agent_confidence": "high"
+    },
+    {
+      "kind": "series",
+      "name": "Waukesha Pokemon/TCG Non-Sports Card Show",
+      "event_type": "card_show",
+      "venue": {"name": "Waukesha Expo Center", "address": "1000 Northview Rd", "city": "Waukesha", "region": "WI", "postal": "53188", "country": "US"},
+      "cadence": "Two dates listed by the organizer for late 2026",
+      "rule": {"freq": "none"},
+      "known_dates": ["2026-11-21", "2026-12-20"],
+      "cancelled_dates": [],
+      "sells": {"tcg": ["pokemon", "other_tcg"], "sports": [], "other": ["non_sport"]},
+      "organizer": {"name": "The Waukesha Card Show", "url": "https://waukeshacardshow.com"},
+      "links": {"official": "https://waukeshacardshow.com"},
+      "summary": "A Pokemon and TCG card show at the Waukesha Expo Center, held Saturday November 21, 2026 in the Arena and Sunday December 20, 2026 in the Forum.",
+      "evidence": [
+        {"url": "https://waukeshacardshow.com", "seen": "2026-10-21", "supports": ["name", "known_dates", "venue", "sells"]}
+      ],
+      "agent_confidence": "high"
+    }
+  ],
+  "leads_only": [
+    {"name": "Kane County Fairgrounds card event, St. Charles", "url": "https://thecardshopfinder.com/event/kane-county-fairgrounds-card-show-st-charles-2026-11/", "note": "Listing site only, not fetched. Snippet says a sports card event on Sat Nov 14, 2026 at the Prairie Events Center. Organizer and venue pages not found (prairieeventscenter.com did not resolve). Outreach lead."},
+    {"name": "Schaumburg Card Show at Hyatt Regency Schaumburg", "url": "https://www.treasurehunter.show/show/schaumburg-card-show-schaumburg-il-2026-11-15", "note": "Listing sites only. Sun Nov 15 and Sun Dec 6, 2026, 8 am to 2 pm, free admission, about 100 tables (two sites agree). Table contact is a named organizer listed by phone only, not recorded. No organizer site found (schaumburgcardshow.com did not resolve). Hyatt site redirects to hyatt.com, not followed. Top outreach lead. Dallas Card Show final day is at the Schaumburg Convention Center the same day (covered elsewhere)."},
+    {"name": "City2City Card Show, Yorktown Center, Lombard", "url": "https://www.treasurehunter.show/show/city2city-card-show-lombard-il-2026-11-07", "note": "Listing only. Sat Nov 7 and Sun Nov 8, 2026 at Yorktown Center. Two listings disagree on hours (10 am to 6 pm both days, or 11 am Sunday open). Mall events page returned 403, see blocked."},
+    {"name": "Sports and Non-Sports Card Show, Toledo IL", "url": "https://www.treasurehunter.show/show/sports-non-sports-card-show-toledo-il-2026-11-27", "note": "Listing only. Fri Nov 27, 2026, 9 am to 5 pm, C.C.E.E.B.A. Community Center per listing. Organizer and venue not checked. Friday date agrees with the 2026 calendar."},
+    {"name": "Sports Cards and Collectibles Show, Springfield IL", "url": "https://www.treasurehunter.show/show/sports-cards-and-collectible-show-springfield-il-2026-11-29", "note": "Listing only. Sun Nov 29, 2026, 10 am to 3 pm, Route 66 Hotel and Conference Center per listing. route66hotel.com is an unrelated bed and breakfast in France, so no venue page was found."},
+    {"name": "The Alley Grill and Tap House Card Show, Mokena IL", "url": "https://www.treasurehunter.show/show/the-alley-grill-and-tap-house-card-show-mokena-il-2026-11-29", "note": "Listing only. Sun Nov 29 and Sun Dec 27, 2026, noon to 5 pm per listing. Venue is a restaurant, so its own page may confirm. Not checked."},
+    {"name": "Illinois Valley Sportscard and Collectible Show, Peru IL", "url": "https://www.treasurehunter.show/show/illinois-valley-sportscard-and-collectible-show-peru-il-2026-12-05", "note": "Listing only. Sat Dec 5, 2026, 10 am to 3 pm at Peru Mall per listing. Organizer not found."},
+    {"name": "Bridgeview Community Center Sports Card Show", "url": "https://thecardshopfinder.com/shows/bridgeview-community-center-card-show-bridgeview/", "note": "Listing site only, not fetched. Sun Dec 13, 2026, 11 am to 3 pm, $1 door per listing. Community center or village calendar not located."},
+    {"name": "Premier Card Shows DuPage County Fairgrounds, Wheaton IL", "url": "https://www.treasurehunter.show/show/premier-card-shows-dupage-county-fairgrounds-wheaton-il-2026-12-19", "note": "Listing only. Sat Dec 19, 2026, 9 am to 3 pm, Building 1, admission listed as $10 in one entry. Premier's own site lists only the Oct 24 and Oct 31 shows, so Dec 19 is not confirmed by the organizer. Ask Premier before listing."},
+    {"name": "Monthly Sports Cards and Collectible Show, Marion IN", "url": "https://www.treasurehunter.show/show/monthly-sports-cards-and-collectible-show-marion-in-2026-11-21", "note": "Series candidate. Listing only: Sat Oct 24, Sat Nov 21 and Sat Dec 19, 2026, 9 am to 2 pm, free, at Grant County 4-H Expo Center per listing. No organizer page or venue address found. Oct 24 is three days away, so verify first."},
+    {"name": "SPORTS-TCG Card and Collectible Show, Fort Wayne IN", "url": "https://www.treasurehunter.show/show/sports-tcg-card-collectible-show-ft-wayne-in-2026-09-26", "note": "Series candidate. Sat Oct 24 and Sat Nov 28, 2026, 10 am at Holiday Inn Purdue per a search summary of the series. The URL given is the September listing in the same series. Organizer not found."},
+    {"name": "Evansville Armory Card Show, Evansville IN", "url": "https://www.treasurehunter.show/show/evansville-armory-card-show-evansville-in-2026-11-27", "note": "Listing only. Fri Nov 27 and Sat Nov 28, 2026 per listing. Friday 3 to 7 pm, $3 per day or $5 for two days. Venue listed as the Indiana Army National Guard Armory, 3300 E. Division Street. Organizer not found."},
+    {"name": "Porter County Sports and Trading Card Show, Valparaiso IN", "url": "https://www.treasurehunter.show/show/porter-county-sports-trading-card-show-valparaiso-in-2027-03-14", "note": "Listing only. Sun Mar 14, 2027, 9 am to 3 pm per listing. Venue and organizer not found. Far off, so lower priority."},
+    {"name": "Carmel Card Show 2-Year Anniversary, Carmel IN", "url": "https://www.treasurehunter.show/", "note": "Seen only in a sidebar on a treasurehunter.show listing, so the exact URL was not captured. Fri Oct 23, 2026 at Aletto Family Sports Center per sidebar. The listed start time looks wrong, so the time is unconfirmed. Too close to verify; hand to the next wave."},
+    {"name": "N.E.W Card Show, Gatherings 43, Denmark WI (Nov 27, 2026)", "url": "https://www.treasurehunter.show/show/new-card-show-pokmon-only-denmark-wi-2027-01-09", "note": "Sidebar on the Denmark listing, entry cut off in the snippet. Fri Nov 27, 2026, 9 am, Gatherings 43 per sidebar. Unconfirmed. gatherings43.com did not resolve."},
+    {"name": "N.E.W Card Show Pokemon Only, Gatherings 43, Denmark WI", "url": "https://www.treasurehunter.show/show/new-card-show-pokmon-only-denmark-wi-2027-01-09", "note": "Listing only. Sat Jan 9, 2027, 9 am to 3 pm at Gatherings 43 per listing, with Pokemon and sports card vendor tables. Organizer not found, and the venue site did not resolve."}
+  ],
+  "blocked": [
+    {"url": "https://www.yorktowncenter.com/events", "status": 403, "note": "Mall events calendar returned HTTP 403 (bot check). Not retried. The City2City Lombard show could not be checked on the mall's own calendar."}
+  ],
+  "notes": "SEARCH BUDGET: all 6 WebSearch calls used (cap reached). FETCHES: about 22 of 60 used. Records come only from organizer, venue or calendar pages (waukeshacardshow.com, premiercardshows.com, madisoncardshow.com, hollywoodshow.com). treasurehunter.show and thecardshopfinder.com are on the never-fetch list, so they supplied leads only. MISTAKE TO FLAG: I called the spawn_task tool once by accident with a placeholder title. It created a pending task chip, task_57e20752 titled 'placeholder', that the user can see. I did not call dismiss_task because my brief forbids task tools. Please dismiss it. NOTES ON RECORDS: (1) The Hollywood Show homepage footer says 2019 and the Chicago page is undated, so confidence is medium. The homepage 'must be in our hands by October 9th, 2026' deadline is not tied to any show, so it was not used. Its Chicago admission prices were not on the page, so admission is left out. (2) Premier Card Shows lists only Oct 24 (Janesville) and Oct 31 (Hoffman Estates) on its own site. Its vendor link is a registration form that asks for an account, which I did not create. (3) Madison Card Show: the organizer homepage is dated Oct 12, 2026 and lists no shows after July 25, but its Jan 9, 2026 schedule post gives 2026 dates under a '2026 Schedule at a Glance' heading, not beside each date. Those later dates are medium confidence. Venue addresses are not on the organizer pages, so they are left out. Its table purchase page lists no products and no prices. (4) Waukesha: the dealers page prices come from an undated page. It mentions an 'October 17th' show without a year and says 'as of Thursday, October 15th', which fits 2026 by weekday. The Oct 17 show is not on the homepage, so it is not recorded. CardShopFinder lists a Sept 12, 2026 Waukesha show that the organizer does not list; the April 10, 2027 date does match the organizer. Series have no last_confirmed because the organizer page has no post date with a year. (5) Indiana: no organizer or venue page was found for any Indiana show. All Indiana leads are listing-site only. (6) Not run because of budget: site:eventeny.com searches, and the fairgrounds and expo center searches for Indiana and Wisconsin. Not found, not blocked: waukeshaexpo.com, gatherings43.com, prairieeventscenter.com and schaumburgcardshow.com did not resolve. alliantenergycenter.com/events returned 404. The Dallas Card Show, Chicago Sports Spectacular, The National, JJ All Star, Indianapolis and TCG-Kon lines were skipped as covered elsewhere or known."
+}

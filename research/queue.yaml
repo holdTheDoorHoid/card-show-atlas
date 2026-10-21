@@ -63,7 +63,7 @@ waves:
   searches_per_agent: 8
 - id: w2-regions
   brief: regions
-  status: running
+  status: done
   searches_per_agent: 8
   batches:
     r01: New Jersey and Delaware
@@ -76,7 +76,7 @@ waves:
     r08: California
 - id: w3-regions
   brief: regions
-  status: todo
+  status: done
   searches_per_agent: 8
   batches:
     r09: Georgia, South Carolina, North Carolina

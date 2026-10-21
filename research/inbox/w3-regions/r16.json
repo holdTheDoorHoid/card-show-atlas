@@ -1,0 +1,361 @@
+{
+  "wave": "w3-regions",
+  "agent": "r16",
+  "model": "haiku",
+  "searches_used": 6,
+  "fetches_used": 31,
+  "records": [
+    {
+      "kind": "edition",
+      "name": "Spotlight Card Show Honolulu",
+      "event_type": "card_show",
+      "status": "scheduled",
+      "days": [
+        {
+          "date": "2026-10-24",
+          "open": "11:00",
+          "close": "17:00"
+        },
+        {
+          "date": "2026-10-25",
+          "open": "11:00",
+          "close": "17:00"
+        }
+      ],
+      "venue": {
+        "name": "Hawaii Convention Center, Exhibit Hall B",
+        "address": "1801 Kalakaua Ave",
+        "city": "Honolulu",
+        "region": "HI",
+        "postal": "96815",
+        "country": "US"
+      },
+      "sells": {
+        "tcg": [
+          "pokemon",
+          "one_piece",
+          "yugioh"
+        ],
+        "sports": [
+          "multi_sport"
+        ],
+        "other": []
+      },
+      "admission": {
+        "free": false,
+        "adult": 10,
+        "child": 0,
+        "currency": "USD",
+        "notes": "$10 online, $15 at the door. Kids 13 and under free with an adult. VIP early entry $20 online, $25 at the door (per the FAQ). Military 50% off online prices with a valid ID at the door."
+      },
+      "vendor": {
+        "status": "unknown"
+      },
+      "organizer": {
+        "url": "https://spotlightcardshow.com"
+      },
+      "links": {
+        "official": "https://spotlightcardshow.com/honolulu-card-show"
+      },
+      "summary": "Two day Spotlight card show at the Hawaii Convention Center in Honolulu, 11 am to 5 pm each day, with Pokemon, sports and other trading card game vendors.",
+      "evidence": [
+        {
+          "url": "https://spotlightcardshow.com/honolulu-card-show",
+          "seen": "2026-10-21",
+          "supports": [
+            "name",
+            "days",
+            "venue",
+            "hours",
+            "admission"
+          ]
+        },
+        {
+          "url": "https://spotlightcardshow.com",
+          "seen": "2026-10-21",
+          "supports": [
+            "days",
+            "venue"
+          ]
+        }
+      ],
+      "agent_confidence": "high"
+    },
+    {
+      "kind": "edition",
+      "name": "Spotlight Card Show Seattle",
+      "event_type": "card_show",
+      "status": "scheduled",
+      "days": [
+        {
+          "date": "2026-12-12",
+          "open": "11:00",
+          "close": "17:00"
+        },
+        {
+          "date": "2026-12-13",
+          "open": "11:00",
+          "close": "17:00"
+        }
+      ],
+      "venue": {
+        "name": "Seattle Center Exhibition Hall",
+        "address": "299 Mercer St",
+        "city": "Seattle",
+        "region": "WA",
+        "postal": "98109",
+        "country": "US"
+      },
+      "sells": {
+        "tcg": [],
+        "sports": [],
+        "other": []
+      },
+      "admission": {
+        "free": false,
+        "adult": 10,
+        "child": 0,
+        "currency": "USD",
+        "notes": "$10 online, $15 at the door. Kids 13 and under free with an adult. VIP early entry $20 online, $25 at the door. Military 50% off online prices with a valid ID at the door."
+      },
+      "vendor": {
+        "status": "unknown"
+      },
+      "organizer": {
+        "url": "https://spotlightcardshow.com"
+      },
+      "links": {
+        "official": "https://spotlightcardshow.com/seattle-card-show"
+      },
+      "summary": "Two day Spotlight card show at Seattle Center Exhibition Hall in December, 11 am to 5 pm each day, with general admission at $10 online.",
+      "evidence": [
+        {
+          "url": "https://spotlightcardshow.com/seattle-card-show",
+          "seen": "2026-10-21",
+          "supports": [
+            "name",
+            "days",
+            "venue",
+            "hours",
+            "admission"
+          ]
+        }
+      ],
+      "agent_confidence": "high"
+    }
+  ],
+  "leads_only": [
+    {
+      "name": "The General Store Trading Card Show, Spokane",
+      "url": "https://thecardshopfinder.com/event/the-general-store-trading-card-show-spokane-2026-12/",
+      "note": "Listing site only, not fetched. Date Saturday Dec 5 2026 (weekday checked). Organizer page not found: thegeneralstorespokane.com did not resolve. Needs organizer page before recording."
+    },
+    {
+      "name": "Salem's Trading Card Showcase and Collectible Show, Nov 22 2026",
+      "url": "https://www.treasurehunter.show/show/salems-trading-card-showcase-collectible-show-salem-or-2026-11-22",
+      "note": "Listing snippet only. Sunday Nov 22 2026 (weekday checked). Venue per listing: Salem Scottish Rite Center. Organizer domains salemscottishrite.org and scottishritesalem.org did not resolve. Looks like a repeat series at the same venue (earlier 2026 editions also listed), so record as a series once the organizer page is found."
+    },
+    {
+      "name": "Salem's Trading Card Showcase and Collectible Show, Dec 6 2026",
+      "url": "https://www.treasurehunter.show/show/salems-trading-card-showcase-collectible-show-salem-or-2026-12-06",
+      "note": "Listing snippet only. Sunday Dec 6 2026 (weekday checked). Same series as the Nov 22 entry; no organizer page reached."
+    },
+    {
+      "name": "Emerald City Card Show, Everett, Nov 21 2026",
+      "url": "https://www.treasurehunter.show/show/emerald-city-card-show-everett-everett-wa-2026-11-21",
+      "note": "Listing snippet only. Saturday Nov 21 2026 (weekday checked). Listing names the Edward D. Hansen Conference Center in Everett. emeraldcitycardshow.com returned 404 on the root and on /everett, so the organizer domain is unknown."
+    },
+    {
+      "name": "Emerald City Card Show, Seattle, Dec 5 2026",
+      "url": "https://www.treasurehunter.show/show/emerald-city-card-show-seattle-wa-2026-12-05",
+      "note": "Listing snippet only. Saturday Dec 5 2026 (weekday checked). Possibly the same organizer as the Everett show. No organizer page reached."
+    },
+    {
+      "name": "Puget Sound Winter Card Show, Jan 16 2027",
+      "url": "https://thecardshopfinder.com/event/puget-sound-winter-card-show-seattle-2027-01/",
+      "note": "Listing snippet only. Saturday Jan 16 2027 (weekday checked). Listing title says Seattle, a search summary says Greater Tacoma Convention Center. tacomaconvention.com did not resolve. Venue and organizer unconfirmed."
+    },
+    {
+      "name": "Washington State Card Show, Puyallup, Oct 31 and Nov 1 2026",
+      "url": "https://www.treasurehunter.show/show/washington-state-card-show-puyallup-wa-2026-11-01",
+      "note": "Listing only. The Washington State Fair Event Center calendar (thefair.com, 110 9th Avenue SW, Puyallup WA 98371) lists a Washington State Toy Show on Oct 31 to Nov 1 2026 and no card show. Name conflict unresolved; not recorded until confirmed."
+    },
+    {
+      "name": "Inland Northwest Card Convention, Spokane, Oct 24 2026",
+      "url": "https://www.spokanetribecasino.com/events",
+      "note": "Only a search summary mentioned it (no listing URL retrieved). Saturday Oct 24 2026 (weekday checked). The Spokane Tribe casino events page checked and lists no card show. Unconfirmed."
+    },
+    {
+      "name": "Paradise Card Show, Honolulu, Nov 22 2026",
+      "url": "https://www.treasurehunter.show/show/paradise-card-show-honolulu-hi-2026-11-22",
+      "note": "Listing only. Sunday Nov 22 2026 (weekday checked). Listing names The Republik on Kapiolani Boulevard. The Republik website I reached (therepublik.com) is a North Carolina marketing agency, so venue and organizer are unconfirmed."
+    },
+    {
+      "name": "Fan Expo Portland, Jan 29 to 31 2027",
+      "url": "https://fanexpohq.com/fanexpoportland/",
+      "note": "Out of scope for now: pop culture convention. The organizer page (reached via a redirect from fanexpoportland.com) names no trading card, sports card or Pokemon dealers. Dates and venue (Oregon Convention Center) are from the organizer page."
+    },
+    {
+      "name": "Lebanon, Oregon card show (Father's Day 2026)",
+      "url": "https://www.kezi.com/video/lebanon-card-show-draws-collectors-of-all-ages-on-fathers-day/video_16e5888c-176e-5a4b-8782-77df7c85d078.html",
+      "note": "News report dated June 21 2026. No venue, hours, admission or table count given. The report says organizers planned another event in October 2026; no date found. Past edition not recorded (no size)."
+    },
+    {
+      "name": "Pokemon Card Show, Oregon Expo Center, March 28 2026",
+      "url": "https://oregonexpo.org/?p=79270",
+      "note": "Past show. The Oregon Expo venue page returned 403 so it was not read. A search summary gave 75 tables for a March 28 show with no year. Not verified on an allowed page, so not recorded. Record as a past edition if the venue page becomes readable."
+    },
+    {
+      "name": "Spotlight Card Show Hawaii debut at Neal S. Blaisdell Arena, June 2026",
+      "url": "https://www.hawaiinewsnow.com/2026/06/21/thousands-attend-spotlight-card-shows-hawaii-debut-blaisdell/",
+      "note": "Past edition with size: article says more than 3,000 attended on day one. Dates conflict (article updated June 20 2026; Spotlight organizer season recap says Jun. 22 2026), so not recorded as an edition. Resolve the date, then record as a past edition."
+    },
+    {
+      "name": "Honolulu Vintage Card Show, Aug 8 2026",
+      "url": "https://thecardshopfinder.com/event/honolulu-vintage-card-show-honolulu-2026-08/",
+      "note": "Past show. Listing snippet only. No size on an allowed page, so not recorded."
+    },
+    {
+      "name": "Keep It Aloha Card Show, SALT at Our Kakaako, Sept 5 to 6 and Oct 3 to 4 2026",
+      "url": "https://www.treasurehunter.show/show/keep-it-aloha-card-show-honolulu-hi-2026-10-03",
+      "note": "Past shows. Listing snippet only. No size on an allowed page, so not recorded."
+    },
+    {
+      "name": "Aloha Card Show, Blaisdell, Sept 19 to 20 2026",
+      "url": "https://www.treasurehunter.show/show/aloha-card-show-honolulu-hi-2026-09-19",
+      "note": "Past show. Listing snippet only. No size on an allowed page, so not recorded."
+    },
+    {
+      "name": "Hawaii Fall Card Show, Blaisdell, Oct 10 2026",
+      "url": "https://thecardshopfinder.com/event/hawaii-fall-card-show-honolulu-2026-10/",
+      "note": "Past show. Listing snippet only. No size on an allowed page, so not recorded."
+    },
+    {
+      "name": "Washington State Card Show, Puyallup, Aug 15 2026",
+      "url": "https://www.treasurehunter.show/show/washington-state-card-show-puyallup-wa-2026-08-15",
+      "note": "Past show. Listing only. No size on an allowed page, so not recorded."
+    },
+    {
+      "name": "PNW Card Show, Spokane Convention Center, Sept 21 2026",
+      "url": "https://www.treasurehunter.show/show/pnw-card-show-spokane-wa-2026-09-21-1774323066213",
+      "note": "Past show. Listing only. No size on an allowed page, so not recorded."
+    },
+    {
+      "name": "Collector Con Spokane, Northern Quest, Oct 17 2026",
+      "url": "https://www.treasurehunter.show/shows/washington",
+      "note": "Past show. Seen only in a listing index. No size on an allowed page, so not recorded."
+    },
+    {
+      "name": "Pokebroz Card Show, Spokane Valley, June 6 2026",
+      "url": "https://www.treasurehunter.show/show/pokebroz-card-show-spokane-valley-wa-2026-06-06",
+      "note": "Past show. Listing only. No size on an allowed page, so not recorded."
+    },
+    {
+      "name": "Summer Solstice Card Festival, Spokane Convention Center, June 20 to 21 2026",
+      "url": "https://www.treasurehunter.show/show/summer-solstice-card-festival-spokane-wa-2026-06-21",
+      "note": "Past multi-day convention with cards and panels. Listing only. No size on an allowed page, so not recorded."
+    },
+    {
+      "name": "Lilac City Comicon 2026, Spokane",
+      "url": "https://www.treasurehunter.show/show/lilac-city-comicon-2026-spokane-wa-2026-06-06",
+      "note": "Pop culture convention, past. Card vendors not confirmed on an allowed page. Out of scope unless card dealers are confirmed."
+    },
+    {
+      "name": "Pokemon and Sports Card Show, Oregon State Fairgrounds, Salem, Oct 17 2026",
+      "url": "https://www.treasurehunter.show/show/pokemon-sports-card-show-salem-or-2026-10-17",
+      "note": "Past show. Listing only. No size on an allowed page, so not recorded."
+    },
+    {
+      "name": "Cherry City Sports Card Show, Salem, Sept 6 2026",
+      "url": "https://www.treasurehunter.show/show/cherry-city-sports-card-show-salem-or-2026-09-06",
+      "note": "Past show. Listing only. No size on an allowed page, so not recorded."
+    },
+    {
+      "name": "Cherry City Card Shows, Salem, June 28 2026",
+      "url": "https://www.treasurehunter.show/show/cherry-city-card-shows-salem-or-2026-06-28",
+      "note": "Past show. Listing only. No size on an allowed page, so not recorded."
+    },
+    {
+      "name": "Salem's Trading Card Showcase and Collectible Show, July 19 2026 (earlier edition)",
+      "url": "https://www.treasurehunter.show/show/salems-trading-card-showcase-collectible-show-salem-or-2026-07-19",
+      "note": "Earlier edition of the Salem series above (listing only). Shows the series repeats at the Scottish Rite venue. No size on an allowed page, so not recorded."
+    },
+    {
+      "name": "Small Town Cards and Collectibles, Eugene Edition, June 27 2026",
+      "url": "https://www.treasurehunter.show/show/small-town-cards-collectibles-eugene-edition-eugene-or-2026-06-27-1774322829374",
+      "note": "Past show. Listing only. No size on an allowed page, so not recorded."
+    },
+    {
+      "name": "Card Shows at the Coast, Lincoln City, May 23 2026",
+      "url": "https://www.treasurehunter.show/show/card-shows-at-the-coast-lincoln-city-or-2026-05-23",
+      "note": "Past show. Listing only. No size on an allowed page, so not recorded."
+    },
+    {
+      "name": "Portland Cards and More Tour, Sept 19 to 20 2026",
+      "url": "https://thecardshopfinder.com/event/cards-and-more-tour-fall-portland-2026-09/",
+      "note": "Past show. Listing only. No size on an allowed page, so not recorded."
+    },
+    {
+      "name": "Portland Card Show, July 25 2026",
+      "url": "https://thecardshopfinder.com/event/portland-card-show-july-portland-2026-07/",
+      "note": "Past show. Listing only. No size on an allowed page, so not recorded."
+    }
+  ],
+  "blocked": [
+    {
+      "url": "https://oregonexpo.org/?p=79270",
+      "status": 403,
+      "note": "Oregon Expo Center Pokemon show page, bot check. Not bypassed."
+    },
+    {
+      "url": "https://oregonexpo.org/events/",
+      "status": 403,
+      "note": "Oregon Expo Center events calendar, bot check. Not bypassed."
+    },
+    {
+      "url": "https://www.eugene-or.gov/Calendar.aspx?EID=37155",
+      "status": 403,
+      "note": "City of Eugene calendar entry, bot check. Not bypassed."
+    },
+    {
+      "url": "https://www.spokanecenter.com/events",
+      "status": 403,
+      "note": "Spokane Convention Center events calendar, bot check. Not bypassed."
+    },
+    {
+      "url": "https://www.hawaiiconvention.com/events/",
+      "note": "Hawaii Convention Center events calendar. Connection closed on two tries, no page returned."
+    },
+    {
+      "url": "https://www.hawaiiconvention.com",
+      "note": "Hawaii Convention Center home page. Connection closed, no page returned."
+    },
+    {
+      "url": "https://www.emeraldcitycardshow.com",
+      "status": 404,
+      "note": "Guessed organizer domain for Emerald City Card Show. Root returned 404."
+    },
+    {
+      "url": "https://www.emeraldcitycardshow.com/everett",
+      "status": 404,
+      "note": "Guessed event page for Everett show. Returned 404."
+    },
+    {
+      "url": "https://www.salemscottishrite.org",
+      "note": "Guessed Salem Scottish Rite Center site. Domain did not resolve."
+    },
+    {
+      "url": "https://www.scottishritesalem.org",
+      "note": "Guessed Salem Scottish Rite Center site. Domain did not resolve."
+    },
+    {
+      "url": "https://www.thegeneralstorespokane.com",
+      "note": "Guessed organizer site for The General Store, Spokane. Domain did not resolve."
+    },
+    {
+      "url": "https://www.tacomaconvention.com",
+      "note": "Guessed Greater Tacoma Convention Center site. Domain did not resolve."
+    }
+  ],
+  "notes": "Searches: all 6 used (hard cap reached). Fetches: 31 of 60. Verified records are only the two Spotlight Card Show editions, both from the organizer's own pages (spotlightcardshow.com, published Oct 12 2026, with years written on the subpages). Honolulu Oct 24 and 25 2026 is 3 days out. Spotlight Seattle Dec 12 and 13 2026 is new to the atlas. Washington: most WA shows found are listing-only (treasurehunter.show and thecardshopfinder.com are never-fetch sites, so only their URLs were copied into leads_only). Oregon: no verified upcoming Salem or Eugene organizer page; the Salem Scottish Rite series (Nov 22 and Dec 6 2026) is the best candidate for a series record once the organizer is found. Oregon Expo Center and the Eugene city calendar returned 403. Alaska: no card show for 2026 or 2027 found. Two searches, the Card Shop Finder Alaska pages (no events) and the anchorage.net events calendar (no card shows) all came back empty. Hawaii: Blaisdell Arena calendar has no card shows listed (page shows only a farmers market notice); Hawaii Convention Center calendar unreachable. Paradise Card Show (Nov 22 2026) is unconfirmed: the listed venue site is not a Honolulu venue. Spotlight vendor counts differ between pages (Seattle: 250+ on the subpage, 275+ on the lookbook page; Honolulu: 450+ vendors on the page, not table counts), so no table counts were recorded. Honolulu venue on the organizer page is Hawaii Convention Center, while the June 2026 debut was at Blaisdell Arena. An Eventeny Washington listing page was read: it shows only Maximum Card Show Bellevue dates (covered elsewhere) with no years on the cards. Out of scope or covered elsewhere and skipped: Front Row Portland (Oct 3 to 4, Dec 12 to 13 2026, June 13 to 14), Maximum Card Show Portland (July 25 to 26, Oct 24 2026, Jan 23 to 24 2027). Idaho listings seen (Pick 6 Post Falls, CardCon Coeur d'Alene Nov 7 2026) are outside this region and were not researched. A search summary mentioned an Emerald City Trading Card Convention on Nov 14 and 15 2026 at a Tukwila or Southside conference center, but no page URL was retrieved, so it is not recorded; a wave with a Seattle-area or Tukwila lookup should check it."
+}
