@@ -1,0 +1,40 @@
+{
+  "home": {
+    "lat": 39.9526,
+    "lon": -75.1652,
+    "name": "Home",
+    "timezone": "America/New_York"
+  },
+  "currency": "USD",
+  "mpg": 22,
+  "fuel_price": {
+    "amount": 3.4,
+    "unit": "gallon",
+    "currency": "USD"
+  },
+  "hotel_per_night": 140,
+  "food_per_day": 45,
+  "max_drive_hours_per_day": 6,
+  "typical_sales": {
+    "small": 600,
+    "medium": 1200,
+    "large": 2500,
+    "major": 5000
+  },
+  "margin_percent": 40,
+  "sells": [
+    "pokemon",
+    "mtg",
+    "one_piece"
+  ],
+  "extras_per_show": 10,
+  "history": {
+    "garden-state-card-show-edison-nj": {
+      "gross_sales": [
+        1400,
+        1100
+      ],
+      "rating": 4
+    }
+  }
+}

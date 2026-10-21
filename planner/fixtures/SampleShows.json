@@ -1,0 +1,955 @@
+[
+  {
+    "id": "garden-state-card-show-edison-nj-2026-11-14",
+    "series_id": "garden-state-card-show-edison-nj",
+    "name": "Garden State Card Show",
+    "event_type": "card_show",
+    "status": "scheduled",
+    "days": [
+      {
+        "date": "2026-11-14",
+        "open": "09:00",
+        "close": "15:00"
+      },
+      {
+        "date": "2026-11-15",
+        "open": "10:00",
+        "close": "14:00"
+      }
+    ],
+    "timezone": "America/New_York",
+    "lat": 40.5187,
+    "lon": -74.3518,
+    "city": "Edison",
+    "region": "NJ",
+    "country": "US",
+    "sells": [
+      "pokemon",
+      "mtg",
+      "one_piece",
+      "baseball",
+      "basketball",
+      "football"
+    ],
+    "estimate": {
+      "attendance": {
+        "low": 400,
+        "mid": 700,
+        "high": 1100
+      },
+      "size_class": "medium",
+      "traffic_per_table": 5.8,
+      "confidence": "estimated"
+    },
+    "size": {
+      "tables": 120
+    },
+    "vendor": {
+      "min_table_price": 150,
+      "currency": "USD",
+      "deadline": "2026-10-31",
+      "status": "open",
+      "setup": "07:00",
+      "extras": 25
+    },
+    "admission": {
+      "free": false,
+      "adult": 5,
+      "currency": "USD"
+    }
+  },
+  {
+    "id": "lehigh-valley-card-show-allentown-pa-2026-11-14",
+    "series_id": "lehigh-valley-card-show-allentown-pa",
+    "name": "Lehigh Valley Card Show",
+    "event_type": "card_show",
+    "status": "scheduled",
+    "days": [
+      {
+        "date": "2026-11-14",
+        "open": "09:00",
+        "close": "16:00"
+      }
+    ],
+    "timezone": "America/New_York",
+    "lat": 40.6084,
+    "lon": -75.4902,
+    "city": "Allentown",
+    "region": "PA",
+    "country": "US",
+    "sells": [
+      "baseball",
+      "football",
+      "basketball",
+      "hockey"
+    ],
+    "estimate": {
+      "attendance": {
+        "low": 200,
+        "mid": 350,
+        "high": 500
+      },
+      "size_class": "small",
+      "traffic_per_table": 11.7,
+      "confidence": "estimated"
+    },
+    "size": {
+      "tables": 30
+    },
+    "vendor": {
+      "min_table_price": 60,
+      "currency": "USD",
+      "deadline": "2026-11-07",
+      "status": "open",
+      "setup": null,
+      "extras": null
+    },
+    "admission": {
+      "free": true,
+      "adult": 0,
+      "currency": "USD"
+    }
+  },
+  {
+    "id": "charm-city-tcg-expo-baltimore-md-2026-11-15",
+    "series_id": "charm-city-tcg-expo-baltimore-md",
+    "name": "Charm City TCG Expo",
+    "event_type": "convention",
+    "status": "scheduled",
+    "days": [
+      {
+        "date": "2026-11-15",
+        "open": "10:00",
+        "close": "17:00"
+      }
+    ],
+    "timezone": "America/New_York",
+    "lat": 39.2904,
+    "lon": -76.6122,
+    "city": "Baltimore",
+    "region": "MD",
+    "country": "US",
+    "sells": [
+      "pokemon",
+      "lorcana",
+      "yugioh",
+      "mtg"
+    ],
+    "estimate": {
+      "attendance": {
+        "low": 2500,
+        "mid": 4000,
+        "high": 6000
+      },
+      "size_class": "large",
+      "traffic_per_table": 16,
+      "confidence": "estimated"
+    },
+    "size": {
+      "tables": 250
+    },
+    "vendor": {
+      "min_table_price": 225,
+      "currency": "USD",
+      "deadline": "2026-11-01",
+      "status": "waitlist",
+      "setup": null,
+      "extras": null
+    },
+    "admission": {
+      "free": false,
+      "adult": 15,
+      "currency": "USD"
+    }
+  },
+  {
+    "id": "jersey-shore-collectibles-toms-river-nj-2026-11-15",
+    "series_id": "jersey-shore-collectibles-toms-river-nj",
+    "name": "Jersey Shore Collectibles Show",
+    "event_type": "card_show",
+    "status": "scheduled",
+    "days": [
+      {
+        "date": "2026-11-15",
+        "open": "09:00",
+        "close": "14:00"
+      }
+    ],
+    "timezone": "America/New_York",
+    "lat": 39.9537,
+    "lon": -74.1979,
+    "city": "Toms River",
+    "region": "NJ",
+    "country": "US",
+    "sells": [
+      "baseball",
+      "pokemon",
+      "non_sport"
+    ],
+    "estimate": {
+      "attendance": {
+        "low": 150,
+        "mid": 250,
+        "high": 400
+      },
+      "size_class": "small",
+      "traffic_per_table": 10,
+      "confidence": "rough"
+    },
+    "size": {
+      "tables": 25
+    },
+    "vendor": {
+      "min_table_price": 45,
+      "currency": "USD",
+      "deadline": null,
+      "status": "unknown",
+      "setup": null,
+      "extras": null
+    },
+    "admission": {
+      "free": false,
+      "adult": 3,
+      "currency": "USD"
+    }
+  },
+  {
+    "id": "big-apple-card-con-new-york-ny-2026-11-13",
+    "series_id": "big-apple-card-con-new-york-ny",
+    "name": "Big Apple Card Con",
+    "event_type": "convention",
+    "status": "scheduled",
+    "days": [
+      {
+        "date": "2026-11-13",
+        "open": "10:00",
+        "close": "18:00"
+      },
+      {
+        "date": "2026-11-14",
+        "open": "10:00",
+        "close": "18:00"
+      },
+      {
+        "date": "2026-11-15",
+        "open": "10:00",
+        "close": "17:00"
+      }
+    ],
+    "timezone": "America/New_York",
+    "lat": 40.7505,
+    "lon": -73.9934,
+    "city": "New York",
+    "region": "NY",
+    "country": "US",
+    "sells": [
+      "pokemon",
+      "mtg",
+      "yugioh",
+      "one_piece",
+      "baseball",
+      "basketball"
+    ],
+    "estimate": {
+      "attendance": {
+        "low": 8000,
+        "mid": 12000,
+        "high": 18000
+      },
+      "size_class": "major",
+      "traffic_per_table": 20,
+      "confidence": "reported"
+    },
+    "size": {
+      "tables": 600
+    },
+    "vendor": {
+      "min_table_price": 450,
+      "currency": "USD",
+      "deadline": "2026-09-15",
+      "status": "sold_out",
+      "setup": null,
+      "extras": null
+    },
+    "admission": {
+      "free": false,
+      "adult": 30,
+      "currency": "USD"
+    }
+  },
+  {
+    "id": "capital-region-sports-cards-harrisburg-pa-2026-11-14",
+    "series_id": "capital-region-sports-cards-harrisburg-pa",
+    "name": "Capital Region Sports Cards",
+    "event_type": "card_show",
+    "status": "scheduled",
+    "days": [
+      {
+        "date": "2026-11-14",
+        "open": "09:00",
+        "close": "15:00"
+      }
+    ],
+    "timezone": "America/New_York",
+    "lat": 40.2732,
+    "lon": -76.8867,
+    "city": "Harrisburg",
+    "region": "PA",
+    "country": "US",
+    "sells": [
+      "baseball",
+      "football",
+      "basketball"
+    ],
+    "estimate": {
+      "attendance": {
+        "low": 300,
+        "mid": 500,
+        "high": 800
+      },
+      "size_class": "medium",
+      "traffic_per_table": 7.1,
+      "confidence": "estimated"
+    },
+    "size": {
+      "tables": 70
+    },
+    "vendor": {
+      "min_table_price": 80,
+      "currency": "USD",
+      "deadline": "2026-11-06",
+      "status": "open",
+      "setup": null,
+      "extras": null
+    },
+    "admission": {
+      "free": false,
+      "adult": 2,
+      "currency": "USD"
+    }
+  },
+  {
+    "id": "delaware-valley-tcg-fest-cherry-hill-nj-2026-11-15",
+    "series_id": "delaware-valley-tcg-fest-cherry-hill-nj",
+    "name": "Delaware Valley TCG Fest",
+    "event_type": "card_show",
+    "status": "scheduled",
+    "days": [
+      {
+        "date": "2026-11-15",
+        "open": "10:00",
+        "close": "16:00"
+      }
+    ],
+    "timezone": "America/New_York",
+    "lat": 39.9348,
+    "lon": -75.0307,
+    "city": "Cherry Hill",
+    "region": "NJ",
+    "country": "US",
+    "sells": [
+      "pokemon",
+      "mtg",
+      "yugioh",
+      "one_piece",
+      "lorcana"
+    ],
+    "estimate": {
+      "attendance": {
+        "low": 600,
+        "mid": 900,
+        "high": 1300
+      },
+      "size_class": "medium",
+      "traffic_per_table": 11.3,
+      "confidence": "estimated"
+    },
+    "size": {
+      "tables": 80
+    },
+    "vendor": {
+      "min_table_price": 95,
+      "currency": "USD",
+      "deadline": "2026-11-10",
+      "status": "open",
+      "setup": null,
+      "extras": null
+    },
+    "admission": {
+      "free": false,
+      "adult": 5,
+      "currency": "USD"
+    }
+  },
+  {
+    "id": "great-lakes-card-show-toronto-on-2026-11-14",
+    "series_id": "great-lakes-card-show-toronto-on",
+    "name": "Great Lakes Card Show",
+    "event_type": "card_show",
+    "status": "scheduled",
+    "days": [
+      {
+        "date": "2026-11-14",
+        "open": "10:00",
+        "close": "17:00"
+      },
+      {
+        "date": "2026-11-15",
+        "open": "10:00",
+        "close": "16:00"
+      }
+    ],
+    "timezone": "America/Toronto",
+    "lat": 43.6532,
+    "lon": -79.3832,
+    "city": "Toronto",
+    "region": "ON",
+    "country": "CA",
+    "sells": [
+      "pokemon",
+      "mtg",
+      "hockey",
+      "baseball"
+    ],
+    "estimate": {
+      "attendance": {
+        "low": 1500,
+        "mid": 2500,
+        "high": 3500
+      },
+      "size_class": "large",
+      "traffic_per_table": 12.5,
+      "confidence": "estimated"
+    },
+    "size": {
+      "tables": 200
+    },
+    "vendor": {
+      "min_table_price": 175,
+      "currency": "CAD",
+      "deadline": "2026-11-01",
+      "status": "open",
+      "setup": null,
+      "extras": null
+    },
+    "admission": {
+      "free": false,
+      "adult": 10,
+      "currency": "CAD"
+    }
+  },
+  {
+    "id": "steel-city-card-expo-monroeville-pa-2026-11-21",
+    "series_id": "steel-city-card-expo-monroeville-pa",
+    "name": "Steel City Card Expo",
+    "event_type": "card_show",
+    "status": "scheduled",
+    "days": [
+      {
+        "date": "2026-11-21",
+        "open": "09:00",
+        "close": "16:00"
+      },
+      {
+        "date": "2026-11-22",
+        "open": "10:00",
+        "close": "15:00"
+      }
+    ],
+    "timezone": "America/New_York",
+    "lat": 40.4212,
+    "lon": -79.7881,
+    "city": "Monroeville",
+    "region": "PA",
+    "country": "US",
+    "sells": [
+      "baseball",
+      "football",
+      "pokemon",
+      "hockey"
+    ],
+    "estimate": {
+      "attendance": {
+        "low": 900,
+        "mid": 1400,
+        "high": 2000
+      },
+      "size_class": "large",
+      "traffic_per_table": 9.3,
+      "confidence": "estimated"
+    },
+    "size": {
+      "tables": 150
+    },
+    "vendor": {
+      "min_table_price": 120,
+      "currency": "USD",
+      "deadline": "2026-11-10",
+      "status": "open",
+      "setup": null,
+      "extras": null
+    },
+    "admission": {
+      "free": false,
+      "adult": 5,
+      "currency": "USD"
+    }
+  },
+  {
+    "id": "brandywine-card-show-wilmington-de-2026-11-21",
+    "series_id": "brandywine-card-show-wilmington-de",
+    "name": "Brandywine Card Show",
+    "event_type": "card_show",
+    "status": "scheduled",
+    "days": [
+      {
+        "date": "2026-11-21",
+        "open": "09:00",
+        "close": "14:00"
+      }
+    ],
+    "timezone": "America/New_York",
+    "lat": 39.7391,
+    "lon": -75.5398,
+    "city": "Wilmington",
+    "region": "DE",
+    "country": "US",
+    "sells": [
+      "pokemon",
+      "baseball",
+      "one_piece"
+    ],
+    "estimate": {
+      "attendance": {
+        "low": 200,
+        "mid": 350,
+        "high": 550
+      },
+      "size_class": "small",
+      "traffic_per_table": 8.8,
+      "confidence": "estimated"
+    },
+    "size": {
+      "tables": 40
+    },
+    "vendor": {
+      "min_table_price": 55,
+      "currency": "USD",
+      "deadline": "2026-11-14",
+      "status": "open",
+      "setup": null,
+      "extras": null
+    },
+    "admission": {
+      "free": true,
+      "adult": null,
+      "currency": "USD"
+    }
+  },
+  {
+    "id": "garden-state-card-show-edison-nj-2026-12-12",
+    "series_id": "garden-state-card-show-edison-nj",
+    "name": "Garden State Card Show",
+    "event_type": "card_show",
+    "status": "scheduled",
+    "days": [
+      {
+        "date": "2026-12-12",
+        "open": "09:00",
+        "close": "15:00"
+      },
+      {
+        "date": "2026-12-13",
+        "open": "10:00",
+        "close": "14:00"
+      }
+    ],
+    "timezone": "America/New_York",
+    "lat": 40.5187,
+    "lon": -74.3518,
+    "city": "Edison",
+    "region": "NJ",
+    "country": "US",
+    "sells": [
+      "pokemon",
+      "mtg",
+      "one_piece",
+      "baseball",
+      "basketball",
+      "football"
+    ],
+    "estimate": {
+      "attendance": {
+        "low": 450,
+        "mid": 750,
+        "high": 1150
+      },
+      "size_class": "medium",
+      "traffic_per_table": 6.2,
+      "confidence": "estimated"
+    },
+    "size": {
+      "tables": 120
+    },
+    "vendor": {
+      "min_table_price": 150,
+      "currency": "USD",
+      "deadline": "2026-11-30",
+      "status": "open",
+      "setup": "07:00",
+      "extras": null
+    },
+    "admission": {
+      "free": false,
+      "adult": 5,
+      "currency": "USD"
+    }
+  },
+  {
+    "id": "delaware-valley-tcg-fest-cherry-hill-nj-2026-12-13",
+    "series_id": "delaware-valley-tcg-fest-cherry-hill-nj",
+    "name": "Delaware Valley TCG Fest",
+    "event_type": "card_show",
+    "status": "scheduled",
+    "days": [
+      {
+        "date": "2026-12-13",
+        "open": "10:00",
+        "close": "16:00"
+      }
+    ],
+    "timezone": "America/New_York",
+    "lat": 39.9348,
+    "lon": -75.0307,
+    "city": "Cherry Hill",
+    "region": "NJ",
+    "country": "US",
+    "sells": [
+      "pokemon",
+      "mtg",
+      "yugioh",
+      "one_piece",
+      "lorcana"
+    ],
+    "estimate": {
+      "attendance": {
+        "low": 650,
+        "mid": 950,
+        "high": 1400
+      },
+      "size_class": "medium",
+      "traffic_per_table": 11.9,
+      "confidence": "estimated"
+    },
+    "size": {
+      "tables": 80
+    },
+    "vendor": {
+      "min_table_price": 95,
+      "currency": "USD",
+      "deadline": "2026-12-01",
+      "status": "open",
+      "setup": null,
+      "extras": null
+    },
+    "admission": {
+      "free": false,
+      "adult": 5,
+      "currency": "USD"
+    }
+  },
+  {
+    "id": "holiday-card-bash-king-of-prussia-pa-2026-12-19",
+    "series_id": "holiday-card-bash-king-of-prussia-pa",
+    "name": "Holiday Card Bash",
+    "event_type": "card_show",
+    "status": "tentative",
+    "days": [
+      {
+        "date": "2026-12-19",
+        "open": "10:00",
+        "close": "16:00"
+      }
+    ],
+    "timezone": "America/New_York",
+    "lat": 40.0893,
+    "lon": -75.3963,
+    "city": "King of Prussia",
+    "region": "PA",
+    "country": "US",
+    "sells": [
+      "pokemon",
+      "mtg",
+      "baseball",
+      "basketball"
+    ],
+    "estimate": null,
+    "size": {
+      "tables": null
+    },
+    "vendor": {
+      "min_table_price": null,
+      "currency": null,
+      "deadline": null,
+      "status": null,
+      "setup": null,
+      "extras": null
+    },
+    "admission": {
+      "free": null,
+      "adult": null,
+      "currency": null
+    }
+  },
+  {
+    "id": "lancaster-sports-card-show-lancaster-pa-2026-12-05",
+    "series_id": "lancaster-sports-card-show-lancaster-pa",
+    "name": "Lancaster Sports Card Show",
+    "event_type": "card_show",
+    "status": "scheduled",
+    "days": [
+      {
+        "date": "2026-12-05",
+        "open": "08:00",
+        "close": "14:00"
+      }
+    ],
+    "timezone": "America/New_York",
+    "lat": 40.0379,
+    "lon": -76.3055,
+    "city": "Lancaster",
+    "region": "PA",
+    "country": "US",
+    "sells": [
+      "baseball",
+      "football"
+    ],
+    "estimate": {
+      "attendance": {
+        "low": 250,
+        "mid": 400,
+        "high": 600
+      },
+      "size_class": "small",
+      "traffic_per_table": 10,
+      "confidence": "estimated"
+    },
+    "size": {
+      "tables": 40
+    },
+    "vendor": {
+      "min_table_price": 50,
+      "currency": "USD",
+      "deadline": "2026-11-25",
+      "status": "open",
+      "setup": null,
+      "extras": null
+    },
+    "admission": {
+      "free": true,
+      "adult": 0,
+      "currency": "USD"
+    }
+  },
+  {
+    "id": "charm-city-tcg-expo-baltimore-md-2027-01-17",
+    "series_id": "charm-city-tcg-expo-baltimore-md",
+    "name": "Charm City TCG Expo",
+    "event_type": "convention",
+    "status": "scheduled",
+    "days": [
+      {
+        "date": "2027-01-17",
+        "open": "10:00",
+        "close": "17:00"
+      }
+    ],
+    "timezone": "America/New_York",
+    "lat": 39.2904,
+    "lon": -76.6122,
+    "city": "Baltimore",
+    "region": "MD",
+    "country": "US",
+    "sells": [
+      "pokemon",
+      "lorcana",
+      "yugioh",
+      "mtg"
+    ],
+    "estimate": {
+      "attendance": {
+        "low": 2600,
+        "mid": 4100,
+        "high": 6100
+      },
+      "size_class": "large",
+      "traffic_per_table": 16.4,
+      "confidence": "estimated"
+    },
+    "size": {
+      "tables": 250
+    },
+    "vendor": {
+      "min_table_price": 225,
+      "currency": "USD",
+      "deadline": "2027-01-03",
+      "status": "open",
+      "setup": null,
+      "extras": null
+    },
+    "admission": {
+      "free": false,
+      "adult": 15,
+      "currency": "USD"
+    }
+  },
+  {
+    "id": "garden-state-card-show-edison-nj-2027-01-09",
+    "series_id": "garden-state-card-show-edison-nj",
+    "name": "Garden State Card Show",
+    "event_type": "card_show",
+    "status": "scheduled",
+    "days": [
+      {
+        "date": "2027-01-09",
+        "open": "09:00",
+        "close": "15:00"
+      },
+      {
+        "date": "2027-01-10",
+        "open": "10:00",
+        "close": "14:00"
+      }
+    ],
+    "timezone": "America/New_York",
+    "lat": 40.5187,
+    "lon": -74.3518,
+    "city": "Edison",
+    "region": "NJ",
+    "country": "US",
+    "sells": [
+      "pokemon",
+      "mtg",
+      "one_piece",
+      "baseball",
+      "basketball",
+      "football"
+    ],
+    "estimate": {
+      "attendance": {
+        "low": 400,
+        "mid": 700,
+        "high": 1100
+      },
+      "size_class": "medium",
+      "traffic_per_table": 5.8,
+      "confidence": "estimated"
+    },
+    "size": {
+      "tables": 120
+    },
+    "vendor": {
+      "min_table_price": 150,
+      "currency": "USD",
+      "deadline": "2026-12-28",
+      "status": "open",
+      "setup": "07:00",
+      "extras": null
+    },
+    "admission": {
+      "free": false,
+      "adult": 5,
+      "currency": "USD"
+    }
+  },
+  {
+    "id": "poconos-card-show-stroudsburg-pa-2026-11-28",
+    "series_id": "poconos-card-show-stroudsburg-pa",
+    "name": "Poconos Card Show",
+    "event_type": "card_show",
+    "status": "cancelled",
+    "days": [
+      {
+        "date": "2026-11-28",
+        "open": "10:00",
+        "close": "15:00"
+      }
+    ],
+    "timezone": "America/New_York",
+    "lat": 40.9868,
+    "lon": -75.1946,
+    "city": "Stroudsburg",
+    "region": "PA",
+    "country": "US",
+    "sells": [
+      "baseball",
+      "pokemon"
+    ],
+    "estimate": {
+      "attendance": {
+        "low": 150,
+        "mid": 250,
+        "high": 400
+      },
+      "size_class": "small",
+      "traffic_per_table": 8.3,
+      "confidence": "rough"
+    },
+    "size": {
+      "tables": 30
+    },
+    "vendor": {
+      "min_table_price": 40,
+      "currency": "USD",
+      "deadline": "2026-11-20",
+      "status": "open",
+      "setup": null,
+      "extras": null
+    },
+    "admission": {
+      "free": true,
+      "adult": 0,
+      "currency": "USD"
+    }
+  },
+  {
+    "id": "prerelease-at-the-game-shop-philadelphia-pa-2026-11-14",
+    "series_id": "prerelease-at-the-game-shop-philadelphia-pa",
+    "name": "Prerelease at The Game Shop",
+    "event_type": "store_event",
+    "status": "scheduled",
+    "days": [
+      {
+        "date": "2026-11-14",
+        "open": "12:00",
+        "close": "18:00"
+      }
+    ],
+    "timezone": "America/New_York",
+    "lat": 39.9526,
+    "lon": -75.1652,
+    "city": "Philadelphia",
+    "region": "PA",
+    "country": "US",
+    "sells": [
+      "mtg"
+    ],
+    "estimate": null,
+    "size": {
+      "tables": null
+    },
+    "vendor": {
+      "min_table_price": null,
+      "currency": null,
+      "deadline": null,
+      "status": null,
+      "setup": null,
+      "extras": null
+    },
+    "admission": {
+      "free": false,
+      "adult": 30,
+      "currency": "USD"
+    }
+  }
+]

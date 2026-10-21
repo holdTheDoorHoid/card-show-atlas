@@ -1,0 +1,14 @@
+{
+  "mode": "shopping",
+  "dates": {
+    "start": "2026-11-14",
+    "end": "2026-11-15"
+  },
+  "overnight": "home",
+  "dwellMinutes": 90,
+  "today": "2026-10-21",
+  "interests": [
+    "pokemon",
+    "mtg"
+  ]
+}

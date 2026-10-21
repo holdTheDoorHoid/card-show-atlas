@@ -1,0 +1,15 @@
+{
+  "range": {
+    "start": "2026-11-01",
+    "end": "2027-01-31"
+  },
+  "blackout": [
+    "2026-11-26",
+    "2026-12-25"
+  ],
+  "weekendsOnly": true,
+  "maxShowsPerMonth": 3,
+  "maxNightsAway": 3,
+  "chain": true,
+  "today": "2026-10-21"
+}
