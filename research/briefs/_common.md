@@ -12,15 +12,16 @@ a guess.
    Never copy a sentence or phrase from any page. A test rejects any 8 word run copied from a source.
 2. **Never** log in, get around a bot check, paywall, robots rule or HTTP 403, submit a form, create an
    account, or contact anyone. If a page is blocked, list it under `blocked` and move on.
-3. **Facebook, Instagram, Eventbrite, Meetup, TikTok, X and AllEvents are leads only.** You may record
-   their URL in `links` and in `leads_only`, but every fact you record must come from a page that is
-   not one of those sites. Never fetch more than one page of these sites in a row.
+3. **Facebook, Instagram, TikTok, X, Reddit, Eventbrite, Meetup and AllEvents are links only.** Never
+   fetch them. You may copy their URL from a search result into `links` or `leads_only`, but every fact
+   you record must come from a page that is not one of those sites.
 4. **Never fetch these listing sites** (their terms forbid automated use, or they block bots). If a
    search result points to one, use the snippet only as a lead and find the organizer's own page:
    sportscollectorsdigest.com, collect.com, cardshowmap.com, treasurehunter.show,
    thecardshopfinder.com, cardshowhub.com, cardshowdirectory.com, sportscardinvestor.com,
    cardpulse.club, beckett.com, psacard.com, sportscollectorsdaily.com, locator.wizards.com, rk9.gg,
-   melee.gg, fancons.com, animecons.com, cantonfair.net, 10times.com, tradefest.io.
+   melee.gg, fancons.com, animecons.com, cantonfair.net, 10times.com, tradefest.io, ontreasure.com,
+   ticketspice.com.
 5. **Dates are the most important field.**
    * Record a date only when the page states it with the year, or the page itself is clearly dated
      this season (a 2026 schedule page, a post dated 2026).

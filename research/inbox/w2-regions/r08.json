@@ -1,0 +1,419 @@
+{
+  "wave": "w2-regions",
+  "agent": "r08",
+  "model": "haiku",
+  "searches_used": 8,
+  "fetches_used": 38,
+  "records": [
+    {
+      "kind": "edition",
+      "name": "East Bay Card Show (San Mateo)",
+      "event_type": "card_show",
+      "status": "scheduled",
+      "days": [
+        {"date": "2026-10-24", "open": "11:00", "close": "16:00"},
+        {"date": "2026-10-25", "open": "10:00", "close": "16:00"}
+      ],
+      "venue": {"name": "San Mateo County Event Center", "address": "1346 Saratoga Dr", "city": "San Mateo", "region": "CA", "postal": "94403", "country": "US"},
+      "sells": {"tcg": ["pokemon", "other_tcg"], "sports": ["multi_sport"], "other": []},
+      "admission": {"free": false, "adult": 25, "child": 0, "currency": "USD", "notes": "Sat general 25, Sun general 20, Sat VIP 35 (early entry 9:30 am), Sat afternoon saver 20 (entry 2 pm). Children under 12 free with a paying adult. Tickets sold online, limited quantity at door. Tickets not refundable."},
+      "vendor": {
+        "tables": [{"label": "6 ft table", "notes": "Vendor form covers all Tenth Inning locations, applicant picks one. No table prices or counts published for this show."}],
+        "application_url": "https://www.tenthinningcardshow.com/dealer-form",
+        "status": "unknown",
+        "contact": "support@tenthinningcardshow.com"
+      },
+      "organizer": {"name": "Tenth Inning Productions LLC", "url": "https://www.tenthinningcardshow.com"},
+      "links": {"official": "https://www.tenthinningcardshow.com/event-details/east-bay-card-show-oct-24-25"},
+      "summary": "Two day card show in San Mateo with sports cards, Pokemon and other TCG vendors, plus paid autograph and photo add-ons with a guest.",
+      "evidence": [
+        {"url": "https://www.tenthinningcardshow.com/event-details/east-bay-card-show-oct-24-25", "seen": "2026-10-21", "supports": ["name", "days", "venue", "admission", "sells"]},
+        {"url": "https://www.tenthinningcardshow.com/vendor-info", "seen": "2026-10-21", "supports": ["vendor.tables", "vendor.contact"]},
+        {"url": "https://www.tenthinningcardshow.com/dealer-form", "seen": "2026-10-21", "supports": ["vendor.application_url"]}
+      ],
+      "agent_confidence": "high"
+    },
+    {
+      "kind": "edition",
+      "name": "LA Card Expo (Woodland Hills)",
+      "event_type": "card_show",
+      "status": "scheduled",
+      "days": [
+        {"date": "2026-10-31", "open": "11:00", "close": "16:00"},
+        {"date": "2026-11-01", "open": "10:00", "close": "16:00"}
+      ],
+      "venue": {"name": "Warner Center Marriott", "address": "21850 Oxnard St", "city": "Woodland Hills", "region": "CA", "postal": "91367", "country": "US"},
+      "sells": {"tcg": ["pokemon", "other_tcg"], "sports": ["multi_sport"], "other": ["anime", "toys"]},
+      "admission": {"free": false, "adult": 20, "child": 0, "currency": "USD", "notes": "Door price 20 each day. Online early purchase 15 each day. Sat VIP 25 (early entry 9:30 am, online only). Children under 12 free with a paying adult. Limited quantities, tickets not refundable."},
+      "vendor": {
+        "tables": [{"label": "6 ft table", "notes": "Vendor form covers all Tenth Inning locations, applicant picks one. No table prices or counts published for this show."}],
+        "application_url": "https://www.tenthinningcardshow.com/dealer-form",
+        "status": "unknown",
+        "contact": "support@tenthinningcardshow.com"
+      },
+      "organizer": {"name": "Tenth Inning Productions LLC", "url": "https://www.tenthinningcardshow.com"},
+      "links": {"official": "https://www.tenthinningcardshow.com/event-details/la-card-expo-oct-31-nov-1"},
+      "summary": "Two day show at a Woodland Hills hotel with sports cards, Pokemon, TCG, anime and Funko style collectibles.",
+      "evidence": [
+        {"url": "https://www.tenthinningcardshow.com/event-details/la-card-expo-oct-31-nov-1", "seen": "2026-10-21", "supports": ["name", "days", "venue", "admission", "sells"]},
+        {"url": "https://www.tenthinningcardshow.com/vendor-info", "seen": "2026-10-21", "supports": ["vendor.tables", "vendor.contact"]}
+      ],
+      "agent_confidence": "high"
+    },
+    {
+      "kind": "edition",
+      "name": "San Diego Card Expo",
+      "event_type": "card_show",
+      "status": "scheduled",
+      "days": [
+        {"date": "2026-10-31", "open": "11:00", "close": "17:00"},
+        {"date": "2026-11-01", "open": "10:00", "close": "17:00"}
+      ],
+      "venue": {"name": "Manchester Grand Hyatt San Diego", "address": "1 Market Pl", "city": "San Diego", "region": "CA", "postal": "92101", "country": "US"},
+      "sells": {"tcg": ["pokemon", "other_tcg"], "sports": ["multi_sport"], "other": []},
+      "admission": {"free": false, "adult": 20, "child": 0, "currency": "USD", "notes": "Door price 20 each day. Online early purchase 15 each day. Sat VIP 25 (early entry 9:30 am, online only). Children under 12 free with a paying adult. Limited quantities, tickets not refundable."},
+      "vendor": {
+        "tables": [{"label": "6 ft table", "notes": "Vendor form covers all Tenth Inning locations, applicant picks one. No table prices or counts published for this show."}],
+        "application_url": "https://www.tenthinningcardshow.com/dealer-form",
+        "status": "unknown",
+        "contact": "support@tenthinningcardshow.com"
+      },
+      "organizer": {"name": "Tenth Inning Productions LLC", "url": "https://www.tenthinningcardshow.com"},
+      "links": {"official": "https://www.tenthinningcardshow.com/event-details/san-diego-card-expo-oct-31-nov-1"},
+      "summary": "Two day card show at a downtown San Diego hotel with sports cards, Pokemon and other TCG vendors.",
+      "evidence": [
+        {"url": "https://www.tenthinningcardshow.com/event-details/san-diego-card-expo-oct-31-nov-1", "seen": "2026-10-21", "supports": ["name", "days", "venue", "admission", "sells"]},
+        {"url": "https://www.tenthinningcardshow.com/vendor-info", "seen": "2026-10-21", "supports": ["vendor.tables", "vendor.contact"]}
+      ],
+      "agent_confidence": "high",
+      "notes": "Organizer header lists 10:30 am start; per-day entry times used for open. Close time is the organizer's stated end time."
+    },
+    {
+      "kind": "edition",
+      "name": "East Bay Card Show (Burlingame)",
+      "event_type": "card_show",
+      "status": "scheduled",
+      "days": [
+        {"date": "2026-11-07", "open": "11:00", "close": "16:00"},
+        {"date": "2026-11-08", "open": "10:00", "close": "16:00"}
+      ],
+      "venue": {"name": "Hyatt Regency San Francisco Airport", "address": "1333 Old Bayshore Hwy", "city": "Burlingame", "region": "CA", "postal": "94010", "country": "US"},
+      "sells": {"tcg": ["pokemon", "other_tcg"], "sports": ["multi_sport"], "other": []},
+      "admission": {"free": false, "adult": 25, "child": 0, "currency": "USD", "notes": "Sat general 25, Sun general 20, Sat VIP 35 (early entry 9:30 am), Sat afternoon saver 20 (entry 2 pm). Children under 12 free with a paying adult. Tickets sold online, limited quantity at door. Tickets not refundable."},
+      "vendor": {
+        "tables": [{"label": "6 ft table", "notes": "Vendor form covers all Tenth Inning locations, applicant picks one. No table prices or counts published for this show."}],
+        "application_url": "https://www.tenthinningcardshow.com/dealer-form",
+        "status": "unknown",
+        "contact": "support@tenthinningcardshow.com"
+      },
+      "organizer": {"name": "Tenth Inning Productions LLC", "url": "https://www.tenthinningcardshow.com"},
+      "links": {"official": "https://www.tenthinningcardshow.com/event-details/east-bay-card-show-nov-7-8"},
+      "summary": "Two day card show at an airport area hotel in Burlingame with sports cards, Pokemon and other TCG vendors.",
+      "evidence": [
+        {"url": "https://www.tenthinningcardshow.com/event-details/east-bay-card-show-nov-7-8", "seen": "2026-10-21", "supports": ["name", "days", "venue", "admission", "sells"]},
+        {"url": "https://www.tenthinningcardshow.com/vendor-info", "seen": "2026-10-21", "supports": ["vendor.tables", "vendor.contact"]}
+      ],
+      "agent_confidence": "high"
+    },
+    {
+      "kind": "edition",
+      "name": "TCG NOW (Santa Clara)",
+      "event_type": "card_show",
+      "status": "scheduled",
+      "days": [
+        {"date": "2026-11-14", "open": "11:00", "close": "16:00"},
+        {"date": "2026-11-15", "open": "10:00", "close": "16:00"}
+      ],
+      "venue": {"name": "Santa Clara Convention Center", "address": "5001 Great America Pkwy", "city": "Santa Clara", "region": "CA", "postal": "95054", "country": "US"},
+      "sells": {"tcg": ["pokemon", "other_tcg"], "sports": ["multi_sport"], "other": []},
+      "admission": {"free": false, "adult": 25, "child": 0, "currency": "USD", "notes": "Sat general 25, Sun general 20, Sat VIP 35 (early entry 9:30 am), Sat afternoon saver 20 (entry 2 pm). Children under 12 free with a paying adult. Tickets sold online, limited quantity at door. Tickets not refundable."},
+      "vendor": {
+        "tables": [{"label": "6 ft table", "notes": "Vendor form covers all Tenth Inning locations, applicant picks one. No table prices or counts published for this show."}],
+        "application_url": "https://www.tenthinningcardshow.com/dealer-form",
+        "status": "unknown",
+        "contact": "support@tenthinningcardshow.com"
+      },
+      "organizer": {"name": "Tenth Inning Productions LLC", "url": "https://www.tenthinningcardshow.com"},
+      "links": {"official": "https://www.tenthinningcardshow.com/event-details/tcg-now-nov-14-15"},
+      "summary": "Two day show at the Santa Clara Convention Center with sports cards, Pokemon and other TCG vendors. Sold under the TCG NOW name.",
+      "evidence": [
+        {"url": "https://www.tenthinningcardshow.com/event-details/tcg-now-nov-14-15", "seen": "2026-10-21", "supports": ["name", "days", "venue", "admission", "sells"]},
+        {"url": "https://www.tenthinningcardshow.com/vendor-info", "seen": "2026-10-21", "supports": ["vendor.tables", "vendor.contact"]}
+      ],
+      "agent_confidence": "high"
+    },
+    {
+      "kind": "edition",
+      "name": "The Showcase Card Show (Torrance)",
+      "event_type": "card_show",
+      "status": "scheduled",
+      "days": [
+        {"date": "2026-11-28", "open": "11:00", "close": "17:00"},
+        {"date": "2026-11-29", "open": "11:00", "close": "17:00"}
+      ],
+      "venue": {"name": "Torrance Marriott Redondo Beach, Grand Ballroom", "address": "3635 Fashion Way", "city": "Torrance", "region": "CA", "postal": "90503", "country": "US"},
+      "sells": {"tcg": [], "sports": [], "other": []},
+      "admission": {"free": false, "adult": 5, "child": 0, "currency": "USD", "notes": "Free general entry with an online ticket, 5 at the door without one. VIP early access from 10 am (price not listed)."},
+      "vendor": {"application_url": "https://linktr.ee/theshowcasecardshow", "status": "unknown"},
+      "organizer": {"name": "The Showcase Card Show", "url": "https://www.theshowcasecardshow.com"},
+      "links": {"official": "https://www.theshowcasecardshow.com", "instagram": "https://www.instagram.com/TheShowcaseCardShow"},
+      "summary": "Two day show in a Redondo Beach area hotel ballroom with a marketplace of vendors, on the holiday weekend after Thanksgiving.",
+      "evidence": [
+        {"url": "https://www.tickettailor.com/events/theshowcasecardshow/2319960", "seen": "2026-10-21", "supports": ["name", "days", "venue", "admission", "organizer.url"]},
+        {"url": "https://www.theshowcasecardshow.com/vendors", "seen": "2026-10-21", "supports": ["vendor.application_url"]}
+      ],
+      "agent_confidence": "medium",
+      "notes": "Ticket platform page is the organizer's own event page. Vendor table details and game categories are not published on the pages read. Hours conflict across sources (10 am to 5 pm listed run, 11 am to 5 pm show hours); open uses show hours. Vendor registration is a Linktree page, recorded as application_url."
+    },
+    {
+      "kind": "edition",
+      "name": "East Bay Card Show (San Mateo)",
+      "event_type": "card_show",
+      "status": "scheduled",
+      "days": [
+        {"date": "2026-11-28", "open": "11:00", "close": "16:00"},
+        {"date": "2026-11-29", "open": "10:00", "close": "16:00"}
+      ],
+      "venue": {"name": "San Mateo County Event Center", "address": "1346 Saratoga Dr", "city": "San Mateo", "region": "CA", "postal": "94403", "country": "US"},
+      "sells": {"tcg": ["pokemon", "other_tcg"], "sports": ["multi_sport"], "other": []},
+      "admission": {"free": false, "adult": 25, "child": 0, "currency": "USD", "notes": "Sat general 25, Sun general 20, Sat VIP 35 (early entry 9:30 am), Sat afternoon saver 20 (entry 2 pm). Children under 12 free with a paying adult. Tickets sold online, limited quantity at door. Tickets not refundable."},
+      "vendor": {
+        "tables": [{"label": "6 ft table", "notes": "Vendor form covers all Tenth Inning locations, applicant picks one. No table prices or counts published for this show."}],
+        "application_url": "https://www.tenthinningcardshow.com/dealer-form",
+        "status": "unknown",
+        "contact": "support@tenthinningcardshow.com"
+      },
+      "organizer": {"name": "Tenth Inning Productions LLC", "url": "https://www.tenthinningcardshow.com"},
+      "links": {"official": "https://www.tenthinningcardshow.com/event-details/east-bay-card-show-nov-28-29-san-mateo"},
+      "summary": "Two day card show in San Mateo on the holiday weekend after Thanksgiving with sports cards, Pokemon and other TCG vendors.",
+      "evidence": [
+        {"url": "https://www.tenthinningcardshow.com/event-details/east-bay-card-show-nov-28-29-san-mateo", "seen": "2026-10-21", "supports": ["name", "days", "venue", "admission", "sells"]},
+        {"url": "https://www.tenthinningcardshow.com/vendor-info", "seen": "2026-10-21", "supports": ["vendor.tables", "vendor.contact"]}
+      ],
+      "agent_confidence": "high"
+    },
+    {
+      "kind": "edition",
+      "name": "East Bay Card Show (San Mateo)",
+      "event_type": "card_show",
+      "status": "scheduled",
+      "days": [
+        {"date": "2026-12-19", "open": "11:00", "close": "16:00"},
+        {"date": "2026-12-20", "open": "10:00", "close": "16:00"}
+      ],
+      "venue": {"name": "San Mateo County Event Center", "address": "1346 Saratoga Dr", "city": "San Mateo", "region": "CA", "postal": "94403", "country": "US"},
+      "sells": {"tcg": ["pokemon", "other_tcg"], "sports": ["multi_sport"], "other": []},
+      "admission": {"free": false, "adult": 25, "child": 0, "currency": "USD", "notes": "Sat general 25, Sun general 20, Sat VIP 35 (early entry 9:30 am), Sat afternoon saver 20 (entry 2 pm). Children under 12 free with a paying adult. Tickets sold online, limited quantity at door. Tickets not refundable."},
+      "vendor": {
+        "tables": [{"label": "6 ft table", "notes": "Vendor form covers all Tenth Inning locations, applicant picks one. No table prices or counts published for this show."}],
+        "application_url": "https://www.tenthinningcardshow.com/dealer-form",
+        "status": "unknown",
+        "contact": "support@tenthinningcardshow.com"
+      },
+      "organizer": {"name": "Tenth Inning Productions LLC", "url": "https://www.tenthinningcardshow.com"},
+      "links": {"official": "https://www.tenthinningcardshow.com/event-details/east-bay-card-show-dec-19-20-san-mateo"},
+      "summary": "Two day card show in San Mateo just before the holidays with sports cards, Pokemon and other TCG vendors.",
+      "evidence": [
+        {"url": "https://www.tenthinningcardshow.com/event-details/east-bay-card-show-dec-19-20-san-mateo", "seen": "2026-10-21", "supports": ["name", "days", "venue", "admission", "sells"]},
+        {"url": "https://www.tenthinningcardshow.com/vendor-info", "seen": "2026-10-21", "supports": ["vendor.tables", "vendor.contact"]}
+      ],
+      "agent_confidence": "high"
+    },
+    {
+      "kind": "edition",
+      "name": "LA Card Expo (Woodland Hills)",
+      "event_type": "card_show",
+      "status": "scheduled",
+      "days": [
+        {"date": "2026-12-26", "open": "11:00", "close": "16:00"},
+        {"date": "2026-12-27", "open": "10:00", "close": "16:00"}
+      ],
+      "venue": {"name": "Warner Center Marriott", "address": "21850 Oxnard St", "city": "Woodland Hills", "region": "CA", "postal": "91367", "country": "US"},
+      "sells": {"tcg": ["pokemon", "other_tcg"], "sports": ["multi_sport"], "other": ["memorabilia"]},
+      "admission": {"free": false, "adult": 20, "child": 0, "currency": "USD", "notes": "Sat door 20, Sun door 20. Online early purchase 15 each day. Sat VIP 25 (early entry 9:30 am). Sat afternoon saver 15 (entry 2 pm). Children under 12 free with a paying adult. Limited quantities, tickets not refundable."},
+      "vendor": {
+        "tables": [{"label": "6 ft table", "notes": "Vendor form covers all Tenth Inning locations, applicant picks one. No table prices or counts published for this show."}],
+        "application_url": "https://www.tenthinningcardshow.com/dealer-form",
+        "status": "unknown",
+        "contact": "support@tenthinningcardshow.com"
+      },
+      "organizer": {"name": "Tenth Inning Productions LLC", "url": "https://www.tenthinningcardshow.com"},
+      "links": {"official": "https://www.tenthinningcardshow.com/event-details/la-card-expo-dec-26-27"},
+      "summary": "Two day holiday weekend show at a Woodland Hills hotel with sports cards, sports memorabilia, Pokemon and other TCG vendors.",
+      "evidence": [
+        {"url": "https://www.tenthinningcardshow.com/event-details/la-card-expo-dec-26-27", "seen": "2026-10-21", "supports": ["name", "days", "venue", "admission", "sells"]},
+        {"url": "https://www.tenthinningcardshow.com/vendor-info", "seen": "2026-10-21", "supports": ["vendor.tables", "vendor.contact"]}
+      ],
+      "agent_confidence": "high"
+    },
+    {
+      "kind": "edition",
+      "name": "East Bay Card Show (Burlingame)",
+      "event_type": "card_show",
+      "status": "scheduled",
+      "days": [
+        {"date": "2027-01-02", "open": "11:00", "close": "16:00"},
+        {"date": "2027-01-03", "open": "10:00", "close": "16:00"}
+      ],
+      "venue": {"name": "Hyatt Regency San Francisco Airport", "address": "1333 Old Bayshore Hwy", "city": "Burlingame", "region": "CA", "postal": "94010", "country": "US"},
+      "sells": {"tcg": ["pokemon", "other_tcg"], "sports": ["multi_sport"], "other": []},
+      "admission": {"free": false, "adult": 25, "child": 0, "currency": "USD", "notes": "Sat general 25, Sun general 20, Sat VIP 35 (early entry 9:30 am), Sat afternoon saver 20 (entry 2 pm). Children under 12 free with a paying adult. Tickets sold online, limited quantity at door. Tickets not refundable."},
+      "vendor": {
+        "tables": [{"label": "6 ft table", "notes": "Vendor form covers all Tenth Inning locations, applicant picks one. No table prices or counts published for this show."}],
+        "application_url": "https://www.tenthinningcardshow.com/dealer-form",
+        "status": "unknown",
+        "contact": "support@tenthinningcardshow.com"
+      },
+      "organizer": {"name": "Tenth Inning Productions LLC", "url": "https://www.tenthinningcardshow.com"},
+      "links": {"official": "https://www.tenthinningcardshow.com/event-details/east-bay-card-show-jan-2-3"},
+      "summary": "Two day January card show in Burlingame with sports cards, Pokemon and other TCG vendors.",
+      "evidence": [
+        {"url": "https://www.tenthinningcardshow.com/event-details/east-bay-card-show-jan-2-3", "seen": "2026-10-21", "supports": ["name", "days", "venue", "admission", "sells"]},
+        {"url": "https://www.tenthinningcardshow.com/vendor-info", "seen": "2026-10-21", "supports": ["vendor.tables", "vendor.contact"]}
+      ],
+      "agent_confidence": "high"
+    },
+    {
+      "kind": "edition",
+      "name": "East Bay Card Show (Santa Clara)",
+      "event_type": "card_show",
+      "status": "scheduled",
+      "days": [
+        {"date": "2027-01-09", "open": "11:00", "close": "16:00"},
+        {"date": "2027-01-10", "open": "10:00", "close": "16:00"}
+      ],
+      "venue": {"name": "Santa Clara Convention Center", "address": "5001 Great America Pkwy", "city": "Santa Clara", "region": "CA", "postal": "95054", "country": "US"},
+      "sells": {"tcg": ["pokemon", "other_tcg"], "sports": ["multi_sport"], "other": []},
+      "admission": {"free": false, "adult": 25, "child": 0, "currency": "USD", "notes": "Sat general 25, Sun general 20, Sat VIP 35 (early entry 9:30 am), Sat afternoon saver 20 (entry 2 pm). Children under 12 free with a paying adult. Tickets sold online, limited quantity at door. Tickets not refundable."},
+      "vendor": {
+        "tables": [{"label": "6 ft table", "notes": "Vendor form covers all Tenth Inning locations, applicant picks one. No table prices or counts published for this show."}],
+        "application_url": "https://www.tenthinningcardshow.com/dealer-form",
+        "status": "unknown",
+        "contact": "support@tenthinningcardshow.com"
+      },
+      "organizer": {"name": "Tenth Inning Productions LLC", "url": "https://www.tenthinningcardshow.com"},
+      "links": {"official": "https://www.tenthinningcardshow.com/event-details/east-bay-card-show-jan-9-10"},
+      "summary": "Two day January card show at the Santa Clara Convention Center with sports cards, Pokemon and other TCG vendors.",
+      "evidence": [
+        {"url": "https://www.tenthinningcardshow.com/event-details/east-bay-card-show-jan-9-10", "seen": "2026-10-21", "supports": ["name", "days", "venue", "admission", "sells"]},
+        {"url": "https://www.tenthinningcardshow.com/vendor-info", "seen": "2026-10-21", "supports": ["vendor.tables", "vendor.contact"]}
+      ],
+      "agent_confidence": "high"
+    },
+    {
+      "kind": "edition",
+      "name": "SD Card Show (Del Mar Fairgrounds)",
+      "event_type": "card_show",
+      "status": "scheduled",
+      "days": [
+        {"date": "2026-10-11", "open": "11:00", "close": "17:00"}
+      ],
+      "venue": {"name": "Bing Crosby Hall, Del Mar Fairgrounds", "address": "2260 Jimmy Durante Blvd", "city": "Del Mar", "region": "CA", "postal": "92014", "country": "US"},
+      "sells": {"tcg": ["other_tcg"], "sports": ["multi_sport"], "other": []},
+      "admission": {"free": false, "currency": "USD", "notes": "Free for active duty military, veterans and kids 12 and under with valid ID. General price not stated on the page. Parking 16 a day in advance or 20 at the gate."},
+      "size": {"tables": 300},
+      "vendor": {"status": "unknown"},
+      "links": {"official": "https://www.tickettailor.com/events/sdcardshow/2327718"},
+      "summary": "One day show at Del Mar Fairgrounds with about 300 tables of sports cards, TCG and collectibles. Past edition, recorded for crowd size.",
+      "evidence": [
+        {"url": "https://www.tickettailor.com/events/sdcardshow/2327718", "seen": "2026-10-21", "supports": ["name", "days", "venue", "size.tables", "admission"]}
+      ],
+      "agent_confidence": "medium",
+      "notes": "Past edition (held 2026-10-11). Organizer name not stated on the page. Status set to scheduled only because the enum has no held value. The organizer's ticket page lists no other dates."
+    },
+    {
+      "kind": "edition",
+      "name": "The Showcase Card Show (Garden Grove)",
+      "event_type": "card_show",
+      "status": "scheduled",
+      "days": [
+        {"date": "2026-09-13", "open": "11:00", "close": "17:00"}
+      ],
+      "venue": {"name": "Hyatt Regency Orange County, Grand Ballroom", "address": "11999 Harbor Blvd", "city": "Garden Grove", "region": "CA", "postal": "92840", "country": "US"},
+      "sells": {"tcg": [], "sports": [], "other": []},
+      "admission": {"free": false, "adult": 5, "child": 0, "currency": "USD", "notes": "Free with an online ticket, 5 at the door without one. Free VIP early access tickets online, VIP from 10 am."},
+      "size": {"tables": 200},
+      "vendor": {"status": "unknown"},
+      "organizer": {"name": "The Showcase Card Show", "url": "https://www.theshowcasecardshow.com"},
+      "links": {"official": "https://www.theshowcasecardshow.com"},
+      "summary": "One day show in a Garden Grove hotel ballroom with about 200 vendor tables to buy, sell and trade. Past edition, recorded for crowd size.",
+      "evidence": [
+        {"url": "https://www.tickettailor.com/events/theshowcasecardshow/2377059", "seen": "2026-10-21", "supports": ["name", "days", "venue", "size.tables", "admission"]}
+      ],
+      "agent_confidence": "medium",
+      "notes": "Past edition (held 2026-09-13). Status set to scheduled only because the enum has no held value. Hours are the organizer's stated show hours (11 am to 5 pm)."
+    },
+    {
+      "kind": "edition",
+      "name": "The Showcase Card Show (Pomona)",
+      "event_type": "card_show",
+      "status": "scheduled",
+      "days": [
+        {"date": "2026-12-05", "open": "11:00", "close": "17:00"},
+        {"date": "2026-12-06", "open": "11:00", "close": "17:00"}
+      ],
+      "venue": {"name": "Sheraton Fairplex Conference Center, Exhibit Hall 8", "address": "601 W. McKinley Ave", "city": "Pomona", "region": "CA", "postal": "91768", "country": "US"},
+      "sells": {"tcg": [], "sports": [], "other": []},
+      "admission": {"free": false, "adult": 5, "child": 0, "currency": "USD", "notes": "Free with an online ticket, 5 at the door without one. VIP early access from 10 am, price not listed. Conference center parking 17 per car per day."},
+      "vendor": {"status": "unknown"},
+      "organizer": {"name": "The Showcase Card Show", "url": "https://www.theshowcasecardshow.com"},
+      "links": {"official": "https://www.theshowcasecardshow.com", "instagram": "https://www.instagram.com/TheShowcaseCardShow"},
+      "summary": "Two day show at the Sheraton Fairplex in Pomona with vendors and free online entry. Vendor and game details are not published on the ticket page.",
+      "evidence": [
+        {"url": "https://www.tickettailor.com/events/theshowcasecardshow/2428062", "seen": "2026-10-21", "supports": ["name", "days", "venue", "admission"]}
+      ],
+      "agent_confidence": "medium",
+      "notes": "Hours header says 10 am to 5 pm and the description says show hours are 11 am to 5 pm; open uses the show hours."
+    },
+    {
+      "kind": "edition",
+      "name": "Frontwave Arena Collectibles Expo (Oceanside)",
+      "event_type": "card_show",
+      "status": "scheduled",
+      "days": [
+        {"date": "2026-08-29", "open": "10:00", "close": "18:00"}
+      ],
+      "venue": {"name": "Frontwave Arena", "address": "3475 Hero Dr", "city": "Oceanside", "region": "CA", "postal": "92056", "country": "US"},
+      "sells": {"tcg": ["pokemon", "other_tcg"], "sports": ["multi_sport"], "other": ["memorabilia"]},
+      "size": {"tables": 160},
+      "vendor": {
+        "tables": [
+          {"label": "Regular table", "notes": "1 to 2 tables with 2 to 4 vendor badges"},
+          {"label": "Half island", "notes": "5 tables with 5 vendor badges"},
+          {"label": "Full island", "notes": "10 tables with 8 vendor badges"}
+        ],
+        "status": "unknown"
+      },
+      "organizer": {"name": "Frontwave Arena", "url": "https://frontwavearena.com"},
+      "links": {"official": "https://www.frontwavearena.com/events/detail/frontwave-arean-collectables-expo"},
+      "summary": "One day collectibles expo at Frontwave Arena in Oceanside with up to 160 vendor tables covering sports cards, Pokemon, TCG and memorabilia. Past edition, recorded for crowd size.",
+      "evidence": [
+        {"url": "https://visitoceanside.org/events/frontwave-arena-collectables-expo/", "seen": "2026-10-21", "supports": ["name", "days", "venue", "size.tables", "sells"]}
+      ],
+      "agent_confidence": "medium",
+      "notes": "Past edition (held 2026-08-29). Taken from a city tourism calendar page, which links the organizer site. Admission not listed. Trade night 6 to 8 pm and VIP early entry 9 am were also stated. Status set to scheduled only because the enum has no held value."
+    }
+  ],
+  "leads_only": [
+    {"name": "San Francisco Card Show (South San Francisco Conference Center)", "url": "https://thecardshopfinder.com/event/san-francisco-card-show-south-san-francisco-2026-11/", "note": "Listing snippets say one day on Sat Nov 14 2026 at the South San Francisco Conference Center. Other listings show July dates at the same venue, which conflict. Organizer page not found, so the date is unconfirmed."},
+    {"name": "All World Cards and Collectibles Show (Sacramento, Elks Lodge 6)", "url": "https://thecardshopfinder.com/event/all-world-cards-collectibles-show-sacramento-2026-11/", "note": "Listing titles show Saturdays Oct 31, Nov 28 and Dec 19 2026, and Jan 9, Feb 20 and Mar 20 2027. Seen only in listing snippets. Organizer page not found; the obvious domain is parked."},
+    {"name": "Sacramento Card Show, December Weekend (D and P Sports Cards)", "url": "https://thecardshopfinder.com/event/sacramento-card-show-december-weekend-sacramento-2026-12/", "note": "Listing snippets say Fri Dec 11 to Sun Dec 13 2026, SAFE Credit Union Convention Center Hall C. Organizer page not found, and a second search found no confirmation."},
+    {"name": "Taylor Trades Card and Memorabilia Show (Santa Rosa)", "url": "https://thecardshopfinder.com/shows/taylor-trades-card-memorabilia-show-santa-rosa/", "note": "Listing snippets show Oct 30 and Dec 19 2026. Organizer page not found."},
+    {"name": "Southern California Sports Card Show (Culver City)", "url": "https://thecardshopfinder.com/event/southern-california-sports-card-show-culver-city-2026-09/", "note": "Described as a monthly show. Aug 8 and Sep 5 2026 seen, both past. Oct to Dec 2026 dates not found. Organizer page not found."},
+    {"name": "Silicon Valley Cards and Collectibles Show (December, Saratoga)", "url": "https://thecardshopfinder.com/event/silicon-valley-cards-collectibles-show-san-jose-2026-12/", "note": "Listing title shows Dec 12 to 13 2026, Westgate Center in Saratoga area. Organizer page not found."},
+    {"name": "Central Valley Cards and Collectibles (CVC) Show, Fresno Fall Edition", "url": "https://thecardshopfinder.com/event/cvc-show-fresno-fall-edition-fresno-2026-10/", "note": "Listing title shows Oct 24 2026. Organizer page not found. The same series lists a Turlock show in Nov 2026."},
+    {"name": "CVC Show, Turlock", "url": "https://thecardshopfinder.com/event/cvc-show-turlock-2026-11/", "note": "Listing slug shows a Nov 2026 date. Exact date not confirmed. Organizer page not found."},
+    {"name": "The Big Fresno Card Show, November Edition (Fresno Fairgrounds Commerce Building)", "url": "https://thecardshopfinder.com/event/big-fresno-card-show-november-edition-fresno-2026-11/", "note": "Listing title shows Nov 14 2026. Organizer page not found; the obvious domain did not resolve. Earlier Aug 15 2026 edition was past."},
+    {"name": "VFW Post 9223 community holiday market with card show (Riverside)", "url": "https://www.thecraftmap.com/fair/second-sunday-community-vfw-christmas-market-with-card-show-and-vendors-riverside-ca", "note": "Listing says Sun Dec 13 2026 at VFW Post 9223 on Arlington Ave, Riverside, and describes a second Sunday gathering with card vendors. Aggregator page returned HTTP 429 three times, so unverified. Good candidate for a recurring small show."},
+    {"name": "San Francisco Collect-A-Con (Daly City and San Mateo)", "url": "https://www.treasurehunter.show/show/san-francisco-collect-a-con-daly-city-ca-2026-09-12", "note": "Sep 12 2026 Daly City and Sep 13 2026 San Mateo seen in listing snippets, both past. Next dates not found."},
+    {"name": "Bakersfield Card Expo and Collectibles Show (Dignity Health Convention Center)", "url": "https://thecardshopfinder.com/event/bakersfield-card-expo-bakersfield-2026-10/", "note": "Oct 2026 edition is past. A news article says the show is held twice a year. No spring 2027 date found."},
+    {"name": "Bamville Card Show (Alameda County Fairgrounds, Pleasanton)", "url": "https://www.treasurehunter.show/show/bamville-card-show-pleasanton-ca-2026-08-15", "note": "Aug 15 2026 edition is past. Next date and organizer page not found."},
+    {"name": "West Coast Card Show Anaheim (Anaheim Convention Center Hall D)", "url": "https://thecardshopfinder.com/event/west-coast-card-show-anaheim-2026-07/", "note": "Jul 16 to 19 2026, past. Next edition and organizer page not found."},
+    {"name": "Collectors Expo OC (Anaheim)", "url": "https://thecardshopfinder.com/event/collectors-expo-orange-county-anaheim-2026-10/", "note": "Past editions Aug 22 to 23 and Oct 17 to 18 2026. Venue listed inconsistently. Organizer page not found."},
+    {"name": "Sacramento Sports Card and Memorabilia Expo (Roebbelen Center, Roseville)", "url": "", "note": "Undated mention in a search result, which claims 400 plus dealers and 30 plus autograph guests. Date and year not confirmed."}
+  ],
+  "blocked": [
+    {"url": "https://www.thecraftmap.com/fair/second-sunday-community-vfw-christmas-market-with-card-show-and-vendors-riverside-ca", "status": 429, "note": "Rate limited on three tries. Riverside VFW card show lead remains unverified."}
+  ],
+  "notes": "California sweep. Tenth Inning Productions (East Bay Card Show, LA Card Expo, San Diego Card Expo, TCG NOW) and The Showcase Card Show have organizer calendars with 2026 and 2027 dates, and make up most of the records. Vendor terms are shared: Tenth Inning's vendor form covers five locations (LA, San Diego, Palm Springs, SF Bay Area) with 6 ft tables and no prices published, so vendor.application_url is the same on every Tenth Inning record. Tenth Inning and Showcase event pages show prices in dollars with no currency label; recorded as USD because every venue is in California. Skipped per brief: Maximum Card Show (including its Bay Area Nov 21 2026 listing), Front Row, USA Card Show, Collect-A-Con LA and Maximum San Diego. The TCG NOW Woodland Hills Nov 1 2026 listing looks like the same event as LA Card Expo Oct 31 to Nov 1 at Warner Center Marriott, so it is not recorded separately. Past California shows without a stated size were not recorded: East Bay Card Show July 25 to 26 2026 at Santa Clara County Fairgrounds (tickets link to Tenth Inning), Fresno Card and Collectible Show Aug 22 to 23 2026 (venue page, no size), Sacramento Card Show Aug 7 and Sep 18 to 20, The Grind in Elk Grove Sep 5, Folsom and Cameron Park Super Show Aug 29, Sacramento Sports Card and Autograph Expo Roseville Sep 5 to 6, Regional SoCal Cards and Collectibles in Garden Grove Sep 13 (TCG only), Auburn Grass Valley Expo Oct 17, Bakersfield Fall Collectors Expo Oct 10 to 11, Monster Collectibles Sacramento Oct 9, Hype Con Bay Area June 28, San Francisco Card Show Marriott Marquis Aug 28 to 30, Collectors 1st Night Redwood City Sep 11. StocktonCon Winter (Mar 1 2026) is a general collectibles and art convention with no card vendor detail, so skipped. Four guessed domains did not resolve or were parked, so no organizer pages were found for the listing-only leads. All 8 WebSearch used; 38 WebFetch used, including the failed guesses and three rate limited attempts."
+}

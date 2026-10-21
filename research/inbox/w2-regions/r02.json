@@ -1,0 +1,191 @@
+{
+  "wave": "w2-regions",
+  "agent": "r02",
+  "model": "haiku",
+  "searches_used": 8,
+  "fetches_used": 14,
+  "records": [
+    {
+      "kind": "edition",
+      "name": "Sports Card (& Pokemon/TCG) Showcase",
+      "event_type": "convention",
+      "status": "scheduled",
+      "days": [
+        {"date": "2026-10-30", "open": "13:00", "close": "19:00"},
+        {"date": "2026-10-31", "open": "10:00", "close": "17:00"},
+        {"date": "2026-11-01", "open": "09:00", "close": "15:00"}
+      ],
+      "venue": {"name": "Monroeville Convention Center", "address": "209 Mall Boulevard", "city": "Monroeville", "region": "PA", "country": "US"},
+      "sells": {"tcg": ["pokemon", "other_tcg"], "sports": ["multi_sport"], "other": []},
+      "admission": {"free": true, "currency": "USD", "notes": "Free admission and free parking"},
+      "size": {"tables": 1000},
+      "vendor": {"status": "unknown", "application_url": "https://pittsburghcardshow.com/dealer-information", "contact": "PittsburghCardShow@gmail.com"},
+      "organizer": {"name": "Pittsburgh Card Show", "url": "https://pittsburghcardshow.com/"},
+      "links": {"official": "https://pittsburghcardshow.com/"},
+      "summary": "A three day sports card and Pokemon/TCG show at the Monroeville Convention Center with about 1,000 dealer tables, free entry, and card authentication and grading services on site. The organizer lists 650 sports and 350 Pokemon/TCG tables.",
+      "evidence": [
+        {"url": "https://pittsburghcardshow.com/", "seen": "2026-10-21", "supports": ["name", "days", "venue", "admission", "size.tables"]},
+        {"url": "https://pittsburghcardshow.com/dealer-information", "seen": "2026-10-21", "supports": ["vendor.contact"]}
+      ],
+      "agent_confidence": "medium"
+    },
+    {
+      "kind": "edition",
+      "name": "Philly Non-Sports Card Show",
+      "event_type": "card_show",
+      "status": "scheduled",
+      "days": [
+        {"date": "2026-10-24", "open": "10:00", "close": "17:00"},
+        {"date": "2026-10-25", "open": "10:00", "close": "15:00"}
+      ],
+      "venue": {"name": "Greater Philadelphia Expo Center", "city": "Oaks", "region": "PA", "country": "US"},
+      "sells": {"tcg": [], "sports": [], "other": ["non_sport"]},
+      "admission": {"free": false, "adult": 12, "currency": "USD", "notes": "$12 one day, $20 for both days"},
+      "vendor": {"status": "unknown", "contact": "info@phillynon-sportscardshow.com"},
+      "organizer": {"url": "https://www.phillynon-sportscardshow.com/"},
+      "links": {"official": "https://www.phillynon-sportscardshow.com/"},
+      "summary": "The 85th Philly Non-Sports Card Show, a two day dealer show in Hall E of the Greater Philadelphia Expo Center. The organizer page does not give table prices.",
+      "evidence": [
+        {"url": "https://www.phillynon-sportscardshow.com/", "seen": "2026-10-21", "supports": ["name", "days", "venue", "admission", "hours"]}
+      ],
+      "agent_confidence": "high"
+    },
+    {
+      "kind": "edition",
+      "name": "Sports Card & Sports Memorabilia Show",
+      "event_type": "card_show",
+      "status": "scheduled",
+      "days": [{"date": "2026-11-28"}],
+      "venue": {"name": "Castle Shannon VFD", "city": "Pittsburgh", "region": "PA", "country": "US"},
+      "sells": {"tcg": [], "sports": ["multi_sport"], "other": ["memorabilia"]},
+      "vendor": {
+        "tables": [{"label": "8 foot table", "price": 85, "currency": "USD"}],
+        "status": "open",
+        "application_url": "https://pittsburghcardshow.com/dealer-information",
+        "contact": "PittsburghCardShow@gmail.com"
+      },
+      "organizer": {"name": "Pittsburgh Card Show", "url": "https://pittsburghcardshow.com/"},
+      "links": {"official": "https://pittsburghcardshow.com/"},
+      "summary": "A one day sports card and memorabilia show at Castle Shannon VFD with sports vendors only. Eight foot tables are listed at 85 dollars.",
+      "evidence": [
+        {"url": "https://pittsburghcardshow.com/dealer-information", "seen": "2026-10-21", "supports": ["name", "days", "venue", "vendor.tables", "vendor.status"]}
+      ],
+      "agent_confidence": "high"
+    },
+    {
+      "kind": "edition",
+      "name": "Sports Card & Pokemon/TCG Holiday Show",
+      "event_type": "card_show",
+      "status": "scheduled",
+      "days": [{"date": "2026-12-18"}, {"date": "2026-12-19"}, {"date": "2026-12-20"}],
+      "venue": {"name": "Monroeville Mall", "city": "Monroeville", "region": "PA", "country": "US"},
+      "sells": {"tcg": ["pokemon", "other_tcg"], "sports": ["multi_sport"], "other": []},
+      "vendor": {
+        "status": "unknown",
+        "application_url": "https://pittsburghcardshow.com/dealer-information",
+        "contact": "PittsburghCardShow@gmail.com"
+      },
+      "organizer": {"name": "Pittsburgh Card Show", "url": "https://pittsburghcardshow.com/"},
+      "links": {"official": "https://pittsburghcardshow.com/"},
+      "summary": "A three day holiday sports card and Pokemon/TCG show at Monroeville Mall. The organizer lists it on the dealer page without a table price.",
+      "evidence": [
+        {"url": "https://pittsburghcardshow.com/dealer-information", "seen": "2026-10-21", "supports": ["name", "days", "venue", "vendor.contact"]}
+      ],
+      "agent_confidence": "high"
+    },
+    {
+      "kind": "edition",
+      "name": "Sports Card Showcase",
+      "event_type": "card_show",
+      "status": "scheduled",
+      "days": [{"date": "2027-08-27"}, {"date": "2027-08-28"}, {"date": "2027-08-29"}],
+      "venue": {"name": "Monroeville Convention Center", "address": "209 Mall Boulevard", "city": "Monroeville", "region": "PA", "country": "US"},
+      "sells": {"tcg": [], "sports": ["multi_sport"], "other": []},
+      "vendor": {
+        "tables": [{"label": "6 foot table", "price": 135, "currency": "USD", "notes": "Special price, page says valid until 2026-11-01"}],
+        "status": "open",
+        "application_url": "https://pittsburghcardshow.com/dealer-information",
+        "contact": "PittsburghCardShow@gmail.com"
+      },
+      "organizer": {"name": "Pittsburgh Card Show", "url": "https://pittsburghcardshow.com/"},
+      "links": {"official": "https://pittsburghcardshow.com/"},
+      "summary": "A three day sports card show at the Monroeville Convention Center in late August 2027. Six foot tables are listed at a special early price.",
+      "evidence": [
+        {"url": "https://pittsburghcardshow.com/dealer-information", "seen": "2026-10-21", "supports": ["name", "days", "venue", "vendor.tables"]}
+      ],
+      "agent_confidence": "high"
+    },
+    {
+      "kind": "edition",
+      "name": "Sports Card Showcase",
+      "event_type": "card_show",
+      "status": "scheduled",
+      "days": [{"date": "2027-10-29"}, {"date": "2027-10-30"}, {"date": "2027-10-31"}],
+      "venue": {"name": "Monroeville Convention Center", "address": "209 Mall Boulevard", "city": "Monroeville", "region": "PA", "country": "US"},
+      "sells": {"tcg": [], "sports": ["multi_sport"], "other": []},
+      "vendor": {
+        "tables": [{"label": "6 foot table", "price": 135, "currency": "USD", "notes": "Special price, page says valid until 2026-11-01"}],
+        "status": "open",
+        "application_url": "https://pittsburghcardshow.com/dealer-information",
+        "contact": "PittsburghCardShow@gmail.com"
+      },
+      "organizer": {"name": "Pittsburgh Card Show", "url": "https://pittsburghcardshow.com/"},
+      "links": {"official": "https://pittsburghcardshow.com/"},
+      "summary": "A three day sports card show at the Monroeville Convention Center in late October 2027. Six foot tables are listed at a special early price.",
+      "evidence": [
+        {"url": "https://pittsburghcardshow.com/dealer-information", "seen": "2026-10-21", "supports": ["name", "days", "venue", "vendor.tables"]}
+      ],
+      "agent_confidence": "high"
+    }
+  ],
+  "leads_only": [
+    {"name": "Sports Card Showcase (June 2027)", "url": "https://pittsburghcardshow.com/dealer-information", "note": "Organizer lists June 25 to 27 2027 with the year. Venue conflicts on the same page (Monroeville Convention Center in the heading, Monroeville Mall in the table note). Not recorded until the venue is confirmed."},
+    {"name": "York White Rose Card Convention", "url": "https://www.yorkstatefair.com/p/york-expo-center", "note": "York Expo Center calendar lists it for Oct 31 and Nov 1 at UPMC Arena. The page prints no year and gives no hours or vendor details. Weekdays fit 2026. Not recorded until a year-stated source is found."},
+    {"name": "Sports Cards (York, 334 Carlisle Ave)", "url": "https://www.treasurehunter.show/show/sports-cards-york-pa-2026-10-31", "note": "Listing site only, not fetched. Sat Oct 31 and Sun Nov 1 2026, 10 am to 4 pm, $10 admission, 700 plus tables per listing. Probably the same event as the White Rose Card Convention. A second listing (sports-card-tcg-non-sports-card-convention-york-pa-2026-11-01) says Sun Nov 1, 10 am to 3 pm, York Expo Center. Confirm."},
+    {"name": "Sports Cards and Collectible Show (Plymouth Meeting Mall)", "url": "https://www.treasurehunter.show/show/sports-cards-and-collectible-show-plymouth-meeting-pa-2026-11-13", "note": "Listing site only. Fri Nov 13 2026 and Sat Nov 14 2026 (second URL: sports-cards-and-collectible-show-plymouth-meeting-pa-2026-11-14), 10 am to 8 pm per listing. Plymouth Meeting Mall events page returned no content."},
+    {"name": "Keystone Card Show (Warminster)", "url": "https://www.treasurehunter.show/show/keystone-card-show-warminster-pa-2026-11-07", "note": "Listing site only. Sat Nov 7 2026, 10 am to 4 pm, Christ's Home Community Center, 75 plus sports tables per listing. Earlier edition listed July 25 2026. Organizer page not found."},
+    {"name": "Sports Cards and Collectible Show (Conway Fire Hall)", "url": "https://www.treasurehunter.show/show/sports-cards-and-collectible-show-conway-pa-2026-11-14", "note": "Listing site only. Sat Nov 14 2026, 8 am to 3 pm per listing. Guessed venue domain did not resolve. Organizer not found."},
+    {"name": "Sports Cards and Collectible Show (North Wales, Montgomery Mall)", "url": "https://www.treasurehunter.show/show/sports-cards-and-collectible-show-north-wales-pa-2026-11-01", "note": "Listing site only. Sun Nov 1 2026, 11 am to 5 pm per listing. Mall events page returned no usable content."},
+    {"name": "Sports Card & Pokemon/TCG Show (Monroeville Mall, Nov 1)", "url": "https://www.treasurehunter.show/show/sports-card-pokmontcg-show-monroeville-pa-2026-11-01", "note": "Listing site only. Sun Nov 1 2026, 11 am to 5 pm per listing. Could be the known Treasure Cup Monroeville show, which was not checked."},
+    {"name": "Pokemon/TCG SUPER Show (Castle Shannon Fire Halls)", "url": "https://www.treasurehunter.show/show/pokmontcg-super-show-pittsburgh-pa-2026-11-29", "note": "Listing site only. Sun Nov 29 2026, 9 am to 3 pm per listing. Different day and possibly different organizer from the Castle Shannon VFD show recorded above. Confirm they are separate."},
+    {"name": "Mifflin County Sports Card & TCG Show (Reedsville)", "url": "https://www.treasurehunter.show/show/mifflin-county-sports-card-tcg-show-reedsville-pa-2026-10-25", "note": "Listing site only. Sun Oct 25 2026 per listing. Near term. Organizer and venue not checked."},
+    {"name": "Holiday Hot Stove Card Show (Greater Philadelphia Expo Center)", "url": "https://thecardshopfinder.com/event/holiday-hot-stove-card-show-oaks-2026-12/", "note": "Listing site only. Dec 12 and 13 2026 per the event page, but the Oaks calendar shows only Dec 12. No organizer page found. Could overlap with The Philly Show, which is excluded."},
+    {"name": "Coins, Cards & Chaos (King of Prussia)", "url": "https://www.treasurehunter.show/show/coins-cards-chaos-king-of-prussia-pa-2026-11-15", "note": "Listing site only. Two listing URLs give Nov 14 and Nov 15 2026. Organizer not found."},
+    {"name": "The Berks County Card Show (Birdsboro)", "url": "https://www.treasurehunter.show/show/the-berks-county-card-show-birdsboro-pa-2026-12-05", "note": "Listing site only. Sat Dec 5 2026, 11 am to 5 pm, at a Birdsboro pub per listing. Venue domain guessed and did not resolve."},
+    {"name": "Harrisburg Sports Card and TCG Show (Summerdale)", "url": "https://www.treasurehunter.show/show/harrisburg-sports-card-and-tcg-show-summerdale-pa-2026-12-19", "note": "Listing site only. Sat Dec 19 2026, 9 am to 2 pm per listing, Central Penn College conference center. Organizer not found."},
+    {"name": "Sports Cards and Collectible Show (Denver, PA)", "url": "https://www.treasurehunter.show/show/sports-cards-and-collectible-show-denver-pa-2026-12-19", "note": "Listing site only. Sat Dec 19 2026, 8 am to 1 pm per listing, at a hotel in Denver PA. Organizer not found."},
+    {"name": "Sports Cards and Collectible Show (Springfield, PA)", "url": "https://www.treasurehunter.show/show/sports-cards-and-collectible-show-springfield-pa-2026-12-04", "note": "Dec 4 2026 seen only in the listing URL. Details not read."},
+    {"name": "Pittsburgh Card Show at Washington Crown Center", "url": "https://www.si.com/collectibles/news/the-fastest-growing-card-show-in-the-country-the-pittsburgh", "note": "Article gives May 2 to 4 with no year. A listing shows an Aug 15 to 16 2025 edition. No 2026 date confirmed. Organizer site lists only Monroeville events."},
+    {"name": "Sports Card & Pokemon/TCG Show, Morgantown Mall (West Virginia)", "url": "https://pittsburghcardshow.com/dealer-information", "note": "Outside this region (West Virginia, Morgantown Mall, Nov 20 to 22 2026, year stated). Passed on for the WV researcher, not recorded here."},
+    {"name": "Sports Cards and Collectible Show (Mall at Robinson, Pittsburgh)", "url": "https://www.treasurehunter.show/show/sports-cards-and-collectible-show-pittsburgh-pa-2026-10-11", "note": "Past (Oct 9 and 11 2026). No size from a non-listing page. Not recorded."},
+    {"name": "Ches-Mont Card & Collectibles Show (Pottstown)", "url": "https://thecardshopfinder.com/event/ches-mont-card-collectibles-show-pottstown-2026-10/", "note": "Past (Oct 2026). No size from a non-listing page. Not recorded."},
+    {"name": "Perseverance Volunteer Fire Company Sports and TCG Card Show (Souderton)", "url": "https://www.treasurehunter.show/show/perseverance-volunteer-fire-company-sports-and-tcg-card-show-souderton-pa-2026-09-26", "note": "Past (Sept 26 2026). Not recorded."},
+    {"name": "Walker Twp Fire Co Card Show (Howard)", "url": "https://www.treasurehunter.show/show/walker-twp-fire-co-card-show-howard-pa-2026-09-12", "note": "Past (Sept 12 2026). Not recorded."},
+    {"name": "The Phoenixville Card Show", "url": "https://www.treasurehunter.show/show/the-phoenixville-card-show-phoenixville-pa-2026-09-05", "note": "Past (Sept 5 2026). Not recorded."},
+    {"name": "North Pittsburgh Sports Card September Show (Cranberry Twp)", "url": "https://www.treasurehunter.show/show/north-pittsburgh-sports-card-september-show-cranberry-twp-pa-2026-09-05", "note": "Past (Sept 5 2026). Not recorded."},
+    {"name": "Ripfest Pittsburgh", "url": "https://www.treasurehunter.show/show/ripfest-pittsburgh-pa-2026-09-19", "note": "Past (Sept 19 2026). Not recorded."},
+    {"name": "TCG Legends Expo: Pittsburgh", "url": "https://www.treasurehunter.show/show/tcg-legends-expo-pittsburgh-pittsburgh-pa-2026-10-03", "note": "Past (Oct 3 2026). Not recorded."},
+    {"name": "Bucks County Card Show (Warminster)", "url": "https://www.treasurehunter.show/show/bucks-county-card-show-warminster-pa-2026-08-30", "note": "Past (Aug 30 2026). Not recorded."},
+    {"name": "CCC Bucks County Sports & TCG Card Shows (Warminster)", "url": "https://www.treasurehunter.show/show/ccc-bucks-county-sports-tcg-card-shows-warminster-pa-2026-09-13", "note": "Past (Sept 13 2026). Not recorded."},
+    {"name": "Mifflin County Sports Card & TCG Show (Reedsville, Aug 30)", "url": "https://www.treasurehunter.show/show/mifflin-county-sports-card-tcg-show-reedsville-pa-2026-08-30", "note": "Past (Aug 30 2026). Not recorded."},
+    {"name": "Newportville Fire Co. Sports Card Show", "url": "https://www.treasurehunter.show/show/newportville-fire-co-sports-card-show-newportville-pa-2026-08-09", "note": "Past (Aug 9 2026). Not recorded."},
+    {"name": "Hellertown Card Expo", "url": "https://www.treasurehunter.show/show/hellertown-card-expo-hellertown-pa-2026-08-08", "note": "Past (Aug 8 2026). Not recorded."},
+    {"name": "The Big Show Card Show (Breinigsville)", "url": "https://www.treasurehunter.show/show/the-big-show-card-show-breinigsville-pa-2026-08-29", "note": "Past (Aug 29 2026). Not recorded."},
+    {"name": "Poppel Family Sports Card, Comic Book and Pokemon Show (Bensalem)", "url": "https://www.treasurehunter.show/show/bensalem-poppel-family-sports-card-comic-book-and-pokemon-show-2026-08-01-l7cg", "note": "Past (Aug 1 2026). Not recorded."},
+    {"name": "Sports Factory Card Show (Allentown)", "url": "https://www.treasurehunter.show/show/sports-factory-card-show-allentown-pa-2026-05-23", "note": "Past (May 23 2026). Not recorded."},
+    {"name": "Boyertown Cards & Memorabilia Show", "url": "https://www.treasurehunter.show/show/boyertown-cards-memorabilia-show-boyertown-pa-2026-06-06", "note": "Past (June 6 2026). Not recorded."},
+    {"name": "Sports card collectible show (Cogan Station)", "url": "https://www.treasurehunter.show/show/sports-card-collectible-show-cogan-station-pa-2026-06-13", "note": "Past (June 13 2026). Not recorded."},
+    {"name": "Steel City TCG Card Show (Pittsburgh)", "url": "https://www.treasurehunter.show/show/steel-city-tcg-card-show-pittsburgh-pa-2026-06-27", "note": "Past (June 27 2026). Not recorded."},
+    {"name": "Grossfest 2026 (Pittsburgh)", "url": "https://www.treasurehunter.show/show/grossfest-2026-pittsburgh-pa-2026-07-31", "note": "Past (July 31 2026). Not recorded."}  ],
+  "blocked": [
+    {"url": "https://www.greaterphiladelphiaexpocenter.com/events/", "note": "Request failed, no response. Expo Center calendar not reachable, so its Oct to Jan events were not checked."},
+    {"url": "https://www.greaterphiladelphiaexpocenter.com/", "note": "Request failed, no response."},
+    {"url": "https://www.expocenter.com/", "note": "Connection refused."},
+    {"url": "https://www.montgomerymall.com/events", "note": "Returned no usable content."},
+    {"url": "https://www.plymouthmeetingmall.com/events", "note": "Returned no usable content."},
+    {"url": "https://www.blackjaxpub.com/", "note": "Domain did not resolve (guessed URL)."},
+    {"url": "https://www.conwayfirehall.org/", "note": "Domain did not resolve (guessed URL)."},
+    {"url": "https://www.yorkexpo.com/", "note": "TLS certificate name mismatch. Redirect path led to yorkstatefair.com instead."}
+  ],
+  "notes": "Budget: 8 of 8 searches used, 14 fetches. Most PA shows came from listing sites (treasurehunter.show, thecardshopfinder.com) that I may not fetch, so they are leads with no organizer page, and budget ran out before I could check them. Near-term follow-ups, in order: Philly Non-Sports (recorded, Oct 24 to 25, organizer confirmed), Mifflin County Reedsville (Oct 25), York White Rose / York Expo Center (Oct 31 to Nov 1, venue page undated), Keystone Warminster (Nov 7), Plymouth Meeting Mall (Nov 13 to 14), Conway Fire Hall (Nov 14), Coins Cards & Chaos (Nov 14 or 15), Holiday Hot Stove (Dec 12 to 13, organizer not found), Harrisburg and Denver PA (Dec 19). Year handling: the Pittsburgh Card Show homepage prints weekday and date without a year, and I added 2026 because the weekdays match 2026, the footer reads Copyright 2026, and the organizer's dealer page gives years for its other dates. Please verify the Oct 30 to Nov 1 2026 edition before publishing; confidence is medium. The Pittsburgh Card Show dealer page gives a 2027 venue conflict (June 25 to 27) and is a lead only. The Philly Non-Sports organizer page prints a phone number, which I did not record. The Monroeville Mall Nov 1 listing may be the known Treasure Cup Monroeville show, which was not checked."
+}

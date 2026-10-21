@@ -18,6 +18,8 @@ Use your WebSearch budget on searches like these, varied across your states and 
 * `"card show" fairgrounds <state>` and `"card show" "expo center" <state>`
 * `"card show" VFW OR "fire hall" OR "Elks" <state>`
 * `"collectibles show" OR "trading card show" <state> 2027`
+* `site:eventeny.com "card show" <state>` (Eventeny event and vendor pages are made by organizers and
+  often list the vendor deadline and table prices)
 
 From each result, go to the **organizer's own page** (or the venue's event page, a local news item, a
 city or tourism calendar, a library or church calendar). Snippets from listing sites in the
