@@ -199,8 +199,24 @@ a review list (`data/review/possible_duplicates.jsonl`) instead of being merged.
 
 ## 9. Research agent output
 
-Research agents write one JSON file per show into `research/inbox/<wave>/`. The file is a partial show
-record (section 2) plus:
+Each research agent writes ONE file, `research/inbox/<wave>/<agent>.json`:
+
+```json
+{
+  "wave": "w1-promoters-pa",
+  "agent": "a03",
+  "model": "haiku",
+  "searches_used": 4,
+  "fetches_used": 31,
+  "records": [ {"kind": "edition", "...": "..."}, {"kind": "series", "...": "..."} ],
+  "leads_only": [{"name": "Example Monthly Show", "url": "https://example.com", "note": "named on a promoter page, not checked"}],
+  "blocked": [{"url": "https://example.org", "status": 403, "note": "bot check"}],
+  "notes": "anything surprising"
+}
+```
+
+A record with `"kind": "edition"` is a partial show record (section 2). A record with
+`"kind": "series"` describes a recurring show (section 9.1). Every record also carries:
 
 ```json
 "evidence": [{"url": "https://organizer.example.com/schedule", "seen": "2026-10-21", "supports": ["days", "venue", "vendor.tables"]}],
@@ -208,5 +224,36 @@ record (section 2) plus:
 ```
 
 No copied prose: `summary` is written fresh, and `evidence` holds links and the fields each link
-supports, not quotes. `csa import-research <wave>` validates, repairs small mistakes, and appends to
-`data/research/<wave>.jsonl`.
+supports, not quotes. `csa import-research <wave>` validates, repairs small mistakes, writes rejects
+with reasons to `research/inbox/<wave>/_rejected.jsonl`, and appends good records to
+`data/research/<wave>.jsonl`. The importer also accepts a bare single record file.
+
+### 9.1 Recurring series
+
+Many local shows run on a pattern ("second Sunday of every month") and post dates only a few weeks out.
+
+```json
+{
+  "kind": "series",
+  "name": "Example Monthly Card Show",
+  "venue": {"name": "VFW Post 123", "address": "1 Main St", "city": "Media", "region": "PA", "postal": "19063", "country": "US"},
+  "cadence": "Second Sunday of every month except July and August",
+  "rule": {"freq": "monthly", "weekday": "sun", "nth": 2, "skip_months": [7, 8], "until": null},
+  "hours": {"open": "09:00", "close": "14:00"},
+  "known_dates": ["2026-11-08", "2026-12-13"],
+  "cancelled_dates": [],
+  "last_confirmed": "2026-10-15",
+  "event_type": "card_show",
+  "sells": {"tcg": ["pokemon"], "sports": ["multi_sport"], "other": []},
+  "admission": {"free": true, "currency": "USD"},
+  "vendor": {"tables": [{"label": "6 ft table", "price": 40, "currency": "USD"}], "status": "open"},
+  "organizer": {"name": "Example Promotions", "url": "https://example.com"}
+}
+```
+
+* `rule.freq`: `weekly`, `monthly` (with `weekday` and `nth`, where `nth` is 1 to 4 or `-1` for last),
+  or `none` (only `known_dates`).
+* `csa merge` turns `known_dates` into `scheduled` editions, and expands `rule` into `tentative`
+  editions for the next 90 days only, never past `until`, skipping `skip_months` and `cancelled_dates`.
+  Tentative editions say "Usually on this date. Check with the organizer before you go."
+* A series whose `last_confirmed` is older than 120 days stops generating tentative editions.
