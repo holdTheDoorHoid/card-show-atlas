@@ -4,6 +4,7 @@ model: haiku
 launch:
   window: [2026-10-21, 2026-10-28]
   cap_weekly_percent: 35
+  cap_percent_per_run: 8   # one night never takes the whole launch push
 nightly:
   cap_percent_per_run: 3
   skip_if_weekly_above: 70

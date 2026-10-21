@@ -22,8 +22,8 @@ the weekly percent (Weekly, all models), the 5 hour percent, and the weekly rese
 
 Read `research/budget.yaml` and `research/waves/usage.jsonl`. This week's Card Show Atlas spend is the
 sum of `after - before` over log lines inside the current week (the 7 days before the reset). The cap
-is `launch.cap_weekly_percent` while today is inside `launch.window`, otherwise
-`nightly.cap_percent_per_run` for this run.
+is `launch.cap_weekly_percent` for the week and `launch.cap_percent_per_run` for this run while today is
+inside `launch.window`, otherwise `nightly.cap_percent_per_run` for this run.
 
 Skip the run (append `{"wave": "skipped", "time": ..., "reason": ...}` to the log, commit and push the
 log, finish with one line) when any of these hold:
