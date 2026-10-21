@@ -95,3 +95,39 @@ def paths(root) -> Paths:
 def write_jsonl_file(path: Path, rows: list[dict]) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text("".join(json.dumps(r) + "\n" for r in rows))
+
+
+SOURCES_YAML = """
+- {id: research, name: Research, kind: community, method: research, credit: Found by research, priority: 90}
+- {id: github_issues, name: Issues, kind: submission, method: manual, credit: Community, priority: 95}
+- {id: list_a, name: Listing A, url: "https://a.example", kind: aggregator, method: script, credit: Listed by A, priority: 10,
+   fields: [name, days, venue, admission, sells, size, vendor, organizer, links, status, event_type]}
+- {id: list_b, name: Listing B, url: "https://b.example", kind: aggregator, method: script, credit: Listed by B, priority: 20,
+   fields: [name, days, venue, admission, sells, size, vendor, organizer, links, status, event_type]}
+- {id: promo, name: Promoter Feed, url: "https://promo.example", kind: promoter, method: script, credit: From the organizer, priority: 30,
+   fields: [name, days, venue, admission, sells, size, vendor, organizer, links, status, event_type]}
+"""
+
+
+@pytest.fixture
+def merge_root(root) -> Path:
+    (root / "data" / "sources.yaml").write_text(SOURCES_YAML)
+    return root
+
+
+def show(name="Garden State Card Show", day="2026-11-14", venue="Example Expo Hall", city="Edison", region="NJ",
+         source="list_a", verification="listed", address="97 Sunfield Ave", **extra) -> dict:
+    """A partial show record the way a harvest file holds it."""
+    rec = {"name": name, "days": [{"date": day, "open": None, "close": None}],
+           "venue": {"name": venue, "address": address, "city": city, "region": region, "country": "US"},
+           "verification": verification, "last_checked": "2026-10-21",
+           "sources": [{"source": source, "url": f"https://{source}.example/{name.replace(' ', '-')}", "retrieved": "2026-10-21",
+                        "fields": ["name", "days", "venue"]}]}
+    rec.update(extra)
+    return rec
+
+
+def read_jsonl_file(path: Path) -> list[dict]:
+    if not path.exists():
+        return []
+    return [json.loads(line) for line in path.read_text().splitlines() if line.strip()]
