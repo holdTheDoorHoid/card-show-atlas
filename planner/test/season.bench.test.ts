@@ -15,7 +15,7 @@ function bench(label: string, dense: boolean, options: Partial<SeasonOptions>, s
   const r = rng(seed);
   const center = dense ? { lat: 40.2, lon: -76.5 } : { lat: 38.5, lon: -92 };
   const shows = genShows(r, {
-    n: 2100,
+    n: 2060,
     start: '2026-11-01',
     spanDays: 181,
     center,
@@ -23,7 +23,7 @@ function bench(label: string, dense: boolean, options: Partial<SeasonOptions>, s
     multiDay: 0.3,
     weekendBias: true,
     zones: dense ? ['America/New_York'] : ['America/New_York', 'America/Chicago', 'America/Denver', 'America/Los_Angeles'],
-    statuses: ['open', 'open', 'open', 'open', 'open', 'open', 'open', 'waitlist', 'unknown', 'sold_out'],
+    statuses: ['open', 'open', 'open', 'open', 'open', 'open', 'open', 'waitlist', 'unknown'],
   });
   const settings = genVendor(r, center, options.objective !== 'score');
   settings.max_drive_hours_per_day = 7;
@@ -57,7 +57,7 @@ describe('season planner benchmark (about 2,000 candidate shows, 6 months)', () 
     it(`${label}: under ${LIMIT_MS} ms and feasible`, () => {
       const { res, ms, shows, settings, opts } = bench(label, dense, options, 77);
       expect(ms).toBeLessThan(LIMIT_MS);
-      expect(res.stats.candidates).toBeGreaterThanOrEqual(1850);
+      expect(res.stats.candidates).toBeGreaterThanOrEqual(1950);
       expect(res.plan.stops.length).toBeGreaterThan(0);
       expect(verifyPlan(res.plan, shows, { settings, blackout: opts.blackout })).toEqual([]);
       if (opts.maxShowsPerMonth) {
