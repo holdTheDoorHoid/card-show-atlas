@@ -1,0 +1,33 @@
+---
+import Base from '../../layouts/Base.astro';
+import BrowseTabs from '../../components/BrowseTabs.astro';
+import { plural } from '../../lib/format';
+import { withBase } from '../../lib/urls';
+import { loadSiteData } from '../../server/data';
+
+const data = loadSiteData();
+---
+
+<Base title="Card show organizers" description="The organizers behind card shows in the US and Canada, with every show they run." path="promoters/">
+  <div class="container page">
+    <h1>Browse card shows</h1>
+    <BrowseTabs current="promoters" />
+    <p class="muted">The people and companies who run shows. Pick one to see everything they have coming up.</p>
+    {
+      data.empty ? (
+        <div class="card empty"><h2>Shows are being added</h2><p>Check back soon.</p></div>
+      ) : (
+        <ul class="plain-list">
+          {data.promoters.map((p) => (
+            <li>
+              <a href={withBase(`promoters/${p.id}/`)}>
+                <span class="pl-name">{p.name}</span>
+                <span class="pl-meta">{plural(p.shows.length, 'show')}</span>
+              </a>
+            </li>
+          ))}
+        </ul>
+      )
+    }
+  </div>
+</Base>

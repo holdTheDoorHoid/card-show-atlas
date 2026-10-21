@@ -1,0 +1,123 @@
+{
+  "wave": "w2-regions",
+  "agent": "r05",
+  "model": "haiku",
+  "searches_used": 8,
+  "fetches_used": 31,
+  "records": [
+    {
+      "kind": "edition",
+      "name": "Tampa Sports Collectors Expo",
+      "event_type": "convention",
+      "status": "scheduled",
+      "days": [
+        {"date": "2026-12-04", "open": "14:00", "close": "20:00"},
+        {"date": "2026-12-05", "open": "09:00", "close": "16:00"},
+        {"date": "2026-12-06", "open": "10:00", "close": "15:00"}
+      ],
+      "venue": {"name": "Florida State Fairgrounds, Special Events Center", "address": "4800 U.S. Hwy 301 N", "city": "Tampa", "region": "FL", "postal": "33610", "country": "US"},
+      "sells": {"tcg": ["pokemon"], "sports": ["multi_sport"], "other": ["memorabilia"]},
+      "admission": {"free": false, "adult": 5, "child": 0, "currency": "USD", "notes": "Daily admission, each day separate, wristband for re-entry. Kids free. The organizer page says 10 and under, the fairgrounds page says 8 and under. Parking is $12 and set by the fairgrounds."},
+      "organizer": {"url": "https://sportscornersignings.com"},
+      "links": {"official": "https://sportscornersignings.com"},
+      "summary": "Three day sports card, memorabilia and Pokemon expo at the Florida State Fairgrounds in Tampa on December 4 to 6, 2026, with a guest list posted on the organizer page.",
+      "evidence": [
+        {"url": "https://sportscornersignings.com", "seen": "2026-10-21", "supports": ["name", "days", "admission", "sells"]},
+        {"url": "https://floridastatefairgrounds.com/?p=10013507", "seen": "2026-10-21", "supports": ["days", "venue", "admission"]}
+      ],
+      "agent_confidence": "high"
+    },
+    {
+      "kind": "edition",
+      "name": "Central Card Fest",
+      "event_type": "card_show",
+      "status": "scheduled",
+      "days": [
+        {"date": "2026-10-18", "open": "10:00", "close": "17:00"}
+      ],
+      "venue": {"name": "Doral Central Park Community Center Basketball Court", "address": "3005 NW 92nd Avenue", "city": "Doral", "region": "FL", "postal": "33172", "country": "US"},
+      "sells": {"tcg": [], "sports": [], "other": []},
+      "admission": {"free": true, "currency": "USD", "notes": "Free. Tickets not required."},
+      "size": {"tables": 90},
+      "organizer": {"name": "City of Doral", "url": "https://www.cityofdoral.com"},
+      "links": {"official": "https://www.cityofdoral.com/Events-directory/Central-Card-Fest-10-18-26"},
+      "summary": "Free one day card fest run by the City of Doral on October 18, 2026, with 90 vendors listed. This edition has already happened.",
+      "evidence": [
+        {"url": "https://www.cityofdoral.com/Events-directory/Central-Card-Fest-10-18-26", "seen": "2026-10-21", "supports": ["name", "days", "venue", "admission", "size"]}
+      ],
+      "agent_confidence": "medium"
+    },
+    {
+      "kind": "edition",
+      "name": "Pokekon Fest",
+      "event_type": "pop_culture_con",
+      "status": "scheduled",
+      "days": [
+        {"date": "2026-12-12", "open": "10:00", "close": "17:00"}
+      ],
+      "venue": {"name": "DoubleTree by Hilton Miami Airport & Convention Center", "address": "711 NW 72nd Ave", "city": "Miami", "region": "FL", "postal": "33126", "country": "US"},
+      "sells": {"tcg": ["pokemon"], "sports": [], "other": ["toys", "video_games"]},
+      "admission": {"free": false, "adult": 24.02, "currency": "USD", "notes": "Tickets start at $24.02 per the tourism calendar listing. Check the organizer for the final price."},
+      "summary": "One day Pokemon fan convention in Miami on December 12, 2026, with exhibitors selling trading cards, video games, toys and apparel.",
+      "evidence": [
+        {"url": "https://www.miamiandbeaches.com/event/pokekon-fest/39649", "seen": "2026-10-21", "supports": ["name", "days", "venue", "admission", "sells"]}
+      ],
+      "agent_confidence": "medium"
+    },
+    {
+      "kind": "edition",
+      "name": "Trading Card Con Tampa",
+      "event_type": "card_show",
+      "status": "scheduled",
+      "days": [
+        {"date": "2026-11-13"},
+        {"date": "2026-11-14"},
+        {"date": "2026-11-15"}
+      ],
+      "venue": {"name": "Saddleback Resort Tampa", "city": "Wesley Chapel", "region": "FL", "country": "US"},
+      "sells": {"tcg": [], "sports": [], "other": []},
+      "organizer": {"name": "Cards and More Tour", "url": "https://tradingcardcon.com"},
+      "links": {"official": "https://tradingcardcon.com"},
+      "summary": "Cards and more show in Wesley Chapel, Florida, on November 13 to 15, 2026, on the organizer's 2026 tour. Hours, admission and table details are not posted yet.",
+      "evidence": [
+        {"url": "https://tradingcardcon.com", "seen": "2026-10-21", "supports": ["days", "venue"]}
+      ],
+      "agent_confidence": "medium"
+    }
+  ],
+  "leads_only": [
+    {"name": "Fairgrounds Card Expo", "url": "https://www.treasurehunter.show/show/fairgrounds-card-expo-west-palm-beach-fl-2026-11-01", "note": "South Florida Fairgrounds, West Palm Beach. Aggregator lists Sat Oct 31 and Sun Nov 1 2026, 10 AM to 5 PM, sports cards. Listing site only, not fetched. No organizer page found. The Oct 31 date is 10 days out, so check fast."},
+    {"name": "Clearwater Bay Area Card Show (November)", "url": "https://thecardshopfinder.com/event/clearwater-bay-area-card-show-clearwater-2026-11/", "note": "Banquet Masters, 13355 49th Street North, Clearwater. Aggregator lists Fri Nov 6 2 to 8 PM and Sat Nov 7 10 AM to 4 PM, 100 plus tables, free admission. Recurs (Jul and Sep 2026 listings). Banquet Masters site did not resolve. Organizer not found. Strong series candidate."},
+    {"name": "151+ Card Show", "url": "https://www.treasurehunter.show/show/151-card-show-milton-fl-2026-11-07", "note": "Santa Rosa Auditorium, Milton. Sat Nov 7 2026, 9 AM to 6 PM per aggregator. Listing site only. No organizer page found."},
+    {"name": "Anchor Up Card Show", "url": "https://www.treasurehunter.show/show/anchor-up-card-show-pensacola-fl-2026-11-14", "note": "VFW Post 706, West Lillian Highway, Pensacola. Sat Nov 14 2026, 9 AM to 3 PM. The aggregator also lists Sep 12 and Oct 10 2026 here, so this is probably a monthly VFW show. Organizer domain anchorupcardshow.com did not resolve. Priority follow-up for a series record."},
+    {"name": "Boca Raton Sports Cards & Collectibles Show", "url": "https://www.treasurehunter.show/show/boca-raton-sports-cards-collectibles-show-boca-raton-fl-2026-11-22", "note": "Renaissance Boca Raton Hotel. Sun Nov 22 2026, 9 AM to 3 PM per aggregator. A Sep 27 2026 edition is also listed. Listing site only, not fetched."},
+    {"name": "Delray Card Social", "url": "https://www.treasurehunter.show/show/delray-card-social-delray-beach-fl-2026-11-28", "note": "Elks Lodge, Delray Beach. Sat Nov 28 2026, 10 AM to 5 PM per aggregator. Organizer domain did not resolve."},
+    {"name": "Card Show by the Bay (St. Petersburg)", "url": "https://thecardshopfinder.com/event/card-show-by-the-bay-st-petersburg-2026-11/", "note": "Hilton St. Petersburg Carillon Park. Aggregator lists Nov 28 to 29 2026 and Dec 26 to 27 2026, plus 2026 editions in May, June, August and September. $2 admission, kids free, 100 plus tables. Looks monthly. Organizer domain did not resolve. Strong series candidate."},
+    {"name": "Tampa Bay Sports Card Show (Westshore)", "url": "https://thecardshopfinder.com/event/tampa-bay-sports-card-show-tampa-2026-09/", "note": "Holiday Inn Tampa Westshore area, 700 N Westshore Blvd. Aggregator dates in Jul, Aug and Sep 2026 are all past. No Nov or Dec 2026 date found. Check the organizer for the next date."},
+    {"name": "The 850 Card Show (Panama City)", "url": "https://www.treasurehunter.show/show/the-850-card-show-panama-city-panama-city-fl-2026-12-04", "note": "Bay County Fairgrounds. Fri Dec 4 2026, doors 3 PM, show ends 8 PM per aggregator. A Jun 19 2026 debut edition is also listed. Organizer domain did not resolve."},
+    {"name": "Cards on the Coast (Pensacola)", "url": "https://www.treasurehunter.show/show/cards-on-the-coast-pensacola-fl-2026-12-12", "note": "Pensacola, Sat Dec 12 2026 per aggregator. Venue and hours not checked."},
+    {"name": "Coral Springs Trading Card Show", "url": "https://www.treasurehunter.show/show/coral-springs-trading-card-show-deerfield-beach-fl-2026-12-13", "note": "Deerfield Beach, Sun Dec 13 2026 per aggregator. Venue not checked."},
+    {"name": "Palm Beach Kennel Club Card Show", "url": "https://www.treasurehunter.show/show/palm-beach-kennel-club-card-show-west-palm-beach-fl-2026-12-20", "note": "West Palm Beach, Sun Dec 20 2026 per aggregator. Venue site did not resolve."},
+    {"name": "Miami TCG Convention (Miami, January 2027)", "url": "https://www.treasurehunter.show/show/miami-tcg-convention-miami-miami-fl-2027-01-16", "note": "Miami Airport Convention Center. Sat Jan 16 to Sun Jan 17 2027 per aggregator, sports and TCG. The listed end time reads 6 AM, probably 6 PM. Only 2027 Florida lead found so far."},
+    {"name": "Miami TCG Convention (West Palm Beach)", "url": "https://www.treasurehunter.show/show/miami-tcg-convention-west-palm-beach-fl-2026-12-12", "note": "GStar Studios per aggregator, Sat Dec 12 and Sun Dec 13 2026. Organizer and venue not checked."},
+    {"name": "Rare Bear E Card Show (New Port Richey)", "url": "https://thecardshopfinder.com/shows/rare-bear-e-sports-collectibles-card-show-new-port-richey/", "note": "Quality Inn & Suites. Dec 12 to 13 2026 per aggregator text, $2 admission, about 100 tables. Listing site only, not fetched."},
+    {"name": "Cardcala (Ocala)", "url": "https://cardcala.com", "note": "Organizer site lists upcoming Sep 12, Oct 17 and Dec 5 with no year printed. Footer says copyright 2026. Venue is the College of Central Florida Klein Center, 3001 SW College Road, Ocala. Held about every two months. Not recorded until the year is confirmed. Dec 5 2026 is a Saturday."},
+    {"name": "Cars & Card Show (Ocala)", "url": "https://allevents.in/ocala/car-shows", "note": "AllEvents lead only. Sat Nov 21 2026, 10 AM, 11100 SE Maricamp Road, Ocala. Confirm with the organizer."},
+    {"name": "Poke'Ville Card Show (Gainesville)", "url": "https://www.treasurehunter.show/show/pokeville-card-show-gainesville-fl-2026-10-03", "note": "Alachua County Sports and Event Center per aggregator. Runs often in 2026 (May, June, August, October). The Oct 3 date is past. No later date found. Ask the organizer for the next date."},
+    {"name": "Florida Legends Card Show (Gainesville)", "url": "https://www.treasurehunter.show/show/florida-legends-card-show-gainesville-fl-2026-08-22", "note": "Aug 22 to 23 2026, already past, $5 admission. No table or attendance count found, so not recordable as an edition yet."},
+    {"name": "Holiday St. Pete 2026", "url": "https://www.treasurehunter.show/show/holiday-st-pete-2026-st-petersburg-fl-2026-11-21", "note": "Sat Nov 21 2026 per aggregator. Show type unknown, may not be a card show."},
+    {"name": "Fort Lauderdale Card Show (Rodeway Inn)", "url": "https://www.treasurehunter.show/show/fort-lauderdale-area-cards-more-show-fort-lauderdale-fl-2026-06-21", "note": "Recurring card show at a Rodeway Inn per aggregator text. Dates seen were summer or early September 2026. No next date found. This URL is a June 21 2026 listing that may or may not be the same show. Unverified."},
+    {"name": "Port Saint Lucie Sports Cards & Collectibles Show", "url": "https://www.treasurehunter.show/show/port-saint-lucie-sports-cards-collectibles-show-port-saint-lucie-fl-2026-11-07", "note": "Polish American Club Convention Center, Sat Nov 7 2026, 9 AM to 3 PM. Aggregator says it runs the first Saturday of each month (Oct 3 also listed). Check whether this is the known Port Saint Lucie Card Show before adding."},
+    {"name": "MIDFLORIDA Card Expo (Port St. Lucie)", "url": "https://midfloridaeventcenter.com", "note": "Event center site lists Oct 24 and 25 with no year printed, Sat 10 AM to 6 PM and Sun 10 AM to 4 PM. Format unclear. Not recorded because no year is printed. Aggregator lists Oct 24 2026."},
+    {"name": "Palmer Promotions SW Florida trading card shows", "url": "https://www.gulfshorebusiness.com/news/explore-the-swfl-super-card-show-at-fort-myers-this-feb/article_4eb2ec3b-33f5-4270-a056-6ff9c0995f55.html", "note": "Promoter Steve Palmer says he has run monthly trading card shows for about five years. Feb 7 to 8 2026 SWFL Super Card Show at Caloosa Sound Convention Center, Fort Myers, already past, no size given. Past shows in Naples and North Fort Myers. No Nov 2026 to Jan 2027 dates found. Promoter site did not resolve."},
+    {"name": "Bowman-related weekend, Tampa area (unconfirmed)", "url": "https://www.surveymonkey.com/r/ZJWYVSP", "note": "Survey page, not a show listing. Says a Bowman weekend with a card show is planned for the Tampa area in February to March 2027. No date or venue given. Not verified. Survey not submitted."},
+    {"name": "OG Con (World Equestrian Center, Ocala)", "url": "https://www.worldequestriancenter.com/events/ocala-fl/og-con/", "note": "Search snippet said Mar 27 to 28 2027, free. The venue calendar did not list it. Event type unknown, may not be a card show. Not verified."},
+    {"name": "Cards and More Tour, out of region dates", "url": "https://tradingcardcon.com", "note": "Outside Florida, for another region's agent: Renaissance Phoenix Glendale Hotel, Glendale AZ, Oct 30 to Nov 1 2026. Westin Galleria Houston, Houston TX, Dec 18 to 20 2026. Dates come from the 2026 Tour heading on the organizer page. Hours and admission not posted."}
+  ],
+  "blocked": [
+    {"url": "https://www.mainstreetdailynews.com/?p=148954", "status": 403, "note": "HTTP 403 on fetch. Article came up in a Miami and a Gainesville search. Not retrieved."},
+    {"url": "https://www.chronicleonline.com/eedition/page-a3/page_679d1a52-6790-5da8-996f-6265b7ccf691.html", "status": 429, "note": "HTTP 429 rate limit. Not retried. Came up in a VFW or Elks card show search, so content unchecked."},
+    {"url": "https://southfloridafairgrounds.com", "status": "connection refused", "note": "Guessed organizer or venue domain. Connection refused, so the South Florida Fairgrounds calendar was not reached."}
+  ],
+  "notes": "Searches: 8 of 8 used, cap reached. Fetches: 31 WebFetch calls. Every date with a weekday was checked with date(1) and all agreed. Known shows (Palm Beach Card Show, Duuuval, Port Saint Lucie Card Show, Front Row Orlando, the Ultimate Banger shows, UltimateCon Daytona, Treasure Cup Kissimmee, BANDAI Fest, CoolStuffCon, and the skip list) were not researched. Almost all upcoming Florida leads come from treasurehunter.show and thecardshopfinder.com, which are on the never fetch list, so they stay leads until an organizer page is found. Guessed organizer or venue domains that did not resolve: tampasportscollectorsexpo.com, anchorupcardshow.com, banquetmasters.com, cardshowbythebay.com, the850cardshow.com, delraycardsocial.com, tampabaysportscardshow.com, clearwaterbayareacardshow.com, pensacolainterstatefairgrounds.com, baycountyfairgrounds.com, thenexuscollectormarket.com, miamiairportconvention.com, palmerpromotions.com, palmbeachkennelclub.com. Also pbconventioncenter.com/events/2026-03-01 returned 404. Tampa expo: the organizer page and the fairgrounds page disagree on the kids age (10 and under versus 8 and under), so kids are recorded free with that conflict in the notes. Central Card Fest: the city page gives 90 vendors, not a table count, so 90 is recorded as tables and this is a vendor count. The status field stays scheduled for this past edition because the schema has no completed value. Trading Card Con Tampa: the year comes from the page heading The 2026 Tour, since the dates on the page carry no year. No address, hours or admission is posted, so those are omitted. The organizer lists attendees@cardsandmoretour.com as a contact for attendees, not vendors; it is noted here only. Cardcala and MIDFLORIDA Card Expo are leads because their pages print no year. PokeKon Fest Ocala (Nov 28 2026, Hilton Ocala) appeared in a search snippet with no source URL captured, so it is noted here only. No upcoming card shows were found for Sarasota, Naples, Fort Myers or Lakeland in Nov 2026 to early 2027. Melbourne, Cocoa and Gainesville had only past shows apart from the leads above. A Gem, Mineral and Jewelry Show at the Florida State Fairgrounds on Nov 7 to 8 2026 is not a card show and was skipped. Several search results were unrelated spam or other countries and were ignored."
+}

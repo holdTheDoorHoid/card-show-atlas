@@ -1,0 +1,284 @@
+{
+  "wave": "w2-regions",
+  "agent": "r01",
+  "model": "haiku",
+  "searches_used": 8,
+  "fetches_used": 16,
+  "records": [
+    {
+      "kind": "edition",
+      "name": "S&B Sports Collectibles Card Show, Moorestown Mall",
+      "event_type": "card_show",
+      "status": "scheduled",
+      "days": [
+        {
+          "date": "2026-10-23"
+        },
+        {
+          "date": "2026-10-24"
+        },
+        {
+          "date": "2026-10-25"
+        }
+      ],
+      "venue": {
+        "name": "Moorestown Mall",
+        "address": "400 W. Rt. 38",
+        "city": "Moorestown",
+        "region": "NJ",
+        "country": "US"
+      },
+      "sells": {
+        "tcg": [],
+        "sports": [
+          "multi_sport"
+        ],
+        "other": [
+          "memorabilia"
+        ]
+      },
+      "vendor": {
+        "status": "unknown",
+        "contact": "sbsportscardteams@gmail.com"
+      },
+      "organizer": {
+        "name": "S&B Sports Collectibles",
+        "url": "https://www.sbsportspromotions.com"
+      },
+      "links": {
+        "official": "https://www.sbsportspromotions.com/pages/show-schedule"
+      },
+      "summary": "A three day sports card and collectibles show at Moorestown Mall in South Jersey, Friday to Sunday, run by S&B Sports Collectibles.",
+      "evidence": [
+        {
+          "url": "https://www.sbsportspromotions.com/pages/show-schedule",
+          "seen": "2026-10-21",
+          "supports": [
+            "days",
+            "venue",
+            "organizer",
+            "sells"
+          ]
+        },
+        {
+          "url": "https://www.sbsportspromotions.com/pages/contact-us",
+          "seen": "2026-10-21",
+          "supports": [
+            "vendor.contact"
+          ]
+        }
+      ],
+      "agent_confidence": "medium"
+    },
+    {
+      "kind": "edition",
+      "name": "S&B Sports Collectibles Card Show, Cumberland Mall",
+      "event_type": "card_show",
+      "status": "scheduled",
+      "days": [
+        {
+          "date": "2026-11-06"
+        },
+        {
+          "date": "2026-11-07"
+        },
+        {
+          "date": "2026-11-08"
+        }
+      ],
+      "venue": {
+        "name": "Cumberland Mall",
+        "address": "3849 S Delsea Drive",
+        "city": "Vineland",
+        "region": "NJ",
+        "postal": "08360",
+        "country": "US"
+      },
+      "sells": {
+        "tcg": [],
+        "sports": [
+          "multi_sport"
+        ],
+        "other": [
+          "memorabilia"
+        ]
+      },
+      "vendor": {
+        "status": "unknown",
+        "contact": "sbsportscardteams@gmail.com"
+      },
+      "organizer": {
+        "name": "S&B Sports Collectibles",
+        "url": "https://www.sbsportspromotions.com"
+      },
+      "links": {
+        "official": "https://www.sbsportspromotions.com/pages/show-schedule"
+      },
+      "summary": "A three day sports card and collectibles show at Cumberland Mall in Vineland, Friday to Sunday, run by S&B Sports Collectibles.",
+      "evidence": [
+        {
+          "url": "https://www.sbsportspromotions.com/pages/show-schedule",
+          "seen": "2026-10-21",
+          "supports": [
+            "days",
+            "venue",
+            "organizer",
+            "sells"
+          ]
+        },
+        {
+          "url": "https://www.sbsportspromotions.com/pages/contact-us",
+          "seen": "2026-10-21",
+          "supports": [
+            "vendor.contact"
+          ]
+        }
+      ],
+      "agent_confidence": "medium"
+    }
+  ],
+  "leads_only": [
+    {
+      "name": "Sports Cards, Pokemon and TCG Card Show, Old Bridge Elks Lodge (Nov 20)",
+      "url": "https://www.treasurehunter.show/show/sports-cards-pokemon-and-tcg-card-show-old-bridge-nj-2026-11-20",
+      "note": "Old Bridge NJ. Seen on treasurehunter.show (never-fetch list), snippet only: Fri Nov 20 2026, 5 to 10 pm, 67 Old Amboy Road. Organizer page not found in search. Listing contact details not recorded."
+    },
+    {
+      "name": "Sports Cards, Pokemon and TCG Card Show, Old Bridge Elks Lodge (Dec 4)",
+      "url": "https://www.treasurehunter.show/show/sports-cards-pokemon-and-tcg-card-show-old-bridge-nj-2026-12-04",
+      "note": "Old Bridge NJ. Seen on treasurehunter.show, snippet only: Fri Dec 4 2026, 5 to 10 pm, same Elks lodge, street address absent on that listing. Organizer page not found."
+    },
+    {
+      "name": "The Old Bridge Monthly Friday Night Sportscards and Pokemon Show",
+      "url": "https://www.treasurehunter.show/show/the-old-bridge-monthly-friday-night-sportscards-pokemon-show-old-bridge-nj-2026-06-19",
+      "note": "Old Bridge NJ. Listing site only. Past dates seen May 15 and June 19 2026. No upcoming date seen. Possibly the same organizer as the Elks series, unconfirmed."
+    },
+    {
+      "name": "Nutley Card Show",
+      "url": "https://www.treasurehunter.show/show/nutley-card-show-nutley-nj-2026-10-25",
+      "note": "Nutley NJ. Listing site only. Date Sun Oct 25 2026 taken from the listing address slug, not the listing text. Organizer page not found. Very near-term, needs verification."
+    },
+    {
+      "name": "Sports Cards and Collectible Show, Ramada Inn Newark DE",
+      "url": "https://www.treasurehunter.show/show/sports-cards-and-collectible-show-newark-de-2026-11-21-1774132333574",
+      "note": "Newark DE. Listing site only. Snippet says Sat Nov 21 2026, 8 am to 2 pm, Ramada Inn on Chapman Road (260 Chapman Road per listing). Organizer not found. The Ramada hotel page I fetched did not show it."
+    },
+    {
+      "name": "TCG and Non-Sports Card Show, Ramada Inn Newark DE",
+      "url": "https://www.treasurehunter.show/show/tcg-non-sports-card-show-newark-de-2026-12-19-1774322107333",
+      "note": "Newark DE. Listing site only. Snippet says Sat Dec 19 2026, 8 am to 2 pm, same Ramada Inn. Organizer not found."
+    },
+    {
+      "name": "Diamond State Card Show, Nur Shrine Center",
+      "url": "https://www.treasurehunter.show/show/diamond-state-card-show-new-castle-de-2026-12-05",
+      "note": "New Castle DE. Listing site only. Snippet says Sat Dec 5 2026, 10 am to 5 pm, Nur Shrine Center. The venue's own site (nurshrine.org) gives the address 198 S. Dupont Highway, New Castle DE 19720, but lists no card show. Organizer not found. Candidate for the next search."
+    },
+    {
+      "name": "Delaware Card Show, Bob Carpenter Center, University of Delaware",
+      "url": "https://www.tickpick.com/buy-delaware-card-show-tickets-bob-carpenter-center-at-university-of-delaware-8-9-26-10am/8091913/",
+      "note": "Newark DE. Ticket resale page, not an organizer page. Sat Aug 8 and Sun Aug 9 2026 (past). Recurring flagship show. A listing snippet says 250 plus tables for a June preview, not recorded. No later 2026 or 2027 date seen. bobcarpentercenter.com is a parked domain, not followed."
+    },
+    {
+      "name": "Delaware Sports Cards and TCG Show",
+      "url": "https://thecardshopfinder.com/event/delaware-sports-cards-and-tcg-show-delaware-2026-09/",
+      "note": "Delaware. Listing site (never-fetch list), not fetched. City and exact date not confirmed. Slug suggests 2026 September or October, so likely past. A second slug for 2026 10 also seen."
+    },
+    {
+      "name": "Friday Night Sports and Pokemon Card Show, Hightstown Engine Co. No. 1",
+      "url": "https://www.treasurehunter.show/show/hightstown-engine-co-no-1-friday-night-sports-and-pokemon-card-show-hightstown-nj-2026-12-04",
+      "note": "Hightstown NJ, firehouse at 140 N. Main Street (per listing). Listing site only, snippet says Fri Dec 4 2026, 5 to 9 pm. Same series appears on other listings for Jun 5, Jul 3, Aug 7, Sep 4, Oct 2 and Nov 6 2026 (Fridays, unverified). Fire company's own site not found: hightstownfire.com and hightstownengine.com did not resolve. Strong candidate for organizer search."
+    },
+    {
+      "name": "Colts Neck Card and Coin Expo",
+      "url": "https://www.treasurehunter.show/show/colts-neck-card-and-coin-expo-50-conover-rd-nj-2027-01-09",
+      "note": "Colts Neck NJ, 50 Conover Rd. Listing site only, snippet says Sat Jan 9 2027, 9 am to 3 pm, sports cards. Another listing ties a same-named expo to the Colts Neck Volunteer Fire Company, and a second listing gives Feb 13. Conflict unresolved. coltsneckfire.com did not resolve."
+    },
+    {
+      "name": "Jersey City Evolving TCG Show, The Westin Jersey City Newport",
+      "url": "https://www.treasurehunter.show/show/jersey-city-evolving-tcg-show-jersey-city-nj-2027-01-17",
+      "note": "Jersey City NJ. Listing site only, snippet says Sun Jan 17 2027, 10 am to 6:30 pm, hotel venue. Organizer page not found (evolvingtcg.com did not resolve)."
+    },
+    {
+      "name": "South Jersey's OWN Sports and Pokemon Card Show, Lindenwold Moose Lodge",
+      "url": "https://www.treasurehunter.show/show/south-jerseys-own-sports-pokemon-card-show-lindenwold-nj-2027-09-18",
+      "note": "Lindenwold NJ. Listing site only, snippet says Sat Sep 18 2027, 9 am to 3 pm, Moose Lodge. Far off, year from listing slug. Organizer not found."
+    },
+    {
+      "name": "Garden State Winter Fest, Sussex Fairgrounds",
+      "url": "https://www.treasurehunter.show/show/garden-state-winter-fest-augusta-nj-2027-01-23",
+      "note": "Augusta NJ. Listing site only, snippet says Jan 23 to 24 2027 at the fairgrounds. Snippet names comics and toys, not cards. Probably out of scope unless the organizer confirms cards."
+    },
+    {
+      "name": "Exit 117 Sports Card and Pokemon Expo",
+      "url": "https://www.treasurehunter.show/show/exit-117-sports-card-pokemon-expo-hazlet-nj-2026-09-13",
+      "note": "Hazlet NJ. Listing site only. Past dates seen Jun 28 and Sep 13 2026. No upcoming date seen. Recurring series, needs organizer search for the next date."
+    },
+    {
+      "name": "Sports Cards and Pokemon Show, Manahawkin",
+      "url": "https://www.treasurehunter.show/show/sports-cards-and-pokemon-manahawkin-nj-2026-10-03",
+      "note": "Manahawkin NJ. Listing site only. Past dates seen Jun 6 and Oct 3 2026. No upcoming date seen."
+    },
+    {
+      "name": "Garden State Trading Card Show, Pompton Plains (past)",
+      "url": "https://www.treasurehunter.show/show/garden-state-trading-card-show-pompton-plains-nj-2026-09-01",
+      "note": "Pompton Plains NJ. Past (Aug 4 and Sep 1 2026). Not researched, listing site only."
+    },
+    {
+      "name": "North Vineland Card Show (past)",
+      "url": "https://www.treasurehunter.show/show/north-vineland-card-show-vineland-nj-2026-08-29",
+      "note": "Vineland NJ. Past (Aug 29 2026). Not researched, listing site only."
+    },
+    {
+      "name": "National Card Sharks TCG EXPO, Randolph (past)",
+      "url": "https://www.treasurehunter.show/show/national-card-sharks-tcg-expo-randolph-nj-2026-08-28",
+      "note": "Randolph NJ. Past (Jul 25 and Aug 28 2026). Not researched, listing site only."
+    },
+    {
+      "name": "Atlantic City TCG Show and Sports (past)",
+      "url": "https://www.treasurehunter.show/show/atlantic-city-tcg-show-sports-atlantic-city-nj-2026-06-21",
+      "note": "Atlantic City NJ. Past (Jun 21 2026). Not researched, listing site only."
+    },
+    {
+      "name": "Sports Cards and Collectible Show, Wildwood (past)",
+      "url": "https://www.treasurehunter.show/show/sports-cards-and-collectible-show-wildwood-nj-2026-08-29",
+      "note": "Wildwood NJ. Past (Aug 29 2026). Not researched, listing site only."
+    },
+    {
+      "name": "New Jersey Sports Card Convention, Freehold (past)",
+      "url": "https://www.treasurehunter.show/show/new-jersey-sports-card-convention-freehold-nj-2026-09-11",
+      "note": "Freehold NJ. Past (Sep 11 2026). Not researched, listing site only."
+    },
+    {
+      "name": "The North Jersey Card Show, new location, Riverdale (past)",
+      "url": "https://www.treasurehunter.show/show/the-north-jersey-card-show-new-location-riverdale-nj-2026-09-04",
+      "note": "Riverdale NJ. Past (Sep 4 2026). Not researched, listing site only."
+    },
+    {
+      "name": "Upper Deerfield Card Show, Bridgeton (past)",
+      "url": "https://www.treasurehunter.show/show/upper-deerfield-card-show-bridgeton-nj-2026-09-19",
+      "note": "Bridgeton NJ. Past (Sep 19 2026). Not researched, listing site only."
+    },
+    {
+      "name": "Newark Baseball, Sports Cards and Collectibles Show (past)",
+      "url": "https://www.treasurehunter.show/show/newark-baseball-sports-cards-collectibles-show-newark-de-2026-07-25",
+      "note": "Newark DE. Past (Jul 25 2026). Not researched, listing site only."
+    },
+    {
+      "name": "Rehoboth Beach Sports Card and TCG Show (past)",
+      "url": "https://www.treasurehunter.show/show/rehoboth-beach-sports-card-and-tcg-show-rehoboth-beach-de-2026-05-31",
+      "note": "Rehoboth Beach DE. Past (May 30 and 31 2026). Not researched, listing site only."
+    }
+  ],
+  "blocked": [
+    {
+      "url": "https://www.bobcarpentercenter.com",
+      "status": 307,
+      "note": "Redirects to a parked domain sale page. Not followed. University of Delaware venue site not found."
+    },
+    {
+      "url": "https://www.delawarecardshow.com",
+      "note": "TLS handshake error (unrecognized name). Guessed organizer domain, not reachable."
+    }
+  ],
+  "notes": "Search budget spent (8 of 8). Fetches 16 of 60. Only one NJ organizer has its own pages in this sweep: S&B Sports Collectibles (sbsportspromotions.com schedule and contact pages), which gave two records. Those dates come from the organizer schedule: the page footer says 2026 and no year sits beside each date, so confidence is medium. Both dates pass a Friday to Sunday weekday check. The organizer schedule has no hours, table counts, admission or vendor application link, so none are recorded. A treasurehunter listing says Nov 6 to 7 for Vineland and the organizer says Nov 6 to 8, so the organizer's dates are used. Organizer-page candidates NOT yet found for most leads: Old Bridge Elks series, Hightstown Engine Co. No. 1, Colts Neck, Jersey City Evolving TCG, Newark DE Ramada shows, Diamond State (New Castle), Delaware Card Show, Nutley, Exit 117, Manahawkin, Lindenwold. Guessed organizer domains did not resolve: ourcardsandcollectibles.com, hightstownfire.com, hightstownengine.com, coltsneckfire.com, diamondstatecardshow.com, evolvingtcg.com. Nur Shrine Center site (nurshrine.org) lists no card show but gives the venue address. Ramada Newark page on wyndhamhotels.com did not show the event. Out of region, noted for the PA sweep and not recorded here: the same S&B schedule lists Montgomery Mall in North Wales PA Oct 30 to Nov 1 2026, Oxford Valley Mall in Langhorne PA Nov 13 to 15 2026, and Berkshire Mall in Wyomissing PA Nov 20 to 22 2026. Coverage of Delaware is thin: no DE organizer page was found. Run ended early only because the 8 search cap was reached, not by choice. Wilmington Collectibles Show at Elks Lodge 532 (Wilmington DE, Jul 11 2026, past) appeared only in a search snippet with no verifiable URL, so it is not listed."
+}

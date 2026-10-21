@@ -1,0 +1,59 @@
+---
+import Base from '../../../layouts/Base.astro';
+import BrowseTabs from '../../../components/BrowseTabs.astro';
+import PlainShowList from '../../../components/PlainShowList.astro';
+import { MONTHS_LONG, parseISODate, todayISO } from '../../../lib/dates';
+import { plural } from '../../../lib/format';
+import { countryName, regionName } from '../../../lib/regions';
+import { isPast } from '../../../lib/showview';
+import type { Show } from '../../../lib/types';
+import { withBase } from '../../../lib/urls';
+import { loadSiteData } from '../../../server/data';
+
+export function getStaticPaths() {
+  return loadSiteData().regions.map((r) => ({ params: { slug: r.slug }, props: { slug: r.slug } }));
+}
+
+const data = loadSiteData();
+const region = data.regions.find((r) => r.slug === Astro.props.slug)!;
+const today = todayISO(new Date());
+const name = regionName(region.country, region.code);
+const upcoming = region.shows.filter((s) => !isPast(s, today));
+const past = region.shows.filter((s) => isPast(s, today)).reverse();
+
+const byMonth = new Map<string, Show[]>();
+for (const s of upcoming) {
+  const p = parseISODate(s.days[0]!.date)!;
+  const key = `${MONTHS_LONG[p.m - 1]} ${p.y}`;
+  byMonth.set(key, [...(byMonth.get(key) ?? []), s]);
+}
+---
+
+<Base
+  title={`Card shows in ${name}`}
+  description={`${plural(upcoming.length, 'upcoming card show')} in ${name}, ${countryName(region.country)}, in date order.`}
+  path={`states/${region.slug}/`}
+>
+  <div class="container page">
+    <h1>Card shows in {name}</h1>
+    <BrowseTabs current="states" />
+    <p class="muted">{plural(upcoming.length, 'upcoming show')} listed. Updated every day. <a href={withBase('')}>Search by distance</a> or <a href={withBase('map/')}>see the map</a>.</p>
+    {upcoming.length === 0 && <p class="notice">No upcoming shows are listed in {name} yet. <a href={withBase('add/')}>Tell us about one</a>.</p>}
+    {
+      [...byMonth.entries()].map(([month, list]) => (
+        <section>
+          <h2>{month}</h2>
+          <PlainShowList shows={list} region={false} />
+        </section>
+      ))
+    }
+    {
+      past.length > 0 && (
+        <details style="margin-top:1.5rem">
+          <summary style="cursor:pointer;min-height:44px;display:flex;align-items:center;font-weight:700">Recent past shows ({past.length})</summary>
+          <PlainShowList shows={past} region={false} />
+        </details>
+      )
+    }
+  </div>
+</Base>

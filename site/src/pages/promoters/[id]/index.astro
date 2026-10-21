@@ -1,0 +1,46 @@
+---
+import Base from '../../../layouts/Base.astro';
+import BrowseTabs from '../../../components/BrowseTabs.astro';
+import PlainShowList from '../../../components/PlainShowList.astro';
+import { todayISO } from '../../../lib/dates';
+import { displayHost, safeUrl } from '../../../lib/format';
+import { isPast } from '../../../lib/showview';
+import { withBase } from '../../../lib/urls';
+import { loadSiteData } from '../../../server/data';
+
+export function getStaticPaths() {
+  return loadSiteData().promoters.map((p) => ({ params: { id: p.id }, props: { id: p.id } }));
+}
+
+const data = loadSiteData();
+const promoter = data.promoters.find((p) => p.id === Astro.props.id)!;
+const today = todayISO(new Date());
+const upcoming = promoter.shows.filter((s) => !isPast(s, today));
+const url = safeUrl(promoter.url);
+const contact = promoter.publicContact;
+const contactHref = contact ? (contact.includes('@') && !contact.includes(' ') ? `mailto:${contact}` : safeUrl(contact)) : null;
+---
+
+<Base title={promoter.name} description={`Card shows run by ${promoter.name}.`} path={`promoters/${promoter.id}/`}>
+  <div class="container page">
+    <h1>{promoter.name}</h1>
+    <BrowseTabs current="promoters" />
+    <dl class="dl">
+      {url && (<><dt>Website</dt><dd><a href={url} target="_blank" rel="noopener noreferrer">{displayHost(url)}</a></dd></>)}
+      {promoter.region && (<><dt>Based in</dt><dd>{promoter.region}</dd></>)}
+      {contact && (<><dt>Public contact</dt><dd>{contactHref ? <a href={contactHref}>{contact}</a> : contact}</dd></>)}
+    </dl>
+    {
+      promoter.series.length > 0 && (
+        <>
+          <h2>Regular shows</h2>
+          <ul>
+            {promoter.series.map((s) => <li><a href={withBase(`series/${s.id}/`)}>{s.name}</a>{s.cadence ? `, ${s.cadence}` : ''}</li>)}
+          </ul>
+        </>
+      )
+    }
+    <h2>Coming up</h2>
+    {upcoming.length === 0 ? <p class="muted">No upcoming shows are listed yet.</p> : <PlainShowList shows={upcoming} />}
+  </div>
+</Base>

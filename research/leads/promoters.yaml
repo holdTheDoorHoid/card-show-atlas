@@ -1,0 +1,42 @@
+# Promoter and chain sites to research (from the 2026-10-21 source survey). Facts must come from
+# each promoter's own pages. Batches are assigned in research/queue.yaml.
+- {id: nscc, name: "The National Sports Collectors Convention", url: "https://www.nsccshow.com", regions: [IL]}
+- {id: dallas_card_show, name: "Dallas Card Show", url: "https://www.dallascardshow.com/2026schedule", regions: [TX, NJ, IL]}
+- {id: front_row, name: "Front Row Card Show", url: "https://frontrowcardshow.com", regions: [NV, GA, FL, CA, AZ, WA, OR]}
+- {id: philly_show, name: "The Philly Show", url: "https://www.phillyshow.com", regions: [PA]}
+- {id: chicago_sports_spectacular, name: "Chicago Sports Spectacular", url: "https://www.chicagosportsspectacular.com", regions: [IL]}
+- {id: genesis, name: "Genesis Card Show", url: "https://www.genesiscardshow.com", regions: [NV]}
+- {id: maximum, name: "Maximum Card Show", url: "https://www.maximumcardshow.com/vendors", regions: [CA, WA, OR, UT]}
+- {id: flippin, name: "The Best Flippin' Card Show", url: "https://www.flippincardshow.com", regions: [MA, MD, CT, ME]}
+- {id: apex, name: "Apex TCG Show", url: "https://apextcgshow.com", regions: [NJ, PA, NY]}
+- {id: tx_card_shows, name: "TX Card Shows", url: "https://www.txcardshows.com", regions: [TX, OK]}
+- {id: albany, name: "Albany NY Show Promotions", url: "https://www.albanynyshowpromotions.com", regions: [NY]}
+- {id: tcgkon, name: "PokeKon and TCG-Kon", url: "https://tcgkon.com", regions: [NY, KY, MO, VA, WI, FL, NC]}
+- {id: tcg_national, name: "The TCG National", url: "https://thetcgnational.com", regions: [TX]}
+- {id: usa_card_show, name: "USA Card Show", url: "https://usacardshow.com", regions: [CA]}
+- {id: sport_card_expo, name: "Sport Card and Memorabilia Expo", url: "https://www.sportcardexpo.com", regions: [ON]}
+- {id: greenie, name: "Greenie Sports Cards shows", url: "https://greeniesportscards.com", regions: [OH]}
+- {id: rk_sports, name: "RK Sports Promotions", url: "https://rksportspromotions.com", regions: [NJ]}
+- {id: jj_allstar, name: "JJ All Star Sportscards shows", url: "https://jjallstarsportscards.com", regions: [IN, KY]}
+- {id: georgia_collectible, name: "Georgia Collectible Shows", url: "https://georgiacollectibleshows.com", regions: [GA]}
+- {id: morris_county, name: "Morris County Card Show", url: "https://www.morriscountycardshow.com", regions: [NJ]}
+- {id: elite_expo, name: "Elite Collectibles Expo", url: "https://www.elitecollectiblesexpo.com", regions: [VA]}
+- {id: ultimate_banger, name: "Ultimate Banger Card Show", url: "https://ultimatecg.com", regions: [FL]}
+- {id: duuuval, name: "The Duuuval Card Show", url: "https://theduuuvalcardshow.com", regions: [FL]}
+- {id: cardshowpsl, name: "Card Show PSL", url: "https://cardshowpsl.com", regions: [FL]}
+- {id: collective_con, name: "Collective Con", url: "https://collectivecon.com", regions: [FL]}
+- {id: big_show, name: "The Big Show Card Show", url: "https://tcgshows.com", regions: [NJ]}
+- {id: sb_sports, name: "S&B Sports Promotions", url: "https://sbsportspromotions.com", regions: [PA, NJ]}
+- {id: boston_sports_memorabilia, name: "Boston Sports Memorabilia shows", url: "https://bostonsportsmemorabilia.com", regions: [RI, MA]}
+- {id: major_league_collective, name: "Major League Collective", url: "https://majorleaguecollective.com", regions: [MA]}
+- {id: palm_beach, name: "Palm Beach Card Show", url: null, regions: [FL]}
+- {id: fanatics_fest, name: "Fanatics Fest NYC", url: null, regions: [NY]}
+- {id: northeast_expo, name: "Northeast Sports Card Expo", url: null, regions: [MA]}
+- {id: arlington, name: "Arlington Card Shows / PokeNostalgia", url: null, regions: [TX]}
+- {id: grail_card, name: "Grail Card Promotions", url: null, regions: [NC]}
+- {id: hard_hittin, name: "Hard Hittin' Card Show", url: null, regions: [CT]}
+- {id: cardboard_culture, name: "Cardboard Culture Card Shows", url: null, regions: []}
+- {id: card_show_by_the_bay, name: "Card Show By the Bay", url: null, regions: []}
+- {id: norwalk, name: "Norwalk Card Show", url: null, regions: [CT]}
+- {id: hightstown, name: "Hightstown Sports Card and Collectibles Show", url: null, regions: [NJ]}
+- {id: poppel, name: "Poppel Family Shows", url: null, regions: [PA]}

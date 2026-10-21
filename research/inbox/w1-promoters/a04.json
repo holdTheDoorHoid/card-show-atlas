@@ -1,0 +1,162 @@
+{
+  "wave": "w1-promoters",
+  "agent": "a04",
+  "model": "haiku",
+  "searches_used": 6,
+  "fetches_used": 43,
+  "records": [
+    {
+      "kind": "edition",
+      "name": "The Big Show Card Show",
+      "event_type": "card_show",
+      "status": "scheduled",
+      "days": [{"date": "2027-02-06", "open": "10:00", "close": "17:00"}],
+      "venue": {"name": "Quaker Bridge Mall", "city": "Lawrence Township", "region": "NJ", "country": "US"},
+      "sells": {"tcg": [], "sports": ["multi_sport"], "other": []},
+      "organizer": {"name": "The Big Show Card Show", "url": "https://tcgshows.com"},
+      "summary": "One day sports card show at Quaker Bridge Mall in Lawrence Township, New Jersey, on Feb 6, 2027, 10 am to 5 pm according to a listing site. Admission is not confirmed on the listing and no table count is given.",
+      "evidence": [
+        {"url": "https://www.treasurehunter.show/show/the-big-show-card-show-lawrence-township-nj-2027-02-06", "seen": "2026-10-21", "supports": ["name", "days", "venue", "sells"]}
+      ],
+      "agent_confidence": "medium"
+    },
+    {
+      "kind": "edition",
+      "name": "S&B Sports Card Show, Berkshire Mall",
+      "event_type": "card_show",
+      "status": "scheduled",
+      "days": [{"date": "2026-11-20"}, {"date": "2026-11-21"}, {"date": "2026-11-22"}],
+      "venue": {"name": "Berkshire Mall", "address": "1665 State Hill Road", "city": "Wyomissing", "region": "PA", "postal": "19610", "country": "US"},
+      "sells": {"tcg": ["pokemon", "other_tcg"], "sports": ["multi_sport"], "other": []},
+      "admission": {"free": true, "currency": "USD"},
+      "size": {"tables": 10},
+      "organizer": {"name": "S&B Sports Collectibles", "url": "https://www.sbsportspromotions.com"},
+      "links": {"official": "https://www.sbsportspromotions.com/pages/show-schedule"},
+      "summary": "Friday to Sunday card show at Berkshire Mall in Wyomissing, PA, Nov 20 to 22, 2026. A listing site gives 10 am to 8 pm, free entry and at least 10 tables. Sports cards, Pokemon and TCG are listed.",
+      "evidence": [
+        {"url": "https://www.treasurehunter.show/show/sports-cards-and-collectible-show-wyomissing-pa-2026-11-20", "seen": "2026-10-21", "supports": ["name", "days", "venue", "admission", "size.tables", "sells"]},
+        {"url": "https://www.sbsportspromotions.com/pages/show-schedule", "seen": "2026-10-21", "supports": ["days", "venue"]}
+      ],
+      "agent_confidence": "medium"
+    },
+    {
+      "kind": "series",
+      "name": "Woonsocket RI Sports Card Show",
+      "event_type": "card_show",
+      "venue": {"name": "Elks Hall", "address": "380 Social Street", "city": "Woonsocket", "region": "RI", "country": "US"},
+      "cadence": "Third Thursday of each month (2026 schedule)",
+      "rule": {"freq": "monthly", "weekday": "thu", "nth": 3, "skip_months": [], "until": null},
+      "hours": {"open": "17:00", "close": "21:00"},
+      "known_dates": ["2026-07-16", "2026-08-20", "2026-09-17"],
+      "cancelled_dates": [],
+      "sells": {"tcg": [], "sports": ["multi_sport"], "other": ["memorabilia"]},
+      "vendor": {"tables": [{"label": "8 ft table", "price": 40, "currency": "USD", "notes": "each, reserved by phone"}]},
+      "organizer": {"name": "Boston Sports Memorabilia", "url": "https://www.bostonsportsmemorabilia.com"},
+      "evidence": [
+        {"url": "https://www.bostonsportsmemorabilia.com", "seen": "2026-10-21", "supports": ["cadence", "known_dates", "hours", "venue", "vendor.tables"]}
+      ],
+      "agent_confidence": "medium"
+    },
+    {
+      "kind": "edition",
+      "name": "Palm Beach Card Show",
+      "event_type": "card_show",
+      "status": "scheduled",
+      "days": [
+        {"date": "2026-11-13", "open": "13:00", "close": "20:00"},
+        {"date": "2026-11-14", "open": "11:00", "close": "19:00"},
+        {"date": "2026-11-15", "open": "10:00", "close": "16:00"}
+      ],
+      "venue": {"name": "Palm Beach Convention Center", "address": "650 Okeechobee Boulevard", "city": "West Palm Beach", "region": "FL", "postal": "33401", "country": "US"},
+      "sells": {"tcg": ["pokemon", "other_tcg"], "sports": ["multi_sport"], "other": []},
+      "summary": "Three day trading card show at the Palm Beach Convention Center in West Palm Beach, FL, Nov 13 to 15, 2026, with a different time each day according to listing sites. Sports cards, Pokemon and TCG are listed. No table count, prices or organizer are published on the listings.",
+      "evidence": [
+        {"url": "https://www.treasurehunter.show/show/palm-beach-card-show-west-palm-beach-fl-2026-11-13", "seen": "2026-10-21", "supports": ["name", "days", "venue", "sells"]},
+        {"url": "https://www.treasurehunter.show/show/palm-beach-card-show-west-palm-beach-fl-2026-11-14", "seen": "2026-10-21", "supports": ["days"]},
+        {"url": "https://www.treasurehunter.show/show/palm-beach-card-show-west-palm-beach-fl-2026-11-15", "seen": "2026-10-21", "supports": ["days"]}
+      ],
+      "agent_confidence": "medium"
+    },
+    {
+      "kind": "edition",
+      "name": "Palm Beach Card Show",
+      "event_type": "card_show",
+      "days": [{"date": "2026-02-27"}, {"date": "2026-02-28"}, {"date": "2026-03-01"}],
+      "venue": {"name": "Palm Beach County Convention Center", "city": "West Palm Beach", "region": "FL", "country": "US"},
+      "sells": {"tcg": [], "sports": [], "other": []},
+      "size": {"tables": 400},
+      "summary": "Past edition over Feb 27 to Mar 1, 2026, at the county convention center in West Palm Beach. A grading company article reported more than 400 vendor tables. No organizer or address was given there.",
+      "evidence": [
+        {"url": "https://www.cgcgrading.com/news/articles/cgc-jsa-palm-beach-card-show-1opHa1WS0JiwQ22FfZ16FE/", "seen": "2026-10-21", "supports": ["name", "days", "venue.name", "size.tables"]}
+      ],
+      "agent_confidence": "medium"
+    },
+    {
+      "kind": "edition",
+      "name": "Northeast Sports Card Expo",
+      "event_type": "card_show",
+      "status": "scheduled",
+      "days": [
+        {"date": "2026-11-21", "open": "09:30", "close": "18:00"},
+        {"date": "2026-11-22"}
+      ],
+      "venue": {"name": "Marriott Boston Quincy", "address": "1000 Marriott Dr.", "city": "Quincy", "region": "MA", "postal": "02169", "country": "US"},
+      "sells": {"tcg": ["pokemon", "other_tcg"], "sports": ["multi_sport"], "other": []},
+      "summary": "Two day sports card and Pokemon show at the Marriott Boston Quincy, Nov 21 to 22, 2026. A listing gives 9:30 am to 6 pm for the first day only. Table counts conflict across sources, so none is recorded.",
+      "evidence": [
+        {"url": "https://www.treasurehunter.show/show/northeast-sports-card-expo-quincy-ma-2026-11-21", "seen": "2026-10-21", "supports": ["name", "days", "venue", "sells"]}
+      ],
+      "agent_confidence": "medium"
+    },
+    {
+      "kind": "edition",
+      "name": "Northeast Sports Card Expo",
+      "event_type": "card_show",
+      "status": "scheduled",
+      "days": [{"date": "2027-03-20"}, {"date": "2027-03-21"}],
+      "venue": {"name": "Marriott Boston Quincy", "city": "Quincy", "region": "MA", "country": "US"},
+      "sells": {"tcg": [], "sports": ["multi_sport"], "other": []},
+      "summary": "Two day sports cards show at the Marriott Boston Quincy, Mar 20 to 21, 2027. A listing site gives 9:30 am to 6 pm for both days. The street address and admission are not on the listing.",
+      "evidence": [
+        {"url": "https://www.treasurehunter.show/show/northeast-sports-card-expo-quincy-ma-2027-03-20", "seen": "2026-10-21", "supports": ["name", "days", "venue", "hours"]}
+      ],
+      "agent_confidence": "medium"
+    },
+    {
+      "kind": "edition",
+      "name": "Northeast Sports Card Expo",
+      "event_type": "card_show",
+      "status": "scheduled",
+      "days": [{"date": "2027-11-20"}, {"date": "2027-11-21"}],
+      "venue": {"name": "Marriott Boston Quincy", "city": "Quincy", "region": "MA", "country": "US"},
+      "sells": {"tcg": [], "sports": ["multi_sport"], "other": []},
+      "summary": "Two day sports cards show at the Marriott Boston Quincy, Nov 20 to 21, 2027. A listing site gives 9:30 am to 6 pm. Admission is not confirmed and the street address is not on the listing.",
+      "evidence": [
+        {"url": "https://www.treasurehunter.show/show/northeast-sports-card-expo-quincy-ma-2027-11-20", "seen": "2026-10-21", "supports": ["name", "days", "venue", "hours"]}
+      ],
+      "agent_confidence": "medium"
+    }
+  ],
+  "leads_only": [
+    {"name": "Collective Con 2027 (organizer homepage and info page)", "url": "https://collectivecon.com", "note": "March 19 to 21, 2027 at Prime F. Osborn III Convention Center, 1000 Water St, Jacksonville FL. Hours on the info page: Fri 12 pm to 6 pm, Sat 10 am to 6 pm, Sun 10 am to 5 pm. Described as a pop culture convention with vendor booths and Artist Alley. No page read says card vendors attend, so not recorded as a card show. Re-check before recording."},
+    {"name": "Collective Con exhibitor registration", "url": "https://www.tixr.com/groups/boldbeastevents/events/collective-con-exhibitor-registration-2027-189518", "note": "Exhibitor link from the organizer site. Ticketing site, not opened."},
+    {"name": "The Big Show Card Show (own site)", "url": "https://tcgshows.com", "note": "Own site lists no events: homepage, contact and blog index read. Its 2024 to 2025 local card show calendar is a Google Sheets link covering past dates only. Treasurehunter 2026 listings (Apr 11, Jun 6, Jun 14, Jun 18, Jul 25 to 26, Aug 22, Sep 12) are past and give no table count, so not recorded."},
+    {"name": "The Big Show At Quaker Bridge Mall, Feb 7, 2027", "url": "https://www.treasurehunter.show/show/the-big-show-card-show-lawrence-township-nj-2027-02-06", "note": "Sidebar mention on the Feb 6, 2027 listing of a separate event at 11 am the next day at the same mall. Not opened, so not recorded."},
+    {"name": "S&B Sports schedule lines without a year", "url": "https://www.sbsportspromotions.com/pages/show-schedule", "note": "13 other dated lines on the page have no year and no dated listing confirmed them, so not recorded: Aug 7 to 9 Moorestown Mall; Aug 14 to 16 Willow Grove Park Mall; Aug 21 to 23 Plymouth Meeting Mall; Aug 28 to 30 Montgomery Mall; Sep 4 to 6 Springfield Mall; Sep 18 to 20 Oxford Valley Mall; Oct 2 to 4 Cumberland Mall; Oct 9 to 11 Willow Grove Park Mall; Oct 16 to 18 Berkshire Mall; Oct 23 to 25 Moorestown Mall; Oct 30 to Nov 1 Montgomery Mall; Nov 6 to 8 Cumberland Mall; Nov 13 to 15 Oxford Valley Mall. The Moorestown ZIP on the page has only four digits."},
+    {"name": "S&B Sports Card Show, Oxford Valley Mall, 2026 listings", "url": "https://www.treasurehunter.show/show/sports-cards-and-collectible-show-langhorne-pa-2026-07-17-1781538999891", "note": "Past: Apr 24 to 25 and Jul 17 to 19, 2026. No size given, not recorded. An unattributed listing site entry shows an Oxford Valley show on Sep 25 to 27, 2026, which does not match the page's Sep 18 to 20 line."},
+    {"name": "Palm Beach Card Show Facebook page", "url": "https://www.facebook.com/palmbeachcardshow/", "note": "Linked from the Feb 2026 grading company article. Facebook is lead only, not opened."},
+    {"name": "Palm Beach Kennel Club Card Show", "url": "https://www.treasurehunter.show/show/palm-beach-kennel-club-card-show-west-palm-beach-fl-2026-12-20", "note": "Listing for Dec 20, 2026 in West Palm Beach. Different name and venue, organizer unknown. Not opened, not recorded."},
+    {"name": "Fairgrounds Card Expo", "url": "https://www.treasurehunter.show/show/fairgrounds-card-expo-west-palm-beach-fl-2026-11-01", "note": "Listing for Nov 1, 2026 in West Palm Beach. Organizer unknown. Not opened, not recorded."},
+    {"name": "Fanatics Fest official site", "url": "https://www.fanaticsfest.com", "note": "Named in the Fanatics press release. Shows the July 16 to 19, 2026 Javits Center edition as past and says 2027 dates are still to come. No 2027 date found, so no record."},
+    {"name": "Fanatics Fest NYC July 2026 press release", "url": "https://www.fanaticsinc.com/press-releases/fanatics-fest-returns-to-new-york-city-july-16-19-2026", "note": "Past edition (July 16 to 19, 2026, Javits Center). The release gives over 250 hobby shops and dealers (dealers, not tables) and a 125,000 attendance figure for last June with no year written, so not recorded as a past edition."},
+    {"name": "Northeast Sports Card Expo Marlborough 2026", "url": "https://www.treasurehunter.show/show/northeast-sports-card-expo-marlborough-ma-2026-06-26", "note": "Past edition (June 2026). A planned table count of 1,000 appears only in a Sports Collectors Daily article that returned 403. Listing dates differ by site (June 26 to 28 or June 26 to 27). Not recorded."},
+    {"name": "Northeast Sports Card Expo Marlborough, Eventbrite", "url": "https://eventbrite.com/e/northeast-sports-card-expo-marlborough-ma-tickets-1107999248579", "note": "Eventbrite is lead only. Not opened."}
+  ],
+  "blocked": [
+    {"url": "https://majorleaguecollective.com", "note": "robots: User-agent * Disallow: /. Not fetched."},
+    {"url": "https://www.tixr.com/groups/boldbeastevents/events/collective-con-2027-188988", "status": 403, "note": "Collective Con ticket page returned 403. Not used for any fact."},
+    {"url": "https://www.sportscollectorsdaily.com/northeast-sports-card-expo-triples-in-size-for-2026-event/", "status": 403, "note": "News article returned 403. It is the only source found for the Marlborough table count, so nothing recorded."},
+    {"url": "https://tcgshows.com/sitemap.xml", "status": 403, "note": "Sitemap returned 403. The other sitemaps on the site were read instead."}
+  ],
+  "notes": "Searches: 6 of 6 used, cap reached. WebFetch: 43 used. robots.txt was checked for all five sites that have their own URL (curl for exact text). Major League Collective is disallowed by robots and was not fetched. Palm Beach Card Show: no organizer site found in its one search (a snippet named World Champion Sports Cards as organizer; not verified, no URL, not recorded). The venue event pages on pbconventioncenter.com (palm-beach-card-show-1, -2 and -4) returned 404, so the Nov 2026 record rests on three treasurehunter listings (listing site, medium confidence) and no organizer page. The Feb 2026 record rests on a grading company article only. Fanatics Fest: no own site from its one search; fanaticsfest.com was reached from the press release link and shows no 2027 date. Northeast Sports Card Expo: no official site found. Quincy 2026 table counts conflict (9+ on one listing FAQ, 180+ and about 300 in other snippets), so no table count is recorded. The 2027 listings give dates and hours but no street address. S&B Sports: schedule lines carry no year; only the Berkshire Mall Nov 20 to 22, 2026 show is confirmed with a year on a listing. An Oxford Valley date conflicts (page Sep 18 to 20, unattributed listing Sep 25 to 27). The Big Show: own site lists no events, and the one upcoming show came from a listing site. Woonsocket series: page lists Jul 16, Aug 20 and Sep 17, 2026 only; these are before 2026-10-21 and are listed in known_dates because the page gives them. Oct 15, Nov 19 and Dec 17, 2026 follow the third Thursday rule but are not on the page, so not listed. last_confirmed is omitted because the page gives no post date. The organizer lists a phone number for table booking; phone numbers are not recorded. Collective Con: 2027 dates come from the organizer homepage; no card vendors are stated, so it is a lead only. Two tool calls outside the allowed set (a widget read and a browser batch) were made in error; both failed or returned nothing and changed nothing."
+}

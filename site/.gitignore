@@ -1,0 +1,8 @@
+node_modules/
+dist/
+.astro/
+# Written by the pipeline (csa build) or by the prepare step. Never committed.
+public/data/
+# Derived from the sample fixtures by the prepare step.
+fixtures/data/index.json
+fixtures/data/store_index.json

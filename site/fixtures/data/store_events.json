@@ -1,0 +1,5698 @@
+[
+ {
+  "id": "sample-friday-night-magic-at-sample-game-shop-boise-boise-id-2027-01-25",
+  "series_id": "sample-friday-night-magic-at-sample-game-shop-boise-boise-id",
+  "name": "Sample Friday Night Magic at Sample Game Shop Boise",
+  "event_type": "store_event",
+  "status": "scheduled",
+  "days": [
+   {
+    "date": "2027-01-25",
+    "open": "18:00",
+    "close": "21:00"
+   }
+  ],
+  "timezone": "America/Boise",
+  "venue": {
+   "name": "Sample Game Shop Boise",
+   "address": "368 Main St",
+   "city": "Boise",
+   "region": "ID",
+   "postal": "83702",
+   "country": "US",
+   "lat": 43.6079,
+   "lon": -116.226,
+   "geo_precision": "address"
+  },
+  "sells": {
+   "tcg": [
+    "mtg"
+   ],
+   "sports": [],
+   "other": []
+  },
+  "mix": "tcg",
+  "admission": {
+   "free": false,
+   "adult": 30,
+   "child": null,
+   "currency": "USD",
+   "notes": null
+  },
+  "size": {
+   "tables": null,
+   "booths": null,
+   "venue_sqft": null,
+   "players": 21,
+   "reported_attendance": null,
+   "first_year": null,
+   "edition": null
+  },
+  "vendor": {
+   "tables": [],
+   "application_url": null,
+   "opens": null,
+   "deadline": null,
+   "status": "unknown",
+   "electricity": null,
+   "setup": null,
+   "contact": null,
+   "notes": null
+  },
+  "organizer": {
+   "name": "Sample Game Shop Boise",
+   "promoter_id": null,
+   "url": null
+  },
+  "links": {
+   "official": "https://example.com/sample-store/sample-friday-night-magic-at-sample-game-shop-boise-boise-id",
+   "tickets": null,
+   "facebook": null,
+   "instagram": null
+  },
+  "sources": [
+   {
+    "source": "fixture",
+    "url": "https://example.com/sample-store-listing/sample-friday-night-magic-at-sample-game-shop-boise-boise-id-2027-01-25",
+    "retrieved": "2026-10-21",
+    "fields": [
+     "name",
+     "days",
+     "venue"
+    ]
+   }
+  ],
+  "verification": "listed",
+  "first_seen": "2026-10-21",
+  "last_checked": "2026-10-21",
+  "summary": null,
+  "estimate": null
+ },
+ {
+  "id": "sample-friday-night-magic-at-sample-game-shop-burlington-burlington-vt-2027-02-04",
+  "series_id": "sample-friday-night-magic-at-sample-game-shop-burlington-burlington-vt",
+  "name": "Sample Friday Night Magic at Sample Game Shop Burlington",
+  "event_type": "store_event",
+  "status": "scheduled",
+  "days": [
+   {
+    "date": "2027-02-04",
+    "open": "18:00",
+    "close": "21:00"
+   }
+  ],
+  "timezone": "America/New_York",
+  "venue": {
+   "name": "Sample Game Shop Burlington",
+   "address": "520 Main St",
+   "city": "Burlington",
+   "region": "VT",
+   "postal": "05401",
+   "country": "US",
+   "lat": 44.4598,
+   "lon": -73.1774,
+   "geo_precision": "address"
+  },
+  "sells": {
+   "tcg": [
+    "mtg"
+   ],
+   "sports": [],
+   "other": []
+  },
+  "mix": "tcg",
+  "admission": {
+   "free": false,
+   "adult": 10,
+   "child": null,
+   "currency": "USD",
+   "notes": null
+  },
+  "size": {
+   "tables": null,
+   "booths": null,
+   "venue_sqft": null,
+   "players": 34,
+   "reported_attendance": null,
+   "first_year": null,
+   "edition": null
+  },
+  "vendor": {
+   "tables": [],
+   "application_url": null,
+   "opens": null,
+   "deadline": null,
+   "status": "unknown",
+   "electricity": null,
+   "setup": null,
+   "contact": null,
+   "notes": null
+  },
+  "organizer": {
+   "name": "Sample Game Shop Burlington",
+   "promoter_id": null,
+   "url": null
+  },
+  "links": {
+   "official": "https://example.com/sample-store/sample-friday-night-magic-at-sample-game-shop-burlington-burlington-vt",
+   "tickets": null,
+   "facebook": null,
+   "instagram": null
+  },
+  "sources": [
+   {
+    "source": "fixture",
+    "url": "https://example.com/sample-store-listing/sample-friday-night-magic-at-sample-game-shop-burlington-burlington-vt-2027-02-04",
+    "retrieved": "2026-10-21",
+    "fields": [
+     "name",
+     "days",
+     "venue"
+    ]
+   }
+  ],
+  "verification": "listed",
+  "first_seen": "2026-10-21",
+  "last_checked": "2026-10-21",
+  "summary": null,
+  "estimate": null
+ },
+ {
+  "id": "sample-friday-night-magic-at-sample-game-shop-denver-denver-co-2027-01-19",
+  "series_id": "sample-friday-night-magic-at-sample-game-shop-denver-denver-co",
+  "name": "Sample Friday Night Magic at Sample Game Shop Denver",
+  "event_type": "store_event",
+  "status": "scheduled",
+  "days": [
+   {
+    "date": "2027-01-19",
+    "open": "18:00",
+    "close": "21:00"
+   }
+  ],
+  "timezone": "America/Denver",
+  "venue": {
+   "name": "Sample Game Shop Denver",
+   "address": "546 Main St",
+   "city": "Denver",
+   "region": "CO",
+   "postal": "80202",
+   "country": "US",
+   "lat": 39.7452,
+   "lon": -105.0232,
+   "geo_precision": "address"
+  },
+  "sells": {
+   "tcg": [
+    "mtg"
+   ],
+   "sports": [],
+   "other": []
+  },
+  "mix": "tcg",
+  "admission": {
+   "free": false,
+   "adult": 5,
+   "child": null,
+   "currency": "USD",
+   "notes": null
+  },
+  "size": {
+   "tables": null,
+   "booths": null,
+   "venue_sqft": null,
+   "players": 27,
+   "reported_attendance": null,
+   "first_year": null,
+   "edition": null
+  },
+  "vendor": {
+   "tables": [],
+   "application_url": null,
+   "opens": null,
+   "deadline": null,
+   "status": "unknown",
+   "electricity": null,
+   "setup": null,
+   "contact": null,
+   "notes": null
+  },
+  "organizer": {
+   "name": "Sample Game Shop Denver",
+   "promoter_id": null,
+   "url": null
+  },
+  "links": {
+   "official": "https://example.com/sample-store/sample-friday-night-magic-at-sample-game-shop-denver-denver-co",
+   "tickets": null,
+   "facebook": null,
+   "instagram": null
+  },
+  "sources": [
+   {
+    "source": "fixture",
+    "url": "https://example.com/sample-store-listing/sample-friday-night-magic-at-sample-game-shop-denver-denver-co-2027-01-19",
+    "retrieved": "2026-10-21",
+    "fields": [
+     "name",
+     "days",
+     "venue"
+    ]
+   }
+  ],
+  "verification": "listed",
+  "first_seen": "2026-10-21",
+  "last_checked": "2026-10-21",
+  "summary": null,
+  "estimate": null
+ },
+ {
+  "id": "sample-friday-night-magic-at-sample-game-shop-hartford-hartford-ct-2027-01-16",
+  "series_id": "sample-friday-night-magic-at-sample-game-shop-hartford-hartford-ct",
+  "name": "Sample Friday Night Magic at Sample Game Shop Hartford",
+  "event_type": "store_event",
+  "status": "scheduled",
+  "days": [
+   {
+    "date": "2027-01-16",
+    "open": "18:00",
+    "close": "21:00"
+   }
+  ],
+  "timezone": "America/New_York",
+  "venue": {
+   "name": "Sample Game Shop Hartford",
+   "address": "749 Main St",
+   "city": "Hartford",
+   "region": "CT",
+   "postal": "06103",
+   "country": "US",
+   "lat": 41.7582,
+   "lon": -72.6883,
+   "geo_precision": "address"
+  },
+  "sells": {
+   "tcg": [
+    "mtg"
+   ],
+   "sports": [],
+   "other": []
+  },
+  "mix": "tcg",
+  "admission": {
+   "free": false,
+   "adult": 15,
+   "child": null,
+   "currency": "USD",
+   "notes": null
+  },
+  "size": {
+   "tables": null,
+   "booths": null,
+   "venue_sqft": null,
+   "players": 20,
+   "reported_attendance": null,
+   "first_year": null,
+   "edition": null
+  },
+  "vendor": {
+   "tables": [],
+   "application_url": null,
+   "opens": null,
+   "deadline": null,
+   "status": "unknown",
+   "electricity": null,
+   "setup": null,
+   "contact": null,
+   "notes": null
+  },
+  "organizer": {
+   "name": "Sample Game Shop Hartford",
+   "promoter_id": null,
+   "url": null
+  },
+  "links": {
+   "official": "https://example.com/sample-store/sample-friday-night-magic-at-sample-game-shop-hartford-hartford-ct",
+   "tickets": null,
+   "facebook": null,
+   "instagram": null
+  },
+  "sources": [
+   {
+    "source": "fixture",
+    "url": "https://example.com/sample-store-listing/sample-friday-night-magic-at-sample-game-shop-hartford-hartford-ct-2027-01-16",
+    "retrieved": "2026-10-21",
+    "fields": [
+     "name",
+     "days",
+     "venue"
+    ]
+   }
+  ],
+  "verification": "listed",
+  "first_seen": "2026-10-21",
+  "last_checked": "2026-10-21",
+  "summary": null,
+  "estimate": null
+ },
+ {
+  "id": "sample-friday-night-magic-at-sample-game-shop-las-vegas-las-vegas-nv-2026-11-18",
+  "series_id": "sample-friday-night-magic-at-sample-game-shop-las-vegas-las-vegas-nv",
+  "name": "Sample Friday Night Magic at Sample Game Shop Las Vegas",
+  "event_type": "store_event",
+  "status": "scheduled",
+  "days": [
+   {
+    "date": "2026-11-18",
+    "open": "18:00",
+    "close": "21:00"
+   }
+  ],
+  "timezone": "America/Los_Angeles",
+  "venue": {
+   "name": "Sample Game Shop Las Vegas",
+   "address": "574 Main St",
+   "city": "Las Vegas",
+   "region": "NV",
+   "postal": "89101",
+   "country": "US",
+   "lat": 36.1673,
+   "lon": -115.1727,
+   "geo_precision": "address"
+  },
+  "sells": {
+   "tcg": [
+    "mtg"
+   ],
+   "sports": [],
+   "other": []
+  },
+  "mix": "tcg",
+  "admission": {
+   "free": false,
+   "adult": 30,
+   "child": null,
+   "currency": "USD",
+   "notes": null
+  },
+  "size": {
+   "tables": null,
+   "booths": null,
+   "venue_sqft": null,
+   "players": 45,
+   "reported_attendance": null,
+   "first_year": null,
+   "edition": null
+  },
+  "vendor": {
+   "tables": [],
+   "application_url": null,
+   "opens": null,
+   "deadline": null,
+   "status": "unknown",
+   "electricity": null,
+   "setup": null,
+   "contact": null,
+   "notes": null
+  },
+  "organizer": {
+   "name": "Sample Game Shop Las Vegas",
+   "promoter_id": null,
+   "url": null
+  },
+  "links": {
+   "official": "https://example.com/sample-store/sample-friday-night-magic-at-sample-game-shop-las-vegas-las-vegas-nv",
+   "tickets": null,
+   "facebook": null,
+   "instagram": null
+  },
+  "sources": [
+   {
+    "source": "fixture",
+    "url": "https://example.com/sample-store-listing/sample-friday-night-magic-at-sample-game-shop-las-vegas-las-vegas-nv-2026-11-18",
+    "retrieved": "2026-10-21",
+    "fields": [
+     "name",
+     "days",
+     "venue"
+    ]
+   }
+  ],
+  "verification": "listed",
+  "first_seen": "2026-10-21",
+  "last_checked": "2026-10-21",
+  "summary": null,
+  "estimate": null
+ },
+ {
+  "id": "sample-friday-night-magic-at-sample-game-shop-manchester-manchester-nh-2026-12-18",
+  "series_id": "sample-friday-night-magic-at-sample-game-shop-manchester-manchester-nh",
+  "name": "Sample Friday Night Magic at Sample Game Shop Manchester",
+  "event_type": "store_event",
+  "status": "scheduled",
+  "days": [
+   {
+    "date": "2026-12-18",
+    "open": "18:00",
+    "close": "21:00"
+   }
+  ],
+  "timezone": "America/New_York",
+  "venue": {
+   "name": "Sample Game Shop Manchester",
+   "address": "69 Main St",
+   "city": "Manchester",
+   "region": "NH",
+   "postal": "03101",
+   "country": "US",
+   "lat": 42.9987,
+   "lon": -71.4647,
+   "geo_precision": "address"
+  },
+  "sells": {
+   "tcg": [
+    "mtg"
+   ],
+   "sports": [],
+   "other": []
+  },
+  "mix": "tcg",
+  "admission": {
+   "free": false,
+   "adult": 30,
+   "child": null,
+   "currency": "USD",
+   "notes": null
+  },
+  "size": {
+   "tables": null,
+   "booths": null,
+   "venue_sqft": null,
+   "players": 40,
+   "reported_attendance": null,
+   "first_year": null,
+   "edition": null
+  },
+  "vendor": {
+   "tables": [],
+   "application_url": null,
+   "opens": null,
+   "deadline": null,
+   "status": "unknown",
+   "electricity": null,
+   "setup": null,
+   "contact": null,
+   "notes": null
+  },
+  "organizer": {
+   "name": "Sample Game Shop Manchester",
+   "promoter_id": null,
+   "url": null
+  },
+  "links": {
+   "official": "https://example.com/sample-store/sample-friday-night-magic-at-sample-game-shop-manchester-manchester-nh",
+   "tickets": null,
+   "facebook": null,
+   "instagram": null
+  },
+  "sources": [
+   {
+    "source": "fixture",
+    "url": "https://example.com/sample-store-listing/sample-friday-night-magic-at-sample-game-shop-manchester-manchester-nh-2026-12-18",
+    "retrieved": "2026-10-21",
+    "fields": [
+     "name",
+     "days",
+     "venue"
+    ]
+   }
+  ],
+  "verification": "listed",
+  "first_seen": "2026-10-21",
+  "last_checked": "2026-10-21",
+  "summary": null,
+  "estimate": null
+ },
+ {
+  "id": "sample-friday-night-magic-at-sample-game-shop-portland-portland-me-2027-01-07",
+  "series_id": "sample-friday-night-magic-at-sample-game-shop-portland-portland-me",
+  "name": "Sample Friday Night Magic at Sample Game Shop Portland",
+  "event_type": "store_event",
+  "status": "scheduled",
+  "days": [
+   {
+    "date": "2027-01-07",
+    "open": "18:00",
+    "close": "21:00"
+   }
+  ],
+  "timezone": "America/New_York",
+  "venue": {
+   "name": "Sample Game Shop Portland",
+   "address": "766 Main St",
+   "city": "Portland",
+   "region": "ME",
+   "postal": "04101",
+   "country": "US",
+   "lat": 43.6716,
+   "lon": -70.2387,
+   "geo_precision": "address"
+  },
+  "sells": {
+   "tcg": [
+    "mtg"
+   ],
+   "sports": [],
+   "other": []
+  },
+  "mix": "tcg",
+  "admission": {
+   "free": false,
+   "adult": 10,
+   "child": null,
+   "currency": "USD",
+   "notes": null
+  },
+  "size": {
+   "tables": null,
+   "booths": null,
+   "venue_sqft": null,
+   "players": 48,
+   "reported_attendance": null,
+   "first_year": null,
+   "edition": null
+  },
+  "vendor": {
+   "tables": [],
+   "application_url": null,
+   "opens": null,
+   "deadline": null,
+   "status": "unknown",
+   "electricity": null,
+   "setup": null,
+   "contact": null,
+   "notes": null
+  },
+  "organizer": {
+   "name": "Sample Game Shop Portland",
+   "promoter_id": null,
+   "url": null
+  },
+  "links": {
+   "official": "https://example.com/sample-store/sample-friday-night-magic-at-sample-game-shop-portland-portland-me",
+   "tickets": null,
+   "facebook": null,
+   "instagram": null
+  },
+  "sources": [
+   {
+    "source": "fixture",
+    "url": "https://example.com/sample-store-listing/sample-friday-night-magic-at-sample-game-shop-portland-portland-me-2027-01-07",
+    "retrieved": "2026-10-21",
+    "fields": [
+     "name",
+     "days",
+     "venue"
+    ]
+   }
+  ],
+  "verification": "listed",
+  "first_seen": "2026-10-21",
+  "last_checked": "2026-10-21",
+  "summary": null,
+  "estimate": null
+ },
+ {
+  "id": "sample-friday-night-magic-at-sample-game-shop-providence-providence-ri-2026-12-24",
+  "series_id": "sample-friday-night-magic-at-sample-game-shop-providence-providence-ri",
+  "name": "Sample Friday Night Magic at Sample Game Shop Providence",
+  "event_type": "store_event",
+  "status": "scheduled",
+  "days": [
+   {
+    "date": "2026-12-24",
+    "open": "18:00",
+    "close": "21:00"
+   }
+  ],
+  "timezone": "America/New_York",
+  "venue": {
+   "name": "Sample Game Shop Providence",
+   "address": "332 Main St",
+   "city": "Providence",
+   "region": "RI",
+   "postal": "02903",
+   "country": "US",
+   "lat": 41.8124,
+   "lon": -71.4055,
+   "geo_precision": "address"
+  },
+  "sells": {
+   "tcg": [
+    "mtg"
+   ],
+   "sports": [],
+   "other": []
+  },
+  "mix": "tcg",
+  "admission": {
+   "free": false,
+   "adult": 30,
+   "child": null,
+   "currency": "USD",
+   "notes": null
+  },
+  "size": {
+   "tables": null,
+   "booths": null,
+   "venue_sqft": null,
+   "players": 53,
+   "reported_attendance": null,
+   "first_year": null,
+   "edition": null
+  },
+  "vendor": {
+   "tables": [],
+   "application_url": null,
+   "opens": null,
+   "deadline": null,
+   "status": "unknown",
+   "electricity": null,
+   "setup": null,
+   "contact": null,
+   "notes": null
+  },
+  "organizer": {
+   "name": "Sample Game Shop Providence",
+   "promoter_id": null,
+   "url": null
+  },
+  "links": {
+   "official": "https://example.com/sample-store/sample-friday-night-magic-at-sample-game-shop-providence-providence-ri",
+   "tickets": null,
+   "facebook": null,
+   "instagram": null
+  },
+  "sources": [
+   {
+    "source": "fixture",
+    "url": "https://example.com/sample-store-listing/sample-friday-night-magic-at-sample-game-shop-providence-providence-ri-2026-12-24",
+    "retrieved": "2026-10-21",
+    "fields": [
+     "name",
+     "days",
+     "venue"
+    ]
+   }
+  ],
+  "verification": "listed",
+  "first_seen": "2026-10-21",
+  "last_checked": "2026-10-21",
+  "summary": null,
+  "estimate": null
+ },
+ {
+  "id": "sample-friday-night-magic-at-sample-game-shop-salt-lake-city-salt-lake-city-ut-2027-01-25",
+  "series_id": "sample-friday-night-magic-at-sample-game-shop-salt-lake-city-salt-lake-city-ut",
+  "name": "Sample Friday Night Magic at Sample Game Shop Salt Lake City",
+  "event_type": "store_event",
+  "status": "scheduled",
+  "days": [
+   {
+    "date": "2027-01-25",
+    "open": "18:00",
+    "close": "21:00"
+   }
+  ],
+  "timezone": "America/Denver",
+  "venue": {
+   "name": "Sample Game Shop Salt Lake City",
+   "address": "462 Main St",
+   "city": "Salt Lake City",
+   "region": "UT",
+   "postal": "84101",
+   "country": "US",
+   "lat": 40.7368,
+   "lon": -111.8705,
+   "geo_precision": "address"
+  },
+  "sells": {
+   "tcg": [
+    "mtg"
+   ],
+   "sports": [],
+   "other": []
+  },
+  "mix": "tcg",
+  "admission": {
+   "free": false,
+   "adult": 5,
+   "child": null,
+   "currency": "USD",
+   "notes": null
+  },
+  "size": {
+   "tables": null,
+   "booths": null,
+   "venue_sqft": null,
+   "players": 60,
+   "reported_attendance": null,
+   "first_year": null,
+   "edition": null
+  },
+  "vendor": {
+   "tables": [],
+   "application_url": null,
+   "opens": null,
+   "deadline": null,
+   "status": "unknown",
+   "electricity": null,
+   "setup": null,
+   "contact": null,
+   "notes": null
+  },
+  "organizer": {
+   "name": "Sample Game Shop Salt Lake City",
+   "promoter_id": null,
+   "url": null
+  },
+  "links": {
+   "official": "https://example.com/sample-store/sample-friday-night-magic-at-sample-game-shop-salt-lake-city-salt-lake-city-ut",
+   "tickets": null,
+   "facebook": null,
+   "instagram": null
+  },
+  "sources": [
+   {
+    "source": "fixture",
+    "url": "https://example.com/sample-store-listing/sample-friday-night-magic-at-sample-game-shop-salt-lake-city-salt-lake-city-ut-2027-01-25",
+    "retrieved": "2026-10-21",
+    "fields": [
+     "name",
+     "days",
+     "venue"
+    ]
+   }
+  ],
+  "verification": "listed",
+  "first_seen": "2026-10-21",
+  "last_checked": "2026-10-21",
+  "summary": null,
+  "estimate": null
+ },
+ {
+  "id": "sample-lorcana-league-night-at-sample-game-shop-charleston-charleston-wv-2027-01-14",
+  "series_id": "sample-lorcana-league-night-at-sample-game-shop-charleston-charleston-wv",
+  "name": "Sample Lorcana League Night at Sample Game Shop Charleston",
+  "event_type": "store_event",
+  "status": "scheduled",
+  "days": [
+   {
+    "date": "2027-01-14",
+    "open": "18:00",
+    "close": "21:00"
+   }
+  ],
+  "timezone": "America/New_York",
+  "venue": {
+   "name": "Sample Game Shop Charleston",
+   "address": "134 Main St",
+   "city": "Charleston",
+   "region": "WV",
+   "postal": "25301",
+   "country": "US",
+   "lat": 38.367,
+   "lon": -81.614,
+   "geo_precision": "address"
+  },
+  "sells": {
+   "tcg": [
+    "lorcana"
+   ],
+   "sports": [],
+   "other": []
+  },
+  "mix": "tcg",
+  "admission": {
+   "free": false,
+   "adult": 30,
+   "child": null,
+   "currency": "USD",
+   "notes": null
+  },
+  "size": {
+   "tables": null,
+   "booths": null,
+   "venue_sqft": null,
+   "players": 50,
+   "reported_attendance": null,
+   "first_year": null,
+   "edition": null
+  },
+  "vendor": {
+   "tables": [],
+   "application_url": null,
+   "opens": null,
+   "deadline": null,
+   "status": "unknown",
+   "electricity": null,
+   "setup": null,
+   "contact": null,
+   "notes": null
+  },
+  "organizer": {
+   "name": "Sample Game Shop Charleston",
+   "promoter_id": null,
+   "url": null
+  },
+  "links": {
+   "official": "https://example.com/sample-store/sample-lorcana-league-night-at-sample-game-shop-charleston-charleston-wv",
+   "tickets": null,
+   "facebook": null,
+   "instagram": null
+  },
+  "sources": [
+   {
+    "source": "fixture",
+    "url": "https://example.com/sample-store-listing/sample-lorcana-league-night-at-sample-game-shop-charleston-charleston-wv-2027-01-14",
+    "retrieved": "2026-10-21",
+    "fields": [
+     "name",
+     "days",
+     "venue"
+    ]
+   }
+  ],
+  "verification": "listed",
+  "first_seen": "2026-10-21",
+  "last_checked": "2026-10-21",
+  "summary": null,
+  "estimate": null
+ },
+ {
+  "id": "sample-lorcana-league-night-at-sample-game-shop-cleveland-cleveland-oh-2026-10-21",
+  "series_id": "sample-lorcana-league-night-at-sample-game-shop-cleveland-cleveland-oh",
+  "name": "Sample Lorcana League Night at Sample Game Shop Cleveland",
+  "event_type": "store_event",
+  "status": "scheduled",
+  "days": [
+   {
+    "date": "2026-10-21",
+    "open": "18:00",
+    "close": "21:00"
+   }
+  ],
+  "timezone": "America/New_York",
+  "venue": {
+   "name": "Sample Game Shop Cleveland",
+   "address": "734 Main St",
+   "city": "Cleveland",
+   "region": "OH",
+   "postal": "44114",
+   "country": "US",
+   "lat": 41.5025,
+   "lon": -81.6943,
+   "geo_precision": "address"
+  },
+  "sells": {
+   "tcg": [
+    "lorcana"
+   ],
+   "sports": [],
+   "other": []
+  },
+  "mix": "tcg",
+  "admission": {
+   "free": false,
+   "adult": 10,
+   "child": null,
+   "currency": "USD",
+   "notes": null
+  },
+  "size": {
+   "tables": null,
+   "booths": null,
+   "venue_sqft": null,
+   "players": 57,
+   "reported_attendance": null,
+   "first_year": null,
+   "edition": null
+  },
+  "vendor": {
+   "tables": [],
+   "application_url": null,
+   "opens": null,
+   "deadline": null,
+   "status": "unknown",
+   "electricity": null,
+   "setup": null,
+   "contact": null,
+   "notes": null
+  },
+  "organizer": {
+   "name": "Sample Game Shop Cleveland",
+   "promoter_id": null,
+   "url": null
+  },
+  "links": {
+   "official": "https://example.com/sample-store/sample-lorcana-league-night-at-sample-game-shop-cleveland-cleveland-oh",
+   "tickets": null,
+   "facebook": null,
+   "instagram": null
+  },
+  "sources": [
+   {
+    "source": "fixture",
+    "url": "https://example.com/sample-store-listing/sample-lorcana-league-night-at-sample-game-shop-cleveland-cleveland-oh-2026-10-21",
+    "retrieved": "2026-10-21",
+    "fields": [
+     "name",
+     "days",
+     "venue"
+    ]
+   }
+  ],
+  "verification": "listed",
+  "first_seen": "2026-10-21",
+  "last_checked": "2026-10-21",
+  "summary": null,
+  "estimate": null
+ },
+ {
+  "id": "sample-lorcana-league-night-at-sample-game-shop-columbus-columbus-oh-2026-10-20",
+  "series_id": "sample-lorcana-league-night-at-sample-game-shop-columbus-columbus-oh",
+  "name": "Sample Lorcana League Night at Sample Game Shop Columbus",
+  "event_type": "store_event",
+  "status": "scheduled",
+  "days": [
+   {
+    "date": "2026-10-20",
+    "open": "18:00",
+    "close": "21:00"
+   }
+  ],
+  "timezone": "America/New_York",
+  "venue": {
+   "name": "Sample Game Shop Columbus",
+   "address": "404 Main St",
+   "city": "Columbus",
+   "region": "OH",
+   "postal": "43215",
+   "country": "US",
+   "lat": 39.9799,
+   "lon": -82.9928,
+   "geo_precision": "address"
+  },
+  "sells": {
+   "tcg": [
+    "lorcana"
+   ],
+   "sports": [],
+   "other": []
+  },
+  "mix": "tcg",
+  "admission": {
+   "free": false,
+   "adult": 30,
+   "child": null,
+   "currency": "USD",
+   "notes": null
+  },
+  "size": {
+   "tables": null,
+   "booths": null,
+   "venue_sqft": null,
+   "players": 52,
+   "reported_attendance": null,
+   "first_year": null,
+   "edition": null
+  },
+  "vendor": {
+   "tables": [],
+   "application_url": null,
+   "opens": null,
+   "deadline": null,
+   "status": "unknown",
+   "electricity": null,
+   "setup": null,
+   "contact": null,
+   "notes": null
+  },
+  "organizer": {
+   "name": "Sample Game Shop Columbus",
+   "promoter_id": null,
+   "url": null
+  },
+  "links": {
+   "official": "https://example.com/sample-store/sample-lorcana-league-night-at-sample-game-shop-columbus-columbus-oh",
+   "tickets": null,
+   "facebook": null,
+   "instagram": null
+  },
+  "sources": [
+   {
+    "source": "fixture",
+    "url": "https://example.com/sample-store-listing/sample-lorcana-league-night-at-sample-game-shop-columbus-columbus-oh-2026-10-20",
+    "retrieved": "2026-10-21",
+    "fields": [
+     "name",
+     "days",
+     "venue"
+    ]
+   }
+  ],
+  "verification": "listed",
+  "first_seen": "2026-10-21",
+  "last_checked": "2026-10-21",
+  "summary": null,
+  "estimate": null
+ },
+ {
+  "id": "sample-lorcana-league-night-at-sample-game-shop-louisville-louisville-ky-2026-12-21",
+  "series_id": "sample-lorcana-league-night-at-sample-game-shop-louisville-louisville-ky",
+  "name": "Sample Lorcana League Night at Sample Game Shop Louisville",
+  "event_type": "store_event",
+  "status": "scheduled",
+  "days": [
+   {
+    "date": "2026-12-21",
+    "open": "18:00",
+    "close": "21:00"
+   }
+  ],
+  "timezone": "America/Kentucky/Louisville",
+  "venue": {
+   "name": "Sample Game Shop Louisville",
+   "address": "319 Main St",
+   "city": "Louisville",
+   "region": "KY",
+   "postal": "40202",
+   "country": "US",
+   "lat": 38.2506,
+   "lon": -85.7321,
+   "geo_precision": "address"
+  },
+  "sells": {
+   "tcg": [
+    "lorcana"
+   ],
+   "sports": [],
+   "other": []
+  },
+  "mix": "tcg",
+  "admission": {
+   "free": false,
+   "adult": 30,
+   "child": null,
+   "currency": "USD",
+   "notes": null
+  },
+  "size": {
+   "tables": null,
+   "booths": null,
+   "venue_sqft": null,
+   "players": 58,
+   "reported_attendance": null,
+   "first_year": null,
+   "edition": null
+  },
+  "vendor": {
+   "tables": [],
+   "application_url": null,
+   "opens": null,
+   "deadline": null,
+   "status": "unknown",
+   "electricity": null,
+   "setup": null,
+   "contact": null,
+   "notes": null
+  },
+  "organizer": {
+   "name": "Sample Game Shop Louisville",
+   "promoter_id": null,
+   "url": null
+  },
+  "links": {
+   "official": "https://example.com/sample-store/sample-lorcana-league-night-at-sample-game-shop-louisville-louisville-ky",
+   "tickets": null,
+   "facebook": null,
+   "instagram": null
+  },
+  "sources": [
+   {
+    "source": "fixture",
+    "url": "https://example.com/sample-store-listing/sample-lorcana-league-night-at-sample-game-shop-louisville-louisville-ky-2026-12-21",
+    "retrieved": "2026-10-21",
+    "fields": [
+     "name",
+     "days",
+     "venue"
+    ]
+   }
+  ],
+  "verification": "listed",
+  "first_seen": "2026-10-21",
+  "last_checked": "2026-10-21",
+  "summary": null,
+  "estimate": null
+ },
+ {
+  "id": "sample-lorcana-league-night-at-sample-game-shop-montreal-montreal-qc-2027-01-20",
+  "series_id": "sample-lorcana-league-night-at-sample-game-shop-montreal-montreal-qc",
+  "name": "Sample Lorcana League Night at Sample Game Shop Montreal",
+  "event_type": "store_event",
+  "status": "scheduled",
+  "days": [
+   {
+    "date": "2027-01-20",
+    "open": "18:00",
+    "close": "21:00"
+   }
+  ],
+  "timezone": "America/Toronto",
+  "venue": {
+   "name": "Sample Game Shop Montreal",
+   "address": "874 Main St",
+   "city": "Montreal",
+   "region": "QC",
+   "postal": "H3B 4W8",
+   "country": "CA",
+   "lat": 45.5078,
+   "lon": -73.5518,
+   "geo_precision": "address"
+  },
+  "sells": {
+   "tcg": [
+    "lorcana"
+   ],
+   "sports": [],
+   "other": []
+  },
+  "mix": "tcg",
+  "admission": {
+   "free": false,
+   "adult": 15,
+   "child": null,
+   "currency": "CAD",
+   "notes": null
+  },
+  "size": {
+   "tables": null,
+   "booths": null,
+   "venue_sqft": null,
+   "players": 27,
+   "reported_attendance": null,
+   "first_year": null,
+   "edition": null
+  },
+  "vendor": {
+   "tables": [],
+   "application_url": null,
+   "opens": null,
+   "deadline": null,
+   "status": "unknown",
+   "electricity": null,
+   "setup": null,
+   "contact": null,
+   "notes": null
+  },
+  "organizer": {
+   "name": "Sample Game Shop Montreal",
+   "promoter_id": null,
+   "url": null
+  },
+  "links": {
+   "official": "https://example.com/sample-store/sample-lorcana-league-night-at-sample-game-shop-montreal-montreal-qc",
+   "tickets": null,
+   "facebook": null,
+   "instagram": null
+  },
+  "sources": [
+   {
+    "source": "fixture",
+    "url": "https://example.com/sample-store-listing/sample-lorcana-league-night-at-sample-game-shop-montreal-montreal-qc-2027-01-20",
+    "retrieved": "2026-10-21",
+    "fields": [
+     "name",
+     "days",
+     "venue"
+    ]
+   }
+  ],
+  "verification": "listed",
+  "first_seen": "2026-10-21",
+  "last_checked": "2026-10-21",
+  "summary": null,
+  "estimate": null
+ },
+ {
+  "id": "sample-lorcana-league-night-at-sample-game-shop-new-orleans-new-orleans-la-2026-11-05",
+  "series_id": "sample-lorcana-league-night-at-sample-game-shop-new-orleans-new-orleans-la",
+  "name": "Sample Lorcana League Night at Sample Game Shop New Orleans",
+  "event_type": "store_event",
+  "status": "scheduled",
+  "days": [
+   {
+    "date": "2026-11-05",
+    "open": "18:00",
+    "close": "21:00"
+   }
+  ],
+  "timezone": "America/Chicago",
+  "venue": {
+   "name": "Sample Game Shop New Orleans",
+   "address": "744 Main St",
+   "city": "New Orleans",
+   "region": "LA",
+   "postal": "70112",
+   "country": "US",
+   "lat": 29.9553,
+   "lon": -90.0897,
+   "geo_precision": "address"
+  },
+  "sells": {
+   "tcg": [
+    "lorcana"
+   ],
+   "sports": [],
+   "other": []
+  },
+  "mix": "tcg",
+  "admission": {
+   "free": false,
+   "adult": 5,
+   "child": null,
+   "currency": "USD",
+   "notes": null
+  },
+  "size": {
+   "tables": null,
+   "booths": null,
+   "venue_sqft": null,
+   "players": 53,
+   "reported_attendance": null,
+   "first_year": null,
+   "edition": null
+  },
+  "vendor": {
+   "tables": [],
+   "application_url": null,
+   "opens": null,
+   "deadline": null,
+   "status": "unknown",
+   "electricity": null,
+   "setup": null,
+   "contact": null,
+   "notes": null
+  },
+  "organizer": {
+   "name": "Sample Game Shop New Orleans",
+   "promoter_id": null,
+   "url": null
+  },
+  "links": {
+   "official": "https://example.com/sample-store/sample-lorcana-league-night-at-sample-game-shop-new-orleans-new-orleans-la",
+   "tickets": null,
+   "facebook": null,
+   "instagram": null
+  },
+  "sources": [
+   {
+    "source": "fixture",
+    "url": "https://example.com/sample-store-listing/sample-lorcana-league-night-at-sample-game-shop-new-orleans-new-orleans-la-2026-11-05",
+    "retrieved": "2026-10-21",
+    "fields": [
+     "name",
+     "days",
+     "venue"
+    ]
+   }
+  ],
+  "verification": "listed",
+  "first_seen": "2026-10-21",
+  "last_checked": "2026-10-21",
+  "summary": null,
+  "estimate": null
+ },
+ {
+  "id": "sample-lorcana-league-night-at-sample-game-shop-quebec-city-quebec-city-qc-2026-11-18",
+  "series_id": "sample-lorcana-league-night-at-sample-game-shop-quebec-city-quebec-city-qc",
+  "name": "Sample Lorcana League Night at Sample Game Shop Quebec City",
+  "event_type": "store_event",
+  "status": "scheduled",
+  "days": [
+   {
+    "date": "2026-11-18",
+    "open": "18:00",
+    "close": "21:00"
+   }
+  ],
+  "timezone": "America/Toronto",
+  "venue": {
+   "name": "Sample Game Shop Quebec City",
+   "address": "339 Main St",
+   "city": "Quebec City",
+   "region": "QC",
+   "postal": "G1R 4S9",
+   "country": "CA",
+   "lat": 46.8182,
+   "lon": -71.2265,
+   "geo_precision": "address"
+  },
+  "sells": {
+   "tcg": [
+    "lorcana"
+   ],
+   "sports": [],
+   "other": []
+  },
+  "mix": "tcg",
+  "admission": {
+   "free": false,
+   "adult": 15,
+   "child": null,
+   "currency": "CAD",
+   "notes": null
+  },
+  "size": {
+   "tables": null,
+   "booths": null,
+   "venue_sqft": null,
+   "players": 56,
+   "reported_attendance": null,
+   "first_year": null,
+   "edition": null
+  },
+  "vendor": {
+   "tables": [],
+   "application_url": null,
+   "opens": null,
+   "deadline": null,
+   "status": "unknown",
+   "electricity": null,
+   "setup": null,
+   "contact": null,
+   "notes": null
+  },
+  "organizer": {
+   "name": "Sample Game Shop Quebec City",
+   "promoter_id": null,
+   "url": null
+  },
+  "links": {
+   "official": "https://example.com/sample-store/sample-lorcana-league-night-at-sample-game-shop-quebec-city-quebec-city-qc",
+   "tickets": null,
+   "facebook": null,
+   "instagram": null
+  },
+  "sources": [
+   {
+    "source": "fixture",
+    "url": "https://example.com/sample-store-listing/sample-lorcana-league-night-at-sample-game-shop-quebec-city-quebec-city-qc-2026-11-18",
+    "retrieved": "2026-10-21",
+    "fields": [
+     "name",
+     "days",
+     "venue"
+    ]
+   }
+  ],
+  "verification": "listed",
+  "first_seen": "2026-10-21",
+  "last_checked": "2026-10-21",
+  "summary": null,
+  "estimate": null
+ },
+ {
+  "id": "sample-lorcana-league-night-at-sample-game-shop-vancouver-vancouver-bc-2026-12-20",
+  "series_id": "sample-lorcana-league-night-at-sample-game-shop-vancouver-vancouver-bc",
+  "name": "Sample Lorcana League Night at Sample Game Shop Vancouver",
+  "event_type": "store_event",
+  "status": "scheduled",
+  "days": [
+   {
+    "date": "2026-12-20",
+    "open": "18:00",
+    "close": "21:00"
+   }
+  ],
+  "timezone": "America/Vancouver",
+  "venue": {
+   "name": "Sample Game Shop Vancouver",
+   "address": "235 Main St",
+   "city": "Vancouver",
+   "region": "BC",
+   "postal": "V6B 4N6",
+   "country": "CA",
+   "lat": 49.2917,
+   "lon": -123.1125,
+   "geo_precision": "address"
+  },
+  "sells": {
+   "tcg": [
+    "lorcana"
+   ],
+   "sports": [],
+   "other": []
+  },
+  "mix": "tcg",
+  "admission": {
+   "free": false,
+   "adult": 5,
+   "child": null,
+   "currency": "CAD",
+   "notes": null
+  },
+  "size": {
+   "tables": null,
+   "booths": null,
+   "venue_sqft": null,
+   "players": 46,
+   "reported_attendance": null,
+   "first_year": null,
+   "edition": null
+  },
+  "vendor": {
+   "tables": [],
+   "application_url": null,
+   "opens": null,
+   "deadline": null,
+   "status": "unknown",
+   "electricity": null,
+   "setup": null,
+   "contact": null,
+   "notes": null
+  },
+  "organizer": {
+   "name": "Sample Game Shop Vancouver",
+   "promoter_id": null,
+   "url": null
+  },
+  "links": {
+   "official": "https://example.com/sample-store/sample-lorcana-league-night-at-sample-game-shop-vancouver-vancouver-bc",
+   "tickets": null,
+   "facebook": null,
+   "instagram": null
+  },
+  "sources": [
+   {
+    "source": "fixture",
+    "url": "https://example.com/sample-store-listing/sample-lorcana-league-night-at-sample-game-shop-vancouver-vancouver-bc-2026-12-20",
+    "retrieved": "2026-10-21",
+    "fields": [
+     "name",
+     "days",
+     "venue"
+    ]
+   }
+  ],
+  "verification": "listed",
+  "first_seen": "2026-10-21",
+  "last_checked": "2026-10-21",
+  "summary": null,
+  "estimate": null
+ },
+ {
+  "id": "sample-lorcana-league-night-at-sample-game-shop-victoria-victoria-bc-2027-02-07",
+  "series_id": "sample-lorcana-league-night-at-sample-game-shop-victoria-victoria-bc",
+  "name": "Sample Lorcana League Night at Sample Game Shop Victoria",
+  "event_type": "store_event",
+  "status": "scheduled",
+  "days": [
+   {
+    "date": "2027-02-07",
+    "open": "18:00",
+    "close": "21:00"
+   }
+  ],
+  "timezone": "America/Vancouver",
+  "venue": {
+   "name": "Sample Game Shop Victoria",
+   "address": "500 Main St",
+   "city": "Victoria",
+   "region": "BC",
+   "postal": "V8W 1P6",
+   "country": "CA",
+   "lat": 48.4443,
+   "lon": -123.3715,
+   "geo_precision": "address"
+  },
+  "sells": {
+   "tcg": [
+    "lorcana"
+   ],
+   "sports": [],
+   "other": []
+  },
+  "mix": "tcg",
+  "admission": {
+   "free": false,
+   "adult": 10,
+   "child": null,
+   "currency": "CAD",
+   "notes": null
+  },
+  "size": {
+   "tables": null,
+   "booths": null,
+   "venue_sqft": null,
+   "players": 53,
+   "reported_attendance": null,
+   "first_year": null,
+   "edition": null
+  },
+  "vendor": {
+   "tables": [],
+   "application_url": null,
+   "opens": null,
+   "deadline": null,
+   "status": "unknown",
+   "electricity": null,
+   "setup": null,
+   "contact": null,
+   "notes": null
+  },
+  "organizer": {
+   "name": "Sample Game Shop Victoria",
+   "promoter_id": null,
+   "url": null
+  },
+  "links": {
+   "official": "https://example.com/sample-store/sample-lorcana-league-night-at-sample-game-shop-victoria-victoria-bc",
+   "tickets": null,
+   "facebook": null,
+   "instagram": null
+  },
+  "sources": [
+   {
+    "source": "fixture",
+    "url": "https://example.com/sample-store-listing/sample-lorcana-league-night-at-sample-game-shop-victoria-victoria-bc-2027-02-07",
+    "retrieved": "2026-10-21",
+    "fields": [
+     "name",
+     "days",
+     "venue"
+    ]
+   }
+  ],
+  "verification": "listed",
+  "first_seen": "2026-10-21",
+  "last_checked": "2026-10-21",
+  "summary": null,
+  "estimate": null
+ },
+ {
+  "id": "sample-magic-prerelease-at-sample-game-shop-albany-albany-ny-2027-02-11",
+  "series_id": "sample-magic-prerelease-at-sample-game-shop-albany-albany-ny",
+  "name": "Sample Magic Prerelease at Sample Game Shop Albany",
+  "event_type": "store_event",
+  "status": "scheduled",
+  "days": [
+   {
+    "date": "2027-02-11",
+    "open": "18:00",
+    "close": "21:00"
+   }
+  ],
+  "timezone": "America/New_York",
+  "venue": {
+   "name": "Sample Game Shop Albany",
+   "address": "794 Main St",
+   "city": "Albany",
+   "region": "NY",
+   "postal": "12207",
+   "country": "US",
+   "lat": 42.6697,
+   "lon": -73.7895,
+   "geo_precision": "address"
+  },
+  "sells": {
+   "tcg": [
+    "mtg"
+   ],
+   "sports": [],
+   "other": []
+  },
+  "mix": "tcg",
+  "admission": {
+   "free": false,
+   "adult": 10,
+   "child": null,
+   "currency": "USD",
+   "notes": null
+  },
+  "size": {
+   "tables": null,
+   "booths": null,
+   "venue_sqft": null,
+   "players": 37,
+   "reported_attendance": null,
+   "first_year": null,
+   "edition": null
+  },
+  "vendor": {
+   "tables": [],
+   "application_url": null,
+   "opens": null,
+   "deadline": null,
+   "status": "unknown",
+   "electricity": null,
+   "setup": null,
+   "contact": null,
+   "notes": null
+  },
+  "organizer": {
+   "name": "Sample Game Shop Albany",
+   "promoter_id": null,
+   "url": null
+  },
+  "links": {
+   "official": "https://example.com/sample-store/sample-magic-prerelease-at-sample-game-shop-albany-albany-ny",
+   "tickets": null,
+   "facebook": null,
+   "instagram": null
+  },
+  "sources": [
+   {
+    "source": "fixture",
+    "url": "https://example.com/sample-store-listing/sample-magic-prerelease-at-sample-game-shop-albany-albany-ny-2027-02-11",
+    "retrieved": "2026-10-21",
+    "fields": [
+     "name",
+     "days",
+     "venue"
+    ]
+   }
+  ],
+  "verification": "listed",
+  "first_seen": "2026-10-21",
+  "last_checked": "2026-10-21",
+  "summary": null,
+  "estimate": null
+ },
+ {
+  "id": "sample-magic-prerelease-at-sample-game-shop-austin-austin-tx-2026-12-26",
+  "series_id": "sample-magic-prerelease-at-sample-game-shop-austin-austin-tx",
+  "name": "Sample Magic Prerelease at Sample Game Shop Austin",
+  "event_type": "store_event",
+  "status": "scheduled",
+  "days": [
+   {
+    "date": "2026-12-26",
+    "open": "18:00",
+    "close": "21:00"
+   }
+  ],
+  "timezone": "America/Chicago",
+  "venue": {
+   "name": "Sample Game Shop Austin",
+   "address": "874 Main St",
+   "city": "Austin",
+   "region": "TX",
+   "postal": "78701",
+   "country": "US",
+   "lat": 30.255,
+   "lon": -97.7365,
+   "geo_precision": "address"
+  },
+  "sells": {
+   "tcg": [
+    "mtg"
+   ],
+   "sports": [],
+   "other": []
+  },
+  "mix": "tcg",
+  "admission": {
+   "free": false,
+   "adult": 30,
+   "child": null,
+   "currency": "USD",
+   "notes": null
+  },
+  "size": {
+   "tables": null,
+   "booths": null,
+   "venue_sqft": null,
+   "players": 30,
+   "reported_attendance": null,
+   "first_year": null,
+   "edition": null
+  },
+  "vendor": {
+   "tables": [],
+   "application_url": null,
+   "opens": null,
+   "deadline": null,
+   "status": "unknown",
+   "electricity": null,
+   "setup": null,
+   "contact": null,
+   "notes": null
+  },
+  "organizer": {
+   "name": "Sample Game Shop Austin",
+   "promoter_id": null,
+   "url": null
+  },
+  "links": {
+   "official": "https://example.com/sample-store/sample-magic-prerelease-at-sample-game-shop-austin-austin-tx",
+   "tickets": null,
+   "facebook": null,
+   "instagram": null
+  },
+  "sources": [
+   {
+    "source": "fixture",
+    "url": "https://example.com/sample-store-listing/sample-magic-prerelease-at-sample-game-shop-austin-austin-tx-2026-12-26",
+    "retrieved": "2026-10-21",
+    "fields": [
+     "name",
+     "days",
+     "venue"
+    ]
+   }
+  ],
+  "verification": "listed",
+  "first_seen": "2026-10-21",
+  "last_checked": "2026-10-21",
+  "summary": null,
+  "estimate": null
+ },
+ {
+  "id": "sample-magic-prerelease-at-sample-game-shop-buffalo-buffalo-ny-2027-01-26",
+  "series_id": "sample-magic-prerelease-at-sample-game-shop-buffalo-buffalo-ny",
+  "name": "Sample Magic Prerelease at Sample Game Shop Buffalo",
+  "event_type": "store_event",
+  "status": "scheduled",
+  "days": [
+   {
+    "date": "2027-01-26",
+    "open": "18:00",
+    "close": "21:00"
+   }
+  ],
+  "timezone": "America/New_York",
+  "venue": {
+   "name": "Sample Game Shop Buffalo",
+   "address": "452 Main St",
+   "city": "Buffalo",
+   "region": "NY",
+   "postal": "14202",
+   "country": "US",
+   "lat": 42.8646,
+   "lon": -78.8808,
+   "geo_precision": "address"
+  },
+  "sells": {
+   "tcg": [
+    "mtg"
+   ],
+   "sports": [],
+   "other": []
+  },
+  "mix": "tcg",
+  "admission": {
+   "free": false,
+   "adult": 10,
+   "child": null,
+   "currency": "USD",
+   "notes": null
+  },
+  "size": {
+   "tables": null,
+   "booths": null,
+   "venue_sqft": null,
+   "players": 15,
+   "reported_attendance": null,
+   "first_year": null,
+   "edition": null
+  },
+  "vendor": {
+   "tables": [],
+   "application_url": null,
+   "opens": null,
+   "deadline": null,
+   "status": "unknown",
+   "electricity": null,
+   "setup": null,
+   "contact": null,
+   "notes": null
+  },
+  "organizer": {
+   "name": "Sample Game Shop Buffalo",
+   "promoter_id": null,
+   "url": null
+  },
+  "links": {
+   "official": "https://example.com/sample-store/sample-magic-prerelease-at-sample-game-shop-buffalo-buffalo-ny",
+   "tickets": null,
+   "facebook": null,
+   "instagram": null
+  },
+  "sources": [
+   {
+    "source": "fixture",
+    "url": "https://example.com/sample-store-listing/sample-magic-prerelease-at-sample-game-shop-buffalo-buffalo-ny-2027-01-26",
+    "retrieved": "2026-10-21",
+    "fields": [
+     "name",
+     "days",
+     "venue"
+    ]
+   }
+  ],
+  "verification": "listed",
+  "first_seen": "2026-10-21",
+  "last_checked": "2026-10-21",
+  "summary": null,
+  "estimate": null
+ },
+ {
+  "id": "sample-magic-prerelease-at-sample-game-shop-little-rock-little-rock-ar-2026-12-01",
+  "series_id": "sample-magic-prerelease-at-sample-game-shop-little-rock-little-rock-ar",
+  "name": "Sample Magic Prerelease at Sample Game Shop Little Rock",
+  "event_type": "store_event",
+  "status": "scheduled",
+  "days": [
+   {
+    "date": "2026-12-01",
+    "open": "18:00",
+    "close": "21:00"
+   }
+  ],
+  "timezone": "America/Chicago",
+  "venue": {
+   "name": "Sample Game Shop Little Rock",
+   "address": "83 Main St",
+   "city": "Little Rock",
+   "region": "AR",
+   "postal": "72201",
+   "country": "US",
+   "lat": 34.744,
+   "lon": -92.2911,
+   "geo_precision": "address"
+  },
+  "sells": {
+   "tcg": [
+    "mtg"
+   ],
+   "sports": [],
+   "other": []
+  },
+  "mix": "tcg",
+  "admission": {
+   "free": false,
+   "adult": 15,
+   "child": null,
+   "currency": "USD",
+   "notes": null
+  },
+  "size": {
+   "tables": null,
+   "booths": null,
+   "venue_sqft": null,
+   "players": 57,
+   "reported_attendance": null,
+   "first_year": null,
+   "edition": null
+  },
+  "vendor": {
+   "tables": [],
+   "application_url": null,
+   "opens": null,
+   "deadline": null,
+   "status": "unknown",
+   "electricity": null,
+   "setup": null,
+   "contact": null,
+   "notes": null
+  },
+  "organizer": {
+   "name": "Sample Game Shop Little Rock",
+   "promoter_id": null,
+   "url": null
+  },
+  "links": {
+   "official": "https://example.com/sample-store/sample-magic-prerelease-at-sample-game-shop-little-rock-little-rock-ar",
+   "tickets": null,
+   "facebook": null,
+   "instagram": null
+  },
+  "sources": [
+   {
+    "source": "fixture",
+    "url": "https://example.com/sample-store-listing/sample-magic-prerelease-at-sample-game-shop-little-rock-little-rock-ar-2026-12-01",
+    "retrieved": "2026-10-21",
+    "fields": [
+     "name",
+     "days",
+     "venue"
+    ]
+   }
+  ],
+  "verification": "listed",
+  "first_seen": "2026-10-21",
+  "last_checked": "2026-10-21",
+  "summary": null,
+  "estimate": null
+ },
+ {
+  "id": "sample-magic-prerelease-at-sample-game-shop-new-york-new-york-ny-2027-01-05",
+  "series_id": "sample-magic-prerelease-at-sample-game-shop-new-york-new-york-ny",
+  "name": "Sample Magic Prerelease at Sample Game Shop New York",
+  "event_type": "store_event",
+  "status": "scheduled",
+  "days": [
+   {
+    "date": "2027-01-05",
+    "open": "18:00",
+    "close": "21:00"
+   }
+  ],
+  "timezone": "America/New_York",
+  "venue": {
+   "name": "Sample Game Shop New York",
+   "address": "426 Main St",
+   "city": "New York",
+   "region": "NY",
+   "postal": "10001",
+   "country": "US",
+   "lat": 40.6995,
+   "lon": -74.0379,
+   "geo_precision": "address"
+  },
+  "sells": {
+   "tcg": [
+    "mtg"
+   ],
+   "sports": [],
+   "other": []
+  },
+  "mix": "tcg",
+  "admission": {
+   "free": false,
+   "adult": 10,
+   "child": null,
+   "currency": "USD",
+   "notes": null
+  },
+  "size": {
+   "tables": null,
+   "booths": null,
+   "venue_sqft": null,
+   "players": 37,
+   "reported_attendance": null,
+   "first_year": null,
+   "edition": null
+  },
+  "vendor": {
+   "tables": [],
+   "application_url": null,
+   "opens": null,
+   "deadline": null,
+   "status": "unknown",
+   "electricity": null,
+   "setup": null,
+   "contact": null,
+   "notes": null
+  },
+  "organizer": {
+   "name": "Sample Game Shop New York",
+   "promoter_id": null,
+   "url": null
+  },
+  "links": {
+   "official": "https://example.com/sample-store/sample-magic-prerelease-at-sample-game-shop-new-york-new-york-ny",
+   "tickets": null,
+   "facebook": null,
+   "instagram": null
+  },
+  "sources": [
+   {
+    "source": "fixture",
+    "url": "https://example.com/sample-store-listing/sample-magic-prerelease-at-sample-game-shop-new-york-new-york-ny-2027-01-05",
+    "retrieved": "2026-10-21",
+    "fields": [
+     "name",
+     "days",
+     "venue"
+    ]
+   }
+  ],
+  "verification": "listed",
+  "first_seen": "2026-10-21",
+  "last_checked": "2026-10-21",
+  "summary": null,
+  "estimate": null
+ },
+ {
+  "id": "sample-magic-prerelease-at-sample-game-shop-oklahoma-city-oklahoma-city-ok-2026-11-18",
+  "series_id": "sample-magic-prerelease-at-sample-game-shop-oklahoma-city-oklahoma-city-ok",
+  "name": "Sample Magic Prerelease at Sample Game Shop Oklahoma City",
+  "event_type": "store_event",
+  "status": "scheduled",
+  "days": [
+   {
+    "date": "2026-11-18",
+    "open": "18:00",
+    "close": "21:00"
+   }
+  ],
+  "timezone": "America/Chicago",
+  "venue": {
+   "name": "Sample Game Shop Oklahoma City",
+   "address": "614 Main St",
+   "city": "Oklahoma City",
+   "region": "OK",
+   "postal": "73102",
+   "country": "US",
+   "lat": 35.4508,
+   "lon": -97.5446,
+   "geo_precision": "address"
+  },
+  "sells": {
+   "tcg": [
+    "mtg"
+   ],
+   "sports": [],
+   "other": []
+  },
+  "mix": "tcg",
+  "admission": {
+   "free": false,
+   "adult": 15,
+   "child": null,
+   "currency": "USD",
+   "notes": null
+  },
+  "size": {
+   "tables": null,
+   "booths": null,
+   "venue_sqft": null,
+   "players": 9,
+   "reported_attendance": null,
+   "first_year": null,
+   "edition": null
+  },
+  "vendor": {
+   "tables": [],
+   "application_url": null,
+   "opens": null,
+   "deadline": null,
+   "status": "unknown",
+   "electricity": null,
+   "setup": null,
+   "contact": null,
+   "notes": null
+  },
+  "organizer": {
+   "name": "Sample Game Shop Oklahoma City",
+   "promoter_id": null,
+   "url": null
+  },
+  "links": {
+   "official": "https://example.com/sample-store/sample-magic-prerelease-at-sample-game-shop-oklahoma-city-oklahoma-city-ok",
+   "tickets": null,
+   "facebook": null,
+   "instagram": null
+  },
+  "sources": [
+   {
+    "source": "fixture",
+    "url": "https://example.com/sample-store-listing/sample-magic-prerelease-at-sample-game-shop-oklahoma-city-oklahoma-city-ok-2026-11-18",
+    "retrieved": "2026-10-21",
+    "fields": [
+     "name",
+     "days",
+     "venue"
+    ]
+   }
+  ],
+  "verification": "listed",
+  "first_seen": "2026-10-21",
+  "last_checked": "2026-10-21",
+  "summary": null,
+  "estimate": null
+ },
+ {
+  "id": "sample-magic-prerelease-at-sample-game-shop-rochester-rochester-ny-2026-11-27",
+  "series_id": "sample-magic-prerelease-at-sample-game-shop-rochester-rochester-ny",
+  "name": "Sample Magic Prerelease at Sample Game Shop Rochester",
+  "event_type": "store_event",
+  "status": "scheduled",
+  "days": [
+   {
+    "date": "2026-11-27",
+    "open": "18:00",
+    "close": "21:00"
+   }
+  ],
+  "timezone": "America/New_York",
+  "venue": {
+   "name": "Sample Game Shop Rochester",
+   "address": "355 Main St",
+   "city": "Rochester",
+   "region": "NY",
+   "postal": "14604",
+   "country": "US",
+   "lat": 43.1715,
+   "lon": -77.6048,
+   "geo_precision": "address"
+  },
+  "sells": {
+   "tcg": [
+    "mtg"
+   ],
+   "sports": [],
+   "other": []
+  },
+  "mix": "tcg",
+  "admission": {
+   "free": false,
+   "adult": 15,
+   "child": null,
+   "currency": "USD",
+   "notes": null
+  },
+  "size": {
+   "tables": null,
+   "booths": null,
+   "venue_sqft": null,
+   "players": 26,
+   "reported_attendance": null,
+   "first_year": null,
+   "edition": null
+  },
+  "vendor": {
+   "tables": [],
+   "application_url": null,
+   "opens": null,
+   "deadline": null,
+   "status": "unknown",
+   "electricity": null,
+   "setup": null,
+   "contact": null,
+   "notes": null
+  },
+  "organizer": {
+   "name": "Sample Game Shop Rochester",
+   "promoter_id": null,
+   "url": null
+  },
+  "links": {
+   "official": "https://example.com/sample-store/sample-magic-prerelease-at-sample-game-shop-rochester-rochester-ny",
+   "tickets": null,
+   "facebook": null,
+   "instagram": null
+  },
+  "sources": [
+   {
+    "source": "fixture",
+    "url": "https://example.com/sample-store-listing/sample-magic-prerelease-at-sample-game-shop-rochester-rochester-ny-2026-11-27",
+    "retrieved": "2026-10-21",
+    "fields": [
+     "name",
+     "days",
+     "venue"
+    ]
+   }
+  ],
+  "verification": "listed",
+  "first_seen": "2026-10-21",
+  "last_checked": "2026-10-21",
+  "summary": null,
+  "estimate": null
+ },
+ {
+  "id": "sample-magic-prerelease-at-sample-game-shop-san-antonio-san-antonio-tx-2026-11-14",
+  "series_id": "sample-magic-prerelease-at-sample-game-shop-san-antonio-san-antonio-tx",
+  "name": "Sample Magic Prerelease at Sample Game Shop San Antonio",
+  "event_type": "store_event",
+  "status": "scheduled",
+  "days": [
+   {
+    "date": "2026-11-14",
+    "open": "18:00",
+    "close": "21:00"
+   }
+  ],
+  "timezone": "America/Chicago",
+  "venue": {
+   "name": "Sample Game Shop San Antonio",
+   "address": "770 Main St",
+   "city": "San Antonio",
+   "region": "TX",
+   "postal": "78205",
+   "country": "US",
+   "lat": 29.4239,
+   "lon": -98.5032,
+   "geo_precision": "address"
+  },
+  "sells": {
+   "tcg": [
+    "mtg"
+   ],
+   "sports": [],
+   "other": []
+  },
+  "mix": "tcg",
+  "admission": {
+   "free": false,
+   "adult": 10,
+   "child": null,
+   "currency": "USD",
+   "notes": null
+  },
+  "size": {
+   "tables": null,
+   "booths": null,
+   "venue_sqft": null,
+   "players": 63,
+   "reported_attendance": null,
+   "first_year": null,
+   "edition": null
+  },
+  "vendor": {
+   "tables": [],
+   "application_url": null,
+   "opens": null,
+   "deadline": null,
+   "status": "unknown",
+   "electricity": null,
+   "setup": null,
+   "contact": null,
+   "notes": null
+  },
+  "organizer": {
+   "name": "Sample Game Shop San Antonio",
+   "promoter_id": null,
+   "url": null
+  },
+  "links": {
+   "official": "https://example.com/sample-store/sample-magic-prerelease-at-sample-game-shop-san-antonio-san-antonio-tx",
+   "tickets": null,
+   "facebook": null,
+   "instagram": null
+  },
+  "sources": [
+   {
+    "source": "fixture",
+    "url": "https://example.com/sample-store-listing/sample-magic-prerelease-at-sample-game-shop-san-antonio-san-antonio-tx-2026-11-14",
+    "retrieved": "2026-10-21",
+    "fields": [
+     "name",
+     "days",
+     "venue"
+    ]
+   }
+  ],
+  "verification": "listed",
+  "first_seen": "2026-10-21",
+  "last_checked": "2026-10-21",
+  "summary": null,
+  "estimate": null
+ },
+ {
+  "id": "sample-magic-prerelease-at-sample-game-shop-syracuse-syracuse-ny-2026-12-28",
+  "series_id": "sample-magic-prerelease-at-sample-game-shop-syracuse-syracuse-ny",
+  "name": "Sample Magic Prerelease at Sample Game Shop Syracuse",
+  "event_type": "store_event",
+  "status": "scheduled",
+  "days": [
+   {
+    "date": "2026-12-28",
+    "open": "18:00",
+    "close": "21:00"
+   }
+  ],
+  "timezone": "America/New_York",
+  "venue": {
+   "name": "Sample Game Shop Syracuse",
+   "address": "657 Main St",
+   "city": "Syracuse",
+   "region": "NY",
+   "postal": "13202",
+   "country": "US",
+   "lat": 43.0628,
+   "lon": -76.1203,
+   "geo_precision": "address"
+  },
+  "sells": {
+   "tcg": [
+    "mtg"
+   ],
+   "sports": [],
+   "other": []
+  },
+  "mix": "tcg",
+  "admission": {
+   "free": false,
+   "adult": 30,
+   "child": null,
+   "currency": "USD",
+   "notes": null
+  },
+  "size": {
+   "tables": null,
+   "booths": null,
+   "venue_sqft": null,
+   "players": 47,
+   "reported_attendance": null,
+   "first_year": null,
+   "edition": null
+  },
+  "vendor": {
+   "tables": [],
+   "application_url": null,
+   "opens": null,
+   "deadline": null,
+   "status": "unknown",
+   "electricity": null,
+   "setup": null,
+   "contact": null,
+   "notes": null
+  },
+  "organizer": {
+   "name": "Sample Game Shop Syracuse",
+   "promoter_id": null,
+   "url": null
+  },
+  "links": {
+   "official": "https://example.com/sample-store/sample-magic-prerelease-at-sample-game-shop-syracuse-syracuse-ny",
+   "tickets": null,
+   "facebook": null,
+   "instagram": null
+  },
+  "sources": [
+   {
+    "source": "fixture",
+    "url": "https://example.com/sample-store-listing/sample-magic-prerelease-at-sample-game-shop-syracuse-syracuse-ny-2026-12-28",
+    "retrieved": "2026-10-21",
+    "fields": [
+     "name",
+     "days",
+     "venue"
+    ]
+   }
+  ],
+  "verification": "listed",
+  "first_seen": "2026-10-21",
+  "last_checked": "2026-10-21",
+  "summary": null,
+  "estimate": null
+ },
+ {
+  "id": "sample-one-piece-store-tournament-at-sample-game-shop-anchorage-anchorage-ak-2027-01-05",
+  "series_id": "sample-one-piece-store-tournament-at-sample-game-shop-anchorage-anchorage-ak",
+  "name": "Sample One Piece Store Tournament at Sample Game Shop Anchorage",
+  "event_type": "store_event",
+  "status": "scheduled",
+  "days": [
+   {
+    "date": "2027-01-05",
+    "open": "18:00",
+    "close": "21:00"
+   }
+  ],
+  "timezone": "America/Anchorage",
+  "venue": {
+   "name": "Sample Game Shop Anchorage",
+   "address": "443 Main St",
+   "city": "Anchorage",
+   "region": "AK",
+   "postal": "99501",
+   "country": "US",
+   "lat": 61.2098,
+   "lon": -149.8776,
+   "geo_precision": "address"
+  },
+  "sells": {
+   "tcg": [
+    "one_piece"
+   ],
+   "sports": [],
+   "other": []
+  },
+  "mix": "tcg",
+  "admission": {
+   "free": false,
+   "adult": 15,
+   "child": null,
+   "currency": "USD",
+   "notes": null
+  },
+  "size": {
+   "tables": null,
+   "booths": null,
+   "venue_sqft": null,
+   "players": 32,
+   "reported_attendance": null,
+   "first_year": null,
+   "edition": null
+  },
+  "vendor": {
+   "tables": [],
+   "application_url": null,
+   "opens": null,
+   "deadline": null,
+   "status": "unknown",
+   "electricity": null,
+   "setup": null,
+   "contact": null,
+   "notes": null
+  },
+  "organizer": {
+   "name": "Sample Game Shop Anchorage",
+   "promoter_id": null,
+   "url": null
+  },
+  "links": {
+   "official": "https://example.com/sample-store/sample-one-piece-store-tournament-at-sample-game-shop-anchorage-anchorage-ak",
+   "tickets": null,
+   "facebook": null,
+   "instagram": null
+  },
+  "sources": [
+   {
+    "source": "fixture",
+    "url": "https://example.com/sample-store-listing/sample-one-piece-store-tournament-at-sample-game-shop-anchorage-anchorage-ak-2027-01-05",
+    "retrieved": "2026-10-21",
+    "fields": [
+     "name",
+     "days",
+     "venue"
+    ]
+   }
+  ],
+  "verification": "listed",
+  "first_seen": "2026-10-21",
+  "last_checked": "2026-10-21",
+  "summary": null,
+  "estimate": null
+ },
+ {
+  "id": "sample-one-piece-store-tournament-at-sample-game-shop-honolulu-honolulu-hi-2027-01-14",
+  "series_id": "sample-one-piece-store-tournament-at-sample-game-shop-honolulu-honolulu-hi",
+  "name": "Sample One Piece Store Tournament at Sample Game Shop Honolulu",
+  "event_type": "store_event",
+  "status": "scheduled",
+  "days": [
+   {
+    "date": "2027-01-14",
+    "open": "18:00",
+    "close": "21:00"
+   }
+  ],
+  "timezone": "Pacific/Honolulu",
+  "venue": {
+   "name": "Sample Game Shop Honolulu",
+   "address": "68 Main St",
+   "city": "Honolulu",
+   "region": "HI",
+   "postal": "96813",
+   "country": "US",
+   "lat": 21.2977,
+   "lon": -157.8525,
+   "geo_precision": "address"
+  },
+  "sells": {
+   "tcg": [
+    "one_piece"
+   ],
+   "sports": [],
+   "other": []
+  },
+  "mix": "tcg",
+  "admission": {
+   "free": false,
+   "adult": 30,
+   "child": null,
+   "currency": "USD",
+   "notes": null
+  },
+  "size": {
+   "tables": null,
+   "booths": null,
+   "venue_sqft": null,
+   "players": 26,
+   "reported_attendance": null,
+   "first_year": null,
+   "edition": null
+  },
+  "vendor": {
+   "tables": [],
+   "application_url": null,
+   "opens": null,
+   "deadline": null,
+   "status": "unknown",
+   "electricity": null,
+   "setup": null,
+   "contact": null,
+   "notes": null
+  },
+  "organizer": {
+   "name": "Sample Game Shop Honolulu",
+   "promoter_id": null,
+   "url": null
+  },
+  "links": {
+   "official": "https://example.com/sample-store/sample-one-piece-store-tournament-at-sample-game-shop-honolulu-honolulu-hi",
+   "tickets": null,
+   "facebook": null,
+   "instagram": null
+  },
+  "sources": [
+   {
+    "source": "fixture",
+    "url": "https://example.com/sample-store-listing/sample-one-piece-store-tournament-at-sample-game-shop-honolulu-honolulu-hi-2027-01-14",
+    "retrieved": "2026-10-21",
+    "fields": [
+     "name",
+     "days",
+     "venue"
+    ]
+   }
+  ],
+  "verification": "listed",
+  "first_seen": "2026-10-21",
+  "last_checked": "2026-10-21",
+  "summary": null,
+  "estimate": null
+ },
+ {
+  "id": "sample-one-piece-store-tournament-at-sample-game-shop-jacksonville-jacksonville-fl-2026-11-21",
+  "series_id": "sample-one-piece-store-tournament-at-sample-game-shop-jacksonville-jacksonville-fl",
+  "name": "Sample One Piece Store Tournament at Sample Game Shop Jacksonville",
+  "event_type": "store_event",
+  "status": "scheduled",
+  "days": [
+   {
+    "date": "2026-11-21",
+    "open": "18:00",
+    "close": "21:00"
+   }
+  ],
+  "timezone": "America/New_York",
+  "venue": {
+   "name": "Sample Game Shop Jacksonville",
+   "address": "881 Main St",
+   "city": "Jacksonville",
+   "region": "FL",
+   "postal": "32202",
+   "country": "US",
+   "lat": 30.3259,
+   "lon": -81.6586,
+   "geo_precision": "address"
+  },
+  "sells": {
+   "tcg": [
+    "one_piece"
+   ],
+   "sports": [],
+   "other": []
+  },
+  "mix": "tcg",
+  "admission": {
+   "free": false,
+   "adult": 5,
+   "child": null,
+   "currency": "USD",
+   "notes": null
+  },
+  "size": {
+   "tables": null,
+   "booths": null,
+   "venue_sqft": null,
+   "players": 47,
+   "reported_attendance": null,
+   "first_year": null,
+   "edition": null
+  },
+  "vendor": {
+   "tables": [],
+   "application_url": null,
+   "opens": null,
+   "deadline": null,
+   "status": "unknown",
+   "electricity": null,
+   "setup": null,
+   "contact": null,
+   "notes": null
+  },
+  "organizer": {
+   "name": "Sample Game Shop Jacksonville",
+   "promoter_id": null,
+   "url": null
+  },
+  "links": {
+   "official": "https://example.com/sample-store/sample-one-piece-store-tournament-at-sample-game-shop-jacksonville-jacksonville-fl",
+   "tickets": null,
+   "facebook": null,
+   "instagram": null
+  },
+  "sources": [
+   {
+    "source": "fixture",
+    "url": "https://example.com/sample-store-listing/sample-one-piece-store-tournament-at-sample-game-shop-jacksonville-jacksonville-fl-2026-11-21",
+    "retrieved": "2026-10-21",
+    "fields": [
+     "name",
+     "days",
+     "venue"
+    ]
+   }
+  ],
+  "verification": "listed",
+  "first_seen": "2026-10-21",
+  "last_checked": "2026-10-21",
+  "summary": null,
+  "estimate": null
+ },
+ {
+  "id": "sample-one-piece-store-tournament-at-sample-game-shop-miami-miami-fl-2026-10-18",
+  "series_id": "sample-one-piece-store-tournament-at-sample-game-shop-miami-miami-fl",
+  "name": "Sample One Piece Store Tournament at Sample Game Shop Miami",
+  "event_type": "store_event",
+  "status": "scheduled",
+  "days": [
+   {
+    "date": "2026-10-18",
+    "open": "18:00",
+    "close": "21:00"
+   }
+  ],
+  "timezone": "America/New_York",
+  "venue": {
+   "name": "Sample Game Shop Miami",
+   "address": "432 Main St",
+   "city": "Miami",
+   "region": "FL",
+   "postal": "33130",
+   "country": "US",
+   "lat": 25.7581,
+   "lon": -80.1816,
+   "geo_precision": "address"
+  },
+  "sells": {
+   "tcg": [
+    "one_piece"
+   ],
+   "sports": [],
+   "other": []
+  },
+  "mix": "tcg",
+  "admission": {
+   "free": false,
+   "adult": 30,
+   "child": null,
+   "currency": "USD",
+   "notes": null
+  },
+  "size": {
+   "tables": null,
+   "booths": null,
+   "venue_sqft": null,
+   "players": 28,
+   "reported_attendance": null,
+   "first_year": null,
+   "edition": null
+  },
+  "vendor": {
+   "tables": [],
+   "application_url": null,
+   "opens": null,
+   "deadline": null,
+   "status": "unknown",
+   "electricity": null,
+   "setup": null,
+   "contact": null,
+   "notes": null
+  },
+  "organizer": {
+   "name": "Sample Game Shop Miami",
+   "promoter_id": null,
+   "url": null
+  },
+  "links": {
+   "official": "https://example.com/sample-store/sample-one-piece-store-tournament-at-sample-game-shop-miami-miami-fl",
+   "tickets": null,
+   "facebook": null,
+   "instagram": null
+  },
+  "sources": [
+   {
+    "source": "fixture",
+    "url": "https://example.com/sample-store-listing/sample-one-piece-store-tournament-at-sample-game-shop-miami-miami-fl-2026-10-18",
+    "retrieved": "2026-10-21",
+    "fields": [
+     "name",
+     "days",
+     "venue"
+    ]
+   }
+  ],
+  "verification": "listed",
+  "first_seen": "2026-10-21",
+  "last_checked": "2026-10-21",
+  "summary": null,
+  "estimate": null
+ },
+ {
+  "id": "sample-one-piece-store-tournament-at-sample-game-shop-mississauga-mississauga-on-2027-01-16",
+  "series_id": "sample-one-piece-store-tournament-at-sample-game-shop-mississauga-mississauga-on",
+  "name": "Sample One Piece Store Tournament at Sample Game Shop Mississauga",
+  "event_type": "store_event",
+  "status": "scheduled",
+  "days": [
+   {
+    "date": "2027-01-16",
+    "open": "18:00",
+    "close": "21:00"
+   }
+  ],
+  "timezone": "America/Toronto",
+  "venue": {
+   "name": "Sample Game Shop Mississauga",
+   "address": "851 Main St",
+   "city": "Mississauga",
+   "region": "ON",
+   "postal": "L5B 2C9",
+   "country": "CA",
+   "lat": 43.6091,
+   "lon": -79.6584,
+   "geo_precision": "address"
+  },
+  "sells": {
+   "tcg": [
+    "one_piece"
+   ],
+   "sports": [],
+   "other": []
+  },
+  "mix": "tcg",
+  "admission": {
+   "free": false,
+   "adult": 10,
+   "child": null,
+   "currency": "CAD",
+   "notes": null
+  },
+  "size": {
+   "tables": null,
+   "booths": null,
+   "venue_sqft": null,
+   "players": 27,
+   "reported_attendance": null,
+   "first_year": null,
+   "edition": null
+  },
+  "vendor": {
+   "tables": [],
+   "application_url": null,
+   "opens": null,
+   "deadline": null,
+   "status": "unknown",
+   "electricity": null,
+   "setup": null,
+   "contact": null,
+   "notes": null
+  },
+  "organizer": {
+   "name": "Sample Game Shop Mississauga",
+   "promoter_id": null,
+   "url": null
+  },
+  "links": {
+   "official": "https://example.com/sample-store/sample-one-piece-store-tournament-at-sample-game-shop-mississauga-mississauga-on",
+   "tickets": null,
+   "facebook": null,
+   "instagram": null
+  },
+  "sources": [
+   {
+    "source": "fixture",
+    "url": "https://example.com/sample-store-listing/sample-one-piece-store-tournament-at-sample-game-shop-mississauga-mississauga-on-2027-01-16",
+    "retrieved": "2026-10-21",
+    "fields": [
+     "name",
+     "days",
+     "venue"
+    ]
+   }
+  ],
+  "verification": "listed",
+  "first_seen": "2026-10-21",
+  "last_checked": "2026-10-21",
+  "summary": null,
+  "estimate": null
+ },
+ {
+  "id": "sample-one-piece-store-tournament-at-sample-game-shop-nashville-nashville-tn-2026-11-17",
+  "series_id": "sample-one-piece-store-tournament-at-sample-game-shop-nashville-nashville-tn",
+  "name": "Sample One Piece Store Tournament at Sample Game Shop Nashville",
+  "event_type": "store_event",
+  "status": "scheduled",
+  "days": [
+   {
+    "date": "2026-11-17",
+    "open": "18:00",
+    "close": "21:00"
+   }
+  ],
+  "timezone": "America/Chicago",
+  "venue": {
+   "name": "Sample Game Shop Nashville",
+   "address": "12 Main St",
+   "city": "Nashville",
+   "region": "TN",
+   "postal": "37203",
+   "country": "US",
+   "lat": 36.173,
+   "lon": -86.7821,
+   "geo_precision": "address"
+  },
+  "sells": {
+   "tcg": [
+    "one_piece"
+   ],
+   "sports": [],
+   "other": []
+  },
+  "mix": "tcg",
+  "admission": {
+   "free": false,
+   "adult": 15,
+   "child": null,
+   "currency": "USD",
+   "notes": null
+  },
+  "size": {
+   "tables": null,
+   "booths": null,
+   "venue_sqft": null,
+   "players": 39,
+   "reported_attendance": null,
+   "first_year": null,
+   "edition": null
+  },
+  "vendor": {
+   "tables": [],
+   "application_url": null,
+   "opens": null,
+   "deadline": null,
+   "status": "unknown",
+   "electricity": null,
+   "setup": null,
+   "contact": null,
+   "notes": null
+  },
+  "organizer": {
+   "name": "Sample Game Shop Nashville",
+   "promoter_id": null,
+   "url": null
+  },
+  "links": {
+   "official": "https://example.com/sample-store/sample-one-piece-store-tournament-at-sample-game-shop-nashville-nashville-tn",
+   "tickets": null,
+   "facebook": null,
+   "instagram": null
+  },
+  "sources": [
+   {
+    "source": "fixture",
+    "url": "https://example.com/sample-store-listing/sample-one-piece-store-tournament-at-sample-game-shop-nashville-nashville-tn-2026-11-17",
+    "retrieved": "2026-10-21",
+    "fields": [
+     "name",
+     "days",
+     "venue"
+    ]
+   }
+  ],
+  "verification": "listed",
+  "first_seen": "2026-10-21",
+  "last_checked": "2026-10-21",
+  "summary": null,
+  "estimate": null
+ },
+ {
+  "id": "sample-one-piece-store-tournament-at-sample-game-shop-orlando-orlando-fl-2026-12-18",
+  "series_id": "sample-one-piece-store-tournament-at-sample-game-shop-orlando-orlando-fl",
+  "name": "Sample One Piece Store Tournament at Sample Game Shop Orlando",
+  "event_type": "store_event",
+  "status": "scheduled",
+  "days": [
+   {
+    "date": "2026-12-18",
+    "open": "18:00",
+    "close": "21:00"
+   }
+  ],
+  "timezone": "America/New_York",
+  "venue": {
+   "name": "Sample Game Shop Orlando",
+   "address": "36 Main St",
+   "city": "Orlando",
+   "region": "FL",
+   "postal": "32801",
+   "country": "US",
+   "lat": 28.526,
+   "lon": -81.4084,
+   "geo_precision": "address"
+  },
+  "sells": {
+   "tcg": [
+    "one_piece"
+   ],
+   "sports": [],
+   "other": []
+  },
+  "mix": "tcg",
+  "admission": {
+   "free": false,
+   "adult": 15,
+   "child": null,
+   "currency": "USD",
+   "notes": null
+  },
+  "size": {
+   "tables": null,
+   "booths": null,
+   "venue_sqft": null,
+   "players": 27,
+   "reported_attendance": null,
+   "first_year": null,
+   "edition": null
+  },
+  "vendor": {
+   "tables": [],
+   "application_url": null,
+   "opens": null,
+   "deadline": null,
+   "status": "unknown",
+   "electricity": null,
+   "setup": null,
+   "contact": null,
+   "notes": null
+  },
+  "organizer": {
+   "name": "Sample Game Shop Orlando",
+   "promoter_id": null,
+   "url": null
+  },
+  "links": {
+   "official": "https://example.com/sample-store/sample-one-piece-store-tournament-at-sample-game-shop-orlando-orlando-fl",
+   "tickets": null,
+   "facebook": null,
+   "instagram": null
+  },
+  "sources": [
+   {
+    "source": "fixture",
+    "url": "https://example.com/sample-store-listing/sample-one-piece-store-tournament-at-sample-game-shop-orlando-orlando-fl-2026-12-18",
+    "retrieved": "2026-10-21",
+    "fields": [
+     "name",
+     "days",
+     "venue"
+    ]
+   }
+  ],
+  "verification": "listed",
+  "first_seen": "2026-10-21",
+  "last_checked": "2026-10-21",
+  "summary": null,
+  "estimate": null
+ },
+ {
+  "id": "sample-one-piece-store-tournament-at-sample-game-shop-tampa-tampa-fl-2027-01-31",
+  "series_id": "sample-one-piece-store-tournament-at-sample-game-shop-tampa-tampa-fl",
+  "name": "Sample One Piece Store Tournament at Sample Game Shop Tampa",
+  "event_type": "store_event",
+  "status": "scheduled",
+  "days": [
+   {
+    "date": "2027-01-31",
+    "open": "18:00",
+    "close": "21:00"
+   }
+  ],
+  "timezone": "America/New_York",
+  "venue": {
+   "name": "Sample Game Shop Tampa",
+   "address": "72 Main St",
+   "city": "Tampa",
+   "region": "FL",
+   "postal": "33602",
+   "country": "US",
+   "lat": 27.9716,
+   "lon": -82.4252,
+   "geo_precision": "address"
+  },
+  "sells": {
+   "tcg": [
+    "one_piece"
+   ],
+   "sports": [],
+   "other": []
+  },
+  "mix": "tcg",
+  "admission": {
+   "free": false,
+   "adult": 15,
+   "child": null,
+   "currency": "USD",
+   "notes": null
+  },
+  "size": {
+   "tables": null,
+   "booths": null,
+   "venue_sqft": null,
+   "players": 63,
+   "reported_attendance": null,
+   "first_year": null,
+   "edition": null
+  },
+  "vendor": {
+   "tables": [],
+   "application_url": null,
+   "opens": null,
+   "deadline": null,
+   "status": "unknown",
+   "electricity": null,
+   "setup": null,
+   "contact": null,
+   "notes": null
+  },
+  "organizer": {
+   "name": "Sample Game Shop Tampa",
+   "promoter_id": null,
+   "url": null
+  },
+  "links": {
+   "official": "https://example.com/sample-store/sample-one-piece-store-tournament-at-sample-game-shop-tampa-tampa-fl",
+   "tickets": null,
+   "facebook": null,
+   "instagram": null
+  },
+  "sources": [
+   {
+    "source": "fixture",
+    "url": "https://example.com/sample-store-listing/sample-one-piece-store-tournament-at-sample-game-shop-tampa-tampa-fl-2027-01-31",
+    "retrieved": "2026-10-21",
+    "fields": [
+     "name",
+     "days",
+     "venue"
+    ]
+   }
+  ],
+  "verification": "listed",
+  "first_seen": "2026-10-21",
+  "last_checked": "2026-10-21",
+  "summary": null,
+  "estimate": null
+ },
+ {
+  "id": "sample-one-piece-store-tournament-at-sample-game-shop-toronto-toronto-on-2026-11-13",
+  "series_id": "sample-one-piece-store-tournament-at-sample-game-shop-toronto-toronto-on",
+  "name": "Sample One Piece Store Tournament at Sample Game Shop Toronto",
+  "event_type": "store_event",
+  "status": "scheduled",
+  "days": [
+   {
+    "date": "2026-11-13",
+    "open": "18:00",
+    "close": "21:00"
+   }
+  ],
+  "timezone": "America/Toronto",
+  "venue": {
+   "name": "Sample Game Shop Toronto",
+   "address": "417 Main St",
+   "city": "Toronto",
+   "region": "ON",
+   "postal": "M5V 2T6",
+   "country": "CA",
+   "lat": 43.6587,
+   "lon": -79.3657,
+   "geo_precision": "address"
+  },
+  "sells": {
+   "tcg": [
+    "one_piece"
+   ],
+   "sports": [],
+   "other": []
+  },
+  "mix": "tcg",
+  "admission": {
+   "free": false,
+   "adult": 15,
+   "child": null,
+   "currency": "CAD",
+   "notes": null
+  },
+  "size": {
+   "tables": null,
+   "booths": null,
+   "venue_sqft": null,
+   "players": 63,
+   "reported_attendance": null,
+   "first_year": null,
+   "edition": null
+  },
+  "vendor": {
+   "tables": [],
+   "application_url": null,
+   "opens": null,
+   "deadline": null,
+   "status": "unknown",
+   "electricity": null,
+   "setup": null,
+   "contact": null,
+   "notes": null
+  },
+  "organizer": {
+   "name": "Sample Game Shop Toronto",
+   "promoter_id": null,
+   "url": null
+  },
+  "links": {
+   "official": "https://example.com/sample-store/sample-one-piece-store-tournament-at-sample-game-shop-toronto-toronto-on",
+   "tickets": null,
+   "facebook": null,
+   "instagram": null
+  },
+  "sources": [
+   {
+    "source": "fixture",
+    "url": "https://example.com/sample-store-listing/sample-one-piece-store-tournament-at-sample-game-shop-toronto-toronto-on-2026-11-13",
+    "retrieved": "2026-10-21",
+    "fields": [
+     "name",
+     "days",
+     "venue"
+    ]
+   }
+  ],
+  "verification": "listed",
+  "first_seen": "2026-10-21",
+  "last_checked": "2026-10-21",
+  "summary": null,
+  "estimate": null
+ },
+ {
+  "id": "sample-pokemon-league-challenge-at-sample-game-shop-chicago-chicago-il-2027-02-04",
+  "series_id": "sample-pokemon-league-challenge-at-sample-game-shop-chicago-chicago-il",
+  "name": "Sample Pokémon League Challenge at Sample Game Shop Chicago",
+  "event_type": "store_event",
+  "status": "scheduled",
+  "days": [
+   {
+    "date": "2027-02-04",
+    "open": "18:00",
+    "close": "21:00"
+   }
+  ],
+  "timezone": "America/Chicago",
+  "venue": {
+   "name": "Sample Game Shop Chicago",
+   "address": "49 Main St",
+   "city": "Chicago",
+   "region": "IL",
+   "postal": "60601",
+   "country": "US",
+   "lat": 41.8756,
+   "lon": -87.6026,
+   "geo_precision": "address"
+  },
+  "sells": {
+   "tcg": [
+    "pokemon"
+   ],
+   "sports": [],
+   "other": []
+  },
+  "mix": "tcg",
+  "admission": {
+   "free": false,
+   "adult": 10,
+   "child": null,
+   "currency": "USD",
+   "notes": null
+  },
+  "size": {
+   "tables": null,
+   "booths": null,
+   "venue_sqft": null,
+   "players": 52,
+   "reported_attendance": null,
+   "first_year": null,
+   "edition": null
+  },
+  "vendor": {
+   "tables": [],
+   "application_url": null,
+   "opens": null,
+   "deadline": null,
+   "status": "unknown",
+   "electricity": null,
+   "setup": null,
+   "contact": null,
+   "notes": null
+  },
+  "organizer": {
+   "name": "Sample Game Shop Chicago",
+   "promoter_id": null,
+   "url": null
+  },
+  "links": {
+   "official": "https://example.com/sample-store/sample-pokemon-league-challenge-at-sample-game-shop-chicago-chicago-il",
+   "tickets": null,
+   "facebook": null,
+   "instagram": null
+  },
+  "sources": [
+   {
+    "source": "fixture",
+    "url": "https://example.com/sample-store-listing/sample-pokemon-league-challenge-at-sample-game-shop-chicago-chicago-il-2027-02-04",
+    "retrieved": "2026-10-21",
+    "fields": [
+     "name",
+     "days",
+     "venue"
+    ]
+   }
+  ],
+  "verification": "listed",
+  "first_seen": "2026-10-21",
+  "last_checked": "2026-10-21",
+  "summary": null,
+  "estimate": null
+ },
+ {
+  "id": "sample-pokemon-league-challenge-at-sample-game-shop-fredericton-fredericton-nb-2027-02-08",
+  "series_id": "sample-pokemon-league-challenge-at-sample-game-shop-fredericton-fredericton-nb",
+  "name": "Sample Pokémon League Challenge at Sample Game Shop Fredericton",
+  "event_type": "store_event",
+  "status": "scheduled",
+  "days": [
+   {
+    "date": "2027-02-08",
+    "open": "18:00",
+    "close": "21:00"
+   }
+  ],
+  "timezone": "America/Moncton",
+  "venue": {
+   "name": "Sample Game Shop Fredericton",
+   "address": "318 Main St",
+   "city": "Fredericton",
+   "region": "NB",
+   "postal": "E3B 5H1",
+   "country": "CA",
+   "lat": 45.9526,
+   "lon": -66.6588,
+   "geo_precision": "address"
+  },
+  "sells": {
+   "tcg": [
+    "pokemon"
+   ],
+   "sports": [],
+   "other": []
+  },
+  "mix": "tcg",
+  "admission": {
+   "free": false,
+   "adult": 15,
+   "child": null,
+   "currency": "CAD",
+   "notes": null
+  },
+  "size": {
+   "tables": null,
+   "booths": null,
+   "venue_sqft": null,
+   "players": 46,
+   "reported_attendance": null,
+   "first_year": null,
+   "edition": null
+  },
+  "vendor": {
+   "tables": [],
+   "application_url": null,
+   "opens": null,
+   "deadline": null,
+   "status": "unknown",
+   "electricity": null,
+   "setup": null,
+   "contact": null,
+   "notes": null
+  },
+  "organizer": {
+   "name": "Sample Game Shop Fredericton",
+   "promoter_id": null,
+   "url": null
+  },
+  "links": {
+   "official": "https://example.com/sample-store/sample-pokemon-league-challenge-at-sample-game-shop-fredericton-fredericton-nb",
+   "tickets": null,
+   "facebook": null,
+   "instagram": null
+  },
+  "sources": [
+   {
+    "source": "fixture",
+    "url": "https://example.com/sample-store-listing/sample-pokemon-league-challenge-at-sample-game-shop-fredericton-fredericton-nb-2027-02-08",
+    "retrieved": "2026-10-21",
+    "fields": [
+     "name",
+     "days",
+     "venue"
+    ]
+   }
+  ],
+  "verification": "listed",
+  "first_seen": "2026-10-21",
+  "last_checked": "2026-10-21",
+  "summary": null,
+  "estimate": null
+ },
+ {
+  "id": "sample-pokemon-league-challenge-at-sample-game-shop-grand-rapids-grand-rapids-mi-2026-10-20",
+  "series_id": "sample-pokemon-league-challenge-at-sample-game-shop-grand-rapids-grand-rapids-mi",
+  "name": "Sample Pokémon League Challenge at Sample Game Shop Grand Rapids",
+  "event_type": "store_event",
+  "status": "scheduled",
+  "days": [
+   {
+    "date": "2026-10-20",
+    "open": "18:00",
+    "close": "21:00"
+   }
+  ],
+  "timezone": "America/Detroit",
+  "venue": {
+   "name": "Sample Game Shop Grand Rapids",
+   "address": "578 Main St",
+   "city": "Grand Rapids",
+   "region": "MI",
+   "postal": "49503",
+   "country": "US",
+   "lat": 42.9411,
+   "lon": -85.641,
+   "geo_precision": "address"
+  },
+  "sells": {
+   "tcg": [
+    "pokemon"
+   ],
+   "sports": [],
+   "other": []
+  },
+  "mix": "tcg",
+  "admission": {
+   "free": false,
+   "adult": 5,
+   "child": null,
+   "currency": "USD",
+   "notes": null
+  },
+  "size": {
+   "tables": null,
+   "booths": null,
+   "venue_sqft": null,
+   "players": 31,
+   "reported_attendance": null,
+   "first_year": null,
+   "edition": null
+  },
+  "vendor": {
+   "tables": [],
+   "application_url": null,
+   "opens": null,
+   "deadline": null,
+   "status": "unknown",
+   "electricity": null,
+   "setup": null,
+   "contact": null,
+   "notes": null
+  },
+  "organizer": {
+   "name": "Sample Game Shop Grand Rapids",
+   "promoter_id": null,
+   "url": null
+  },
+  "links": {
+   "official": "https://example.com/sample-store/sample-pokemon-league-challenge-at-sample-game-shop-grand-rapids-grand-rapids-mi",
+   "tickets": null,
+   "facebook": null,
+   "instagram": null
+  },
+  "sources": [
+   {
+    "source": "fixture",
+    "url": "https://example.com/sample-store-listing/sample-pokemon-league-challenge-at-sample-game-shop-grand-rapids-grand-rapids-mi-2026-10-20",
+    "retrieved": "2026-10-21",
+    "fields": [
+     "name",
+     "days",
+     "venue"
+    ]
+   }
+  ],
+  "verification": "listed",
+  "first_seen": "2026-10-21",
+  "last_checked": "2026-10-21",
+  "summary": null,
+  "estimate": null
+ },
+ {
+  "id": "sample-pokemon-league-challenge-at-sample-game-shop-halifax-halifax-ns-2027-02-01",
+  "series_id": "sample-pokemon-league-challenge-at-sample-game-shop-halifax-halifax-ns",
+  "name": "Sample Pokémon League Challenge at Sample Game Shop Halifax",
+  "event_type": "store_event",
+  "status": "scheduled",
+  "days": [
+   {
+    "date": "2027-02-01",
+    "open": "18:00",
+    "close": "21:00"
+   }
+  ],
+  "timezone": "America/Halifax",
+  "venue": {
+   "name": "Sample Game Shop Halifax",
+   "address": "268 Main St",
+   "city": "Halifax",
+   "region": "NS",
+   "postal": "B3J 3J8",
+   "country": "CA",
+   "lat": 44.6499,
+   "lon": -63.5948,
+   "geo_precision": "address"
+  },
+  "sells": {
+   "tcg": [
+    "pokemon"
+   ],
+   "sports": [],
+   "other": []
+  },
+  "mix": "tcg",
+  "admission": {
+   "free": false,
+   "adult": 30,
+   "child": null,
+   "currency": "CAD",
+   "notes": null
+  },
+  "size": {
+   "tables": null,
+   "booths": null,
+   "venue_sqft": null,
+   "players": 8,
+   "reported_attendance": null,
+   "first_year": null,
+   "edition": null
+  },
+  "vendor": {
+   "tables": [],
+   "application_url": null,
+   "opens": null,
+   "deadline": null,
+   "status": "unknown",
+   "electricity": null,
+   "setup": null,
+   "contact": null,
+   "notes": null
+  },
+  "organizer": {
+   "name": "Sample Game Shop Halifax",
+   "promoter_id": null,
+   "url": null
+  },
+  "links": {
+   "official": "https://example.com/sample-store/sample-pokemon-league-challenge-at-sample-game-shop-halifax-halifax-ns",
+   "tickets": null,
+   "facebook": null,
+   "instagram": null
+  },
+  "sources": [
+   {
+    "source": "fixture",
+    "url": "https://example.com/sample-store-listing/sample-pokemon-league-challenge-at-sample-game-shop-halifax-halifax-ns-2027-02-01",
+    "retrieved": "2026-10-21",
+    "fields": [
+     "name",
+     "days",
+     "venue"
+    ]
+   }
+  ],
+  "verification": "listed",
+  "first_seen": "2026-10-21",
+  "last_checked": "2026-10-21",
+  "summary": null,
+  "estimate": null
+ },
+ {
+  "id": "sample-pokemon-league-challenge-at-sample-game-shop-indianapolis-indianapolis-in-2026-11-15",
+  "series_id": "sample-pokemon-league-challenge-at-sample-game-shop-indianapolis-indianapolis-in",
+  "name": "Sample Pokémon League Challenge at Sample Game Shop Indianapolis",
+  "event_type": "store_event",
+  "status": "scheduled",
+  "days": [
+   {
+    "date": "2026-11-15",
+    "open": "18:00",
+    "close": "21:00"
+   }
+  ],
+  "timezone": "America/Indiana/Indianapolis",
+  "venue": {
+   "name": "Sample Game Shop Indianapolis",
+   "address": "187 Main St",
+   "city": "Indianapolis",
+   "region": "IN",
+   "postal": "46204",
+   "country": "US",
+   "lat": 39.7688,
+   "lon": -86.1863,
+   "geo_precision": "address"
+  },
+  "sells": {
+   "tcg": [
+    "pokemon"
+   ],
+   "sports": [],
+   "other": []
+  },
+  "mix": "tcg",
+  "admission": {
+   "free": false,
+   "adult": 5,
+   "child": null,
+   "currency": "USD",
+   "notes": null
+  },
+  "size": {
+   "tables": null,
+   "booths": null,
+   "venue_sqft": null,
+   "players": 36,
+   "reported_attendance": null,
+   "first_year": null,
+   "edition": null
+  },
+  "vendor": {
+   "tables": [],
+   "application_url": null,
+   "opens": null,
+   "deadline": null,
+   "status": "unknown",
+   "electricity": null,
+   "setup": null,
+   "contact": null,
+   "notes": null
+  },
+  "organizer": {
+   "name": "Sample Game Shop Indianapolis",
+   "promoter_id": null,
+   "url": null
+  },
+  "links": {
+   "official": "https://example.com/sample-store/sample-pokemon-league-challenge-at-sample-game-shop-indianapolis-indianapolis-in",
+   "tickets": null,
+   "facebook": null,
+   "instagram": null
+  },
+  "sources": [
+   {
+    "source": "fixture",
+    "url": "https://example.com/sample-store-listing/sample-pokemon-league-challenge-at-sample-game-shop-indianapolis-indianapolis-in-2026-11-15",
+    "retrieved": "2026-10-21",
+    "fields": [
+     "name",
+     "days",
+     "venue"
+    ]
+   }
+  ],
+  "verification": "listed",
+  "first_seen": "2026-10-21",
+  "last_checked": "2026-10-21",
+  "summary": null,
+  "estimate": null
+ },
+ {
+  "id": "sample-pokemon-league-challenge-at-sample-game-shop-milwaukee-milwaukee-wi-2026-10-17",
+  "series_id": "sample-pokemon-league-challenge-at-sample-game-shop-milwaukee-milwaukee-wi",
+  "name": "Sample Pokémon League Challenge at Sample Game Shop Milwaukee",
+  "event_type": "store_event",
+  "status": "scheduled",
+  "days": [
+   {
+    "date": "2026-10-17",
+    "open": "18:00",
+    "close": "21:00"
+   }
+  ],
+  "timezone": "America/Chicago",
+  "venue": {
+   "name": "Sample Game Shop Milwaukee",
+   "address": "303 Main St",
+   "city": "Milwaukee",
+   "region": "WI",
+   "postal": "53202",
+   "country": "US",
+   "lat": 43.0196,
+   "lon": -87.9171,
+   "geo_precision": "address"
+  },
+  "sells": {
+   "tcg": [
+    "pokemon"
+   ],
+   "sports": [],
+   "other": []
+  },
+  "mix": "tcg",
+  "admission": {
+   "free": false,
+   "adult": 10,
+   "child": null,
+   "currency": "USD",
+   "notes": null
+  },
+  "size": {
+   "tables": null,
+   "booths": null,
+   "venue_sqft": null,
+   "players": 50,
+   "reported_attendance": null,
+   "first_year": null,
+   "edition": null
+  },
+  "vendor": {
+   "tables": [],
+   "application_url": null,
+   "opens": null,
+   "deadline": null,
+   "status": "unknown",
+   "electricity": null,
+   "setup": null,
+   "contact": null,
+   "notes": null
+  },
+  "organizer": {
+   "name": "Sample Game Shop Milwaukee",
+   "promoter_id": null,
+   "url": null
+  },
+  "links": {
+   "official": "https://example.com/sample-store/sample-pokemon-league-challenge-at-sample-game-shop-milwaukee-milwaukee-wi",
+   "tickets": null,
+   "facebook": null,
+   "instagram": null
+  },
+  "sources": [
+   {
+    "source": "fixture",
+    "url": "https://example.com/sample-store-listing/sample-pokemon-league-challenge-at-sample-game-shop-milwaukee-milwaukee-wi-2026-10-17",
+    "retrieved": "2026-10-21",
+    "fields": [
+     "name",
+     "days",
+     "venue"
+    ]
+   }
+  ],
+  "verification": "listed",
+  "first_seen": "2026-10-21",
+  "last_checked": "2026-10-21",
+  "summary": null,
+  "estimate": null
+ },
+ {
+  "id": "sample-pokemon-league-challenge-at-sample-game-shop-minneapolis-minneapolis-mn-2026-12-11",
+  "series_id": "sample-pokemon-league-challenge-at-sample-game-shop-minneapolis-minneapolis-mn",
+  "name": "Sample Pokémon League Challenge at Sample Game Shop Minneapolis",
+  "event_type": "store_event",
+  "status": "scheduled",
+  "days": [
+   {
+    "date": "2026-12-11",
+    "open": "18:00",
+    "close": "21:00"
+   }
+  ],
+  "timezone": "America/Chicago",
+  "venue": {
+   "name": "Sample Game Shop Minneapolis",
+   "address": "200 Main St",
+   "city": "Minneapolis",
+   "region": "MN",
+   "postal": "55401",
+   "country": "US",
+   "lat": 44.9664,
+   "lon": -93.2724,
+   "geo_precision": "address"
+  },
+  "sells": {
+   "tcg": [
+    "pokemon"
+   ],
+   "sports": [],
+   "other": []
+  },
+  "mix": "tcg",
+  "admission": {
+   "free": false,
+   "adult": 15,
+   "child": null,
+   "currency": "USD",
+   "notes": null
+  },
+  "size": {
+   "tables": null,
+   "booths": null,
+   "venue_sqft": null,
+   "players": 30,
+   "reported_attendance": null,
+   "first_year": null,
+   "edition": null
+  },
+  "vendor": {
+   "tables": [],
+   "application_url": null,
+   "opens": null,
+   "deadline": null,
+   "status": "unknown",
+   "electricity": null,
+   "setup": null,
+   "contact": null,
+   "notes": null
+  },
+  "organizer": {
+   "name": "Sample Game Shop Minneapolis",
+   "promoter_id": null,
+   "url": null
+  },
+  "links": {
+   "official": "https://example.com/sample-store/sample-pokemon-league-challenge-at-sample-game-shop-minneapolis-minneapolis-mn",
+   "tickets": null,
+   "facebook": null,
+   "instagram": null
+  },
+  "sources": [
+   {
+    "source": "fixture",
+    "url": "https://example.com/sample-store-listing/sample-pokemon-league-challenge-at-sample-game-shop-minneapolis-minneapolis-mn-2026-12-11",
+    "retrieved": "2026-10-21",
+    "fields": [
+     "name",
+     "days",
+     "venue"
+    ]
+   }
+  ],
+  "verification": "listed",
+  "first_seen": "2026-10-21",
+  "last_checked": "2026-10-21",
+  "summary": null,
+  "estimate": null
+ },
+ {
+  "id": "sample-pokemon-league-challenge-at-sample-game-shop-regina-regina-sk-2027-02-05",
+  "series_id": "sample-pokemon-league-challenge-at-sample-game-shop-regina-regina-sk",
+  "name": "Sample Pokémon League Challenge at Sample Game Shop Regina",
+  "event_type": "store_event",
+  "status": "scheduled",
+  "days": [
+   {
+    "date": "2027-02-05",
+    "open": "18:00",
+    "close": "21:00"
+   }
+  ],
+  "timezone": "America/Regina",
+  "venue": {
+   "name": "Sample Game Shop Regina",
+   "address": "882 Main St",
+   "city": "Regina",
+   "region": "SK",
+   "postal": "S4P 3Y2",
+   "country": "CA",
+   "lat": 50.4334,
+   "lon": -104.616,
+   "geo_precision": "address"
+  },
+  "sells": {
+   "tcg": [
+    "pokemon"
+   ],
+   "sports": [],
+   "other": []
+  },
+  "mix": "tcg",
+  "admission": {
+   "free": false,
+   "adult": 15,
+   "child": null,
+   "currency": "CAD",
+   "notes": null
+  },
+  "size": {
+   "tables": null,
+   "booths": null,
+   "venue_sqft": null,
+   "players": 26,
+   "reported_attendance": null,
+   "first_year": null,
+   "edition": null
+  },
+  "vendor": {
+   "tables": [],
+   "application_url": null,
+   "opens": null,
+   "deadline": null,
+   "status": "unknown",
+   "electricity": null,
+   "setup": null,
+   "contact": null,
+   "notes": null
+  },
+  "organizer": {
+   "name": "Sample Game Shop Regina",
+   "promoter_id": null,
+   "url": null
+  },
+  "links": {
+   "official": "https://example.com/sample-store/sample-pokemon-league-challenge-at-sample-game-shop-regina-regina-sk",
+   "tickets": null,
+   "facebook": null,
+   "instagram": null
+  },
+  "sources": [
+   {
+    "source": "fixture",
+    "url": "https://example.com/sample-store-listing/sample-pokemon-league-challenge-at-sample-game-shop-regina-regina-sk-2027-02-05",
+    "retrieved": "2026-10-21",
+    "fields": [
+     "name",
+     "days",
+     "venue"
+    ]
+   }
+  ],
+  "verification": "listed",
+  "first_seen": "2026-10-21",
+  "last_checked": "2026-10-21",
+  "summary": null,
+  "estimate": null
+ },
+ {
+  "id": "sample-pokemon-league-challenge-at-sample-game-shop-saskatoon-saskatoon-sk-2026-12-30",
+  "series_id": "sample-pokemon-league-challenge-at-sample-game-shop-saskatoon-saskatoon-sk",
+  "name": "Sample Pokémon League Challenge at Sample Game Shop Saskatoon",
+  "event_type": "store_event",
+  "status": "scheduled",
+  "days": [
+   {
+    "date": "2026-12-30",
+    "open": "18:00",
+    "close": "21:00"
+   }
+  ],
+  "timezone": "America/Regina",
+  "venue": {
+   "name": "Sample Game Shop Saskatoon",
+   "address": "241 Main St",
+   "city": "Saskatoon",
+   "region": "SK",
+   "postal": "S7K 1J5",
+   "country": "CA",
+   "lat": 52.1141,
+   "lon": -106.7022,
+   "geo_precision": "address"
+  },
+  "sells": {
+   "tcg": [
+    "pokemon"
+   ],
+   "sports": [],
+   "other": []
+  },
+  "mix": "tcg",
+  "admission": {
+   "free": false,
+   "adult": 30,
+   "child": null,
+   "currency": "CAD",
+   "notes": null
+  },
+  "size": {
+   "tables": null,
+   "booths": null,
+   "venue_sqft": null,
+   "players": 49,
+   "reported_attendance": null,
+   "first_year": null,
+   "edition": null
+  },
+  "vendor": {
+   "tables": [],
+   "application_url": null,
+   "opens": null,
+   "deadline": null,
+   "status": "unknown",
+   "electricity": null,
+   "setup": null,
+   "contact": null,
+   "notes": null
+  },
+  "organizer": {
+   "name": "Sample Game Shop Saskatoon",
+   "promoter_id": null,
+   "url": null
+  },
+  "links": {
+   "official": "https://example.com/sample-store/sample-pokemon-league-challenge-at-sample-game-shop-saskatoon-saskatoon-sk",
+   "tickets": null,
+   "facebook": null,
+   "instagram": null
+  },
+  "sources": [
+   {
+    "source": "fixture",
+    "url": "https://example.com/sample-store-listing/sample-pokemon-league-challenge-at-sample-game-shop-saskatoon-saskatoon-sk-2026-12-30",
+    "retrieved": "2026-10-21",
+    "fields": [
+     "name",
+     "days",
+     "venue"
+    ]
+   }
+  ],
+  "verification": "listed",
+  "first_seen": "2026-10-21",
+  "last_checked": "2026-10-21",
+  "summary": null,
+  "estimate": null
+ },
+ {
+  "id": "sample-pokemon-prerelease-at-sample-game-shop-allentown-allentown-pa-2027-01-15",
+  "series_id": "sample-pokemon-prerelease-at-sample-game-shop-allentown-allentown-pa",
+  "name": "Sample Pokémon Prerelease at Sample Game Shop Allentown",
+  "event_type": "store_event",
+  "status": "scheduled",
+  "days": [
+   {
+    "date": "2027-01-15",
+    "open": "18:00",
+    "close": "21:00"
+   }
+  ],
+  "timezone": "America/New_York",
+  "venue": {
+   "name": "Sample Game Shop Allentown",
+   "address": "625 Main St",
+   "city": "Allentown",
+   "region": "PA",
+   "postal": "18101",
+   "country": "US",
+   "lat": 40.599,
+   "lon": -75.5071,
+   "geo_precision": "address"
+  },
+  "sells": {
+   "tcg": [
+    "pokemon"
+   ],
+   "sports": [],
+   "other": []
+  },
+  "mix": "tcg",
+  "admission": {
+   "free": false,
+   "adult": 10,
+   "child": null,
+   "currency": "USD",
+   "notes": null
+  },
+  "size": {
+   "tables": null,
+   "booths": null,
+   "venue_sqft": null,
+   "players": 47,
+   "reported_attendance": null,
+   "first_year": null,
+   "edition": null
+  },
+  "vendor": {
+   "tables": [],
+   "application_url": null,
+   "opens": null,
+   "deadline": null,
+   "status": "unknown",
+   "electricity": null,
+   "setup": null,
+   "contact": null,
+   "notes": null
+  },
+  "organizer": {
+   "name": "Sample Game Shop Allentown",
+   "promoter_id": null,
+   "url": null
+  },
+  "links": {
+   "official": "https://example.com/sample-store/sample-pokemon-prerelease-at-sample-game-shop-allentown-allentown-pa",
+   "tickets": null,
+   "facebook": null,
+   "instagram": null
+  },
+  "sources": [
+   {
+    "source": "fixture",
+    "url": "https://example.com/sample-store-listing/sample-pokemon-prerelease-at-sample-game-shop-allentown-allentown-pa-2027-01-15",
+    "retrieved": "2026-10-21",
+    "fields": [
+     "name",
+     "days",
+     "venue"
+    ]
+   }
+  ],
+  "verification": "listed",
+  "first_seen": "2026-10-21",
+  "last_checked": "2026-10-21",
+  "summary": null,
+  "estimate": null
+ },
+ {
+  "id": "sample-pokemon-prerelease-at-sample-game-shop-cherry-hill-cherry-hill-nj-2027-01-06",
+  "series_id": "sample-pokemon-prerelease-at-sample-game-shop-cherry-hill-cherry-hill-nj",
+  "name": "Sample Pokémon Prerelease at Sample Game Shop Cherry Hill",
+  "event_type": "store_event",
+  "status": "scheduled",
+  "days": [
+   {
+    "date": "2027-01-06",
+    "open": "18:00",
+    "close": "21:00"
+   }
+  ],
+  "timezone": "America/New_York",
+  "venue": {
+   "name": "Sample Game Shop Cherry Hill",
+   "address": "753 Main St",
+   "city": "Cherry Hill",
+   "region": "NJ",
+   "postal": "08002",
+   "country": "US",
+   "lat": 39.9485,
+   "lon": -75.0155,
+   "geo_precision": "address"
+  },
+  "sells": {
+   "tcg": [
+    "pokemon"
+   ],
+   "sports": [],
+   "other": []
+  },
+  "mix": "tcg",
+  "admission": {
+   "free": false,
+   "adult": 5,
+   "child": null,
+   "currency": "USD",
+   "notes": null
+  },
+  "size": {
+   "tables": null,
+   "booths": null,
+   "venue_sqft": null,
+   "players": 22,
+   "reported_attendance": null,
+   "first_year": null,
+   "edition": null
+  },
+  "vendor": {
+   "tables": [],
+   "application_url": null,
+   "opens": null,
+   "deadline": null,
+   "status": "unknown",
+   "electricity": null,
+   "setup": null,
+   "contact": null,
+   "notes": null
+  },
+  "organizer": {
+   "name": "Sample Game Shop Cherry Hill",
+   "promoter_id": null,
+   "url": null
+  },
+  "links": {
+   "official": "https://example.com/sample-store/sample-pokemon-prerelease-at-sample-game-shop-cherry-hill-cherry-hill-nj",
+   "tickets": null,
+   "facebook": null,
+   "instagram": null
+  },
+  "sources": [
+   {
+    "source": "fixture",
+    "url": "https://example.com/sample-store-listing/sample-pokemon-prerelease-at-sample-game-shop-cherry-hill-cherry-hill-nj-2027-01-06",
+    "retrieved": "2026-10-21",
+    "fields": [
+     "name",
+     "days",
+     "venue"
+    ]
+   }
+  ],
+  "verification": "listed",
+  "first_seen": "2026-10-21",
+  "last_checked": "2026-10-21",
+  "summary": null,
+  "estimate": null
+ },
+ {
+  "id": "sample-pokemon-prerelease-at-sample-game-shop-edison-edison-nj-2027-01-22",
+  "series_id": "sample-pokemon-prerelease-at-sample-game-shop-edison-edison-nj",
+  "name": "Sample Pokémon Prerelease at Sample Game Shop Edison",
+  "event_type": "store_event",
+  "status": "scheduled",
+  "days": [
+   {
+    "date": "2027-01-22",
+    "open": "18:00",
+    "close": "21:00"
+   }
+  ],
+  "timezone": "America/New_York",
+  "venue": {
+   "name": "Sample Game Shop Edison",
+   "address": "484 Main St",
+   "city": "Edison",
+   "region": "NJ",
+   "postal": "08837",
+   "country": "US",
+   "lat": 40.5157,
+   "lon": -74.4026,
+   "geo_precision": "address"
+  },
+  "sells": {
+   "tcg": [
+    "pokemon"
+   ],
+   "sports": [],
+   "other": []
+  },
+  "mix": "tcg",
+  "admission": {
+   "free": false,
+   "adult": 5,
+   "child": null,
+   "currency": "USD",
+   "notes": null
+  },
+  "size": {
+   "tables": null,
+   "booths": null,
+   "venue_sqft": null,
+   "players": 15,
+   "reported_attendance": null,
+   "first_year": null,
+   "edition": null
+  },
+  "vendor": {
+   "tables": [],
+   "application_url": null,
+   "opens": null,
+   "deadline": null,
+   "status": "unknown",
+   "electricity": null,
+   "setup": null,
+   "contact": null,
+   "notes": null
+  },
+  "organizer": {
+   "name": "Sample Game Shop Edison",
+   "promoter_id": null,
+   "url": null
+  },
+  "links": {
+   "official": "https://example.com/sample-store/sample-pokemon-prerelease-at-sample-game-shop-edison-edison-nj",
+   "tickets": null,
+   "facebook": null,
+   "instagram": null
+  },
+  "sources": [
+   {
+    "source": "fixture",
+    "url": "https://example.com/sample-store-listing/sample-pokemon-prerelease-at-sample-game-shop-edison-edison-nj-2027-01-22",
+    "retrieved": "2026-10-21",
+    "fields": [
+     "name",
+     "days",
+     "venue"
+    ]
+   }
+  ],
+  "verification": "listed",
+  "first_seen": "2026-10-21",
+  "last_checked": "2026-10-21",
+  "summary": null,
+  "estimate": null
+ },
+ {
+  "id": "sample-pokemon-prerelease-at-sample-game-shop-fargo-fargo-nd-2027-01-14",
+  "series_id": "sample-pokemon-prerelease-at-sample-game-shop-fargo-fargo-nd",
+  "name": "Sample Pokémon Prerelease at Sample Game Shop Fargo",
+  "event_type": "store_event",
+  "status": "scheduled",
+  "days": [
+   {
+    "date": "2027-01-14",
+    "open": "18:00",
+    "close": "21:00"
+   }
+  ],
+  "timezone": "America/Chicago",
+  "venue": {
+   "name": "Sample Game Shop Fargo",
+   "address": "587 Main St",
+   "city": "Fargo",
+   "region": "ND",
+   "postal": "58102",
+   "country": "US",
+   "lat": 46.8917,
+   "lon": -96.7894,
+   "geo_precision": "address"
+  },
+  "sells": {
+   "tcg": [
+    "pokemon"
+   ],
+   "sports": [],
+   "other": []
+  },
+  "mix": "tcg",
+  "admission": {
+   "free": false,
+   "adult": 5,
+   "child": null,
+   "currency": "USD",
+   "notes": null
+  },
+  "size": {
+   "tables": null,
+   "booths": null,
+   "venue_sqft": null,
+   "players": 32,
+   "reported_attendance": null,
+   "first_year": null,
+   "edition": null
+  },
+  "vendor": {
+   "tables": [],
+   "application_url": null,
+   "opens": null,
+   "deadline": null,
+   "status": "unknown",
+   "electricity": null,
+   "setup": null,
+   "contact": null,
+   "notes": null
+  },
+  "organizer": {
+   "name": "Sample Game Shop Fargo",
+   "promoter_id": null,
+   "url": null
+  },
+  "links": {
+   "official": "https://example.com/sample-store/sample-pokemon-prerelease-at-sample-game-shop-fargo-fargo-nd",
+   "tickets": null,
+   "facebook": null,
+   "instagram": null
+  },
+  "sources": [
+   {
+    "source": "fixture",
+    "url": "https://example.com/sample-store-listing/sample-pokemon-prerelease-at-sample-game-shop-fargo-fargo-nd-2027-01-14",
+    "retrieved": "2026-10-21",
+    "fields": [
+     "name",
+     "days",
+     "venue"
+    ]
+   }
+  ],
+  "verification": "listed",
+  "first_seen": "2026-10-21",
+  "last_checked": "2026-10-21",
+  "summary": null,
+  "estimate": null
+ },
+ {
+  "id": "sample-pokemon-prerelease-at-sample-game-shop-kansas-city-kansas-city-mo-2027-01-24",
+  "series_id": "sample-pokemon-prerelease-at-sample-game-shop-kansas-city-kansas-city-mo",
+  "name": "Sample Pokémon Prerelease at Sample Game Shop Kansas City",
+  "event_type": "store_event",
+  "status": "scheduled",
+  "days": [
+   {
+    "date": "2027-01-24",
+    "open": "18:00",
+    "close": "21:00"
+   }
+  ],
+  "timezone": "America/Chicago",
+  "venue": {
+   "name": "Sample Game Shop Kansas City",
+   "address": "188 Main St",
+   "city": "Kansas City",
+   "region": "MO",
+   "postal": "64106",
+   "country": "US",
+   "lat": 39.0753,
+   "lon": -94.6116,
+   "geo_precision": "address"
+  },
+  "sells": {
+   "tcg": [
+    "pokemon"
+   ],
+   "sports": [],
+   "other": []
+  },
+  "mix": "tcg",
+  "admission": {
+   "free": false,
+   "adult": 10,
+   "child": null,
+   "currency": "USD",
+   "notes": null
+  },
+  "size": {
+   "tables": null,
+   "booths": null,
+   "venue_sqft": null,
+   "players": 52,
+   "reported_attendance": null,
+   "first_year": null,
+   "edition": null
+  },
+  "vendor": {
+   "tables": [],
+   "application_url": null,
+   "opens": null,
+   "deadline": null,
+   "status": "unknown",
+   "electricity": null,
+   "setup": null,
+   "contact": null,
+   "notes": null
+  },
+  "organizer": {
+   "name": "Sample Game Shop Kansas City",
+   "promoter_id": null,
+   "url": null
+  },
+  "links": {
+   "official": "https://example.com/sample-store/sample-pokemon-prerelease-at-sample-game-shop-kansas-city-kansas-city-mo",
+   "tickets": null,
+   "facebook": null,
+   "instagram": null
+  },
+  "sources": [
+   {
+    "source": "fixture",
+    "url": "https://example.com/sample-store-listing/sample-pokemon-prerelease-at-sample-game-shop-kansas-city-kansas-city-mo-2027-01-24",
+    "retrieved": "2026-10-21",
+    "fields": [
+     "name",
+     "days",
+     "venue"
+    ]
+   }
+  ],
+  "verification": "listed",
+  "first_seen": "2026-10-21",
+  "last_checked": "2026-10-21",
+  "summary": null,
+  "estimate": null
+ },
+ {
+  "id": "sample-pokemon-prerelease-at-sample-game-shop-newark-newark-nj-2027-01-24",
+  "series_id": "sample-pokemon-prerelease-at-sample-game-shop-newark-newark-nj",
+  "name": "Sample Pokémon Prerelease at Sample Game Shop Newark",
+  "event_type": "store_event",
+  "status": "scheduled",
+  "days": [
+   {
+    "date": "2027-01-24",
+    "open": "18:00",
+    "close": "21:00"
+   }
+  ],
+  "timezone": "America/New_York",
+  "venue": {
+   "name": "Sample Game Shop Newark",
+   "address": "865 Main St",
+   "city": "Newark",
+   "region": "NJ",
+   "postal": "07102",
+   "country": "US",
+   "lat": 40.755,
+   "lon": -74.1963,
+   "geo_precision": "address"
+  },
+  "sells": {
+   "tcg": [
+    "pokemon"
+   ],
+   "sports": [],
+   "other": []
+  },
+  "mix": "tcg",
+  "admission": {
+   "free": false,
+   "adult": 15,
+   "child": null,
+   "currency": "USD",
+   "notes": null
+  },
+  "size": {
+   "tables": null,
+   "booths": null,
+   "venue_sqft": null,
+   "players": 49,
+   "reported_attendance": null,
+   "first_year": null,
+   "edition": null
+  },
+  "vendor": {
+   "tables": [],
+   "application_url": null,
+   "opens": null,
+   "deadline": null,
+   "status": "unknown",
+   "electricity": null,
+   "setup": null,
+   "contact": null,
+   "notes": null
+  },
+  "organizer": {
+   "name": "Sample Game Shop Newark",
+   "promoter_id": null,
+   "url": null
+  },
+  "links": {
+   "official": "https://example.com/sample-store/sample-pokemon-prerelease-at-sample-game-shop-newark-newark-nj",
+   "tickets": null,
+   "facebook": null,
+   "instagram": null
+  },
+  "sources": [
+   {
+    "source": "fixture",
+    "url": "https://example.com/sample-store-listing/sample-pokemon-prerelease-at-sample-game-shop-newark-newark-nj-2027-01-24",
+    "retrieved": "2026-10-21",
+    "fields": [
+     "name",
+     "days",
+     "venue"
+    ]
+   }
+  ],
+  "verification": "listed",
+  "first_seen": "2026-10-21",
+  "last_checked": "2026-10-21",
+  "summary": null,
+  "estimate": null
+ },
+ {
+  "id": "sample-pokemon-prerelease-at-sample-game-shop-omaha-omaha-ne-2026-12-31",
+  "series_id": "sample-pokemon-prerelease-at-sample-game-shop-omaha-omaha-ne",
+  "name": "Sample Pokémon Prerelease at Sample Game Shop Omaha",
+  "event_type": "store_event",
+  "status": "scheduled",
+  "days": [
+   {
+    "date": "2026-12-31",
+    "open": "18:00",
+    "close": "21:00"
+   }
+  ],
+  "timezone": "America/Chicago",
+  "venue": {
+   "name": "Sample Game Shop Omaha",
+   "address": "331 Main St",
+   "city": "Omaha",
+   "region": "NE",
+   "postal": "68102",
+   "country": "US",
+   "lat": 41.2476,
+   "lon": -95.9684,
+   "geo_precision": "address"
+  },
+  "sells": {
+   "tcg": [
+    "pokemon"
+   ],
+   "sports": [],
+   "other": []
+  },
+  "mix": "tcg",
+  "admission": {
+   "free": false,
+   "adult": 30,
+   "child": null,
+   "currency": "USD",
+   "notes": null
+  },
+  "size": {
+   "tables": null,
+   "booths": null,
+   "venue_sqft": null,
+   "players": 12,
+   "reported_attendance": null,
+   "first_year": null,
+   "edition": null
+  },
+  "vendor": {
+   "tables": [],
+   "application_url": null,
+   "opens": null,
+   "deadline": null,
+   "status": "unknown",
+   "electricity": null,
+   "setup": null,
+   "contact": null,
+   "notes": null
+  },
+  "organizer": {
+   "name": "Sample Game Shop Omaha",
+   "promoter_id": null,
+   "url": null
+  },
+  "links": {
+   "official": "https://example.com/sample-store/sample-pokemon-prerelease-at-sample-game-shop-omaha-omaha-ne",
+   "tickets": null,
+   "facebook": null,
+   "instagram": null
+  },
+  "sources": [
+   {
+    "source": "fixture",
+    "url": "https://example.com/sample-store-listing/sample-pokemon-prerelease-at-sample-game-shop-omaha-omaha-ne-2026-12-31",
+    "retrieved": "2026-10-21",
+    "fields": [
+     "name",
+     "days",
+     "venue"
+    ]
+   }
+  ],
+  "verification": "listed",
+  "first_seen": "2026-10-21",
+  "last_checked": "2026-10-21",
+  "summary": null,
+  "estimate": null
+ },
+ {
+  "id": "sample-pokemon-prerelease-at-sample-game-shop-philadelphia-philadelphia-pa-2026-10-24",
+  "series_id": "sample-pokemon-prerelease-at-sample-game-shop-philadelphia-philadelphia-pa",
+  "name": "Sample Pokémon Prerelease at Sample Game Shop Philadelphia",
+  "event_type": "store_event",
+  "status": "scheduled",
+  "days": [
+   {
+    "date": "2026-10-24",
+    "open": "18:00",
+    "close": "21:00"
+   }
+  ],
+  "timezone": "America/New_York",
+  "venue": {
+   "name": "Sample Game Shop Philadelphia",
+   "address": "386 Main St",
+   "city": "Philadelphia",
+   "region": "PA",
+   "postal": "19103",
+   "country": "US",
+   "lat": 39.9625,
+   "lon": -75.1317,
+   "geo_precision": "address"
+  },
+  "sells": {
+   "tcg": [
+    "pokemon"
+   ],
+   "sports": [],
+   "other": []
+  },
+  "mix": "tcg",
+  "admission": {
+   "free": false,
+   "adult": 5,
+   "child": null,
+   "currency": "USD",
+   "notes": null
+  },
+  "size": {
+   "tables": null,
+   "booths": null,
+   "venue_sqft": null,
+   "players": 40,
+   "reported_attendance": null,
+   "first_year": null,
+   "edition": null
+  },
+  "vendor": {
+   "tables": [],
+   "application_url": null,
+   "opens": null,
+   "deadline": null,
+   "status": "unknown",
+   "electricity": null,
+   "setup": null,
+   "contact": null,
+   "notes": null
+  },
+  "organizer": {
+   "name": "Sample Game Shop Philadelphia",
+   "promoter_id": null,
+   "url": null
+  },
+  "links": {
+   "official": "https://example.com/sample-store/sample-pokemon-prerelease-at-sample-game-shop-philadelphia-philadelphia-pa",
+   "tickets": null,
+   "facebook": null,
+   "instagram": null
+  },
+  "sources": [
+   {
+    "source": "fixture",
+    "url": "https://example.com/sample-store-listing/sample-pokemon-prerelease-at-sample-game-shop-philadelphia-philadelphia-pa-2026-10-24",
+    "retrieved": "2026-10-21",
+    "fields": [
+     "name",
+     "days",
+     "venue"
+    ]
+   }
+  ],
+  "verification": "listed",
+  "first_seen": "2026-10-21",
+  "last_checked": "2026-10-21",
+  "summary": null,
+  "estimate": null
+ },
+ {
+  "id": "sample-pokemon-prerelease-at-sample-game-shop-sioux-falls-sioux-falls-sd-2026-10-27",
+  "series_id": "sample-pokemon-prerelease-at-sample-game-shop-sioux-falls-sioux-falls-sd",
+  "name": "Sample Pokémon Prerelease at Sample Game Shop Sioux Falls",
+  "event_type": "store_event",
+  "status": "scheduled",
+  "days": [
+   {
+    "date": "2026-10-27",
+    "open": "18:00",
+    "close": "21:00"
+   }
+  ],
+  "timezone": "America/Chicago",
+  "venue": {
+   "name": "Sample Game Shop Sioux Falls",
+   "address": "750 Main St",
+   "city": "Sioux Falls",
+   "region": "SD",
+   "postal": "57104",
+   "country": "US",
+   "lat": 43.5354,
+   "lon": -96.701,
+   "geo_precision": "address"
+  },
+  "sells": {
+   "tcg": [
+    "pokemon"
+   ],
+   "sports": [],
+   "other": []
+  },
+  "mix": "tcg",
+  "admission": {
+   "free": false,
+   "adult": 15,
+   "child": null,
+   "currency": "USD",
+   "notes": null
+  },
+  "size": {
+   "tables": null,
+   "booths": null,
+   "venue_sqft": null,
+   "players": 64,
+   "reported_attendance": null,
+   "first_year": null,
+   "edition": null
+  },
+  "vendor": {
+   "tables": [],
+   "application_url": null,
+   "opens": null,
+   "deadline": null,
+   "status": "unknown",
+   "electricity": null,
+   "setup": null,
+   "contact": null,
+   "notes": null
+  },
+  "organizer": {
+   "name": "Sample Game Shop Sioux Falls",
+   "promoter_id": null,
+   "url": null
+  },
+  "links": {
+   "official": "https://example.com/sample-store/sample-pokemon-prerelease-at-sample-game-shop-sioux-falls-sioux-falls-sd",
+   "tickets": null,
+   "facebook": null,
+   "instagram": null
+  },
+  "sources": [
+   {
+    "source": "fixture",
+    "url": "https://example.com/sample-store-listing/sample-pokemon-prerelease-at-sample-game-shop-sioux-falls-sioux-falls-sd-2026-10-27",
+    "retrieved": "2026-10-21",
+    "fields": [
+     "name",
+     "days",
+     "venue"
+    ]
+   }
+  ],
+  "verification": "listed",
+  "first_seen": "2026-10-21",
+  "last_checked": "2026-10-21",
+  "summary": null,
+  "estimate": null
+ },
+ {
+  "id": "sample-pokemon-prerelease-at-sample-game-shop-wichita-wichita-ks-2027-01-05",
+  "series_id": "sample-pokemon-prerelease-at-sample-game-shop-wichita-wichita-ks",
+  "name": "Sample Pokémon Prerelease at Sample Game Shop Wichita",
+  "event_type": "store_event",
+  "status": "scheduled",
+  "days": [
+   {
+    "date": "2027-01-05",
+    "open": "18:00",
+    "close": "21:00"
+   }
+  ],
+  "timezone": "America/Chicago",
+  "venue": {
+   "name": "Sample Game Shop Wichita",
+   "address": "415 Main St",
+   "city": "Wichita",
+   "region": "KS",
+   "postal": "67202",
+   "country": "US",
+   "lat": 37.6678,
+   "lon": -97.3043,
+   "geo_precision": "address"
+  },
+  "sells": {
+   "tcg": [
+    "pokemon"
+   ],
+   "sports": [],
+   "other": []
+  },
+  "mix": "tcg",
+  "admission": {
+   "free": false,
+   "adult": 10,
+   "child": null,
+   "currency": "USD",
+   "notes": null
+  },
+  "size": {
+   "tables": null,
+   "booths": null,
+   "venue_sqft": null,
+   "players": 59,
+   "reported_attendance": null,
+   "first_year": null,
+   "edition": null
+  },
+  "vendor": {
+   "tables": [],
+   "application_url": null,
+   "opens": null,
+   "deadline": null,
+   "status": "unknown",
+   "electricity": null,
+   "setup": null,
+   "contact": null,
+   "notes": null
+  },
+  "organizer": {
+   "name": "Sample Game Shop Wichita",
+   "promoter_id": null,
+   "url": null
+  },
+  "links": {
+   "official": "https://example.com/sample-store/sample-pokemon-prerelease-at-sample-game-shop-wichita-wichita-ks",
+   "tickets": null,
+   "facebook": null,
+   "instagram": null
+  },
+  "sources": [
+   {
+    "source": "fixture",
+    "url": "https://example.com/sample-store-listing/sample-pokemon-prerelease-at-sample-game-shop-wichita-wichita-ks-2027-01-05",
+    "retrieved": "2026-10-21",
+    "fields": [
+     "name",
+     "days",
+     "venue"
+    ]
+   }
+  ],
+  "verification": "listed",
+  "first_seen": "2026-10-21",
+  "last_checked": "2026-10-21",
+  "summary": null,
+  "estimate": null
+ },
+ {
+  "id": "sample-yu-gi-oh-locals-at-sample-game-shop-anaheim-anaheim-ca-2027-01-23",
+  "series_id": "sample-yu-gi-oh-locals-at-sample-game-shop-anaheim-anaheim-ca",
+  "name": "Sample Yu-Gi-Oh Locals at Sample Game Shop Anaheim",
+  "event_type": "store_event",
+  "status": "scheduled",
+  "days": [
+   {
+    "date": "2027-01-23",
+    "open": "18:00",
+    "close": "21:00"
+   }
+  ],
+  "timezone": "America/Los_Angeles",
+  "venue": {
+   "name": "Sample Game Shop Anaheim",
+   "address": "23 Main St",
+   "city": "Anaheim",
+   "region": "CA",
+   "postal": "92805",
+   "country": "US",
+   "lat": 33.8441,
+   "lon": -117.8985,
+   "geo_precision": "address"
+  },
+  "sells": {
+   "tcg": [
+    "yugioh"
+   ],
+   "sports": [],
+   "other": []
+  },
+  "mix": "tcg",
+  "admission": {
+   "free": false,
+   "adult": 30,
+   "child": null,
+   "currency": "USD",
+   "notes": null
+  },
+  "size": {
+   "tables": null,
+   "booths": null,
+   "venue_sqft": null,
+   "players": 44,
+   "reported_attendance": null,
+   "first_year": null,
+   "edition": null
+  },
+  "vendor": {
+   "tables": [],
+   "application_url": null,
+   "opens": null,
+   "deadline": null,
+   "status": "unknown",
+   "electricity": null,
+   "setup": null,
+   "contact": null,
+   "notes": null
+  },
+  "organizer": {
+   "name": "Sample Game Shop Anaheim",
+   "promoter_id": null,
+   "url": null
+  },
+  "links": {
+   "official": "https://example.com/sample-store/sample-yu-gi-oh-locals-at-sample-game-shop-anaheim-anaheim-ca",
+   "tickets": null,
+   "facebook": null,
+   "instagram": null
+  },
+  "sources": [
+   {
+    "source": "fixture",
+    "url": "https://example.com/sample-store-listing/sample-yu-gi-oh-locals-at-sample-game-shop-anaheim-anaheim-ca-2027-01-23",
+    "retrieved": "2026-10-21",
+    "fields": [
+     "name",
+     "days",
+     "venue"
+    ]
+   }
+  ],
+  "verification": "listed",
+  "first_seen": "2026-10-21",
+  "last_checked": "2026-10-21",
+  "summary": null,
+  "estimate": null
+ },
+ {
+  "id": "sample-yu-gi-oh-locals-at-sample-game-shop-charlotte-charlotte-nc-2027-02-17",
+  "series_id": "sample-yu-gi-oh-locals-at-sample-game-shop-charlotte-charlotte-nc",
+  "name": "Sample Yu-Gi-Oh Locals at Sample Game Shop Charlotte",
+  "event_type": "store_event",
+  "status": "scheduled",
+  "days": [
+   {
+    "date": "2027-02-17",
+    "open": "18:00",
+    "close": "21:00"
+   }
+  ],
+  "timezone": "America/New_York",
+  "venue": {
+   "name": "Sample Game Shop Charlotte",
+   "address": "754 Main St",
+   "city": "Charlotte",
+   "region": "NC",
+   "postal": "28202",
+   "country": "US",
+   "lat": 35.2521,
+   "lon": -80.8466,
+   "geo_precision": "address"
+  },
+  "sells": {
+   "tcg": [
+    "yugioh"
+   ],
+   "sports": [],
+   "other": []
+  },
+  "mix": "tcg",
+  "admission": {
+   "free": false,
+   "adult": 30,
+   "child": null,
+   "currency": "USD",
+   "notes": null
+  },
+  "size": {
+   "tables": null,
+   "booths": null,
+   "venue_sqft": null,
+   "players": 60,
+   "reported_attendance": null,
+   "first_year": null,
+   "edition": null
+  },
+  "vendor": {
+   "tables": [],
+   "application_url": null,
+   "opens": null,
+   "deadline": null,
+   "status": "unknown",
+   "electricity": null,
+   "setup": null,
+   "contact": null,
+   "notes": null
+  },
+  "organizer": {
+   "name": "Sample Game Shop Charlotte",
+   "promoter_id": null,
+   "url": null
+  },
+  "links": {
+   "official": "https://example.com/sample-store/sample-yu-gi-oh-locals-at-sample-game-shop-charlotte-charlotte-nc",
+   "tickets": null,
+   "facebook": null,
+   "instagram": null
+  },
+  "sources": [
+   {
+    "source": "fixture",
+    "url": "https://example.com/sample-store-listing/sample-yu-gi-oh-locals-at-sample-game-shop-charlotte-charlotte-nc-2027-02-17",
+    "retrieved": "2026-10-21",
+    "fields": [
+     "name",
+     "days",
+     "venue"
+    ]
+   }
+  ],
+  "verification": "listed",
+  "first_seen": "2026-10-21",
+  "last_checked": "2026-10-21",
+  "summary": null,
+  "estimate": null
+ },
+ {
+  "id": "sample-yu-gi-oh-locals-at-sample-game-shop-raleigh-raleigh-nc-2027-01-27",
+  "series_id": "sample-yu-gi-oh-locals-at-sample-game-shop-raleigh-raleigh-nc",
+  "name": "Sample Yu-Gi-Oh Locals at Sample Game Shop Raleigh",
+  "event_type": "store_event",
+  "status": "scheduled",
+  "days": [
+   {
+    "date": "2027-01-27",
+    "open": "18:00",
+    "close": "21:00"
+   }
+  ],
+  "timezone": "America/New_York",
+  "venue": {
+   "name": "Sample Game Shop Raleigh",
+   "address": "79 Main St",
+   "city": "Raleigh",
+   "region": "NC",
+   "postal": "27601",
+   "country": "US",
+   "lat": 35.7669,
+   "lon": -78.6285,
+   "geo_precision": "address"
+  },
+  "sells": {
+   "tcg": [
+    "yugioh"
+   ],
+   "sports": [],
+   "other": []
+  },
+  "mix": "tcg",
+  "admission": {
+   "free": false,
+   "adult": 10,
+   "child": null,
+   "currency": "USD",
+   "notes": null
+  },
+  "size": {
+   "tables": null,
+   "booths": null,
+   "venue_sqft": null,
+   "players": 64,
+   "reported_attendance": null,
+   "first_year": null,
+   "edition": null
+  },
+  "vendor": {
+   "tables": [],
+   "application_url": null,
+   "opens": null,
+   "deadline": null,
+   "status": "unknown",
+   "electricity": null,
+   "setup": null,
+   "contact": null,
+   "notes": null
+  },
+  "organizer": {
+   "name": "Sample Game Shop Raleigh",
+   "promoter_id": null,
+   "url": null
+  },
+  "links": {
+   "official": "https://example.com/sample-store/sample-yu-gi-oh-locals-at-sample-game-shop-raleigh-raleigh-nc",
+   "tickets": null,
+   "facebook": null,
+   "instagram": null
+  },
+  "sources": [
+   {
+    "source": "fixture",
+    "url": "https://example.com/sample-store-listing/sample-yu-gi-oh-locals-at-sample-game-shop-raleigh-raleigh-nc-2027-01-27",
+    "retrieved": "2026-10-21",
+    "fields": [
+     "name",
+     "days",
+     "venue"
+    ]
+   }
+  ],
+  "verification": "listed",
+  "first_seen": "2026-10-21",
+  "last_checked": "2026-10-21",
+  "summary": null,
+  "estimate": null
+ },
+ {
+  "id": "sample-yu-gi-oh-locals-at-sample-game-shop-richmond-richmond-va-2026-12-03",
+  "series_id": "sample-yu-gi-oh-locals-at-sample-game-shop-richmond-richmond-va",
+  "name": "Sample Yu-Gi-Oh Locals at Sample Game Shop Richmond",
+  "event_type": "store_event",
+  "status": "scheduled",
+  "days": [
+   {
+    "date": "2026-12-03",
+    "open": "18:00",
+    "close": "21:00"
+   }
+  ],
+  "timezone": "America/New_York",
+  "venue": {
+   "name": "Sample Game Shop Richmond",
+   "address": "803 Main St",
+   "city": "Richmond",
+   "region": "VA",
+   "postal": "23219",
+   "country": "US",
+   "lat": 37.5618,
+   "lon": -77.409,
+   "geo_precision": "address"
+  },
+  "sells": {
+   "tcg": [
+    "yugioh"
+   ],
+   "sports": [],
+   "other": []
+  },
+  "mix": "tcg",
+  "admission": {
+   "free": false,
+   "adult": 15,
+   "child": null,
+   "currency": "USD",
+   "notes": null
+  },
+  "size": {
+   "tables": null,
+   "booths": null,
+   "venue_sqft": null,
+   "players": 60,
+   "reported_attendance": null,
+   "first_year": null,
+   "edition": null
+  },
+  "vendor": {
+   "tables": [],
+   "application_url": null,
+   "opens": null,
+   "deadline": null,
+   "status": "unknown",
+   "electricity": null,
+   "setup": null,
+   "contact": null,
+   "notes": null
+  },
+  "organizer": {
+   "name": "Sample Game Shop Richmond",
+   "promoter_id": null,
+   "url": null
+  },
+  "links": {
+   "official": "https://example.com/sample-store/sample-yu-gi-oh-locals-at-sample-game-shop-richmond-richmond-va",
+   "tickets": null,
+   "facebook": null,
+   "instagram": null
+  },
+  "sources": [
+   {
+    "source": "fixture",
+    "url": "https://example.com/sample-store-listing/sample-yu-gi-oh-locals-at-sample-game-shop-richmond-richmond-va-2026-12-03",
+    "retrieved": "2026-10-21",
+    "fields": [
+     "name",
+     "days",
+     "venue"
+    ]
+   }
+  ],
+  "verification": "listed",
+  "first_seen": "2026-10-21",
+  "last_checked": "2026-10-21",
+  "summary": null,
+  "estimate": null
+ },
+ {
+  "id": "sample-yu-gi-oh-locals-at-sample-game-shop-sacramento-sacramento-ca-2026-10-25",
+  "series_id": "sample-yu-gi-oh-locals-at-sample-game-shop-sacramento-sacramento-ca",
+  "name": "Sample Yu-Gi-Oh Locals at Sample Game Shop Sacramento",
+  "event_type": "store_event",
+  "status": "scheduled",
+  "days": [
+   {
+    "date": "2026-10-25",
+    "open": "18:00",
+    "close": "21:00"
+   }
+  ],
+  "timezone": "America/Los_Angeles",
+  "venue": {
+   "name": "Sample Game Shop Sacramento",
+   "address": "58 Main St",
+   "city": "Sacramento",
+   "region": "CA",
+   "postal": "95814",
+   "country": "US",
+   "lat": 38.58,
+   "lon": -121.5175,
+   "geo_precision": "address"
+  },
+  "sells": {
+   "tcg": [
+    "yugioh"
+   ],
+   "sports": [],
+   "other": []
+  },
+  "mix": "tcg",
+  "admission": {
+   "free": false,
+   "adult": 10,
+   "child": null,
+   "currency": "USD",
+   "notes": null
+  },
+  "size": {
+   "tables": null,
+   "booths": null,
+   "venue_sqft": null,
+   "players": 23,
+   "reported_attendance": null,
+   "first_year": null,
+   "edition": null
+  },
+  "vendor": {
+   "tables": [],
+   "application_url": null,
+   "opens": null,
+   "deadline": null,
+   "status": "unknown",
+   "electricity": null,
+   "setup": null,
+   "contact": null,
+   "notes": null
+  },
+  "organizer": {
+   "name": "Sample Game Shop Sacramento",
+   "promoter_id": null,
+   "url": null
+  },
+  "links": {
+   "official": "https://example.com/sample-store/sample-yu-gi-oh-locals-at-sample-game-shop-sacramento-sacramento-ca",
+   "tickets": null,
+   "facebook": null,
+   "instagram": null
+  },
+  "sources": [
+   {
+    "source": "fixture",
+    "url": "https://example.com/sample-store-listing/sample-yu-gi-oh-locals-at-sample-game-shop-sacramento-sacramento-ca-2026-10-25",
+    "retrieved": "2026-10-21",
+    "fields": [
+     "name",
+     "days",
+     "venue"
+    ]
+   }
+  ],
+  "verification": "listed",
+  "first_seen": "2026-10-21",
+  "last_checked": "2026-10-21",
+  "summary": null,
+  "estimate": null
+ },
+ {
+  "id": "sample-yu-gi-oh-locals-at-sample-game-shop-san-diego-san-diego-ca-2026-11-05",
+  "series_id": "sample-yu-gi-oh-locals-at-sample-game-shop-san-diego-san-diego-ca",
+  "name": "Sample Yu-Gi-Oh Locals at Sample Game Shop San Diego",
+  "event_type": "store_event",
+  "status": "scheduled",
+  "days": [
+   {
+    "date": "2026-11-05",
+    "open": "18:00",
+    "close": "21:00"
+   }
+  ],
+  "timezone": "America/Los_Angeles",
+  "venue": {
+   "name": "Sample Game Shop San Diego",
+   "address": "677 Main St",
+   "city": "San Diego",
+   "region": "CA",
+   "postal": "92101",
+   "country": "US",
+   "lat": 32.7363,
+   "lon": -117.1342,
+   "geo_precision": "address"
+  },
+  "sells": {
+   "tcg": [
+    "yugioh"
+   ],
+   "sports": [],
+   "other": []
+  },
+  "mix": "tcg",
+  "admission": {
+   "free": false,
+   "adult": 15,
+   "child": null,
+   "currency": "USD",
+   "notes": null
+  },
+  "size": {
+   "tables": null,
+   "booths": null,
+   "venue_sqft": null,
+   "players": 56,
+   "reported_attendance": null,
+   "first_year": null,
+   "edition": null
+  },
+  "vendor": {
+   "tables": [],
+   "application_url": null,
+   "opens": null,
+   "deadline": null,
+   "status": "unknown",
+   "electricity": null,
+   "setup": null,
+   "contact": null,
+   "notes": null
+  },
+  "organizer": {
+   "name": "Sample Game Shop San Diego",
+   "promoter_id": null,
+   "url": null
+  },
+  "links": {
+   "official": "https://example.com/sample-store/sample-yu-gi-oh-locals-at-sample-game-shop-san-diego-san-diego-ca",
+   "tickets": null,
+   "facebook": null,
+   "instagram": null
+  },
+  "sources": [
+   {
+    "source": "fixture",
+    "url": "https://example.com/sample-store-listing/sample-yu-gi-oh-locals-at-sample-game-shop-san-diego-san-diego-ca-2026-11-05",
+    "retrieved": "2026-10-21",
+    "fields": [
+     "name",
+     "days",
+     "venue"
+    ]
+   }
+  ],
+  "verification": "listed",
+  "first_seen": "2026-10-21",
+  "last_checked": "2026-10-21",
+  "summary": null,
+  "estimate": null
+ },
+ {
+  "id": "sample-yu-gi-oh-locals-at-sample-game-shop-san-jose-san-jose-ca-2027-01-27",
+  "series_id": "sample-yu-gi-oh-locals-at-sample-game-shop-san-jose-san-jose-ca",
+  "name": "Sample Yu-Gi-Oh Locals at Sample Game Shop San Jose",
+  "event_type": "store_event",
+  "status": "scheduled",
+  "days": [
+   {
+    "date": "2027-01-27",
+    "open": "18:00",
+    "close": "21:00"
+   }
+  ],
+  "timezone": "America/Los_Angeles",
+  "venue": {
+   "name": "Sample Game Shop San Jose",
+   "address": "571 Main St",
+   "city": "San Jose",
+   "region": "CA",
+   "postal": "95113",
+   "country": "US",
+   "lat": 37.348,
+   "lon": -121.8567,
+   "geo_precision": "address"
+  },
+  "sells": {
+   "tcg": [
+    "yugioh"
+   ],
+   "sports": [],
+   "other": []
+  },
+  "mix": "tcg",
+  "admission": {
+   "free": false,
+   "adult": 30,
+   "child": null,
+   "currency": "USD",
+   "notes": null
+  },
+  "size": {
+   "tables": null,
+   "booths": null,
+   "venue_sqft": null,
+   "players": 8,
+   "reported_attendance": null,
+   "first_year": null,
+   "edition": null
+  },
+  "vendor": {
+   "tables": [],
+   "application_url": null,
+   "opens": null,
+   "deadline": null,
+   "status": "unknown",
+   "electricity": null,
+   "setup": null,
+   "contact": null,
+   "notes": null
+  },
+  "organizer": {
+   "name": "Sample Game Shop San Jose",
+   "promoter_id": null,
+   "url": null
+  },
+  "links": {
+   "official": "https://example.com/sample-store/sample-yu-gi-oh-locals-at-sample-game-shop-san-jose-san-jose-ca",
+   "tickets": null,
+   "facebook": null,
+   "instagram": null
+  },
+  "sources": [
+   {
+    "source": "fixture",
+    "url": "https://example.com/sample-store-listing/sample-yu-gi-oh-locals-at-sample-game-shop-san-jose-san-jose-ca-2027-01-27",
+    "retrieved": "2026-10-21",
+    "fields": [
+     "name",
+     "days",
+     "venue"
+    ]
+   }
+  ],
+  "verification": "listed",
+  "first_seen": "2026-10-21",
+  "last_checked": "2026-10-21",
+  "summary": null,
+  "estimate": null
+ },
+ {
+  "id": "sample-yu-gi-oh-locals-at-sample-game-shop-virginia-beach-virginia-beach-va-2026-12-24",
+  "series_id": "sample-yu-gi-oh-locals-at-sample-game-shop-virginia-beach-virginia-beach-va",
+  "name": "Sample Yu-Gi-Oh Locals at Sample Game Shop Virginia Beach",
+  "event_type": "store_event",
+  "status": "scheduled",
+  "days": [
+   {
+    "date": "2026-12-24",
+    "open": "18:00",
+    "close": "21:00"
+   }
+  ],
+  "timezone": "America/New_York",
+  "venue": {
+   "name": "Sample Game Shop Virginia Beach",
+   "address": "500 Main St",
+   "city": "Virginia Beach",
+   "region": "VA",
+   "postal": "23451",
+   "country": "US",
+   "lat": 36.836,
+   "lon": -76.0065,
+   "geo_precision": "address"
+  },
+  "sells": {
+   "tcg": [
+    "yugioh"
+   ],
+   "sports": [],
+   "other": []
+  },
+  "mix": "tcg",
+  "admission": {
+   "free": false,
+   "adult": 5,
+   "child": null,
+   "currency": "USD",
+   "notes": null
+  },
+  "size": {
+   "tables": null,
+   "booths": null,
+   "venue_sqft": null,
+   "players": 27,
+   "reported_attendance": null,
+   "first_year": null,
+   "edition": null
+  },
+  "vendor": {
+   "tables": [],
+   "application_url": null,
+   "opens": null,
+   "deadline": null,
+   "status": "unknown",
+   "electricity": null,
+   "setup": null,
+   "contact": null,
+   "notes": null
+  },
+  "organizer": {
+   "name": "Sample Game Shop Virginia Beach",
+   "promoter_id": null,
+   "url": null
+  },
+  "links": {
+   "official": "https://example.com/sample-store/sample-yu-gi-oh-locals-at-sample-game-shop-virginia-beach-virginia-beach-va",
+   "tickets": null,
+   "facebook": null,
+   "instagram": null
+  },
+  "sources": [
+   {
+    "source": "fixture",
+    "url": "https://example.com/sample-store-listing/sample-yu-gi-oh-locals-at-sample-game-shop-virginia-beach-virginia-beach-va-2026-12-24",
+    "retrieved": "2026-10-21",
+    "fields": [
+     "name",
+     "days",
+     "venue"
+    ]
+   }
+  ],
+  "verification": "listed",
+  "first_seen": "2026-10-21",
+  "last_checked": "2026-10-21",
+  "summary": null,
+  "estimate": null
+ },
+ {
+  "id": "sample-yu-gi-oh-locals-at-sample-game-shop-washington-washington-dc-2026-12-15",
+  "series_id": "sample-yu-gi-oh-locals-at-sample-game-shop-washington-washington-dc",
+  "name": "Sample Yu-Gi-Oh Locals at Sample Game Shop Washington",
+  "event_type": "store_event",
+  "status": "scheduled",
+  "days": [
+   {
+    "date": "2026-12-15",
+    "open": "18:00",
+    "close": "21:00"
+   }
+  ],
+  "timezone": "America/New_York",
+  "venue": {
+   "name": "Sample Game Shop Washington",
+   "address": "881 Main St",
+   "city": "Washington",
+   "region": "DC",
+   "postal": "20001",
+   "country": "US",
+   "lat": 38.8913,
+   "lon": -77.051,
+   "geo_precision": "address"
+  },
+  "sells": {
+   "tcg": [
+    "yugioh"
+   ],
+   "sports": [],
+   "other": []
+  },
+  "mix": "tcg",
+  "admission": {
+   "free": false,
+   "adult": 15,
+   "child": null,
+   "currency": "USD",
+   "notes": null
+  },
+  "size": {
+   "tables": null,
+   "booths": null,
+   "venue_sqft": null,
+   "players": 26,
+   "reported_attendance": null,
+   "first_year": null,
+   "edition": null
+  },
+  "vendor": {
+   "tables": [],
+   "application_url": null,
+   "opens": null,
+   "deadline": null,
+   "status": "unknown",
+   "electricity": null,
+   "setup": null,
+   "contact": null,
+   "notes": null
+  },
+  "organizer": {
+   "name": "Sample Game Shop Washington",
+   "promoter_id": null,
+   "url": null
+  },
+  "links": {
+   "official": "https://example.com/sample-store/sample-yu-gi-oh-locals-at-sample-game-shop-washington-washington-dc",
+   "tickets": null,
+   "facebook": null,
+   "instagram": null
+  },
+  "sources": [
+   {
+    "source": "fixture",
+    "url": "https://example.com/sample-store-listing/sample-yu-gi-oh-locals-at-sample-game-shop-washington-washington-dc-2026-12-15",
+    "retrieved": "2026-10-21",
+    "fields": [
+     "name",
+     "days",
+     "venue"
+    ]
+   }
+  ],
+  "verification": "listed",
+  "first_seen": "2026-10-21",
+  "last_checked": "2026-10-21",
+  "summary": null,
+  "estimate": null
+ }
+]

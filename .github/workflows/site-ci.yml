@@ -1,0 +1,39 @@
+name: Site tests
+
+on:
+  pull_request:
+    paths:
+      - 'site/**'
+      - 'docs/DATA_MODEL.md'
+      - '.github/workflows/site-ci.yml'
+  push:
+    paths:
+      - 'site/**'
+      - 'docs/DATA_MODEL.md'
+      - '.github/workflows/site-ci.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: site
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+          cache-dependency-path: site/package-lock.json
+      - run: npm ci
+      - name: Unit tests
+        run: npm test
+      - name: Type check
+        run: npx astro check
+      # With no data in site/public/data this is the production build with its empty state. It
+      # fails if sample data is found anywhere in the output.
+      - name: Production build
+        run: npm run build

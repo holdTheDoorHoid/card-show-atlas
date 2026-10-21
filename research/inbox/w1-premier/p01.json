@@ -1,0 +1,418 @@
+{
+  "wave": "w1-premier",
+  "agent": "p01",
+  "model": "haiku",
+  "searches_used": 8,
+  "fetches_used": 50,
+  "records": [
+    {
+      "kind": "edition",
+      "name": "MagicCon: Atlanta 2026",
+      "event_type": "tournament",
+      "status": "scheduled",
+      "days": [{"date": "2026-11-13"}, {"date": "2026-11-14"}, {"date": "2026-11-15"}],
+      "venue": {"city": "Atlanta", "region": "GA", "country": "US"},
+      "sells": {"tcg": ["mtg"], "sports": [], "other": []},
+      "admission": {
+        "free": false,
+        "adult": 48.5,
+        "child": 31.81,
+        "currency": "USD",
+        "notes": "Regular single day 48.50 (early bird 42.94 ended June 23, 2026). Weekend regular 126.36. Youth ages 10 to 15 single day 31.81. Children 9 and under free with a paid adult. Prices include a 3.60 fee and 8.9 percent tax per the page. The page shows dollar signs only, so currency is recorded as USD from the US venue."
+      },
+      "vendor": {
+        "status": "unknown",
+        "notes": "No dealer table prices, booth sizes or dealer deadline on the official pages. The official exhibitor page at https://mcatlanta.mtgfestivals.com/en-us/applications.html covers panels and Art of Magic exhibits, not dealer booths. A third-party listing describes a dealer hall of hundreds of tables; not verified on an official page."
+      },
+      "organizer": {"name": "Wizards of the Coast", "url": "https://magic.gg"},
+      "links": {
+        "official": "https://mcatlanta.mtgfestivals.com/",
+        "news": "https://magic.gg/news/magiccon-atlanta-2026-gather-for-the-multiverse"
+      },
+      "summary": "Official Magic festival in Atlanta, November 13 to 15, 2026, with a Pro Tour and many side events. The official pages name no venue and publish no dealer table prices.",
+      "evidence": [
+        {"url": "https://magic.gg/news/magiccon-atlanta-2026-gather-for-the-multiverse", "seen": "2026-10-21", "supports": ["name", "days", "admission"]},
+        {"url": "https://mcatlanta.mtgfestivals.com/", "seen": "2026-10-21", "supports": ["name", "days", "city"]}
+      ],
+      "agent_confidence": "high"
+    },
+    {
+      "kind": "edition",
+      "name": "CoolStuffCon Orlando 2026",
+      "event_type": "convention",
+      "status": "scheduled",
+      "days": [{"date": "2026-10-30"}, {"date": "2026-10-31"}, {"date": "2026-11-01"}],
+      "venue": {"city": "Orlando", "region": "FL", "country": "US"},
+      "admission": {"free": true, "notes": "Listed as free to attend on the organizer's site banner."},
+      "vendor": {"status": "unknown", "notes": "No vendor table or booth prices found on the sources checked."},
+      "organizer": {"name": "CoolStuffInc", "url": "https://www.coolstuffinc.com"},
+      "links": {"official": "https://www.coolstuffinc.com/p/322931"},
+      "summary": "Convention run by CoolStuffInc in Orlando from October 30 to November 1, 2026, free to attend. The venue and vendor terms were not published on the pages checked.",
+      "evidence": [
+        {"url": "https://www.coolstuffinc.com/p/322931", "seen": "2026-10-21", "supports": ["name", "days", "admission"]}
+      ],
+      "agent_confidence": "medium"
+    },
+    {
+      "kind": "edition",
+      "name": "Riftbound North American Regional Championship 2026",
+      "event_type": "tournament",
+      "status": "scheduled",
+      "days": [{"date": "2026-12-11"}, {"date": "2026-12-12"}, {"date": "2026-12-13"}],
+      "venue": {"name": "Convergence Fest (venue hall not named)", "city": "Las Vegas", "region": "NV", "country": "US"},
+      "sells": {"tcg": ["riftbound"], "sports": [], "other": []},
+      "admission": {"notes": "Regional competitors do not need to buy a Convergence Fest pass. Public pass prices not published."},
+      "vendor": {"status": "unknown", "notes": "The official article mentions no exhibitor or vendor hall and gives no application link or deadline."},
+      "organizer": {"name": "Riot Games", "url": "https://playriftbound.com"},
+      "links": {"official": "https://playriftbound.com/en-us/news/organizedplay/north-american-regional-championship-info"},
+      "summary": "Riftbound's North American Regional Championship, held inside Convergence Fest in Las Vegas in mid December 2026. Players reach it through regional qualifiers.",
+      "evidence": [
+        {"url": "https://playriftbound.com/en-us/news/organizedplay/north-american-regional-championship-info", "seen": "2026-10-21", "supports": ["name", "city", "days"]}
+      ],
+      "agent_confidence": "medium"
+    },
+    {
+      "kind": "edition",
+      "name": "Riftbound Regional Philadelphia 2027",
+      "event_type": "tournament",
+      "status": "scheduled",
+      "days": [{"date": "2027-02-12"}, {"date": "2027-02-13"}, {"date": "2027-02-14"}],
+      "venue": {"name": "Pennsylvania Convention Center", "city": "Philadelphia", "region": "PA", "country": "US"},
+      "sells": {"tcg": ["riftbound"], "sports": [], "other": []},
+      "vendor": {"status": "unknown", "notes": "No vendor or exhibitor information on the official page."},
+      "organizer": {"name": "Riot Games", "url": "https://playriftbound.com"},
+      "links": {"official": "https://playriftbound.com/en-us/news/organizedplay/riftbound-premier-play-early-2027-events"},
+      "summary": "Three day Riftbound Regional in Philadelphia in February 2027, with Competitor and Attendee badges.",
+      "evidence": [
+        {"url": "https://playriftbound.com/en-us/news/organizedplay/riftbound-premier-play-early-2027-events", "seen": "2026-10-21", "supports": ["name", "days", "venue"]}
+      ],
+      "agent_confidence": "high"
+    },
+    {
+      "kind": "edition",
+      "name": "Riftbound Continental Dallas 2027",
+      "event_type": "tournament",
+      "status": "scheduled",
+      "days": [{"date": "2027-03-26"}, {"date": "2027-03-27"}, {"date": "2027-03-28"}],
+      "venue": {"name": "Kay Bailey Convention Center", "city": "Dallas", "region": "TX", "country": "US"},
+      "sells": {"tcg": ["riftbound"], "sports": [], "other": []},
+      "vendor": {"status": "unknown", "notes": "No vendor or exhibitor information on the official page."},
+      "organizer": {"name": "Riot Games", "url": "https://playriftbound.com"},
+      "links": {"official": "https://playriftbound.com/en-us/news/organizedplay/riftbound-premier-play-early-2027-events"},
+      "summary": "Riot's Continental event in Dallas in late March 2027, with an open entry qualifier on day one and the main event from Saturday. Riot calls it a Continental, not a Regional, although the brief named it as a Regional.",
+      "evidence": [
+        {"url": "https://playriftbound.com/en-us/news/organizedplay/riftbound-premier-play-early-2027-events", "seen": "2026-10-21", "supports": ["name", "days", "venue"]}
+      ],
+      "agent_confidence": "high"
+    },
+    {
+      "kind": "edition",
+      "name": "BANDAI CARD GAMES Fest 26-27 in Orlando",
+      "event_type": "tournament",
+      "status": "scheduled",
+      "days": [{"date": "2027-01-07"}, {"date": "2027-01-08"}, {"date": "2027-01-09"}, {"date": "2027-01-10"}],
+      "venue": {"name": "Orange County Convention Center", "address": "9800 International Dr", "city": "Orlando", "region": "FL", "postal": "32819", "country": "US"},
+      "sells": {"tcg": ["one_piece"], "sports": [], "other": []},
+      "admission": {"notes": "Admission and ticket prices listed as coming soon."},
+      "vendor": {"status": "unknown", "notes": "No exhibitor or booth section on the official page. Side events are listed as coming soon."},
+      "organizer": {"name": "BANDAI CARD GAMES", "url": "https://en.onepiece-cardgame.com/"},
+      "links": {"official": "https://en.onepiece-cardgame.com/events/bcgfest25-26-orlando.html"},
+      "summary": "Bandai's One Piece Card Game festival in Orlando, January 7 to 10, 2027, tied to the season two Championship Finals. Ticket and vendor details are not yet published. The page URL slug says 25-26 but the page title says 26-27.",
+      "evidence": [
+        {"url": "https://en.onepiece-cardgame.com/events/bcgfest25-26-orlando.html", "seen": "2026-10-21", "supports": ["name", "days", "venue"]}
+      ],
+      "agent_confidence": "high"
+    },
+    {
+      "kind": "edition",
+      "name": "Treasure Cup Peoria (Top Cut)",
+      "event_type": "tournament",
+      "status": "scheduled",
+      "days": [{"date": "2026-12-06"}],
+      "venue": {"name": "Peoria Civic Center", "address": "201 SW Jefferson Ave", "city": "Peoria", "region": "IL", "postal": "61602", "country": "US"},
+      "sells": {"tcg": ["one_piece"], "sports": [], "other": []},
+      "admission": {"notes": "Entry fee not published on the official page."},
+      "vendor": {"status": "unknown", "notes": "No vendor information on the official page."},
+      "organizer": {"name": "Top Cut"},
+      "links": {"official": "https://en.onepiece-cardgame.com/events/treasure-cup-dec-2026.html"},
+      "summary": "One Piece Treasure Cup in Peoria, Illinois on December 6, 2026, run by Top Cut. Standard format singles.",
+      "evidence": [
+        {"url": "https://en.onepiece-cardgame.com/events/treasure-cup-dec-2026.html", "seen": "2026-10-21", "supports": ["name", "days", "venue"]}
+      ],
+      "agent_confidence": "high"
+    },
+    {
+      "kind": "edition",
+      "name": "Treasure Cup Montreal (Carta Magica)",
+      "event_type": "tournament",
+      "status": "scheduled",
+      "days": [{"date": "2026-12-12"}, {"date": "2026-12-13"}],
+      "venue": {"name": "Palais des Congrès de Montréal", "address": "1001 Pl. Jean-Paul-Riopelle #220b", "city": "Montréal", "region": "QC", "postal": "H2Y 3X4", "country": "CA"},
+      "sells": {"tcg": ["one_piece"], "sports": [], "other": []},
+      "admission": {"notes": "Entry fee not published on the official page."},
+      "vendor": {"status": "unknown", "notes": "No vendor information on the official page."},
+      "organizer": {"name": "Carta Magica"},
+      "links": {"official": "https://en.onepiece-cardgame.com/events/treasure-cup-dec-2026.html"},
+      "summary": "One Piece Treasure Cup in Montréal on December 12 and 13, 2026, run by Carta Magica. Standard format singles.",
+      "evidence": [
+        {"url": "https://en.onepiece-cardgame.com/events/treasure-cup-dec-2026.html", "seen": "2026-10-21", "supports": ["name", "days", "venue"]}
+      ],
+      "agent_confidence": "high"
+    },
+    {
+      "kind": "edition",
+      "name": "Treasure Cup Kissimmee (Versus Games)",
+      "event_type": "tournament",
+      "status": "scheduled",
+      "days": [{"date": "2026-12-12"}, {"date": "2026-12-13"}],
+      "venue": {"name": "Osceola Heritage Park", "address": "875 Silver Spur Ln", "city": "Kissimmee", "region": "FL", "postal": "34744", "country": "US"},
+      "sells": {"tcg": ["one_piece"], "sports": [], "other": []},
+      "admission": {"notes": "Entry fee not published on the official page."},
+      "vendor": {"status": "unknown", "notes": "No vendor information on the official page."},
+      "organizer": {"name": "Versus Games"},
+      "links": {"official": "https://en.onepiece-cardgame.com/events/treasure-cup-dec-2026.html"},
+      "summary": "One Piece Treasure Cup in Kissimmee, Florida on December 12 and 13, 2026, run by Versus Games. Standard format singles.",
+      "evidence": [
+        {"url": "https://en.onepiece-cardgame.com/events/treasure-cup-dec-2026.html", "seen": "2026-10-21", "supports": ["name", "days", "venue"]}
+      ],
+      "agent_confidence": "high"
+    },
+    {
+      "kind": "edition",
+      "name": "Treasure Cup Monroeville (PPG Event Management)",
+      "event_type": "tournament",
+      "status": "scheduled",
+      "days": [{"date": "2026-12-19"}, {"date": "2026-12-20"}],
+      "venue": {"name": "Monroeville Convention Center", "address": "209 Mall Plaza Blvd", "city": "Monroeville", "region": "PA", "postal": "15146", "country": "US"},
+      "sells": {"tcg": ["one_piece"], "sports": [], "other": []},
+      "admission": {"notes": "Entry fee not published on the official page."},
+      "vendor": {"status": "unknown", "notes": "No vendor information on the official page."},
+      "organizer": {"name": "PPG Event Management"},
+      "links": {"official": "https://en.onepiece-cardgame.com/events/treasure-cup-dec-2026.html"},
+      "summary": "One Piece Treasure Cup in Monroeville, Pennsylvania on December 19 and 20, 2026, run by PPG Event Management. Standard format singles.",
+      "evidence": [
+        {"url": "https://en.onepiece-cardgame.com/events/treasure-cup-dec-2026.html", "seen": "2026-10-21", "supports": ["name", "days", "venue"]}
+      ],
+      "agent_confidence": "high"
+    },
+    {
+      "kind": "edition",
+      "name": "Star Wars Unlimited Homeworlds Sector Qualifier Baltimore 2026",
+      "event_type": "tournament",
+      "status": "scheduled",
+      "days": [{"date": "2026-11-07"}, {"date": "2026-11-08"}],
+      "venue": {"name": "Baltimore Convention Center", "city": "Baltimore", "region": "MD", "country": "US"},
+      "sells": {"tcg": ["swu"], "sports": [], "other": []},
+      "vendor": {"status": "unknown", "notes": "No booth or vendor information on the qualifier site. Its register buttons link to player event pages, not vendor applications."},
+      "organizer": {"name": "Star City Games", "url": "https://swuqualifiers.com/"},
+      "links": {"official": "https://swuqualifiers.com/"},
+      "summary": "Star Wars Unlimited Homeworlds Sector Qualifier in Baltimore, November 7 and 8, 2026. The premier main event and the limited open event run on this weekend.",
+      "evidence": [
+        {"url": "https://swuqualifiers.com/", "seen": "2026-10-21", "supports": ["name", "days", "venue"]}
+      ],
+      "agent_confidence": "high"
+    },
+    {
+      "kind": "edition",
+      "name": "Star Wars Unlimited Homeworlds Sector Qualifier Minneapolis 2027",
+      "event_type": "tournament",
+      "status": "scheduled",
+      "days": [{"date": "2027-01-09"}, {"date": "2027-01-10"}],
+      "venue": {"name": "Minneapolis Convention Center", "city": "Minneapolis", "region": "MN", "country": "US"},
+      "sells": {"tcg": ["swu"], "sports": [], "other": []},
+      "vendor": {"status": "unknown", "notes": "No booth or vendor information on the qualifier site."},
+      "organizer": {"name": "Star City Games", "url": "https://swuqualifiers.com/"},
+      "links": {"official": "https://swuqualifiers.com/"},
+      "summary": "Star Wars Unlimited Homeworlds Sector Qualifier in Minneapolis, January 9 and 10, 2027. The limited main event and the premier open event run on this weekend. The same venue hosts SCG CON Minneapolis on overlapping dates.",
+      "evidence": [
+        {"url": "https://swuqualifiers.com/", "seen": "2026-10-21", "supports": ["name", "days", "venue"]}
+      ],
+      "agent_confidence": "high"
+    },
+    {
+      "kind": "edition",
+      "name": "SCG CON Hartford 2026",
+      "event_type": "convention",
+      "status": "scheduled",
+      "days": [
+        {"date": "2026-10-23", "open": "09:00", "close": "21:00"},
+        {"date": "2026-10-24", "open": "08:00", "close": "21:00"},
+        {"date": "2026-10-25", "open": "08:00", "close": "18:00"}
+      ],
+      "venue": {"name": "Connecticut Convention Center", "address": "100 Columbus Blvd", "city": "Hartford", "region": "CT", "postal": "06103", "country": "US"},
+      "admission": {"free": true, "notes": "Attendance is free. Tournament entry fees are extra and vary. The page lists examples but gives no currency."},
+      "vendor": {"status": "unknown", "notes": "The event page names about 15 vendors (for example Card Monster Games, Heavy Play and Cool Stuff Inc) but gives no booth sizes, prices, application link or deadline."},
+      "organizer": {"name": "Star City Games", "url": "https://scgcon.starcitygames.com"},
+      "links": {"official": "https://scgcon.starcitygames.com/event/scg-con-hartford-2026/"},
+      "summary": "Star City Games convention in Hartford, Connecticut, October 23 to 25, 2026, with Magic tournaments and about 15 named vendors.",
+      "evidence": [
+        {"url": "https://scgcon.starcitygames.com/event/scg-con-hartford-2026/", "seen": "2026-10-21", "supports": ["name", "days", "venue", "admission"]}
+      ],
+      "agent_confidence": "high"
+    },
+    {
+      "kind": "edition",
+      "name": "SCG CON Minneapolis 2027",
+      "event_type": "convention",
+      "status": "scheduled",
+      "days": [
+        {"date": "2027-01-08", "open": "09:00", "close": "21:00"},
+        {"date": "2027-01-09", "open": "08:00", "close": "21:00"},
+        {"date": "2027-01-10", "open": "08:00", "close": "18:00"}
+      ],
+      "venue": {"name": "Minneapolis Convention Center", "address": "1301 Second Ave S", "city": "Minneapolis", "region": "MN", "postal": "55403", "country": "US"},
+      "admission": {"free": true, "notes": "Attendance is free. One listed tournament has a $100 entry fee plus a Melee.gg fee (dollar sign only on the page)."},
+      "vendor": {"status": "unknown", "notes": "Vendor section listed as coming soon. No booth sizes, prices, application link or deadline published."},
+      "organizer": {"name": "Star City Games", "url": "https://scgcon.starcitygames.com"},
+      "links": {"official": "https://scgcon.starcitygames.com/event/scg-con-minneapolis-2027/"},
+      "summary": "Star City Games convention at the Minneapolis Convention Center, January 8 to 10, 2027. Vendor details and the full schedule are listed as coming soon.",
+      "evidence": [
+        {"url": "https://scgcon.starcitygames.com/event/scg-con-minneapolis-2027/", "seen": "2026-10-21", "supports": ["name", "days", "venue", "admission"]}
+      ],
+      "agent_confidence": "high"
+    },
+    {
+      "kind": "edition",
+      "name": "SCG CON St. Louis 2027",
+      "event_type": "convention",
+      "status": "scheduled",
+      "days": [
+        {"date": "2027-01-22", "open": "09:00", "close": "21:00"},
+        {"date": "2027-01-23", "open": "08:00", "close": "21:00"},
+        {"date": "2027-01-24", "open": "08:00", "close": "18:00"}
+      ],
+      "venue": {"name": "America's Center Convention Complex", "address": "701 Convention Plaza", "city": "St. Louis", "region": "MO", "postal": "63101", "country": "US"},
+      "admission": {"free": true, "notes": "Attendance is free."},
+      "vendor": {"status": "unknown", "notes": "Vendor section listed as coming soon. No booth sizes, prices, application link or deadline published."},
+      "organizer": {"name": "Star City Games", "url": "https://scgcon.starcitygames.com"},
+      "links": {"official": "https://scgcon.starcitygames.com/event/scg-con-st-louis-2027/"},
+      "summary": "Star City Games convention in St. Louis, January 22 to 24, 2027. Vendor details and the full schedule are listed as coming soon.",
+      "evidence": [
+        {"url": "https://scgcon.starcitygames.com/event/scg-con-st-louis-2027/", "seen": "2026-10-21", "supports": ["name", "days", "venue", "admission"]}
+      ],
+      "agent_confidence": "high"
+    },
+    {
+      "kind": "edition",
+      "name": "SCG CON San Diego 2027",
+      "event_type": "convention",
+      "status": "scheduled",
+      "days": [
+        {"date": "2027-02-05", "open": "09:00", "close": "21:00"},
+        {"date": "2027-02-06", "open": "08:00", "close": "21:00"},
+        {"date": "2027-02-07", "open": "08:00", "close": "18:00"}
+      ],
+      "venue": {"name": "San Diego Convention Center", "address": "111 Harbor Drive", "city": "San Diego", "region": "CA", "postal": "92101", "country": "US"},
+      "admission": {"free": true, "notes": "Attendance is free."},
+      "vendor": {"status": "unknown", "notes": "Vendor section and vendor contact not published. Only a general contact form and a fact sheet are linked."},
+      "organizer": {"name": "Star City Games", "url": "https://scgcon.starcitygames.com"},
+      "links": {"official": "https://scgcon.starcitygames.com/event/scg-con-san-diego-2027/"},
+      "summary": "Star City Games convention in San Diego, February 5 to 7, 2027. Vendor details and the full schedule are listed as coming soon.",
+      "evidence": [
+        {"url": "https://scgcon.starcitygames.com/event/scg-con-san-diego-2027/", "seen": "2026-10-21", "supports": ["name", "days", "venue", "admission"]}
+      ],
+      "agent_confidence": "high"
+    },
+    {
+      "kind": "edition",
+      "name": "Digimon Card Game Regional Washington DC 2026",
+      "event_type": "tournament",
+      "status": "scheduled",
+      "days": [{"date": "2026-11-01"}],
+      "venue": {"name": "JW Marriott Washington", "address": "1331 Pennsylvania Avenue NW", "city": "Washington", "region": "DC", "postal": "20004", "country": "US"},
+      "sells": {"tcg": ["digimon"], "sports": [], "other": []},
+      "admission": {"notes": "Entry fees not listed on the official page."},
+      "vendor": {"status": "unknown", "notes": "No vendor or exhibitor information listed for this event."},
+      "organizer": {"name": "The Booster Box"},
+      "links": {"official": "https://world.digimoncard.com/event/2026/championship/regionals-season2/"},
+      "summary": "Digimon Card Game Regional on November 1, 2026 at a Washington hotel, run by The Booster Box.",
+      "evidence": [
+        {"url": "https://world.digimoncard.com/event/2026/championship/regionals-season2/", "seen": "2026-10-21", "supports": ["name", "days", "venue"]}
+      ],
+      "agent_confidence": "high"
+    },
+    {
+      "kind": "edition",
+      "name": "Digimon Card Game Regional Newark Ohio 2026",
+      "event_type": "tournament",
+      "status": "scheduled",
+      "days": [{"date": "2026-12-05"}],
+      "venue": {"name": "Ohio Event Center", "address": "2299 Cherry Valley Rd SE Ste 3", "city": "Newark", "region": "OH", "postal": "43055", "country": "US"},
+      "sells": {"tcg": ["digimon"], "sports": [], "other": []},
+      "admission": {"notes": "Entry fees not listed on the official page."},
+      "vendor": {"status": "unknown", "notes": "No vendor or exhibitor information listed for this event."},
+      "organizer": {"name": "Play!TCG"},
+      "links": {"official": "https://world.digimoncard.com/event/2026/championship/regionals-season2/"},
+      "summary": "Digimon Card Game Regional on December 5, 2026 in Newark, Ohio, run by Play!TCG.",
+      "evidence": [
+        {"url": "https://world.digimoncard.com/event/2026/championship/regionals-season2/", "seen": "2026-10-21", "supports": ["name", "days", "venue"]}
+      ],
+      "agent_confidence": "high"
+    }
+  ],
+  "leads_only": [
+    {
+      "name": "Star Wars Unlimited Galactic Championship 2027",
+      "url": "https://galacticchampionship.starwarsunlimited.com/",
+      "note": "Official page says the 2027 event is at Disneyland Resort in Anaheim, California, in May 2027. No exact days shown, so not recorded. The 2026 Galactic Championship in Las Vegas (July 24 to 26, 2026) has already run."
+    },
+    {
+      "name": "MagicCon 2027 in North America",
+      "url": "https://magic.gg/magiccon",
+      "note": "Page links to a 2027 MagicCon announcement that covers Japan, Europe and the US. No North American city or dates were visible, so nothing recorded."
+    },
+    {
+      "name": "Disney Lorcana Challenge stop, Tampa 2026",
+      "url": "https://lorcanaplayer.com/disney-lorcana-26-27-season-of-villainy-announced/",
+      "note": "Fan-site schedule, December 18 to 20, 2026. Seen only in a search summary: the site disallows ClaudeBot, so not fetched and not verified. No venue given. Not recorded."
+    },
+    {
+      "name": "Disney Lorcana Challenge stop, Milwaukee 2027",
+      "url": "https://lorcanaplayer.com/disney-lorcana-26-27-season-of-villainy-announced/",
+      "note": "Fan-site schedule, February 19 to 21, 2027. Search summary only, not verified. No venue given. Not recorded."
+    },
+    {
+      "name": "Disney Lorcana Challenge stop, Las Vegas 2027",
+      "url": "https://lorcanaplayer.com/disney-lorcana-26-27-season-of-villainy-announced/",
+      "note": "Fan-site schedule, April 30 to May 2, 2027. Search summary only, not verified. No venue given. Not recorded."
+    },
+    {
+      "name": "Disney Lorcana Challenge stop, Portland 2027",
+      "url": "https://lorcanaplayer.com/disney-lorcana-26-27-season-of-villainy-announced/",
+      "note": "Fan-site schedule, June 18 to 20, 2027. Search summary only, not verified. No venue given. Not recorded."
+    },
+    {
+      "name": "Disney Lorcana Challenge stop, Toronto 2027",
+      "url": "https://lorcanaplayer.com/disney-lorcana-26-27-season-of-villainy-announced/",
+      "note": "Fan-site schedule, July 16 to 18, 2027. Search summary only, not verified. No venue given. Not recorded."
+    },
+    {
+      "name": "One Piece Championship 26-27 Regionals Season 2 (North America)",
+      "url": "https://en.onepiece-cardgame.com/events/championship-26-27.html",
+      "note": "Official overview gives only an August to December 2026 window and no North American venues or dates per event. Event detail pages were not reachable from the overview."
+    },
+    {
+      "name": "Dragon Ball Fusion World Championship 26-27 Finals",
+      "url": "https://www.dbs-cardgame.com/fw/en/events/",
+      "note": "Official list shows January 9 to 17, 2027 with no city or region. A third-party guide places the North American finals on January 9, 2027; not confirmed on an official page."
+    },
+    {
+      "name": "Dragon Ball Fusion World Championship 26-27 Grand Finals",
+      "url": "https://www.dbs-cardgame.com/fw/en/events/",
+      "note": "Official list shows March 12/14, 2027 (slash format, unclear) with no city or region. Not recorded."
+    },
+    {
+      "name": "Gundam Card Game Season 2 regionals (North America)",
+      "url": "https://www.gundam-gcg.com/en/events/offlineregionals.html",
+      "note": "Official offline regionals page covers the 2025 season only. The Season 2 regionals page returned 404. A third-party guide says Season 2 regionals run October to December 2026 and North American Area Finals are invite only in winter 2026 to 2027. No North American venues found."
+    }
+  ],
+  "blocked": [
+    {"url": "https://mtg.wiki/page/2026%E2%80%9327_Premier_Play_Season", "status": 403, "note": "mtg.wiki robots.txt returned HTTP 403, so the brief's MTG season page was not fetched. MagicCon facts came from magic.gg and the official MagicCon site."},
+    {"url": "https://fabtcg.com/", "status": 403, "note": "robots.txt returned HTTP 403. Flesh and Blood 2027 North American Callings could not be checked on the official site. The 2026 Calling in Kansas City (Aug 28 to 30, 2026) and Calling in Montreal (Feb 28 to Mar 1, 2026) are past and carry no size data, so not recorded."},
+    {"url": "https://icv2.com/articles/news/view/59876/wizards-coast-reveals-2026-magiccon-schedule", "status": "robots disallows ClaudeBot", "note": "icv2.com robots.txt disallows ClaudeBot on /. Seen only as a search result, not fetched."},
+    {"url": "https://lorcanaplayer.com/", "status": "robots disallows ClaudeBot and anthropic-ai", "note": "Fan site. Its Lorcana 2026 to 2027 stop dates appear in leads_only only, from a search summary."},
+    {"url": "https://www.disneylorcana.com/", "status": 500, "note": "Homepage returned HTTP 500, so official Disney Lorcana 2026 to 2027 North American dates could not be verified. A July 2025 official announcement page was readable but lists no 2026 to 2027 stops."}
+  ],
+  "notes": "All 8 WebSearches used (cap reached). 50 WebFetch calls used. Year and venue judgment calls: (1) The Riftbound North American Regional page writes its dates without a year; the article is dated July 2026 and says this December, so December 11 to 13, 2026 is recorded at medium confidence. Venue is Convergence Fest in Las Vegas with no hall named. (2) MagicCon Atlanta: the official site publishes no venue name and dealer table prices; the page heading says 2025 once while the event dates say 2026; prices carry a dollar sign only and are recorded as USD from the US venue. Third-party sites mention a dealer hall, which is not verified. (3) CoolStuffCon Orlando: dates and free admission come from the organizer's site banner. The venue and vendor pricing were not found. A Spooky Empire exhibitor form for Orlando was seen in search results but is a different show and was not used. (4) SWU Minneapolis (Jan 9 and 10, 2027) and SCG CON Minneapolis (Jan 8 to 10, 2027) both name the Minneapolis Convention Center on overlapping dates; not confirmed whether they are linked. (5) Riot calls the Dallas event a Continental, not a Regional. Not recorded, with reasons: past events with no size data (BCG Fest Dallas Sept 18 to 20, 2026; Lorcana North American Championship Anaheim Aug 28 to 30, 2026; Digimon Gen Con July 30, 2026, Toronto Sept 6, 2026, Milwaukee Oct 3, 2026; SWU Ashes of the Empire sector qualifiers in Indianapolis and Fort Worth, Aug and Sept 2026); Star Wars Unlimited Planetary Qualifiers, which are store events outside this brief (dozens across August 2026 to January 2027); Sorcery local store events on the sorcerytcg.com event list (store events, not premier); Riftbound Madrid and Oceania regionals (not North America). Gaps with no North American record found on allowed pages: 2027 North American MagicCon dates, Flesh and Blood 2027 Callings, Sorcery premier events for 2026 to 2027, Gundam Season 2 North American venues, One Piece Season 2 North American regional venues, Disney Lorcana official 2026 to 2027 North American dates, and the Dragon Ball Fusion World North American finals venue. Digimon North American Area Finals are invite only with one listing dated October 16, 2026 and no region. Treasure Cup December events list an advance registration guideline of September 27, 2026. SCG CON pages contain no vendor booth prices for any event. No phone numbers or personal addresses recorded. Today is 2026-10-21 and SCG CON Hartford starts October 23, 2026."
+}

@@ -1,0 +1,64 @@
+---
+import Base from '../../layouts/Base.astro';
+import { GOOGLE_FORM_URL, GITHUB_REPO } from '../../lib/config';
+import { safeUrl } from '../../lib/format';
+import { issueFormUrl } from '../../lib/urls';
+
+const googleForm = safeUrl(GOOGLE_FORM_URL);
+---
+
+<Base title="Add or fix a show" description="Tell us about a card show that is missing, fix a mistake, or confirm the details of a show you run." path="add/">
+  <div class="container page">
+    <div class="prose">
+      <h1>Add or fix a show</h1>
+      <p>
+        Every submission goes into a review queue and is checked before it is published. Please share only contact details that the organizer publishes for the
+        show.
+      </p>
+
+      <h2>Add a show</h2>
+      <div class="cols-2">
+        {
+          googleForm && (
+            <div class="card">
+              <h3 style="margin-top:0">No account needed</h3>
+              <p>Fill in a short form. You do not need to sign in to anything.</p>
+              <p><a class="btn btn-primary" href={googleForm} target="_blank" rel="noopener noreferrer">Open the form</a></p>
+            </div>
+          )
+        }
+        <div class="card">
+          <h3 style="margin-top:0">{googleForm ? 'Have a GitHub account?' : 'Add a show on GitHub'}</h3>
+          <p>
+            {googleForm ? 'Open an issue with the same questions.' : 'A GitHub account is needed for now. A form that needs no account is coming.'}
+          </p>
+          <p><a class="btn btn-primary" href={issueFormUrl('add-show.yml')} target="_blank" rel="noopener noreferrer">Add a show</a></p>
+        </div>
+      </div>
+
+      <h2>Fix a show</h2>
+      <p>
+        Open the show's page and use "Suggest an edit" at the bottom. It opens a form with the page link already filled in. Say what is wrong and, if you can,
+        link to the organizer's page or post that shows the right answer.
+      </p>
+
+      <h2>I run a show</h2>
+      <p>
+        Organizers can confirm their details, add table prices and an application link, or add a whole series of dates in one go. A show confirmed from the
+        organizer's own page gets the "Confirmed by organizer" badge.
+      </p>
+      <p><a class="btn" href={issueFormUrl('organizer.yml')} target="_blank" rel="noopener noreferrer">I run a show</a></p>
+
+      <h2 id="remove">Removal requests</h2>
+      <p>
+        If you would like a show or some details taken off the site, ask and we will do it. Say which page and what should go, and why. Requests from
+        organizers are honored, and so are requests about any personal detail that should not be public.
+      </p>
+      <p><a class="btn" href={issueFormUrl('remove.yml')} target="_blank" rel="noopener noreferrer">Ask for removal</a></p>
+      <p class="muted small">
+        These buttons open forms on GitHub (<a href={`https://github.com/${GITHUB_REPO}/issues`}>the project's issue tracker</a>). Anything you post there is
+        public.
+      </p>
+    </div>
+  </div>
+</Base>
