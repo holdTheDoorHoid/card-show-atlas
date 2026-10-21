@@ -607,7 +607,8 @@ function describeShopping(
       prevNightHotel = hotel;
       nights.push(night);
     }
-    if (away || night) {
+    // A day at home with nothing planned is left out of the day by day; its night is still in `nights`.
+    if (away || night?.where === 'hotel') {
       days.push({ date: meta.dates[t]!, label: formatDayLabel(meta.dates[t]!), items, driveHours, night, away });
     }
   });

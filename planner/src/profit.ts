@@ -546,15 +546,20 @@ export function finishEstimate(
   };
 }
 
+/** Whole units, rounding at cents first so a label agrees with a table that shows cents rounded away. */
+function whole(x: number): number {
+  return Math.round(Math.round(x * 100) / 100);
+}
+
 export function profitLabel(profit: Range | null, totalCost: number | null, currency: Currency): string {
   if (profit) {
     const head =
-      Math.round(profit.mid) >= 0
-        ? `Expected profit about ${formatMoney(Math.round(profit.mid), currency)}`
-        : `Expected loss about ${formatMoney(Math.round(-profit.mid), currency)}`;
+      whole(profit.mid) >= 0
+        ? `Expected profit about ${formatMoney(whole(profit.mid), currency)}`
+        : `Expected loss about ${formatMoney(whole(-profit.mid), currency)}`;
     return `${head} (${rangeWords(profit)})`;
   }
-  if (totalCost !== null) return `Costs about ${formatMoney(Math.round(totalCost), currency)}`;
+  if (totalCost !== null) return `Costs about ${formatMoney(whole(totalCost), currency)}`;
   return 'Costs are in more than one currency';
 }
 
