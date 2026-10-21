@@ -1,0 +1,14 @@
+# raw downloads and caches
+data/raw/
+*.pyc
+__pycache__/
+.venv/
+*.egg-info/
+.pytest_cache/
+# site
+site/node_modules/
+site/dist/
+site/.astro/
+# local only
+private/
+.env

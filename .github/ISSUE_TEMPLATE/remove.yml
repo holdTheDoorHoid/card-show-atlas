@@ -1,0 +1,13 @@
+name: Remove details
+description: Ask us to remove a show or some details from it.
+title: "Remove: "
+labels: [removal]
+body:
+  - type: input
+    id: page
+    attributes: {label: "Link to the page on Card Show Atlas"}
+    validations: {required: true}
+  - type: textarea
+    id: what
+    attributes: {label: "What should be removed, and why?"}
+    validations: {required: true}

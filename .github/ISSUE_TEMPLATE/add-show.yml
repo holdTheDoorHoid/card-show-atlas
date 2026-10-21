@@ -1,0 +1,51 @@
+name: Add a show
+description: Tell us about a card show, convention or tournament that is missing.
+title: "Add show: "
+labels: [add-show]
+body:
+  - type: markdown
+    attributes:
+      value: "Thanks! Every submission is checked before it goes on the map. Please only share contact details the organizer publishes for the show."
+  - type: input
+    id: name
+    attributes: {label: Show name}
+    validations: {required: true}
+  - type: input
+    id: dates
+    attributes: {label: "Date or dates", description: "For a regular show, say how often (for example: second Sunday of every month)."}
+    validations: {required: true}
+  - type: input
+    id: hours
+    attributes: {label: Opening hours}
+  - type: input
+    id: venue
+    attributes: {label: "Venue name and full address"}
+    validations: {required: true}
+  - type: input
+    id: link
+    attributes: {label: "Link to the official page or post", description: "Website, Facebook or Instagram post, ticket page."}
+  - type: checkboxes
+    id: sells
+    attributes:
+      label: What is sold there?
+      options:
+        - label: Pokémon
+        - label: Magic
+        - label: Yu-Gi-Oh
+        - label: One Piece
+        - label: Lorcana
+        - label: Other trading card games
+        - label: Sports cards
+        - label: Comics, toys or other collectibles
+  - type: input
+    id: admission
+    attributes: {label: "Entry price"}
+  - type: input
+    id: tables
+    attributes: {label: "About how many vendor tables?"}
+  - type: textarea
+    id: vendor
+    attributes: {label: "Vendor info", description: "Table prices and sizes, how to apply, deadline."}
+  - type: textarea
+    id: other
+    attributes: {label: Anything else}

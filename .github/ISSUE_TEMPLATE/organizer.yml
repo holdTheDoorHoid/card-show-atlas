@@ -1,0 +1,22 @@
+name: I run this show
+description: Organizers can confirm details, add vendor info or add a whole series of dates.
+title: "Organizer: "
+labels: [organizer]
+body:
+  - type: input
+    id: show
+    attributes: {label: "Show or series name"}
+    validations: {required: true}
+  - type: input
+    id: official
+    attributes: {label: "Your official page", description: "So we can confirm you run it."}
+    validations: {required: true}
+  - type: textarea
+    id: dates
+    attributes: {label: "Upcoming dates and venues"}
+  - type: textarea
+    id: vendor
+    attributes: {label: "Vendor info", description: "Table prices and sizes, application link, when applications open and close."}
+  - type: input
+    id: attendance
+    attributes: {label: "Roughly how many people came last time? (optional)"}

@@ -1,0 +1,10 @@
+# Research budget (owner decision 2026-10-21): Haiku research agents, launch push up to about 35% of a
+# week's usage allowance over the first week, then small nightly top ups.
+model: haiku
+launch:
+  window: [2026-10-21, 2026-10-28]
+  cap_weekly_percent: 35
+nightly:
+  cap_percent_per_run: 3
+  skip_if_weekly_above: 70
+  skip_if_five_hour_above: 50

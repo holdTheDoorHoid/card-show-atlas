@@ -1,0 +1,16 @@
+name: Fix a show
+description: Something on a show's page is wrong or out of date.
+title: "Fix show: "
+labels: [fix-show]
+body:
+  - type: input
+    id: page
+    attributes: {label: "Link to the show's page on Card Show Atlas"}
+    validations: {required: true}
+  - type: textarea
+    id: wrong
+    attributes: {label: "What is wrong, and what should it say?"}
+    validations: {required: true}
+  - type: input
+    id: proof
+    attributes: {label: "Where can we check it?", description: "A link to the organizer's page or post is best."}
