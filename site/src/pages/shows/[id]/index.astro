@@ -95,7 +95,7 @@ const firstTable = v.tables.find((t) => t.price === lowestPrice) ?? v.tables[0];
     <header class="show-head">
       <div class="badges">
         <TypeBadge type={show.event_type} />
-        <SizeBadge size={show.estimate?.size_class} />
+        <SizeBadge size={show.estimate?.basis === 'type_default' ? null : show.estimate?.size_class} />
         {show.status !== 'scheduled' && <span class={`badge ${show.status === 'cancelled' ? 'badge-bad' : 'badge-warn'}`}>{SHOW_STATUS_LABEL[show.status]}</span>}
         <span class={`badge ${verification.kind === 'ok' ? 'badge-ok' : verification.kind === 'accent' ? 'badge-accent' : ''}`}>{verification.text}</span>
       </div>
@@ -168,7 +168,7 @@ const firstTable = v.tables.find((t) => t.price === lowestPrice) ?? v.tables[0];
         <section class="card show-section" aria-labelledby="size-title">
           <h2 id="size-title">Size and crowd</h2>
           <p style="display:flex;gap:0.6rem;align-items:center;flex-wrap:wrap">
-            <SizeBadge size={show.estimate?.size_class} />
+            <SizeBadge size={show.estimate?.basis === 'type_default' ? null : show.estimate?.size_class} />
             <span class="muted">{size.confidence}</span>
           </p>
           <p><strong>How we know:</strong> {size.how}</p>

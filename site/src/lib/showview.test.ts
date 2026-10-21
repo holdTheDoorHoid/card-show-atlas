@@ -84,6 +84,13 @@ describe('size badge and how we know', () => {
     expect(v.range).toBeNull();
   });
 
+  it('says size unknown when the only basis is the type of event', () => {
+    const e = { attendance: { low: 100, mid: 200, high: 300 }, basis: 'type_default', confidence: 'rough', size_class: 'medium', traffic_per_table: null, explain: '' };
+    const v = sizeView(makeShow({ estimate: e as never }));
+    expect(v.badge).toBe('Size unknown');
+    expect(v.range).toBeNull();
+  });
+
   it('writes its own explanation when the estimate has none', () => {
     const e = { attendance: { low: 100, mid: 200, high: 300 }, basis: 'history', confidence: 'rough', size_class: 'small', traffic_per_table: null, explain: '' };
     expect(sizeView(makeShow({ estimate: e })).how).toBe('Estimated from past years.');

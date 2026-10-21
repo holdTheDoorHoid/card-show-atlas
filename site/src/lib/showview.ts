@@ -145,6 +145,15 @@ export function sizeView(show: Show): SizeView {
       type_default: 'A rough guess from the type of event.',
     }[e.basis] ?? '');
   const { low, mid, high } = e.attendance;
+  if (e.basis === 'type_default') {
+    return {
+      badge: 'Size unknown',
+      how: 'Nobody has published how big this show is yet (tables, players or attendance). Know the answer? Use "Suggest an edit" below.',
+      confidence: 'Unknown',
+      range: null,
+      traffic: null,
+    };
+  }
   return {
     badge: SIZE_INFO[e.size_class].label,
     how: explain,

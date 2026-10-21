@@ -65,7 +65,8 @@ export function toRow(show: Show, opts: { withLink?: boolean } = {}): IndexRow {
   if (show.venue.geo_precision !== 'address') row.g = show.venue.geo_precision;
   if (show.status !== 'scheduled') row.st = show.status;
   if (show.estimate) {
-    row.sz = show.estimate.size_class;
+    // A rough guess from the event type alone is not shown as a size: the badge would look like a fact.
+    if (show.estimate.basis !== 'type_default') row.sz = show.estimate.size_class;
     row.at = Math.round(show.estimate.attendance.mid);
   }
   const sl = [...show.sells.tcg, ...show.sells.sports, ...show.sells.other];
