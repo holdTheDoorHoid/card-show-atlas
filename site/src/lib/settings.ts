@@ -44,6 +44,8 @@ export interface VendorSettings {
   marginPercent: number | null;
   /** what I sell: vocabulary ids from data/vocab.json */
   sells: string[];
+  /** optional: what an hour of driving is worth to me, in the currency above; null means not counted */
+  timeValuePerHour: number | null;
 }
 
 export const DEFAULT_VENDOR_SETTINGS: VendorSettings = {
@@ -59,6 +61,7 @@ export const DEFAULT_VENDOR_SETTINGS: VendorSettings = {
   typicalSales: { small: null, medium: null, large: null, major: null },
   marginPercent: null,
   sells: [],
+  timeValuePerHour: null,
 };
 
 export const MAX_DRIVING_HOURS_LIMITS = { min: 1, max: 16 } as const;
@@ -111,6 +114,7 @@ export function normalizeSettings(raw: unknown): VendorSettings {
     },
     marginPercent: margin === null ? null : Math.min(100, margin),
     sells: Array.isArray(raw.sells) ? raw.sells.filter((x): x is string => typeof x === 'string' && x !== '').slice(0, 60) : [],
+    timeValuePerHour: nonNegative(raw.timeValuePerHour),
   };
 }
 

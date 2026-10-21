@@ -66,6 +66,8 @@ export function standaloneProfit(show: PlannerShow, ctx: StandaloneContext): { e
     travelSlackDays: 7,
     minScore: 0,
     travelHalfLifeHours: 2,
+    // Chosen by cost (scaled like the score mode tie break), with the vendor's time counted as money.
+    penalties: { perDriveHour: 1e-5 * (ctx.settings.time_value_per_hour ?? 0), perHotelNight: 0 },
   });
   if (engine.nodes.length === 0) return { estimate: null, reason: engine.excluded[0]?.reason ?? 'Cannot be planned' };
   // Force the show into the plan even when it loses money, so the estimate is honest.
@@ -76,11 +78,13 @@ export function standaloneProfit(show: PlannerShow, ctx: StandaloneContext): { e
   node.valueBase = saved;
   if (sol.steps.length === 0) return { estimate: null, reason: 'Too far to reach in time with your driving limit' };
   let miles = 0;
+  let hours = 0;
   let hotelNights = 0;
   let foodDays = 0;
   for (const st of sol.steps) {
     if (st.t === 'depart') {
       miles += engine.legBase(0).miles;
+      hours += engine.legBase(0).hours;
       hotelNights += st.j;
       foodDays += st.j;
     } else if (st.t === 'show') {
@@ -90,19 +94,21 @@ export function standaloneProfit(show: PlannerShow, ctx: StandaloneContext): { e
         foodDays += nights + 1;
       } else if (st.variant === 'commute') {
         miles += (node.dates.length - 1) * (engine.legBase(0).miles + engine.legHome(0).miles);
+        hours += (node.dates.length - 1) * (engine.legBase(0).hours + engine.legHome(0).hours);
         foodDays += node.dates.length;
       } else {
         foodDays += 1;
       }
     } else if (st.t === 'return') {
       miles += engine.legEnd(0).miles;
+      hours += engine.legEnd(0).hours;
       hotelNights += st.j;
       foodDays += st.j;
     }
   }
   const sheet = new CostSheet(vendorCurrency(ctx.settings), ctx.rates);
   addShowCosts(sheet, show, ctx.settings, ctx.profitModel);
-  addTripCosts(sheet, { miles, hotelNights, foodDays }, ctx.settings, engine.fuel);
+  addTripCosts(sheet, { miles, hotelNights, foodDays, driveHours: hours }, ctx.settings, engine.fuel);
   const sales = estimateSales(show, ctx.settings, ctx.profitModel);
   return { estimate: finishEstimate(sales, sheet, ctx.settings), reason: '' };
 }

@@ -4,8 +4,9 @@
 //
 //   * Anything needed for a profit estimate that is missing goes on a list ("missing"), and the plan
 //     is made by priority score instead (the planner's `objective: 'score'`).
-//   * The planner's engine always wants a fuel economy and price to break ties. When they are not
-//     filled in, plain placeholders are used and listed, so planning by priority score still works.
+//   * The planner's engine always wants a fuel economy and price, a hotel price and food money. When
+//     they are not filled in, realistic placeholders are used and listed on the plan, so planning by
+//     priority score still works and a hotel never looks free.
 import type { SeriesHistory, VendorSettings as PlannerSettings } from '../../../planner/src/types.ts';
 import type { MyShowsStore } from './myshows.ts';
 import type { VendorSettings } from './settings.ts';
@@ -36,6 +37,18 @@ export const PLACEHOLDER_MPG = 20;
 export const PLACEHOLDER_L_PER_100KM = 10;
 export const PLACEHOLDER_GALLON_PRICE = 3.5;
 export const PLACEHOLDER_LITRE_PRICE = 1.8;
+/** A night in a plain hotel, and a day of food on the road, by currency. */
+export const PLACEHOLDER_HOTEL: Record<'USD' | 'CAD', number> = { USD: 140, CAD: 180 };
+export const PLACEHOLDER_FOOD: Record<'USD' | 'CAD', number> = { USD: 35, CAD: 45 };
+
+/** The hotel and food numbers a plan uses: the vendor's own, or the placeholders. */
+export function hotelFor(s: VendorSettings): { amount: number; placeholder: boolean } {
+  return s.hotelPerNight !== null ? { amount: s.hotelPerNight, placeholder: false } : { amount: PLACEHOLDER_HOTEL[s.currency], placeholder: true };
+}
+
+export function foodFor(s: VendorSettings): { amount: number; placeholder: boolean } {
+  return s.foodPerDay !== null ? { amount: s.foodPerDay, placeholder: false } : { amount: PLACEHOLDER_FOOD[s.currency], placeholder: true };
+}
 
 export interface PlannerSettingsOptions {
   /** where trips start and end, when the settings have no home (a ZIP typed on the Plan page) */
@@ -78,8 +91,10 @@ export function toPlannerSettings(s: VendorSettings, opts: PlannerSettingsOption
     price = metric ? PLACEHOLDER_LITRE_PRICE : PLACEHOLDER_GALLON_PRICE;
     placeholders.push(`fuel price ${price} a ${metric ? 'litre' : 'gallon'}`);
   }
-  if (s.hotelPerNight === null) placeholders.push('hotel at 0 a night');
-  if (s.foodPerDay === null) placeholders.push('food at 0 a day');
+  const hotel = hotelFor(s);
+  const food = foodFor(s);
+  if (hotel.placeholder) placeholders.push(`hotel ${hotel.amount} ${s.currency} a night`);
+  if (food.placeholder) placeholders.push(`food ${food.amount} ${s.currency} a day`);
 
   const t = s.typicalSales;
   const typical =
@@ -93,13 +108,14 @@ export function toPlannerSettings(s: VendorSettings, opts: PlannerSettingsOption
     mpg: metric ? null : economy,
     l_per_100km: metric ? economy : null,
     fuel_price: { amount: price, unit: metric ? 'litre' : 'gallon', currency: s.currency },
-    hotel_per_night: s.hotelPerNight ?? 0,
-    food_per_day: s.foodPerDay ?? 0,
+    hotel_per_night: hotel.amount,
+    food_per_day: food.amount,
     max_drive_hours_per_day: s.maxDrivingHoursPerDay,
     typical_sales: typical,
     margin_percent: s.marginPercent ?? 0,
     sells: [...s.sells],
   };
+  if (s.timeValuePerHour !== null && s.timeValuePerHour > 0) settings.time_value_per_hour = s.timeValuePerHour;
   if (opts.history && Object.keys(opts.history).length > 0) settings.history = opts.history;
   return { settings, missing, profit, placeholders, hasHome };
 }

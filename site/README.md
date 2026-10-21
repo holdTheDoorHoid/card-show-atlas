@@ -158,12 +158,18 @@ source directly: Vite compiles it, the dev server is allowed to read the parent 
   planner options), `plan-run.ts` (running a plan, the must include rule, exchange rates), `plan-share.ts`, `plan-ics.ts`,
   `vendor-rank.ts` (the Find page score) and `planner-rows.ts`.
 * When a setting needed for profit is empty, the Plan page lists it with a link to its field on My shows and plans by
-  priority score instead (`objective: 'score'`). The planner's engine always wants a fuel economy and price, so placeholders
-  are used for those (and listed on the plan) rather than refusing to plan.
+  priority score instead (`objective: 'score'`). The planner's engine always wants a fuel economy and price, a hotel price
+  and food money, so placeholders are used for those (and listed on the plan, with a "placeholder" badge on the cost
+  lines and in the "Change a number" box) rather than refusing to plan: 20 mpg or 10 L/100 km, 3.50 a gallon or 1.80 a
+  litre, a hotel at 140 USD or 180 CAD a night, food at 35 USD or 45 CAD a day.
+* "How much do you mind driving?" (A little, Some, A lot; default Some) is on both forms and becomes the planner's
+  `mindDriving`. It decides how much each hour of driving and each hotel night counts against a plan ranked by score and
+  every shopping plan (planner README section 5.7). With sales filled in, plans count money; the optional "What an hour of
+  your driving is worth" setting on My shows (`timeValuePerHour`) then adds the time as a cost.
 * The planner has no "force this show in" switch. A must include show is handled in `plan-run.ts`: plans that contain it
-  come first; if none does, a plan with only that show (planned by score, so a losing show is still planned and says so)
-  comes first.
-* Numbers typed into a plan (table fee, hotel, fuel price) are for that plan only. Table fees change the rows sent to the
+  come first; if none does, a plan with only that show (planned by score with no driving penalty, so a losing or far show
+  is still planned and says so) comes first.
+* Numbers typed into a plan (table fee, hotel, food, fuel price) are for that plan only. Table fees change the rows sent to the
   worker; the others change the settings passed with each call.
 * A share link goes in the part of the address after `#`, which browsers never send to a server. It carries the show ids
   and the planning knobs, never sales, margin or costs, and the start point only when "Include my start point" is ticked.

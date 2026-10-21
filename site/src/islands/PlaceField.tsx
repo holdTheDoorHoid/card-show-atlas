@@ -17,25 +17,41 @@ interface Props {
 
 export function PlaceField({ id, label, fallbackLabel, value, onChange, hasFallback }: Props) {
   const [text, setText] = useState(value && value.label !== 'your location' ? value.label : '');
-  const [msg, setMsg] = useState<{ kind: 'error' | 'ok'; text: string } | null>(null);
+  const [msg, setMsg] = useState<{ kind: 'error' | 'ok' | 'busy'; text: string } | null>(null);
   const [busy, setBusy] = useState(false);
 
-  async function set(e: Event) {
-    e.preventDefault();
-    if (text.trim() === '') {
-      onChange(null);
-      setMsg(null);
+  // Enter, the Set button and leaving the field all set the place. Enter is handled on the input
+  // itself rather than left to the browser's implicit form submit, so it works wherever the field
+  // sits on the page.
+  async function commit() {
+    const typed = text.trim();
+    if (typed === '') {
+      if (value) {
+        onChange(null);
+        setMsg(null);
+      }
+      return;
+    }
+    if (value && value.label === typed) {
+      setMsg({ kind: 'ok', text: `Set to ${value.label}.` });
       return;
     }
     setBusy(true);
-    const r = await lookupPostalInBrowser(text);
+    setMsg({ kind: 'busy', text: `Looking up ${typed}...` });
+    const r = await lookupPostalInBrowser(typed);
     setBusy(false);
     if (!r.ok) {
       setMsg({ kind: 'error', text: postalErrorMessage(r.reason) });
       return;
     }
     onChange({ lat: r.lat, lon: r.lon, label: r.display, country: r.country });
+    setText(r.display);
     setMsg({ kind: 'ok', text: `Set to ${r.display}.` });
+  }
+
+  function set(e: Event) {
+    e.preventDefault();
+    void commit();
   }
 
   function here() {
@@ -73,6 +89,16 @@ export function PlaceField({ id, label, fallbackLabel, value, onChange, hasFallb
           placeholder="ZIP or postal code"
           value={text}
           onInput={(e) => setText((e.currentTarget as HTMLInputElement).value)}
+          onKeyDown={(e) => {
+            if (e.key === 'Enter') {
+              e.preventDefault();
+              void commit();
+            }
+          }}
+          onBlur={() => {
+            if (text.trim() !== '' && text.trim() !== (value?.label ?? '')) void commit();
+          }}
+          aria-describedby={`${id}-msg`}
         />
         <button class="btn" type="submit" disabled={busy}>
           Set
@@ -96,7 +122,7 @@ export function PlaceField({ id, label, fallbackLabel, value, onChange, hasFallb
           </button>
         )}
       </div>
-      <p class={`hint ${msg?.kind === 'error' ? 'error' : msg?.kind === 'ok' ? 'ok-text' : ''}`} role="status">
+      <p id={`${id}-msg`} class={`hint ${msg?.kind === 'error' ? 'error' : msg?.kind === 'ok' ? 'ok-text' : ''}`} role="status">
         {msg ? msg.text : value ? `Using ${value.label}.` : hasFallback ? `Using ${fallbackLabel.toLowerCase()}.` : 'Not set yet.'}
       </p>
     </div>

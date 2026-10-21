@@ -96,6 +96,17 @@ export interface VendingSetup {
   /** Score mode: points a show must beat to be worth adding. */
   minScore: number;
   travelHalfLifeHours: number;
+  /**
+   * What an hour of driving and a hotel night count against a plan, on top of money. Score mode:
+   * points (from "how much do you mind driving"). Profit mode: the vendor's time value per hour, and
+   * zero per night because the hotel is already money.
+   */
+  penalties: Penalties;
+}
+
+export interface Penalties {
+  perDriveHour: number;
+  perHotelNight: number;
 }
 
 /** A show prepared for planning. Instants are milliseconds since the epoch. */
@@ -181,11 +192,16 @@ export interface VendingSolution {
   stats: { nodes: number; labels: number; edges: number };
 }
 
+/** Every move says what it costs in money, driving hours and hotel nights, and the search's `loss`. */
 export interface DepartOption {
   j: number;
   m: number;
   cost: number;
   gain: number;
+  hours: number;
+  nights: number;
+  /** cost factor times cost, plus the driving and night penalties */
+  loss: number;
 }
 
 export interface VariantOption {
@@ -194,6 +210,9 @@ export interface VariantOption {
   /** Nights away after the show, given nights away before it. */
   na: number;
   cost: number;
+  hours: number;
+  nights: number;
+  loss: number;
 }
 
 export interface MoveOption {
@@ -201,6 +220,9 @@ export interface MoveOption {
   m: number;
   cost: number;
   gain: number;
+  hours: number;
+  nights: number;
+  loss: number;
 }
 
 /** Builds nodes once; `solve` can then be called many times with different limits. */
@@ -216,6 +238,8 @@ export class VendingEngine {
   readonly food: number;
   /** Profit mode counts every unit of cost; score mode only uses cost to break ties. */
   readonly costFactor: number;
+  readonly perDriveHour: number;
+  readonly perHotelNight: number;
   readonly sameBase: boolean;
   readonly rangeStartDay: number;
   readonly rangeEndDay: number;
@@ -241,6 +265,8 @@ export class VendingEngine {
     this.hotel = Math.max(0, s.hotel_per_night);
     this.food = Math.max(0, s.food_per_day);
     this.costFactor = setup.objective === 'profit' ? 1 : 1e-5;
+    this.perDriveHour = Math.max(0, setup.penalties?.perDriveHour ?? 0);
+    this.perHotelNight = Math.max(0, setup.penalties?.perHotelNight ?? 0);
     this.sameBase = haversineMiles(setup.base, setup.end) < 0.05;
     this.rangeStartDay = epochDay(setup.rangeStart);
     this.rangeEndDay = epochDay(setup.rangeEnd);
@@ -388,6 +414,11 @@ export class VendingEngine {
     return l;
   }
 
+  /** What a move counts against the plan in the search. */
+  loss(cost: number, hours: number, nights: number): number {
+    return this.costFactor * cost + this.perDriveHour * hours + this.perHotelNight * nights;
+  }
+
   /** Score mode only: points for the travel factor of an arrival leg. */
   travelGain(hours: number): number {
     if (this.setup.objective !== 'score') return 0;
@@ -425,12 +456,13 @@ export class VendingEngine {
     const gain = this.travelGain(h);
     const fuel = leg.miles * this.fuel.perMile;
     const out: DepartOption[] = [];
-    if (h <= M + EPS) out.push({ j: 0, m: h, cost: fuel, gain });
+    if (h <= M + EPS) out.push({ j: 0, m: h, cost: fuel, gain, hours: h, nights: 0, loss: this.loss(fuel, h, 0) });
     if (homeOnly || h <= EPS) return out;
     const jFirst = Math.max(1, Math.ceil((h - M) / this.F - 1e-9));
     const jZero = Math.max(1, Math.ceil(h / this.F - 1e-9));
     for (let j = jFirst; j <= Math.max(jFirst, jZero); j++) {
-      out.push({ j, m: Math.max(0, h - j * this.F), cost: fuel + j * (this.hotel + this.food), gain });
+      const cost = fuel + j * (this.hotel + this.food);
+      out.push({ j, m: Math.max(0, h - j * this.F), cost, gain, hours: h, nights: j, loss: this.loss(cost, h, j) });
     }
     return out;
   }
@@ -439,11 +471,12 @@ export class VendingEngine {
   variantOptions(i: number, mIn: number, naIn: number, homeOnly: boolean, maxNights: number): VariantOption[] {
     const T = this.nodes[i]!;
     const nd = T.dates.length;
-    if (nd === 1) return [{ variant: 'single', m: mIn, na: naIn, cost: this.food }];
+    if (nd === 1) return [{ variant: 'single', m: mIn, na: naIn, cost: this.food, hours: 0, nights: 0, loss: this.loss(this.food, 0, 0) }];
     const out: VariantOption[] = [];
     const nights = T.last - T.first;
     if (!homeOnly && naIn + nights <= maxNights && !this.anyBlackout(T.first, T.last)) {
-      out.push({ variant: 'hotel', m: 0, na: naIn + nights, cost: nights * this.hotel + (nights + 1) * this.food });
+      const cost = nights * this.hotel + (nights + 1) * this.food;
+      out.push({ variant: 'hotel', m: 0, na: naIn + nights, cost, hours: 0, nights, loss: this.loss(cost, 0, nights) });
     }
     if (this.sameBase) {
       const back = this.legHome(i);
@@ -454,12 +487,9 @@ export class VendingEngine {
         ok = there.hours + back.hours <= this.C + EPS && back.hours <= T.eveningCap[d]! + EPS;
       }
       if (ok) {
-        out.push({
-          variant: 'commute',
-          m: there.hours,
-          na: 0,
-          cost: (nd - 1) * (back.miles + there.miles) * this.fuel.perMile + nd * this.food,
-        });
+        const cost = (nd - 1) * (back.miles + there.miles) * this.fuel.perMile + nd * this.food;
+        const hours = (nd - 1) * (back.hours + there.hours);
+        out.push({ variant: 'commute', m: there.hours, na: 0, cost, hours, nights: 0, loss: this.loss(cost, hours, 0) });
       }
     }
     return out;
@@ -475,7 +505,8 @@ export class VendingEngine {
     if (h <= E + EPS) j = 0;
     else if (homeOnly) return null;
     else j = Math.ceil((h - E) / this.F - 1e-9);
-    return { j, m: 0, cost: leg.miles * this.fuel.perMile + j * (this.hotel + this.food), gain: 0 };
+    const cost = leg.miles * this.fuel.perMile + j * (this.hotel + this.food);
+    return { j, m: 0, cost, gain: 0, hours: h, nights: j, loss: this.loss(cost, h, j) };
   }
 
   /** Driving straight from show i to show u. `j` is the number of nights in between. */
@@ -489,12 +520,8 @@ export class VendingEngine {
     const E = Math.max(0, Math.min(T.eveningCap[T.eveningCap.length - 1]!, this.C - mOut));
     const m = Math.max(0, h - E - (n - 1) * this.F);
     if (m > U.morningCap[0]! + EPS) return null;
-    return {
-      j: n,
-      m,
-      cost: leg.miles * this.fuel.perMile + n * this.hotel + (n - 1) * this.food,
-      gain: this.travelGain(h),
-    };
+    const cost = leg.miles * this.fuel.perMile + n * this.hotel + (n - 1) * this.food;
+    return { j: n, m, cost, gain: this.travelGain(h), hours: h, nights: n, loss: this.loss(cost, h, n) };
   }
 
   solve(opts: SolveOptions = {}): VendingSolution {
@@ -516,7 +543,6 @@ export class VendingEngine {
     const hEnd = rangeEnd + slack;
     const nDays = hEnd - hStart + 1;
     const skip = opts.skip ?? new Set<number>();
-    const cf = this.costFactor;
     const monthReset = capped && s.countReset === 'month';
     const monthOf: number[] = new Array(nDays);
     for (let d = 0; d < nDays; d++) monthOf[d] = monthIndex(dateFromEpochDay(hStart + d));
@@ -599,7 +625,7 @@ export class VendingEngine {
             k = !monthReset || monthOf[dRel] === T.month ? e.k + 1 : 1;
             if (k > K) continue;
           }
-          insertIn(ins, e.v + opt.gain - cf * opt.cost, opt.m, k, j, i, 'depart', j, e, null);
+          insertIn(ins, e.v + opt.gain - opt.loss, opt.m, k, j, i, 'depart', j, e, null);
         }
       }
       if (ins.length === 0) continue;
@@ -610,7 +636,7 @@ export class VendingEngine {
         const vos = this.variantOptions(i, L.m, L.na, homeOnly, maxN);
         for (let vi = 0; vi < vos.length; vi++) {
           const vo = vos[vi]!;
-          insertOut(outs, L.v + T.valueBase - cf * vo.cost, vo.m, L.k, vo.na, i, vo.variant, L);
+          insertOut(outs, L.v + T.valueBase - vo.loss, vo.m, L.k, vo.na, i, vo.variant, L);
         }
       }
       if (outs.length === 0) continue;
@@ -628,7 +654,7 @@ export class VendingEngine {
         rets[li] = r;
         const rRel = rDay - hStart;
         const kEff = monthReset && monthOf[rRel] !== T.month ? 0 : L.k;
-        const entry: HomeEntry = { v: L.v - cf * r.cost, k: kEff, day: rDay, from: L, j: r.j };
+        const entry: HomeEntry = { v: L.v - r.loss, k: kEff, day: rDay, from: L, j: r.j };
         if (viaHome) arrivals[rRel]!.push(entry);
         else endEntries.push(entry);
       }
@@ -665,7 +691,8 @@ export class VendingEngine {
               const last = out0[out0.length - 1];
               if (last && last.m <= EPS && worstHome.j + last.j <= n - 1) {
                 const directFloor = lower * perMile + n * this.hotel + (n - 1) * this.food;
-                if (worstHome.cost + last.cost <= directFloor + 1e-9) continue;
+                // The floor leaves out the time penalty, so it stays a lower bound on the straight drive.
+                if (worstHome.loss + last.loss <= directFloor + 1e-9) continue;
               }
             }
             travel.fromStraight(haversineCos(lat[i]!, lon[i]!, cosLat[i]!, lat[u]!, lon[u]!, cosLat[u]!), scratch);
@@ -676,6 +703,7 @@ export class VendingEngine {
           // Quick reject: even a full evening cannot make it.
           if (h > maxHours) continue;
           const cost = scratch.miles * perMile + n * this.hotel + (n - 1) * this.food;
+          const lossD = this.loss(cost, h, n);
           const gain = this.travelGain(h);
           const depU = viaHome ? depart[u]! : null;
           const inc = incoming[u]!;
@@ -690,7 +718,7 @@ export class VendingEngine {
               k = !monthReset || U.month === T.month ? L.k + 1 : 1;
               if (k > K) continue;
             }
-            const v = L.v + gain - cf * cost;
+            const v = L.v + gain - lossD;
             // Exact skip: going home in between is at least as good on every count, and the
             // home state will offer that label (or a better one) at U.
             const r = rets[li];
@@ -699,7 +727,7 @@ export class VendingEngine {
               for (let oi = 0; oi < depU.length; oi++) {
                 const o = depU[oi]!;
                 if (r.j + o.j > n - 1) continue;
-                if (L.v - cf * r.cost + o.gain - cf * o.cost >= v - EPS && o.m <= m + EPS) {
+                if (L.v - r.loss + o.gain - o.loss >= v - EPS && o.m <= m + EPS) {
                   beaten = true;
                   break;
                 }
@@ -943,8 +971,10 @@ export interface Plan {
   hotelNights: number;
   driveHours: number;
   miles: number;
-  /** The number the search maximized (profit, points, or visit value). */
+  /** The number the search maximized: profit (minus your time, if you priced it), or points after the driving and night penalties. */
   value: number;
+  /** Plans by score: "Plan score 79: stops worth 191, minus 112 for 11 h 10 min of driving". Null for plans by profit. */
+  scoreLine: string | null;
   objective: Objective | 'visits';
   /** Where drive times came from. */
   driveTimes: { source: LegSource; label: string };
@@ -1382,7 +1412,7 @@ export function describeVending(engine: VendingEngine, sol: VendingSolution, tit
     days.push({
       date: dateFromEpochDay(d),
       label: formatDayLabel(dateFromEpochDay(d)),
-      items: [...items.map((x) => x.text), ...(night ? [`Night: ${night.label}`] : [])],
+      items: items.map((x) => x.text),
       driveHours: segs.reduce((a, sg) => a + sg.hours, 0),
       night,
       away,
@@ -1398,7 +1428,7 @@ export function describeVending(engine: VendingEngine, sol: VendingSolution, tit
   for (const st of sol.steps) {
     if (st.t === 'show') addShowCosts(sheet, nodes[st.node]!.show, settings, s.profitModel, true);
   }
-  if (stops.length > 0) addTripCosts(sheet, { miles, hotelNights, foodDays }, settings, engine.fuel);
+  if (stops.length > 0) addTripCosts(sheet, { miles, hotelNights, foodDays, driveHours }, settings, engine.fuel);
   const sales = settings.typical_sales ? sumSales(stops.map((x) => x.sales), currency) : null;
   const money = finishEstimate(sales, sheet, settings);
 
@@ -1435,10 +1465,25 @@ export function describeVending(engine: VendingEngine, sol: VendingSolution, tit
     miles,
     value: sol.value,
     objective: s.objective,
+    scoreLine:
+      s.objective === 'score'
+        ? scoreLine(sol.value + engine.perDriveHour * driveHours + engine.perHotelNight * hotelNights, sol.value, driveHours, hotelNights, s.penalties, 'shows')
+        : null,
     driveTimes: { source, label: legSourceLabel(source) },
     start: basePoint,
     end: endPoint,
   };
+}
+
+/** "Plan score 79: stops worth 191, minus 112 for 11 h 10 min of driving and 25 for 1 hotel night". */
+export function scoreLine(points: number, value: number, hours: number, nights: number, pen: Penalties, noun: 'shows' | 'stops'): string {
+  const drive = Math.round(pen.perDriveHour * hours);
+  const night = Math.round(pen.perHotelNight * nights);
+  const parts: string[] = [];
+  if (drive > 0) parts.push(`${drive} for ${formatDuration(hours)} of driving`);
+  if (night > 0) parts.push(`${night} for ${nights} hotel ${nights === 1 ? 'night' : 'nights'}`);
+  const minus = parts.length === 0 ? '' : `, minus ${parts.join(' and ')}`;
+  return `Plan score ${Math.round(value)}: ${noun} worth ${Math.round(points)}${minus}`;
 }
 
 export function summaryLine(count: number, hotelNights: number, miles: number, hours: number, noun: 'show' | 'stop'): string {
@@ -1450,7 +1495,9 @@ export function summaryLine(count: number, hotelNights: number, miles: number, h
   return parts.join(', ');
 }
 
-/** Exposed for tests: the stable identity of a plan (shows, nights and return day). */
+/** The identity of a plan as a person sees it: which shows on which days, and which nights are hotel nights. */
 export function planSignature(p: Plan): string {
-  return `${p.stops.map((x) => x.showId).join('+')}|${p.hotelNights}|${p.returnDate ?? ''}|${p.nights.map((n) => n.where[0]).join('')}`;
+  const stops = p.stops.map((x) => `${x.showId}@${x.firstDate}`).join('+');
+  const hotels = p.nights.filter((n) => n.where === 'hotel').map((n) => n.date).join(',');
+  return `${stops}|${hotels}`;
 }

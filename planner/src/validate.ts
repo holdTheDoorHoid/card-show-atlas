@@ -34,6 +34,9 @@ export function validateSettings(s: VendorSettings, needs: SettingsNeeds = {}): 
   if (!isNum(s.food_per_day) || s.food_per_day < 0) {
     throw new PlannerError('bad_settings', 'Food per day must be zero or more.');
   }
+  if (s.time_value_per_hour !== undefined && s.time_value_per_hour !== null && (!isNum(s.time_value_per_hour) || s.time_value_per_hour < 0)) {
+    throw new PlannerError('bad_settings', 'The value of your time per hour must be zero or more.');
+  }
   if (!isNum(s.margin_percent) || s.margin_percent < 0 || s.margin_percent > 100) {
     throw new PlannerError('bad_settings', 'Margin on sales must be between 0 and 100 percent.');
   }

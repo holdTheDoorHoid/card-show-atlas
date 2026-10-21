@@ -36,6 +36,8 @@ function randomInstance(r: Rng, n: number, D: number): ShopInstance {
     cap: between(r, 2, 8),
     mode: r() < 0.5 ? 'home' : 'stay',
     maxStops: r() < 0.2 ? intBetween(r, 1, 3) : Infinity,
+    hourPenalty: [0, 4, 10, 20][intBetween(r, 0, 3)],
+    nightPenalty: [0, 10, 25, 50][intBetween(r, 0, 3)],
   };
 }
 
@@ -80,7 +82,7 @@ describe('shopping: simulation', () => {
 
 describe('shopping: exact search against brute force', () => {
   const N = 300;
-  it(`finds the same best value and driving as brute force on ${N} random instances`, () => {
+  it(`finds the same best objective as brute force on ${N} random instances`, () => {
     for (let k = 0; k < N; k++) {
       const r = rng(500 + k);
       const D = intBetween(r, 1, 3);
@@ -88,12 +90,12 @@ describe('shopping: exact search against brute force', () => {
       const inst = randomInstance(r, n, D);
       const ex = solveShopExact(inst);
       const bf = bruteShop(inst);
-      expect(ex.value, `instance ${k}`).toBeCloseTo(bf.value, 9);
-      if (bf.value > 0) expect(ex.drive, `instance ${k}`).toBeCloseTo(bf.drive, 9);
-      const sim = simulateShop(inst, ex.routes);
+      expect(ex.objective, `instance ${k}`).toBeCloseTo(bf.objective, 7);
       if (bf.value > 0) {
+        expect(ex.value, `instance ${k}`).toBeCloseTo(bf.value, 9);
+        const sim = simulateShop(inst, ex.routes);
         expect(sim.feasible).toBe(true);
-        expect(sim.value).toBeCloseTo(ex.value, 9);
+        expect(sim.objective).toBeCloseTo(ex.objective, 9);
       }
     }
   });
@@ -112,9 +114,9 @@ describe('shopping: heuristic', () => {
       const he = solveShopHeuristic(inst, { seed: 7 });
       const sim = simulateShop(inst, he.routes);
       expect(sim.feasible, `instance ${k}`).toBe(true);
-      expect(he.value).toBeLessThanOrEqual(ex.value + 1e-9);
-      if (Math.abs(he.value - ex.value) < 1e-9) same += 1;
-      gapSum += ex.value > 0 ? (ex.value - he.value) / ex.value : 0;
+      expect(he.objective).toBeLessThanOrEqual(ex.objective + 1e-7);
+      if (Math.abs(he.objective - ex.objective) < 1e-6) same += 1;
+      gapSum += ex.objective > 0 ? (ex.objective - he.objective) / ex.objective : 0;
     }
     expect(same / N).toBeGreaterThanOrEqual(0.88);
     expect(gapSum / N).toBeLessThan(0.01);
@@ -167,7 +169,15 @@ describe('shopping: weekend run', () => {
       mk('indy', { days: [['2026-11-14', '10:00', '18:00']], ...INDY, tz: 'America/Indiana/Indianapolis' }),
     ];
     const s = vendor({ home: { ...CHICAGO, timezone: 'America/Chicago' }, max_drive_hours_per_day: 10 });
-    const o: WeekendRunOptions = { mode: 'shopping', dates: { start: '2026-11-14', end: '2026-11-14' }, today: '2026-10-21', end: { ...INDY, name: 'Indy hotel', timezone: 'America/Indiana/Indianapolis' } };
+    // This test is about clocks, so driving costs nothing here and the far stop rule is off.
+    const o: WeekendRunOptions = {
+      mode: 'shopping',
+      dates: { start: '2026-11-14', end: '2026-11-14' },
+      today: '2026-10-21',
+      end: { ...INDY, name: 'Indy hotel', timezone: 'America/Indiana/Indianapolis' },
+      penalties: { perDriveHour: 0, perHotelNight: 0 },
+      farHours: 10,
+    };
     const p = planWeekendRun(shows, s, o).best!;
     expect(p.stops.map((x) => x.showId)).toEqual(['chicago', 'indy']);
     // Chicago opens 9:00 CT, which is 15:00 UTC.

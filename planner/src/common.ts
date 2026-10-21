@@ -8,7 +8,24 @@ import { haversineMiles, Travel, type LegMatrix, type TravelModel } from './trav
 import type { ExchangeRates, LatLon, Place, PlannerShow, PlanningRules, VendorSettings } from './types.js';
 import { DEFAULT_RULES, PlannerError } from './types.js';
 import { validateSettings } from './validate.js';
-import type { Objective } from './vending.js';
+import type { Objective, Penalties } from './vending.js';
+
+/** "How much do you mind driving?" */
+export type MindDriving = 'little' | 'some' | 'lot';
+
+/**
+ * Points taken off a plan made by score (and every shopping plan) for each hour of driving and each
+ * hotel night. Show scores and visit values run from 0 to 100, so with "some" an hour of driving costs
+ * a tenth of a perfect show, and a 3 hour drive each way has to be worth 60 points more than staying
+ * close to home.
+ */
+export const DRIVING_PENALTIES: Record<MindDriving, Penalties> = {
+  little: { perDriveHour: 2, perHotelNight: 5 },
+  some: { perDriveHour: 10, perHotelNight: 25 },
+  lot: { perDriveHour: 20, perHotelNight: 50 },
+};
+
+export const MIND_DRIVING_LABELS: Record<MindDriving, string> = { little: 'A little', some: 'Some', lot: 'A lot' };
 
 /** Options every planner accepts. */
 export interface CommonPlanOptions {
@@ -32,6 +49,10 @@ export interface CommonPlanOptions {
   onlyIds?: string[];
   /** Score mode: points a show must beat to be worth a spot. Default 0. */
   minScore?: number;
+  /** How much driving and hotel nights count against a plan made by score. Default `some`. */
+  mindDriving?: MindDriving;
+  /** Your own points per driving hour and per hotel night, instead of a `mindDriving` preset. */
+  penalties?: Partial<Penalties>;
 }
 
 export interface Resolved {
@@ -42,6 +63,23 @@ export interface Resolved {
   profitModel: ProfitModel;
   objective: Objective;
   weights: ReturnType<typeof resolveWeights>;
+  /** Penalties for the vending search: points in score mode, the vendor's time value in profit mode. */
+  penalties: Penalties;
+  /** Penalties in points, used by shopping (always) and by score mode. */
+  pointPenalties: Penalties;
+}
+
+export function resolvePointPenalties(o: CommonPlanOptions): Penalties {
+  const key = o.mindDriving ?? 'some';
+  const base = DRIVING_PENALTIES[key];
+  if (!base) throw new PlannerError('bad_option', 'How much you mind driving must be a little, some or a lot.');
+  const out: Penalties = { ...base, ...(o.penalties ?? {}) };
+  for (const v of [out.perDriveHour, out.perHotelNight]) {
+    if (!(typeof v === 'number' && Number.isFinite(v) && v >= 0)) {
+      throw new PlannerError('bad_option', 'Driving and night penalties must be zero or more.');
+    }
+  }
+  return out;
 }
 
 export function resolveCommon(settings: VendorSettings, o: CommonPlanOptions, needFuel = true): Resolved {
@@ -64,6 +102,9 @@ export function resolveCommon(settings: VendorSettings, o: CommonPlanOptions, ne
   } else {
     objective = settings.typical_sales ? 'profit' : 'score';
   }
+  const pointPenalties = resolvePointPenalties(o);
+  const penalties: Penalties =
+    objective === 'profit' ? { perDriveHour: settings.time_value_per_hour ?? 0, perHotelNight: 0 } : pointPenalties;
   return {
     today,
     rates: o.rates ?? null,
@@ -72,6 +113,8 @@ export function resolveCommon(settings: VendorSettings, o: CommonPlanOptions, ne
     profitModel: resolveProfitModel(o.profitModel),
     objective,
     weights: resolveWeights(o.weights),
+    penalties,
+    pointPenalties,
   };
 }
 

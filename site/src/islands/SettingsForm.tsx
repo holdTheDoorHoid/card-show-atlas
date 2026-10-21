@@ -140,6 +140,15 @@ export function SettingsForm({ settings, vocab, onSave }: Props) {
           <NumberField id="hotel" label="Hotel per night" step="1" value={s.hotelPerNight} onValue={(n) => change({ hotelPerNight: n })} />
           <NumberField id="food" label="Food per day" step="1" value={s.foodPerDay} onValue={(n) => change({ foodPerDay: n })} />
         </div>
+        <p class="hint">Left empty, plans use placeholders (140 USD or 180 CAD a night, 35 USD or 45 CAD a day) and say so.</p>
+        <NumberField
+          id="time-value"
+          label="What an hour of your driving is worth (optional)"
+          hint="Plans made by profit then count your time behind the wheel as a cost. Leave empty to count only fuel, hotels and food."
+          step="1"
+          value={s.timeValuePerHour}
+          onValue={(n) => change({ timeValuePerHour: n })}
+        />
       </div>
 
       <div class="card" style={{ marginBottom: '1rem' }}>

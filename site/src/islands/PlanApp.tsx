@@ -9,6 +9,7 @@ import {
   buildSeasonOptions,
   buildWeekendOptions,
   NO_OVERRIDES,
+  hasOverrides,
   sanitizeSeasonForm,
   sanitizeWeekendForm,
   settingsForPlan,
@@ -326,7 +327,7 @@ export default function PlanApp() {
   const planning = status === 'planning';
   const vendorCurrency = vendor.settings.currency;
   const needRate = run ? currenciesNeedingRate(run.excluded, vendorCurrency) : [];
-  const dirty = Object.keys(overrides.tableFees).length > 0 || overrides.hotel !== null || overrides.fuelPrice !== null;
+  const dirty = hasOverrides(overrides);
 
   return (
     <div class="plan-app">
