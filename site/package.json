@@ -1,0 +1,32 @@
+{
+  "name": "card-show-atlas-site",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "prepare-data": "node scripts/prepare-data.mjs",
+    "dev": "node scripts/prepare-data.mjs --dev && astro dev",
+    "build": "node scripts/prepare-data.mjs --build && node scripts/clean.mjs && astro build && node scripts/check-dist.mjs",
+    "preview": "astro preview",
+    "check": "astro check",
+    "test": "vitest run",
+    "fixtures": "node fixtures/make-fixtures.mjs"
+  },
+  "dependencies": {
+    "@astrojs/preact": "6.0.5",
+    "@astrojs/sitemap": "3.7.4",
+    "astro": "7.3.4",
+    "leaflet": "1.9.4",
+    "preact": "10.29.8"
+  },
+  "devDependencies": {
+    "@astrojs/check": "0.9.10",
+    "@types/leaflet": "1.9.22",
+    "@types/node": "24.13.6",
+    "typescript": "6.0.3",
+    "vitest": "4.1.11"
+  }
+}

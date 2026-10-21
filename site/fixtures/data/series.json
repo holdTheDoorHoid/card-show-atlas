@@ -1,0 +1,3250 @@
+[
+ {
+  "id": "sample-albany-sports-card-show-albany-ny",
+  "name": "Sample Albany Sports Card Show",
+  "promoter_id": "sample-granite-promotions",
+  "venue": {
+   "name": "Sample Albany Convention Center",
+   "city": "Albany",
+   "region": "NY"
+  },
+  "cadence": "once a year",
+  "editions": [
+   "sample-albany-sports-card-show-albany-ny-2026-10-12"
+  ],
+  "links": {
+   "official": "https://example.com/sample/sample-albany-sports-card-show-albany-ny"
+  },
+  "history": [
+   {
+    "year": 2025,
+    "attendance": 5064
+   },
+   {
+    "year": 2024,
+    "attendance": 4389
+   }
+  ]
+ },
+ {
+  "id": "sample-albuquerque-pop-culture-con-albuquerque-nm",
+  "name": "Sample Albuquerque Pop Culture Con",
+  "promoter_id": "sample-harbor-promotions",
+  "venue": {
+   "name": "Sample Albuquerque Community Center",
+   "city": "Albuquerque",
+   "region": "NM"
+  },
+  "cadence": null,
+  "editions": [
+   "sample-albuquerque-pop-culture-con-albuquerque-nm-2027-06-21"
+  ],
+  "links": {
+   "official": "https://example.com/sample/sample-albuquerque-pop-culture-con-albuquerque-nm"
+  },
+  "history": []
+ },
+ {
+  "id": "sample-allentown-regional-championships-allentown-pa",
+  "name": "Sample Allentown Regional Championships",
+  "promoter_id": "sample-lone-star-promotions",
+  "venue": {
+   "name": "Sample Allentown VFW Hall",
+   "city": "Allentown",
+   "region": "PA"
+  },
+  "cadence": null,
+  "editions": [
+   "sample-allentown-regional-championships-allentown-pa-2027-02-07"
+  ],
+  "links": {
+   "official": "https://example.com/sample/sample-allentown-regional-championships-allentown-pa"
+  },
+  "history": []
+ },
+ {
+  "id": "sample-anaheim-national-card-expo-anaheim-ca",
+  "name": "Sample Anaheim National Card Expo",
+  "promoter_id": "sample-northstar-promotions",
+  "venue": {
+   "name": "Sample Anaheim Event Center",
+   "city": "Anaheim",
+   "region": "CA"
+  },
+  "cadence": null,
+  "editions": [
+   "sample-anaheim-national-card-expo-anaheim-ca-2027-04-02"
+  ],
+  "links": {
+   "official": "https://example.com/sample/sample-anaheim-national-card-expo-anaheim-ca"
+  },
+  "history": [
+   {
+    "year": 2025,
+    "attendance": 6528
+   },
+   {
+    "year": 2024,
+    "attendance": 5658
+   }
+  ]
+ },
+ {
+  "id": "sample-anaheim-trading-card-expo-anaheim-ca",
+  "name": "Sample Anaheim Trading Card Expo",
+  "promoter_id": "sample-great-lakes-promotions",
+  "venue": {
+   "name": "Sample Anaheim Convention Center",
+   "city": "Anaheim",
+   "region": "CA"
+  },
+  "cadence": "once a year",
+  "editions": [
+   "sample-anaheim-trading-card-expo-anaheim-ca-2026-11-28"
+  ],
+  "links": {
+   "official": "https://example.com/sample/sample-anaheim-trading-card-expo-anaheim-ca"
+  },
+  "history": [
+   {
+    "year": 2025,
+    "attendance": 1170
+   },
+   {
+    "year": 2024,
+    "attendance": 1014
+   }
+  ]
+ },
+ {
+  "id": "sample-anchorage-card-bash-anchorage-ak",
+  "name": "Sample Anchorage Card Bash",
+  "promoter_id": "sample-pacific-promotions",
+  "venue": {
+   "name": "Sample Anchorage VFW Hall",
+   "city": "Anchorage",
+   "region": "AK"
+  },
+  "cadence": "last Saturday of most months",
+  "editions": [
+   "sample-anchorage-card-bash-anchorage-ak-2026-09-26",
+   "sample-anchorage-card-bash-anchorage-ak-2026-10-31",
+   "sample-anchorage-card-bash-anchorage-ak-2026-11-28",
+   "sample-anchorage-card-bash-anchorage-ak-2026-12-26",
+   "sample-anchorage-card-bash-anchorage-ak-2027-01-30",
+   "sample-anchorage-card-bash-anchorage-ak-2027-02-27",
+   "sample-anchorage-card-bash-anchorage-ak-2027-03-27",
+   "sample-anchorage-card-bash-anchorage-ak-2027-04-24",
+   "sample-anchorage-card-bash-anchorage-ak-2027-05-29",
+   "sample-anchorage-card-bash-anchorage-ak-2027-06-26",
+   "sample-anchorage-card-bash-anchorage-ak-2027-07-31",
+   "sample-anchorage-card-bash-anchorage-ak-2027-08-28",
+   "sample-anchorage-card-bash-anchorage-ak-2027-09-25",
+   "sample-anchorage-card-bash-anchorage-ak-2027-10-30"
+  ],
+  "links": {
+   "official": "https://example.com/sample/sample-anchorage-card-bash-anchorage-ak"
+  },
+  "history": [
+   {
+    "year": 2025,
+    "attendance": 1290
+   },
+   {
+    "year": 2024,
+    "attendance": 1118
+   }
+  ]
+ },
+ {
+  "id": "sample-anchorage-sports-card-show-2-anchorage-ak",
+  "name": "Sample Anchorage Sports Card Show 2",
+  "promoter_id": "sample-pacific-promotions",
+  "venue": {
+   "name": "Sample Anchorage Event Center",
+   "city": "Anchorage",
+   "region": "AK"
+  },
+  "cadence": null,
+  "editions": [
+   "sample-anchorage-sports-card-show-2-anchorage-ak-2027-03-18"
+  ],
+  "links": {
+   "official": "https://example.com/sample/sample-anchorage-sports-card-show-2-anchorage-ak"
+  },
+  "history": []
+ },
+ {
+  "id": "sample-atlanta-card-show-atlanta-ga",
+  "name": "Sample Atlanta Card Show",
+  "promoter_id": "sample-copper-promotions",
+  "venue": {
+   "name": "Sample Atlanta VFW Hall",
+   "city": "Atlanta",
+   "region": "GA"
+  },
+  "cadence": "third Saturday every other month",
+  "editions": [
+   "sample-atlanta-card-show-atlanta-ga-2026-10-17",
+   "sample-atlanta-card-show-atlanta-ga-2026-12-19",
+   "sample-atlanta-card-show-atlanta-ga-2027-02-20",
+   "sample-atlanta-card-show-atlanta-ga-2027-04-17",
+   "sample-atlanta-card-show-atlanta-ga-2027-06-19",
+   "sample-atlanta-card-show-atlanta-ga-2027-08-21",
+   "sample-atlanta-card-show-atlanta-ga-2027-10-16"
+  ],
+  "links": {
+   "official": "https://example.com/sample/sample-atlanta-card-show-atlanta-ga"
+  },
+  "history": []
+ },
+ {
+  "id": "sample-atlanta-pop-culture-con-atlanta-ga",
+  "name": "Sample Atlanta Pop Culture Con",
+  "promoter_id": "sample-heartland-promotions",
+  "venue": {
+   "name": "Sample Atlanta Rec Center",
+   "city": "Atlanta",
+   "region": "GA"
+  },
+  "cadence": null,
+  "editions": [
+   "sample-atlanta-pop-culture-con-atlanta-ga-2026-12-25"
+  ],
+  "links": {
+   "official": "https://example.com/sample/sample-atlanta-pop-culture-con-atlanta-ga"
+  },
+  "history": []
+ },
+ {
+  "id": "sample-austin-gaming-and-collectibles-con-austin-tx",
+  "name": "Sample Austin Gaming and Collectibles Con",
+  "promoter_id": "sample-pacific-promotions",
+  "venue": {
+   "name": "Sample Austin Armory",
+   "city": "Austin",
+   "region": "TX"
+  },
+  "cadence": null,
+  "editions": [
+   "sample-austin-gaming-and-collectibles-con-austin-tx-2026-10-11"
+  ],
+  "links": {
+   "official": "https://example.com/sample/sample-austin-gaming-and-collectibles-con-austin-tx"
+  },
+  "history": []
+ },
+ {
+  "id": "sample-baltimore-sports-card-show-baltimore-md",
+  "name": "Sample Baltimore Sports Card Show",
+  "promoter_id": "sample-harbor-promotions",
+  "venue": {
+   "name": "Sample Baltimore Hotel Ballroom",
+   "city": "Baltimore",
+   "region": "MD"
+  },
+  "cadence": "last Saturday every other month",
+  "editions": [
+   "sample-baltimore-sports-card-show-baltimore-md-2026-09-26",
+   "sample-baltimore-sports-card-show-baltimore-md-2026-11-28",
+   "sample-baltimore-sports-card-show-baltimore-md-2027-01-30",
+   "sample-baltimore-sports-card-show-baltimore-md-2027-03-27",
+   "sample-baltimore-sports-card-show-baltimore-md-2027-05-29",
+   "sample-baltimore-sports-card-show-baltimore-md-2027-07-31",
+   "sample-baltimore-sports-card-show-baltimore-md-2027-09-25"
+  ],
+  "links": {
+   "official": "https://example.com/sample/sample-baltimore-sports-card-show-baltimore-md"
+  },
+  "history": []
+ },
+ {
+  "id": "sample-baltimore-trading-card-expo-baltimore-md",
+  "name": "Sample Baltimore Trading Card Expo",
+  "promoter_id": "sample-mesa-promotions",
+  "venue": {
+   "name": "Sample Baltimore VFW Hall",
+   "city": "Baltimore",
+   "region": "MD"
+  },
+  "cadence": null,
+  "editions": [
+   "sample-baltimore-trading-card-expo-baltimore-md-2026-10-12"
+  ],
+  "links": {
+   "official": "https://example.com/sample/sample-baltimore-trading-card-expo-baltimore-md"
+  },
+  "history": []
+ },
+ {
+  "id": "sample-billings-card-show-billings-mt",
+  "name": "Sample Billings Card Show",
+  "promoter_id": "sample-prairie-promotions",
+  "venue": {
+   "name": "Sample Billings Expo Hall",
+   "city": "Billings",
+   "region": "MT"
+  },
+  "cadence": null,
+  "editions": [
+   "sample-billings-card-show-billings-mt-2027-06-18"
+  ],
+  "links": {
+   "official": "https://example.com/sample/sample-billings-card-show-billings-mt"
+  },
+  "history": [
+   {
+    "year": 2025,
+    "attendance": 3048
+   },
+   {
+    "year": 2024,
+    "attendance": 2642
+   }
+  ]
+ },
+ {
+  "id": "sample-billings-trading-card-expo-billings-mt",
+  "name": "Sample Billings Trading Card Expo",
+  "promoter_id": "sample-silver-promotions",
+  "venue": {
+   "name": "Sample Billings Community Center",
+   "city": "Billings",
+   "region": "MT"
+  },
+  "cadence": "last Sunday of most months",
+  "editions": [
+   "sample-billings-trading-card-expo-billings-mt-2026-09-27",
+   "sample-billings-trading-card-expo-billings-mt-2026-10-25",
+   "sample-billings-trading-card-expo-billings-mt-2026-11-29",
+   "sample-billings-trading-card-expo-billings-mt-2026-12-27",
+   "sample-billings-trading-card-expo-billings-mt-2027-01-31",
+   "sample-billings-trading-card-expo-billings-mt-2027-02-28",
+   "sample-billings-trading-card-expo-billings-mt-2027-03-28",
+   "sample-billings-trading-card-expo-billings-mt-2027-04-25",
+   "sample-billings-trading-card-expo-billings-mt-2027-05-30",
+   "sample-billings-trading-card-expo-billings-mt-2027-06-27",
+   "sample-billings-trading-card-expo-billings-mt-2027-07-25",
+   "sample-billings-trading-card-expo-billings-mt-2027-08-29",
+   "sample-billings-trading-card-expo-billings-mt-2027-09-26",
+   "sample-billings-trading-card-expo-billings-mt-2027-10-31"
+  ],
+  "links": {
+   "official": "https://example.com/sample/sample-billings-trading-card-expo-billings-mt"
+  },
+  "history": []
+ },
+ {
+  "id": "sample-birmingham-pop-culture-con-birmingham-al",
+  "name": "Sample Birmingham Pop Culture Con",
+  "promoter_id": "sample-capital-promotions",
+  "venue": {
+   "name": "Sample Birmingham Expo Hall",
+   "city": "Birmingham",
+   "region": "AL"
+  },
+  "cadence": null,
+  "editions": [
+   "sample-birmingham-pop-culture-con-birmingham-al-2026-12-08"
+  ],
+  "links": {
+   "official": "https://example.com/sample/sample-birmingham-pop-culture-con-birmingham-al"
+  },
+  "history": [
+   {
+    "year": 2025,
+    "attendance": 4320
+   },
+   {
+    "year": 2024,
+    "attendance": 3744
+   }
+  ]
+ },
+ {
+  "id": "sample-boise-card-collectors-expo-boise-id",
+  "name": "Sample Boise Card Collectors Expo",
+  "promoter_id": "sample-evergreen-promotions",
+  "venue": {
+   "name": "Sample Boise VFW Hall",
+   "city": "Boise",
+   "region": "ID"
+  },
+  "cadence": "once a year",
+  "editions": [
+   "sample-boise-card-collectors-expo-boise-id-2027-06-14"
+  ],
+  "links": {
+   "official": "https://example.com/sample/sample-boise-card-collectors-expo-boise-id"
+  },
+  "history": [
+   {
+    "year": 2025,
+    "attendance": 2784
+   },
+   {
+    "year": 2024,
+    "attendance": 2413
+   }
+  ]
+ },
+ {
+  "id": "sample-boston-card-bash-boston-ma",
+  "name": "Sample Boston Card Bash",
+  "promoter_id": "sample-harbor-promotions",
+  "venue": {
+   "name": "Sample Boston Armory",
+   "city": "Boston",
+   "region": "MA"
+  },
+  "cadence": "fourth Sunday every other month",
+  "editions": [
+   "sample-boston-card-bash-boston-ma-2026-09-27",
+   "sample-boston-card-bash-boston-ma-2026-11-22",
+   "sample-boston-card-bash-boston-ma-2027-01-24",
+   "sample-boston-card-bash-boston-ma-2027-03-28",
+   "sample-boston-card-bash-boston-ma-2027-05-23",
+   "sample-boston-card-bash-boston-ma-2027-07-25",
+   "sample-boston-card-bash-boston-ma-2027-09-26"
+  ],
+  "links": {
+   "official": "https://example.com/sample/sample-boston-card-bash-boston-ma"
+  },
+  "history": [
+   {
+    "year": 2025,
+    "attendance": 306
+   },
+   {
+    "year": 2024,
+    "attendance": 265
+   }
+  ]
+ },
+ {
+  "id": "sample-boston-sports-card-show-boston-ma",
+  "name": "Sample Boston Sports Card Show",
+  "promoter_id": "sample-garden-promotions",
+  "venue": {
+   "name": "Sample Boston VFW Hall",
+   "city": "Boston",
+   "region": "MA"
+  },
+  "cadence": null,
+  "editions": [
+   "sample-boston-sports-card-show-boston-ma-2026-12-31"
+  ],
+  "links": {
+   "official": "https://example.com/sample/sample-boston-sports-card-show-boston-ma"
+  },
+  "history": [
+   {
+    "year": 2025,
+    "attendance": 264
+   },
+   {
+    "year": 2024,
+    "attendance": 229
+   }
+  ]
+ },
+ {
+  "id": "sample-buffalo-regional-championships-buffalo-ny",
+  "name": "Sample Buffalo Regional Championships",
+  "promoter_id": "sample-evergreen-promotions",
+  "venue": {
+   "name": "Sample Buffalo Rec Center",
+   "city": "Buffalo",
+   "region": "NY"
+  },
+  "cadence": "once a year",
+  "editions": [
+   "sample-buffalo-regional-championships-buffalo-ny-2026-12-23"
+  ],
+  "links": {
+   "official": "https://example.com/sample/sample-buffalo-regional-championships-buffalo-ny"
+  },
+  "history": []
+ },
+ {
+  "id": "sample-burlington-card-and-collectibles-show-burlington-vt",
+  "name": "Sample Burlington Card and Collectibles Show",
+  "promoter_id": "sample-evergreen-promotions",
+  "venue": {
+   "name": "Sample Burlington Event Center",
+   "city": "Burlington",
+   "region": "VT"
+  },
+  "cadence": "third Sunday of most months",
+  "editions": [
+   "sample-burlington-card-and-collectibles-show-burlington-vt-2026-10-18",
+   "sample-burlington-card-and-collectibles-show-burlington-vt-2026-11-15",
+   "sample-burlington-card-and-collectibles-show-burlington-vt-2026-12-20",
+   "sample-burlington-card-and-collectibles-show-burlington-vt-2027-01-17",
+   "sample-burlington-card-and-collectibles-show-burlington-vt-2027-02-21",
+   "sample-burlington-card-and-collectibles-show-burlington-vt-2027-03-21",
+   "sample-burlington-card-and-collectibles-show-burlington-vt-2027-04-18",
+   "sample-burlington-card-and-collectibles-show-burlington-vt-2027-05-16",
+   "sample-burlington-card-and-collectibles-show-burlington-vt-2027-06-20",
+   "sample-burlington-card-and-collectibles-show-burlington-vt-2027-07-18",
+   "sample-burlington-card-and-collectibles-show-burlington-vt-2027-08-15",
+   "sample-burlington-card-and-collectibles-show-burlington-vt-2027-09-19",
+   "sample-burlington-card-and-collectibles-show-burlington-vt-2027-10-17",
+   "sample-burlington-card-and-collectibles-show-burlington-vt-2027-11-21"
+  ],
+  "links": {
+   "official": "https://example.com/sample/sample-burlington-card-and-collectibles-show-burlington-vt"
+  },
+  "history": [
+   {
+    "year": 2025,
+    "attendance": 576
+   },
+   {
+    "year": 2024,
+    "attendance": 499
+   }
+  ]
+ },
+ {
+  "id": "sample-burlington-trading-card-expo-burlington-vt",
+  "name": "Sample Burlington Trading Card Expo",
+  "promoter_id": "sample-cascade-promotions",
+  "venue": {
+   "name": "Sample Burlington Convention Center",
+   "city": "Burlington",
+   "region": "VT"
+  },
+  "cadence": null,
+  "editions": [
+   "sample-burlington-trading-card-expo-burlington-vt-2027-06-18"
+  ],
+  "links": {
+   "official": "https://example.com/sample/sample-burlington-trading-card-expo-burlington-vt"
+  },
+  "history": []
+ },
+ {
+  "id": "sample-calgary-trading-card-expo-calgary-ab",
+  "name": "Sample Calgary Trading Card Expo",
+  "promoter_id": "sample-granite-promotions",
+  "venue": {
+   "name": "Sample Calgary Banquet Hall",
+   "city": "Calgary",
+   "region": "AB"
+  },
+  "cadence": "once a year",
+  "editions": [
+   "sample-calgary-trading-card-expo-calgary-ab-2026-12-13"
+  ],
+  "links": {
+   "official": "https://example.com/sample/sample-calgary-trading-card-expo-calgary-ab"
+  },
+  "history": []
+ },
+ {
+  "id": "sample-charleston-card-game-challenge-charleston-wv",
+  "name": "Sample Charleston Card Game Challenge",
+  "promoter_id": "sample-tidewater-promotions",
+  "venue": {
+   "name": "Sample Charleston Community Center",
+   "city": "Charleston",
+   "region": "WV"
+  },
+  "cadence": null,
+  "editions": [
+   "sample-charleston-card-game-challenge-charleston-wv-2027-07-14"
+  ],
+  "links": {
+   "official": "https://example.com/sample/sample-charleston-card-game-challenge-charleston-wv"
+  },
+  "history": [
+   {
+    "year": 2025,
+    "attendance": 792
+   },
+   {
+    "year": 2024,
+    "attendance": 686
+   }
+  ]
+ },
+ {
+  "id": "sample-charleston-card-show-charleston-wv",
+  "name": "Sample Charleston Card Show",
+  "promoter_id": "sample-cedar-promotions",
+  "venue": {
+   "name": "Sample Charleston Rec Center",
+   "city": "Charleston",
+   "region": "WV"
+  },
+  "cadence": "last Saturday each quarter",
+  "editions": [
+   "sample-charleston-card-show-charleston-wv-2026-09-26",
+   "sample-charleston-card-show-charleston-wv-2026-12-26",
+   "sample-charleston-card-show-charleston-wv-2027-03-27",
+   "sample-charleston-card-show-charleston-wv-2027-06-26",
+   "sample-charleston-card-show-charleston-wv-2027-09-25"
+  ],
+  "links": {
+   "official": "https://example.com/sample/sample-charleston-card-show-charleston-wv"
+  },
+  "history": [
+   {
+    "year": 2025,
+    "attendance": 264
+   },
+   {
+    "year": 2024,
+    "attendance": 229
+   }
+  ]
+ },
+ {
+  "id": "sample-charleston-collectors-convention-charleston-sc",
+  "name": "Sample Charleston Collectors Convention",
+  "promoter_id": "sample-bayou-promotions",
+  "venue": {
+   "name": "Sample Charleston Hotel Ballroom",
+   "city": "Charleston",
+   "region": "SC"
+  },
+  "cadence": "once a year",
+  "editions": [
+   "sample-charleston-collectors-convention-charleston-sc-2026-11-27"
+  ],
+  "links": {
+   "official": "https://example.com/sample/sample-charleston-collectors-convention-charleston-sc"
+  },
+  "history": []
+ },
+ {
+  "id": "sample-charlotte-collectors-convention-charlotte-nc",
+  "name": "Sample Charlotte Collectors Convention",
+  "promoter_id": "sample-boardwalk-promotions",
+  "venue": {
+   "name": "Sample Charlotte Banquet Hall",
+   "city": "Charlotte",
+   "region": "NC"
+  },
+  "cadence": null,
+  "editions": [
+   "sample-charlotte-collectors-convention-charlotte-nc-2027-06-27"
+  ],
+  "links": {
+   "official": "https://example.com/sample/sample-charlotte-collectors-convention-charlotte-nc"
+  },
+  "history": [
+   {
+    "year": 2025,
+    "attendance": 7794
+   },
+   {
+    "year": 2024,
+    "attendance": 6755
+   }
+  ]
+ },
+ {
+  "id": "sample-charlottetown-card-bash-charlottetown-pe",
+  "name": "Sample Charlottetown Card Bash",
+  "promoter_id": "sample-boardwalk-promotions",
+  "venue": {
+   "name": "Sample Charlottetown Convention Center",
+   "city": "Charlottetown",
+   "region": "PE"
+  },
+  "cadence": "fourth Saturday every other month",
+  "editions": [
+   "sample-charlottetown-card-bash-charlottetown-pe-2026-10-24",
+   "sample-charlottetown-card-bash-charlottetown-pe-2026-12-26",
+   "sample-charlottetown-card-bash-charlottetown-pe-2027-02-27",
+   "sample-charlottetown-card-bash-charlottetown-pe-2027-04-24",
+   "sample-charlottetown-card-bash-charlottetown-pe-2027-06-26",
+   "sample-charlottetown-card-bash-charlottetown-pe-2027-08-28",
+   "sample-charlottetown-card-bash-charlottetown-pe-2027-10-23"
+  ],
+  "links": {
+   "official": "https://example.com/sample/sample-charlottetown-card-bash-charlottetown-pe"
+  },
+  "history": []
+ },
+ {
+  "id": "sample-charlottetown-card-collectors-expo-charlottetown-pe",
+  "name": "Sample Charlottetown Card Collectors Expo",
+  "promoter_id": "sample-pacific-promotions",
+  "venue": {
+   "name": "Sample Charlottetown Fairgrounds",
+   "city": "Charlottetown",
+   "region": "PE"
+  },
+  "cadence": null,
+  "editions": [
+   "sample-charlottetown-card-collectors-expo-charlottetown-pe-2026-12-16"
+  ],
+  "links": {
+   "official": "https://example.com/sample/sample-charlottetown-card-collectors-expo-charlottetown-pe"
+  },
+  "history": []
+ },
+ {
+  "id": "sample-cherry-hill-regional-championships-cherry-hill-nj",
+  "name": "Sample Cherry Hill Regional Championships",
+  "promoter_id": "sample-copper-promotions",
+  "venue": {
+   "name": "Sample Cherry Hill Rec Center",
+   "city": "Cherry Hill",
+   "region": "NJ"
+  },
+  "cadence": null,
+  "editions": [
+   "sample-cherry-hill-regional-championships-cherry-hill-nj-2027-04-11"
+  ],
+  "links": {
+   "official": "https://example.com/sample/sample-cherry-hill-regional-championships-cherry-hill-nj"
+  },
+  "history": []
+ },
+ {
+  "id": "sample-cherry-hill-sports-card-show-cherry-hill-nj",
+  "name": "Sample Cherry Hill Sports Card Show",
+  "promoter_id": "sample-lakeshore-promotions",
+  "venue": {
+   "name": "Sample Cherry Hill Fairgrounds",
+   "city": "Cherry Hill",
+   "region": "NJ"
+  },
+  "cadence": "second Saturday each quarter",
+  "editions": [
+   "sample-cherry-hill-sports-card-show-cherry-hill-nj-2026-10-10",
+   "sample-cherry-hill-sports-card-show-cherry-hill-nj-2027-01-09",
+   "sample-cherry-hill-sports-card-show-cherry-hill-nj-2027-04-10",
+   "sample-cherry-hill-sports-card-show-cherry-hill-nj-2027-07-10",
+   "sample-cherry-hill-sports-card-show-cherry-hill-nj-2027-10-09"
+  ],
+  "links": {
+   "official": "https://example.com/sample/sample-cherry-hill-sports-card-show-cherry-hill-nj"
+  },
+  "history": [
+   {
+    "year": 2025,
+    "attendance": 1356
+   },
+   {
+    "year": 2024,
+    "attendance": 1175
+   }
+  ]
+ },
+ {
+  "id": "sample-cheyenne-card-bash-cheyenne-wy",
+  "name": "Sample Cheyenne Card Bash",
+  "promoter_id": "sample-summit-promotions",
+  "venue": {
+   "name": "Sample Cheyenne Community Center",
+   "city": "Cheyenne",
+   "region": "WY"
+  },
+  "cadence": null,
+  "editions": [
+   "sample-cheyenne-card-bash-cheyenne-wy-2027-01-21"
+  ],
+  "links": {
+   "official": "https://example.com/sample/sample-cheyenne-card-bash-cheyenne-wy"
+  },
+  "history": [
+   {
+    "year": 2025,
+    "attendance": 588
+   },
+   {
+    "year": 2024,
+    "attendance": 510
+   }
+  ]
+ },
+ {
+  "id": "sample-cheyenne-trading-card-expo-cheyenne-wy",
+  "name": "Sample Cheyenne Trading Card Expo",
+  "promoter_id": "sample-bluegrass-promotions",
+  "venue": {
+   "name": "Sample Cheyenne VFW Hall",
+   "city": "Cheyenne",
+   "region": "WY"
+  },
+  "cadence": "last Sunday of most months",
+  "editions": [
+   "sample-cheyenne-trading-card-expo-cheyenne-wy-2026-09-27",
+   "sample-cheyenne-trading-card-expo-cheyenne-wy-2026-10-25",
+   "sample-cheyenne-trading-card-expo-cheyenne-wy-2026-11-29",
+   "sample-cheyenne-trading-card-expo-cheyenne-wy-2026-12-27",
+   "sample-cheyenne-trading-card-expo-cheyenne-wy-2027-01-31",
+   "sample-cheyenne-trading-card-expo-cheyenne-wy-2027-02-28",
+   "sample-cheyenne-trading-card-expo-cheyenne-wy-2027-03-28",
+   "sample-cheyenne-trading-card-expo-cheyenne-wy-2027-04-25",
+   "sample-cheyenne-trading-card-expo-cheyenne-wy-2027-05-30",
+   "sample-cheyenne-trading-card-expo-cheyenne-wy-2027-06-27",
+   "sample-cheyenne-trading-card-expo-cheyenne-wy-2027-07-25",
+   "sample-cheyenne-trading-card-expo-cheyenne-wy-2027-08-29",
+   "sample-cheyenne-trading-card-expo-cheyenne-wy-2027-09-26",
+   "sample-cheyenne-trading-card-expo-cheyenne-wy-2027-10-31"
+  ],
+  "links": {
+   "official": "https://example.com/sample/sample-cheyenne-trading-card-expo-cheyenne-wy"
+  },
+  "history": []
+ },
+ {
+  "id": "sample-chicago-gaming-and-collectibles-con-chicago-il",
+  "name": "Sample Chicago Gaming and Collectibles Con",
+  "promoter_id": "sample-redwood-promotions",
+  "venue": {
+   "name": "Sample Chicago Event Center",
+   "city": "Chicago",
+   "region": "IL"
+  },
+  "cadence": null,
+  "editions": [
+   "sample-chicago-gaming-and-collectibles-con-chicago-il-2027-02-06"
+  ],
+  "links": {
+   "official": "https://example.com/sample/sample-chicago-gaming-and-collectibles-con-chicago-il"
+  },
+  "history": []
+ },
+ {
+  "id": "sample-cincinnati-card-collectors-expo-cincinnati-oh",
+  "name": "Sample Cincinnati Card Collectors Expo",
+  "promoter_id": "sample-atlantic-promotions",
+  "venue": {
+   "name": "Sample Cincinnati Hotel Ballroom",
+   "city": "Cincinnati",
+   "region": "OH"
+  },
+  "cadence": "once a year",
+  "editions": [
+   "sample-cincinnati-card-collectors-expo-cincinnati-oh-2027-03-13"
+  ],
+  "links": {
+   "official": "https://example.com/sample/sample-cincinnati-card-collectors-expo-cincinnati-oh"
+  },
+  "history": [
+   {
+    "year": 2025,
+    "attendance": 2556
+   },
+   {
+    "year": 2024,
+    "attendance": 2215
+   }
+  ]
+ },
+ {
+  "id": "sample-cleveland-card-bash-cleveland-oh",
+  "name": "Sample Cleveland Card Bash",
+  "promoter_id": "sample-pioneer-promotions",
+  "venue": {
+   "name": "Sample Cleveland Rec Center",
+   "city": "Cleveland",
+   "region": "OH"
+  },
+  "cadence": null,
+  "editions": [
+   "sample-cleveland-card-bash-cleveland-oh-2027-02-17"
+  ],
+  "links": {
+   "official": "https://example.com/sample/sample-cleveland-card-bash-cleveland-oh"
+  },
+  "history": [
+   {
+    "year": 2025,
+    "attendance": 126
+   },
+   {
+    "year": 2024,
+    "attendance": 109
+   }
+  ]
+ },
+ {
+  "id": "sample-columbus-card-show-columbus-oh",
+  "name": "Sample Columbus Card Show",
+  "promoter_id": "sample-pacific-promotions",
+  "venue": {
+   "name": "Sample Columbus Event Center",
+   "city": "Columbus",
+   "region": "OH"
+  },
+  "cadence": null,
+  "editions": [
+   "sample-columbus-card-show-columbus-oh-2026-10-24"
+  ],
+  "links": {
+   "official": "https://example.com/sample/sample-columbus-card-show-columbus-oh"
+  },
+  "history": []
+ },
+ {
+  "id": "sample-columbus-trading-card-expo-columbus-oh",
+  "name": "Sample Columbus Trading Card Expo",
+  "promoter_id": "sample-cascade-promotions",
+  "venue": {
+   "name": "Sample Columbus Banquet Hall",
+   "city": "Columbus",
+   "region": "OH"
+  },
+  "cadence": "second Sunday every other month",
+  "editions": [
+   "sample-columbus-trading-card-expo-columbus-oh-2026-11-08",
+   "sample-columbus-trading-card-expo-columbus-oh-2027-01-10",
+   "sample-columbus-trading-card-expo-columbus-oh-2027-03-14",
+   "sample-columbus-trading-card-expo-columbus-oh-2027-05-09",
+   "sample-columbus-trading-card-expo-columbus-oh-2027-07-11",
+   "sample-columbus-trading-card-expo-columbus-oh-2027-09-12",
+   "sample-columbus-trading-card-expo-columbus-oh-2027-11-14"
+  ],
+  "links": {
+   "official": "https://example.com/sample/sample-columbus-trading-card-expo-columbus-oh"
+  },
+  "history": [
+   {
+    "year": 2025,
+    "attendance": 1182
+   },
+   {
+    "year": 2024,
+    "attendance": 1024
+   }
+  ]
+ },
+ {
+  "id": "sample-dallas-national-card-expo-dallas-tx",
+  "name": "Sample Dallas National Card Expo",
+  "promoter_id": "sample-pioneer-promotions",
+  "venue": {
+   "name": "Sample Dallas Convention Center",
+   "city": "Dallas",
+   "region": "TX"
+  },
+  "cadence": "third Saturday each quarter",
+  "editions": [
+   "sample-dallas-national-card-expo-dallas-tx-2026-12-19",
+   "sample-dallas-national-card-expo-dallas-tx-2027-03-20",
+   "sample-dallas-national-card-expo-dallas-tx-2027-06-19",
+   "sample-dallas-national-card-expo-dallas-tx-2027-09-18"
+  ],
+  "links": {
+   "official": "https://example.com/sample/sample-dallas-national-card-expo-dallas-tx"
+  },
+  "history": [
+   {
+    "year": 2025,
+    "attendance": 5760
+   },
+   {
+    "year": 2024,
+    "attendance": 4992
+   }
+  ]
+ },
+ {
+  "id": "sample-dallas-open-tournament-weekend-dallas-tx",
+  "name": "Sample Dallas Open Tournament Weekend",
+  "promoter_id": "sample-boardwalk-promotions",
+  "venue": {
+   "name": "Sample Dallas VFW Hall",
+   "city": "Dallas",
+   "region": "TX"
+  },
+  "cadence": null,
+  "editions": [
+   "sample-dallas-open-tournament-weekend-dallas-tx-2027-05-25"
+  ],
+  "links": {
+   "official": "https://example.com/sample/sample-dallas-open-tournament-weekend-dallas-tx"
+  },
+  "history": []
+ },
+ {
+  "id": "sample-denver-card-bash-denver-co",
+  "name": "Sample Denver Card Bash",
+  "promoter_id": "sample-mesa-promotions",
+  "venue": {
+   "name": "Sample Denver Expo Hall",
+   "city": "Denver",
+   "region": "CO"
+  },
+  "cadence": "once a year",
+  "editions": [
+   "sample-denver-card-bash-denver-co-2027-05-14"
+  ],
+  "links": {
+   "official": "https://example.com/sample/sample-denver-card-bash-denver-co"
+  },
+  "history": []
+ },
+ {
+  "id": "sample-des-moines-trading-card-expo-des-moines-ia",
+  "name": "Sample Des Moines Trading Card Expo",
+  "promoter_id": "sample-maple-promotions",
+  "venue": {
+   "name": "Sample Des Moines Community Center",
+   "city": "Des Moines",
+   "region": "IA"
+  },
+  "cadence": "once a year",
+  "editions": [
+   "sample-des-moines-trading-card-expo-des-moines-ia-2027-01-05"
+  ],
+  "links": {
+   "official": "https://example.com/sample/sample-des-moines-trading-card-expo-des-moines-ia"
+  },
+  "history": []
+ },
+ {
+  "id": "sample-detroit-collectors-convention-detroit-mi",
+  "name": "Sample Detroit Collectors Convention",
+  "promoter_id": "sample-pioneer-promotions",
+  "venue": {
+   "name": "Sample Detroit Hotel Ballroom",
+   "city": "Detroit",
+   "region": "MI"
+  },
+  "cadence": "fourth Saturday each quarter",
+  "editions": [
+   "sample-detroit-collectors-convention-detroit-mi-2026-09-26",
+   "sample-detroit-collectors-convention-detroit-mi-2026-12-26",
+   "sample-detroit-collectors-convention-detroit-mi-2027-03-27",
+   "sample-detroit-collectors-convention-detroit-mi-2027-06-26",
+   "sample-detroit-collectors-convention-detroit-mi-2027-09-25"
+  ],
+  "links": {
+   "official": "https://example.com/sample/sample-detroit-collectors-convention-detroit-mi"
+  },
+  "history": [
+   {
+    "year": 2025,
+    "attendance": 4320
+   },
+   {
+    "year": 2024,
+    "attendance": 3744
+   }
+  ]
+ },
+ {
+  "id": "sample-detroit-comic-and-anime-con-detroit-mi",
+  "name": "Sample Detroit Comic and Anime Con",
+  "promoter_id": "sample-granite-promotions",
+  "venue": {
+   "name": "Sample Detroit Banquet Hall",
+   "city": "Detroit",
+   "region": "MI"
+  },
+  "cadence": null,
+  "editions": [
+   "sample-detroit-comic-and-anime-con-detroit-mi-2026-10-02"
+  ],
+  "links": {
+   "official": "https://example.com/sample/sample-detroit-comic-and-anime-con-detroit-mi"
+  },
+  "history": []
+ },
+ {
+  "id": "sample-edison-gaming-and-collectibles-con-edison-nj",
+  "name": "Sample Edison Gaming and Collectibles Con",
+  "promoter_id": "sample-prairie-promotions",
+  "venue": {
+   "name": "Sample Edison Expo Hall",
+   "city": "Edison",
+   "region": "NJ"
+  },
+  "cadence": "once a year",
+  "editions": [
+   "sample-edison-gaming-and-collectibles-con-edison-nj-2027-01-27"
+  ],
+  "links": {
+   "official": "https://example.com/sample/sample-edison-gaming-and-collectibles-con-edison-nj"
+  },
+  "history": []
+ },
+ {
+  "id": "sample-edmonton-card-show-2-edmonton-ab",
+  "name": "Sample Edmonton Card Show 2",
+  "promoter_id": "sample-mesa-promotions",
+  "venue": {
+   "name": "Sample Edmonton VFW Hall",
+   "city": "Edmonton",
+   "region": "AB"
+  },
+  "cadence": null,
+  "editions": [
+   "sample-edmonton-card-show-2-edmonton-ab-2027-06-05"
+  ],
+  "links": {
+   "official": "https://example.com/sample/sample-edmonton-card-show-2-edmonton-ab"
+  },
+  "history": []
+ },
+ {
+  "id": "sample-edmonton-card-show-edmonton-ab",
+  "name": "Sample Edmonton Card Show",
+  "promoter_id": "sample-prairie-promotions",
+  "venue": {
+   "name": "Sample Edmonton Community Center",
+   "city": "Edmonton",
+   "region": "AB"
+  },
+  "cadence": "second Sunday of most months",
+  "editions": [
+   "sample-edmonton-card-show-edmonton-ab-2026-10-11",
+   "sample-edmonton-card-show-edmonton-ab-2026-11-08",
+   "sample-edmonton-card-show-edmonton-ab-2026-12-13",
+   "sample-edmonton-card-show-edmonton-ab-2027-01-10",
+   "sample-edmonton-card-show-edmonton-ab-2027-02-14",
+   "sample-edmonton-card-show-edmonton-ab-2027-03-14",
+   "sample-edmonton-card-show-edmonton-ab-2027-04-11",
+   "sample-edmonton-card-show-edmonton-ab-2027-05-09",
+   "sample-edmonton-card-show-edmonton-ab-2027-06-13",
+   "sample-edmonton-card-show-edmonton-ab-2027-07-11",
+   "sample-edmonton-card-show-edmonton-ab-2027-08-08",
+   "sample-edmonton-card-show-edmonton-ab-2027-09-12",
+   "sample-edmonton-card-show-edmonton-ab-2027-10-10",
+   "sample-edmonton-card-show-edmonton-ab-2027-11-14"
+  ],
+  "links": {
+   "official": "https://example.com/sample/sample-edmonton-card-show-edmonton-ab"
+  },
+  "history": []
+ },
+ {
+  "id": "sample-fargo-card-and-collectibles-show-fargo-nd",
+  "name": "Sample Fargo Card and Collectibles Show",
+  "promoter_id": "sample-granite-promotions",
+  "venue": {
+   "name": "Sample Fargo Event Center",
+   "city": "Fargo",
+   "region": "ND"
+  },
+  "cadence": "third Sunday of most months",
+  "editions": [
+   "sample-fargo-card-and-collectibles-show-fargo-nd-2026-10-18",
+   "sample-fargo-card-and-collectibles-show-fargo-nd-2026-11-15",
+   "sample-fargo-card-and-collectibles-show-fargo-nd-2026-12-20",
+   "sample-fargo-card-and-collectibles-show-fargo-nd-2027-01-17",
+   "sample-fargo-card-and-collectibles-show-fargo-nd-2027-02-21",
+   "sample-fargo-card-and-collectibles-show-fargo-nd-2027-03-21",
+   "sample-fargo-card-and-collectibles-show-fargo-nd-2027-04-18",
+   "sample-fargo-card-and-collectibles-show-fargo-nd-2027-05-16",
+   "sample-fargo-card-and-collectibles-show-fargo-nd-2027-06-20",
+   "sample-fargo-card-and-collectibles-show-fargo-nd-2027-07-18",
+   "sample-fargo-card-and-collectibles-show-fargo-nd-2027-08-15",
+   "sample-fargo-card-and-collectibles-show-fargo-nd-2027-09-19",
+   "sample-fargo-card-and-collectibles-show-fargo-nd-2027-10-17",
+   "sample-fargo-card-and-collectibles-show-fargo-nd-2027-11-21"
+  ],
+  "links": {
+   "official": "https://example.com/sample/sample-fargo-card-and-collectibles-show-fargo-nd"
+  },
+  "history": []
+ },
+ {
+  "id": "sample-fargo-open-tournament-weekend-fargo-nd",
+  "name": "Sample Fargo Open Tournament Weekend",
+  "promoter_id": "sample-great-lakes-promotions",
+  "venue": {
+   "name": "Sample Fargo VFW Hall",
+   "city": "Fargo",
+   "region": "ND"
+  },
+  "cadence": null,
+  "editions": [
+   "sample-fargo-open-tournament-weekend-fargo-nd-2027-04-07"
+  ],
+  "links": {
+   "official": "https://example.com/sample/sample-fargo-open-tournament-weekend-fargo-nd"
+  },
+  "history": []
+ },
+ {
+  "id": "sample-fredericton-national-card-expo-fredericton-nb",
+  "name": "Sample Fredericton National Card Expo",
+  "promoter_id": "sample-keystone-promotions",
+  "venue": {
+   "name": "Sample Fredericton Expo Hall",
+   "city": "Fredericton",
+   "region": "NB"
+  },
+  "cadence": null,
+  "editions": [
+   "sample-fredericton-national-card-expo-fredericton-nb-2027-03-01"
+  ],
+  "links": {
+   "official": "https://example.com/sample/sample-fredericton-national-card-expo-fredericton-nb"
+  },
+  "history": [
+   {
+    "year": 2025,
+    "attendance": 3024
+   },
+   {
+    "year": 2024,
+    "attendance": 2621
+   }
+  ]
+ },
+ {
+  "id": "sample-grand-rapids-trading-card-expo-grand-rapids-mi",
+  "name": "Sample Grand Rapids Trading Card Expo",
+  "promoter_id": "sample-harbor-promotions",
+  "venue": {
+   "name": "Sample Grand Rapids Expo Hall",
+   "city": "Grand Rapids",
+   "region": "MI"
+  },
+  "cadence": "once a year",
+  "editions": [
+   "sample-grand-rapids-trading-card-expo-grand-rapids-mi-2027-09-02"
+  ],
+  "links": {
+   "official": "https://example.com/sample/sample-grand-rapids-trading-card-expo-grand-rapids-mi"
+  },
+  "history": []
+ },
+ {
+  "id": "sample-halifax-card-show-halifax-ns",
+  "name": "Sample Halifax Card Show",
+  "promoter_id": "sample-cedar-promotions",
+  "venue": {
+   "name": "Sample Halifax Hotel Ballroom",
+   "city": "Halifax",
+   "region": "NS"
+  },
+  "cadence": "once a year",
+  "editions": [
+   "sample-halifax-card-show-halifax-ns-2027-07-25"
+  ],
+  "links": {
+   "official": "https://example.com/sample/sample-halifax-card-show-halifax-ns"
+  },
+  "history": []
+ },
+ {
+  "id": "sample-hamilton-card-and-collectibles-show-hamilton-on",
+  "name": "Sample Hamilton Card and Collectibles Show",
+  "promoter_id": "sample-maple-promotions",
+  "venue": {
+   "name": "Sample Hamilton Community Center",
+   "city": "Hamilton",
+   "region": "ON"
+  },
+  "cadence": "second Saturday of most months",
+  "editions": [
+   "sample-hamilton-card-and-collectibles-show-hamilton-on-2026-10-10",
+   "sample-hamilton-card-and-collectibles-show-hamilton-on-2026-11-14",
+   "sample-hamilton-card-and-collectibles-show-hamilton-on-2026-12-12",
+   "sample-hamilton-card-and-collectibles-show-hamilton-on-2027-01-09",
+   "sample-hamilton-card-and-collectibles-show-hamilton-on-2027-02-13",
+   "sample-hamilton-card-and-collectibles-show-hamilton-on-2027-03-13",
+   "sample-hamilton-card-and-collectibles-show-hamilton-on-2027-04-10",
+   "sample-hamilton-card-and-collectibles-show-hamilton-on-2027-05-08",
+   "sample-hamilton-card-and-collectibles-show-hamilton-on-2027-06-12",
+   "sample-hamilton-card-and-collectibles-show-hamilton-on-2027-07-10",
+   "sample-hamilton-card-and-collectibles-show-hamilton-on-2027-08-14",
+   "sample-hamilton-card-and-collectibles-show-hamilton-on-2027-09-11",
+   "sample-hamilton-card-and-collectibles-show-hamilton-on-2027-10-09",
+   "sample-hamilton-card-and-collectibles-show-hamilton-on-2027-11-13"
+  ],
+  "links": {
+   "official": "https://example.com/sample/sample-hamilton-card-and-collectibles-show-hamilton-on"
+  },
+  "history": []
+ },
+ {
+  "id": "sample-hamilton-card-show-2-hamilton-on",
+  "name": "Sample Hamilton Card Show 2",
+  "promoter_id": "sample-sunrise-promotions",
+  "venue": {
+   "name": "Sample Hamilton Armory",
+   "city": "Hamilton",
+   "region": "ON"
+  },
+  "cadence": null,
+  "editions": [
+   "sample-hamilton-card-show-2-hamilton-on-2027-06-07"
+  ],
+  "links": {
+   "official": "https://example.com/sample/sample-hamilton-card-show-2-hamilton-on"
+  },
+  "history": []
+ },
+ {
+  "id": "sample-harrisburg-open-tournament-weekend-harrisburg-pa",
+  "name": "Sample Harrisburg Open Tournament Weekend",
+  "promoter_id": "sample-atlantic-promotions",
+  "venue": {
+   "name": "Sample Harrisburg Community Center",
+   "city": "Harrisburg",
+   "region": "PA"
+  },
+  "cadence": null,
+  "editions": [
+   "sample-harrisburg-open-tournament-weekend-harrisburg-pa-2027-08-30"
+  ],
+  "links": {
+   "official": "https://example.com/sample/sample-harrisburg-open-tournament-weekend-harrisburg-pa"
+  },
+  "history": []
+ },
+ {
+  "id": "sample-harrisburg-trading-card-expo-harrisburg-pa",
+  "name": "Sample Harrisburg Trading Card Expo",
+  "promoter_id": "sample-silver-promotions",
+  "venue": {
+   "name": "Sample Harrisburg Event Center",
+   "city": "Harrisburg",
+   "region": "PA"
+  },
+  "cadence": "last Sunday each quarter",
+  "editions": [
+   "sample-harrisburg-trading-card-expo-harrisburg-pa-2026-11-29",
+   "sample-harrisburg-trading-card-expo-harrisburg-pa-2027-02-28",
+   "sample-harrisburg-trading-card-expo-harrisburg-pa-2027-05-30",
+   "sample-harrisburg-trading-card-expo-harrisburg-pa-2027-08-29"
+  ],
+  "links": {
+   "official": "https://example.com/sample/sample-harrisburg-trading-card-expo-harrisburg-pa"
+  },
+  "history": []
+ },
+ {
+  "id": "sample-hartford-card-and-collectibles-show-hartford-ct",
+  "name": "Sample Hartford Card and Collectibles Show",
+  "promoter_id": "sample-silver-promotions",
+  "venue": {
+   "name": "Sample Hartford Hotel Ballroom",
+   "city": "Hartford",
+   "region": "CT"
+  },
+  "cadence": "once a year",
+  "editions": [
+   "sample-hartford-card-and-collectibles-show-hartford-ct-2027-09-26"
+  ],
+  "links": {
+   "official": "https://example.com/sample/sample-hartford-card-and-collectibles-show-hartford-ct"
+  },
+  "history": []
+ },
+ {
+  "id": "sample-honolulu-card-bash-honolulu-hi",
+  "name": "Sample Honolulu Card Bash",
+  "promoter_id": "sample-tidewater-promotions",
+  "venue": {
+   "name": "Sample Honolulu Fairgrounds",
+   "city": "Honolulu",
+   "region": "HI"
+  },
+  "cadence": "once a year",
+  "editions": [
+   "sample-honolulu-card-bash-honolulu-hi-2027-08-12"
+  ],
+  "links": {
+   "official": "https://example.com/sample/sample-honolulu-card-bash-honolulu-hi"
+  },
+  "history": []
+ },
+ {
+  "id": "sample-houston-comic-and-anime-con-houston-tx",
+  "name": "Sample Houston Comic and Anime Con",
+  "promoter_id": "sample-pacific-promotions",
+  "venue": {
+   "name": "Sample Houston Banquet Hall",
+   "city": "Houston",
+   "region": "TX"
+  },
+  "cadence": null,
+  "editions": [
+   "sample-houston-comic-and-anime-con-houston-tx-2027-02-01"
+  ],
+  "links": {
+   "official": "https://example.com/sample/sample-houston-comic-and-anime-con-houston-tx"
+  },
+  "history": [
+   {
+    "year": 2025,
+    "attendance": 4212
+   },
+   {
+    "year": 2024,
+    "attendance": 3650
+   }
+  ]
+ },
+ {
+  "id": "sample-indianapolis-gaming-and-collectibles-con-indianapolis-in",
+  "name": "Sample Indianapolis Gaming and Collectibles Con",
+  "promoter_id": "sample-copper-promotions",
+  "venue": {
+   "name": "Sample Indianapolis Hotel Ballroom",
+   "city": "Indianapolis",
+   "region": "IN"
+  },
+  "cadence": "once a year",
+  "editions": [
+   "sample-indianapolis-gaming-and-collectibles-con-indianapolis-in-2027-04-18"
+  ],
+  "links": {
+   "official": "https://example.com/sample/sample-indianapolis-gaming-and-collectibles-con-indianapolis-in"
+  },
+  "history": []
+ },
+ {
+  "id": "sample-jackson-card-bash-jackson-ms",
+  "name": "Sample Jackson Card Bash",
+  "promoter_id": "sample-copper-promotions",
+  "venue": {
+   "name": "Sample Jackson VFW Hall",
+   "city": "Jackson",
+   "region": "MS"
+  },
+  "cadence": "first Saturday every other month",
+  "editions": [
+   "sample-jackson-card-bash-jackson-ms-2026-11-07",
+   "sample-jackson-card-bash-jackson-ms-2027-01-02",
+   "sample-jackson-card-bash-jackson-ms-2027-03-06",
+   "sample-jackson-card-bash-jackson-ms-2027-05-01",
+   "sample-jackson-card-bash-jackson-ms-2027-07-03",
+   "sample-jackson-card-bash-jackson-ms-2027-09-04",
+   "sample-jackson-card-bash-jackson-ms-2027-11-06"
+  ],
+  "links": {
+   "official": "https://example.com/sample/sample-jackson-card-bash-jackson-ms"
+  },
+  "history": [
+   {
+    "year": 2025,
+    "attendance": 1572
+   },
+   {
+    "year": 2024,
+    "attendance": 1362
+   }
+  ]
+ },
+ {
+  "id": "sample-jackson-sports-card-show-jackson-ms",
+  "name": "Sample Jackson Sports Card Show",
+  "promoter_id": "sample-keystone-promotions",
+  "venue": {
+   "name": "Sample Jackson VFW Hall",
+   "city": "Jackson",
+   "region": "MS"
+  },
+  "cadence": null,
+  "editions": [
+   "sample-jackson-sports-card-show-jackson-ms-2027-04-07"
+  ],
+  "links": {
+   "official": "https://example.com/sample/sample-jackson-sports-card-show-jackson-ms"
+  },
+  "history": [
+   {
+    "year": 2025,
+    "attendance": 204
+   },
+   {
+    "year": 2024,
+    "attendance": 177
+   }
+  ]
+ },
+ {
+  "id": "sample-jacksonville-card-bash-jacksonville-fl",
+  "name": "Sample Jacksonville Card Bash",
+  "promoter_id": "sample-capital-promotions",
+  "venue": {
+   "name": "Sample Jacksonville Event Center",
+   "city": "Jacksonville",
+   "region": "FL"
+  },
+  "cadence": "once a year",
+  "editions": [
+   "sample-jacksonville-card-bash-jacksonville-fl-2027-08-27"
+  ],
+  "links": {
+   "official": "https://example.com/sample/sample-jacksonville-card-bash-jacksonville-fl"
+  },
+  "history": []
+ },
+ {
+  "id": "sample-kansas-city-card-collectors-expo-kansas-city-mo",
+  "name": "Sample Kansas City Card Collectors Expo",
+  "promoter_id": "sample-bluegrass-promotions",
+  "venue": {
+   "name": "Sample Kansas City Rec Center",
+   "city": "Kansas City",
+   "region": "MO"
+  },
+  "cadence": "once a year",
+  "editions": [
+   "sample-kansas-city-card-collectors-expo-kansas-city-mo-2026-11-15"
+  ],
+  "links": {
+   "official": "https://example.com/sample/sample-kansas-city-card-collectors-expo-kansas-city-mo"
+  },
+  "history": [
+   {
+    "year": 2025,
+    "attendance": 8496
+   },
+   {
+    "year": 2024,
+    "attendance": 7363
+   }
+  ]
+ },
+ {
+  "id": "sample-las-vegas-card-and-collectibles-show-las-vegas-nv",
+  "name": "Sample Las Vegas Card and Collectibles Show",
+  "promoter_id": "sample-maple-promotions",
+  "venue": {
+   "name": "Sample Las Vegas Banquet Hall",
+   "city": "Las Vegas",
+   "region": "NV"
+  },
+  "cadence": "first Saturday of most months",
+  "editions": [
+   "sample-las-vegas-card-and-collectibles-show-las-vegas-nv-2026-10-03",
+   "sample-las-vegas-card-and-collectibles-show-las-vegas-nv-2026-11-07",
+   "sample-las-vegas-card-and-collectibles-show-las-vegas-nv-2026-12-05",
+   "sample-las-vegas-card-and-collectibles-show-las-vegas-nv-2027-01-02",
+   "sample-las-vegas-card-and-collectibles-show-las-vegas-nv-2027-02-06",
+   "sample-las-vegas-card-and-collectibles-show-las-vegas-nv-2027-03-06",
+   "sample-las-vegas-card-and-collectibles-show-las-vegas-nv-2027-04-03",
+   "sample-las-vegas-card-and-collectibles-show-las-vegas-nv-2027-05-01",
+   "sample-las-vegas-card-and-collectibles-show-las-vegas-nv-2027-06-05",
+   "sample-las-vegas-card-and-collectibles-show-las-vegas-nv-2027-07-03",
+   "sample-las-vegas-card-and-collectibles-show-las-vegas-nv-2027-08-07",
+   "sample-las-vegas-card-and-collectibles-show-las-vegas-nv-2027-09-04",
+   "sample-las-vegas-card-and-collectibles-show-las-vegas-nv-2027-10-02",
+   "sample-las-vegas-card-and-collectibles-show-las-vegas-nv-2027-11-06"
+  ],
+  "links": {
+   "official": "https://example.com/sample/sample-las-vegas-card-and-collectibles-show-las-vegas-nv"
+  },
+  "history": []
+ },
+ {
+  "id": "sample-las-vegas-national-card-expo-las-vegas-nv",
+  "name": "Sample Las Vegas National Card Expo",
+  "promoter_id": "sample-sunrise-promotions",
+  "venue": {
+   "name": "Sample Las Vegas Event Center",
+   "city": "Las Vegas",
+   "region": "NV"
+  },
+  "cadence": null,
+  "editions": [
+   "sample-las-vegas-national-card-expo-las-vegas-nv-2027-06-18"
+  ],
+  "links": {
+   "official": "https://example.com/sample/sample-las-vegas-national-card-expo-las-vegas-nv"
+  },
+  "history": [
+   {
+    "year": 2025,
+    "attendance": 7236
+   },
+   {
+    "year": 2024,
+    "attendance": 6271
+   }
+  ]
+ },
+ {
+  "id": "sample-little-rock-card-and-collectibles-show-little-rock-ar",
+  "name": "Sample Little Rock Card and Collectibles Show",
+  "promoter_id": "sample-sunrise-promotions",
+  "venue": {
+   "name": "Sample Little Rock Convention Center",
+   "city": "Little Rock",
+   "region": "AR"
+  },
+  "cadence": "once a year",
+  "editions": [
+   "sample-little-rock-card-and-collectibles-show-little-rock-ar-2026-12-27"
+  ],
+  "links": {
+   "official": "https://example.com/sample/sample-little-rock-card-and-collectibles-show-little-rock-ar"
+  },
+  "history": []
+ },
+ {
+  "id": "sample-london-trading-card-expo-london-on",
+  "name": "Sample London Trading Card Expo",
+  "promoter_id": "sample-tidewater-promotions",
+  "venue": {
+   "name": "Sample London Expo Hall",
+   "city": "London",
+   "region": "ON"
+  },
+  "cadence": null,
+  "editions": [
+   "sample-london-trading-card-expo-london-on-2027-08-23"
+  ],
+  "links": {
+   "official": "https://example.com/sample/sample-london-trading-card-expo-london-on"
+  },
+  "history": []
+ },
+ {
+  "id": "sample-los-angeles-card-and-collectibles-show-los-angeles-ca",
+  "name": "Sample Los Angeles Card and Collectibles Show",
+  "promoter_id": "sample-bayou-promotions",
+  "venue": {
+   "name": "Sample Los Angeles Fairgrounds",
+   "city": "Los Angeles",
+   "region": "CA"
+  },
+  "cadence": "second Saturday each quarter",
+  "editions": [
+   "sample-los-angeles-card-and-collectibles-show-los-angeles-ca-2026-11-14",
+   "sample-los-angeles-card-and-collectibles-show-los-angeles-ca-2027-02-13",
+   "sample-los-angeles-card-and-collectibles-show-los-angeles-ca-2027-05-08",
+   "sample-los-angeles-card-and-collectibles-show-los-angeles-ca-2027-08-14",
+   "sample-los-angeles-card-and-collectibles-show-los-angeles-ca-2027-11-13"
+  ],
+  "links": {
+   "official": "https://example.com/sample/sample-los-angeles-card-and-collectibles-show-los-angeles-ca"
+  },
+  "history": [
+   {
+    "year": 2025,
+    "attendance": 252
+   },
+   {
+    "year": 2024,
+    "attendance": 218
+   }
+  ]
+ },
+ {
+  "id": "sample-los-angeles-card-bash-los-angeles-ca",
+  "name": "Sample Los Angeles Card Bash",
+  "promoter_id": "sample-maple-promotions",
+  "venue": {
+   "name": "Sample Los Angeles VFW Hall",
+   "city": "Los Angeles",
+   "region": "CA"
+  },
+  "cadence": null,
+  "editions": [
+   "sample-los-angeles-card-bash-los-angeles-ca-2026-09-25"
+  ],
+  "links": {
+   "official": "https://example.com/sample/sample-los-angeles-card-bash-los-angeles-ca"
+  },
+  "history": [
+   {
+    "year": 2025,
+    "attendance": 972
+   },
+   {
+    "year": 2024,
+    "attendance": 842
+   }
+  ]
+ },
+ {
+  "id": "sample-louisville-comic-and-anime-con-louisville-ky",
+  "name": "Sample Louisville Comic and Anime Con",
+  "promoter_id": "sample-foothills-promotions",
+  "venue": {
+   "name": "Sample Louisville Armory",
+   "city": "Louisville",
+   "region": "KY"
+  },
+  "cadence": null,
+  "editions": [
+   "sample-louisville-comic-and-anime-con-louisville-ky-2027-02-14"
+  ],
+  "links": {
+   "official": "https://example.com/sample/sample-louisville-comic-and-anime-con-louisville-ky"
+  },
+  "history": []
+ },
+ {
+  "id": "sample-manchester-card-game-challenge-manchester-nh",
+  "name": "Sample Manchester Card Game Challenge",
+  "promoter_id": "sample-great-lakes-promotions",
+  "venue": {
+   "name": "Sample Manchester Convention Center",
+   "city": "Manchester",
+   "region": "NH"
+  },
+  "cadence": "once a year",
+  "editions": [
+   "sample-manchester-card-game-challenge-manchester-nh-2027-03-13"
+  ],
+  "links": {
+   "official": "https://example.com/sample/sample-manchester-card-game-challenge-manchester-nh"
+  },
+  "history": []
+ },
+ {
+  "id": "sample-memphis-card-and-collectibles-show-memphis-tn",
+  "name": "Sample Memphis Card and Collectibles Show",
+  "promoter_id": "sample-tidewater-promotions",
+  "venue": {
+   "name": "Sample Memphis Fairgrounds",
+   "city": "Memphis",
+   "region": "TN"
+  },
+  "cadence": null,
+  "editions": [
+   "sample-memphis-card-and-collectibles-show-memphis-tn-2027-02-01"
+  ],
+  "links": {
+   "official": "https://example.com/sample/sample-memphis-card-and-collectibles-show-memphis-tn"
+  },
+  "history": []
+ },
+ {
+  "id": "sample-miami-comic-and-anime-con-miami-fl",
+  "name": "Sample Miami Comic and Anime Con",
+  "promoter_id": "sample-maple-promotions",
+  "venue": {
+   "name": "Sample Miami Banquet Hall",
+   "city": "Miami",
+   "region": "FL"
+  },
+  "cadence": "once a year",
+  "editions": [
+   "sample-miami-comic-and-anime-con-miami-fl-2026-12-22"
+  ],
+  "links": {
+   "official": "https://example.com/sample/sample-miami-comic-and-anime-con-miami-fl"
+  },
+  "history": []
+ },
+ {
+  "id": "sample-milwaukee-card-bash-milwaukee-wi",
+  "name": "Sample Milwaukee Card Bash",
+  "promoter_id": "sample-sunrise-promotions",
+  "venue": {
+   "name": "Sample Milwaukee Community Center",
+   "city": "Milwaukee",
+   "region": "WI"
+  },
+  "cadence": "fourth Saturday of most months",
+  "editions": [
+   "sample-milwaukee-card-bash-milwaukee-wi-2026-09-26",
+   "sample-milwaukee-card-bash-milwaukee-wi-2026-10-24",
+   "sample-milwaukee-card-bash-milwaukee-wi-2026-11-28",
+   "sample-milwaukee-card-bash-milwaukee-wi-2026-12-26",
+   "sample-milwaukee-card-bash-milwaukee-wi-2027-01-23",
+   "sample-milwaukee-card-bash-milwaukee-wi-2027-02-27",
+   "sample-milwaukee-card-bash-milwaukee-wi-2027-03-27",
+   "sample-milwaukee-card-bash-milwaukee-wi-2027-04-24",
+   "sample-milwaukee-card-bash-milwaukee-wi-2027-05-22",
+   "sample-milwaukee-card-bash-milwaukee-wi-2027-06-26",
+   "sample-milwaukee-card-bash-milwaukee-wi-2027-07-24",
+   "sample-milwaukee-card-bash-milwaukee-wi-2027-08-28",
+   "sample-milwaukee-card-bash-milwaukee-wi-2027-09-25",
+   "sample-milwaukee-card-bash-milwaukee-wi-2027-10-23"
+  ],
+  "links": {
+   "official": "https://example.com/sample/sample-milwaukee-card-bash-milwaukee-wi"
+  },
+  "history": []
+ },
+ {
+  "id": "sample-milwaukee-collectors-convention-milwaukee-wi",
+  "name": "Sample Milwaukee Collectors Convention",
+  "promoter_id": "sample-bayou-promotions",
+  "venue": {
+   "name": "Sample Milwaukee Expo Hall",
+   "city": "Milwaukee",
+   "region": "WI"
+  },
+  "cadence": null,
+  "editions": [
+   "sample-milwaukee-collectors-convention-milwaukee-wi-2027-05-04"
+  ],
+  "links": {
+   "official": "https://example.com/sample/sample-milwaukee-collectors-convention-milwaukee-wi"
+  },
+  "history": [
+   {
+    "year": 2025,
+    "attendance": 6084
+   },
+   {
+    "year": 2024,
+    "attendance": 5273
+   }
+  ]
+ },
+ {
+  "id": "sample-minneapolis-open-tournament-weekend-minneapolis-mn",
+  "name": "Sample Minneapolis Open Tournament Weekend",
+  "promoter_id": "sample-silver-promotions",
+  "venue": {
+   "name": "Sample Minneapolis Community Center",
+   "city": "Minneapolis",
+   "region": "MN"
+  },
+  "cadence": null,
+  "editions": [
+   "sample-minneapolis-open-tournament-weekend-minneapolis-mn-2027-08-27"
+  ],
+  "links": {
+   "official": "https://example.com/sample/sample-minneapolis-open-tournament-weekend-minneapolis-mn"
+  },
+  "history": []
+ },
+ {
+  "id": "sample-mississauga-comic-and-anime-con-mississauga-on",
+  "name": "Sample Mississauga Comic and Anime Con",
+  "promoter_id": "sample-capital-promotions",
+  "venue": {
+   "name": "Sample Mississauga Hotel Ballroom",
+   "city": "Mississauga",
+   "region": "ON"
+  },
+  "cadence": "once a year",
+  "editions": [
+   "sample-mississauga-comic-and-anime-con-mississauga-on-2026-11-23"
+  ],
+  "links": {
+   "official": "https://example.com/sample/sample-mississauga-comic-and-anime-con-mississauga-on"
+  },
+  "history": [
+   {
+    "year": 2025,
+    "attendance": 2448
+   },
+   {
+    "year": 2024,
+    "attendance": 2122
+   }
+  ]
+ },
+ {
+  "id": "sample-montreal-card-game-challenge-montreal-qc",
+  "name": "Sample Montreal Card Game Challenge",
+  "promoter_id": "sample-cedar-promotions",
+  "venue": {
+   "name": "Sample Montreal Community Center",
+   "city": "Montreal",
+   "region": "QC"
+  },
+  "cadence": null,
+  "editions": [
+   "sample-montreal-card-game-challenge-montreal-qc-2026-10-10"
+  ],
+  "links": {
+   "official": "https://example.com/sample/sample-montreal-card-game-challenge-montreal-qc"
+  },
+  "history": [
+   {
+    "year": 2025,
+    "attendance": 1392
+   },
+   {
+    "year": 2024,
+    "attendance": 1206
+   }
+  ]
+ },
+ {
+  "id": "sample-montreal-trading-card-expo-montreal-qc",
+  "name": "Sample Montreal Trading Card Expo",
+  "promoter_id": "sample-bayou-promotions",
+  "venue": {
+   "name": "Sample Montreal Expo Hall",
+   "city": "Montreal",
+   "region": "QC"
+  },
+  "cadence": "last Sunday each quarter",
+  "editions": [
+   "sample-montreal-trading-card-expo-montreal-qc-2026-09-27",
+   "sample-montreal-trading-card-expo-montreal-qc-2026-12-27",
+   "sample-montreal-trading-card-expo-montreal-qc-2027-03-28",
+   "sample-montreal-trading-card-expo-montreal-qc-2027-06-27",
+   "sample-montreal-trading-card-expo-montreal-qc-2027-09-26"
+  ],
+  "links": {
+   "official": "https://example.com/sample/sample-montreal-trading-card-expo-montreal-qc"
+  },
+  "history": [
+   {
+    "year": 2025,
+    "attendance": 516
+   },
+   {
+    "year": 2024,
+    "attendance": 447
+   }
+  ]
+ },
+ {
+  "id": "sample-nashville-trading-card-expo-nashville-tn",
+  "name": "Sample Nashville Trading Card Expo",
+  "promoter_id": "sample-boardwalk-promotions",
+  "venue": {
+   "name": "Sample Nashville VFW Hall",
+   "city": "Nashville",
+   "region": "TN"
+  },
+  "cadence": "once a year",
+  "editions": [
+   "sample-nashville-trading-card-expo-nashville-tn-2027-04-20"
+  ],
+  "links": {
+   "official": "https://example.com/sample/sample-nashville-trading-card-expo-nashville-tn"
+  },
+  "history": []
+ },
+ {
+  "id": "sample-new-orleans-card-bash-new-orleans-la",
+  "name": "Sample New Orleans Card Bash",
+  "promoter_id": "sample-maple-promotions",
+  "venue": {
+   "name": "Sample New Orleans Armory",
+   "city": "New Orleans",
+   "region": "LA"
+  },
+  "cadence": null,
+  "editions": [
+   "sample-new-orleans-card-bash-new-orleans-la-2027-01-08"
+  ],
+  "links": {
+   "official": "https://example.com/sample/sample-new-orleans-card-bash-new-orleans-la"
+  },
+  "history": [
+   {
+    "year": 2025,
+    "attendance": 324
+   },
+   {
+    "year": 2024,
+    "attendance": 281
+   }
+  ]
+ },
+ {
+  "id": "sample-new-orleans-trading-card-expo-new-orleans-la",
+  "name": "Sample New Orleans Trading Card Expo",
+  "promoter_id": "sample-maple-promotions",
+  "venue": {
+   "name": "Sample New Orleans Rec Center",
+   "city": "New Orleans",
+   "region": "LA"
+  },
+  "cadence": "last Sunday of most months",
+  "editions": [
+   "sample-new-orleans-trading-card-expo-new-orleans-la-2026-09-27",
+   "sample-new-orleans-trading-card-expo-new-orleans-la-2026-10-25",
+   "sample-new-orleans-trading-card-expo-new-orleans-la-2026-11-29",
+   "sample-new-orleans-trading-card-expo-new-orleans-la-2026-12-27",
+   "sample-new-orleans-trading-card-expo-new-orleans-la-2027-01-31",
+   "sample-new-orleans-trading-card-expo-new-orleans-la-2027-02-28",
+   "sample-new-orleans-trading-card-expo-new-orleans-la-2027-03-28",
+   "sample-new-orleans-trading-card-expo-new-orleans-la-2027-04-25",
+   "sample-new-orleans-trading-card-expo-new-orleans-la-2027-05-30",
+   "sample-new-orleans-trading-card-expo-new-orleans-la-2027-06-27",
+   "sample-new-orleans-trading-card-expo-new-orleans-la-2027-07-25",
+   "sample-new-orleans-trading-card-expo-new-orleans-la-2027-08-29",
+   "sample-new-orleans-trading-card-expo-new-orleans-la-2027-09-26",
+   "sample-new-orleans-trading-card-expo-new-orleans-la-2027-10-31"
+  ],
+  "links": {
+   "official": "https://example.com/sample/sample-new-orleans-trading-card-expo-new-orleans-la"
+  },
+  "history": [
+   {
+    "year": 2025,
+    "attendance": 1494
+   },
+   {
+    "year": 2024,
+    "attendance": 1295
+   }
+  ]
+ },
+ {
+  "id": "sample-new-york-gaming-and-collectibles-con-new-york-ny",
+  "name": "Sample New York Gaming and Collectibles Con",
+  "promoter_id": "sample-bayou-promotions",
+  "venue": {
+   "name": "Sample New York Hotel Ballroom",
+   "city": "New York",
+   "region": "NY"
+  },
+  "cadence": null,
+  "editions": [
+   "sample-new-york-gaming-and-collectibles-con-new-york-ny-2027-05-23"
+  ],
+  "links": {
+   "official": "https://example.com/sample/sample-new-york-gaming-and-collectibles-con-new-york-ny"
+  },
+  "history": [
+   {
+    "year": 2025,
+    "attendance": 5220
+   },
+   {
+    "year": 2024,
+    "attendance": 4524
+   }
+  ]
+ },
+ {
+  "id": "sample-newark-card-and-collectibles-show-newark-nj",
+  "name": "Sample Newark Card and Collectibles Show",
+  "promoter_id": "sample-harbor-promotions",
+  "venue": {
+   "name": "Sample Newark Hotel Ballroom",
+   "city": "Newark",
+   "region": "NJ"
+  },
+  "cadence": "once a year",
+  "editions": [
+   "sample-newark-card-and-collectibles-show-newark-nj-2027-02-18"
+  ],
+  "links": {
+   "official": "https://example.com/sample/sample-newark-card-and-collectibles-show-newark-nj"
+  },
+  "history": []
+ },
+ {
+  "id": "sample-oklahoma-city-sports-card-show-oklahoma-city-ok",
+  "name": "Sample Oklahoma City Sports Card Show",
+  "promoter_id": "sample-garden-promotions",
+  "venue": {
+   "name": "Sample Oklahoma City Expo Hall",
+   "city": "Oklahoma City",
+   "region": "OK"
+  },
+  "cadence": "first Saturday every other month",
+  "editions": [
+   "sample-oklahoma-city-sports-card-show-oklahoma-city-ok-2026-10-03",
+   "sample-oklahoma-city-sports-card-show-oklahoma-city-ok-2026-12-05",
+   "sample-oklahoma-city-sports-card-show-oklahoma-city-ok-2027-02-06",
+   "sample-oklahoma-city-sports-card-show-oklahoma-city-ok-2027-04-03",
+   "sample-oklahoma-city-sports-card-show-oklahoma-city-ok-2027-06-05",
+   "sample-oklahoma-city-sports-card-show-oklahoma-city-ok-2027-08-07",
+   "sample-oklahoma-city-sports-card-show-oklahoma-city-ok-2027-10-02"
+  ],
+  "links": {
+   "official": "https://example.com/sample/sample-oklahoma-city-sports-card-show-oklahoma-city-ok"
+  },
+  "history": []
+ },
+ {
+  "id": "sample-oklahoma-city-trading-card-expo-oklahoma-city-ok",
+  "name": "Sample Oklahoma City Trading Card Expo",
+  "promoter_id": "sample-great-lakes-promotions",
+  "venue": {
+   "name": "Sample Oklahoma City Armory",
+   "city": "Oklahoma City",
+   "region": "OK"
+  },
+  "cadence": null,
+  "editions": [
+   "sample-oklahoma-city-trading-card-expo-oklahoma-city-ok-2027-01-12"
+  ],
+  "links": {
+   "official": "https://example.com/sample/sample-oklahoma-city-trading-card-expo-oklahoma-city-ok"
+  },
+  "history": [
+   {
+    "year": 2025,
+    "attendance": 1494
+   },
+   {
+    "year": 2024,
+    "attendance": 1295
+   }
+  ]
+ },
+ {
+  "id": "sample-omaha-card-show-omaha-ne",
+  "name": "Sample Omaha Card Show",
+  "promoter_id": "sample-silver-promotions",
+  "venue": {
+   "name": "Sample Omaha Armory",
+   "city": "Omaha",
+   "region": "NE"
+  },
+  "cadence": null,
+  "editions": [
+   "sample-omaha-card-show-omaha-ne-2027-09-01"
+  ],
+  "links": {
+   "official": "https://example.com/sample/sample-omaha-card-show-omaha-ne"
+  },
+  "history": []
+ },
+ {
+  "id": "sample-orlando-pop-culture-con-orlando-fl",
+  "name": "Sample Orlando Pop Culture Con",
+  "promoter_id": "sample-prairie-promotions",
+  "venue": {
+   "name": "Sample Orlando Fairgrounds",
+   "city": "Orlando",
+   "region": "FL"
+  },
+  "cadence": "once a year",
+  "editions": [
+   "sample-orlando-pop-culture-con-orlando-fl-2027-06-19"
+  ],
+  "links": {
+   "official": "https://example.com/sample/sample-orlando-pop-culture-con-orlando-fl"
+  },
+  "history": [
+   {
+    "year": 2025,
+    "attendance": 2826
+   },
+   {
+    "year": 2024,
+    "attendance": 2449
+   }
+  ]
+ },
+ {
+  "id": "sample-ottawa-card-collectors-expo-ottawa-on",
+  "name": "Sample Ottawa Card Collectors Expo",
+  "promoter_id": "sample-granite-promotions",
+  "venue": {
+   "name": "Sample Ottawa Fairgrounds",
+   "city": "Ottawa",
+   "region": "ON"
+  },
+  "cadence": "once a year",
+  "editions": [
+   "sample-ottawa-card-collectors-expo-ottawa-on-2027-01-09"
+  ],
+  "links": {
+   "official": "https://example.com/sample/sample-ottawa-card-collectors-expo-ottawa-on"
+  },
+  "history": []
+ },
+ {
+  "id": "sample-philadelphia-card-show-philadelphia-pa",
+  "name": "Sample Philadelphia Card Show",
+  "promoter_id": "sample-harbor-promotions",
+  "venue": {
+   "name": "Sample Philadelphia Event Center",
+   "city": "Philadelphia",
+   "region": "PA"
+  },
+  "cadence": "last Saturday each quarter",
+  "editions": [
+   "sample-philadelphia-card-show-philadelphia-pa-2026-10-31",
+   "sample-philadelphia-card-show-philadelphia-pa-2027-01-30",
+   "sample-philadelphia-card-show-philadelphia-pa-2027-04-24",
+   "sample-philadelphia-card-show-philadelphia-pa-2027-07-31",
+   "sample-philadelphia-card-show-philadelphia-pa-2027-10-30"
+  ],
+  "links": {
+   "official": "https://example.com/sample/sample-philadelphia-card-show-philadelphia-pa"
+  },
+  "history": []
+ },
+ {
+  "id": "sample-philadelphia-sports-card-show-philadelphia-pa",
+  "name": "Sample Philadelphia Sports Card Show",
+  "promoter_id": "sample-prairie-promotions",
+  "venue": {
+   "name": "Sample Philadelphia Fairgrounds",
+   "city": "Philadelphia",
+   "region": "PA"
+  },
+  "cadence": null,
+  "editions": [
+   "sample-philadelphia-sports-card-show-philadelphia-pa-2027-09-06"
+  ],
+  "links": {
+   "official": "https://example.com/sample/sample-philadelphia-sports-card-show-philadelphia-pa"
+  },
+  "history": [
+   {
+    "year": 2025,
+    "attendance": 618
+   },
+   {
+    "year": 2024,
+    "attendance": 536
+   }
+  ]
+ },
+ {
+  "id": "sample-phoenix-sports-card-show-phoenix-az",
+  "name": "Sample Phoenix Sports Card Show",
+  "promoter_id": "sample-prairie-promotions",
+  "venue": {
+   "name": "Sample Phoenix VFW Hall",
+   "city": "Phoenix",
+   "region": "AZ"
+  },
+  "cadence": null,
+  "editions": [
+   "sample-phoenix-sports-card-show-phoenix-az-2026-10-26"
+  ],
+  "links": {
+   "official": "https://example.com/sample/sample-phoenix-sports-card-show-phoenix-az"
+  },
+  "history": []
+ },
+ {
+  "id": "sample-pittsburgh-collectors-convention-pittsburgh-pa",
+  "name": "Sample Pittsburgh Collectors Convention",
+  "promoter_id": "sample-tidewater-promotions",
+  "venue": {
+   "name": "Sample Pittsburgh Armory",
+   "city": "Pittsburgh",
+   "region": "PA"
+  },
+  "cadence": "once a year",
+  "editions": [
+   "sample-pittsburgh-collectors-convention-pittsburgh-pa-2027-05-02"
+  ],
+  "links": {
+   "official": "https://example.com/sample/sample-pittsburgh-collectors-convention-pittsburgh-pa"
+  },
+  "history": []
+ },
+ {
+  "id": "sample-portland-pop-culture-con-portland-or",
+  "name": "Sample Portland Pop Culture Con",
+  "promoter_id": "sample-boardwalk-promotions",
+  "venue": {
+   "name": "Sample Portland Event Center",
+   "city": "Portland",
+   "region": "OR"
+  },
+  "cadence": null,
+  "editions": [
+   "sample-portland-pop-culture-con-portland-or-2027-03-24"
+  ],
+  "links": {
+   "official": "https://example.com/sample/sample-portland-pop-culture-con-portland-or"
+  },
+  "history": []
+ },
+ {
+  "id": "sample-portland-regional-championships-portland-me",
+  "name": "Sample Portland Regional Championships",
+  "promoter_id": "sample-cedar-promotions",
+  "venue": {
+   "name": "Sample Portland Community Center",
+   "city": "Portland",
+   "region": "ME"
+  },
+  "cadence": "once a year",
+  "editions": [
+   "sample-portland-regional-championships-portland-me-2027-04-04"
+  ],
+  "links": {
+   "official": "https://example.com/sample/sample-portland-regional-championships-portland-me"
+  },
+  "history": []
+ },
+ {
+  "id": "sample-portland-sports-card-show-portland-or",
+  "name": "Sample Portland Sports Card Show",
+  "promoter_id": "sample-summit-promotions",
+  "venue": {
+   "name": "Sample Portland Rec Center",
+   "city": "Portland",
+   "region": "OR"
+  },
+  "cadence": "second Saturday of most months",
+  "editions": [
+   "sample-portland-sports-card-show-portland-or-2026-10-10",
+   "sample-portland-sports-card-show-portland-or-2026-11-14",
+   "sample-portland-sports-card-show-portland-or-2026-12-12",
+   "sample-portland-sports-card-show-portland-or-2027-01-09",
+   "sample-portland-sports-card-show-portland-or-2027-02-13",
+   "sample-portland-sports-card-show-portland-or-2027-03-13",
+   "sample-portland-sports-card-show-portland-or-2027-04-10",
+   "sample-portland-sports-card-show-portland-or-2027-05-08",
+   "sample-portland-sports-card-show-portland-or-2027-06-12",
+   "sample-portland-sports-card-show-portland-or-2027-07-10",
+   "sample-portland-sports-card-show-portland-or-2027-08-14",
+   "sample-portland-sports-card-show-portland-or-2027-09-11",
+   "sample-portland-sports-card-show-portland-or-2027-10-09",
+   "sample-portland-sports-card-show-portland-or-2027-11-13"
+  ],
+  "links": {
+   "official": "https://example.com/sample/sample-portland-sports-card-show-portland-or"
+  },
+  "history": [
+   {
+    "year": 2025,
+    "attendance": 2592
+   },
+   {
+    "year": 2024,
+    "attendance": 2246
+   }
+  ]
+ },
+ {
+  "id": "sample-providence-card-and-collectibles-show-providence-ri",
+  "name": "Sample Providence Card and Collectibles Show",
+  "promoter_id": "sample-silver-promotions",
+  "venue": {
+   "name": "Sample Providence Hotel Ballroom",
+   "city": "Providence",
+   "region": "RI"
+  },
+  "cadence": "once a year",
+  "editions": [
+   "sample-providence-card-and-collectibles-show-providence-ri-2027-05-29"
+  ],
+  "links": {
+   "official": "https://example.com/sample/sample-providence-card-and-collectibles-show-providence-ri"
+  },
+  "history": []
+ },
+ {
+  "id": "sample-quebec-city-gaming-and-collectibles-con-quebec-city-qc",
+  "name": "Sample Quebec City Gaming and Collectibles Con",
+  "promoter_id": "sample-silver-promotions",
+  "venue": {
+   "name": "Sample Quebec City Armory",
+   "city": "Quebec City",
+   "region": "QC"
+  },
+  "cadence": "once a year",
+  "editions": [
+   "sample-quebec-city-gaming-and-collectibles-con-quebec-city-qc-2027-02-16"
+  ],
+  "links": {
+   "official": "https://example.com/sample/sample-quebec-city-gaming-and-collectibles-con-quebec-city-qc"
+  },
+  "history": [
+   {
+    "year": 2025,
+    "attendance": 3294
+   },
+   {
+    "year": 2024,
+    "attendance": 2855
+   }
+  ]
+ },
+ {
+  "id": "sample-raleigh-comic-and-anime-con-raleigh-nc",
+  "name": "Sample Raleigh Comic and Anime Con",
+  "promoter_id": "sample-keystone-promotions",
+  "venue": {
+   "name": "Sample Raleigh Armory",
+   "city": "Raleigh",
+   "region": "NC"
+  },
+  "cadence": null,
+  "editions": [
+   "sample-raleigh-comic-and-anime-con-raleigh-nc-2027-03-13"
+  ],
+  "links": {
+   "official": "https://example.com/sample/sample-raleigh-comic-and-anime-con-raleigh-nc"
+  },
+  "history": [
+   {
+    "year": 2025,
+    "attendance": 5382
+   },
+   {
+    "year": 2024,
+    "attendance": 4664
+   }
+  ]
+ },
+ {
+  "id": "sample-regina-card-show-regina-sk",
+  "name": "Sample Regina Card Show",
+  "promoter_id": "sample-tidewater-promotions",
+  "venue": {
+   "name": "Sample Regina Banquet Hall",
+   "city": "Regina",
+   "region": "SK"
+  },
+  "cadence": null,
+  "editions": [
+   "sample-regina-card-show-regina-sk-2027-06-05"
+  ],
+  "links": {
+   "official": "https://example.com/sample/sample-regina-card-show-regina-sk"
+  },
+  "history": []
+ },
+ {
+  "id": "sample-regina-pop-culture-con-regina-sk",
+  "name": "Sample Regina Pop Culture Con",
+  "promoter_id": "sample-summit-promotions",
+  "venue": {
+   "name": "Sample Regina Armory",
+   "city": "Regina",
+   "region": "SK"
+  },
+  "cadence": "once a year",
+  "editions": [
+   "sample-regina-pop-culture-con-regina-sk-2026-12-04"
+  ],
+  "links": {
+   "official": "https://example.com/sample/sample-regina-pop-culture-con-regina-sk"
+  },
+  "history": []
+ },
+ {
+  "id": "sample-richmond-regional-championships-richmond-va",
+  "name": "Sample Richmond Regional Championships",
+  "promoter_id": "sample-pioneer-promotions",
+  "venue": {
+   "name": "Sample Richmond Event Center",
+   "city": "Richmond",
+   "region": "VA"
+  },
+  "cadence": "once a year",
+  "editions": [
+   "sample-richmond-regional-championships-richmond-va-2026-10-30"
+  ],
+  "links": {
+   "official": "https://example.com/sample/sample-richmond-regional-championships-richmond-va"
+  },
+  "history": []
+ },
+ {
+  "id": "sample-rochester-card-and-collectibles-show-rochester-ny",
+  "name": "Sample Rochester Card and Collectibles Show",
+  "promoter_id": "sample-pioneer-promotions",
+  "venue": {
+   "name": "Sample Rochester Hotel Ballroom",
+   "city": "Rochester",
+   "region": "NY"
+  },
+  "cadence": "once a year",
+  "editions": [
+   "sample-rochester-card-and-collectibles-show-rochester-ny-2027-01-26"
+  ],
+  "links": {
+   "official": "https://example.com/sample/sample-rochester-card-and-collectibles-show-rochester-ny"
+  },
+  "history": []
+ },
+ {
+  "id": "sample-sacramento-sports-card-show-sacramento-ca",
+  "name": "Sample Sacramento Sports Card Show",
+  "promoter_id": "sample-cascade-promotions",
+  "venue": {
+   "name": "Sample Sacramento VFW Hall",
+   "city": "Sacramento",
+   "region": "CA"
+  },
+  "cadence": "once a year",
+  "editions": [
+   "sample-sacramento-sports-card-show-sacramento-ca-2027-05-01"
+  ],
+  "links": {
+   "official": "https://example.com/sample/sample-sacramento-sports-card-show-sacramento-ca"
+  },
+  "history": [
+   {
+    "year": 2025,
+    "attendance": 2676
+   },
+   {
+    "year": 2024,
+    "attendance": 2319
+   }
+  ]
+ },
+ {
+  "id": "sample-salt-lake-city-card-bash-salt-lake-city-ut",
+  "name": "Sample Salt Lake City Card Bash",
+  "promoter_id": "sample-cedar-promotions",
+  "venue": {
+   "name": "Sample Salt Lake City Community Center",
+   "city": "Salt Lake City",
+   "region": "UT"
+  },
+  "cadence": "first Saturday every other month",
+  "editions": [
+   "sample-salt-lake-city-card-bash-salt-lake-city-ut-2026-10-03",
+   "sample-salt-lake-city-card-bash-salt-lake-city-ut-2026-12-05",
+   "sample-salt-lake-city-card-bash-salt-lake-city-ut-2027-02-06",
+   "sample-salt-lake-city-card-bash-salt-lake-city-ut-2027-04-03",
+   "sample-salt-lake-city-card-bash-salt-lake-city-ut-2027-06-05",
+   "sample-salt-lake-city-card-bash-salt-lake-city-ut-2027-08-07",
+   "sample-salt-lake-city-card-bash-salt-lake-city-ut-2027-10-02"
+  ],
+  "links": {
+   "official": "https://example.com/sample/sample-salt-lake-city-card-bash-salt-lake-city-ut"
+  },
+  "history": []
+ },
+ {
+  "id": "sample-salt-lake-city-trading-card-expo-salt-lake-city-ut",
+  "name": "Sample Salt Lake City Trading Card Expo",
+  "promoter_id": "sample-silver-promotions",
+  "venue": {
+   "name": "Sample Salt Lake City Convention Center",
+   "city": "Salt Lake City",
+   "region": "UT"
+  },
+  "cadence": null,
+  "editions": [
+   "sample-salt-lake-city-trading-card-expo-salt-lake-city-ut-2027-05-22"
+  ],
+  "links": {
+   "official": "https://example.com/sample/sample-salt-lake-city-trading-card-expo-salt-lake-city-ut"
+  },
+  "history": [
+   {
+    "year": 2025,
+    "attendance": 546
+   },
+   {
+    "year": 2024,
+    "attendance": 473
+   }
+  ]
+ },
+ {
+  "id": "sample-san-antonio-card-and-collectibles-show-san-antonio-tx",
+  "name": "Sample San Antonio Card and Collectibles Show",
+  "promoter_id": "sample-pioneer-promotions",
+  "venue": {
+   "name": "Sample San Antonio Community Center",
+   "city": "San Antonio",
+   "region": "TX"
+  },
+  "cadence": "last Sunday every other month",
+  "editions": [
+   "sample-san-antonio-card-and-collectibles-show-san-antonio-tx-2026-10-25",
+   "sample-san-antonio-card-and-collectibles-show-san-antonio-tx-2026-12-27",
+   "sample-san-antonio-card-and-collectibles-show-san-antonio-tx-2027-02-28",
+   "sample-san-antonio-card-and-collectibles-show-san-antonio-tx-2027-04-25",
+   "sample-san-antonio-card-and-collectibles-show-san-antonio-tx-2027-06-27",
+   "sample-san-antonio-card-and-collectibles-show-san-antonio-tx-2027-08-29",
+   "sample-san-antonio-card-and-collectibles-show-san-antonio-tx-2027-10-31"
+  ],
+  "links": {
+   "official": "https://example.com/sample/sample-san-antonio-card-and-collectibles-show-san-antonio-tx"
+  },
+  "history": []
+ },
+ {
+  "id": "sample-san-antonio-open-tournament-weekend-san-antonio-tx",
+  "name": "Sample San Antonio Open Tournament Weekend",
+  "promoter_id": "sample-pacific-promotions",
+  "venue": {
+   "name": "Sample San Antonio Community Center",
+   "city": "San Antonio",
+   "region": "TX"
+  },
+  "cadence": null,
+  "editions": [
+   "sample-san-antonio-open-tournament-weekend-san-antonio-tx-2027-08-17"
+  ],
+  "links": {
+   "official": "https://example.com/sample/sample-san-antonio-open-tournament-weekend-san-antonio-tx"
+  },
+  "history": [
+   {
+    "year": 2025,
+    "attendance": 1248
+   },
+   {
+    "year": 2024,
+    "attendance": 1082
+   }
+  ]
+ },
+ {
+  "id": "sample-san-diego-card-game-challenge-san-diego-ca",
+  "name": "Sample San Diego Card Game Challenge",
+  "promoter_id": "sample-keystone-promotions",
+  "venue": {
+   "name": "Sample San Diego Hotel Ballroom",
+   "city": "San Diego",
+   "region": "CA"
+  },
+  "cadence": null,
+  "editions": [
+   "sample-san-diego-card-game-challenge-san-diego-ca-2027-02-27"
+  ],
+  "links": {
+   "official": "https://example.com/sample/sample-san-diego-card-game-challenge-san-diego-ca"
+  },
+  "history": [
+   {
+    "year": 2025,
+    "attendance": 1464
+   },
+   {
+    "year": 2024,
+    "attendance": 1269
+   }
+  ]
+ },
+ {
+  "id": "sample-san-jose-card-show-san-jose-ca",
+  "name": "Sample San Jose Card Show",
+  "promoter_id": "sample-harbor-promotions",
+  "venue": {
+   "name": "Sample San Jose Banquet Hall",
+   "city": "San Jose",
+   "region": "CA"
+  },
+  "cadence": "first Saturday every other month",
+  "editions": [
+   "sample-san-jose-card-show-san-jose-ca-2026-10-03",
+   "sample-san-jose-card-show-san-jose-ca-2026-12-05",
+   "sample-san-jose-card-show-san-jose-ca-2027-02-06",
+   "sample-san-jose-card-show-san-jose-ca-2027-04-03",
+   "sample-san-jose-card-show-san-jose-ca-2027-06-05",
+   "sample-san-jose-card-show-san-jose-ca-2027-08-07",
+   "sample-san-jose-card-show-san-jose-ca-2027-10-02"
+  ],
+  "links": {
+   "official": "https://example.com/sample/sample-san-jose-card-show-san-jose-ca"
+  },
+  "history": []
+ },
+ {
+  "id": "sample-san-jose-open-tournament-weekend-san-jose-ca",
+  "name": "Sample San Jose Open Tournament Weekend",
+  "promoter_id": "sample-redwood-promotions",
+  "venue": {
+   "name": "Sample San Jose VFW Hall",
+   "city": "San Jose",
+   "region": "CA"
+  },
+  "cadence": null,
+  "editions": [
+   "sample-san-jose-open-tournament-weekend-san-jose-ca-2027-07-14"
+  ],
+  "links": {
+   "official": "https://example.com/sample/sample-san-jose-open-tournament-weekend-san-jose-ca"
+  },
+  "history": []
+ },
+ {
+  "id": "sample-saskatoon-open-tournament-weekend-saskatoon-sk",
+  "name": "Sample Saskatoon Open Tournament Weekend",
+  "promoter_id": "sample-granite-promotions",
+  "venue": {
+   "name": "Sample Saskatoon Community Center",
+   "city": "Saskatoon",
+   "region": "SK"
+  },
+  "cadence": "once a year",
+  "editions": [
+   "sample-saskatoon-open-tournament-weekend-saskatoon-sk-2026-12-03"
+  ],
+  "links": {
+   "official": "https://example.com/sample/sample-saskatoon-open-tournament-weekend-saskatoon-sk"
+  },
+  "history": [
+   {
+    "year": 2025,
+    "attendance": 1320
+   },
+   {
+    "year": 2024,
+    "attendance": 1144
+   }
+  ]
+ },
+ {
+  "id": "sample-seattle-card-and-collectibles-show-seattle-wa",
+  "name": "Sample Seattle Card and Collectibles Show",
+  "promoter_id": "sample-lone-star-promotions",
+  "venue": {
+   "name": "Sample Seattle Armory",
+   "city": "Seattle",
+   "region": "WA"
+  },
+  "cadence": "fourth Sunday every other month",
+  "editions": [
+   "sample-seattle-card-and-collectibles-show-seattle-wa-2026-10-25",
+   "sample-seattle-card-and-collectibles-show-seattle-wa-2026-12-27",
+   "sample-seattle-card-and-collectibles-show-seattle-wa-2027-02-28",
+   "sample-seattle-card-and-collectibles-show-seattle-wa-2027-04-25",
+   "sample-seattle-card-and-collectibles-show-seattle-wa-2027-06-27",
+   "sample-seattle-card-and-collectibles-show-seattle-wa-2027-08-22",
+   "sample-seattle-card-and-collectibles-show-seattle-wa-2027-10-24"
+  ],
+  "links": {
+   "official": "https://example.com/sample/sample-seattle-card-and-collectibles-show-seattle-wa"
+  },
+  "history": []
+ },
+ {
+  "id": "sample-seattle-trading-card-expo-2-seattle-wa",
+  "name": "Sample Seattle Trading Card Expo 2",
+  "promoter_id": "sample-mesa-promotions",
+  "venue": {
+   "name": "Sample Seattle Community Center",
+   "city": "Seattle",
+   "region": "WA"
+  },
+  "cadence": null,
+  "editions": [
+   "sample-seattle-trading-card-expo-2-seattle-wa-2027-03-06"
+  ],
+  "links": {
+   "official": "https://example.com/sample/sample-seattle-trading-card-expo-2-seattle-wa"
+  },
+  "history": [
+   {
+    "year": 2025,
+    "attendance": 168
+   },
+   {
+    "year": 2024,
+    "attendance": 146
+   }
+  ]
+ },
+ {
+  "id": "sample-sioux-falls-national-card-expo-sioux-falls-sd",
+  "name": "Sample Sioux Falls National Card Expo",
+  "promoter_id": "sample-evergreen-promotions",
+  "venue": {
+   "name": "Sample Sioux Falls Banquet Hall",
+   "city": "Sioux Falls",
+   "region": "SD"
+  },
+  "cadence": null,
+  "editions": [
+   "sample-sioux-falls-national-card-expo-sioux-falls-sd-2027-02-13"
+  ],
+  "links": {
+   "official": "https://example.com/sample/sample-sioux-falls-national-card-expo-sioux-falls-sd"
+  },
+  "history": [
+   {
+    "year": 2025,
+    "attendance": 2304
+   },
+   {
+    "year": 2024,
+    "attendance": 1997
+   }
+  ]
+ },
+ {
+  "id": "sample-sioux-falls-sports-card-show-sioux-falls-sd",
+  "name": "Sample Sioux Falls Sports Card Show",
+  "promoter_id": "sample-cascade-promotions",
+  "venue": {
+   "name": "Sample Sioux Falls Fairgrounds",
+   "city": "Sioux Falls",
+   "region": "SD"
+  },
+  "cadence": "second Sunday every other month",
+  "editions": [
+   "sample-sioux-falls-sports-card-show-sioux-falls-sd-2026-11-08",
+   "sample-sioux-falls-sports-card-show-sioux-falls-sd-2027-01-10",
+   "sample-sioux-falls-sports-card-show-sioux-falls-sd-2027-03-14",
+   "sample-sioux-falls-sports-card-show-sioux-falls-sd-2027-05-09",
+   "sample-sioux-falls-sports-card-show-sioux-falls-sd-2027-07-11",
+   "sample-sioux-falls-sports-card-show-sioux-falls-sd-2027-09-12",
+   "sample-sioux-falls-sports-card-show-sioux-falls-sd-2027-11-14"
+  ],
+  "links": {
+   "official": "https://example.com/sample/sample-sioux-falls-sports-card-show-sioux-falls-sd"
+  },
+  "history": []
+ },
+ {
+  "id": "sample-spokane-card-game-challenge-spokane-wa",
+  "name": "Sample Spokane Card Game Challenge",
+  "promoter_id": "sample-bayou-promotions",
+  "venue": {
+   "name": "Sample Spokane VFW Hall",
+   "city": "Spokane",
+   "region": "WA"
+  },
+  "cadence": null,
+  "editions": [
+   "sample-spokane-card-game-challenge-spokane-wa-2027-05-18"
+  ],
+  "links": {
+   "official": "https://example.com/sample/sample-spokane-card-game-challenge-spokane-wa"
+  },
+  "history": []
+ },
+ {
+  "id": "sample-st-john-s-card-show-st-john-s-nl",
+  "name": "Sample St. John's Card Show",
+  "promoter_id": "sample-tidewater-promotions",
+  "venue": {
+   "name": "Sample St. John's Convention Center",
+   "city": "St. John's",
+   "region": "NL"
+  },
+  "cadence": "once a year",
+  "editions": [
+   "sample-st-john-s-card-show-st-john-s-nl-2026-11-10"
+  ],
+  "links": {
+   "official": "https://example.com/sample/sample-st-john-s-card-show-st-john-s-nl"
+  },
+  "history": []
+ },
+ {
+  "id": "sample-st-louis-card-bash-st-louis-mo",
+  "name": "Sample St. Louis Card Bash",
+  "promoter_id": "sample-summit-promotions",
+  "venue": {
+   "name": "Sample St. Louis Community Center",
+   "city": "St. Louis",
+   "region": "MO"
+  },
+  "cadence": null,
+  "editions": [
+   "sample-st-louis-card-bash-st-louis-mo-2027-07-23"
+  ],
+  "links": {
+   "official": "https://example.com/sample/sample-st-louis-card-bash-st-louis-mo"
+  },
+  "history": [
+   {
+    "year": 2025,
+    "attendance": 210
+   },
+   {
+    "year": 2024,
+    "attendance": 182
+   }
+  ]
+ },
+ {
+  "id": "sample-st-louis-national-card-expo-st-louis-mo",
+  "name": "Sample St. Louis National Card Expo",
+  "promoter_id": "sample-maple-promotions",
+  "venue": {
+   "name": "Sample St. Louis Event Center",
+   "city": "St. Louis",
+   "region": "MO"
+  },
+  "cadence": "once a year",
+  "editions": [
+   "sample-st-louis-national-card-expo-st-louis-mo-2026-12-13"
+  ],
+  "links": {
+   "official": "https://example.com/sample/sample-st-louis-national-card-expo-st-louis-mo"
+  },
+  "history": []
+ },
+ {
+  "id": "sample-syracuse-collectors-convention-syracuse-ny",
+  "name": "Sample Syracuse Collectors Convention",
+  "promoter_id": "sample-lakeshore-promotions",
+  "venue": {
+   "name": "Sample Syracuse Event Center",
+   "city": "Syracuse",
+   "region": "NY"
+  },
+  "cadence": "once a year",
+  "editions": [
+   "sample-syracuse-collectors-convention-syracuse-ny-2027-06-24"
+  ],
+  "links": {
+   "official": "https://example.com/sample/sample-syracuse-collectors-convention-syracuse-ny"
+  },
+  "history": [
+   {
+    "year": 2025,
+    "attendance": 4284
+   },
+   {
+    "year": 2024,
+    "attendance": 3713
+   }
+  ]
+ },
+ {
+  "id": "sample-tampa-pop-culture-con-tampa-fl",
+  "name": "Sample Tampa Pop Culture Con",
+  "promoter_id": "sample-great-lakes-promotions",
+  "venue": {
+   "name": "Sample Tampa Expo Hall",
+   "city": "Tampa",
+   "region": "FL"
+  },
+  "cadence": null,
+  "editions": [
+   "sample-tampa-pop-culture-con-tampa-fl-2027-08-28"
+  ],
+  "links": {
+   "official": "https://example.com/sample/sample-tampa-pop-culture-con-tampa-fl"
+  },
+  "history": []
+ },
+ {
+  "id": "sample-toronto-card-collectors-expo-toronto-on",
+  "name": "Sample Toronto Card Collectors Expo",
+  "promoter_id": "sample-prairie-promotions",
+  "venue": {
+   "name": "Sample Toronto Event Center",
+   "city": "Toronto",
+   "region": "ON"
+  },
+  "cadence": null,
+  "editions": [
+   "sample-toronto-card-collectors-expo-toronto-on-2027-05-08"
+  ],
+  "links": {
+   "official": "https://example.com/sample/sample-toronto-card-collectors-expo-toronto-on"
+  },
+  "history": [
+   {
+    "year": 2025,
+    "attendance": 2832
+   },
+   {
+    "year": 2024,
+    "attendance": 2454
+   }
+  ]
+ },
+ {
+  "id": "sample-toronto-sports-card-show-toronto-on",
+  "name": "Sample Toronto Sports Card Show",
+  "promoter_id": "sample-riverbend-promotions",
+  "venue": {
+   "name": "Sample Toronto Expo Hall",
+   "city": "Toronto",
+   "region": "ON"
+  },
+  "cadence": "last Sunday every other month",
+  "editions": [
+   "sample-toronto-sports-card-show-toronto-on-2026-09-27",
+   "sample-toronto-sports-card-show-toronto-on-2026-11-29",
+   "sample-toronto-sports-card-show-toronto-on-2027-01-31",
+   "sample-toronto-sports-card-show-toronto-on-2027-03-28",
+   "sample-toronto-sports-card-show-toronto-on-2027-05-30",
+   "sample-toronto-sports-card-show-toronto-on-2027-07-25",
+   "sample-toronto-sports-card-show-toronto-on-2027-09-26"
+  ],
+  "links": {
+   "official": "https://example.com/sample/sample-toronto-sports-card-show-toronto-on"
+  },
+  "history": [
+   {
+    "year": 2025,
+    "attendance": 174
+   },
+   {
+    "year": 2024,
+    "attendance": 151
+   }
+  ]
+ },
+ {
+  "id": "sample-vancouver-card-and-collectibles-show-vancouver-bc",
+  "name": "Sample Vancouver Card and Collectibles Show",
+  "promoter_id": "sample-lakeshore-promotions",
+  "venue": {
+   "name": "Sample Vancouver Rec Center",
+   "city": "Vancouver",
+   "region": "BC"
+  },
+  "cadence": "last Sunday each quarter",
+  "editions": [
+   "sample-vancouver-card-and-collectibles-show-vancouver-bc-2026-09-27",
+   "sample-vancouver-card-and-collectibles-show-vancouver-bc-2026-12-27",
+   "sample-vancouver-card-and-collectibles-show-vancouver-bc-2027-03-28",
+   "sample-vancouver-card-and-collectibles-show-vancouver-bc-2027-06-27",
+   "sample-vancouver-card-and-collectibles-show-vancouver-bc-2027-09-26"
+  ],
+  "links": {
+   "official": "https://example.com/sample/sample-vancouver-card-and-collectibles-show-vancouver-bc"
+  },
+  "history": [
+   {
+    "year": 2025,
+    "attendance": 1650
+   },
+   {
+    "year": 2024,
+    "attendance": 1430
+   }
+  ]
+ },
+ {
+  "id": "sample-vancouver-gaming-and-collectibles-con-vancouver-bc",
+  "name": "Sample Vancouver Gaming and Collectibles Con",
+  "promoter_id": "sample-cedar-promotions",
+  "venue": {
+   "name": "Sample Vancouver Fairgrounds",
+   "city": "Vancouver",
+   "region": "BC"
+  },
+  "cadence": null,
+  "editions": [
+   "sample-vancouver-gaming-and-collectibles-con-vancouver-bc-2027-07-18"
+  ],
+  "links": {
+   "official": "https://example.com/sample/sample-vancouver-gaming-and-collectibles-con-vancouver-bc"
+  },
+  "history": [
+   {
+    "year": 2025,
+    "attendance": 4482
+   },
+   {
+    "year": 2024,
+    "attendance": 3884
+   }
+  ]
+ },
+ {
+  "id": "sample-victoria-card-bash-victoria-bc",
+  "name": "Sample Victoria Card Bash",
+  "promoter_id": "sample-pioneer-promotions",
+  "venue": {
+   "name": "Sample Victoria Hotel Ballroom",
+   "city": "Victoria",
+   "region": "BC"
+  },
+  "cadence": "second Sunday each quarter",
+  "editions": [
+   "sample-victoria-card-bash-victoria-bc-2026-11-08",
+   "sample-victoria-card-bash-victoria-bc-2027-02-14",
+   "sample-victoria-card-bash-victoria-bc-2027-05-09",
+   "sample-victoria-card-bash-victoria-bc-2027-08-08",
+   "sample-victoria-card-bash-victoria-bc-2027-11-14"
+  ],
+  "links": {
+   "official": "https://example.com/sample/sample-victoria-card-bash-victoria-bc"
+  },
+  "history": []
+ },
+ {
+  "id": "sample-victoria-trading-card-expo-2-victoria-bc",
+  "name": "Sample Victoria Trading Card Expo 2",
+  "promoter_id": "sample-garden-promotions",
+  "venue": {
+   "name": "Sample Victoria Fairgrounds",
+   "city": "Victoria",
+   "region": "BC"
+  },
+  "cadence": null,
+  "editions": [
+   "sample-victoria-trading-card-expo-2-victoria-bc-2027-04-13"
+  ],
+  "links": {
+   "official": "https://example.com/sample/sample-victoria-trading-card-expo-2-victoria-bc"
+  },
+  "history": []
+ },
+ {
+  "id": "sample-virginia-beach-open-tournament-weekend-virginia-beach-va",
+  "name": "Sample Virginia Beach Open Tournament Weekend",
+  "promoter_id": "sample-redwood-promotions",
+  "venue": {
+   "name": "Sample Virginia Beach Fairgrounds",
+   "city": "Virginia Beach",
+   "region": "VA"
+  },
+  "cadence": "once a year",
+  "editions": [
+   "sample-virginia-beach-open-tournament-weekend-virginia-beach-va-2027-02-02"
+  ],
+  "links": {
+   "official": "https://example.com/sample/sample-virginia-beach-open-tournament-weekend-virginia-beach-va"
+  },
+  "history": [
+   {
+    "year": 2025,
+    "attendance": 468
+   },
+   {
+    "year": 2024,
+    "attendance": 406
+   }
+  ]
+ },
+ {
+  "id": "sample-washington-card-bash-washington-dc",
+  "name": "Sample Washington Card Bash",
+  "promoter_id": "sample-great-lakes-promotions",
+  "venue": {
+   "name": "Sample Washington Armory",
+   "city": "Washington",
+   "region": "DC"
+  },
+  "cadence": "fourth Saturday of most months",
+  "editions": [
+   "sample-washington-card-bash-washington-dc-2026-09-26",
+   "sample-washington-card-bash-washington-dc-2026-10-24",
+   "sample-washington-card-bash-washington-dc-2026-11-28",
+   "sample-washington-card-bash-washington-dc-2026-12-26",
+   "sample-washington-card-bash-washington-dc-2027-01-23",
+   "sample-washington-card-bash-washington-dc-2027-02-27",
+   "sample-washington-card-bash-washington-dc-2027-03-27",
+   "sample-washington-card-bash-washington-dc-2027-04-24",
+   "sample-washington-card-bash-washington-dc-2027-05-22",
+   "sample-washington-card-bash-washington-dc-2027-06-26",
+   "sample-washington-card-bash-washington-dc-2027-07-24",
+   "sample-washington-card-bash-washington-dc-2027-08-28",
+   "sample-washington-card-bash-washington-dc-2027-09-25",
+   "sample-washington-card-bash-washington-dc-2027-10-23"
+  ],
+  "links": {
+   "official": "https://example.com/sample/sample-washington-card-bash-washington-dc"
+  },
+  "history": [
+   {
+    "year": 2025,
+    "attendance": 138
+   },
+   {
+    "year": 2024,
+    "attendance": 120
+   }
+  ]
+ },
+ {
+  "id": "sample-washington-regional-championships-washington-dc",
+  "name": "Sample Washington Regional Championships",
+  "promoter_id": "sample-prairie-promotions",
+  "venue": {
+   "name": "Sample Washington Armory",
+   "city": "Washington",
+   "region": "DC"
+  },
+  "cadence": null,
+  "editions": [
+   "sample-washington-regional-championships-washington-dc-2026-12-17"
+  ],
+  "links": {
+   "official": "https://example.com/sample/sample-washington-regional-championships-washington-dc"
+  },
+  "history": []
+ },
+ {
+  "id": "sample-wichita-pop-culture-con-wichita-ks",
+  "name": "Sample Wichita Pop Culture Con",
+  "promoter_id": "sample-cascade-promotions",
+  "venue": {
+   "name": "Sample Wichita Community Center",
+   "city": "Wichita",
+   "region": "KS"
+  },
+  "cadence": "once a year",
+  "editions": [
+   "sample-wichita-pop-culture-con-wichita-ks-2027-02-06"
+  ],
+  "links": {
+   "official": "https://example.com/sample/sample-wichita-pop-culture-con-wichita-ks"
+  },
+  "history": []
+ },
+ {
+  "id": "sample-wilmington-trading-card-expo-wilmington-de",
+  "name": "Sample Wilmington Trading Card Expo",
+  "promoter_id": "sample-silver-promotions",
+  "venue": {
+   "name": "Sample Wilmington Rec Center",
+   "city": "Wilmington",
+   "region": "DE"
+  },
+  "cadence": null,
+  "editions": [
+   "sample-wilmington-trading-card-expo-wilmington-de-2027-07-12"
+  ],
+  "links": {
+   "official": "https://example.com/sample/sample-wilmington-trading-card-expo-wilmington-de"
+  },
+  "history": [
+   {
+    "year": 2025,
+    "attendance": 2004
+   },
+   {
+    "year": 2024,
+    "attendance": 1737
+   }
+  ]
+ },
+ {
+  "id": "sample-winnipeg-card-bash-winnipeg-mb",
+  "name": "Sample Winnipeg Card Bash",
+  "promoter_id": "sample-sunrise-promotions",
+  "venue": {
+   "name": "Sample Winnipeg Banquet Hall",
+   "city": "Winnipeg",
+   "region": "MB"
+  },
+  "cadence": "last Saturday every other month",
+  "editions": [
+   "sample-winnipeg-card-bash-winnipeg-mb-2026-09-26",
+   "sample-winnipeg-card-bash-winnipeg-mb-2026-11-28",
+   "sample-winnipeg-card-bash-winnipeg-mb-2027-01-30",
+   "sample-winnipeg-card-bash-winnipeg-mb-2027-03-27",
+   "sample-winnipeg-card-bash-winnipeg-mb-2027-05-29",
+   "sample-winnipeg-card-bash-winnipeg-mb-2027-07-31",
+   "sample-winnipeg-card-bash-winnipeg-mb-2027-09-25"
+  ],
+  "links": {
+   "official": "https://example.com/sample/sample-winnipeg-card-bash-winnipeg-mb"
+  },
+  "history": []
+ },
+ {
+  "id": "sample-winnipeg-national-card-expo-winnipeg-mb",
+  "name": "Sample Winnipeg National Card Expo",
+  "promoter_id": "sample-boardwalk-promotions",
+  "venue": {
+   "name": "Sample Winnipeg Convention Center",
+   "city": "Winnipeg",
+   "region": "MB"
+  },
+  "cadence": null,
+  "editions": [
+   "sample-winnipeg-national-card-expo-winnipeg-mb-2027-06-26"
+  ],
+  "links": {
+   "official": "https://example.com/sample/sample-winnipeg-national-card-expo-winnipeg-mb"
+  },
+  "history": [
+   {
+    "year": 2025,
+    "attendance": 5364
+   },
+   {
+    "year": 2024,
+    "attendance": 4649
+   }
+  ]
+ },
+ {
+  "id": "sample-worcester-card-show-worcester-ma",
+  "name": "Sample Worcester Card Show",
+  "promoter_id": "sample-mesa-promotions",
+  "venue": {
+   "name": "Sample Worcester Hotel Ballroom",
+   "city": "Worcester",
+   "region": "MA"
+  },
+  "cadence": "once a year",
+  "editions": [
+   "sample-worcester-card-show-worcester-ma-2027-04-25"
+  ],
+  "links": {
+   "official": "https://example.com/sample/sample-worcester-card-show-worcester-ma"
+  },
+  "history": []
+ }
+]

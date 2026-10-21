@@ -1,0 +1,84 @@
+---
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+import { SITE_NAME } from '../lib/config';
+import { loadSiteData } from '../server/data';
+import { absoluteUrl, withBase } from '../lib/urls';
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description?: string;
+  /** site path of this page, such as "map/" or "" for the home page */
+  path: string;
+  /** use the title as is, without " | Card Show Atlas" */
+  fullTitle?: boolean;
+  noindex?: boolean;
+  /** structured data (schema.org) for search engines */
+  jsonLd?: Record<string, unknown>;
+  wide?: boolean;
+}
+
+const {
+  title,
+  description = 'Find trading card shows near you in the US and Canada: Pokémon, Magic, Yu-Gi-Oh, One Piece, Lorcana and sports cards. Map, vendor tracker and route planner.',
+  path,
+  fullTitle = false,
+  noindex = false,
+  jsonLd,
+} = Astro.props;
+const data = loadSiteData();
+const pageTitle = fullTitle ? title : `${title} | ${SITE_NAME}`;
+const canonical = absoluteUrl(path);
+const hideFromSearch = noindex || data.fixture;
+const ldJson = jsonLd ? JSON.stringify(jsonLd).replace(/</g, '\\u003c') : null;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{data.fixture ? `[SAMPLE DATA] ${pageTitle}` : pageTitle}</title>
+    <meta name="description" content={description} />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="theme-color" content="#f6f4ee" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#121316" media="(prefers-color-scheme: dark)" />
+    {hideFromSearch && <meta name="robots" content="noindex" />}
+    <link rel="canonical" href={canonical} />
+    <link rel="icon" href={withBase('favicon.svg')} type="image/svg+xml" />
+    <meta property="og:site_name" content={SITE_NAME} />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <script is:inline>
+      try {
+        var t = localStorage.getItem('csa.theme.v1');
+        if (t === 'light' || t === 'dark') document.documentElement.setAttribute('data-theme', t);
+      } catch (e) {}
+    </script>
+    {ldJson && <script type="application/ld+json" set:html={ldJson} />}
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to the content</a>
+    {
+      data.fixture && (
+        <div class="sample-banner" role="alert" data-sample-banner>
+          SAMPLE DATA: every show on this site is made up. Do not drive to any of them.
+        </div>
+      )
+    }
+    <div class="preview-notice" role="note">
+      <div class="container">
+        <strong>Early preview</strong>
+        <span>Shows are still being added and details can be wrong. Check the organizer before you drive.</span>
+      </div>
+    </div>
+    <Header current={path} />
+    <main id="main" tabindex="-1">
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html>

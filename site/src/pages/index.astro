@@ -1,0 +1,22 @@
+---
+import Base from '../layouts/Base.astro';
+import FindApp from '../islands/FindApp';
+import { loadSiteData } from '../server/data';
+const data = loadSiteData();
+---
+
+<Base title="Card Show Atlas: find trading card shows near you" fullTitle path="">
+  <div class="container page">
+    <section class="hero">
+      <h1>Find card shows near you</h1>
+      <p>
+        Every trading card show in the US and Canada: Pokémon, Magic, Yu-Gi-Oh, One Piece, Lorcana, sports cards and more.
+        Tell us where you are and how far you will drive.
+      </p>
+    </section>
+    <FindApp client:load emptyAtBuild={data.empty} />
+    <noscript>
+      <p class="notice notice-warn">The search needs JavaScript. You can still <a href="states/">browse shows by state or province</a>.</p>
+    </noscript>
+  </div>
+</Base>

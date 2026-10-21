@@ -1,0 +1,48 @@
+---
+import Base from '../../layouts/Base.astro';
+import BrowseTabs from '../../components/BrowseTabs.astro';
+import { withBase } from '../../lib/urls';
+import { loadSiteData } from '../../server/data';
+
+const data = loadSiteData();
+const groups = new Map<string, typeof data.series>();
+for (const s of data.series) {
+  const letter = /^[a-z]/i.test(s.name) ? s.name[0]!.toUpperCase() : '#';
+  groups.set(letter, [...(groups.get(letter) ?? []), s]);
+}
+const letters = [...groups.keys()].sort();
+---
+
+<Base title="Regular card shows" description="Card shows that come back every month or every year, with all their dates." path="series/">
+  <div class="container page">
+    <h1>Browse card shows</h1>
+    <BrowseTabs current="series" />
+    <p class="muted">Shows that happen again and again, so you can plan ahead.</p>
+    {
+      data.empty ? (
+        <div class="card empty"><h2>Shows are being added</h2><p>Check back soon.</p></div>
+      ) : (
+        <>
+          <nav class="az" aria-label="Jump to a letter">
+            {letters.map((l) => <a href={`#letter-${l === '#' ? 'other' : l}`}>{l}</a>)}
+          </nav>
+          {letters.map((l) => (
+            <section>
+              <h2 id={`letter-${l === '#' ? 'other' : l}`}>{l}</h2>
+              <ul class="plain-list">
+                {groups.get(l)!.map((s) => (
+                  <li>
+                    <a href={withBase(`series/${s.id}/`)}>
+                      <span class="pl-name">{s.name}</span>
+                      <span class="pl-meta">{s.usualVenue ?? ''}{s.cadence ? `, ${s.cadence}` : ''}, {s.editions.length} listed</span>
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </section>
+          ))}
+        </>
+      )
+    }
+  </div>
+</Base>

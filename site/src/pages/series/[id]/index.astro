@@ -1,0 +1,48 @@
+---
+import Base from '../../../layouts/Base.astro';
+import BrowseTabs from '../../../components/BrowseTabs.astro';
+import PlainShowList from '../../../components/PlainShowList.astro';
+import { todayISO } from '../../../lib/dates';
+import { safeUrl, displayHost } from '../../../lib/format';
+import { isPast } from '../../../lib/showview';
+import { withBase } from '../../../lib/urls';
+import { loadSiteData } from '../../../server/data';
+
+export function getStaticPaths() {
+  return loadSiteData().series.map((s) => ({ params: { id: s.id }, props: { id: s.id } }));
+}
+
+const data = loadSiteData();
+const series = data.seriesById.get(Astro.props.id)!;
+const today = todayISO(new Date());
+const upcoming = series.editions.filter((s) => !isPast(s, today));
+const past = series.editions.filter((s) => isPast(s, today)).reverse();
+const official = safeUrl(series.links?.official ?? null);
+const promoter = series.promoterId ? data.promoters.find((p) => p.id === series.promoterId) : undefined;
+---
+
+<Base title={series.name} description={`All the dates for ${series.name}${series.usualVenue ? `, at ${series.usualVenue}` : ''}.`} path={`series/${series.id}/`}>
+  <div class="container page">
+    <h1>{series.name}</h1>
+    <BrowseTabs current="series" />
+    <dl class="dl">
+      {series.cadence && (<><dt>How often</dt><dd>{series.cadence}</dd></>)}
+      {series.usualVenue && (<><dt>Usual place</dt><dd>{series.usualVenue}</dd></>)}
+      {series.promoterName && (<><dt>Organizer</dt><dd>{promoter ? <a href={withBase(`promoters/${promoter.id}/`)}>{series.promoterName}</a> : series.promoterName}</dd></>)}
+      {official && (<><dt>Official page</dt><dd><a href={official} target="_blank" rel="noopener noreferrer">{displayHost(official)}</a></dd></>)}
+    </dl>
+    {
+      series.history.length > 0 && (
+        <>
+          <h2>Past crowds</h2>
+          <ul>
+            {series.history.map((h) => <li>{h.year ?? ''}{h.attendance ? `: about ${h.attendance.toLocaleString('en-US')} people` : ''}{h.note ? ` (${h.note})` : ''}</li>)}
+          </ul>
+        </>
+      )
+    }
+    <h2>Coming up</h2>
+    {upcoming.length === 0 ? <p class="muted">No upcoming dates are listed yet.</p> : <PlainShowList shows={upcoming} region={false} />}
+    {past.length > 0 && (<><h2>Recent past dates</h2><PlainShowList shows={past} region={false} /></>)}
+  </div>
+</Base>
