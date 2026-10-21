@@ -4,11 +4,11 @@ import MapApp from '../../islands/MapApp';
 ---
 
 <Base title="Map of card shows" description="Every trading card show in the US and Canada on a map, with a time window you can drag to see any week of the next year." path="map/">
-  <div class="container page">
-    <h1>Map</h1>
-    <p class="muted">
-      Drag the time window along the bottom to see what is on in any week. Shapes and colors show the kind of event. Faded markers are approximate places.
-    </p>
+  <div class="container page map-page">
+    <div class="map-head">
+      <h1>Map</h1>
+      <p class="muted">Drag the time window to see any week.</p>
+    </div>
     <MapApp client:only="preact">
       <p slot="fallback" class="loading" role="status">Loading the map...</p>
     </MapApp>

@@ -107,6 +107,8 @@ export function TimeBar({ today, counts, win, onChange, playing, onPlayToggle, m
   };
 
   const marks = monthMarks(today, total);
+  // When the next month starts within days, its label would sit on top of the first one.
+  const labels = marks.filter((_, i) => !(i === 0 && marks[1] && marks[1].offset < 12));
   const summary = describeWindow(today, win);
   const left = (win.start / total) * 100;
   const width = (win.width / total) * 100;
@@ -151,21 +153,20 @@ export function TimeBar({ today, counts, win, onChange, playing, onPlayToggle, m
         />
       </div>
       <div class="month-labels" aria-hidden="true">
-        {marks.map((m, i) => (
-          <span class={i % 2 === 1 && !m.label.includes('20') ? 'minor' : ''} style={{ left: `${(m.offset / total) * 100}%` }}>
-            {m.label}
-          </span>
-        ))}
+        {labels.map((m, i) => {
+          const [month, year] = m.label.split(' ');
+          return (
+            <span class={i % 2 === 1 && !year ? 'minor' : ''} style={{ left: `${(m.offset / total) * 100}%` }}>
+              {month}
+              {year && <span class="yr"> {year}</span>}
+            </span>
+          );
+        })}
       </div>
-      <p class="hint" style={{ margin: '0.2rem 0 0' }}>
-        Bars show how many shows are on each day. Drag the window along the bars.
-      </p>
-
       <div class="width-row">
         <label for="win-width" style={{ margin: 0 }}>
-          Window width: {win.width === 1 ? '1 day' : `${win.width} days`}
+          Width: {win.width === 1 ? '1 day' : `${win.width} days`}
         </label>
-        <div>
           <input
             id="win-width"
             type="range"
@@ -181,7 +182,6 @@ export function TimeBar({ today, counts, win, onChange, playing, onPlayToggle, m
               </button>
             ))}
           </div>
-        </div>
       </div>
     </section>
   );

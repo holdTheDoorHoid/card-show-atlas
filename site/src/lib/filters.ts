@@ -2,8 +2,9 @@
 import { daysBetween } from './dates.ts';
 import { driveMinutes, haversineMiles, type LatLon } from './geo.ts';
 import { rowOverlaps } from './index-build.ts';
+import { EVENT_TYPE_INFO, SIZE_INFO } from './labels.ts';
 import type { EventType, IndexRow, SizeClass, Vocab } from './types.ts';
-import { SPORTS_ANY, sportsIds } from './vocab.ts';
+import { labelFor, SPORTS_ANY, sportsIds } from './vocab.ts';
 
 export interface Filters {
   /** What is sold: vocabulary ids, or SPORTS_ANY. A show matches when it sells any of them. Empty means no filter. */
@@ -42,6 +43,20 @@ export function countActiveFilters(f: Filters): number {
     (f.free ? 1 : 0) +
     (f.vendorOpen ? 1 : 0)
   );
+}
+
+/** The active filters as one short line, for next to the Filters button: "Pokémon, Magic, Free entry". */
+export function describeFilters(f: Filters, vocab: Vocab, opts: { storeEvents?: boolean } = {}): string {
+  const parts: string[] = [];
+  for (const id of f.sells) parts.push(id === SPORTS_ANY ? 'Sports cards' : labelFor(vocab, id));
+  if (f.sells.length > 0 && f.sellsKnownOnly) parts.push('only listed');
+  if (f.hideSportsOnly) parts.push('no sports only shows');
+  for (const t of f.types) parts.push(EVENT_TYPE_INFO[t].plural);
+  for (const sz of f.sizes) parts.push(SIZE_INFO[sz].label);
+  if (f.free) parts.push('Free entry');
+  if (f.vendorOpen) parts.push('Vendor tables open');
+  if (opts.storeEvents) parts.push('Store events');
+  return parts.join(', ');
 }
 
 /** Shows that are called off do not belong in lists or on the map. Their page still says so. */

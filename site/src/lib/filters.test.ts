@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { bestMatchScore, countActiveFilters, DEFAULT_FILTERS, filterRows, sanitizeFilters, selectResults, sortResults, toggled, type Filters } from './filters.ts';
+import { bestMatchScore, countActiveFilters, DEFAULT_FILTERS, describeFilters, filterRows, sanitizeFilters, selectResults, sortResults, toggled, type Filters } from './filters.ts';
 import { makeRow } from './testing.ts';
 import { DEFAULT_VOCAB, SPORTS_ANY } from './vocab.ts';
 
@@ -145,5 +145,22 @@ describe('saved filters', () => {
   it('toggles a value in a list', () => {
     expect(toggled(['a'], 'b')).toEqual(['a', 'b']);
     expect(toggled(['a', 'b'], 'a')).toEqual(['b']);
+  });
+});
+
+describe('the one line summary of active filters', () => {
+  it('is empty when nothing is on', () => {
+    expect(describeFilters(DEFAULT_FILTERS, vocab)).toBe('');
+  });
+
+  it('lists what is on, in plain words', () => {
+    const line = describeFilters(f({ sells: ['pokemon', 'mtg', SPORTS_ANY], types: ['convention'], sizes: ['large', 'major'], free: true, vendorOpen: true }), vocab);
+    expect(line).toBe('Pokémon, Magic, Sports cards, Conventions, Large, Major, Free entry, Vendor tables open');
+  });
+
+  it('mentions the extra switches only when they matter', () => {
+    expect(describeFilters(f({ sellsKnownOnly: true }), vocab)).toBe('');
+    expect(describeFilters(f({ sells: ['pokemon'], sellsKnownOnly: true, hideSportsOnly: true }), vocab)).toBe('Pokémon, only listed, no sports only shows');
+    expect(describeFilters(DEFAULT_FILTERS, vocab, { storeEvents: true })).toBe('Store events');
   });
 });

@@ -30,6 +30,8 @@ export default function MapApp() {
   const [storeLoading, setStoreLoading] = useState(false);
   const [storeMissing, setStoreMissing] = useState(false);
   const [listOpen, setListOpen] = useState(false);
+  const [filtersOpen, setFiltersOpen] = useState(false);
+  const fitRef = useRef<HTMLDivElement>(null);
 
   // The store events layer is fetched only when it is switched on.
   useEffect(() => {
@@ -71,55 +73,92 @@ export default function MapApp() {
   const view: MapView = loc ? { kind: 'center', center: [loc.lat, loc.lon], zoom: 8 } : { kind: 'default' };
   const origin = loc ? { lat: loc.lat, lon: loc.lon } : null;
   const empty = index && index.count === 0;
+  const failed = idx.status === 'error';
+  const showMap = !empty && !failed;
+
+  // Make the map and the time bar fit on screen together: the map gets whatever height is left below
+  // the page header. (Phones and desktops differ too much for a fixed number.)
+  useEffect(() => {
+    if (!showMap) return;
+    const fit = () => {
+      const el = fitRef.current;
+      if (!el) return;
+      const top = el.getBoundingClientRect().top + window.scrollY;
+      const viewport = window.visualViewport?.height ?? window.innerHeight;
+      el.style.setProperty('--fit-h', `${Math.max(0, Math.round(viewport - top - 12))}px`);
+    };
+    fit();
+    const later = window.setTimeout(fit, 250); // after fonts and the first layout settle
+    window.addEventListener('resize', fit);
+    window.addEventListener('orientationchange', fit);
+    window.visualViewport?.addEventListener('resize', fit);
+    return () => {
+      window.clearTimeout(later);
+      window.removeEventListener('resize', fit);
+      window.removeEventListener('orientationchange', fit);
+      window.visualViewport?.removeEventListener('resize', fit);
+    };
+  }, [showMap]);
 
   // The index is sorted by first day and the window keeps that order, so the list needs no sorting.
   const listed = visible;
 
   return (
     <div>
-      {index && !empty && (
-        <FilterBar
-          filters={filters}
-          onChange={setFilters}
-          vocab={index.vocab}
-          idPrefix="map"
-          storeLayer={{ on: storeOn, loading: storeLoading, missing: storeMissing, onChange: setStoreOn }}
-        />
-      )}
-
-      {empty ? (
+      {empty && (
         <div class="card empty" role="status" style={{ marginTop: '1rem' }}>
           <h2>Shows are being added</h2>
           <p>Check back soon. Nothing is on the map yet.</p>
         </div>
-      ) : idx.status === 'error' ? (
+      )}
+      {failed && (
         <div class="notice notice-warn" role="alert" style={{ marginTop: '1rem' }}>
           The list of shows could not be loaded. Check your connection and reload the page.
         </div>
-      ) : (
+      )}
+      {showMap && (
         <>
-          <div style={{ marginTop: '1rem' }}>
-            <LazyMap
-              rows={visible}
-              storeRows={storeFiltered}
-              origin={origin}
-              view={view}
-              viewKey={`${loc?.lat},${loc?.lon}`}
-              tall
-              label="Map of card shows in the chosen time window"
-            />
+          <div class={`map-fit${filtersOpen ? ' free' : ''}`} ref={fitRef}>
+            {index && (
+              <FilterBar
+                filters={filters}
+                onChange={setFilters}
+                vocab={index.vocab}
+                idPrefix="map"
+                onOpenChange={setFiltersOpen}
+                storeLayer={{ on: storeOn, loading: storeLoading, missing: storeMissing, onChange: setStoreOn }}
+              />
+            )}
+            <div class="map-slot">
+              <LazyMap
+                rows={visible}
+                storeRows={storeFiltered}
+                origin={origin}
+                view={view}
+                viewKey={`${loc?.lat},${loc?.lon}`}
+                label="Map of card shows in the chosen time window"
+              />
+            </div>
+            <Legend types={storeOn ? [...SHOW_EVENT_TYPES, 'store_event'] : SHOW_EVENT_TYPES} />
+            {today && index ? (
+              <TimeBar
+                today={today}
+                counts={counts}
+                win={win}
+                onChange={(w) => {
+                  setPlaying(false);
+                  setWin(w);
+                }}
+                playing={playing}
+                onPlayToggle={() => setPlaying((p) => !p)}
+                matching={visible.length}
+              />
+            ) : (
+              <p class="loading" role="status">
+                Loading shows...
+              </p>
+            )}
           </div>
-          <Legend types={storeOn ? [...SHOW_EVENT_TYPES, 'store_event'] : SHOW_EVENT_TYPES} />
-          {today && index ? (
-            <TimeBar today={today} counts={counts} win={win} onChange={(w) => {
-                setPlaying(false);
-                setWin(w);
-              }} playing={playing} onPlayToggle={() => setPlaying((p) => !p)} matching={visible.length} />
-          ) : (
-            <p class="loading" role="status">
-              Loading shows...
-            </p>
-          )}
           {index && (
             <details class="card" style={{ marginTop: '1rem' }} onToggle={(e) => setListOpen((e.currentTarget as HTMLDetailsElement).open)}>
               <summary style={{ cursor: 'pointer', fontWeight: 700, minHeight: 44, display: 'flex', alignItems: 'center' }}>
@@ -140,7 +179,11 @@ export default function MapApp() {
                       </a>
                     </li>
                   ))}
-                  {listed.length > 100 && <li class="muted" style={{ padding: '0.6rem 0' }}>and {listed.length - 100} more. Narrow the window to see them all.</li>}
+                  {listed.length > 100 && (
+                    <li class="muted" style={{ padding: '0.6rem 0' }}>
+                      and {listed.length - 100} more. Narrow the window to see them all.
+                    </li>
+                  )}
                 </ul>
               )}
             </details>
