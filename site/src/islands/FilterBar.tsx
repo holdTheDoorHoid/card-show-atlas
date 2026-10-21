@@ -1,8 +1,9 @@
 // The filter chips shared by the Find page and the Map page.
 import { useEffect, useState } from 'preact/hooks';
-import { countActiveFilters, DEFAULT_FILTERS, toggled, type Filters } from '../lib/filters';
+import { countActiveFilters, DEFAULT_FILTERS, describeFilters, toggled, type Filters } from '../lib/filters';
 import { EVENT_TYPE_INFO, SHOW_EVENT_TYPES, SIZE_INFO, SIZE_ORDER } from '../lib/labels';
 import type { Vocab } from '../lib/types';
+import { browserStore, readJson, STORAGE_KEYS, writeJson } from '../lib/storage';
 import { allVocabEntries, labelFor, SPORTS_ANY, TOP_SELL_CHIPS } from '../lib/vocab';
 import { ShapeIcon } from './ui';
 
@@ -10,8 +11,10 @@ interface Props {
   filters: Filters;
   onChange: (f: Filters) => void;
   vocab: Vocab;
-  /** unique prefix for element ids when two bars are on one page */
+  /** the page this bar is on ("find" or "map"): used for element ids and to remember whether the panel is open */
   idPrefix: string;
+  /** told when the panel opens or closes, so the page can make room */
+  onOpenChange?: (open: boolean) => void;
   /** Map page only: the store events layer switch */
   storeLayer?: { on: boolean; loading: boolean; missing: boolean; onChange: (on: boolean) => void };
 }
@@ -24,26 +27,55 @@ function Chip({ pressed, onClick, children }: { pressed: boolean; onClick: () =>
   );
 }
 
-export function FilterBar({ filters, onChange, vocab, idPrefix, storeLayer }: Props) {
+export function FilterBar({ filters, onChange, vocab, idPrefix, storeLayer, onOpenChange }: Props) {
   const [open, setOpen] = useState(false);
   const [more, setMore] = useState(false);
+  // Closed by default so the results (or the map) stay in view. Whether it is open is remembered per page.
   useEffect(() => {
-    // Open by default on wide screens, closed on phones where space is short.
-    setOpen(window.matchMedia('(min-width: 62rem)').matches);
+    const saved = readJson(browserStore(), STORAGE_KEYS.filtersOpen);
+    const isOpen = !!saved && typeof saved === 'object' && (saved as Record<string, unknown>)[idPrefix] === true;
+    setOpen(isOpen);
+    onOpenChange?.(isOpen);
   }, []);
+  function setOpenRemembered(next: boolean) {
+    setOpen(next);
+    onOpenChange?.(next);
+    const saved = readJson(browserStore(), STORAGE_KEYS.filtersOpen);
+    const all = saved && typeof saved === 'object' ? { ...(saved as Record<string, boolean>) } : {};
+    all[idPrefix] = next;
+    writeJson(browserStore(), STORAGE_KEYS.filtersOpen, all);
+  }
   const active = countActiveFilters(filters) + (storeLayer?.on ? 1 : 0);
+  const summary = describeFilters(filters, vocab, { storeEvents: storeLayer?.on });
+  function clearAll() {
+    onChange({ ...DEFAULT_FILTERS });
+    storeLayer?.onChange(false);
+  }
   const set = (patch: Partial<Filters>) => onChange({ ...filters, ...patch });
 
   const topIds = TOP_SELL_CHIPS.filter((id) => allVocabEntries(vocab).some((v) => v.id === id));
   const restEntries = allVocabEntries(vocab).filter((v) => !topIds.includes(v.id));
 
   return (
-    <details class="filters" open={open} onToggle={(e) => setOpen((e.currentTarget as HTMLDetailsElement).open)}>
-      <summary>
-        Filters
-        {active > 0 && <span class="badge badge-accent">{active} on</span>}
-      </summary>
-      <div class="filter-body card">
+    <div class="filters">
+      <div class="filters-bar">
+        <button type="button" class="btn filters-toggle" aria-expanded={open} aria-controls={`${idPrefix}-filter-panel`} onClick={() => setOpenRemembered(!open)}>
+          Filters{active > 0 ? ` (${active})` : ''}
+          <span aria-hidden="true">{open ? '\u25B4' : '\u25BE'}</span>
+        </button>
+        {active > 0 && (
+          <span class="filters-summary" title={summary}>
+            {summary}
+          </span>
+        )}
+        {active > 0 && (
+          <button type="button" class="link-button" onClick={clearAll} aria-label="Clear all filters">
+            Clear
+          </button>
+        )}
+      </div>
+      {open && (
+      <div class="filter-body card" id={`${idPrefix}-filter-panel`}>
         <div class="filter-group">
           <div class="label" id={`${idPrefix}-sells`}>What is sold</div>
           <div class="chips" role="group" aria-labelledby={`${idPrefix}-sells`}>
@@ -133,19 +165,13 @@ export function FilterBar({ filters, onChange, vocab, idPrefix, storeLayer }: Pr
 
         {active > 0 && (
           <div>
-            <button
-              type="button"
-              class="btn btn-small"
-              onClick={() => {
-                onChange({ ...DEFAULT_FILTERS });
-                storeLayer?.onChange(false);
-              }}
-            >
+            <button type="button" class="btn btn-small" onClick={clearAll}>
               Clear all filters
             </button>
           </div>
         )}
       </div>
-    </details>
+      )}
+    </div>
   );
 }
