@@ -4,11 +4,13 @@ on:
   pull_request:
     paths:
       - 'site/**'
+      - 'planner/**'
       - 'docs/DATA_MODEL.md'
       - '.github/workflows/site-ci.yml'
   push:
     paths:
       - 'site/**'
+      - 'planner/**'
       - 'docs/DATA_MODEL.md'
       - '.github/workflows/site-ci.yml'
 
@@ -16,8 +18,28 @@ permissions:
   contents: read
 
 jobs:
-  test:
+  planner:
+    # The route planner engine (planner/) is a separate package with its own tests: type check, unit
+    # and property tests, then the season benchmark.
     runs-on: ubuntu-latest
+    timeout-minutes: 15
+    defaults:
+      run:
+        working-directory: planner
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+          cache-dependency-path: planner/package-lock.json
+      - run: npm ci
+      - name: Type check, tests and benchmark
+        run: npm test
+
+  site:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
     defaults:
       run:
         working-directory: site
@@ -29,11 +51,12 @@ jobs:
           cache: npm
           cache-dependency-path: site/package-lock.json
       - run: npm ci
-      - name: Unit tests
+      - name: Unit tests (these also run the planner glue against the real planner code)
         run: npm test
       - name: Type check
         run: npx astro check
       # With no data in site/public/data this is the production build with its empty state. It
-      # fails if sample data is found anywhere in the output.
+      # fails if sample data is found anywhere in the output. The build bundles the planner worker
+      # from ../planner/src, so it also proves the Pages build works with the planner import.
       - name: Production build
         run: npm run build

@@ -50,7 +50,7 @@ export function sanitizePrefs(raw: unknown): FindPrefs {
     chip: o.chip === 'weekend' || o.chip === '2weeks' || o.chip === '30days' || o.chip === 'pick' ? o.chip : DEFAULT_FIND_PREFS.chip,
     pickFrom: typeof o.pickFrom === 'string' && isISODate(o.pickFrom) ? o.pickFrom : null,
     pickTo: typeof o.pickTo === 'string' && isISODate(o.pickTo) ? o.pickTo : null,
-    sort: o.sort === 'distance' || o.sort === 'size' || o.sort === 'match' || o.sort === 'date' ? o.sort : 'date',
+    sort: o.sort === 'distance' || o.sort === 'size' || o.sort === 'match' || o.sort === 'date' || o.sort === 'vendor' ? o.sort : 'date',
   };
 }
 

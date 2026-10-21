@@ -63,7 +63,7 @@ export function SettingsForm({ settings, vocab, onSave }: Props) {
       setHomeMsg({ kind: 'error', text: postalErrorMessage(r.reason) });
       return;
     }
-    change({ home: { postal: r.display, lat: r.lat, lon: r.lon, country: r.country } });
+    change({ home: { postal: r.display, lat: r.lat, lon: r.lon, country: r.country }, ...(r.country === 'CA' && s.currency === 'USD' ? { currency: 'CAD' as const } : {}) });
     setHomeMsg({ kind: 'ok', text: `Home set to ${r.display}.` });
   }
 
@@ -73,8 +73,7 @@ export function SettingsForm({ settings, vocab, onSave }: Props) {
   return (
     <form onSubmit={(e) => e.preventDefault()} aria-label="Vendor settings">
       <p class="muted">
-        These stay on this device. The route planner will use them to estimate costs and profit. Use dollars everywhere, US or Canadian, whichever you
-        deal in.
+        These stay on this device. The route planner will use them to estimate costs and profit. Fuel, hotel, food and sales are all in the money you pick under Driving.
       </p>
 
       <div class="card" style={{ marginBottom: '1rem' }}>
@@ -107,6 +106,13 @@ export function SettingsForm({ settings, vocab, onSave }: Props) {
       <div class="card" style={{ marginBottom: '1rem' }}>
         <h3 style={{ marginTop: 0 }}>Driving</h3>
         <div class="field-grid">
+          <div class="field">
+            <label for="currency">Your money is in</label>
+            <select id="currency" value={s.currency} onChange={(e) => change({ currency: (e.currentTarget as HTMLSelectElement).value === 'CAD' ? 'CAD' : 'USD' })}>
+              <option value="USD">US dollars</option>
+              <option value="CAD">Canadian dollars</option>
+            </select>
+          </div>
           <div class="field">
             <label for="fuel-unit">Fuel economy is in</label>
             <select id="fuel-unit" value={s.fuelEconomyUnit} onChange={(e) => change({ fuelEconomyUnit: (e.currentTarget as HTMLSelectElement).value as VendorSettings['fuelEconomyUnit'] })}>

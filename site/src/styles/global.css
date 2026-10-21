@@ -1390,6 +1390,368 @@ input[type='radio'] {
   margin-top: 2rem;
 }
 
+
+/* ---------- the planner ---------- */
+.plan-app {
+  display: grid;
+  gap: 1rem;
+}
+.tabs {
+  display: flex;
+  gap: 0.4rem;
+  margin-bottom: -0.6rem;
+}
+.tab {
+  flex: 1 1 0;
+  min-height: var(--tap);
+  padding: 0 0.8rem;
+  border: 2px solid var(--line);
+  border-bottom: 0;
+  border-radius: 12px 12px 0 0;
+  background: var(--surface-2);
+  color: var(--fg);
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+.tab[aria-selected='true'] {
+  background: var(--surface);
+  border-color: var(--accent);
+  color: var(--accent);
+}
+.end-same {
+  margin-top: 0;
+}
+@media (min-width: 40rem) {
+  .end-same {
+    margin-top: 1.7rem;
+  }
+}
+.plan-form > .field,
+.plan-form > .field-grid {
+  margin-bottom: 1rem;
+}
+.choice-cards {
+  display: grid;
+  gap: 0.5rem;
+  grid-template-columns: 1fr;
+}
+@media (min-width: 40rem) {
+  .choice-cards {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+.choice-card {
+  display: grid;
+  gap: 0.15rem;
+  text-align: left;
+  padding: 0.7rem 0.9rem;
+  min-height: var(--tap);
+  border: 2px solid var(--line);
+  border-radius: 12px;
+  background: var(--surface);
+  color: var(--fg);
+  font: inherit;
+  cursor: pointer;
+}
+.choice-card span {
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+.choice-card[aria-checked='true'] {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+}
+.choice-card[aria-checked='true'] strong::before {
+  content: '\2713 ';
+}
+.chip-static {
+  cursor: default;
+  padding-right: 0.3rem;
+}
+.chip-x {
+  min-width: 36px;
+  min-height: 36px;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  font-size: 1.3rem;
+  line-height: 1;
+  cursor: pointer;
+}
+.chip-x:hover {
+  background: var(--surface-2);
+}
+.run-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem 1rem;
+  align-items: center;
+  margin-top: 0.4rem;
+}
+.btn-big {
+  min-height: 56px;
+  font-size: 1.1rem;
+  padding: 0 1.6rem;
+}
+.progress {
+  margin: 0;
+  display: flex;
+  gap: 0.6rem;
+  align-items: center;
+  font-weight: 650;
+}
+.spinner {
+  display: inline-block;
+  width: 1.2rem;
+  height: 1.2rem;
+  border: 3px solid var(--line);
+  border-top-color: var(--accent);
+  border-radius: 50%;
+  animation: csa-spin 0.8s linear infinite;
+  flex: none;
+}
+@keyframes csa-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+.results-anchor {
+  scroll-margin-top: 1rem;
+}
+.results-anchor:focus {
+  outline: none;
+}
+.plan-results > h2 {
+  margin-top: 0.5rem;
+}
+.plan-card {
+  margin-top: 1rem;
+}
+.plan-head h3 {
+  margin-bottom: 0.2rem;
+}
+.plan-summary {
+  font-weight: 650;
+  margin: 0 0 0.2rem;
+}
+.plan-profit {
+  font-weight: 800;
+  color: var(--accent);
+  margin: 0 0 0.4rem;
+}
+.plan-summary-row {
+  display: grid;
+  gap: 0.15rem;
+  cursor: pointer;
+  list-style: none;
+  padding: 0.2rem 0;
+}
+.plan-summary-row::-webkit-details-marker {
+  display: none;
+}
+.plan-summary-row::before {
+  content: '\25B8  Show this plan';
+  color: var(--accent);
+  font-weight: 700;
+}
+details[open] > .plan-summary-row::before {
+  content: '\25BE  Hide this plan';
+}
+.plan-title {
+  font-weight: 800;
+  font-size: 1.15rem;
+}
+.plan-body h4 {
+  margin: 1.4rem 0 0.4rem;
+  font-size: 1.1rem;
+}
+.plan-body h5 {
+  margin: 0.8rem 0 0.3rem;
+  font-size: 1rem;
+}
+.plan-map {
+  height: 280px;
+  width: 100%;
+}
+.plan-map-loading {
+  height: 280px;
+  display: grid;
+  place-items: center;
+  color: var(--muted);
+}
+.csa-stop {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #0b4f9e;
+  color: #fff;
+  border: 3px solid #fff;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.55);
+  display: grid;
+  place-items: center;
+  font: 800 14px/1 var(--font);
+}
+.csa-start {
+  width: 26px;
+  height: 26px;
+  border-radius: 6px;
+  background: #171614;
+  color: #fff;
+  border: 2px solid #fff;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.55);
+  display: grid;
+  place-items: center;
+  font: 800 13px/1 var(--font);
+}
+.stop-list {
+  padding-left: 1.6rem;
+  margin: 0;
+}
+.stop {
+  padding: 0.6rem 0;
+  border-bottom: 1px solid var(--line);
+}
+.stop::marker {
+  font-weight: 800;
+  color: var(--accent);
+}
+.month-head {
+  color: var(--accent);
+}
+.fee-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.3rem 0.6rem;
+  margin: 0.4rem 0;
+}
+.fee-row label {
+  margin: 0;
+  font-weight: 600;
+}
+.fee-row input {
+  width: 7.5rem;
+  min-height: 44px;
+}
+.field-inline {
+  display: grid;
+  gap: 0.2rem;
+  margin: 0.4rem 0;
+  max-width: 20rem;
+}
+.field-inline label {
+  font-size: 0.92rem;
+  font-weight: 600;
+  margin: 0;
+}
+.field-inline input {
+  min-height: 44px;
+}
+.day {
+  border-left: 4px solid var(--line);
+  padding-left: 0.8rem;
+  margin: 0.6rem 0;
+}
+.day-items {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.day-items li {
+  margin: 0.25rem 0;
+}
+.day-items .night {
+  color: var(--muted);
+}
+.leg-list {
+  list-style: none;
+  padding: 0;
+}
+.leg-list li {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.2rem 1rem;
+  padding: 0.45rem 0;
+  border-bottom: 1px solid var(--line);
+}
+.cost-table td:last-child,
+.cost-table th:last-child {
+  text-align: right;
+  white-space: nowrap;
+}
+.total-row th,
+.total-row td {
+  font-weight: 800;
+  border-top: 2px solid var(--fg);
+}
+.money-label {
+  font-size: 1.15rem;
+  margin: 0.6rem 0;
+}
+.edit-box {
+  margin-top: 1rem;
+  padding: 0.8rem 1rem;
+  border: 2px dashed var(--line);
+  border-radius: var(--radius);
+}
+.share-box {
+  margin: 0.6rem 0;
+}
+.deadline-plain {
+  list-style: none;
+  padding: 0;
+}
+.deadline-plain li {
+  padding: 0.45rem 0;
+  border-bottom: 1px solid var(--line);
+}
+.deadline-plain li.passed {
+  color: var(--muted);
+}
+.rate-box .input-row {
+  align-items: center;
+}
+.rate-label {
+  white-space: nowrap;
+  font-weight: 700;
+}
+.rate-box input {
+  max-width: 9rem;
+}
+.excluded-list {
+  padding-left: 1.2rem;
+}
+
+/* vendor score on a result row */
+.vendor-score {
+  display: grid;
+  gap: 0.15rem;
+  padding: 0.5rem 0.7rem;
+  border-radius: 10px;
+  background: var(--accent-soft);
+  border: 1px solid var(--accent);
+}
+.vendor-score .score {
+  font-weight: 800;
+  color: var(--accent);
+}
+.vendor-score .score.out {
+  color: var(--muted);
+}
+.vendor-score ul {
+  margin: 0;
+  padding-left: 1.1rem;
+  font-size: 0.95rem;
+}
+.vendor-tools {
+  margin: 0.6rem 0;
+  padding: 0.7rem 0.9rem;
+}
+
 /* ---------- misc ---------- */
 .prose {
   max-width: 44rem;

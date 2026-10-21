@@ -64,6 +64,23 @@ describe('prepare-data in a production build', () => {
     expect(index.rows[0]).toMatchObject({ i: 'garden-state-2026-11-14', n: 'Garden State Card Show', r: 'NJ' });
   });
 
+  it('writes planner.json for the route planner, leaving out shows with no place or time zone', () => {
+    const noPlace = { ...realShow, id: 'nowhere-2026-11-14', venue: { ...realShow.venue, lat: null, lon: null } };
+    const root = tempSite({ 'public/data/shows.json': [{ ...realShow, timezone: 'America/New_York' }, noPlace], 'public/data/manifest.json': { fixture: false } });
+    const r = run('prepare-data.mjs', ['--build'], root);
+    expect(r.status).toBe(0);
+    expect(r.stdout).toMatch(/planner \d+ KB, 1 without a place or time zone/);
+    const planner = JSON.parse(fs.readFileSync(path.join(root, 'public/data/planner.json'), 'utf8'));
+    expect(planner).toMatchObject({ v: 1, count: 1, fixture: false });
+    expect(planner.rows[0]).toMatchObject({ id: 'garden-state-2026-11-14', timezone: 'America/New_York', lat: 40.5, lon: -74.4 });
+  });
+
+  it('writes an empty planner.json when there is no data', () => {
+    const root = tempSite({});
+    expect(run('prepare-data.mjs', ['--build'], root).status).toBe(0);
+    expect(JSON.parse(fs.readFileSync(path.join(root, 'public/data/planner.json'), 'utf8'))).toMatchObject({ count: 0, rows: [] });
+  });
+
   it('stops when shows.json has records but none can be read', () => {
     const root = tempSite({ 'public/data/shows.json': [{ nonsense: true }, { id: 'x' }] });
     const r = run('prepare-data.mjs', ['--build'], root);
@@ -90,6 +107,12 @@ describe('check-dist after a build', () => {
   it('fails when a data file is marked as a fixture or holds sample shows', () => {
     expect(run('check-dist.mjs', [], tempSite({ 'dist/index.html': page, 'dist/data/index.json': { fixture: true } })).status).toBe(1);
     expect(run('check-dist.mjs', [], tempSite({ 'dist/index.html': page, 'dist/data/shows.json': [sampleShow] })).status).toBe(1);
+  });
+
+  it('fails when planner.json holds sample rows', () => {
+    const rows = [{ id: 'sample-a-2026-11-14', name: 'Sample A Card Show', lat: 40, lon: -74 }];
+    expect(run('check-dist.mjs', [], tempSite({ 'dist/index.html': page, 'dist/data/planner.json': { v: 1, fixture: false, rows } })).status).toBe(1);
+    expect(run('check-dist.mjs', [], tempSite({ 'dist/index.html': page, 'dist/data/planner.json': { v: 1, fixture: false, rows: [{ id: 'garden-state-2026-11-14', name: 'Garden State Card Show' }] } })).status).toBe(0);
   });
 
   it('fails when there is a page for a sample show', () => {

@@ -3,11 +3,18 @@ import Base from '../../layouts/Base.astro';
 import PlanApp from '../../islands/PlanApp';
 ---
 
-<Base title="Plan a trip" description="Route planning for card shows is coming: weekend runs, a season planner and a profit estimate on every plan." path="plan/">
+<Base title="Plan a trip" description="Plan a weekend run or a whole season of card shows: the best shows, the drive, the hotel nights, application deadlines and an estimate of what it may cost and earn." path="plan/">
   <div class="container page narrow">
     <h1>Plan a trip</h1>
+    <p class="muted">
+      Pick your dates and the planner finds the best shows, the drives and the hotel nights, with an estimate of costs and profit. It runs on your
+      device. Nothing you enter is sent to a server.
+    </p>
     <PlanApp client:only="preact">
-      <p slot="fallback" class="loading" role="status">Loading...</p>
+      <p slot="fallback" class="loading" role="status">Loading the planner...</p>
     </PlanApp>
+    <noscript>
+      <p class="notice notice-warn">The planner needs JavaScript.</p>
+    </noscript>
   </div>
 </Base>

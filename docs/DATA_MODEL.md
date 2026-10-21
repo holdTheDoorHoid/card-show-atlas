@@ -159,6 +159,7 @@ Sunday of most months"), `editions` (ids), `links`, `history` (past attendance p
 | --- | --- |
 | `site/public/data/shows.json` | Full records for shows from 30 days ago to 24 months ahead, plus `estimate`. Used to build static show pages. |
 | `site/public/data/index.json` | Compact rows for the map and lists (built by the site's prepare step from `shows.json`). |
+| `site/public/data/planner.json` | The route planner's rows: hours, time zone, table prices and estimates (built by the site's prepare step from `shows.json`; shows without coordinates or a time zone are left out). |
 | `site/public/data/store_events.json` | The store events layer, compact rows. Loaded only when switched on. |
 | `site/public/data/series.json`, `promoters.json` | For series pages. |
 | `site/public/data/vocab.json` | Copy of the vocabulary. |

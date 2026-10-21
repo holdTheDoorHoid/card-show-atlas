@@ -15,6 +15,8 @@ export const STORAGE_KEYS = {
   location: 'csa.location.v1',
   filters: 'csa.filters.v1',
   filtersOpen: 'csa.filtersopen.v1',
+  rates: 'csa.rates.v1',
+  weights: 'csa.weights.v1',
   find: 'csa.find.v1',
   lastBackup: 'csa.lastbackup.v1',
   theme: 'csa.theme.v1',

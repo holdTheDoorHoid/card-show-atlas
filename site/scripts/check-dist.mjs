@@ -39,6 +39,9 @@ for (const file of walk(dist)) {
     }
     if (json && json.fixture === true) problems.push(`${rel}: fixture is true`);
     const list = Array.isArray(json) ? json : Array.isArray(json?.shows) ? json.shows : [];
+    // planner.json holds packed rows without a venue or sources: sample rows are named and id'd as samples
+    const rowsBad = Array.isArray(json?.rows) ? json.rows.filter((r) => r && typeof r.id === 'string' && r.id.startsWith('sample-') && /^Sample\b/.test(String(r.name ?? ''))).length : 0;
+    if (rowsBad > 0) problems.push(`${rel}: ${rowsBad} rows look like sample shows`);
     const bad = list.filter(looksLikeFixtureShow).length;
     if (bad > 0) problems.push(`${rel}: ${bad} records look like sample shows`);
   }
