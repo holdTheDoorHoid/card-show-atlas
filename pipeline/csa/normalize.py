@@ -159,7 +159,7 @@ def repair_venue(value: Any, notes: Notes) -> dict:
                 notes.add(f"venue.{k}", f"{v[k]!r} is not a number, dropped")
                 v[k] = None
     lat, lon = v.get("lat"), v.get("lon")
-    if lat is not None and lon is not None and abs(lat) > 90 and abs(lon) <= 90:
+    if lat is not None and lon is not None and ((abs(lat) > 90 and abs(lon) <= 90) or (lat < 0 < lon <= 90)):
         v["lat"], v["lon"] = lon, lat
         notes.add("venue", "latitude and longitude were swapped, fixed")
     if (v.get("lat") is None) != (v.get("lon") is None):
