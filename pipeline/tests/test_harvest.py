@@ -186,3 +186,10 @@ def test_scaffold_makes_a_module_and_a_registry_snippet(hroot, monkeypatch, tmp_
         harvest.scaffold_source(Paths(hroot), "my_source", "My Source", "https://mine.example/shows", TODAY)
     with pytest.raises(ValueError):
         harvest.scaffold_source(Paths(hroot), "Bad-Id", "x", "https://x.example", TODAY)
+
+
+def test_a_source_on_the_never_use_list_is_not_fetched(hroot, vocab):
+    (hroot / "data/never_use_domains.yaml").write_text("never_use_domains:\n  - example.org\n")
+    t = fixture_transport()
+    res = harvest.run_source(Paths(hroot), "example_calendar", vocab, today=TODAY, transport=t, force_disabled=True, http_options=NO_SLEEP)
+    assert res.status == "error" and "never use" in res.message and t.requests == []

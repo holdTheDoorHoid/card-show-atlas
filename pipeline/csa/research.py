@@ -12,12 +12,14 @@ rewritten agent file replaces that agent's earlier records and nothing else.
 from __future__ import annotations
 
 import json
+import re
 from dataclasses import dataclass, field
 from datetime import date
 from pathlib import Path
 from typing import Any
 
 from . import model, regions
+from .domains import DomainPolicy
 from .normalize import Notes, _clean_text, repair_edition
 from .paths import Paths
 from .recurring import repair_series, rule_problems
@@ -25,18 +27,17 @@ from .textparse import host_of, norm_url, same_site
 from .util import add_months, parse_iso_date, read_jsonl, today as today_fn, write_jsonl
 from .vocab import Vocab
 
-# Pages we may link to but never take facts from (research brief, rule 3).
-LEAD_ONLY_HOSTS = ("facebook.com", "fb.com", "fb.me", "instagram.com", "eventbrite.com", "eventbrite.ca",
-                   "meetup.com", "tiktok.com", "x.com", "twitter.com", "allevents.in", "t.co")
 EVIDENCE_FIELDS_EXTRA = {"cadence", "known_dates", "cancelled_dates", "rule", "hours", "last_confirmed"}
 EARLIEST_YEAR = 2015
 MAX_YEARS_AHEAD = 3
 MAX_SPAN_DAYS = 14
 
 
-def is_lead_only(url: str | None) -> bool:
-    host = host_of(url)
-    return any(host == h or host.endswith("." + h) for h in LEAD_ONLY_HOSTS)
+SUPPORT_ALIASES = {k: f"venue.{k}" for k in ("city", "region", "address", "postal", "country", "lat", "lon")}
+SUPPORT_ALIASES.update({"dates": "days", "date": "days"})
+DATE_SUPPORT = {"days", "known_dates", "rule", "cadence"}
+NEVER_USE_REASON = "evidence only from never use sources"
+LINK_ONLY_REASON = "evidence only from link only sites (Facebook, Instagram, TikTok, X, Eventbrite, Meetup, AllEvents)"
 
 
 @dataclass
@@ -51,6 +52,7 @@ class ImportReport:
     repaired: int = 0  # records that needed at least one repair
     leads: int = 0
     blocked: int = 0
+    never_use_dropped: int = 0
     searches_used: int = 0
     fetches_used: int = 0
     rejected_rows: list[dict] = field(default_factory=list)
@@ -60,7 +62,8 @@ class ImportReport:
                f"  accepted {self.accepted} ({self.editions} editions, {self.series} series), "
                f"{self.repaired} of them repaired",
                f"  rejected {self.rejected}",
-               f"  leads kept {self.leads}, blocked pages noted {self.blocked}",
+               f"  leads kept {self.leads}, blocked pages noted {self.blocked}, "
+               f"evidence dropped from never use sites {self.never_use_dropped}",
                f"  agents used {self.searches_used} searches and {self.fetches_used} fetches"]
         for row in self.rejected_rows[:20]:
             out.append(f"    rejected {row.get('file')} #{row.get('index')} {row.get('name') or ''}: "
@@ -72,9 +75,25 @@ class ImportReport:
 
 # ---------------------------------------------------------------- evidence
 
-def _clean_evidence(raw: Any, notes: Notes, today: date, known_paths: set[str]) -> list[dict]:
-    out = []
+@dataclass
+class EvidenceResult:
+    kept: list[dict] = field(default_factory=list)
+    given: int = 0
+    dropped_never: int = 0
+    dropped_link_only: int = 0
+
+    @property
+    def dropped_any_source(self) -> bool:
+        return bool(self.dropped_never or self.dropped_link_only)
+
+    def supported(self) -> set[str]:
+        return {f for ev in self.kept for f in ev["supports"]}
+
+
+def _clean_evidence(raw: Any, notes: Notes, today: date, policy: DomainPolicy) -> EvidenceResult:
+    res = EvidenceResult()
     for i, ev in enumerate(raw if isinstance(raw, list) else []):
+        res.given += 1
         path = f"evidence[{i}]"
         if not isinstance(ev, dict):
             notes.add(path, "not an object, dropped")
@@ -83,8 +102,13 @@ def _clean_evidence(raw: Any, notes: Notes, today: date, known_paths: set[str]) 
         if url is None:
             notes.add(path, f"{ev.get('url')!r} is not a web address, dropped")
             continue
-        if is_lead_only(url):
-            notes.add(path, f"{host_of(url)} is a lead only site, not accepted as evidence")
+        if policy.is_never_use(url):
+            res.dropped_never += 1
+            notes.add(path, f"{host_of(url)} is a never use site, evidence dropped")
+            continue
+        if policy.is_link_only(url):
+            res.dropped_link_only += 1
+            notes.add(path, f"{host_of(url)} is a link only site, not accepted as evidence")
             continue
         seen = parse_iso_date(ev.get("seen"))
         if seen is None and ev.get("seen"):
@@ -97,14 +121,40 @@ def _clean_evidence(raw: Any, notes: Notes, today: date, known_paths: set[str]) 
             notes.add(path + ".seen", "no usable date, set to the import date")
         supports = []
         for f in ev.get("supports") or []:
-            f = str(f)
+            f = re.sub(r"\s*\(.*?\)\s*$", "", str(f)).strip()  # "days (year 2026)" means "days"
+            f = SUPPORT_ALIASES.get(f, f)
             top = f.split(".")[0]
-            if f in known_paths or top in model.SHOW_KEY_ORDER or f in EVIDENCE_FIELDS_EXTRA:
+            if (top in model.SHOW_KEY_ORDER or f in EVIDENCE_FIELDS_EXTRA) and f not in supports:
                 supports.append(f)
-            else:
+            elif f not in supports:
                 notes.add(path + ".supports", f"{f!r} is not a field name, dropped")
-        out.append({"url": url, "seen": seen.isoformat(), "supports": supports})
-    return out
+        res.kept.append({"url": url, "seen": seen.isoformat(), "supports": supports})
+    return res
+
+
+def _missing_support(supported: set[str]) -> list[str]:
+    """Which of name, dates and venue no remaining evidence supports."""
+    missing = []
+    if "name" not in supported:
+        missing.append("name")
+    if not (supported & DATE_SUPPORT or any(f.startswith("days") for f in supported)):
+        missing.append("dates")
+    if not any(f == "venue" or f.startswith("venue.") for f in supported):
+        missing.append("venue")
+    return missing
+
+
+def _strip_forbidden_urls(rec: dict, policy: DomainPolicy, notes: Notes) -> None:
+    """Remove the addresses of never use sites from every link field."""
+    def check(container: dict | None, key: str, label: str):
+        if isinstance(container, dict) and container.get(key) and policy.is_never_use(container[key]):
+            notes.add(label, f"{host_of(container[key])} is a never use site, address removed")
+            container[key] = None
+    for k in model.LINK_KEYS:
+        check(rec.get("links"), k, f"links.{k}")
+    check(rec.get("organizer"), "url", "organizer.url")
+    check(rec.get("vendor"), "application_url", "vendor.application_url")
+    check((rec.get("size") or {}).get("reported_attendance"), "source_url", "size.reported_attendance.source_url")
 
 
 def _decide_verification(rec: dict, evidence: list[dict], vocab: Vocab, notes: Notes) -> str:
@@ -229,8 +279,10 @@ def _drop_bad_coordinates(rec: dict, notes: Notes) -> None:
 
 # ---------------------------------------------------------------- one record
 
-def process_record(raw: Any, vocab: Vocab, today: date) -> tuple[dict | None, list[str], list[str]]:
+def process_record(raw: Any, vocab: Vocab, today: date,
+                   policy: DomainPolicy | None = None) -> tuple[dict | None, list[str], list[str]]:
     """Return (clean record or None, reasons it was rejected, repair notes)."""
+    policy = policy or DomainPolicy()
     if not isinstance(raw, dict):
         return None, ["the record is not a JSON object"], []
     kind = raw.get("kind")
@@ -253,10 +305,20 @@ def process_record(raw: Any, vocab: Vocab, today: date) -> tuple[dict | None, li
         cid = "low"
     reasons = validate_series(rec, vocab, today, notes) if kind == "series" else validate_edition(rec, vocab, today, notes)
 
-    evidence = _clean_evidence(raw.get("evidence"), notes, today, set())
+    _strip_forbidden_urls(rec, policy, notes)
+    found = _clean_evidence(raw.get("evidence"), notes, today, policy)
+    evidence = found.kept
     if not evidence:
-        reasons.append("no usable evidence: each record needs at least one link to a page that is not Facebook, "
-                       "Instagram, Eventbrite, Meetup, TikTok, X or AllEvents")
+        if found.dropped_never:
+            reasons.append(NEVER_USE_REASON)
+        else:
+            reasons.append("no usable evidence: each record needs at least one link to a page that is not Facebook, "
+                           "Instagram, Eventbrite, Meetup, TikTok, X or AllEvents")
+    elif found.dropped_any_source:
+        missing = _missing_support(found.supported())
+        if missing:
+            reasons.append(f"{NEVER_USE_REASON if found.dropped_never else LINK_ONLY_REASON}: "
+                           f"nothing else supports the {' and the '.join(missing)}")
     if reasons:
         return None, reasons, list(notes)
 
@@ -319,6 +381,7 @@ def import_wave(paths: Paths, wave: str, vocab: Vocab, today: date | None = None
     if not inbox.is_dir():
         raise FileNotFoundError(f"no inbox folder for wave {wave!r}: {inbox}")
     report = ImportReport(wave)
+    policy = DomainPolicy.load(paths.data / "never_use_domains.yaml")
     out_path = paths.research / f"{wave}.jsonl"
     existing = read_jsonl(out_path)
     new_by_agent: dict[str, list[dict]] = {}
@@ -343,7 +406,8 @@ def import_wave(paths: Paths, wave: str, vocab: Vocab, today: date | None = None
         leads += _lead_rows(agent, wave, data)
         for i, raw in enumerate(data["records"]):
             report.records_seen += 1
-            clean, reasons, notes = process_record(raw, vocab, today)
+            clean, reasons, notes = process_record(raw, vocab, today, policy)
+            report.never_use_dropped += sum(1 for n in notes if "never use site, evidence dropped" in n)
             if clean is None:
                 name = raw.get("name") if isinstance(raw, dict) else None
                 rejected.append({"file": f.name, "index": i, "name": name, "reasons": reasons})

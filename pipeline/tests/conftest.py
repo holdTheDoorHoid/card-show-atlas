@@ -76,7 +76,7 @@ def root(tmp_path) -> Path:
     """A throwaway repository root with the real vocabulary, priors and sources registry copied in."""
     (tmp_path / "docs").mkdir()
     (tmp_path / "docs" / "DATA_MODEL.md").write_text("x")
-    for rel in ("data/vocab.json", "data/model/priors.json", ".github/ISSUE_TEMPLATE"):
+    for rel in ("data/vocab.json", "data/model/priors.json", "data/never_use_domains.yaml", ".github/ISSUE_TEMPLATE"):
         src = REPO / rel
         dst = tmp_path / rel
         if src.is_dir():

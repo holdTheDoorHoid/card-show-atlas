@@ -17,6 +17,7 @@ from typing import Any, Callable
 import httpx
 
 from . import model
+from .domains import DomainPolicy
 from .http import BotChallenge, FetchError, HttpClient
 from .normalize import repair_edition
 from .paths import Paths
@@ -141,6 +142,12 @@ def run_source(
         raise ValueError(f"{source_id} has method {entry['method']!r}; only script sources can be harvested")
     if not entry["enabled"] and not force_disabled:
         return HarvestResult(source_id, "disabled", message="enabled is false in sources.yaml")
+    policy = DomainPolicy.load(paths.data / "never_use_domains.yaml")
+    if entry.get("url") and policy.is_never_use(entry["url"]):
+        res = HarvestResult(source_id, "error", message=f"{entry['url']} is on the never use list "
+                                                         "(data/never_use_domains.yaml), so it is not fetched")
+        _record_status(paths, res, today)
+        return res
 
     opts = dict(http_options or {})
     opts.setdefault("min_interval", float(entry.get("min_interval", 1.0)))

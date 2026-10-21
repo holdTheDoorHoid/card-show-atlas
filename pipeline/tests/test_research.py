@@ -225,3 +225,138 @@ def test_rejected_file_goes_away_when_nothing_is_rejected(root, vocab, wave):
     (wave / "a01.json").write_text(json.dumps({"agent": "a01", "records": [edition()]}))
     research.import_wave(Paths(root), "w1", vocab, TODAY)
     assert not (wave / "_rejected.jsonl").exists()
+
+
+# ---------------------------------------------------------------- never use and link only sites
+
+NEVER = ["https://www.beckett.com/news/x", "https://shows.collect.com/a", "https://10times.com/e/1", "https://rk9.gg/event/1",
+         "https://locator.wizards.com/store/1", "https://www.cardshowmap.com/s", "https://x.cardpulse.club/y"]
+
+
+def ev(url, supports, seen="2026-10-21"):
+    return {"url": url, "seen": seen, "supports": supports}
+
+
+def import_one(root, vocab, wave, rec):
+    for f in wave.glob("*.json"):
+        f.unlink()
+    put(wave, "x.json", {"agent": "x", "records": [rec]})
+    rep = research.import_wave(Paths(root), "w1", vocab, TODAY)
+    rows = read_jsonl_file(root / "data/research/w1.jsonl")
+    rej = read_jsonl_file(wave / "_rejected.jsonl")
+    return rep, rows, rej
+
+
+@pytest.mark.parametrize("url", NEVER)
+def test_evidence_only_from_a_never_use_site_is_rejected(root, vocab, wave, url):
+    rep, rows, rej = import_one(root, vocab, wave, edition(evidence=[ev(url, ["name", "days", "venue"])]))
+    assert rep.accepted == 0 and rows == []
+    assert rej[0]["reasons"] == ["evidence only from never use sources"]
+
+
+def test_subdomains_and_wildcards_match_but_lookalikes_do_not(root, vocab, wave):
+    rep, rows, _ = import_one(root, vocab, wave, edition(evidence=[ev("https://notbeckett.com/x", ["name", "days", "venue"])]))
+    assert rep.accepted == 1  # notbeckett.com is a different site from beckett.com
+    rep, rows, _ = import_one(root, vocab, wave, edition(evidence=[ev("https://BECKETT.com/x", ["name", "days", "venue"])]))
+    assert rep.accepted == 0  # the match ignores upper case
+
+
+def test_never_use_evidence_is_dropped_and_the_rest_must_still_cover_name_dates_and_venue(root, vocab, wave):
+    good = ev("https://example.com/fall-show", ["name", "days", "venue"])
+    rep, rows, rej = import_one(root, vocab, wave, edition(evidence=[ev(NEVER[0], ["name", "days", "venue", "admission"]), good]))
+    assert rep.accepted == 1 and rep.never_use_dropped == 1
+    assert [e["url"] for e in rows[0]["evidence"]] == ["https://example.com/fall-show"]
+    assert [s["url"] for s in rows[0]["sources"]] == ["https://example.com/fall-show"]  # the credit never names the banned site
+    assert any("never use site" in n for n in rows[0]["repairs"])
+
+    partial = ev("https://example.com/fall-show", ["name", "days"])
+    rep, rows, rej = import_one(root, vocab, wave, edition(evidence=[ev(NEVER[0], ["venue"]), partial]))
+    assert rep.accepted == 0
+    assert rej[0]["reasons"][0].startswith("evidence only from never use sources")
+    assert "venue" in rej[0]["reasons"][0]
+
+
+def test_two_good_pages_together_can_cover_the_minimum(root, vocab, wave):
+    rep, rows, rej = import_one(root, vocab, wave, edition(evidence=[
+        ev(NEVER[1], ["name", "days", "venue"]), ev("https://example.com/a", ["name", "days"]), ev("https://example.org/b", ["venue.address"])]))
+    assert rep.accepted == 1
+
+
+def test_a_record_that_never_used_banned_evidence_is_not_held_to_the_minimum(root, vocab, wave):
+    # supports lists are often partial; the minimum is only enforced when a banned or link only page was dropped
+    rep, rows, _ = import_one(root, vocab, wave, edition(evidence=[ev("https://example.com/a", ["vendor.tables"])]))
+    assert rep.accepted == 1
+
+
+def test_never_use_addresses_are_stripped_from_every_link_field(root, vocab, wave):
+    rec = edition(links={"official": "https://example.com/fall-show", "tickets": "https://www.beckett.com/t", "facebook": "https://www.facebook.com/x"},
+                  organizer={"name": "P", "url": "https://shows.collect.com/p"},
+                  vendor={"application_url": "https://cardshowhub.com/apply", "status": "open"},
+                  size={"tables": 50, "reported_attendance": {"value": 900, "year": 2025, "source_url": "https://psacard.com/news"}},
+                  evidence=[ev("https://example.com/fall-show", ["name", "days", "venue"])])
+    rep, rows, _ = import_one(root, vocab, wave, rec)
+    r = rows[0]
+    assert r["links"] == {"official": "https://example.com/fall-show", "tickets": None, "facebook": "https://www.facebook.com/x"}
+    assert r["organizer"]["url"] is None and r["vendor"]["application_url"] is None
+    assert r["size"]["reported_attendance"]["source_url"] is None and r["size"]["reported_attendance"]["value"] == 900
+    assert not any(banned in json.dumps({k: v for k, v in r.items() if k != "repairs"}) for banned in ("beckett", "collect.com", "cardshowhub", "psacard"))
+
+
+@pytest.mark.parametrize("url", ["https://www.facebook.com/exampleshow", "https://m.facebook.com/x", "https://instagram.com/p/1", "https://www.tiktok.com/@x",
+                                 "https://x.com/show", "https://twitter.com/show", "https://www.eventbrite.com/e/1", "https://www.eventbrite.ca/e/1",
+                                 "https://www.eventbrite.co.uk/e/1", "https://www.meetup.com/g/events/1", "https://allevents.in/city/show"])
+def test_social_and_ticketing_sites_are_links_only_never_evidence(root, vocab, wave, url):
+    rec = edition(links={"official": "https://example.com/fall-show", "facebook": url},
+                  evidence=[ev(url, ["name", "days", "venue"])])
+    rep, rows, rej = import_one(root, vocab, wave, rec)
+    assert rep.accepted == 0
+    assert "no usable evidence" in rej[0]["reasons"][0]
+    # the same site is fine in links when real evidence exists
+    rec["evidence"] = [ev("https://example.com/fall-show", ["name", "days", "venue"]), ev(url, ["days"])]
+    rep, rows, _ = import_one(root, vocab, wave, rec)
+    assert rep.accepted == 1 and rows[0]["links"]["facebook"] == url
+    assert [e["url"] for e in rows[0]["evidence"]] == ["https://example.com/fall-show"]
+
+
+def test_a_link_only_page_cannot_be_the_only_proof_of_the_dates(root, vocab, wave):
+    rec = edition(evidence=[ev("https://example.com/fall-show", ["name", "venue"]), ev("https://www.facebook.com/post/1", ["days"])])
+    rep, rows, rej = import_one(root, vocab, wave, rec)
+    assert rep.accepted == 0
+    assert "link only" in rej[0]["reasons"][0] and "dates" in rej[0]["reasons"][0]
+
+
+def test_series_follow_the_same_rules(root, vocab, wave):
+    base = dict(kind="series", rule={"freq": "monthly", "weekday": "sun", "nth": 2}, last_confirmed="2026-10-01", known_dates=["2026-11-08"])
+    rec = edition(**base, evidence=[ev(NEVER[0], ["name", "known_dates", "venue", "cadence"])])
+    rec.pop("days")
+    rep, rows, rej = import_one(root, vocab, wave, rec)
+    assert rep.accepted == 0 and rej[0]["reasons"] == ["evidence only from never use sources"]
+    rec["evidence"] = [ev(NEVER[0], ["cadence"]), ev("https://example.com/schedule", ["name", "known_dates", "venue"])]
+    rep, rows, rej = import_one(root, vocab, wave, rec)
+    assert rep.accepted == 1 and rows[0]["kind"] == "series"
+
+
+def test_supports_labels_with_notes_in_brackets_still_count(root, vocab, wave):
+    rec = edition(evidence=[ev(NEVER[0], ["name"]), ev("https://example.com/a", ["name", "days (year 2026)", "region", "city"])])
+    rep, rows, _ = import_one(root, vocab, wave, rec)
+    assert rep.accepted == 1
+    assert rows[0]["evidence"][0]["supports"] == ["name", "days", "venue.region", "venue.city"]
+
+
+def test_the_policy_file_is_read_from_the_data_folder(root, vocab, wave):
+    (root / "data" / "never_use_domains.yaml").write_text("never_use_domains:\n  - example.com\nlink_only_domains: []\n")
+    rep, rows, rej = import_one(root, vocab, wave, edition())
+    assert rep.accepted == 0 and rej[0]["reasons"] == ["evidence only from never use sources"]
+
+
+def test_the_shipped_policy_lists_every_required_domain():
+    from csa.domains import DomainPolicy
+    from conftest import REPO
+    pol = DomainPolicy.load(REPO / "data" / "never_use_domains.yaml")
+    for d in ["sportscollectorsdigest.com", "collect.com", "cardshowmap.com", "treasurehunter.show", "thecardshopfinder.com", "cardshowhub.com",
+              "cardshowdirectory.com", "sportscardinvestor.com", "cardpulse.club", "beckett.com", "psacard.com", "sportscollectorsdaily.com",
+              "locator.wizards.com", "rk9.gg", "melee.gg", "fancons.com", "animecons.com", "cantonfair.net", "10times.com", "tradefest.io"]:
+        assert pol.is_never_use("https://www." + d + "/x") and pol.is_never_use("https://sub." + d), d
+    for d in ["facebook.com", "instagram.com", "tiktok.com", "x.com", "twitter.com", "eventbrite.com", "eventbrite.de", "meetup.com", "allevents.in"]:
+        assert pol.is_link_only("https://www." + d + "/x"), d
+    assert not pol.is_never_use("https://example.com") and not pol.is_link_only("https://box.com/x") and not pol.is_never_use("https://wizards.com")
