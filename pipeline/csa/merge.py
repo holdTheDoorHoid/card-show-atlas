@@ -28,6 +28,7 @@ from rapidfuzz import fuzz
 from . import model
 from .geocode import GeoCache, PostalTable, fill_from_cache
 from .normalize import repair_edition
+from .regions import country_of_region
 from .paths import Paths
 from .recurring import TENTATIVE_NOTE, expand_series
 from .sourcesreg import by_id
@@ -171,8 +172,7 @@ def prepare(c: Contribution) -> Contribution:
     c.start = parse_iso_date(c.rec["days"][0]["date"])
     c.end = parse_iso_date(c.rec["days"][-1]["date"]) or c.start
     c.region = v.get("region")
-    c.country = v.get("country") or ("CA" if c.region in ("AB", "BC", "MB", "NB", "NL", "NS", "NT", "NU", "ON", "PE", "QC", "SK", "YT")
-                                      else "US" if c.region else None)
+    c.country = v.get("country") or country_of_region(c.region)
     c.venue_key = _norm_venue_name(v.get("name"))
     c.street_key = _norm_street(v.get("address"))
     c.city_key = norm_text(v.get("city"))
