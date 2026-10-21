@@ -9,7 +9,7 @@
   "scripts": {
     "prepare-data": "node scripts/prepare-data.mjs",
     "dev": "node scripts/prepare-data.mjs --dev && astro dev",
-    "build": "node scripts/prepare-data.mjs --build && node scripts/clean.mjs && astro build && node scripts/check-dist.mjs",
+    "build": "node scripts/prepare-data.mjs --build && node scripts/clean.mjs && astro build && node scripts/prune-dist.mjs && node scripts/check-dist.mjs",
     "preview": "astro preview",
     "check": "astro check",
     "test": "vitest run",

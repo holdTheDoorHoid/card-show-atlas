@@ -16,7 +16,7 @@
   "lorcana_playhub": {
     "date": "2026-10-21",
     "message": "",
-    "records": 22,
+    "records": 0,
     "skipped": 0,
     "status": "ok"
   },
@@ -37,14 +37,14 @@
   "riftbound_locator": {
     "date": "2026-10-21",
     "message": "",
-    "records": 2,
+    "records": 0,
     "skipped": 0,
     "status": "ok"
   },
   "swu_calendar": {
     "date": "2026-10-21",
     "message": "",
-    "records": 4,
+    "records": 0,
     "skipped": 0,
     "status": "ok"
   },
