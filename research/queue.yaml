@@ -1,0 +1,19 @@
+# Research queue. Waves run in order. status: todo, running, done, held.
+waves:
+  - id: w1-promoters
+    brief: promoters
+    status: running
+    batches:
+      a01: [nscc, dallas_card_show, front_row, philly_show, chicago_sports_spectacular, genesis, maximum, flippin]
+      a02: [apex, tx_card_shows, albany, tcgkon, tcg_national, usa_card_show, sport_card_expo, greenie]
+      a03: [rk_sports, jj_allstar, georgia_collectible, morris_county, elite_expo, ultimate_banger, duuuval, cardshowpsl]
+      a04: [collective_con, big_show, sb_sports, boston_sports_memorabilia, major_league_collective, palm_beach, fanatics_fest, northeast_expo]
+      a05: [arlington, grail_card, hard_hittin, cardboard_culture, card_show_by_the_bay, norwalk, hightstown, poppel]
+    searches_per_agent: 6
+  - id: w1-premier
+    brief: premier
+    status: running
+    batches:
+      p01: "TCG premier events with vendor halls, next 15 months: MagicCon Atlanta (Nov 2026) and any 2027 MagicCons in North America; SCG CON events; BCG Fest Orlando (Jan 2027); CoolStuffCon Orlando (Oct 30 to Nov 1 2026); Disney Lorcana Challenges in the US and Canada; One Piece Regionals and Treasure Cups in North America; Riftbound Regional Championships (Las Vegas Dec 2026, Philadelphia Feb 2027, Dallas Mar 2027); Flesh and Blood Callings in North America; Star Wars Unlimited Sector Qualifiers and the 2027 Galactic Championship; Sorcery and Digimon, Dragon Ball Fusion World and Gundam regionals in North America."
+      p02: "Big collectibles and gaming conventions, next 15 months: The National Sports Collectors Convention 2027; Fanatics Fest NYC 2027; The TCG National (Dallas, Jan 2027); Sport Card and Memorabilia Expo Toronto; The Philly Show; Chicago Sports Spectacular; Gen Con 2027; Origins Game Fair 2027; PAX Unplugged 2026; PAX East and PAX West 2027 (card vendors); Collect-A-Con vendor rules (dates come from a script, skip dates); any other North American card convention with 500 or more tables that you find on the way."
+    searches_per_agent: 8
