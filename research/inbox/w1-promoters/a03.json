@@ -1,0 +1,337 @@
+{
+  "wave": "w1-promoters",
+  "agent": "a03",
+  "model": "haiku",
+  "searches_used": 3,
+  "fetches_used": 54,
+  "records": [
+    {
+      "kind": "series",
+      "name": "RK Sports Card and Collectibles Show (Bordentown)",
+      "event_type": "card_show",
+      "venue": {"name": "Elks Lodge", "address": "11 Amboy Rd", "city": "Bordentown", "region": "NJ", "postal": "08505", "country": "US"},
+      "cadence": "Listed dates on the organizer's 2026 to 2027 calendar, mostly Sundays about every two weeks; no repeat rule is published",
+      "rule": {"freq": "none"},
+      "hours": {"open": "09:00", "close": "14:00"},
+      "known_dates": ["2026-10-25", "2026-11-08", "2026-11-22", "2026-12-20", "2027-01-10", "2027-01-24", "2027-02-07", "2027-02-21", "2027-03-07", "2027-03-21", "2027-04-04", "2027-04-18", "2027-05-02", "2027-05-16", "2027-05-30", "2027-06-13", "2027-06-27", "2027-07-11", "2027-07-25", "2027-08-08", "2027-08-22", "2027-09-05", "2027-09-19", "2027-10-10", "2027-10-24", "2027-11-07", "2027-11-21", "2027-12-19"],
+      "cancelled_dates": [],
+      "sells": {"sports": ["multi_sport"], "tcg": ["pokemon", "mtg", "yugioh"], "other": ["comics", "non_sport", "toys", "memorabilia"]},
+      "admission": {"free": false, "adult": 5, "currency": "USD", "notes": "$5 general admission; the page does not split by age"},
+      "vendor": {"application_url": "https://www.rksportspromotions.com/content/bordentown-registration", "status": "unknown"},
+      "organizer": {"name": "RK Sports Promotions", "url": "https://www.rksportspromotions.com"},
+      "links": {"official": "https://www.rksportspromotions.com/calendar", "facebook": "https://www.facebook.com/RKSportsPromotions/", "instagram": "https://www.instagram.com/rksportspromotions/"},
+      "summary": "Sunday card and collectibles show at the Elks Lodge in Bordentown, New Jersey, with listed dates running from late October 2026 through December 2027. Sports cards, trading card games and comics, with table registration through the organizer's form.",
+      "evidence": [
+        {"url": "https://www.rksportspromotions.com/content/sports-card-collectibles-show-53", "seen": "2026-10-21", "supports": ["days", "hours", "venue", "admission", "sells"]},
+        {"url": "https://www.rksportspromotions.com/content/sports-card-collectibles-show-54", "seen": "2026-10-21", "supports": ["days", "hours", "admission", "sells", "vendor.application_url"]},
+        {"url": "https://www.rksportspromotions.com/content/2026-2027-calendar-events", "seen": "2026-10-21", "supports": ["known_dates"]}
+      ],
+      "agent_confidence": "high",
+      "notes": "Calendar dates after the two show pages (Nov 22 2026, Dec 20 2026 and all 2027 Sundays) come from the calendar page only, which was read as flattened text, so confirm before relying on single dates. The calendar also lists Jan 1 2027 (a Friday, New Year's Day); it is left out as doubtful. The Oct 25 and Nov 8 2026 show pages list 40 or more tables; no table prices or deadline are stated. Guests are TBA on the Nov 8 page. Past 2026 Elks dates are not in known_dates."
+    },
+    {
+      "kind": "edition",
+      "name": "Wildwood Show (July 2027)",
+      "event_type": "card_show",
+      "status": "scheduled",
+      "days": [{"date": "2027-07-02"}, {"date": "2027-07-03"}, {"date": "2027-07-04"}],
+      "venue": {"name": "Wildwoods Convention Center"},
+      "vendor": {"application_url": "https://www.rksportspromotions.com/content/wildwood-show-registration", "status": "unknown"},
+      "organizer": {"name": "RK Sports Promotions", "url": "https://www.rksportspromotions.com"},
+      "links": {"official": "https://www.rksportspromotions.com/content/wildwood-show-registration"},
+      "summary": "Three day sports card and collectibles show at the Wildwoods Convention Center in July 2027. Dealer tables go on sale March 1, 2027, after first access for 2026 dealers.",
+      "evidence": [
+        {"url": "https://www.rksportspromotions.com/content/wildwood-show-registration", "seen": "2026-10-21", "supports": ["name", "days", "venue", "vendor.application_url"]},
+        {"url": "https://www.rksportspromotions.com/content/2026-2027-calendar-events", "seen": "2026-10-21", "supports": ["days"]}
+      ],
+      "agent_confidence": "high",
+      "notes": "Hours, admission, table count, table prices, full street address and city are not on the organizer's pages, so none are recorded. The venue is recorded by name only. Sale date for tables is March 1, 2027; registration puts a dealer in the queue now. Payment is non-refundable. The 2026 editions (July 3 to 5 and Aug 28 to 30, 2026) are past and carry no size, so they are not recorded."
+    },
+    {
+      "kind": "edition",
+      "name": "Wildwood Show (August 2027)",
+      "event_type": "card_show",
+      "status": "scheduled",
+      "days": [{"date": "2027-08-27"}, {"date": "2027-08-28"}, {"date": "2027-08-29"}],
+      "venue": {"name": "Wildwoods Convention Center"},
+      "vendor": {"application_url": "https://www.rksportspromotions.com/content/wildwood-show-registration", "status": "unknown"},
+      "organizer": {"name": "RK Sports Promotions", "url": "https://www.rksportspromotions.com"},
+      "links": {"official": "https://www.rksportspromotions.com/content/wildwood-show-registration"},
+      "summary": "Three day sports card and collectibles show at the Wildwoods Convention Center in late August 2027. Dealer tables go on sale March 1, 2027, after first access for 2026 dealers.",
+      "evidence": [
+        {"url": "https://www.rksportspromotions.com/content/wildwood-show-registration", "seen": "2026-10-21", "supports": ["name", "days", "venue", "vendor.application_url"]},
+        {"url": "https://www.rksportspromotions.com/content/2026-2027-calendar-events", "seen": "2026-10-21", "supports": ["days"]}
+      ],
+      "agent_confidence": "high",
+      "notes": "Same caveats as the July 2027 edition: no hours, admission, table count, street address or city on the organizer's pages. Venue is recorded by name only."
+    },
+    {
+      "kind": "series",
+      "name": "JJ All Star Louisville Card Show",
+      "event_type": "card_show",
+      "venue": {"name": "Our Mother of Sorrows, Lyons Hall", "address": "774 Eastern Pkwy", "city": "Louisville", "region": "KY", "postal": "40217", "country": "US"},
+      "cadence": "Monthly on Saturdays, per the organizer's 2026 list",
+      "rule": {"freq": "none"},
+      "hours": {"open": "09:00", "close": "14:00"},
+      "known_dates": ["2026-11-07", "2026-11-21", "2026-12-05"],
+      "cancelled_dates": [],
+      "admission": {"free": true, "currency": "USD"},
+      "organizer": {"name": "JJ All Star Sportscards", "url": "https://jjallstarsportscards.com"},
+      "links": {"official": "https://jjallstarsportscards.com/show-dates/", "facebook": "https://www.facebook.com/jjallstarsportscards/", "instagram": "https://www.instagram.com/jjallstarsportscards/"},
+      "summary": "Monthly Saturday card show in Lyons Hall at Our Mother of Sorrows in Louisville, free to enter, with dates listed through December 2026.",
+      "evidence": [
+        {"url": "https://jjallstarsportscards.com/show-dates/", "seen": "2026-10-21", "supports": ["known_dates", "venue", "hours", "admission"]}
+      ],
+      "agent_confidence": "high",
+      "notes": "The organizer's list gives Saturday dates for 2026 only; past dates are left out of known_dates and no 2027 dates are listed. The page says the dates are also on a flyer image, which could not be read. Table count, vendor prices and what is sold are not stated. Table reservations are handled by phone on the page; the number is not recorded."
+    },
+    {
+      "kind": "series",
+      "name": "JJ All Star Fishers Card Show",
+      "event_type": "card_show",
+      "venue": {"name": "Fishers American Legion #470", "address": "9091 E. 126th St.", "city": "Fishers", "region": "IN", "postal": "46038", "country": "US"},
+      "cadence": "Monthly on Saturdays, per the organizer's 2026 list",
+      "rule": {"freq": "none"},
+      "hours": {"open": "08:00", "close": "14:00"},
+      "known_dates": ["2026-11-21", "2026-12-19"],
+      "cancelled_dates": [],
+      "admission": {"free": true, "currency": "USD"},
+      "organizer": {"name": "JJ All Star Sportscards", "url": "https://jjallstarsportscards.com"},
+      "links": {"official": "https://jjallstarsportscards.com/show-dates/", "facebook": "https://www.facebook.com/jjallstarsportscards/", "instagram": "https://www.instagram.com/jjallstarsportscards/"},
+      "summary": "Monthly Saturday card show at the Fishers American Legion post in Fishers, Indiana, free to enter, with dates listed through December 2026.",
+      "evidence": [
+        {"url": "https://jjallstarsportscards.com/show-dates/", "seen": "2026-10-21", "supports": ["known_dates", "venue", "hours", "admission"]}
+      ],
+      "agent_confidence": "high",
+      "notes": "The organizer's 2026 list has Saturdays from January to December with one June date to be announced; the June date and past dates are not recorded. No 2027 dates are listed. Table count, vendor prices and what is sold are not stated. Table reservations are by phone on the page; the number is not recorded."
+    },
+    {
+      "kind": "edition",
+      "name": "Indianapolis Mini 2026 Show",
+      "event_type": "card_show",
+      "status": "scheduled",
+      "days": [{"date": "2026-10-24", "open": "09:00", "close": "16:00"}],
+      "venue": {"name": "Hendricks County Fairgrounds", "address": "1900 E Main Street", "city": "Danville", "region": "IN", "postal": "46122", "country": "US"},
+      "admission": {"free": true, "currency": "USD", "notes": "Free admission; kids welcome"},
+      "organizer": {"name": "JJ All Star Sportscards", "url": "https://jjallstarsportscards.com"},
+      "links": {"official": "https://jjallstarsportscards.com/mini-monster-shows/"},
+      "summary": "One day Indianapolis Mini card show at the Hendricks County Fairgrounds in Danville, Indiana, on Saturday October 24, 2026, free to enter.",
+      "evidence": [
+        {"url": "https://jjallstarsportscards.com/mini-monster-shows/", "seen": "2026-10-21", "supports": ["name", "days", "venue", "admission"]}
+      ],
+      "agent_confidence": "high",
+      "notes": "The page calls this the Indianapolis West location. The 2026 Mini schedule is an image that could not be read, so no other Mini dates are recorded. Table count, vendor prices and what is sold are not stated."
+    },
+    {
+      "kind": "edition",
+      "name": "Pokemonster Show 2026",
+      "event_type": "card_show",
+      "status": "scheduled",
+      "days": [{"date": "2026-08-07", "open": "12:00", "close": "19:00"}, {"date": "2026-08-08", "open": "10:00", "close": "17:00"}],
+      "venue": {"name": "Best Choice Fieldhouse", "address": "11825 Technology Drive", "city": "Fishers", "region": "IN", "postal": "46038", "country": "US"},
+      "sells": {"tcg": ["pokemon", "one_piece", "mtg", "yugioh", "digimon", "lorcana"], "other": ["comics", "non_sport"]},
+      "admission": {"free": false, "adult": 10, "child": 0, "currency": "USD", "notes": "General $10 per day; kids 10 and under free; VIP $25 with one hour early entry both days"},
+      "size": {"tables": 450},
+      "organizer": {"name": "JJ All Star Sportscards", "url": "https://jjallstarsportscards.com"},
+      "links": {"official": "https://jjallstarsportscards.com/pokemonster/"},
+      "summary": "Two day Pokemon and trading card show at Best Choice Fieldhouse in Fishers, Indiana, on August 7 and 8, 2026, with 450 tables.",
+      "evidence": [
+        {"url": "https://jjallstarsportscards.com/pokemonster/", "seen": "2026-10-21", "supports": ["days", "venue", "admission", "size.tables", "sells"]}
+      ],
+      "agent_confidence": "high",
+      "notes": "Past edition recorded because the page gives its table count. Days show general admission hours (Friday 12 pm to 7 pm, Saturday 10 am to 5 pm); VIP hours were earlier, Friday 11 am to noon and Saturday 9 to 10 am. The page lists Star Wars and Marvel and DC as categories, filed here under non_sport. Vendor registration is not on the page."
+    },
+    {
+      "kind": "series",
+      "name": "Morris County Card Show at Parsippany PAL",
+      "event_type": "card_show",
+      "venue": {"name": "Parsippany Police Athletic League", "address": "33 Baldwin Road", "city": "Parsippany-Troy Hills", "region": "NJ", "postal": "07054", "country": "US"},
+      "cadence": "Twelve listed dates from late October to December 2026 at the same hall; no repeat rule is published",
+      "rule": {"freq": "none"},
+      "known_dates": ["2026-10-30", "2026-11-06", "2026-11-07", "2026-11-10", "2026-11-21", "2026-11-27", "2026-12-04", "2026-12-05", "2026-12-08", "2026-12-15", "2026-12-19", "2026-12-20"],
+      "cancelled_dates": [],
+      "sells": {"sports": ["multi_sport"], "tcg": ["other_tcg"]},
+      "vendor": {"application_url": "https://thetentpole.com/organizers/morris-county-card-show", "status": "unknown", "contact": "morriscountycardshow@gmail.com"},
+      "organizer": {"name": "Morris County Card Show", "url": "https://www.morriscountycardshow.com"},
+      "links": {"official": "https://www.morriscountycardshow.com/shows", "facebook": "http://facebook.com/morriscountycardshow", "instagram": "https://www.instagram.com/morriscountycardshow"},
+      "summary": "Recurring card show at the Parsippany Police Athletic League hall with twelve listed dates from October 30 to December 20, 2026. Sports cards and trading card games.",
+      "evidence": [
+        {"url": "https://thetentpole.com/organizers/morris-county-card-show", "seen": "2026-10-21", "supports": ["known_dates", "venue", "vendor.application_url"]},
+        {"url": "https://thetentpole.com/events/morris-card-show-pal-2026-10-30", "seen": "2026-10-21", "supports": ["hours"]},
+        {"url": "https://thetentpole.com/events/morris-card-show-pal-2026-11-06", "seen": "2026-10-21", "supports": ["hours", "sells"]},
+        {"url": "https://thetentpole.com/events/morris-card-show-pal-2026-11-21", "seen": "2026-10-21", "supports": ["hours"]},
+        {"url": "https://thetentpole.com/e/evt_mccs_pal_20261215", "seen": "2026-10-21", "supports": ["hours"]},
+        {"url": "https://thetentpole.com/events/morris-card-show-pal-2026-12-19", "seen": "2026-10-21", "supports": ["hours"]}
+      ],
+      "agent_confidence": "high",
+      "notes": "Hours seen on event pages: Friday or Tuesday 5 to 10 pm (Oct 30, Nov 6, Dec 15) and Saturday or Sunday 9 am to 3 pm (Nov 7, Nov 21, Dec 19, Dec 20). The other listed dates (Nov 10, Nov 27, Dec 4, Dec 5, Dec 8) were not opened, so their hours are not recorded. The event pages say the organizer's shows usually have 90 or more vendor tables. Admission, table prices and what each show sells beyond sports and TCG are not stated. Oct 20 2026 was a past PAL date and is excluded. The contact email is the one published on the organizer's contact page; phone numbers are not recorded."
+    },
+    {
+      "kind": "series",
+      "name": "Morris County Card Show at Rockaway Townsquare Mall",
+      "event_type": "card_show",
+      "venue": {"name": "Rockaway Townsquare Mall", "address": "301 Mount Hope Avenue", "city": "Rockaway", "region": "NJ", "postal": "07866", "country": "US"},
+      "cadence": "Mall shows listed on 2026 dates, two weekends (Nov 14 and 15, Dec 12 and 13); no repeat rule is published",
+      "rule": {"freq": "none"},
+      "known_dates": ["2026-11-14", "2026-11-15", "2026-12-12", "2026-12-13"],
+      "cancelled_dates": [],
+      "sells": {"sports": ["multi_sport"], "tcg": ["other_tcg"]},
+      "vendor": {"application_url": "https://thetentpole.com/organizers/morris-county-card-show", "status": "unknown"},
+      "organizer": {"name": "Morris County Card Show", "url": "https://www.morriscountycardshow.com"},
+      "links": {"official": "https://www.morriscountycardshow.com/shows", "facebook": "http://facebook.com/morriscountycardshow", "instagram": "https://www.instagram.com/morriscountycardshow"},
+      "summary": "Two weekend card shows at Rockaway Townsquare Mall, on November 14 and 15 and December 12 and 13, 2026. Sports cards and trading card games.",
+      "evidence": [
+        {"url": "https://thetentpole.com/events/morris-card-show-rockaway-2026-11-14", "seen": "2026-10-21", "supports": ["known_dates", "hours", "venue", "sells"]},
+        {"url": "https://thetentpole.com/events/morris-card-show-rockaway-2026-12-12", "seen": "2026-10-21", "supports": ["known_dates", "hours", "venue"]},
+        {"url": "https://thetentpole.com/organizers/morris-county-card-show", "seen": "2026-10-21", "supports": ["known_dates"]}
+      ],
+      "agent_confidence": "high",
+      "notes": "Saturday hours 10 am to 6 pm and Sunday hours 12 pm to 6 pm, verified on the Nov 14 and Dec 12 event pages (the 15th and 13th follow the same weekend pattern but were not opened separately). Event pages do not state admission or table counts. The organizer's PAL event page mentions 200 or more tables for a mall show; that is not tied to a date here, so it is left out."
+    },
+    {
+      "kind": "series",
+      "name": "Port Saint Lucie Card Show",
+      "event_type": "card_show",
+      "venue": {"name": "Polish American Club Convention Center", "address": "343 Northwest Prima Vista Boulevard", "city": "Port Saint Lucie", "region": "FL", "postal": "34983", "country": "US"},
+      "cadence": "Five listed Saturdays, one per month, from November 2026 to March 2027; no repeat rule is published",
+      "rule": {"freq": "none"},
+      "hours": {"open": "09:00", "close": "15:00"},
+      "known_dates": ["2026-11-07", "2026-12-05", "2027-01-02", "2027-02-06", "2027-03-06"],
+      "cancelled_dates": [],
+      "sells": {"tcg": ["pokemon", "one_piece", "mtg", "other_tcg"], "sports": ["baseball", "football", "multi_sport"], "other": ["non_sport", "comics"]},
+      "admission": {"free": true, "currency": "USD"},
+      "vendor": {"contact": "cardshowpsl@gmail.com"},
+      "organizer": {"name": "Card Show PSL", "url": "https://cardshowpsl.com"},
+      "links": {"official": "https://cardshowpsl.com", "facebook": "https://www.facebook.com/cardshowpsl", "instagram": "https://www.instagram.com/cardshowpsl/", "x": "https://www.x.com/CardShowPSL"},
+      "summary": "Monthly Saturday card show at the Polish American Club Convention Center in Port Saint Lucie, Florida, with five listed dates from November 2026 to March 2027. Free admission.",
+      "evidence": [
+        {"url": "https://cardshowpsl.com", "seen": "2026-10-21", "supports": ["known_dates", "venue", "hours", "admission", "sells", "vendor.contact"]}
+      ],
+      "agent_confidence": "high",
+      "notes": "All five dates fall on the first Saturday of the month, but the organizer states no rule, so none is recorded. The page has a 2026 schedule heading and no dated post, so last_confirmed is left out. Card grading submissions are accepted, per the page. Table count, table prices and vendor application link are not on the page. Disney is listed among the card types but not mapped to a game id. The contact email is the one published on the page."
+    },
+    {
+      "kind": "edition",
+      "name": "The Duuuval Card Show (October 24, 2026)",
+      "event_type": "card_show",
+      "status": "scheduled",
+      "days": [{"date": "2026-10-24", "open": "10:00", "close": "17:00"}],
+      "venue": {"name": "Adam W. Herbert University Center", "address": "12000 Alumni Dr.", "city": "Jacksonville", "region": "FL", "country": "US"},
+      "sells": {"tcg": ["other_tcg", "pokemon"], "sports": ["baseball"]},
+      "admission": {"free": true, "currency": "USD", "notes": "Free admission and free parking, per the organizer's home page"},
+      "size": {"tables": 150},
+      "vendor": {"application_url": "https://theduuuvalcardshow.com/rsvp-1", "status": "unknown", "contact": "TheDuuuvalCardShow@gmail.com"},
+      "organizer": {"name": "The Duuuval Card Show", "url": "https://theduuuvalcardshow.com"},
+      "links": {"official": "https://theduuuvalcardshow.com/upcoming-events", "facebook": "https://www.facebook.com/share/1C2PoBK969/", "instagram": "https://www.instagram.com/theduuuvalcardshow"},
+      "summary": "One day trading card show at the Adam W. Herbert University Center in Jacksonville, Florida, on October 24, 2026, with 150 or more tables and free admission.",
+      "evidence": [
+        {"url": "https://theduuuvalcardshow.com/upcoming-events", "seen": "2026-10-21", "supports": ["name", "days", "hours", "venue", "sells"]},
+        {"url": "https://theduuuvalcardshow.com", "seen": "2026-10-21", "supports": ["size.tables", "admission", "vendor.application_url"]}
+      ],
+      "agent_confidence": "medium",
+      "notes": "The organizer's upcoming events page gives Oct 24 with no year. The year is taken from that page's 2026 heading, and a third-party listing also shows the event on Oct 24, 2026. Confirm the year before relying on it. Hours come from the organizer's upcoming events page (10 am to 5 pm). A third-party listing gives 9 am to 4 pm; the organizer's figure is used. The two reads of the page disagree on the ZIP (32224 and 3224), so no postal code is recorded. Vendor deadline and sold-out status are not stated. The homepage says vendor spaces sell out quickly but does not say this show is sold out. Nov 13 and 14, 2026 are in leads_only."
+    },
+    {
+      "kind": "edition",
+      "name": "Ultimate Banger Card Show at Lake Brantley",
+      "event_type": "card_show",
+      "status": "scheduled",
+      "days": [{"date": "2026-11-07", "open": "10:00", "close": "16:00"}, {"date": "2026-11-08", "open": "09:00", "close": "15:00"}],
+      "venue": {"name": "Lake Brantley High School Media Center", "address": "991 Sand Lake Road", "city": "Altamonte Springs", "region": "FL", "postal": "32714", "country": "US"},
+      "sells": {"sports": ["multi_sport"], "tcg": ["pokemon"]},
+      "size": {"tables": 150},
+      "vendor": {
+        "tables": [
+          {"label": "8 ft premium table", "price": 225, "currency": "USD", "notes": "plus taxes and fees"},
+          {"label": "8 ft general table", "price": 125, "currency": "USD", "notes": "plus taxes and fees"},
+          {"label": "6 ft premium table", "price": 175, "currency": "USD", "notes": "plus taxes and fees"},
+          {"label": "6 ft general table", "price": 110, "currency": "USD", "notes": "plus taxes and fees"}
+        ],
+        "application_url": "https://www.simpletix.com/e/november-2026-ultimate-banger-card-show-la-tickets-296741",
+        "status": "unknown"
+      },
+      "organizer": {"name": "Ultimate Banger Card Show", "url": "https://ultimatecg.com"},
+      "links": {"official": "https://ultimatecg.com", "facebook": "https://www.facebook.com/p/Ultimate-Banger-Card-Show-61573821488613/", "instagram": "https://www.instagram.com/ultimatebangercardshow"},
+      "summary": "Two day card show at Lake Brantley High School in Altamonte Springs, Florida, on November 7 and 8, 2026, with 150 or more tables and vendor tables from 110 to 225 dollars.",
+      "evidence": [
+        {"url": "https://www.simpletix.com/e/november-2026-ultimate-banger-card-show-la-tickets-296741", "seen": "2026-10-21", "supports": ["days", "venue", "vendor.tables", "vendor.application_url"]},
+        {"url": "https://ultimatecg.com", "seen": "2026-10-21", "supports": ["size.tables", "sells"]}
+      ],
+      "agent_confidence": "high",
+      "notes": "The sale page lists admission as free in one place and as a $110 to $225 ticket range in another (the same figures as the table prices), so no admission is recorded. Table prices are shown plus taxes and fees. Vendor deadline and sold-out status are not stated. The organizer's home page footer reads 2025 while the shows are listed for 2026. The displayed contact email and the mailto link differ, so no email is recorded."
+    },
+    {
+      "kind": "edition",
+      "name": "Ultimate Banger Card Show at Volusia Mall",
+      "event_type": "card_show",
+      "status": "scheduled",
+      "days": [{"date": "2026-10-24", "open": "12:00", "close": "18:00"}],
+      "venue": {"name": "Volusia Mall", "address": "1700 West International Speedway Boulevard", "city": "Daytona Beach", "region": "FL", "postal": "32114", "country": "US"},
+      "sells": {"sports": ["multi_sport"], "tcg": ["pokemon"]},
+      "size": {"tables": 80},
+      "vendor": {
+        "tables": [
+          {"label": "8 ft general table", "price": 75, "currency": "USD", "notes": "plus taxes and fees"},
+          {"label": "6 ft general table", "price": 65, "currency": "USD", "notes": "plus taxes and fees"}
+        ],
+        "application_url": "https://www.simpletix.com/e/october-2026-ultimate-banger-card-show-vol-tickets-297225",
+        "status": "unknown"
+      },
+      "organizer": {"name": "Ultimate Banger Card Show", "url": "https://ultimatecg.com"},
+      "links": {"official": "https://ultimatecg.com", "facebook": "https://www.facebook.com/p/Ultimate-Banger-Card-Show-61573821488613/", "instagram": "https://www.instagram.com/ultimatebangercardshow"},
+      "summary": "One day card show at the Volusia Mall in Daytona Beach, Florida, on Saturday October 24, 2026, with 80 or more tables.",
+      "evidence": [
+        {"url": "https://www.simpletix.com/e/october-2026-ultimate-banger-card-show-vol-tickets-297225", "seen": "2026-10-21", "supports": ["days", "hours", "venue", "vendor.tables", "vendor.application_url"]},
+        {"url": "https://ultimatecg.com", "seen": "2026-10-21", "supports": ["size.tables", "sells"]}
+      ],
+      "agent_confidence": "high",
+      "notes": "The sale page lists tickets at $65 to $75 but also says admission is free, so no admission is recorded. Table prices are shown plus taxes and fees. Vendor deadline and sold-out status are not stated. This show is three days after the record date, so check status before relying on it."
+    },
+    {
+      "kind": "edition",
+      "name": "UltimateCon Daytona",
+      "event_type": "convention",
+      "status": "scheduled",
+      "days": [{"date": "2026-12-04", "open": "13:00", "close": "19:00"}, {"date": "2026-12-05", "open": "11:00", "close": "19:00"}, {"date": "2026-12-06", "open": "10:00", "close": "16:00"}],
+      "venue": {"name": "Ocean Center", "address": "101 North Atlantic Avenue", "city": "Daytona Beach", "region": "FL", "postal": "32118", "country": "US"},
+      "sells": {"sports": ["multi_sport"], "tcg": ["other_tcg"]},
+      "vendor": {
+        "tables": [
+          {"label": "General table (one 8 ft table)", "price": 235, "currency": "USD", "notes": "includes two chairs and a black tablecloth; plus taxes and fees"},
+          {"label": "Premium table (one 8 ft table)", "price": 350, "currency": "USD", "notes": "plus taxes and fees"},
+          {"label": "General half island (five 8 ft tables)", "price": 1075, "currency": "USD", "notes": "plus taxes and fees"},
+          {"label": "Premium half island (five 8 ft tables)", "price": 1650, "currency": "USD", "notes": "plus taxes and fees"},
+          {"label": "General full island (ten 8 ft tables)", "price": 1950, "currency": "USD", "notes": "plus taxes and fees"},
+          {"label": "Premium full island (ten 8 ft tables)", "price": 3100, "currency": "USD", "notes": "plus taxes and fees"}
+        ],
+        "application_url": "https://www.simpletix.com/e/ultimatecon-daytona-vendor-tables-islands-tickets-275758",
+        "status": "unknown"
+      },
+      "organizer": {"name": "Ultimate Banger Card Show", "url": "https://ultimatecg.com"},
+      "links": {"official": "https://ultimatecg.com", "facebook": "https://www.facebook.com/p/Ultimate-Banger-Card-Show-61573821488613/", "instagram": "https://www.instagram.com/ultimatebangercardshow"},
+      "summary": "Three day sports card, trading card and collectibles event at the Ocean Center in Daytona Beach, Florida, December 4 to 6, 2026, with vendor tables and islands.",
+      "evidence": [
+        {"url": "https://www.simpletix.com/e/ultimatecon-daytona-vendor-tables-islands-tickets-275758", "seen": "2026-10-21", "supports": ["days", "hours", "venue", "vendor.tables", "vendor.application_url"]},
+        {"url": "https://ultimatecg.com", "seen": "2026-10-21", "supports": ["sells", "name"]}
+      ],
+      "agent_confidence": "high",
+      "notes": "Set as a convention because it is a multi-day event with dealers and a community focus; the pages do not list guests or tournaments. Days show general admission hours (VIP early access and vendor setup times are on the sale page). Admission prices, total table count and vendor deadline are not stated. Table prices are shown plus taxes and fees. Sold-out status is not stated."
+    }
+  ],
+  "leads_only": [
+    {"name": "Lebanon Sports Card Auction (monthly Wednesdays)", "url": "https://www.rksportspromotions.com/calendar", "note": "Out of scope: auction with no vendor floor"},
+    {"name": "Facebook Live Sports Card Auction series", "url": "https://www.rksportspromotions.com/content/sports-card-collectibles-auction-facebook-live-17", "note": "Out of scope: online only auction"},
+    {"name": "Lebanon Sports Card Show, Feb 14 2027", "url": "https://www.rksportspromotions.com/calendar", "note": "Calendar gives a Sunday card show on Feb 14 2027 with no venue, hours or admission; not recorded as an edition"},
+    {"name": "Cincinnati card show (West Chester or Liberty, OH)", "url": "https://jjallstarsportscards.com/show-dates/", "note": "Listed as coming soon with no dates or venue"},
+    {"name": "Mini Monsters 2026 and 2027 schedule", "url": "https://jjallstarsportscards.com/mini-monster-shows/", "note": "Other Mini dates are only in a schedule image that could not be read"},
+    {"name": "Midwest Monster Sports Card Show (2026 editions)", "url": "https://jjallstarsportscards.com/midwest-monster-show/", "note": "Page lists June 5 and 6 and Oct 2 and 3 2026 at Best Choice Fieldhouse with 500 or more tables, but hours and table count are not tied to one edition, so no edition recorded; the Oct 2 and 3 weekend is past"},
+    {"name": "Georgia Collectible Shows (organizer site)", "url": "https://georgiacollectibleshows.com", "note": "Homepage has no show details and /shows, /schedule and /vendors return 404; dates may be in an image; nothing recorded"},
+    {"name": "Georgia Collectibles Show, Atlanta area (DoubleTree Dunwoody)", "url": "https://thecardshopfinder.com/event/georgia-collectibles-show-atlanta-2026-10-25/", "note": "Third party listing for Oct 25, Nov 1 and Nov 15 2026; not on the organizer's own pages and sources name different organizers, so not recorded under this promoter"},
+    {"name": "Elite Collectibles Expo (Alexandria, VA)", "url": "https://www.elitecollectiblesexpo.com/eventinfo", "note": "Organizer gives March 1, 9 am to 4 pm, Patrick Henry Recreation Center, $7 admission, and 100 or more vendors, but no year; not recorded. A third party lists a Sept 5 2026 edition at the same venue, not from the organizer"},
+    {"name": "The Duuuval Card Show, Nov 13 and 14 2026", "url": "https://theduuuvalcardshow.com/upcoming-events", "note": "Organizer page lists these dates under a 2026 heading with no venue, hours or event type; not recorded as an edition"},
+    {"name": "UltimateCon Kissimmee", "url": "https://www.ultimatecg.com/ultimatecon-kissimmee", "note": "Linked from the organizer's home page; the page returned 404 when fetched, so no facts recorded"},
+    {"name": "Treasure Coast Card Show", "url": "https://treasurecoastcardshow.com", "note": "Linked from the Port Saint Lucie page as a related show; not confirmed to be the same promoter, not fetched"}
+  ],
+  "blocked": [],
+  "notes": "Robots checked for all eight promoter domains and for the other domains they point to (thetentpole.com, simpletix.com, treasurecoastcardshow.com); none disallows the paths used. The Squarespace sites list AI crawlers in the same group as the wildcard rule, with the same path limits and no blanket block. ultimatebangercardshow.com returns 404 for robots.txt, so it was treated as no restrictions. Not blocked: no page refused access. Several pages returned 404 (Georgia /shows, /schedule, /vendors; Ultimate Banger UltimateCon pages on the Ultimate Banger host and the Kissimmee page). Georgia Collectible Shows has no readable dates on its own site, so no records; Elite Collectibles Expo has an undated March 1 date, so no edition. Past shows recorded only when a size is given: Pokemonster 2026 (450 tables). Past shows skipped without size: Wildwood 2026 editions, Poke-E-Ville Louisville 2025 shows, Morris County Oct 20 2026 PAL, Midwest Monster 2026 editions (not tied to hours or count). Budget: 3 of 6 WebSearch used; 54 WebFetch used of 60. Searches returned third-party listings (cardshopfinder.com, treasurehunter.show); they were used only to corroborate the year for the Duuuval Oct 24 date and are not cited as facts."
+}

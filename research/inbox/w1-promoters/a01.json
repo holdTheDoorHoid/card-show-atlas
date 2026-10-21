@@ -1,0 +1,673 @@
+{
+  "wave": "w1-promoters",
+  "agent": "a01",
+  "model": "haiku",
+  "searches_used": 1,
+  "fetches_used": 58,
+  "records": [
+    {
+      "kind": "edition",
+      "name": "National Sports Collectors Convention 2027",
+      "event_type": "convention",
+      "status": "scheduled",
+      "days": [
+        {"date": "2027-07-28"},
+        {"date": "2027-07-29"},
+        {"date": "2027-07-30"},
+        {"date": "2027-07-31"},
+        {"date": "2027-08-01"}
+      ],
+      "venue": {"city": "Rosemont", "region": "IL", "country": "US"},
+      "sells": {"tcg": [], "sports": ["multi_sport"], "other": ["memorabilia"]},
+      "vendor": {"status": "unknown", "application_url": "https://www.nsccshow.com/dealers"},
+      "organizer": {"name": "The National Sports Collectors Convention", "url": "https://www.nsccshow.com"},
+      "links": {"official": "https://www.nsccshow.com/future-events"},
+      "summary": "The 47th National convention in Rosemont, Illinois, five days from late July into early August 2027. Dealers start with a notice of intent form. Hours, admission and table prices are not posted yet. Items sold come from the organizer's general page, which describes the 2026 show.",
+      "evidence": [
+        {"url": "https://www.nsccshow.com/future-events", "seen": "2026-10-21", "supports": ["name", "days", "venue.city", "venue.region"]},
+        {"url": "https://www.nsccshow.com/dealers", "seen": "2026-10-21", "supports": ["vendor.application_url"]},
+        {"url": "https://www.nsccshow.com/what-to-expect", "seen": "2026-10-21", "supports": ["sells"]}
+      ],
+      "agent_confidence": "high"
+    },
+    {
+      "kind": "edition",
+      "name": "Dallas Card Show New Jersey 2026",
+      "event_type": "card_show",
+      "status": "scheduled",
+      "days": [
+        {"date": "2026-10-30", "open": "16:00", "close": "21:00"},
+        {"date": "2026-10-31", "open": "10:00", "close": "20:30"},
+        {"date": "2026-11-01", "open": "10:00", "close": "16:00"}
+      ],
+      "venue": {"name": "New Jersey Convention and Expo Center", "address": "97 Sunfield Ave", "city": "Edison", "region": "NJ", "postal": "08837", "country": "US"},
+      "sells": {"tcg": ["pokemon", "mtg"], "sports": ["baseball", "football", "basketball", "hockey"], "other": ["memorabilia"]},
+      "admission": {"free": false, "child": 0, "currency": "USD", "notes": "Friday $10, Saturday and Sunday $15. Children 10 and under free with an adult."},
+      "size": {"tables": 600},
+      "vendor": {
+        "tables": [{"label": "Showcase rental", "price": 60, "currency": "USD", "notes": "size not listed"}],
+        "status": "sold_out",
+        "application_url": "https://www.dallascardshow.com/newjersey"
+      },
+      "organizer": {"name": "Dallas Card Show", "url": "https://www.dallascardshow.com"},
+      "links": {"official": "https://www.dallascardshow.com/newjersey", "tickets": "https://events.leapevents.com/event/new-jersey-fall-2026"},
+      "summary": "A three day card show in Edison, New Jersey with 600 plus dealer tables covering sports cards, Pokémon and Magic. The table packages are listed as sold out.",
+      "evidence": [
+        {"url": "https://www.dallascardshow.com/2026schedule", "seen": "2026-10-21", "supports": ["name", "days", "venue.city"]},
+        {"url": "https://www.dallascardshow.com/newjersey", "seen": "2026-10-21", "supports": ["days", "hours", "venue", "admission", "size.tables", "vendor.status", "sells"]}
+      ],
+      "agent_confidence": "high"
+    },
+    {
+      "kind": "edition",
+      "name": "Dallas Card Show Chicago 2026",
+      "event_type": "card_show",
+      "status": "scheduled",
+      "days": [
+        {"date": "2026-11-13", "open": "16:00", "close": "21:00"},
+        {"date": "2026-11-14", "open": "10:00", "close": "20:30"},
+        {"date": "2026-11-15", "open": "10:00", "close": "16:00"}
+      ],
+      "venue": {"name": "Schaumburg Convention Center", "address": "1551 Thoreau Dr N", "city": "Schaumburg", "region": "IL", "postal": "60173", "country": "US"},
+      "sells": {"tcg": ["pokemon", "mtg", "other_tcg"], "sports": ["baseball", "football", "basketball", "hockey"], "other": ["memorabilia"]},
+      "admission": {"free": false, "child": 0, "currency": "USD", "notes": "$10 per day. Children 10 and under free with a paying adult. Autograph tickets are sold separately."},
+      "size": {"tables": 450},
+      "vendor": {
+        "tables": [
+          {"label": "1 table", "price": 300, "currency": "USD", "notes": "table size not stated"},
+          {"label": "2 tables", "price": 550, "currency": "USD", "notes": "table size not stated"},
+          {"label": "3 tables", "price": 775, "currency": "USD", "notes": "table size not stated"},
+          {"label": "4 tables", "price": 1000, "currency": "USD", "notes": "table size not stated"},
+          {"label": "Showcase rental", "price": 60, "currency": "USD", "notes": "size not listed"}
+        ],
+        "status": "unknown",
+        "application_url": "https://www.dallascardshow.com/chicago"
+      },
+      "organizer": {"name": "Dallas Card Show", "url": "https://www.dallascardshow.com"},
+      "links": {"official": "https://www.dallascardshow.com/chicago", "tickets": "https://events.leapevents.com/event/schaumburg-winter-2026"},
+      "summary": "A three day card show in Schaumburg, Illinois with 450 plus dealer tables of sports cards, Pokémon, Magic and other trading cards. Vendor table prices are listed, though the page also shows some packages as sold out. Table sizes are not stated.",
+      "evidence": [
+        {"url": "https://www.dallascardshow.com/2026schedule", "seen": "2026-10-21", "supports": ["name", "days", "venue.city"]},
+        {"url": "https://www.dallascardshow.com/chicago", "seen": "2026-10-21", "supports": ["days", "hours", "venue", "admission", "size.tables", "vendor.tables", "sells"]}
+      ],
+      "agent_confidence": "high"
+    },
+    {
+      "kind": "edition",
+      "name": "Dallas Card Show Houston 2026",
+      "event_type": "card_show",
+      "status": "scheduled",
+      "days": [
+        {"date": "2026-12-18", "open": "15:00", "close": "21:00"},
+        {"date": "2026-12-19", "open": "09:00", "close": "17:00"},
+        {"date": "2026-12-20", "open": "10:00", "close": "16:00"}
+      ],
+      "venue": {"name": "George R. Brown Convention Center", "address": "1001 Avenida de las Americas", "city": "Houston", "region": "TX", "postal": "77010", "country": "US"},
+      "sells": {"tcg": ["pokemon", "mtg", "other_tcg"], "sports": ["baseball", "football", "basketball", "hockey"], "other": ["memorabilia"]},
+      "admission": {"free": false, "child": 0, "currency": "USD", "notes": "$10 per day. Children 10 and under free with a paying adult. Autograph tickets are sold separately."},
+      "size": {"tables": 600},
+      "vendor": {
+        "tables": [
+          {"label": "Standard table", "price": 250, "currency": "USD", "notes": "table size not stated"},
+          {"label": "Wall table", "price": 400, "currency": "USD", "notes": "table size not stated"},
+          {"label": "Premium table (first pick)", "price": 500, "currency": "USD", "notes": "table size not stated"},
+          {"label": "Showcase rental", "price": 60, "currency": "USD", "notes": "size not listed"}
+        ],
+        "status": "unknown",
+        "application_url": "https://www.dallascardshow.com/houston"
+      },
+      "organizer": {"name": "Dallas Card Show", "url": "https://www.dallascardshow.com"},
+      "links": {"official": "https://www.dallascardshow.com/houston"},
+      "summary": "A three day card show at the George R. Brown Convention Center in Houston with more than 600 dealer tables of sports cards, Pokémon, Magic and other trading cards. Table prices are listed without sizes.",
+      "evidence": [
+        {"url": "https://www.dallascardshow.com/2026schedule", "seen": "2026-10-21", "supports": ["name", "days", "venue.city"]},
+        {"url": "https://www.dallascardshow.com/houston", "seen": "2026-10-21", "supports": ["days", "hours", "venue", "admission", "size.tables", "vendor.tables", "sells"]}
+      ],
+      "agent_confidence": "high"
+    },
+    {
+      "kind": "series",
+      "name": "Dallas Card Show",
+      "event_type": "card_show",
+      "venue": {"name": "Marriott Watters Creek", "city": "Allen", "region": "TX", "country": "US"},
+      "cadence": "Specific dates posted on the organizer schedule, with no fixed pattern. Mostly four day shows, Thursday to Sunday.",
+      "rule": {"freq": "none", "until": null},
+      "known_dates": [
+        "2026-11-05", "2026-11-06", "2026-11-07", "2026-11-08",
+        "2027-01-14", "2027-01-15", "2027-01-16", "2027-01-17",
+        "2027-03-18", "2027-03-19", "2027-03-20", "2027-03-21",
+        "2027-05-20", "2027-05-21", "2027-05-22", "2027-05-23",
+        "2027-07-08", "2027-07-09", "2027-07-10", "2027-07-11",
+        "2027-09-08", "2027-09-09", "2027-09-10", "2027-09-11", "2027-09-12",
+        "2027-11-11", "2027-11-12", "2027-11-13", "2027-11-14"
+      ],
+      "cancelled_dates": [],
+      "sells": {"tcg": [], "sports": ["multi_sport"], "other": ["memorabilia"]},
+      "admission": {"free": false, "adult": 15, "currency": "USD", "notes": "2026 page: daily general admission $15, VIP pass $35, VIP all access pass $90. 2027 prices not posted."},
+      "vendor": {
+        "tables": [{"label": "Showcase rental, Nov 5 to 8, 2026", "price": 50, "currency": "USD"}],
+        "status": "unknown",
+        "application_url": "https://www.dallascardshow.com/vendor-resources"
+      },
+      "organizer": {"name": "Dallas Card Show", "url": "https://www.dallascardshow.com"},
+      "links": {"official": "https://www.dallascardshow.com/dallascardshow", "schedule": "https://www.dallascardshow.com/2026schedule"},
+      "summary": "A sports card and memorabilia show held at a hotel venue in Allen, Texas. The organizer lists one 2026 date range and six 2027 date ranges. Tickets for the 2027 shows were marked coming soon.",
+      "evidence": [
+        {"url": "https://www.dallascardshow.com/2026schedule", "seen": "2026-10-21", "supports": ["cadence", "known_dates", "venue.city", "venue.region"]},
+        {"url": "https://www.dallascardshow.com/dallascardshow", "seen": "2026-10-21", "supports": ["admission", "venue.name", "sells"]},
+        {"url": "https://www.dallascardshow.com/tables-and-showcases", "seen": "2026-10-21", "supports": ["vendor.tables"]}
+      ],
+      "agent_confidence": "high"
+    },
+    {
+      "kind": "edition",
+      "name": "Front Row Card Show Las Vegas 2026",
+      "event_type": "card_show",
+      "status": "scheduled",
+      "days": [{"date": "2026-10-24", "open": "11:00", "close": "17:00"}, {"date": "2026-10-25", "open": "11:00", "close": "17:00"}],
+      "venue": {"name": "Rio Hotel & Casino", "address": "3700 W. Flamingo Road", "city": "Las Vegas", "region": "NV", "postal": "89103", "country": "US"},
+      "sells": {"tcg": ["pokemon", "mtg", "yugioh", "lorcana"], "sports": ["baseball", "football", "basketball", "hockey", "soccer", "racing", "combat"], "other": ["comics", "memorabilia", "toys", "video_games"]},
+      "admission": {"free": false, "adult": 10, "child": 0, "currency": "USD", "notes": "$10 in advance, $15 at the door. VIP early entry costs more. Trade night Saturday evening. Kids 10 and under free with an adult."},
+      "size": {"tables": 600},
+      "vendor": {"status": "unknown", "application_url": "https://frontrowvendors.com/"},
+      "organizer": {"name": "Front Row Card Show", "url": "https://frontrowcardshow.com"},
+      "links": {"official": "https://frontrowcardshow.com/collections/las-vegas"},
+      "summary": "A two day card, comics and collectibles show at a Las Vegas hotel with about 600 tables. Table prices and dealer availability are not posted on the show page.",
+      "evidence": [
+        {"url": "https://frontrowcardshow.com/collections/las-vegas", "seen": "2026-10-21", "supports": ["days", "venue", "admission", "size.tables", "sells"]},
+        {"url": "https://frontrowcardshow.com/collections/dealers", "seen": "2026-10-21", "supports": ["days (year 2026)", "vendor.application_url"]}
+      ],
+      "agent_confidence": "high"
+    },
+    {
+      "kind": "edition",
+      "name": "Front Row Card Show Atlanta 2026",
+      "event_type": "card_show",
+      "status": "scheduled",
+      "days": [{"date": "2026-11-07", "open": "11:00", "close": "17:00"}, {"date": "2026-11-08", "open": "11:00", "close": "17:00"}],
+      "venue": {"name": "Cobb Convention Center Atlanta", "address": "2 Galleria Parkway", "city": "Atlanta", "region": "GA", "postal": "30339", "country": "US"},
+      "sells": {"tcg": ["pokemon", "mtg", "yugioh", "lorcana"], "sports": ["baseball", "football", "basketball", "hockey", "soccer", "racing", "combat"], "other": ["comics", "memorabilia", "toys", "video_games"]},
+      "admission": {"free": false, "adult": 10, "child": 0, "currency": "USD", "notes": "$10 in advance, $15 at the door. VIP early entry costs more. Trade night Saturday evening. Kids 10 and under free with an adult."},
+      "size": {"tables": 550},
+      "vendor": {"status": "unknown", "application_url": "https://frontrowvendors.com/"},
+      "organizer": {"name": "Front Row Card Show", "url": "https://frontrowcardshow.com"},
+      "links": {"official": "https://frontrowcardshow.com/collections/atlanta"},
+      "summary": "A two day card, comics and collectibles show in Atlanta with 550 tables per the show page. The organizer's vendors page gives 400 tables for this show, so the count is uncertain. Table prices are not posted.",
+      "evidence": [
+        {"url": "https://frontrowcardshow.com/collections/atlanta", "seen": "2026-10-21", "supports": ["days", "venue", "admission", "size.tables", "sells"]},
+        {"url": "https://frontrowcardshow.com/collections/dealers", "seen": "2026-10-21", "supports": ["days (year 2026)", "vendor.application_url"]}
+      ],
+      "agent_confidence": "medium"
+    },
+    {
+      "kind": "edition",
+      "name": "Front Row Card Show Orlando 2026",
+      "event_type": "card_show",
+      "status": "scheduled",
+      "days": [{"date": "2026-11-14", "open": "11:00", "close": "17:00"}, {"date": "2026-11-15", "open": "11:00", "close": "17:00"}],
+      "venue": {"name": "Hyatt Regency Orlando", "address": "9801 International Drive", "city": "Orlando", "region": "FL", "postal": "32819", "country": "US"},
+      "sells": {"tcg": ["pokemon", "mtg", "yugioh", "lorcana"], "sports": ["baseball", "football", "basketball", "hockey", "soccer", "racing", "combat"], "other": ["comics", "memorabilia", "toys", "video_games"]},
+      "admission": {"free": false, "adult": 10, "child": 0, "currency": "USD", "notes": "$10 in advance, $15 at the door. VIP early entry costs more. Trade night Saturday evening. Kids 10 and under free with an adult."},
+      "size": {"tables": 320},
+      "vendor": {"status": "unknown", "application_url": "https://frontrowvendors.com/"},
+      "organizer": {"name": "Front Row Card Show", "url": "https://frontrowcardshow.com"},
+      "links": {"official": "https://frontrowcardshow.com/collections/orlando"},
+      "summary": "A two day card, comics and collectibles show at a Hyatt in Orlando with 320 tables. Table prices and dealer availability are not posted.",
+      "evidence": [
+        {"url": "https://frontrowcardshow.com/collections/orlando", "seen": "2026-10-21", "supports": ["days", "venue", "admission", "size.tables", "sells"]},
+        {"url": "https://frontrowcardshow.com/collections/dealers", "seen": "2026-10-21", "supports": ["days (year 2026)", "vendor.application_url"]}
+      ],
+      "agent_confidence": "high"
+    },
+    {
+      "kind": "edition",
+      "name": "Front Row Card Show Pasadena 2026",
+      "event_type": "card_show",
+      "status": "scheduled",
+      "days": [{"date": "2026-11-21", "open": "11:00", "close": "17:00"}, {"date": "2026-11-22", "open": "11:00", "close": "17:00"}],
+      "venue": {"name": "Pasadena Convention Center", "address": "300 E. Green Street", "city": "Pasadena", "region": "CA", "postal": "91101", "country": "US"},
+      "sells": {"tcg": ["pokemon", "mtg", "yugioh", "lorcana"], "sports": ["baseball", "football", "basketball", "hockey", "soccer", "racing", "combat"], "other": ["comics", "memorabilia", "toys", "video_games"]},
+      "admission": {"free": false, "adult": 10, "child": 0, "currency": "USD", "notes": "$10 in advance, $15 at the door. VIP early entry costs more. Trade night Saturday evening. Kids 10 and under free with an adult."},
+      "size": {"tables": 770},
+      "vendor": {"status": "unknown", "application_url": "https://frontrowvendors.com/"},
+      "organizer": {"name": "Front Row Card Show", "url": "https://frontrowcardshow.com"},
+      "links": {"official": "https://frontrowcardshow.com/collections/pasadena"},
+      "summary": "A two day card, comics and collectibles show in Pasadena with 770 tables. Table prices and dealer availability are not posted.",
+      "evidence": [
+        {"url": "https://frontrowcardshow.com/collections/pasadena", "seen": "2026-10-21", "supports": ["days", "venue", "admission", "size.tables", "sells"]},
+        {"url": "https://frontrowcardshow.com/collections/dealers", "seen": "2026-10-21", "supports": ["days (year 2026)", "vendor.application_url"]}
+      ],
+      "agent_confidence": "high"
+    },
+    {
+      "kind": "edition",
+      "name": "Front Row Card Show Phoenix 2026",
+      "event_type": "card_show",
+      "status": "scheduled",
+      "days": [{"date": "2026-12-12", "open": "11:00", "close": "17:00"}, {"date": "2026-12-13", "open": "11:00", "close": "17:00"}],
+      "venue": {"name": "State Farm Stadium", "address": "1 Cardinals Dr", "city": "Glendale", "region": "AZ", "postal": "85305", "country": "US"},
+      "sells": {"tcg": ["pokemon", "mtg", "yugioh", "lorcana"], "sports": ["baseball", "football", "basketball", "hockey", "soccer", "racing", "combat"], "other": ["comics", "memorabilia", "toys", "video_games"]},
+      "admission": {"free": false, "adult": 15, "child": 0, "currency": "USD", "notes": "$15 in advance, $20 at the door. VIP early entry costs more. Kids 10 and under free with an adult."},
+      "size": {"tables": 750},
+      "vendor": {"status": "unknown", "application_url": "https://frontrowvendors.com/"},
+      "organizer": {"name": "Front Row Card Show", "url": "https://frontrowcardshow.com"},
+      "links": {"official": "https://frontrowcardshow.com/collections/phoenix"},
+      "summary": "Listed as Phoenix, this two day card and collectibles show is held at State Farm Stadium in Glendale, Arizona, with 750 tables per the show page. The organizer's vendors page gives 650 tables, so the count is uncertain.",
+      "evidence": [
+        {"url": "https://frontrowcardshow.com/collections/phoenix", "seen": "2026-10-21", "supports": ["days", "venue", "admission", "size.tables", "sells"]},
+        {"url": "https://frontrowcardshow.com/collections/dealers", "seen": "2026-10-21", "supports": ["days (year 2026)", "vendor.application_url"]}
+      ],
+      "agent_confidence": "medium"
+    },
+    {
+      "kind": "edition",
+      "name": "Front Row Card Show San Diego 2027",
+      "event_type": "card_show",
+      "status": "scheduled",
+      "days": [{"date": "2027-01-16", "open": "11:00", "close": "17:00"}, {"date": "2027-01-17", "open": "11:00", "close": "17:00"}],
+      "venue": {"name": "Town & Country Resort", "address": "500 Hotel Circle North", "city": "San Diego", "region": "CA", "postal": "92108", "country": "US"},
+      "sells": {"tcg": ["pokemon", "mtg", "yugioh", "lorcana"], "sports": ["baseball", "football", "basketball", "hockey", "soccer", "racing", "combat"], "other": ["comics", "memorabilia", "toys", "video_games"]},
+      "admission": {"free": false, "adult": 10, "child": 0, "currency": "USD", "notes": "$10 in advance, $15 at the door. VIP early entry costs more. Kids 10 and under free with an adult."},
+      "size": {"tables": 425},
+      "vendor": {"status": "unknown", "application_url": "https://frontrowvendors.com/"},
+      "organizer": {"name": "Front Row Card Show", "url": "https://frontrowcardshow.com"},
+      "links": {"official": "https://frontrowcardshow.com/collections/san-diego"},
+      "summary": "A two day card, comics and collectibles show at a resort in San Diego with 425 tables. Table prices are not posted.",
+      "evidence": [
+        {"url": "https://frontrowcardshow.com/collections/san-diego", "seen": "2026-10-21", "supports": ["days", "venue", "admission", "size.tables", "sells"]},
+        {"url": "https://frontrowcardshow.com/collections/dealers", "seen": "2026-10-21", "supports": ["days (year 2027)", "vendor.application_url"]}
+      ],
+      "agent_confidence": "high"
+    },
+    {
+      "kind": "edition",
+      "name": "Front Row Card Show Seattle/Tacoma 2027",
+      "event_type": "card_show",
+      "status": "scheduled",
+      "days": [{"date": "2027-01-16", "open": "11:00", "close": "17:00"}, {"date": "2027-01-17", "open": "11:00", "close": "17:00"}],
+      "venue": {"name": "Greater Tacoma Convention Center", "address": "1500 Commerce Street", "city": "Tacoma", "region": "WA", "postal": "98402", "country": "US"},
+      "sells": {"tcg": ["pokemon", "mtg", "yugioh", "lorcana"], "sports": ["baseball", "football", "basketball", "hockey", "soccer", "racing", "combat"], "other": ["comics", "memorabilia", "toys", "video_games"]},
+      "admission": {"free": false, "adult": 10, "child": 0, "currency": "USD", "notes": "$10 in advance, $15 at the door. VIP early entry costs more. Trade night Saturday evening. Kids 10 and under free with an adult."},
+      "size": {"tables": 500},
+      "vendor": {"status": "unknown", "application_url": "https://frontrowvendors.com/"},
+      "organizer": {"name": "Front Row Card Show", "url": "https://frontrowcardshow.com"},
+      "links": {"official": "https://frontrowcardshow.com/collections/seattle", "tickets": "https://events.leapevents.com/event/front-row-card-show-seattle-tacoma-2027-jan-16-17"},
+      "summary": "A two day card, comics and collectibles show in Tacoma, Washington with 500 tables per the show page. The year comes from the ticket link and the weekdays, not a printed year on the show page. The vendors page lists a different Tacoma date in October 2026, which is not recorded here.",
+      "evidence": [
+        {"url": "https://frontrowcardshow.com/collections/seattle", "seen": "2026-10-21", "supports": ["days", "venue", "admission", "size.tables", "sells"]}
+      ],
+      "agent_confidence": "medium"
+    },
+    {
+      "kind": "edition",
+      "name": "Front Row Card Show Portland 2027",
+      "event_type": "card_show",
+      "status": "scheduled",
+      "days": [{"date": "2027-02-27", "open": "11:00", "close": "17:00"}, {"date": "2027-02-28", "open": "11:00", "close": "17:00"}],
+      "venue": {"name": "Oregon Convention Center", "address": "777 NE Martin Luther King Jr Blvd", "city": "Portland", "region": "OR", "postal": "97232", "country": "US"},
+      "sells": {"tcg": ["pokemon", "mtg", "yugioh", "lorcana"], "sports": ["baseball", "football", "basketball", "hockey", "soccer", "racing", "combat"], "other": ["comics", "memorabilia", "toys", "video_games"]},
+      "admission": {"free": false, "adult": 10, "child": 0, "currency": "USD", "notes": "$10 in advance, $15 at the door. VIP early entry costs more. Trade night Saturday evening. Kids 10 and under free with an adult."},
+      "size": {"tables": 480},
+      "vendor": {"status": "unknown", "application_url": "https://frontrowvendors.com/"},
+      "organizer": {"name": "Front Row Card Show", "url": "https://frontrowcardshow.com"},
+      "links": {"official": "https://frontrowcardshow.com/collections/portland"},
+      "summary": "A two day card, comics and collectibles show in Portland, Oregon with 480 tables. Table prices are not posted.",
+      "evidence": [
+        {"url": "https://frontrowcardshow.com/collections/portland", "seen": "2026-10-21", "supports": ["days", "venue", "admission", "size.tables", "sells"]},
+        {"url": "https://frontrowcardshow.com/collections/dealers", "seen": "2026-10-21", "supports": ["days (year 2027)", "vendor.application_url"]}
+      ],
+      "agent_confidence": "high"
+    },
+    {
+      "kind": "series",
+      "name": "The Philly Show",
+      "event_type": "card_show",
+      "venue": {"name": "Greater Philadelphia Expo Center at Oaks", "address": "100 Station Avenue", "city": "Oaks", "region": "PA", "postal": "19456", "country": "US"},
+      "cadence": "Several shows a year at the same Oaks, Pennsylvania expo center, on the dates the organizer posts. No fixed pattern.",
+      "rule": {"freq": "none", "until": null},
+      "known_dates": [
+        "2026-12-11", "2026-12-12", "2026-12-13",
+        "2027-03-05", "2027-03-06", "2027-03-07",
+        "2027-09-24", "2027-09-25", "2027-09-26",
+        "2027-12-03", "2027-12-04", "2027-12-05"
+      ],
+      "cancelled_dates": [],
+      "sells": {"tcg": [], "sports": [], "other": []},
+      "admission": {"free": false, "adult": 15, "currency": "USD", "notes": "December 2026 presale $15 per day (presale ends Dec 8, 2026). At the door $20 Friday and Saturday, $15 Sunday. Children 10 and under free with a paid adult. Active duty and veterans half off on site. Hours for December 2026: Friday 1 pm to 8 pm, Saturday 9:30 am to 6 pm, Sunday 9:30 am to 3 pm. Hours and prices for the 2027 shows not posted."},
+      "vendor": {"status": "unknown", "application_url": "https://phillyshow.com/forms/"},
+      "organizer": {"name": "The Philly Show", "url": "https://www.phillyshow.com"},
+      "links": {"official": "https://www.phillyshow.com"},
+      "summary": "A multi day card show at the same Oaks, Pennsylvania expo center, with the next show in December 2026 and three 2027 date ranges posted. Returning dealers get first pick of space, with new dealers added as space allows.",
+      "evidence": [
+        {"url": "https://www.phillyshow.com", "seen": "2026-10-21", "supports": ["cadence", "known_dates", "venue", "admission"]},
+        {"url": "https://www.phillyshow.com/forms/", "seen": "2026-10-21", "supports": ["vendor.application_url"]}
+      ],
+      "agent_confidence": "high"
+    },
+    {
+      "kind": "edition",
+      "name": "Chicago Sports Spectacular November 2026",
+      "event_type": "card_show",
+      "status": "scheduled",
+      "days": [
+        {"date": "2026-11-20", "open": "15:30", "close": "20:30"},
+        {"date": "2026-11-21", "open": "09:30", "close": "17:00"},
+        {"date": "2026-11-22", "open": "10:00", "close": "16:00"}
+      ],
+      "venue": {"name": "Donald E Stephens Convention Center", "address": "5555 N River Rd", "city": "Rosemont", "region": "IL", "postal": "60018", "country": "US"},
+      "sells": {"tcg": ["pokemon", "other_tcg"], "sports": ["multi_sport"], "other": ["memorabilia"]},
+      "admission": {"free": false, "adult": 15, "child": 10, "currency": "USD", "notes": "Friday adults $15, Saturday and Sunday adults $20 per day. Children 10 and under $10, children 5 and under free. Friday sneak peek $30."},
+      "vendor": {
+        "status": "unknown",
+        "deadline": "2026-09-30",
+        "application_url": "https://www.chicagosportsspectacular.com/pages/vendor-info"
+      },
+      "organizer": {"name": "Chicago Sports Spectacular", "url": "https://www.chicagosportsspectacular.com"},
+      "links": {"official": "https://www.chicagosportsspectacular.com/pages/show-info"},
+      "summary": "A three day sports card, Pokémon and memorabilia show at the Rosemont convention center. Vendor contracts were due September 30, 2026, and the organizer warns that spots fill quickly. Table prices and sizes are not posted on the vendor page.",
+      "evidence": [
+        {"url": "https://www.chicagosportsspectacular.com/pages/show-info", "seen": "2026-10-21", "supports": ["days", "venue", "admission", "sells", "hours"]},
+        {"url": "https://www.chicagosportsspectacular.com/pages/vendor-info", "seen": "2026-10-21", "supports": ["vendor.deadline", "vendor.application_url"]}
+      ],
+      "agent_confidence": "high"
+    },
+    {
+      "kind": "edition",
+      "name": "Genesis Card Show Las Vegas 2026",
+      "event_type": "card_show",
+      "status": "scheduled",
+      "days": [{"date": "2026-12-05", "open": "10:00", "close": "17:00"}, {"date": "2026-12-06", "open": "10:00", "close": "17:00"}],
+      "venue": {"name": "World Market Center", "address": "475 S. Grand Central Parkway", "city": "Las Vegas", "region": "NV", "postal": "89106", "country": "US"},
+      "admission": {"free": false, "adult": 5, "currency": "USD", "notes": "General admission $5 for one day or $8 for two days. VIP early access $15 for one day online, $20 for two days. Trade night Saturday is free. Child prices not listed. Service fees added online. Currency assumed USD from the dollar sign and Las Vegas venue."},
+      "size": {"tables": 550},
+      "vendor": {
+        "status": "unknown",
+        "application_url": "https://www.genesiscardshow.com/lasvegasvendor",
+        "contact": "genesiscardshow@gmail.com"
+      },
+      "organizer": {"name": "Genesis Card Show", "url": "https://www.genesiscardshow.com"},
+      "links": {"official": "https://www.genesiscardshow.com/event-details-registration/las-vegas-december-5th-6th-550-tables-at-the-world-market-center"},
+      "summary": "A two day card show at the World Market Center in Las Vegas on December 5 and 6, 2026, with 550 plus tables. The vendor policy page mentions a waitlist but does not say whether this show is sold out. Items sold are not stated.",
+      "evidence": [
+        {"url": "https://www.genesiscardshow.com/event-details-registration/las-vegas-december-5th-6th-550-tables-at-the-world-market-center", "seen": "2026-10-21", "supports": ["name", "days", "venue", "admission", "size.tables"]},
+        {"url": "https://www.genesiscardshow.com/lasvegasvendor", "seen": "2026-10-21", "supports": ["vendor.application_url"]},
+        {"url": "https://www.genesiscardshow.com/vendor", "seen": "2026-10-21", "supports": ["vendor.contact"]}
+      ],
+      "agent_confidence": "high"
+    },
+    {
+      "kind": "edition",
+      "name": "Maximum Card Show San Diego 2026",
+      "event_type": "card_show",
+      "status": "scheduled",
+      "days": [{"date": "2026-11-28", "open": "10:00", "close": "17:00"}],
+      "venue": {"name": "Eventide Pavilion at Sheraton San Diego Resort", "address": "1380 Harbor Island Drive", "city": "San Diego", "region": "CA", "postal": "92101", "country": "US"},
+      "sells": {"tcg": ["pokemon", "other_tcg"], "sports": [], "other": []},
+      "admission": {"free": false, "adult": 8, "child": 0, "currency": "USD", "notes": "Advance general admission $8, advance VIP $15. Day of general admission $15, day of VIP $20. Kids 10 and under free."},
+      "size": {"tables": 200},
+      "vendor": {"status": "unknown", "application_url": "https://www.ontreasure.com/events/maximum-card-show-november-28-san-diego-11282026"},
+      "organizer": {"name": "Maximum Card Show", "url": "https://www.maximumcardshow.com"},
+      "links": {"official": "https://www.maximumcardshow.com/sandiegonovember28th"},
+      "summary": "A one day Pokémon and TCG focused show at a pavilion on the Sheraton San Diego Resort property, with 200 plus tables. The page says event details and parking are still being finalized.",
+      "evidence": [
+        {"url": "https://www.maximumcardshow.com/sandiegonovember28th", "seen": "2026-10-21", "supports": ["name", "days", "venue", "admission", "size.tables", "sells"]},
+        {"url": "https://www.maximumcardshow.com/vendors", "seen": "2026-10-21", "supports": ["vendor.application_url"]}
+      ],
+      "agent_confidence": "high"
+    },
+    {
+      "kind": "edition",
+      "name": "Maximum Card Show Bellevue Mega 2026",
+      "event_type": "card_show",
+      "status": "scheduled",
+      "days": [{"date": "2026-12-19", "open": "10:00", "close": "17:00"}, {"date": "2026-12-20", "open": "10:00", "close": "17:00"}],
+      "venue": {"name": "Hyatt Regency Bellevue", "address": "900 Bellevue Way NE", "city": "Bellevue", "region": "WA", "postal": "98004", "country": "US"},
+      "sells": {"tcg": ["pokemon", "one_piece", "mtg", "lorcana"], "sports": [], "other": []},
+      "admission": {"free": false, "adult": 8, "child": 0, "currency": "USD", "notes": "Saturday $8, Sunday $5, two day pass $10 online. Day of tickets $10. VIP Saturday $16, Sunday $12, two day $25. Ages 10 and under free with a paying adult."},
+      "size": {"tables": 250},
+      "vendor": {"status": "unknown", "application_url": "https://www.ontreasure.com/events/maximum-card-show-december-1920-mega-bellevue-12192026"},
+      "organizer": {"name": "Maximum Card Show", "url": "https://www.maximumcardshow.com"},
+      "links": {"official": "https://www.maximumcardshow.com/dec1920megabellevue"},
+      "summary": "A two day Pokémon and TCG focused show at a Bellevue hotel with 250 plus tables. The show page gives the weekend without a printed year. The 2026 year comes from the organizer's vendor page link and the weekdays, so confidence is medium.",
+      "evidence": [
+        {"url": "https://www.maximumcardshow.com/dec1920megabellevue", "seen": "2026-10-21", "supports": ["days", "venue", "admission", "size.tables", "sells"]},
+        {"url": "https://www.maximumcardshow.com/vendors", "seen": "2026-10-21", "supports": ["year (from ticket link)", "vendor.application_url"]}
+      ],
+      "agent_confidence": "medium"
+    },
+    {
+      "kind": "edition",
+      "name": "Maximum Card Show Portland 2027",
+      "event_type": "card_show",
+      "status": "scheduled",
+      "days": [{"date": "2027-01-23", "open": "10:00", "close": "17:00"}, {"date": "2027-01-24", "open": "10:00", "close": "17:00"}],
+      "venue": {"name": "DoubleTree by Hilton Hotel Portland", "address": "1000 NE Multnomah St", "city": "Portland", "region": "OR", "postal": "97232", "country": "US"},
+      "sells": {"tcg": ["pokemon", "other_tcg"], "sports": [], "other": []},
+      "admission": {"free": false, "adult": 8, "child": 0, "currency": "USD", "notes": "Online general admission Saturday $8, Sunday $5. Door $10 each day. VIP Saturday $10, Sunday $8, two day $15. Kids 10 and under free with a ticketed parent."},
+      "size": {"tables": 140},
+      "vendor": {"status": "unknown", "application_url": "https://www.ontreasure.com/events/maximum-card-show-january-2324-portland-01232027"},
+      "organizer": {"name": "Maximum Card Show", "url": "https://www.maximumcardshow.com"},
+      "links": {"official": "https://www.maximumcardshow.com/portlandjan2324"},
+      "summary": "A two day card show in the exhibit hall of a Portland hotel with 140 plus tables. Sports cards may be sold by some vendors but are not guaranteed.",
+      "evidence": [
+        {"url": "https://www.maximumcardshow.com/portlandjan2324", "seen": "2026-10-21", "supports": ["name", "days", "year", "venue", "admission", "size.tables", "sells"]}
+      ],
+      "agent_confidence": "high"
+    },
+    {
+      "kind": "edition",
+      "name": "Maximum Card Show Salt Lake City 2027",
+      "event_type": "card_show",
+      "status": "scheduled",
+      "days": [{"date": "2027-02-20"}],
+      "venue": {"city": "Salt Lake City", "region": "UT", "country": "US"},
+      "size": {"tables": 180},
+      "vendor": {"status": "unknown", "application_url": "https://www.ontreasure.com/events/maximum-card-show-february-20-salt-lake-city-02202027"},
+      "organizer": {"name": "Maximum Card Show", "url": "https://www.maximumcardshow.com"},
+      "links": {"official": "https://www.maximumcardshow.com/vendors"},
+      "summary": "A one day Maximum Card Show in Salt Lake City, Utah on February 20, 2027, listed with 180 plus tables. The ticket page in the copy I could read gives no venue, hours or prices.",
+      "evidence": [
+        {"url": "https://www.ontreasure.com/events/maximum-card-show-february-20-salt-lake-city-02202027", "seen": "2026-10-21", "supports": ["name", "days", "year"]},
+        {"url": "https://www.maximumcardshow.com/vendors", "seen": "2026-10-21", "supports": ["region", "size.tables"]}
+      ],
+      "agent_confidence": "medium"
+    },
+    {
+      "kind": "edition",
+      "name": "Maximum Card Show ULTRA Seattle/Bellevue 2027",
+      "event_type": "card_show",
+      "status": "scheduled",
+      "days": [{"date": "2027-03-13"}, {"date": "2027-03-14"}],
+      "venue": {"city": "Seattle/Bellevue", "region": "WA", "country": "US"},
+      "size": {"tables": 350},
+      "vendor": {"status": "unknown", "application_url": "https://www.ontreasure.com/events/maximum-card-show-march-1314-seattlebellevue-03132027"},
+      "organizer": {"name": "Maximum Card Show", "url": "https://www.maximumcardshow.com"},
+      "links": {"official": "https://www.maximumcardshow.com/vendors"},
+      "summary": "A two day Maximum Card Show ULTRA weekend in the Seattle and Bellevue area in March 2027, listed with 350 plus tables. The ticket page in the copy I could read gives no venue, hours or prices.",
+      "evidence": [
+        {"url": "https://www.ontreasure.com/events/maximum-card-show-march-1314-seattlebellevue-03132027", "seen": "2026-10-21", "supports": ["name", "days", "year"]},
+        {"url": "https://www.maximumcardshow.com/vendors", "seen": "2026-10-21", "supports": ["region", "size.tables"]}
+      ],
+      "agent_confidence": "medium"
+    },
+    {
+      "kind": "edition",
+      "name": "Maximum Card Show Salt Lake City Sandy 2027",
+      "event_type": "card_show",
+      "status": "scheduled",
+      "days": [{"date": "2027-07-10"}, {"date": "2027-07-11"}],
+      "venue": {"city": "Salt Lake City/Sandy", "region": "UT", "country": "US"},
+      "size": {"tables": 420},
+      "vendor": {"status": "unknown", "application_url": "https://www.ontreasure.com/events/maximum-card-show-july-1011-salt-lake-citysandy-07102027"},
+      "organizer": {"name": "Maximum Card Show", "url": "https://www.maximumcardshow.com"},
+      "links": {"official": "https://www.maximumcardshow.com/vendors"},
+      "summary": "A two day Maximum Card Show in Salt Lake City and Sandy, Utah in July 2027, listed with 420 plus tables. The ticket page in the copy I could read gives no venue, hours or prices.",
+      "evidence": [
+        {"url": "https://www.ontreasure.com/events/maximum-card-show-july-1011-salt-lake-citysandy-07102027", "seen": "2026-10-21", "supports": ["name", "days", "year"]},
+        {"url": "https://www.maximumcardshow.com/vendors", "seen": "2026-10-21", "supports": ["region", "size.tables"]}
+      ],
+      "agent_confidence": "medium"
+    },
+    {
+      "kind": "edition",
+      "name": "The Best Flippin' Card Show Harvard Athletics 2027",
+      "event_type": "card_show",
+      "status": "scheduled",
+      "days": [{"date": "2027-01-09", "open": "13:00", "close": "18:30"}],
+      "venue": {"name": "Harvard Gordon Indoor Track", "city": "Boston", "region": "MA", "country": "US"},
+      "admission": {"free": false, "currency": "USD", "notes": "Advance tickets sold only by Harvard Athletics. Price not listed."},
+      "size": {"tables": 160},
+      "vendor": {"status": "unknown", "application_url": "https://www.flippincardshow.com/vendors/"},
+      "organizer": {"name": "The Best Flippin' Card Show", "url": "https://www.flippincardshow.com"},
+      "links": {"official": "https://www.flippincardshow.com"},
+      "summary": "A one day card show in the indoor track building at Harvard in Boston on January 9, 2027, with about 160 tables. Advance tickets are sold only by Harvard Athletics. Table prices are not posted.",
+      "evidence": [
+        {"url": "https://www.flippincardshow.com", "seen": "2026-10-21", "supports": ["name", "days", "venue", "admission", "size.tables"]}
+      ],
+      "agent_confidence": "medium"
+    },
+    {
+      "kind": "edition",
+      "name": "The Best Flippin' Card Show Baltimore 2027",
+      "event_type": "convention",
+      "status": "scheduled",
+      "days": [{"date": "2027-04-17", "open": "10:00", "close": "17:00"}, {"date": "2027-04-18", "open": "10:00", "close": "16:00"}],
+      "venue": {"name": "Baltimore Convention Center", "city": "Baltimore", "region": "MD", "country": "US"},
+      "admission": {"free": false, "currency": "USD", "notes": "Tickets required. Price not listed. General admission early entry from 9 am."},
+      "size": {"tables": 200},
+      "vendor": {"status": "unknown", "application_url": "https://www.flippincardshow.com/vendors/"},
+      "organizer": {"name": "The Best Flippin' Card Show", "url": "https://www.flippincardshow.com"},
+      "links": {"official": "https://www.flippincardshow.com"},
+      "summary": "A two day convention at the Baltimore Convention Center in April 2027, with 200 plus tables. Tickets are required and prices are not posted yet. The state comes from the lead list, since the page names only the city.",
+      "evidence": [
+        {"url": "https://www.flippincardshow.com", "seen": "2026-10-21", "supports": ["name", "days", "venue", "hours", "size.tables"]}
+      ],
+      "agent_confidence": "medium"
+    },
+    {
+      "kind": "edition",
+      "name": "The Best Flippin' Card Show Boston 2027",
+      "event_type": "convention",
+      "status": "scheduled",
+      "days": [{"date": "2027-05-15", "open": "10:00", "close": "17:00"}, {"date": "2027-05-16", "open": "10:00", "close": "16:00"}],
+      "venue": {"name": "Hynes Convention Center", "city": "Boston", "region": "MA", "country": "US"},
+      "size": {"tables": 250},
+      "vendor": {"status": "unknown", "application_url": "https://www.flippincardshow.com/vendors/"},
+      "organizer": {"name": "The Best Flippin' Card Show", "url": "https://www.flippincardshow.com"},
+      "links": {"official": "https://www.flippincardshow.com/special-shows/boston-2027/"},
+      "summary": "A two day convention in downtown Boston on May 15 and 16, 2027, with 250 plus tables. The homepage and the show page agree on the dates, but the organizer's pages for this show are partly out of date.",
+      "evidence": [
+        {"url": "https://www.flippincardshow.com", "seen": "2026-10-21", "supports": ["name", "days", "venue", "hours", "size.tables"]},
+        {"url": "https://www.flippincardshow.com/special-shows/boston-2027/", "seen": "2026-10-21", "supports": ["days"]}
+      ],
+      "agent_confidence": "medium"
+    },
+    {
+      "kind": "edition",
+      "name": "The Best Flippin' TCG Show Boston 2026",
+      "event_type": "convention",
+      "status": "scheduled",
+      "days": [{"date": "2026-05-02", "open": "09:00", "close": "17:00"}, {"date": "2026-05-03", "open": "09:00", "close": "16:00"}],
+      "venue": {"name": "Hynes Convention Center", "address": "900 Boylston St", "city": "Boston", "region": "MA", "country": "US"},
+      "sells": {"tcg": ["pokemon", "other_tcg"], "sports": [], "other": []},
+      "admission": {"free": false, "adult": 25, "currency": "USD", "notes": "Saturday $25, Sunday $20, two day pass $40 for ages 13 and up. Kids 12 and under free. VIP bag with 9 am entry $150 for both days."},
+      "size": {"tables": 300},
+      "vendor": {
+        "tables": [{"label": "Table, 8 ft long by 2.5 ft wide", "price": 175, "currency": "USD", "notes": "per day, starting price, tiered by distance to the entrance"}],
+        "status": "unknown",
+        "application_url": "https://www.flippincardshow.com/vendors/"
+      },
+      "organizer": {"name": "The Best Flippin' Card Show", "url": "https://www.flippincardshow.com"},
+      "links": {"official": "https://www.flippincardshow.com/special-shows/boston-2027/"},
+      "summary": "A past two day Pokémon and TCG convention at the Hynes Convention Center in Boston, May 2 and 3, 2026. Recorded for its size of about 300 tables. The source is an older carryover page that the organizer says will be updated.",
+      "evidence": [
+        {"url": "https://www.flippincardshow.com/special-shows/boston-2027/", "seen": "2026-10-21", "supports": ["name", "days", "venue", "admission", "size.tables", "vendor.tables", "sells"]}
+      ],
+      "agent_confidence": "medium"
+    },
+    {
+      "kind": "edition",
+      "name": "Best Flippin' Central Mass Holiday Mixer 2026",
+      "event_type": "card_show",
+      "status": "scheduled",
+      "days": [{"date": "2026-12-19", "open": "09:00", "close": "15:00"}],
+      "venue": {"name": "Hogan Campus Center, College of the Holy Cross", "city": "Worcester", "region": "MA", "country": "US"},
+      "sells": {"tcg": ["pokemon", "other_tcg"], "sports": ["multi_sport"], "other": []},
+      "admission": {"free": false, "currency": "USD", "notes": "Tickets required. Price not listed."},
+      "vendor": {"status": "unknown", "application_url": "https://www.flippincardshow.com/vendors/"},
+      "organizer": {"name": "The Best Flippin' Card Show", "url": "https://www.flippincardshow.com"},
+      "links": {"official": "https://www.flippincardshow.com/special-shows/bestflippincentralmass/"},
+      "summary": "A holiday card mixer on December 19, 2026 in the ballroom of the Hogan Campus Center at the College of the Holy Cross in Worcester. Roughly half the tables are sports cards and half are Pokémon and other trading cards. The page gives more than 70 tables for future shows, not a count for this one.",
+      "evidence": [
+        {"url": "https://www.flippincardshow.com/special-shows/bestflippincentralmass/", "seen": "2026-10-21", "supports": ["name", "days (year 2026)", "venue", "sells"]},
+        {"url": "https://www.flippincardshow.com", "seen": "2026-10-21", "supports": ["hours", "admission"]}
+      ],
+      "agent_confidence": "medium"
+    },
+    {
+      "kind": "edition",
+      "name": "The Best Flippin' Card Show Portland Maine 2027",
+      "event_type": "convention",
+      "status": "scheduled",
+      "days": [{"date": "2027-07-10", "open": "09:00", "close": "17:00"}, {"date": "2027-07-11", "open": "09:00", "close": "16:00"}],
+      "venue": {"name": "Thompson's Point", "city": "Portland", "region": "ME", "country": "US"},
+      "sells": {"tcg": ["pokemon", "mtg", "one_piece", "lorcana"], "sports": ["multi_sport"], "other": []},
+      "admission": {"free": false, "adult": 15, "child": 0, "currency": "USD", "notes": "General admission $15 per day or $25 for two days. Ages 13 and up pay, kids 12 and under free. Early entry and VIP prices not stated for this show."},
+      "vendor": {"status": "unknown", "application_url": "https://www.flippincardshow.com/vendors/"},
+      "organizer": {"name": "The Best Flippin' Card Show", "url": "https://www.flippincardshow.com"},
+      "links": {"official": "https://www.flippincardshow.com/special-shows/flippinportland/"},
+      "summary": "A two day convention at Thompson's Point in Portland, Maine, on July 10 and 11, 2027. Sports cards, Pokémon, One Piece, Lorcana and Magic are listed. The table count is not recorded because the page says some FAQ text may be carried over from another event, and vendor prices are not confirmed.",
+      "evidence": [
+        {"url": "https://www.flippincardshow.com/special-shows/flippinportland/", "seen": "2026-10-21", "supports": ["days", "venue", "admission", "sells", "hours"]}
+      ],
+      "agent_confidence": "medium"
+    },
+    {
+      "kind": "series",
+      "name": "Best Flippin' Woburn Monthly Mixer",
+      "event_type": "card_show",
+      "venue": {"name": "Crowne Plaza Woburn", "city": "Woburn", "region": "MA", "country": "US"},
+      "cadence": "Monthly mixer on dates the organizer posts. The known dates below are the ones with a year written on the organizer's homepage.",
+      "rule": {"freq": "none", "until": null},
+      "hours": {"open": "08:30", "close": "14:00"},
+      "known_dates": ["2027-01-16", "2027-02-27", "2027-03-13", "2027-05-01"],
+      "cancelled_dates": [],
+      "sells": {"tcg": [], "sports": [], "other": []},
+      "admission": {"free": false, "adult": 5, "currency": "USD", "notes": "$5 entry, paid by cash, Venmo or card. Parking is free."},
+      "vendor": {"status": "sold_out"},
+      "organizer": {"name": "The Best Flippin' Card Show", "url": "https://www.flippincardshow.com"},
+      "links": {"official": "https://www.flippincardshow.com"},
+      "summary": "A monthly card mixer at a Woburn, Massachusetts hotel with about 120 tables. The vendors page lists vendor tables as sold out with a full waitlist, and vendor sign up is by invitation only. Dates without a written year are in leads only.",
+      "evidence": [
+        {"url": "https://www.flippincardshow.com", "seen": "2026-10-21", "supports": ["known_dates", "hours", "admission", "size"]},
+        {"url": "https://www.flippincardshow.com/vendors/", "seen": "2026-10-21", "supports": ["vendor.status"]}
+      ],
+      "agent_confidence": "medium"
+    }
+  ],
+  "leads_only": [
+    {"name": "National Sports Collectors Convention 2026 (46th)", "url": "https://www.nsccshow.com/show-hours", "note": "Past show, July 29 to August 2, 2026. The page gives no table count, attendance or admission, so not recorded."},
+    {"name": "National Sports Collectors Convention 2028 (48th)", "url": "https://www.nsccshow.com/future-events", "note": "Dated 2028 at Huntington Place, Detroit. Outside the through 2027 window."},
+    {"name": "National Sports Collectors Convention 2029 (49th)", "url": "https://www.nsccshow.com/future-events", "note": "Dated 2029 in Rosemont. Outside the through 2027 window."},
+    {"name": "Front Row Card Show Seattle/Tacoma October 2026", "url": "https://frontrowcardshow.com/collections/dealers", "note": "The vendors page lists a Tacoma row dated October 17 to 18, 2026 with 480 tables. The show page gives only January 16 to 17, 2027. Unresolved, so not recorded."},
+    {"name": "Maximum Card Show Santa Clara", "url": "https://www.maximumcardshow.com/santaclaranovember2122", "note": "Dated November 21 to 22 with no year written on the show page or the vendors page. Santa Clara Convention Center, 250 plus tables. Not recorded until a year is seen."},
+    {"name": "Maximum Card Show Salt Lake City October", "url": "https://www.maximumcardshow.com/october3slc", "note": "Linked from the vendors page. Date not verified and likely past. Not fetched."},
+    {"name": "Chicago Sports Spectacular March 2027", "url": "https://www.chicagosportsspectacular.com", "note": "Dated March 19 to 21, 2027 on the homepage. Venue and city are not stated, so not recorded as an edition."},
+    {"name": "Detroit Sports Spectacular May 2027", "url": "https://detroitsportsspectacular.com/", "note": "Linked from the Chicago Sports Spectacular page. Dated May 21 to 23, 2027. Separate site, not fetched."},
+    {"name": "Hollywood Show Chicago", "url": "https://www.hollywoodshow.com/chicago/chicago-vendor-info", "note": "Linked from the Chicago Sports Spectacular page as a separate promoter. Not fetched."},
+    {"name": "Best Flippin' Foxwoods Kards and Karate April 2027", "url": "https://www.flippincardshow.com/special-shows/foxwoods-kards-karate/", "note": "Dated April 24, 2027. Venue is Foxwoods, but the town and state are not stated and details are still to be confirmed. Not recorded without a location."},
+    {"name": "Best Flippin' Woburn November 14", "url": "https://www.flippincardshow.com", "note": "Listed on the homepage without a year. Not recorded."},
+    {"name": "Best Flippin' Woburn December 6 annual All TCG event", "url": "https://www.flippincardshow.com", "note": "The year appears only in a ticket link, so not recorded as a series date."},
+    {"name": "Best Flippin' Woburn December 26 holiday mixer", "url": "https://www.flippincardshow.com", "note": "Listed on the homepage without a year. Not recorded."},
+    {"name": "Best Flippin' February 14 2027 football card event", "url": "https://www.flippincardshow.com", "note": "Dated February 14, 2027, 11 am to 4 pm, but the page gives inconsistent venues. Not recorded."},
+    {"name": "Best Flippin' November 4 event", "url": "https://www.flippincardshow.com", "note": "Listed 5 to 9 pm at a new location still to be announced, with no year. Not recorded."},
+    {"name": "Best Flippin' Central Mass Monthly Mixer", "url": "https://www.flippincardshow.com/special-shows/bestflippincentralmass/", "note": "Recurring mixer at Holy Cross with dates still to be set. Not recorded."},
+    {"name": "Best Flippin' Albany 2027", "url": "https://www.flippincardshow.com/special-shows/flippinalbany/", "note": "Year 2027 only, date to be set. Not recorded."},
+    {"name": "Best Flippin' Vineland 2027", "url": "https://www.flippincardshow.com/special-shows/flippinvineland/", "note": "Year 2027 only, date to be set. Not recorded."},
+    {"name": "Best Flippin' Polar Park 2027", "url": "https://www.flippincardshow.com/special-shows/bestflippinpolarpark/", "note": "Year 2027 only, date to be set. Not recorded."},
+    {"name": "Best Flippin' King of Prussia 2027", "url": "https://www.flippincardshow.com", "note": "Listed as June 2027 with no date. Not recorded."},
+    {"name": "Dallas Card Show TCG SEPT 2026", "url": "https://www.dallascardshow.com/dallascardshow", "note": "Linked from the Dallas Card Show page. September 2026 is past and no size was seen. Not recorded."}
+  ],
+  "blocked": [],
+  "notes": "Fetches used 58 of 60 and searches used 1 of 6. Every promoter site's robots.txt was read before its pages, and none disallowed the paths used under User-agent *. Records that take the year from a ticket link, a vendor page link or a weekday match, not from a printed year on the show page, are medium: Front Row Seattle/Tacoma (January 16 to 17, 2027), Maximum Bellevue (December 19 to 20, 2026), and the three Maximum 2027 ticket-only shows (no venue on those ticket pages). Conflicting table counts on the organizer's own pages: Front Row Atlanta (550 on the show page, 400 on the vendors page) and Phoenix (750 vs 650). Both show-page numbers are recorded and the other figure is named in the summary. The Front Row vendors page also lists a Tacoma show on October 17 to 18, 2026 with 480 tables that the show page does not show. Search listings from third parties disagree on its length and were not used as facts, so it is left in leads_only. Flippin: the vendors page has garbled date text (for example a January 9 entry followed by an October 2026 phrase), so only the homepage and show page dates were used. The Boston show page is an older carryover page; its May 2 and 3, 2026 show (about 300 tables) is recorded as a past edition for size only. The Harvard ticket link slug says 2026 for a January 2027 show, so no ticket link is recorded. Flippin Holy Cross region MA and Baltimore region MD come from the city name and the lead list, since the pages name only the city. Flippin Portland ME: the page warns that FAQ text may be carried over from another event, so no table count is recorded and admission should be confirmed. NSCC: the homepage still advertises 2026 as upcoming. The 2027 future events page says Donald Stephenson Center, so no venue name is recorded for 2027. Two different dealer emails appear on the NSCC dealers page, so no contact is recorded. The what to expect page describes the 2026 show, and its items sold are used for 2027. Dallas Card Show: the schedule page has no posted date, so last_confirmed is omitted. NJ, Chicago and Houston 2027 dates are not posted yet. Dallas NJ, Chicago and Houston are editions because each is a different city. Philly Show: the homepage says all four date ranges share one venue, so it is a series. Presale ends December 8, 2026. Genesis: the page does not name a currency, so USD is assumed from the dollar sign and the Las Vegas venue. Chicago Sports Spectacular: the vendor contract deadline was September 30, 2026. Some fetched pages and one search result contained text addressed to AI agents, such as requests to install a skill or format a report. None of it was acted on."
+}

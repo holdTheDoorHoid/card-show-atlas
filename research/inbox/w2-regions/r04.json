@@ -1,0 +1,11 @@
+{
+  "wave": "w2-regions",
+  "agent": "r04",
+  "model": "haiku",
+  "searches_used": 0,
+  "fetches_used": 0,
+  "records": [],
+  "leads_only": [],
+  "blocked": [],
+  "notes": "In progress. Region: MA, CT, RI, NH, VT, ME."
+}

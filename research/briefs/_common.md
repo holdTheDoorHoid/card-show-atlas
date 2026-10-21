@@ -15,7 +15,13 @@ a guess.
 3. **Facebook, Instagram, Eventbrite, Meetup, TikTok, X and AllEvents are leads only.** You may record
    their URL in `links` and in `leads_only`, but every fact you record must come from a page that is
    not one of those sites. Never fetch more than one page of these sites in a row.
-4. **Dates are the most important field.**
+4. **Never fetch these listing sites** (their terms forbid automated use, or they block bots). If a
+   search result points to one, use the snippet only as a lead and find the organizer's own page:
+   sportscollectorsdigest.com, collect.com, cardshowmap.com, treasurehunter.show,
+   thecardshopfinder.com, cardshowhub.com, cardshowdirectory.com, sportscardinvestor.com,
+   cardpulse.club, beckett.com, psacard.com, sportscollectorsdaily.com, locator.wizards.com, rk9.gg,
+   melee.gg, fancons.com, animecons.com, cantonfair.net, 10times.com, tradefest.io.
+5. **Dates are the most important field.**
    * Record a date only when the page states it with the year, or the page itself is clearly dated
      this season (a 2026 schedule page, a post dated 2026).
    * When a page gives a weekday and a date, check they agree with Bash, for example
@@ -25,19 +31,19 @@ a guess.
    * A pattern like "every second Sunday" is a **series** record (see below), not a list of guessed dates.
    * Past shows are only worth recording when the page gives their size (tables or attendance). Record
      those as editions with their real past dates; they help estimate future crowds.
-5. **Contacts:** record emails and web forms the organizer publishes for the show or for vendors.
+6. **Contacts:** record emails and web forms the organizer publishes for the show or for vendors.
    **Never record phone numbers** or anyone's home address.
-6. **Money:** a number plus `currency` (`USD` or `CAD`). "100+ tables" becomes `100`. "Tables from
+7. **Money:** a number plus `currency` (`USD` or `CAD`). "100+ tables" becomes `100`. "Tables from
    $50" becomes a table entry with price 50 and notes "from". Never convert currencies.
-7. **No dashes as punctuation** in anything you write: no em dash, no en dash, no " - ". Use a comma,
+8. **No dashes as punctuation** in anything you write: no em dash, no en dash, no " - ". Use a comma,
    a colon, parentheses, or a new sentence. Ranges: "9 am to 3 pm".
-8. **Stay in budget, but use it.** Your brief gives your WebSearch cap; it is hard. WebFetch is cheap:
+9. **Stay in budget, but use it.** Your brief gives your WebSearch cap; it is hard. WebFetch is cheap:
    you may use up to 60 fetches. **Do not finish early.** Every lead in your brief must end as a record,
    a `leads_only` entry with a reason, or a `blocked` entry.
-9. **Tools: only Read, Write, Bash (to check dates and your JSON), WebFetch and WebSearch.** Never call
+10. **Tools: only Read, Write, Bash (to check dates and your JSON), WebFetch and WebSearch.** Never call
    Agent, spawn_task, dismiss_task, SendMessage, browser tools, docs tools or any other tool. You work
    alone and finish alone.
-10. **Write your file early and often.** Write the output file after your first few shows, then rewrite
+11. **Write your file early and often.** Write the output file after your first few shows, then rewrite
     it as you go, so nothing is lost if you are interrupted. Do not use git.
 
 ## What counts
@@ -114,7 +120,7 @@ Leave out any field you could not establish. Never write a guess.
 `status`: scheduled, tentative (the organizer says "date to be confirmed" or similar), postponed,
 cancelled. `vendor.status`: open, waitlist, sold_out, closed, unknown. Times are 24 hour local.
 `region` is the two letter state or province code. `agent_confidence`: high (the organizer's own
-current page), medium (a listing site, or the organizer page is undated), low.
+current page), medium (a venue, news, city or tourism calendar, or a listing site NOT on the never fetch list; or the organizer page is undated), low.
 
 ### A series (a show that repeats on a pattern)
 

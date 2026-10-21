@@ -1,0 +1,92 @@
+{
+  "wave": "w1-promoters",
+  "agent": "a05",
+  "model": "haiku",
+  "searches_used": 6,
+  "fetches_used": 21,
+  "records": [],
+  "leads_only": [
+    {
+      "name": "Arlington Card Shows / PokeNostalgia (promoter lead)",
+      "url": "https://thecardshopfinder.com/event/arlington-card-show-ntx-arena-lewisville-2026-08/",
+      "note": "Promoter lead with no record. Own site not found: arlingtoncardshows.com does not resolve. The only source found is a listing site that returned HTTP 403, so nothing was fetched from it. Search summaries (unverified, not recorded) name PokeNostalgia at NTX Arena in Lewisville on Sat Nov 21 2026 and on Dec 19 and 20 2026 (Sat and Sun). They also name an Arlington Card Show at Meadowbrook Rec Center on Sat Sep 26 2026, which is past. Instagram handles named in listing text, not fetched: arlingtoncardshows and pokenostalgiastore."
+    },
+    {
+      "name": "PokeNostalgia at NTX Arena, Lewisville (Nov 2026)",
+      "url": "https://thecardshopfinder.com/event/pokenostalgia-card-show-ntx-arena-lewisville-2026-11/",
+      "note": "Listing only, not fetched. Search summary says Sat Nov 21 2026 with 300+ tables. Weekday checked with date. Not recorded: the listing site is not the promoter's own page."
+    },
+    {
+      "name": "Grail Card Promotions (promoter)",
+      "url": "https://grailcardpromotions.com",
+      "note": "Own site, confirmed from the homepage (it links to its own domain and describes a vendor-run show promoter). Its Future Shows page (https://www.grailcardpromotions.com/event-list) returned only the page title on two fetches, so the show list could not be read. Re-check it with a fresh fetch or a browser. Facts from listing sites are not recorded: Mt Airy show, Sat Oct 24 2026; Wilkesboro at Yadkin Valley Event Center, Sat Nov 14 2026; Statesville Civic Center, Sat Jan 9 2027 (see the listing lead below)."
+    },
+    {
+      "name": "Mt Airy High School show with Grail Card Promotions",
+      "url": "https://www.treasurehunter.show/show/mt-airy-high-school-show-w-grail-card-promotions-mt-airy-nc-2026-10-24",
+      "note": "Listing only, not fetched (treasurehunter.show has ClaudeBot Disallow: /). Search summary: Sat Oct 24 2026, 9 am to 4 pm, sports cards. Weekday checked. Not recorded."
+    },
+    {
+      "name": "Wilkesboro Sports Cards and TCG Show with Grail Card Promotions",
+      "url": "https://www.treasurehunter.show/show/wilkesboro-sports-cards-and-tcg-show-grail-card-promotions-wilkesboro-nc-2026-11-14",
+      "note": "Listing only, not fetched (treasurehunter.show has ClaudeBot Disallow: /). Search summary: Sat Nov 14 2026 at Yadkin Valley Event Center, Wilkesboro NC, 9 am to 4 pm, sports cards and TCG. Weekday checked. Not recorded."
+    },
+    {
+      "name": "Statesville Card Show with Grail Card Promotions (2027)",
+      "url": "https://thecardshopfinder.com/event/statesville-card-show-grail-card-promotions-statesville-2027-01/",
+      "note": "Listing only, not fetched (this host returned HTTP 403). Search summary: Sat Jan 9 2027 at Statesville Civic Center, 9 am to 4 pm. Weekday checked. Not recorded."
+    },
+    {
+      "name": "Norwalk Card Show (promoter lead)",
+      "url": "https://www.treasurehunter.show/show/norwalk-card-show-norwalk-ct-2026-10-25",
+      "note": "Promoter lead with no record. Own site not found: norwalkcardshow.com does not resolve. Listing only, not fetched (treasurehunter.show has ClaudeBot Disallow: /). Search summary: monthly show at American Legion Post 12, Norwalk CT, with upcoming Sun Oct 25, Sun Nov 22 and Sun Dec 27 2026. All three are 4th Sundays, and the weekdays were checked with date. Admission listed as $3 with children 10 and under free. Instagram handle named in listing text, not fetched: norwalkcardshow. Not recorded."
+    },
+    {
+      "name": "Hard Hittin' Card Show (promoter lead)",
+      "url": "https://www.treasurehunter.show/show/hard-hittin-card-shows-berlin-ct-2026-09-13",
+      "note": "Promoter lead with no record. Own site not found: hardhittincardshow.com does not resolve. Only listing sites found (not fetched). Every dated listing in the summaries is before Oct 21 2026, so no upcoming date was found. Most recent: Sun Sep 13 2026 in Berlin CT, summary says 110+ tables and $5 admission. Other summaries: Foxwoods, Sun Aug 23 2026; The Truck Bar in Berlin, Sun Jun 14 and Sun Jul 12 2026. Not recorded."
+    },
+    {
+      "name": "Cardboard Culture Card Shows (promoter lead, not identified)",
+      "url": "https://cardboardculture.com",
+      "note": "Not identified. No search was run because the 6 search budget was used on other promoters. The domain cardboardculture.com belongs to an unrelated handmade cardboard furniture maker: the homepage was fetched, it lists no card shows, and it is not this promoter. Needs a search in a later pass. Region is blank in the lead file."
+    },
+    {
+      "name": "Card Show By the Bay (promoter lead, not identified)",
+      "url": "https://cardshowbythebay.com",
+      "note": "Not identified. No search was run because the search budget was used up. The guessed domain cardshowbythebay.com does not resolve. Region is blank in the lead file. Needs a search in a later pass."
+    },
+    {
+      "name": "Hightstown Sports Card and Collectibles Show (promoter lead)",
+      "url": "https://www.sportscardinvestor.com/event/hightstowns-sports-card-collectibles-show-8/2026-09-12/",
+      "note": "Promoter lead with no record. Own site not found: hightstowncardshow.com does not resolve, and the listing has no organizer website link. The listing page was fetched (robots allows /event/ for all bots) and shows: Saint Anthony of Padua gym, 156 Maxwell Ave, Hightstown NJ 08520; 9 am to 2 pm; $2 admission; $40 for an 8 ft table or $70 for two tables; table count not shown. Its date list (Oct 10, Nov 14 and Nov 28 2026, all Saturdays) conflicts with a search summary that named Oct 17 and Dec 5 2026. Not recorded: a listing site, not the promoter's own page, and the dates conflict. Organizer name omitted."
+    },
+    {
+      "name": "Hightstown Engine Co. No. 1 Friday Night Sports and Pokemon Card Show",
+      "url": "https://www.treasurehunter.show/show/hightstown-engine-co-no-1-friday-night-sports-and-pokemon-card-show-hightstown-nj-2026-12-04",
+      "note": "Separate event, not the Hightstown lead. Listing only, not fetched. Search summary: Fri Dec 4 2026, 5 pm start, Pokemon focus, Hightstown Engine Co. No. 1. Friday checked with date. Not recorded."
+    },
+    {
+      "name": "Poppel Family Shows (promoter lead)",
+      "url": "https://www.treasurehunter.show/show/poppel-family-show-sports-card-and-pokemon-bensalem-pa-2026-09-20",
+      "note": "Promoter lead with no record. Own site not found: poppelfamilyshows.com and poppelshows.com do not resolve. Listing results only, not fetched. Every dated listing in the summaries is past as of Oct 21 2026, so no upcoming date was found. Past shows named: Sat Aug 1 2026 at a Cornwells Heights fire hall (summary: 75+ tables, $5 admission, kids 10 and under free) and Sun Sep 20 2026 at Cornwells Fire Company Station 16 in Bensalem. An Eventbrite listing (lead only, not fetched) names a Sun Aug 23 2026 show at a Hilton Garden Inn in Exton. Phone numbers conflict between listings and are not recorded."
+    }
+  ],
+  "blocked": [
+    {
+      "url": "https://thecardshopfinder.com/event/arlington-card-show-ntx-arena-lewisville-2026-08/",
+      "status": 403,
+      "note": "HTTP 403 on the first fetch. Not retried. This was a process slip: this host was fetched before its robots.txt was checked."
+    },
+    {
+      "url": "https://www.treasurehunter.show/",
+      "note": "robots: ClaudeBot has Disallow: / on this host, so no pages were fetched. Facts seen only in search snippets from this host are not recorded."
+    },
+    {
+      "url": "https://pokenostalgia.com/",
+      "status": 302,
+      "note": "Redirects to a domain sale page (hugedomains). Not the promoter's site. The redirect was not followed."
+    }
+  ],
+  "notes": "Records: none. No promoter's own page with readable show facts was found. Own site found: grailcardpromotions.com (homepage verified), but its show list did not load in two fetches. Every other show fact seen came from listing sites (treasurehunter.show, thecardshopfinder.com, sportscardinvestor.com) and is held in leads_only, not recorded. Conflict: the _common rules allow listing sites as medium confidence evidence, but the promoters.yaml header says facts must come from promoter pages. I followed the stricter reading. If you want listing-site facts recorded at medium confidence, that needs a decision on the rule. Searches: 6 of 6 used (arlington, grail_card, hard_hittin, norwalk, hightstown, poppel). cardboard_culture and card_show_by_the_bay were not searched because the budget ran out. Guessed own-site domains that do not resolve: arlingtoncardshows.com, norwalkcardshow.com, hardhittincardshow.com, poppelfamilyshows.com, poppelshows.com, hightstowncardshow.com, cardshowbythebay.com. pokenostalgia.com redirects to a domain sale page. cardboardculture.com is an unrelated furniture maker. Pattern notes for the next pass: Norwalk dates are all 4th Sundays; Hightstown dates are Saturdays. Conflicts to resolve on the promoter's own pages: Hightstown dates (Oct 17 and Dec 5 versus Oct 10, Nov 14 and Nov 28); Arlington has one listing that still shows the Sep 13 2026 show as next, which is stale. Process note: one browser tool (navigate) was called by mistake. It failed without effect and was not used again. Budget: 21 fetches used out of 60."
+}

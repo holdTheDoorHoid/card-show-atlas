@@ -1,0 +1,351 @@
+{
+  "wave": "w1-premier",
+  "agent": "p02",
+  "model": "haiku",
+  "searches_used": 8,
+  "fetches_used": 40,
+  "records": [
+    {
+      "kind": "edition",
+      "name": "National Sports Collectors Convention 2027",
+      "event_type": "convention",
+      "status": "scheduled",
+      "days": [
+        {"date": "2027-07-28"},
+        {"date": "2027-07-29"},
+        {"date": "2027-07-30"},
+        {"date": "2027-07-31"},
+        {"date": "2027-08-01"}
+      ],
+      "venue": {"name": "Donald E. Stephens Convention Center", "address": "5555 N River Rd", "city": "Rosemont", "region": "IL", "postal": "60018", "country": "US"},
+      "sells": {"tcg": [], "sports": ["multi_sport"], "other": []},
+      "vendor": {
+        "application_url": "https://www.nsccshow.com/future-events",
+        "status": "unknown",
+        "notes": "The organizer posts a 2027 Notice of Intent to Exhibit form for first-time dealers, linked as a PDF from the future events page. No return deadline, table count or booth price is published on the official pages. A third-party listing claims about 1,000 dealer tables but says 2027 details were not yet published, so no count is recorded."
+      },
+      "organizer": {"name": "National Sports Collectors Convention", "url": "https://www.nsccshow.com/"},
+      "links": {"official": "https://www.nsccshow.com/future-events"},
+      "summary": "The 47th National runs Wednesday to Sunday from late July into early August 2027 at the convention center in Rosemont, Illinois. The organizer has posted a first-time dealer form, but table counts and prices are not yet published.",
+      "evidence": [
+        {"url": "https://www.nsccshow.com/future-events", "seen": "2026-10-21", "supports": ["name", "days", "venue.name", "vendor.notes"]},
+        {"url": "https://www.nsccshow.com/", "seen": "2026-10-21", "supports": ["organizer.name", "venue.name"]}
+      ],
+      "agent_confidence": "high"
+    },
+    {
+      "kind": "edition",
+      "name": "National Sports Collectors Convention 2028 (Detroit)",
+      "event_type": "convention",
+      "status": "scheduled",
+      "days": [
+        {"date": "2028-08-02"},
+        {"date": "2028-08-03"},
+        {"date": "2028-08-04"},
+        {"date": "2028-08-05"},
+        {"date": "2028-08-06"}
+      ],
+      "venue": {"name": "Huntington Place", "city": "Detroit", "region": "MI", "country": "US"},
+      "sells": {"tcg": [], "sports": ["multi_sport"], "other": []},
+      "organizer": {"name": "National Sports Collectors Convention", "url": "https://www.nsccshow.com/"},
+      "links": {"official": "https://www.nsccshow.com/future-events"},
+      "summary": "The organizer has announced the 2028 National in Detroit for early August. No dealer details are published yet.",
+      "evidence": [
+        {"url": "https://www.nsccshow.com/future-events", "seen": "2026-10-21", "supports": ["name", "days", "venue.name"]}
+      ],
+      "agent_confidence": "high"
+    },
+    {
+      "kind": "edition",
+      "name": "Gen Con 2027",
+      "event_type": "pop_culture_con",
+      "status": "scheduled",
+      "days": [
+        {"date": "2027-08-05"},
+        {"date": "2027-08-06"},
+        {"date": "2027-08-07"},
+        {"date": "2027-08-08"}
+      ],
+      "venue": {"city": "Indianapolis", "region": "IN", "country": "US"},
+      "vendor": {
+        "status": "unknown",
+        "notes": "The official exhibitors page has a 2027 heading but no booth prices, sizes, application link, deadline or count. The official pages do not mention card vendors or trading card sellers, so card vendor presence is unconfirmed."
+      },
+      "links": {"official": "https://www.gencon.com/"},
+      "summary": "Gen Con returns to Indianapolis in August 2027 as a large tabletop gaming convention with hundreds of exhibiting companies. Whether card vendors take booths is not confirmed.",
+      "evidence": [
+        {"url": "https://www.gencon.com/", "seen": "2026-10-21", "supports": ["days", "venue.city"]},
+        {"url": "https://www.gencon.com/exhibitors", "seen": "2026-10-21", "supports": ["vendor.notes"]}
+      ],
+      "agent_confidence": "high"
+    },
+    {
+      "kind": "edition",
+      "name": "Origins Game Fair 2027",
+      "event_type": "pop_culture_con",
+      "status": "scheduled",
+      "days": [
+        {"date": "2027-06-09"},
+        {"date": "2027-06-10"},
+        {"date": "2027-06-11"},
+        {"date": "2027-06-12"},
+        {"date": "2027-06-13"}
+      ],
+      "venue": {"name": "Greater Columbus Convention Center", "city": "Columbus", "region": "OH", "country": "US"},
+      "vendor": {
+        "application_url": "https://www.originsgamefair.com/2027-exhibitors-application",
+        "status": "unknown",
+        "notes": "The 2027 exhibitor application portal is linked. Booth prices, sizes, application open date, deadline and sold out status are not published. The form covers several GAMA hosted events. Card vendors are not mentioned."
+      },
+      "links": {"official": "https://www.originsgamefair.com/"},
+      "summary": "Origins returns to Columbus, Ohio, in June 2027 as a large tabletop gaming convention. The exhibitor application is linked, but no booth prices or deadlines are published yet.",
+      "evidence": [
+        {"url": "https://www.originsgamefair.com/", "seen": "2026-10-21", "supports": ["name", "days", "venue.name"]},
+        {"url": "https://www.originsgamefair.com/2027-exhibitors-application", "seen": "2026-10-21", "supports": ["vendor.application_url", "vendor.notes"]}
+      ],
+      "agent_confidence": "high"
+    },
+    {
+      "kind": "edition",
+      "name": "The 1st TCG National Convention",
+      "event_type": "convention",
+      "status": "scheduled",
+      "days": [
+        {"date": "2027-01-21"},
+        {"date": "2027-01-22"},
+        {"date": "2027-01-23"},
+        {"date": "2027-01-24"}
+      ],
+      "venue": {"name": "Kay Bailey Hutchison Convention Center", "city": "Dallas", "region": "TX", "country": "US"},
+      "sells": {"tcg": ["other_tcg"], "sports": ["multi_sport"], "other": []},
+      "vendor": {
+        "status": "unknown",
+        "notes": "The listing says vendor booths are part of the show. No table prices, counts, application link or deadline are published on the listing, and no official organizer site was found. An aggregator figure of about 1,400 vendor tables could not be verified and is not recorded."
+      },
+      "summary": "A first year national convention in Dallas in January 2027 with sports cards and trading card game vendors, panels and cosplay. Listing details are still partly unconfirmed.",
+      "evidence": [
+        {"url": "https://www.treasurehunter.show/show/the-1st-tcg-national-convention-dallas-tx-2027-01-21", "seen": "2026-10-21", "supports": ["name", "days", "venue.name", "sells"]}
+      ],
+      "agent_confidence": "medium"
+    },
+    {
+      "kind": "edition",
+      "name": "Sport Card and Memorabilia Expo Toronto (Fall 2026)",
+      "event_type": "card_show",
+      "status": "scheduled",
+      "days": [
+        {"date": "2026-11-05", "open": "16:00", "close": "20:00"},
+        {"date": "2026-11-06", "open": "11:00", "close": "20:00"},
+        {"date": "2026-11-07", "open": "10:00", "close": "18:00"},
+        {"date": "2026-11-08", "open": "10:00", "close": "17:00"}
+      ],
+      "venue": {"name": "The International Centre", "address": "6900 Airport Rd", "city": "Mississauga", "region": "ON", "postal": "L4V 1E8", "country": "CA"},
+      "sells": {"tcg": [], "sports": ["multi_sport"], "other": ["memorabilia"]},
+      "admission": {"free": false, "notes": "Advance and door prices are printed with a dollar sign but the page does not state a currency, so no amounts are recorded. Check with the organizer."},
+      "vendor": {
+        "application_url": "https://sportcardexpotoronto.com/dealer-registration/",
+        "status": "sold_out",
+        "notes": "The dealers page marks dealer booths as sold out and invites contact details for last minute spots. Table prices, sizes, counts and deadlines are not published. No vendor contact email is published."
+      },
+      "links": {"official": "https://sportcardexpotoronto.com/"},
+      "summary": "The fall edition of this sports card and memorabilia expo runs four days in early November 2026 at The International Centre in Mississauga. Dealer booths are listed as sold out.",
+      "evidence": [
+        {"url": "https://sportcardexpotoronto.com/", "seen": "2026-10-21", "supports": ["name", "days", "venue", "admission"]},
+        {"url": "https://sportcardexpotoronto.com/dealers/", "seen": "2026-10-21", "supports": ["vendor.status", "vendor.application_url"]}
+      ],
+      "agent_confidence": "high"
+    },
+    {
+      "kind": "edition",
+      "name": "The Philly Show (December 2026)",
+      "event_type": "card_show",
+      "status": "scheduled",
+      "days": [
+        {"date": "2026-12-11", "open": "13:00", "close": "20:00"},
+        {"date": "2026-12-12", "open": "09:30", "close": "18:00"},
+        {"date": "2026-12-13", "open": "09:30", "close": "15:00"}
+      ],
+      "venue": {"name": "Greater Philadelphia Expo Center at Oaks", "city": "Oaks", "region": "PA", "postal": "19456", "country": "US"},
+      "sells": {"tcg": ["pokemon"], "sports": ["multi_sport"], "other": ["memorabilia"]},
+      "admission": {"free": false, "adult": 20, "child": 0, "currency": "USD", "notes": "Presale is 15 per day until 11 pm on 12/8/26. Show prices are 20 on Friday and Saturday and 15 on Sunday. Kids 10 and under are free with a paying adult. Active duty military and veterans get half off with proof of service, on site only."},
+      "vendor": {
+        "status": "unknown",
+        "contact": "info@phillyshow.com",
+        "notes": "The official site has a dealer info section and a Forms and Pricing link. Table prices, sizes, counts and deadlines are not published on the pages read. The dealer contact email is listed on the official site."
+      },
+      "links": {"official": "https://www.phillyshow.com/"},
+      "summary": "A three day sports card, memorabilia and Pokemon show at a large expo center in Oaks, Pennsylvania. Presale tickets are cheaper until early December.",
+      "evidence": [
+        {"url": "https://www.phillyshow.com/", "seen": "2026-10-21", "supports": ["days", "venue", "admission", "vendor.contact"]},
+        {"url": "https://www.phillyvoice.com/cooper-dejean-allen-iverson-philly-show-oaks-2026/", "seen": "2026-10-21", "supports": ["sells"]}
+      ],
+      "agent_confidence": "high"
+    },
+    {
+      "kind": "edition",
+      "name": "The Philly Show (March 2027)",
+      "event_type": "card_show",
+      "status": "scheduled",
+      "days": [{"date": "2027-03-05"}, {"date": "2027-03-06"}, {"date": "2027-03-07"}],
+      "venue": {"name": "Greater Philadelphia Expo Center at Oaks", "city": "Oaks", "region": "PA", "postal": "19456", "country": "US"},
+      "links": {"official": "https://www.phillyshow.com/"},
+      "summary": "The next Philly Show after December 2026 runs three days in March 2027 at the same Oaks expo center. Dealer details for this date are not yet published.",
+      "evidence": [
+        {"url": "https://www.phillyshow.com/", "seen": "2026-10-21", "supports": ["name", "days", "venue"]}
+      ],
+      "agent_confidence": "high"
+    },
+    {
+      "kind": "edition",
+      "name": "The Philly Show (September 2027)",
+      "event_type": "card_show",
+      "status": "scheduled",
+      "days": [{"date": "2027-09-24"}, {"date": "2027-09-25"}, {"date": "2027-09-26"}],
+      "venue": {"name": "Greater Philadelphia Expo Center at Oaks", "city": "Oaks", "region": "PA", "postal": "19456", "country": "US"},
+      "links": {"official": "https://www.phillyshow.com/"},
+      "summary": "A three day Philly Show is listed for late September 2027 at the Oaks expo center. Dealer details are not yet published.",
+      "evidence": [
+        {"url": "https://www.phillyshow.com/", "seen": "2026-10-21", "supports": ["name", "days", "venue"]}
+      ],
+      "agent_confidence": "high"
+    },
+    {
+      "kind": "edition",
+      "name": "The Philly Show (December 2027)",
+      "event_type": "card_show",
+      "status": "scheduled",
+      "days": [{"date": "2027-12-03"}, {"date": "2027-12-04"}, {"date": "2027-12-05"}],
+      "venue": {"name": "Greater Philadelphia Expo Center at Oaks", "city": "Oaks", "region": "PA", "postal": "19456", "country": "US"},
+      "links": {"official": "https://www.phillyshow.com/"},
+      "summary": "A three day Philly Show is listed for early December 2027 at the Oaks expo center. Dealer details are not yet published.",
+      "evidence": [
+        {"url": "https://www.phillyshow.com/", "seen": "2026-10-21", "supports": ["name", "days", "venue"]}
+      ],
+      "agent_confidence": "high"
+    },
+    {
+      "kind": "edition",
+      "name": "Chicago Sports Spectacular (November 2026)",
+      "event_type": "card_show",
+      "status": "scheduled",
+      "days": [
+        {"date": "2026-11-20", "open": "15:30", "close": "20:30"},
+        {"date": "2026-11-21", "open": "09:30", "close": "17:00"},
+        {"date": "2026-11-22", "open": "10:00", "close": "16:00"}
+      ],
+      "venue": {"name": "Donald E. Stephens Convention Center", "address": "5555 N River Rd", "city": "Rosemont", "region": "IL", "postal": "60018", "country": "US"},
+      "sells": {"tcg": [], "sports": ["multi_sport"], "other": []},
+      "admission": {"free": false, "adult": 15, "child": 10, "currency": "USD", "notes": "Friday adults 15. Saturday and Sunday adults 20 per day. Children 10 and under 10, children 5 and under free. All tickets are non-refundable. VIP hours differ from general admission."},
+      "vendor": {
+        "application_url": "https://www.chicagosportsspectacular.com/pages/vendor-info",
+        "status": "waitlist",
+        "contact": "chicagoshowvendors@gmail.com",
+        "deadline": "2026-09-30",
+        "notes": "Vendor contracts were due September 30, 2026 and payment is due October 28, 2026, with no exceptions per the page. New vendors are added to a waitlist. Table prices and counts are not published."
+      },
+      "links": {"official": "https://www.chicagosportsspectacular.com/"},
+      "summary": "A sports card show at the Rosemont convention center across a Friday to Sunday weekend in late November 2026. Vendor contracts closed in September, and new vendors go on a waitlist.",
+      "evidence": [
+        {"url": "https://www.chicagosportsspectacular.com/", "seen": "2026-10-21", "supports": ["days", "venue", "admission"]},
+        {"url": "https://www.chicagosportsspectacular.com/pages/vendor-info", "seen": "2026-10-21", "supports": ["vendor.deadline", "vendor.status", "vendor.contact"]}
+      ],
+      "agent_confidence": "high"
+    },
+    {
+      "kind": "edition",
+      "name": "Chicago Sports Spectacular (March 2027)",
+      "event_type": "card_show",
+      "status": "scheduled",
+      "days": [{"date": "2027-03-19"}, {"date": "2027-03-20"}, {"date": "2027-03-21"}],
+      "venue": {"name": "Donald E. Stephens Convention Center", "address": "5555 N River Rd", "city": "Rosemont", "region": "IL", "postal": "60018", "country": "US"},
+      "links": {"official": "https://www.chicagosportsspectacular.com/"},
+      "summary": "The March 2027 Chicago Sports Spectacular runs Friday to Sunday at the same Rosemont convention center. Vendor and admission details for this date are not yet posted.",
+      "evidence": [
+        {"url": "https://www.chicagosportsspectacular.com/pages/vendor-info", "seen": "2026-10-21", "supports": ["name", "days"]},
+        {"url": "https://www.chicagosportsspectacular.com/", "seen": "2026-10-21", "supports": ["venue"]}
+      ],
+      "agent_confidence": "high"
+    },
+    {
+      "kind": "edition",
+      "name": "PAX Unplugged 2026",
+      "event_type": "pop_culture_con",
+      "status": "scheduled",
+      "days": [{"date": "2026-12-04"}, {"date": "2026-12-05"}, {"date": "2026-12-06"}],
+      "venue": {"name": "Pennsylvania Convention Center", "city": "Philadelphia", "region": "PA", "country": "US"},
+      "links": {"official": "https://unplugged.paxsite.com/"},
+      "vendor": {
+        "status": "unknown",
+        "notes": "The official page has no booth prices, sizes, application link, deadline or card seller mention. A news article reports more than 300 exhibitors, but it refers to the 2025 show, so it is not recorded as a 2026 size."
+      },
+      "summary": "PAX Unplugged returns to Philadelphia for a tabletop gaming convention over the first weekend of December 2026. Exhibitor details for this year are not on the official page.",
+      "evidence": [
+        {"url": "https://unplugged.paxsite.com/", "seen": "2026-10-21", "supports": ["name", "days"]},
+        {"url": "https://gamingtrend.com/news/pax-unplugged-will-return-to-philadelphia-dec-4-6-2026/", "seen": "2026-10-21", "supports": ["venue.name"]}
+      ],
+      "agent_confidence": "medium"
+    },
+    {
+      "kind": "edition",
+      "name": "PAX Unplugged Houston 2027",
+      "event_type": "pop_culture_con",
+      "status": "scheduled",
+      "days": [{"date": "2027-06-25"}, {"date": "2027-06-26"}, {"date": "2027-06-27"}],
+      "venue": {"city": "Houston", "region": "TX", "country": "US"},
+      "links": {"official": "https://unplugged.paxsite.com/"},
+      "summary": "A new Houston edition of PAX Unplugged is listed for late June 2027. Tickets are not yet on sale and no vendor details are published.",
+      "evidence": [
+        {"url": "https://unplugged.paxsite.com/", "seen": "2026-10-21", "supports": ["name", "days", "venue.city"]}
+      ],
+      "agent_confidence": "high"
+    },
+    {
+      "kind": "edition",
+      "name": "PAX East 2027",
+      "event_type": "pop_culture_con",
+      "status": "scheduled",
+      "days": [{"date": "2027-04-22"}, {"date": "2027-04-23"}, {"date": "2027-04-24"}, {"date": "2027-04-25"}],
+      "venue": {"name": "Thomas M. Menino Convention & Exhibition Center", "address": "415 Summer St", "city": "Boston", "region": "MA", "postal": "02210", "country": "US"},
+      "links": {"official": "https://east.paxsite.com/"},
+      "vendor": {
+        "status": "unknown",
+        "notes": "The official page links to an exhibitor overview and an exhibitor manual, but shows no booth prices, stand sizes, deadline or count. Card sellers are not mentioned. The page says news is coming and details may change."
+      },
+      "summary": "PAX East returns to the Boston convention center in late April 2027 as a gaming convention. Exhibitor details are not yet published, and the official page says details may change.",
+      "evidence": [
+        {"url": "https://east.paxsite.com/", "seen": "2026-10-21", "supports": ["name", "days", "venue", "vendor.notes"]}
+      ],
+      "agent_confidence": "medium"
+    },
+    {
+      "kind": "edition",
+      "name": "PAX West 2027",
+      "event_type": "pop_culture_con",
+      "status": "scheduled",
+      "days": [{"date": "2027-09-03"}, {"date": "2027-09-04"}, {"date": "2027-09-05"}, {"date": "2027-09-06"}],
+      "venue": {"name": "Arch Building and Summit Building", "address": "705 Pike Street", "city": "Seattle", "region": "WA", "postal": "98101", "country": "US"},
+      "vendor": {
+        "application_url": "https://west.paxsite.com/en-us/exhibit-at-pax.html",
+        "status": "unknown",
+        "contact": "paxsales@paxsite.com",
+        "notes": "The exhibit page has no booth prices, sizes, application deadlines or exhibitor counts. The contact is listed for general exhibitor and advertising inquiries. Card sellers are not mentioned."
+      },
+      "links": {"official": "https://west.paxsite.com/"},
+      "summary": "PAX West returns to Seattle over Labor Day weekend 2027 as a gaming convention. The exhibitor page has no pricing or deadlines yet.",
+      "evidence": [
+        {"url": "https://west.paxsite.com/", "seen": "2026-10-21", "supports": ["name", "days", "venue"]},
+        {"url": "https://west.paxsite.com/en-us/exhibit-at-pax.html", "seen": "2026-10-21", "supports": ["vendor.contact", "vendor.notes"]}
+      ],
+      "agent_confidence": "high"
+    }
+  ],
+  "leads_only": [
+    {"name": "Fanatics Fest NYC", "url": "https://www.fanaticsfest.com/", "note": "2027 dates not announced (stay tuned page). The 2026 edition ran July 16 to 19 at the Javits Center per the tickets page, with no attendance or exhibitor figures, so no record. Recheck for 2027 dates."},
+    {"name": "Dallas Card Show (Allen, TX)", "url": "https://thecardshopfinder.com/event/dallas-card-show-allen-2027-01/", "note": "Found in search results only, not fetched. Listing puts it at the Marriott Dallas Allen, January 14 to 17, 2027, sports cards core. Vendor counts not checked."},
+    {"name": "Detroit Sports Spectacular", "url": "https://www.chicagosportsspectacular.com/pages/vendor-info", "note": "Separate show named on the Chicago organizer's vendor page as May 21 to 23, 2027 in Detroit. Not researched further."},
+    {"name": "Greater Toronto Sports Card Show (Fall)", "url": "https://www.eventbrite.ca/e/1983381091235", "note": "Eventbrite lead only. A search summary describes a North York hotel show with about 150 vendor tables. Not checked, and Eventbrite facts are not recorded."},
+    {"name": "Collect-A-Con (all cities)", "url": "https://collectaconusa.com/policies/", "note": "Dates skipped per brief. Vendor rules are recorded in the notes field of this file."}
+  ],
+  "blocked": [],
+  "notes": "Budget: all 8 WebSearch calls used and about 40 of 60 WebFetch calls used. Robots.txt checked on each new site; none disallowed the pages used. Several official pages returned errors and were replaced by other official pages: paxunplugged.com (fetch failed, used unplugged.paxsite.com), paxsite.com (certificate mismatch), nationalsportscollectorsconvention.com (wrong host, used nsccshow.com), Rosemont venue event page (404). East PAX event-info page returned 404, so PAX East details come from east.paxsite.com home only.\n\nCOLLECT-A-CON VENDOR RULES (dates skipped per brief): one full island of 10 tables maximum per company or person per show; orders above 10 may be cancelled with a 10 percent fee. Reselling, trading or transferring tables is prohibited. Standard table is 6 feet by 30 inches; 6 by 12, 6 by 24 and 8 by 30 may be used depending on the venue. Unauthorized tables cost 150 each, charged at the event. Cancellation requests must come at least 30 days before the event; approved refunds carry a 10 percent fee and later cancellations get no refund. Adhesive stickers, tape or decals on venue floors or walls need written approval, with a 2,000 fine for violations. Published vendor contact: info@collectaconusa.com. Prices and 2027 vendor applications were not published on the site. The homepage lists 900 plus vendor tables in a featuring list, not tied to one show.\n\nKEY CONFLICTS AND CAVEATS: (1) TCG National: the listing gives Jan 21 to 24 and 2 pm to 8 pm hours, but a nearby-shows card says Jan 23 at 10 am, so hours are left out. No official site was found; an aggregator claims about 1,400 vendor tables, not recorded. (2) National 2027 venue is spelled Donald Stephenson Center on the future events page and Donald E. Stephens Convention Center on the 2026 page and the Chicago organizer page; recorded as Donald E. Stephens. (3) Gen Con exhibitors page heading says 2027 but its browser title says 2025; dates Aug 5 to 8 2027 are on the homepage. (4) PAX East 2027 page says news is coming and details may change.\n\nUNVERIFIED AGGREGATOR TABLE COUNTS, NOT RECORDED: National 2027 about 1,000 tables; Toronto fall 2026 about 500 tables; Chicago Sports Spectacular about 400 tables; PAX Unplugged 2025 more than 300 exhibitors (year unclear).\n\nPAST EDITION NOT RECORDED: The Philly Show Sept 25 to 27, 2026 (Oaks, PA). A PhillyVoice article dated 2026-08-22 gives more than 300 dealers and more than 1,000 tables for that edition (pre-show press figure). It is not written as a separate record because the schema has no held status; use it when weighing crowd size.\n\nNOT RESEARCHED: Spring 2027 Toronto expo dates are not published; the organizer has run spring and fall editions. Card vendor presence at Gen Con, Origins, PAX West, PAX East and PAX Unplugged is not stated on their official pages. No record for the 2029 Chicago National (July 25 to 29, 2029) because it is beyond the next two editions.\n\nTOOL NOTE: One call went to a browser pane tool (preview_list) that is outside this brief's allowed tools. It returned an empty list and did nothing else. No other out-of-scope tool calls were made."
+}

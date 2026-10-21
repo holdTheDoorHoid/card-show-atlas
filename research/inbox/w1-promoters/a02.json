@@ -1,0 +1,804 @@
+{
+  "wave": "w1-promoters",
+  "agent": "a02",
+  "model": "haiku",
+  "searches_used": 0,
+  "fetches_used": 58,
+  "records": [
+    {
+      "kind": "edition",
+      "name": "Apex TCG Show",
+      "event_type": "card_show",
+      "status": "scheduled",
+      "days": [{"date": "2026-10-24"}],
+      "venue": {"region": "NJ", "country": "US"},
+      "sells": {"tcg": ["other_tcg"], "sports": [], "other": []},
+      "organizer": {"name": "Apex TCG Show", "url": "https://apextcgshow.com"},
+      "links": {"official": "https://apextcgshow.com", "tickets": "https://www.ontreasure.com/events/apex-tcg-show-franklin-nj-10242026"},
+      "summary": "One day TCG card show in New Jersey. The ticket listing gives the date, but its city conflicts with the listing URL, so only the state is recorded.",
+      "evidence": [
+        {"url": "https://apextcgshow.com", "seen": "2026-10-21", "supports": ["name", "days"]},
+        {"url": "https://www.ontreasure.com/events/apex-tcg-show-franklin-nj-10242026", "seen": "2026-10-21", "supports": ["days"]}
+      ],
+      "agent_confidence": "medium"
+    },
+    {
+      "kind": "edition",
+      "name": "Apex TCG Show",
+      "event_type": "card_show",
+      "status": "scheduled",
+      "days": [{"date": "2026-10-25"}],
+      "venue": {"city": "Cherry Hill", "region": "NJ", "country": "US"},
+      "sells": {"tcg": ["other_tcg"], "sports": [], "other": []},
+      "organizer": {"name": "Apex TCG Show", "url": "https://apextcgshow.com"},
+      "links": {"official": "https://apextcgshow.com", "tickets": "https://www.ontreasure.com/events/apex-tcg-show-cherry-hill-nj-oct-10252026"},
+      "summary": "One day TCG card show in Cherry Hill, New Jersey. The ticket listing gives only the date and city.",
+      "evidence": [
+        {"url": "https://apextcgshow.com", "seen": "2026-10-21", "supports": ["name", "days"]},
+        {"url": "https://www.ontreasure.com/events/apex-tcg-show-cherry-hill-nj-oct-10252026", "seen": "2026-10-21", "supports": ["days", "venue"]}
+      ],
+      "agent_confidence": "medium"
+    },
+    {
+      "kind": "edition",
+      "name": "Apex TCG Show",
+      "event_type": "card_show",
+      "status": "scheduled",
+      "days": [{"date": "2026-11-08"}],
+      "venue": {"city": "Linthicum Heights", "region": "MD", "country": "US"},
+      "sells": {"tcg": ["other_tcg"], "sports": [], "other": []},
+      "organizer": {"name": "Apex TCG Show", "url": "https://apextcgshow.com"},
+      "links": {"official": "https://apextcgshow.com", "tickets": "https://www.ontreasure.com/events/apex-tcg-show-linthicum-heights-md-11082026"},
+      "summary": "One day TCG card show in Linthicum Heights, Maryland. The ticket listing gives only the date and city.",
+      "evidence": [
+        {"url": "https://apextcgshow.com", "seen": "2026-10-21", "supports": ["name", "days"]},
+        {"url": "https://www.ontreasure.com/events/apex-tcg-show-linthicum-heights-md-11082026", "seen": "2026-10-21", "supports": ["days", "venue"]}
+      ],
+      "agent_confidence": "medium"
+    },
+    {
+      "kind": "edition",
+      "name": "Apex TCG Show",
+      "event_type": "card_show",
+      "status": "scheduled",
+      "days": [{"date": "2026-11-15"}],
+      "venue": {"city": "Cherry Hill", "region": "NJ", "country": "US"},
+      "sells": {"tcg": ["other_tcg"], "sports": [], "other": []},
+      "organizer": {"name": "Apex TCG Show", "url": "https://apextcgshow.com"},
+      "links": {"official": "https://apextcgshow.com", "tickets": "https://www.ontreasure.com/events/apex-tcg-show-cherry-hill-nj-nov-11152026"},
+      "summary": "One day TCG card show in Cherry Hill, New Jersey. The ticket listing gives only the date and city.",
+      "evidence": [
+        {"url": "https://apextcgshow.com", "seen": "2026-10-21", "supports": ["name", "days"]},
+        {"url": "https://www.ontreasure.com/events/apex-tcg-show-cherry-hill-nj-nov-11152026", "seen": "2026-10-21", "supports": ["days", "venue"]}
+      ],
+      "agent_confidence": "medium"
+    },
+    {
+      "kind": "edition",
+      "name": "Apex TCG Show",
+      "event_type": "card_show",
+      "status": "scheduled",
+      "days": [{"date": "2026-11-22"}],
+      "venue": {"region": "NY", "country": "US"},
+      "sells": {"tcg": ["other_tcg"], "sports": [], "other": []},
+      "organizer": {"name": "Apex TCG Show", "url": "https://apextcgshow.com"},
+      "links": {"official": "https://apextcgshow.com", "tickets": "https://www.ontreasure.com/events/apex-tcg-show-long-island-ny-11222026"},
+      "summary": "One day TCG card show on Long Island, New York. The ticket listing gives only the date and region.",
+      "evidence": [
+        {"url": "https://apextcgshow.com", "seen": "2026-10-21", "supports": ["name", "days"]},
+        {"url": "https://www.ontreasure.com/events/apex-tcg-show-long-island-ny-11222026", "seen": "2026-10-21", "supports": ["days"]}
+      ],
+      "agent_confidence": "medium"
+    },
+    {
+      "kind": "edition",
+      "name": "Apex TCG Show",
+      "event_type": "card_show",
+      "status": "scheduled",
+      "days": [{"date": "2026-11-28"}],
+      "venue": {"city": "King of Prussia", "region": "PA", "country": "US"},
+      "sells": {"tcg": ["other_tcg"], "sports": [], "other": []},
+      "organizer": {"name": "Apex TCG Show", "url": "https://apextcgshow.com"},
+      "links": {"official": "https://apextcgshow.com", "tickets": "https://www.ontreasure.com/events/apex-tcg-show-king-of-prussia-pa-11282026"},
+      "summary": "One day TCG card show in King of Prussia, Pennsylvania. The ticket listing gives only the date and city.",
+      "evidence": [
+        {"url": "https://apextcgshow.com", "seen": "2026-10-21", "supports": ["name", "days"]},
+        {"url": "https://www.ontreasure.com/events/apex-tcg-show-king-of-prussia-pa-11282026", "seen": "2026-10-21", "supports": ["days", "venue"]}
+      ],
+      "agent_confidence": "medium"
+    },
+    {
+      "kind": "edition",
+      "name": "Apex TCG Show",
+      "event_type": "card_show",
+      "status": "scheduled",
+      "days": [{"date": "2026-11-29"}],
+      "venue": {"region": "NJ", "country": "US"},
+      "sells": {"tcg": ["other_tcg"], "sports": [], "other": []},
+      "organizer": {"name": "Apex TCG Show", "url": "https://apextcgshow.com"},
+      "links": {"official": "https://apextcgshow.com", "tickets": "https://www.ontreasure.com/events/apex-tcg-show-franklin-nj-nov-11292026"},
+      "summary": "One day TCG card show in New Jersey. The listing URL says Franklin and the event title says Somerset, so only the state is recorded.",
+      "evidence": [
+        {"url": "https://apextcgshow.com", "seen": "2026-10-21", "supports": ["name", "days"]},
+        {"url": "https://www.ontreasure.com/events/apex-tcg-show-franklin-nj-nov-11292026", "seen": "2026-10-21", "supports": ["days"]}
+      ],
+      "agent_confidence": "medium"
+    },
+    {
+      "kind": "edition",
+      "name": "Apex TCG Show",
+      "event_type": "card_show",
+      "status": "scheduled",
+      "days": [{"date": "2026-12-05"}],
+      "venue": {"city": "Hasbrouck Heights", "region": "NJ", "country": "US"},
+      "sells": {"tcg": ["other_tcg"], "sports": [], "other": []},
+      "organizer": {"name": "Apex TCG Show", "url": "https://apextcgshow.com"},
+      "links": {"official": "https://apextcgshow.com", "tickets": "https://www.ontreasure.com/events/apex-tcg-show-hasbrouck-heights-nj-12052026"},
+      "summary": "One day TCG card show in Hasbrouck Heights, New Jersey. The ticket listing gives only the date and city.",
+      "evidence": [
+        {"url": "https://apextcgshow.com", "seen": "2026-10-21", "supports": ["name", "days"]},
+        {"url": "https://www.ontreasure.com/events/apex-tcg-show-hasbrouck-heights-nj-12052026", "seen": "2026-10-21", "supports": ["days", "venue"]}
+      ],
+      "agent_confidence": "medium"
+    },
+    {
+      "kind": "edition",
+      "name": "Apex TCG Show",
+      "event_type": "card_show",
+      "status": "scheduled",
+      "days": [{"date": "2026-12-19"}],
+      "venue": {"city": "Cherry Hill", "region": "NJ", "country": "US"},
+      "sells": {"tcg": ["other_tcg"], "sports": [], "other": []},
+      "organizer": {"name": "Apex TCG Show", "url": "https://apextcgshow.com"},
+      "links": {"official": "https://apextcgshow.com", "tickets": "https://www.ontreasure.com/events/apex-tcg-show-cherry-hill-nj-dec-12192026"},
+      "summary": "One day TCG card show in Cherry Hill, New Jersey. The ticket listing gives only the date and city.",
+      "evidence": [
+        {"url": "https://apextcgshow.com", "seen": "2026-10-21", "supports": ["name", "days"]},
+        {"url": "https://www.ontreasure.com/events/apex-tcg-show-cherry-hill-nj-dec-12192026", "seen": "2026-10-21", "supports": ["days", "venue"]}
+      ],
+      "agent_confidence": "medium"
+    },
+    {
+      "kind": "series",
+      "name": "NTX TCG Cards Weekend",
+      "event_type": "card_show",
+      "venue": {"name": "NTX Arena", "address": "2401 South Stemmons Freeway", "city": "Lewisville", "region": "TX", "postal": "75067", "country": "US"},
+      "cadence": "Weekend shows on listed dates at the same arena",
+      "rule": {"freq": "none"},
+      "known_dates": ["2026-11-14", "2026-11-15", "2027-01-30", "2027-01-31", "2027-03-06", "2027-03-07", "2027-05-15", "2027-05-16", "2027-07-17", "2027-07-18", "2027-09-25", "2027-09-26", "2027-11-27", "2027-11-28"],
+      "cancelled_dates": [],
+      "sells": {"tcg": ["pokemon", "other_tcg"], "sports": [], "other": []},
+      "admission": {"notes": "Kids 5 and under free on the November 2026 ticket page. Prices are on the ticket site, not the organizer page."},
+      "vendor": {"status": "unknown", "application_url": "https://booking.txcardshows.com"},
+      "organizer": {"name": "Texas Card Shows and More, LLC", "url": "https://www.txcardshows.com"},
+      "evidence": [
+        {"url": "https://www.txcardshows.com/shows", "seen": "2026-10-21", "supports": ["known_dates"]},
+        {"url": "https://www.txcardshows.com/ntx", "seen": "2026-10-21", "supports": ["known_dates", "venue"]},
+        {"url": "https://tickets.txcardshows.com/ntxtcgnov2026", "seen": "2026-10-21", "supports": ["venue", "days", "size"]}
+      ],
+      "agent_confidence": "medium"
+    },
+    {
+      "kind": "series",
+      "name": "NTX Sports Cards Weekend",
+      "event_type": "card_show",
+      "venue": {"name": "NTX Arena", "address": "2401 South Stemmons Freeway", "city": "Lewisville", "region": "TX", "postal": "75067", "country": "US"},
+      "cadence": "Weekend shows on listed dates at the same arena",
+      "rule": {"freq": "none"},
+      "known_dates": ["2026-12-05", "2026-12-06", "2027-02-06", "2027-02-07", "2027-04-10", "2027-04-11", "2027-06-19", "2027-06-20", "2027-08-21", "2027-08-22", "2027-10-23", "2027-10-24", "2027-12-11", "2027-12-12"],
+      "cancelled_dates": [],
+      "sells": {"tcg": [], "sports": ["multi_sport"], "other": []},
+      "vendor": {"status": "unknown", "application_url": "https://booking.txcardshows.com"},
+      "organizer": {"name": "Texas Card Shows and More, LLC", "url": "https://www.txcardshows.com"},
+      "evidence": [
+        {"url": "https://www.txcardshows.com/shows", "seen": "2026-10-21", "supports": ["known_dates"]},
+        {"url": "https://www.txcardshows.com/ntx", "seen": "2026-10-21", "supports": ["known_dates", "venue"]},
+        {"url": "https://tickets.txcardshows.com/ntxsports/ntx-sports-card-show-tcg-in-dallas-forth-worth-texas-december-2026", "seen": "2026-10-21", "supports": ["venue", "days", "size"]}
+      ],
+      "agent_confidence": "medium"
+    },
+    {
+      "kind": "series",
+      "name": "NTX Fort Worth Card Show Weekend",
+      "event_type": "card_show",
+      "venue": {"city": "Fort Worth", "region": "TX", "country": "US"},
+      "cadence": "Weekend shows on listed dates in Fort Worth",
+      "rule": {"freq": "none"},
+      "known_dates": ["2026-12-12", "2026-12-13", "2027-02-20", "2027-02-21", "2027-06-12", "2027-06-13", "2027-08-14", "2027-08-15", "2027-10-09", "2027-10-10", "2027-12-04", "2027-12-05"],
+      "cancelled_dates": [],
+      "sells": {"tcg": ["pokemon", "other_tcg"], "sports": ["multi_sport"], "other": []},
+      "admission": {"notes": "Kids 5 and under free on the December 2026 ticket page"},
+      "vendor": {"status": "unknown", "application_url": "https://booking.txcardshows.com"},
+      "organizer": {"name": "Texas Card Shows and More, LLC", "url": "https://www.txcardshows.com"},
+      "evidence": [
+        {"url": "https://www.txcardshows.com/shows", "seen": "2026-10-21", "supports": ["known_dates"]},
+        {"url": "https://www.txcardshows.com/ntx", "seen": "2026-10-21", "supports": ["known_dates"]},
+        {"url": "https://tickets.txcardshows.com/ntxfortworth/ntx-fort-worth-card-show-pokemon-tcg-sports-cards-in-forth-worth-texas-december-2026", "seen": "2026-10-21", "supports": ["days", "venue", "size"]}
+      ],
+      "agent_confidence": "medium"
+    },
+    {
+      "kind": "series",
+      "name": "HTX Card Show Weekend (Galveston)",
+      "event_type": "card_show",
+      "venue": {"city": "Galveston", "region": "TX", "country": "US"},
+      "cadence": "Weekend shows on listed dates in Galveston",
+      "rule": {"freq": "none"},
+      "known_dates": ["2026-10-24", "2026-10-25", "2027-07-24", "2027-07-25"],
+      "cancelled_dates": [],
+      "sells": {"tcg": ["pokemon", "other_tcg"], "sports": ["multi_sport"], "other": []},
+      "admission": {"notes": "Kids 5 and under free on the October 2026 ticket page"},
+      "vendor": {"status": "unknown", "application_url": "https://booking.txcardshows.com"},
+      "organizer": {"name": "Texas Card Shows and More, LLC", "url": "https://www.txcardshows.com"},
+      "evidence": [
+        {"url": "https://www.txcardshows.com/htx", "seen": "2026-10-21", "supports": ["known_dates"]},
+        {"url": "https://tickets.txcardshows.com/htx/htx-card-show-pokemon-tcg-sports-cards-in-the-houston-area-october-2026", "seen": "2026-10-21", "supports": ["days", "venue", "size"]}
+      ],
+      "agent_confidence": "medium"
+    },
+    {
+      "kind": "series",
+      "name": "HTX Card Show (The Woodlands)",
+      "event_type": "card_show",
+      "venue": {"city": "The Woodlands", "region": "TX", "country": "US"},
+      "cadence": "Weekend shows on listed dates in The Woodlands",
+      "rule": {"freq": "none"},
+      "known_dates": ["2026-11-28", "2026-11-29", "2027-05-22", "2027-05-23", "2027-07-03", "2027-07-04"],
+      "cancelled_dates": [],
+      "sells": {"tcg": ["pokemon", "other_tcg"], "sports": ["multi_sport"], "other": []},
+      "admission": {"notes": "Kids 5 and under free on the November 2026 ticket page"},
+      "vendor": {"status": "unknown", "application_url": "https://booking.txcardshows.com"},
+      "organizer": {"name": "Texas Card Shows and More, LLC", "url": "https://www.txcardshows.com"},
+      "evidence": [
+        {"url": "https://www.txcardshows.com/htx", "seen": "2026-10-21", "supports": ["known_dates"]},
+        {"url": "https://tickets.txcardshows.com/htx/htx-card-show-pokemon-tcg-sports-cards-in-the-houston-area-november-2026", "seen": "2026-10-21", "supports": ["days", "venue", "size"]}
+      ],
+      "agent_confidence": "medium"
+    },
+    {
+      "kind": "series",
+      "name": "HTX Card Show Weekend (Lake Conroe)",
+      "event_type": "card_show",
+      "venue": {"city": "Lake Conroe", "region": "TX", "country": "US"},
+      "cadence": "Weekend shows on listed dates in Lake Conroe",
+      "rule": {"freq": "none"},
+      "known_dates": ["2027-01-09", "2027-01-10", "2027-03-13", "2027-03-14", "2027-09-11", "2027-09-12", "2027-11-13", "2027-11-14"],
+      "cancelled_dates": [],
+      "sells": {"tcg": ["pokemon", "other_tcg"], "sports": ["multi_sport"], "other": []},
+      "vendor": {"status": "unknown", "application_url": "https://booking.txcardshows.com"},
+      "organizer": {"name": "Texas Card Shows and More, LLC", "url": "https://www.txcardshows.com"},
+      "evidence": [
+        {"url": "https://www.txcardshows.com/htx", "seen": "2026-10-21", "supports": ["known_dates", "venue"]}
+      ],
+      "agent_confidence": "medium"
+    },
+    {
+      "kind": "series",
+      "name": "ATX Card Show Weekend (Downtown Austin)",
+      "event_type": "card_show",
+      "venue": {"city": "Austin", "region": "TX", "country": "US"},
+      "cadence": "Weekend shows on listed dates in downtown Austin",
+      "rule": {"freq": "none"},
+      "known_dates": ["2026-10-31", "2026-11-01", "2026-12-19", "2026-12-20", "2027-02-27", "2027-02-28", "2027-04-24", "2027-04-25", "2027-06-26", "2027-06-27", "2027-08-07", "2027-08-08", "2027-09-18", "2027-09-19", "2027-10-30", "2027-10-31", "2027-12-18", "2027-12-19"],
+      "cancelled_dates": [],
+      "sells": {"tcg": [], "sports": [], "other": []},
+      "vendor": {"status": "unknown", "application_url": "https://booking.txcardshows.com"},
+      "organizer": {"name": "Texas Card Shows and More, LLC", "url": "https://www.txcardshows.com"},
+      "evidence": [
+        {"url": "https://www.txcardshows.com/atx", "seen": "2026-10-21", "supports": ["known_dates"]},
+        {"url": "https://tickets.txcardshows.com/atx/atxaustinoctober2026", "seen": "2026-10-21", "supports": ["days", "venue", "size"]}
+      ],
+      "agent_confidence": "medium"
+    },
+    {
+      "kind": "series",
+      "name": "ATX North Card Show Weekend (Belton)",
+      "event_type": "card_show",
+      "venue": {"city": "Belton", "region": "TX", "country": "US"},
+      "cadence": "Weekend shows on listed dates in Belton",
+      "rule": {"freq": "none"},
+      "known_dates": ["2026-11-21", "2026-11-22", "2027-01-23", "2027-01-24", "2027-05-08", "2027-05-09", "2027-08-28", "2027-08-29", "2027-11-20", "2027-11-21"],
+      "cancelled_dates": [],
+      "sells": {"tcg": ["pokemon", "one_piece"], "sports": ["multi_sport"], "other": []},
+      "admission": {"free": false, "currency": "USD", "notes": "November 2026 show: 5 dollars in advance, 10 at the door; VIP 15 in advance, 25 at the door; kids 5 and under free"},
+      "vendor": {"status": "unknown", "application_url": "https://booking.txcardshows.com"},
+      "organizer": {"name": "Texas Card Shows and More, LLC", "url": "https://www.txcardshows.com"},
+      "evidence": [
+        {"url": "https://www.txcardshows.com/atx", "seen": "2026-10-21", "supports": ["known_dates"]},
+        {"url": "https://tickets.txcardshows.com/atx/atx-north-card-show-in-belton-this-nov-pokemon-one-piece-tcg-and-sports-cards", "seen": "2026-10-21", "supports": ["days", "venue", "admission", "size"]}
+      ],
+      "agent_confidence": "medium"
+    },
+    {
+      "kind": "series",
+      "name": "OKC Collects Card Show Weekend",
+      "event_type": "card_show",
+      "venue": {"city": "Oklahoma City", "region": "OK", "country": "US"},
+      "cadence": "Weekend shows on listed dates in Oklahoma City",
+      "rule": {"freq": "none"},
+      "known_dates": ["2027-01-02", "2027-01-03", "2027-06-05", "2027-06-06", "2027-09-18", "2027-09-19", "2027-12-18", "2027-12-19"],
+      "cancelled_dates": [],
+      "vendor": {"status": "unknown"},
+      "organizer": {"name": "Texas Card Shows and More, LLC", "url": "https://www.txcardshows.com"},
+      "evidence": [
+        {"url": "https://www.txcardshows.com/shows", "seen": "2026-10-21", "supports": ["known_dates", "venue"]}
+      ],
+      "agent_confidence": "medium"
+    },
+    {
+      "kind": "series",
+      "name": "Albany Sports Card & TCG Show",
+      "event_type": "card_show",
+      "venue": {"name": "Polish Community Center", "address": "225 Washington Ave Ext.", "city": "Albany", "region": "NY", "postal": "12205", "country": "US"},
+      "cadence": "Listed dates, mostly Sundays, with some two day weekends",
+      "rule": {"freq": "none"},
+      "known_dates": ["2026-11-22", "2026-12-20", "2027-01-17", "2027-02-21", "2027-03-14", "2027-04-17", "2027-04-18", "2027-05-23", "2027-06-27", "2027-07-18", "2027-08-15", "2027-09-19", "2027-10-23", "2027-10-24", "2027-11-21", "2027-12-19"],
+      "cancelled_dates": [],
+      "sells": {"tcg": ["other_tcg"], "sports": ["multi_sport"], "other": []},
+      "admission": {"free": false, "currency": "USD", "adult": 5, "child": 0, "notes": "Children under 12 free. Tickets sold at the door."},
+      "vendor": {"status": "unknown", "contact": "AlbanySportsCardShow@gmail.com"},
+      "organizer": {"name": "Albany NY Show Promotions", "url": "https://www.albanynyshowpromotions.com"},
+      "evidence": [
+        {"url": "https://www.albanynyshowpromotions.com/showschedule", "seen": "2026-10-21", "supports": ["known_dates", "venue"]},
+        {"url": "https://www.albanynyshowpromotions.com/albany", "seen": "2026-10-21", "supports": ["venue", "admission", "size"]}
+      ],
+      "agent_confidence": "medium"
+    },
+    {
+      "kind": "series",
+      "name": "Schenectady Sports Card & TCG Show",
+      "event_type": "card_show",
+      "venue": {"name": "Via Port Rotterdam", "address": "93 W. Campbell Road", "city": "Schenectady", "region": "NY", "postal": "12306", "country": "US"},
+      "cadence": "Weekend shows on listed dates, Saturday and Sunday",
+      "rule": {"freq": "none"},
+      "known_dates": ["2026-11-07", "2026-11-08", "2026-12-05", "2026-12-06", "2027-01-09", "2027-01-10", "2027-02-06", "2027-02-07", "2027-03-06", "2027-03-07", "2027-04-03", "2027-04-04", "2027-09-11", "2027-09-12", "2027-10-09", "2027-10-10", "2027-11-06", "2027-11-07", "2027-12-04", "2027-12-05"],
+      "cancelled_dates": [],
+      "sells": {"tcg": ["other_tcg"], "sports": ["multi_sport"], "other": []},
+      "admission": {"free": true, "currency": "USD"},
+      "vendor": {"status": "unknown", "contact": "AlbanySportsCardShow@gmail.com"},
+      "organizer": {"name": "Albany NY Show Promotions", "url": "https://www.albanynyshowpromotions.com"},
+      "evidence": [
+        {"url": "https://www.albanynyshowpromotions.com/schenectady", "seen": "2026-10-21", "supports": ["known_dates", "venue", "admission", "size"]},
+        {"url": "https://www.albanynyshowpromotions.com/showschedule", "seen": "2026-10-21", "supports": ["known_dates"]}
+      ],
+      "agent_confidence": "medium"
+    },
+    {
+      "kind": "series",
+      "name": "Saratoga Sports Card & TCG Show",
+      "event_type": "card_show",
+      "venue": {"name": "Saratoga City Center", "address": "522 Broadway", "city": "Saratoga Springs", "region": "NY", "postal": "12866", "country": "US"},
+      "cadence": "Listed dates, mostly Sundays, with some two day weekends",
+      "rule": {"freq": "none"},
+      "known_dates": ["2026-11-15", "2027-01-02", "2027-01-03", "2027-05-16", "2027-08-29", "2027-10-03"],
+      "cancelled_dates": [],
+      "sells": {"tcg": ["other_tcg"], "sports": ["multi_sport"], "other": []},
+      "admission": {"free": false, "currency": "USD", "adult": 5, "child": 0, "notes": "Children under 12 free. Tickets sold at the door."},
+      "vendor": {"status": "unknown", "contact": "AlbanySportsCardShow@gmail.com"},
+      "organizer": {"name": "Albany NY Show Promotions", "url": "https://www.albanynyshowpromotions.com"},
+      "evidence": [
+        {"url": "https://www.albanynyshowpromotions.com/showschedule", "seen": "2026-10-21", "supports": ["known_dates"]},
+        {"url": "https://www.albanynyshowpromotions.com/saratoga", "seen": "2026-10-21", "supports": ["venue", "admission"]}
+      ],
+      "agent_confidence": "medium"
+    },
+    {
+      "kind": "series",
+      "name": "Johnstown Sports Card & TCG Show",
+      "event_type": "card_show",
+      "venue": {"name": "Johnstown Moose Lodge", "address": "109 S. Comrie Ave.", "city": "Johnstown", "region": "NY", "postal": "12095", "country": "US"},
+      "cadence": "Wednesday before Thanksgiving, listed for 2026 and 2027",
+      "rule": {"freq": "none"},
+      "known_dates": ["2026-11-25", "2027-11-24"],
+      "cancelled_dates": [],
+      "hours": {"open": "17:00", "close": "21:00"},
+      "sells": {"tcg": ["other_tcg"], "sports": ["multi_sport"], "other": []},
+      "admission": {"free": false, "currency": "USD", "adult": 3, "child": 0, "notes": "Children under 12 free. Early bird entry at 4:30 pm listed at 20 dollars."},
+      "vendor": {"status": "unknown", "contact": "AlbanySportsCardShow@gmail.com"},
+      "organizer": {"name": "Albany NY Show Promotions", "url": "https://www.albanynyshowpromotions.com"},
+      "evidence": [
+        {"url": "https://www.albanynyshowpromotions.com/johnstown", "seen": "2026-10-21", "supports": ["known_dates", "venue", "hours", "admission"]},
+        {"url": "https://www.albanynyshowpromotions.com/showschedule", "seen": "2026-10-21", "supports": ["known_dates"]}
+      ],
+      "agent_confidence": "medium"
+    },
+    {"kind": "edition", "name": "Albany Sports Card & TCG Show", "event_type": "card_show", "status": "scheduled", "days": [{"date": "2026-01-18", "open": "09:00", "close": "15:00"}], "venue": {"name": "Polish Community Center", "address": "225 Washington Ave Ext.", "city": "Albany", "region": "NY", "postal": "12205", "country": "US"}, "sells": {"tcg": ["other_tcg"], "sports": ["multi_sport"], "other": []}, "admission": {"free": false, "currency": "USD", "adult": 5, "child": 0, "notes": "Children under 12 free. Tickets sold at the door."}, "size": {"tables": 110}, "vendor": {"status": "unknown", "contact": "AlbanySportsCardShow@gmail.com"}, "organizer": {"name": "Albany NY Show Promotions", "url": "https://www.albanynyshowpromotions.com"}, "summary": "Past monthly sports card and TCG show at the Polish Community Center in Albany. The organizer lists about 110 vendor booths.", "evidence": [{"url": "https://www.albanynyshowpromotions.com/albany", "seen": "2026-10-21", "supports": ["days", "venue", "admission", "size"]}, {"url": "https://www.albanynyshowpromotions.com/showschedule", "seen": "2026-10-21", "supports": ["days"]}], "agent_confidence": "medium"},
+    {"kind": "edition", "name": "Albany Sports Card & TCG Show", "event_type": "card_show", "status": "scheduled", "days": [{"date": "2026-02-15", "open": "09:00", "close": "15:00"}], "venue": {"name": "Polish Community Center", "address": "225 Washington Ave Ext.", "city": "Albany", "region": "NY", "postal": "12205", "country": "US"}, "sells": {"tcg": ["other_tcg"], "sports": ["multi_sport"], "other": []}, "admission": {"free": false, "currency": "USD", "adult": 5, "child": 0, "notes": "Children under 12 free. Tickets sold at the door."}, "size": {"tables": 110}, "vendor": {"status": "unknown", "contact": "AlbanySportsCardShow@gmail.com"}, "organizer": {"name": "Albany NY Show Promotions", "url": "https://www.albanynyshowpromotions.com"}, "summary": "Past monthly sports card and TCG show at the Polish Community Center in Albany. The organizer lists about 110 vendor booths.", "evidence": [{"url": "https://www.albanynyshowpromotions.com/albany", "seen": "2026-10-21", "supports": ["days", "venue", "admission", "size"]}, {"url": "https://www.albanynyshowpromotions.com/showschedule", "seen": "2026-10-21", "supports": ["days"]}], "agent_confidence": "medium"},
+    {"kind": "edition", "name": "Albany Sports Card & TCG Show", "event_type": "card_show", "status": "scheduled", "days": [{"date": "2026-03-22", "open": "09:00", "close": "15:00"}], "venue": {"name": "Polish Community Center", "address": "225 Washington Ave Ext.", "city": "Albany", "region": "NY", "postal": "12205", "country": "US"}, "sells": {"tcg": ["other_tcg"], "sports": ["multi_sport"], "other": []}, "admission": {"free": false, "currency": "USD", "adult": 5, "child": 0, "notes": "Children under 12 free. Tickets sold at the door."}, "size": {"tables": 110}, "vendor": {"status": "unknown", "contact": "AlbanySportsCardShow@gmail.com"}, "organizer": {"name": "Albany NY Show Promotions", "url": "https://www.albanynyshowpromotions.com"}, "summary": "Past monthly sports card and TCG show at the Polish Community Center in Albany. The organizer lists about 110 vendor booths.", "evidence": [{"url": "https://www.albanynyshowpromotions.com/albany", "seen": "2026-10-21", "supports": ["days", "venue", "admission", "size"]}, {"url": "https://www.albanynyshowpromotions.com/showschedule", "seen": "2026-10-21", "supports": ["days"]}], "agent_confidence": "medium"},
+    {"kind": "edition", "name": "Albany Sports Card & TCG Show", "event_type": "card_show", "status": "scheduled", "days": [{"date": "2026-04-18", "open": "10:00", "close": "16:00"}, {"date": "2026-04-19", "open": "10:00", "close": "15:00"}], "venue": {"name": "Polish Community Center", "address": "225 Washington Ave Ext.", "city": "Albany", "region": "NY", "postal": "12205", "country": "US"}, "sells": {"tcg": ["other_tcg"], "sports": ["multi_sport"], "other": []}, "admission": {"free": false, "currency": "USD", "adult": 5, "child": 0, "notes": "Children under 12 free. Tickets sold at the door."}, "size": {"tables": 110}, "vendor": {"status": "unknown", "contact": "AlbanySportsCardShow@gmail.com"}, "organizer": {"name": "Albany NY Show Promotions", "url": "https://www.albanynyshowpromotions.com"}, "summary": "Past two day sports card and TCG show at the Polish Community Center in Albany. The organizer lists about 110 vendor booths.", "evidence": [{"url": "https://www.albanynyshowpromotions.com/albany", "seen": "2026-10-21", "supports": ["days", "venue", "admission", "size"]}, {"url": "https://www.albanynyshowpromotions.com/showschedule", "seen": "2026-10-21", "supports": ["days"]}], "agent_confidence": "medium"},
+    {"kind": "edition", "name": "Albany Sports Card & TCG Show", "event_type": "card_show", "status": "scheduled", "days": [{"date": "2026-05-17", "open": "09:00", "close": "15:00"}], "venue": {"name": "Polish Community Center", "address": "225 Washington Ave Ext.", "city": "Albany", "region": "NY", "postal": "12205", "country": "US"}, "sells": {"tcg": ["other_tcg"], "sports": ["multi_sport"], "other": []}, "admission": {"free": false, "currency": "USD", "adult": 5, "child": 0, "notes": "Children under 12 free. Tickets sold at the door."}, "size": {"tables": 110}, "vendor": {"status": "unknown", "contact": "AlbanySportsCardShow@gmail.com"}, "organizer": {"name": "Albany NY Show Promotions", "url": "https://www.albanynyshowpromotions.com"}, "summary": "Past monthly sports card and TCG show at the Polish Community Center in Albany. The organizer lists about 110 vendor booths.", "evidence": [{"url": "https://www.albanynyshowpromotions.com/albany", "seen": "2026-10-21", "supports": ["days", "venue", "admission", "size"]}, {"url": "https://www.albanynyshowpromotions.com/showschedule", "seen": "2026-10-21", "supports": ["days"]}], "agent_confidence": "medium"},
+    {"kind": "edition", "name": "Albany Sports Card & TCG Show", "event_type": "card_show", "status": "scheduled", "days": [{"date": "2026-06-14", "open": "09:00", "close": "15:00"}], "venue": {"name": "Polish Community Center", "address": "225 Washington Ave Ext.", "city": "Albany", "region": "NY", "postal": "12205", "country": "US"}, "sells": {"tcg": ["other_tcg"], "sports": ["multi_sport"], "other": []}, "admission": {"free": false, "currency": "USD", "adult": 5, "child": 0, "notes": "Children under 12 free. Tickets sold at the door."}, "size": {"tables": 110}, "vendor": {"status": "unknown", "contact": "AlbanySportsCardShow@gmail.com"}, "organizer": {"name": "Albany NY Show Promotions", "url": "https://www.albanynyshowpromotions.com"}, "summary": "Past monthly sports card and TCG show at the Polish Community Center in Albany. The organizer lists about 110 vendor booths.", "evidence": [{"url": "https://www.albanynyshowpromotions.com/albany", "seen": "2026-10-21", "supports": ["days", "venue", "admission", "size"]}, {"url": "https://www.albanynyshowpromotions.com/showschedule", "seen": "2026-10-21", "supports": ["days"]}], "agent_confidence": "medium"},
+    {"kind": "edition", "name": "Albany Sports Card & TCG Show", "event_type": "card_show", "status": "scheduled", "days": [{"date": "2026-07-19", "open": "09:00", "close": "15:00"}], "venue": {"name": "Polish Community Center", "address": "225 Washington Ave Ext.", "city": "Albany", "region": "NY", "postal": "12205", "country": "US"}, "sells": {"tcg": ["other_tcg"], "sports": ["multi_sport"], "other": []}, "admission": {"free": false, "currency": "USD", "adult": 5, "child": 0, "notes": "Children under 12 free. Tickets sold at the door."}, "size": {"tables": 110}, "vendor": {"status": "unknown", "contact": "AlbanySportsCardShow@gmail.com"}, "organizer": {"name": "Albany NY Show Promotions", "url": "https://www.albanynyshowpromotions.com"}, "summary": "Past monthly sports card and TCG show at the Polish Community Center in Albany. The organizer lists about 110 vendor booths.", "evidence": [{"url": "https://www.albanynyshowpromotions.com/albany", "seen": "2026-10-21", "supports": ["days", "venue", "admission", "size"]}, {"url": "https://www.albanynyshowpromotions.com/showschedule", "seen": "2026-10-21", "supports": ["days"]}], "agent_confidence": "medium"},
+    {"kind": "edition", "name": "Albany Sports Card & TCG Show", "event_type": "card_show", "status": "scheduled", "days": [{"date": "2026-08-16", "open": "09:00", "close": "15:00"}], "venue": {"name": "Polish Community Center", "address": "225 Washington Ave Ext.", "city": "Albany", "region": "NY", "postal": "12205", "country": "US"}, "sells": {"tcg": ["other_tcg"], "sports": ["multi_sport"], "other": []}, "admission": {"free": false, "currency": "USD", "adult": 5, "child": 0, "notes": "Children under 12 free. Tickets sold at the door."}, "size": {"tables": 110}, "vendor": {"status": "unknown", "contact": "AlbanySportsCardShow@gmail.com"}, "organizer": {"name": "Albany NY Show Promotions", "url": "https://www.albanynyshowpromotions.com"}, "summary": "Past monthly sports card and TCG show at the Polish Community Center in Albany. The organizer lists about 110 vendor booths.", "evidence": [{"url": "https://www.albanynyshowpromotions.com/albany", "seen": "2026-10-21", "supports": ["days", "venue", "admission", "size"]}, {"url": "https://www.albanynyshowpromotions.com/showschedule", "seen": "2026-10-21", "supports": ["days"]}], "agent_confidence": "medium"},
+    {"kind": "edition", "name": "Albany Sports Card & TCG Show", "event_type": "card_show", "status": "scheduled", "days": [{"date": "2026-09-20", "open": "09:00", "close": "15:00"}], "venue": {"name": "Polish Community Center", "address": "225 Washington Ave Ext.", "city": "Albany", "region": "NY", "postal": "12205", "country": "US"}, "sells": {"tcg": ["other_tcg"], "sports": ["multi_sport"], "other": []}, "admission": {"free": false, "currency": "USD", "adult": 5, "child": 0, "notes": "Children under 12 free. Tickets sold at the door."}, "size": {"tables": 110}, "vendor": {"status": "unknown", "contact": "AlbanySportsCardShow@gmail.com"}, "organizer": {"name": "Albany NY Show Promotions", "url": "https://www.albanynyshowpromotions.com"}, "summary": "Past monthly sports card and TCG show at the Polish Community Center in Albany. The organizer lists about 110 vendor booths.", "evidence": [{"url": "https://www.albanynyshowpromotions.com/albany", "seen": "2026-10-21", "supports": ["days", "venue", "admission", "size"]}, {"url": "https://www.albanynyshowpromotions.com/showschedule", "seen": "2026-10-21", "supports": ["days"]}], "agent_confidence": "medium"},
+    {"kind": "edition", "name": "Albany Sports Card & TCG Show", "event_type": "card_show", "status": "scheduled", "days": [{"date": "2026-10-17", "open": "10:00", "close": "16:00"}, {"date": "2026-10-18", "open": "10:00", "close": "15:00"}], "venue": {"name": "Polish Community Center", "address": "225 Washington Ave Ext.", "city": "Albany", "region": "NY", "postal": "12205", "country": "US"}, "sells": {"tcg": ["other_tcg"], "sports": ["multi_sport"], "other": []}, "admission": {"free": false, "currency": "USD", "adult": 5, "child": 0, "notes": "Children under 12 free. Tickets sold at the door."}, "size": {"tables": 110}, "vendor": {"status": "unknown", "contact": "AlbanySportsCardShow@gmail.com"}, "organizer": {"name": "Albany NY Show Promotions", "url": "https://www.albanynyshowpromotions.com"}, "summary": "Past two day sports card and TCG show at the Polish Community Center in Albany. The organizer lists about 110 vendor booths.", "evidence": [{"url": "https://www.albanynyshowpromotions.com/albany", "seen": "2026-10-21", "supports": ["days", "venue", "admission", "size"]}, {"url": "https://www.albanynyshowpromotions.com/showschedule", "seen": "2026-10-21", "supports": ["days"]}], "agent_confidence": "medium"},
+    {"kind": "edition", "name": "Schenectady Sports Card & TCG Show", "event_type": "card_show", "status": "scheduled", "days": [{"date": "2026-01-10", "open": "11:00", "close": "18:00"}, {"date": "2026-01-11", "open": "11:00", "close": "17:00"}], "venue": {"name": "Via Port Rotterdam", "address": "93 W. Campbell Road", "city": "Schenectady", "region": "NY", "postal": "12306", "country": "US"}, "sells": {"tcg": ["other_tcg"], "sports": ["multi_sport"], "other": []}, "admission": {"free": true, "currency": "USD"}, "size": {"tables": 25}, "vendor": {"status": "unknown", "contact": "AlbanySportsCardShow@gmail.com"}, "organizer": {"name": "Albany NY Show Promotions", "url": "https://www.albanynyshowpromotions.com"}, "summary": "Past two day sports card and TCG show at Via Port Rotterdam in Schenectady. The organizer lists about 25 vendor booths each day.", "evidence": [{"url": "https://www.albanynyshowpromotions.com/schenectady", "seen": "2026-10-21", "supports": ["days", "venue", "admission", "size"]}], "agent_confidence": "medium"},
+    {"kind": "edition", "name": "Schenectady Sports Card & TCG Show", "event_type": "card_show", "status": "scheduled", "days": [{"date": "2026-01-31", "open": "11:00", "close": "18:00"}, {"date": "2026-02-01", "open": "11:00", "close": "17:00"}], "venue": {"name": "Via Port Rotterdam", "address": "93 W. Campbell Road", "city": "Schenectady", "region": "NY", "postal": "12306", "country": "US"}, "sells": {"tcg": ["other_tcg"], "sports": ["multi_sport"], "other": []}, "admission": {"free": true, "currency": "USD"}, "size": {"tables": 25}, "vendor": {"status": "unknown", "contact": "AlbanySportsCardShow@gmail.com"}, "organizer": {"name": "Albany NY Show Promotions", "url": "https://www.albanynyshowpromotions.com"}, "summary": "Past two day sports card and TCG show at Via Port Rotterdam in Schenectady. The organizer lists about 25 vendor booths each day.", "evidence": [{"url": "https://www.albanynyshowpromotions.com/schenectady", "seen": "2026-10-21", "supports": ["days", "venue", "admission", "size"]}], "agent_confidence": "medium"},
+    {"kind": "edition", "name": "Schenectady Sports Card & TCG Show", "event_type": "card_show", "status": "scheduled", "days": [{"date": "2026-03-07", "open": "11:00", "close": "18:00"}, {"date": "2026-03-08", "open": "11:00", "close": "17:00"}], "venue": {"name": "Via Port Rotterdam", "address": "93 W. Campbell Road", "city": "Schenectady", "region": "NY", "postal": "12306", "country": "US"}, "sells": {"tcg": ["other_tcg"], "sports": ["multi_sport"], "other": []}, "admission": {"free": true, "currency": "USD"}, "size": {"tables": 25}, "vendor": {"status": "unknown", "contact": "AlbanySportsCardShow@gmail.com"}, "organizer": {"name": "Albany NY Show Promotions", "url": "https://www.albanynyshowpromotions.com"}, "summary": "Past two day sports card and TCG show at Via Port Rotterdam in Schenectady. The organizer lists about 25 vendor booths each day.", "evidence": [{"url": "https://www.albanynyshowpromotions.com/schenectady", "seen": "2026-10-21", "supports": ["days", "venue", "admission", "size"]}], "agent_confidence": "medium"},
+    {"kind": "edition", "name": "Schenectady Sports Card & TCG Show", "event_type": "card_show", "status": "scheduled", "days": [{"date": "2026-05-02", "open": "11:00", "close": "18:00"}, {"date": "2026-05-03", "open": "11:00", "close": "17:00"}], "venue": {"name": "Via Port Rotterdam", "address": "93 W. Campbell Road", "city": "Schenectady", "region": "NY", "postal": "12306", "country": "US"}, "sells": {"tcg": ["other_tcg"], "sports": ["multi_sport"], "other": []}, "admission": {"free": true, "currency": "USD"}, "size": {"tables": 25}, "vendor": {"status": "unknown", "contact": "AlbanySportsCardShow@gmail.com"}, "organizer": {"name": "Albany NY Show Promotions", "url": "https://www.albanynyshowpromotions.com"}, "summary": "Past two day sports card and TCG show at Via Port Rotterdam in Schenectady. The organizer lists about 25 vendor booths each day.", "evidence": [{"url": "https://www.albanynyshowpromotions.com/schenectady", "seen": "2026-10-21", "supports": ["days", "venue", "admission", "size"]}], "agent_confidence": "medium"},
+    {"kind": "edition", "name": "Schenectady Sports Card & TCG Show", "event_type": "card_show", "status": "scheduled", "days": [{"date": "2026-09-12", "open": "11:00", "close": "18:00"}, {"date": "2026-09-13", "open": "11:00", "close": "17:00"}], "venue": {"name": "Via Port Rotterdam", "address": "93 W. Campbell Road", "city": "Schenectady", "region": "NY", "postal": "12306", "country": "US"}, "sells": {"tcg": ["other_tcg"], "sports": ["multi_sport"], "other": []}, "admission": {"free": true, "currency": "USD"}, "size": {"tables": 25}, "vendor": {"status": "unknown", "contact": "AlbanySportsCardShow@gmail.com"}, "organizer": {"name": "Albany NY Show Promotions", "url": "https://www.albanynyshowpromotions.com"}, "summary": "Past two day sports card and TCG show at Via Port Rotterdam in Schenectady. The organizer lists about 25 vendor booths each day.", "evidence": [{"url": "https://www.albanynyshowpromotions.com/schenectady", "seen": "2026-10-21", "supports": ["days", "venue", "admission", "size"]}], "agent_confidence": "medium"},
+    {"kind": "edition", "name": "Schenectady Sports Card & TCG Show", "event_type": "card_show", "status": "scheduled", "days": [{"date": "2026-10-10", "open": "11:00", "close": "18:00"}, {"date": "2026-10-11", "open": "11:00", "close": "17:00"}], "venue": {"name": "Via Port Rotterdam", "address": "93 W. Campbell Road", "city": "Schenectady", "region": "NY", "postal": "12306", "country": "US"}, "sells": {"tcg": ["other_tcg"], "sports": ["multi_sport"], "other": []}, "admission": {"free": true, "currency": "USD"}, "size": {"tables": 25}, "vendor": {"status": "unknown", "contact": "AlbanySportsCardShow@gmail.com"}, "organizer": {"name": "Albany NY Show Promotions", "url": "https://www.albanynyshowpromotions.com"}, "summary": "Past two day sports card and TCG show at Via Port Rotterdam in Schenectady. The organizer lists about 25 vendor booths each day.", "evidence": [{"url": "https://www.albanynyshowpromotions.com/schenectady", "seen": "2026-10-21", "supports": ["days", "venue", "admission", "size"]}], "agent_confidence": "medium"},
+    {
+      "kind": "edition",
+      "name": "TCG-Kon St. Louis",
+      "event_type": "convention",
+      "status": "scheduled",
+      "days": [{"date": "2026-11-14"}],
+      "venue": {"name": "Radisson St. Louis Downtown Convention Hotel", "city": "St. Louis", "region": "MO", "country": "US"},
+      "sells": {"tcg": ["pokemon", "one_piece", "mtg", "yugioh", "dragon_ball", "other_tcg"], "sports": [], "other": []},
+      "admission": {"notes": "General admission includes one free child under 11"},
+      "vendor": {"status": "unknown"},
+      "organizer": {"name": "TCG-Kon", "url": "https://tcgkon.com"},
+      "links": {"official": "https://tcgkon.com/events"},
+      "summary": "Single day TCG convention in St. Louis with a dealer hall, guests, tournaments and artist alley.",
+      "evidence": [
+        {"url": "https://tcgkon.com/events", "seen": "2026-10-21", "supports": ["name", "days", "venue"]},
+        {"url": "https://tcgkon.com/at-the-show", "seen": "2026-10-21", "supports": ["sells", "admission"]}
+      ],
+      "agent_confidence": "medium"
+    },
+    {
+      "kind": "edition",
+      "name": "TCG-Kon Louisville",
+      "event_type": "convention",
+      "status": "scheduled",
+      "days": [{"date": "2026-12-13"}],
+      "venue": {"name": "Triple Crown Pavilion", "city": "Louisville", "region": "KY", "country": "US"},
+      "sells": {"tcg": ["pokemon", "one_piece", "mtg", "yugioh", "dragon_ball", "other_tcg"], "sports": [], "other": []},
+      "admission": {"notes": "General admission includes one free child under 11"},
+      "vendor": {"status": "unknown"},
+      "organizer": {"name": "TCG-Kon", "url": "https://tcgkon.com"},
+      "links": {"official": "https://tcgkon.com/events"},
+      "summary": "Single day TCG convention in Louisville with a dealer hall, guests, tournaments and artist alley.",
+      "evidence": [
+        {"url": "https://tcgkon.com/events", "seen": "2026-10-21", "supports": ["name", "days", "venue"]},
+        {"url": "https://tcgkon.com/at-the-show", "seen": "2026-10-21", "supports": ["sells", "admission"]}
+      ],
+      "agent_confidence": "medium"
+    },
+    {
+      "kind": "edition",
+      "name": "TCG-Kon Rogers",
+      "event_type": "convention",
+      "status": "scheduled",
+      "days": [{"date": "2026-12-26"}],
+      "venue": {"name": "Embassy Suites Northwest Arkansas Hotel, Spa & Rogers Convention Center", "city": "Rogers", "region": "AR", "country": "US"},
+      "sells": {"tcg": ["pokemon", "one_piece", "mtg", "yugioh", "dragon_ball", "other_tcg"], "sports": [], "other": []},
+      "admission": {"notes": "General admission includes one free child under 11"},
+      "vendor": {"status": "unknown"},
+      "organizer": {"name": "TCG-Kon", "url": "https://tcgkon.com"},
+      "links": {"official": "https://tcgkon.com/events"},
+      "summary": "Single day TCG convention in Rogers, Arkansas with a dealer hall, guests, tournaments and artist alley.",
+      "evidence": [
+        {"url": "https://tcgkon.com/events", "seen": "2026-10-21", "supports": ["name", "days", "venue"]},
+        {"url": "https://tcgkon.com/at-the-show", "seen": "2026-10-21", "supports": ["sells", "admission"]}
+      ],
+      "agent_confidence": "medium"
+    },
+    {
+      "kind": "edition",
+      "name": "TCG-Kon Milwaukee",
+      "event_type": "convention",
+      "status": "scheduled",
+      "days": [{"date": "2027-01-23"}],
+      "venue": {"name": "Royle Hotel Milwaukee Airport", "city": "Milwaukee", "region": "WI", "country": "US"},
+      "sells": {"tcg": ["pokemon", "one_piece", "mtg", "yugioh", "dragon_ball", "other_tcg"], "sports": [], "other": []},
+      "admission": {"notes": "General admission includes one free child under 11"},
+      "vendor": {"status": "unknown"},
+      "organizer": {"name": "TCG-Kon", "url": "https://tcgkon.com"},
+      "links": {"official": "https://tcgkon.com/events"},
+      "summary": "Single day TCG convention in Milwaukee with a dealer hall, guests, tournaments and artist alley.",
+      "evidence": [
+        {"url": "https://tcgkon.com/events", "seen": "2026-10-21", "supports": ["name", "days", "venue"]},
+        {"url": "https://tcgkon.com/at-the-show", "seen": "2026-10-21", "supports": ["sells", "admission"]}
+      ],
+      "agent_confidence": "medium"
+    },
+    {
+      "kind": "edition",
+      "name": "TCG-Kon Greenville",
+      "event_type": "convention",
+      "status": "scheduled",
+      "days": [{"date": "2027-02-13"}],
+      "venue": {"name": "Holiday Inn Greenville", "city": "Greenville", "region": "NC", "country": "US"},
+      "sells": {"tcg": ["pokemon", "one_piece", "mtg", "yugioh", "dragon_ball", "other_tcg"], "sports": [], "other": []},
+      "admission": {"notes": "General admission includes one free child under 11"},
+      "vendor": {"status": "unknown"},
+      "organizer": {"name": "TCG-Kon", "url": "https://tcgkon.com"},
+      "links": {"official": "https://tcgkon.com/events"},
+      "summary": "Single day TCG convention in Greenville, North Carolina with a dealer hall, guests, tournaments and artist alley.",
+      "evidence": [
+        {"url": "https://tcgkon.com/events", "seen": "2026-10-21", "supports": ["name", "days", "venue"]},
+        {"url": "https://tcgkon.com/at-the-show", "seen": "2026-10-21", "supports": ["sells", "admission"]}
+      ],
+      "agent_confidence": "medium"
+    },
+    {
+      "kind": "edition",
+      "name": "The TCG National Convention",
+      "event_type": "convention",
+      "status": "scheduled",
+      "days": [{"date": "2027-01-21"}, {"date": "2027-01-22"}, {"date": "2027-01-23"}, {"date": "2027-01-24"}],
+      "venue": {"name": "Kay Bailey Hutchison Convention Center", "address": "650 S Griffin St.", "city": "Dallas", "region": "TX", "postal": "75202", "country": "US"},
+      "sells": {"tcg": ["other_tcg"], "sports": [], "other": []},
+      "size": {"tables": 1600},
+      "vendor": {"status": "unknown", "application_url": "https://www.thetcgnational.com/event-details/the-tcg-national-convention/form"},
+      "organizer": {"name": "TCGNational LLC", "url": "https://www.thetcgnational.com"},
+      "links": {"official": "https://www.thetcgnational.com", "dealer_form": "https://forms.gle/qD26QohSNikjprJz9"},
+      "summary": "Four day TCG convention in Dallas with celebrity guests and about 1,600 vendor tables. Each table includes two dealer passes.",
+      "evidence": [
+        {"url": "https://www.thetcgnational.com", "seen": "2026-10-21", "supports": ["name", "days", "venue", "size"]},
+        {"url": "https://www.thetcgnational.com/vendors", "seen": "2026-10-21", "supports": ["size", "vendor.application_url"]}
+      ],
+      "agent_confidence": "medium"
+    },
+    {
+      "kind": "edition",
+      "name": "Sport Card and Memorabilia Expo Toronto",
+      "event_type": "card_show",
+      "status": "scheduled",
+      "days": [
+        {"date": "2026-11-05", "open": "16:00", "close": "20:00"},
+        {"date": "2026-11-06", "open": "11:00", "close": "20:00"},
+        {"date": "2026-11-07", "open": "10:00", "close": "18:00"},
+        {"date": "2026-11-08", "open": "10:00", "close": "17:00"}
+      ],
+      "venue": {"name": "The International Centre", "address": "6900 Airport Rd", "city": "Mississauga", "region": "ON", "postal": "L4V 1E8", "country": "CA"},
+      "sells": {"tcg": [], "sports": ["multi_sport"], "other": ["memorabilia"]},
+      "admission": {"notes": "Several ticket tiers listed at 25 and 30 with a door price of 35. Currency not shown on the page. VIP holders get early entry."},
+      "vendor": {"status": "unknown"},
+      "organizer": {"name": "Sport Card & Memorabilia Expo Ltd.", "url": "https://www.sportcardexpo.com"},
+      "links": {"official": "https://www.sportcardexpotoronto.com"},
+      "summary": "Four day sports card and memorabilia expo in Mississauga with dealer booths. Floor plan and table counts were not yet published.",
+      "evidence": [
+        {"url": "https://www.sportcardexpotoronto.com", "seen": "2026-10-21", "supports": ["name", "days", "venue"]}
+      ],
+      "agent_confidence": "high"
+    },
+    {
+      "kind": "series",
+      "name": "Great Northern Card Show",
+      "event_type": "card_show",
+      "venue": {"name": "Great Northern Mall", "address": "4954 Great Northern Mall", "city": "North Olmsted", "region": "OH", "postal": "44070", "country": "US"},
+      "cadence": "Friday and Saturday weekends on listed dates",
+      "rule": {"freq": "none"},
+      "known_dates": ["2026-11-06", "2026-11-07", "2027-01-15", "2027-01-16", "2027-04-23", "2027-04-24", "2027-06-25", "2027-06-26", "2027-09-03", "2027-09-04", "2027-10-01", "2027-10-02"],
+      "cancelled_dates": [],
+      "hours": {"open": "11:00", "close": "20:00"},
+      "sells": {"tcg": [], "sports": [], "other": []},
+      "admission": {"free": true, "currency": "USD", "notes": "Parking also free"},
+      "vendor": {"status": "unknown"},
+      "organizer": {"name": "Greenie Sports Cards", "url": "https://greeniesportscards.com"},
+      "evidence": [
+        {"url": "https://greeniesportscards.com/greenie-card-shows", "seen": "2026-10-21", "supports": ["known_dates", "venue", "hours", "admission"]}
+      ],
+      "agent_confidence": "high"
+    },
+    {
+      "kind": "edition",
+      "name": "Great Northern Card Show",
+      "event_type": "card_show",
+      "status": "scheduled",
+      "days": [{"date": "2026-10-02", "open": "11:00", "close": "20:00"}, {"date": "2026-10-03", "open": "11:00", "close": "20:00"}],
+      "venue": {"name": "Great Northern Mall", "address": "4954 Great Northern Mall", "city": "North Olmsted", "region": "OH", "postal": "44070", "country": "US"},
+      "sells": {"tcg": [], "sports": [], "other": []},
+      "admission": {"free": true, "currency": "USD", "notes": "Parking also free"},
+      "size": {"tables": 200},
+      "vendor": {"status": "unknown"},
+      "organizer": {"name": "Greenie Sports Cards", "url": "https://greeniesportscards.com"},
+      "summary": "Past two day card show at Great Northern Mall in North Olmsted, Ohio, with 200 plus tables and free admission.",
+      "evidence": [
+        {"url": "https://greeniesportscards.com/greenie-card-shows", "seen": "2026-10-21", "supports": ["days", "venue", "size", "admission"]}
+      ],
+      "agent_confidence": "high"
+    },
+    {
+      "kind": "series",
+      "name": "Kirtland Show",
+      "event_type": "card_show",
+      "venue": {"name": "Kirtland Senior Center", "address": "7900 Euclid-Chardon Rd.", "city": "Kirtland", "region": "OH", "postal": "44094", "country": "US"},
+      "cadence": "Saturday shows on listed dates, about 40 tables each",
+      "rule": {"freq": "none"},
+      "known_dates": ["2026-10-31", "2026-11-21", "2026-12-12", "2027-01-09", "2027-02-13", "2027-03-20", "2027-04-10", "2027-05-15", "2027-09-11", "2027-10-16", "2027-11-20", "2027-12-11"],
+      "cancelled_dates": [],
+      "hours": {"open": "09:00", "close": "14:00"},
+      "sells": {"tcg": [], "sports": [], "other": []},
+      "vendor": {"status": "unknown", "contact": "cardshows@greeniesportscards.com"},
+      "organizer": {"name": "Greenie Sports Cards", "url": "https://greeniesportscards.com"},
+      "evidence": [
+        {"url": "https://greeniesportscards.com/the-kirtland-show", "seen": "2026-10-21", "supports": ["known_dates"]},
+        {"url": "https://greeniesportscards.com/greenie-card-shows", "seen": "2026-10-21", "supports": ["known_dates", "hours", "size"]}
+      ],
+      "agent_confidence": "high"
+    },
+    {
+      "kind": "series",
+      "name": "Medina Collectors Fair",
+      "event_type": "card_show",
+      "venue": {"name": "Medina Fairgrounds (Medina Community Center)", "address": "735 Lafayette Road", "city": "Medina", "region": "OH", "postal": "44256", "country": "US"},
+      "cadence": "Listed Saturday fairs, including a Halloween edition",
+      "rule": {"freq": "none"},
+      "known_dates": ["2026-10-31", "2027-01-02", "2027-06-04", "2027-06-05", "2027-08-21"],
+      "cancelled_dates": [],
+      "hours": {"open": "09:00", "close": "16:00"},
+      "sells": {"tcg": [], "sports": [], "other": []},
+      "vendor": {"status": "unknown"},
+      "organizer": {"name": "Greenie Sports Cards", "url": "https://greeniesportscards.com"},
+      "evidence": [
+        {"url": "https://greeniesportscards.com/greenie-card-shows", "seen": "2026-10-21", "supports": ["known_dates", "venue", "hours", "size"]}
+      ],
+      "agent_confidence": "high"
+    },
+    {
+      "kind": "series",
+      "name": "Broadview Heights Card Show",
+      "event_type": "card_show",
+      "venue": {"name": "Woodside Event Center", "address": "5025 E. Mill Rd.", "city": "Broadview Heights", "region": "OH", "postal": "44147", "country": "US"},
+      "cadence": "Listed dates: a Black Friday sale and a December show",
+      "rule": {"freq": "none"},
+      "known_dates": ["2026-11-27", "2026-12-19"],
+      "cancelled_dates": [],
+      "hours": {"open": "09:00", "close": "15:00"},
+      "sells": {"tcg": ["other_tcg"], "sports": ["multi_sport"], "other": []},
+      "vendor": {"status": "unknown", "contact": "cardshows@greeniesportscards.com"},
+      "organizer": {"name": "Greenie Sports Cards", "url": "https://greeniesportscards.com"},
+      "evidence": [
+        {"url": "https://greeniesportscards.com/greenie-card-shows", "seen": "2026-10-21", "supports": ["known_dates", "venue", "hours", "size", "sells"]}
+      ],
+      "agent_confidence": "high"
+    },
+    {
+      "kind": "series",
+      "name": "Twinsburg Card Show (Gleneagles)",
+      "event_type": "card_show",
+      "venue": {"name": "Gleneagles Golf Course", "address": "2615 Glenwood Dr", "city": "Twinsburg", "region": "OH", "postal": "44087", "country": "US"},
+      "cadence": "Listed Saturday and holiday Monday shows at one golf course",
+      "rule": {"freq": "none"},
+      "known_dates": ["2026-11-14", "2027-01-18", "2027-02-15"],
+      "cancelled_dates": [],
+      "hours": {"open": "09:00", "close": "15:00"},
+      "sells": {"tcg": [], "sports": [], "other": []},
+      "vendor": {"status": "unknown", "contact": "cardshows@greeniesportscards.com"},
+      "organizer": {"name": "Greenie Sports Cards", "url": "https://greeniesportscards.com"},
+      "evidence": [
+        {"url": "https://greeniesportscards.com/greenie-card-shows", "seen": "2026-10-21", "supports": ["known_dates", "venue", "hours", "size"]}
+      ],
+      "agent_confidence": "high"
+    },
+    {
+      "kind": "edition",
+      "name": "The Ohio State Card Show",
+      "event_type": "card_show",
+      "status": "scheduled",
+      "days": [{"date": "2027-02-05"}, {"date": "2027-02-06"}],
+      "venue": {"name": "Ohio Expo Center, Kasich Hall", "address": "717 E 17th Ave.", "city": "Columbus", "region": "OH", "postal": "43211", "country": "US"},
+      "sells": {"tcg": [], "sports": [], "other": []},
+      "size": {"tables": 300},
+      "vendor": {
+        "status": "unknown",
+        "application_url": "https://forms.gle/VX2KfG5ZjPjDnb2SA",
+        "tables": [
+          {"label": "Single 8 ft table", "price": 150, "currency": "USD", "notes": "Includes 2 vendor badges"},
+          {"label": "Sponsor package with four 8 ft tables", "price": 700, "currency": "USD", "notes": "Adds social media logo, preferred placement, 1 parking pass and 4 vendor badges"}
+        ]
+      },
+      "organizer": {"name": "Greenie Sports Cards", "url": "https://greeniesportscards.com"},
+      "summary": "Two day card show at the Ohio Expo Center in Columbus with 300 plus tables. Vendor prices are listed on the organizer page.",
+      "evidence": [
+        {"url": "https://greeniesportscards.com/the-ohio-state-card-show", "seen": "2026-10-21", "supports": ["name", "days", "venue", "vendor.tables", "size"]},
+        {"url": "https://greeniesportscards.com/greenie-card-shows", "seen": "2026-10-21", "supports": ["days", "venue", "size"]}
+      ],
+      "agent_confidence": "high"
+    },
+    {
+      "kind": "edition",
+      "name": "Mountain State Collectors Convention",
+      "event_type": "convention",
+      "status": "scheduled",
+      "days": [{"date": "2027-05-14"}, {"date": "2027-05-15"}, {"date": "2027-05-16"}],
+      "venue": {"name": "Charleston Convention Center", "address": "200 Civic Center Drive", "city": "Charleston", "region": "WV", "postal": "25301", "country": "US"},
+      "sells": {"tcg": [], "sports": [], "other": []},
+      "size": {"tables": 200},
+      "vendor": {"status": "unknown", "application_url": "https://forms.gle/VNCD8vBkVw33SeBz9"},
+      "organizer": {"name": "Greenie Sports Cards", "url": "https://greeniesportscards.com"},
+      "summary": "Three day collectors convention in Charleston, West Virginia with 200 plus vendor tables. Hours are not yet published.",
+      "evidence": [
+        {"url": "https://greeniesportscards.com/greenie-card-shows", "seen": "2026-10-21", "supports": ["name", "days", "venue", "size"]}
+      ],
+      "agent_confidence": "high"
+    },
+    {
+      "kind": "edition",
+      "name": "Independence Show",
+      "event_type": "card_show",
+      "status": "scheduled",
+      "days": [{"date": "2027-04-02"}, {"date": "2027-04-03"}, {"date": "2027-04-04"}],
+      "venue": {"name": "Independence Fieldhouse", "address": "6354 Selig Dr", "city": "Independence", "region": "OH", "postal": "44131", "country": "US"},
+      "sells": {"tcg": [], "sports": [], "other": []},
+      "size": {"tables": 400},
+      "vendor": {"status": "unknown"},
+      "organizer": {"name": "Greenie Sports Cards", "url": "https://greeniesportscards.com"},
+      "summary": "Three day card show in Independence, Ohio with 400 plus vendor tables. Hours are not yet published.",
+      "evidence": [
+        {"url": "https://greeniesportscards.com/greenie-card-shows", "seen": "2026-10-21", "supports": ["name", "days", "venue", "size"]}
+      ],
+      "agent_confidence": "high"
+    },
+    {
+      "kind": "edition",
+      "name": "Wooster Show",
+      "event_type": "card_show",
+      "status": "scheduled",
+      "days": [{"date": "2027-04-16"}, {"date": "2027-04-17"}],
+      "venue": {"name": "Wayne County Fairgrounds", "address": "199 Vanover St", "city": "Wooster", "region": "OH", "postal": "44691", "country": "US"},
+      "sells": {"tcg": [], "sports": [], "other": []},
+      "vendor": {"status": "unknown"},
+      "organizer": {"name": "Greenie Sports Cards", "url": "https://greeniesportscards.com"},
+      "summary": "New launch two day card show at the Wayne County Fairgrounds in Wooster, Ohio. Hours and table count are still to be announced.",
+      "evidence": [
+        {"url": "https://greeniesportscards.com/greenie-card-shows", "seen": "2026-10-21", "supports": ["name", "days", "venue"]}
+      ],
+      "agent_confidence": "high"
+    },
+    {
+      "kind": "edition",
+      "name": "Summit County Show",
+      "event_type": "card_show",
+      "status": "scheduled",
+      "days": [{"date": "2027-05-21"}, {"date": "2027-05-22"}],
+      "venue": {"name": "Summit County Fairgrounds", "address": "1050 North Avenue", "city": "Tallmadge", "region": "OH", "postal": "44278", "country": "US"},
+      "sells": {"tcg": [], "sports": [], "other": []},
+      "size": {"tables": 200},
+      "vendor": {"status": "unknown"},
+      "organizer": {"name": "Greenie Sports Cards", "url": "https://greeniesportscards.com"},
+      "summary": "Two day card show at the Summit County Fairgrounds in Tallmadge, Ohio with 200 plus vendor tables. Hours are not yet published.",
+      "evidence": [
+        {"url": "https://greeniesportscards.com/greenie-card-shows", "seen": "2026-10-21", "supports": ["name", "days", "venue", "size"]}
+      ],
+      "agent_confidence": "high"
+    },
+    {
+      "kind": "edition",
+      "name": "Indianapolis Show",
+      "event_type": "card_show",
+      "status": "scheduled",
+      "days": [{"date": "2027-06-18"}, {"date": "2027-06-19"}, {"date": "2027-06-20"}],
+      "venue": {"name": "Indianapolis Convention Center and Lucas Oil Stadium", "address": "100 South Capital Ave", "city": "Indianapolis", "region": "IN", "postal": "46225", "country": "US"},
+      "sells": {"tcg": [], "sports": [], "other": []},
+      "size": {"tables": 200},
+      "vendor": {"status": "unknown"},
+      "organizer": {"name": "Greenie Sports Cards", "url": "https://greeniesportscards.com"},
+      "summary": "Three day card show in Indianapolis with 200 plus vendor tables. Hours are not yet published.",
+      "evidence": [
+        {"url": "https://greeniesportscards.com/greenie-card-shows", "seen": "2026-10-21", "supports": ["name", "days", "venue", "size"]}
+      ],
+      "agent_confidence": "high"
+    }
+  ],
+  "leads_only": [
+    {"name": "TCG-Kon Frankfort", "url": "https://tcgkon.com/vendors", "note": "Named as a guest stop with no date or venue published. Not recorded."},
+    {"name": "TCG-Kon Fort Myers", "url": "https://tcgkon.com/events", "note": "Not recorded: page says Saturday January 31 2027, which is a Sunday. Date needs confirming."},
+    {"name": "Apex TCG Show Princeton", "url": "https://www.ontreasure.com/events/apex-tcg-show-princeton-nj-oct-31st-10312026", "note": "Not recorded: page says Sunday November 1 2026, but the URL says October 31 2026 (a Saturday)."},
+    {"name": "Greenie XL Show", "url": "https://greeniesportscards.com/greenie-card-shows", "note": "Not recorded: page lists Saturday February 27 2027 but writes the year 2026 (a Friday). Venue listed as Lakeland Community College, Kirtland OH."},
+    {"name": "Greenie Great Northern Card Show March 12 and 13 2027", "url": "https://greeniesportscards.com/greenie-card-shows", "note": "Not recorded: header gives Friday March 12 and Saturday March 13, but the day lines say Fri 3/13 and Sat 3/14."},
+    {"name": "Greenie Expanded Show May 8 2027", "url": "https://greeniesportscards.com/greenie-card-shows", "note": "Saturday May 8 2027, 9 am to 4 pm, 200 plus tables. Ohio venue not yet chosen, so not recorded."},
+    {"name": "Greenie Black Friday Show Nov 26 2027", "url": "https://greeniesportscards.com/greenie-card-shows", "note": "Friday November 26 2027, 9 am to 4 pm, 200 plus tables. Venue not yet chosen, so not recorded."},
+    {"name": "Sport Card Expo Montreal", "url": "https://www.sportcardexpomontreal.com", "note": "Linked from promoter homepage. Not fetched (fetch budget). Logo lists a 2026 season."},
+    {"name": "Sport Card Expo Halifax", "url": "https://sportcardexpohalifax.com", "note": "Linked from promoter homepage. Not fetched. July season per logo."},
+    {"name": "Sport Card Expo Calgary", "url": "https://sportcardexpocalgary.com", "note": "Linked from promoter homepage. Not fetched."},
+    {"name": "Sport Card Expo Edmonton", "url": "https://sportcardexpoedmonton.com", "note": "Linked from promoter homepage. Not fetched."},
+    {"name": "Collectors Supershow", "url": "https://collectorssupershow.com/", "note": "Linked from promoter homepage. Not fetched."},
+    {"name": "Sport Card Expo Toronto April", "url": "https://www.sportcardexpotoronto.com", "note": "Homepage lists an April Toronto show, but the Toronto site shows only November. Not verified."},
+    {"name": "USA Card Show schedule (eight dates, no year on page)", "url": "https://usacardshow.com/dates", "note": "Not recorded: no year or weekday is written next to the dates. Labels: Sept 26 and 27 San Rafael; Oct 3 and 4 Irvine; Nov 21 and 22 San Rafael; Dec 12 and 13 San Diego; Sept 12 and 13 Costa Mesa; Oct 10 and 11 Del Mar; Sept 5 Portland; Nov 21 Portland."},
+    {"name": "USA Card Show vendor sign-up", "url": "https://usacardshow.carrd.co/", "note": "Vendor form linked from the organizer vendors page on a third party site. Not opened."},
+    {"name": "OC Card Show", "url": "https://www.instagram.com/occardshow/", "note": "Instagram only. Leads only per brief."},
+    {"name": "SD Card Show", "url": "https://www.instagram.com/sdcardshow/", "note": "Instagram only. Leads only per brief."},
+    {"name": "Portland Card Show", "url": "https://www.instagram.com/portlandcardshow/", "note": "Instagram only. Leads only per brief."},
+    {"name": "Syracuse Sports Card and TCG Show", "url": "https://www.albanynyshowpromotions.com/syracuse", "note": "Listed as coming soon with no dates, venue or table count."},
+    {"name": "NTX Toy and Comic Show (six 2027 weekends at NTX Arena)", "url": "https://www.txcardshows.com/shows", "note": "Card vendor presence not stated on the page, so not recorded."},
+    {"name": "Card Party San Diego (partner event)", "url": "https://www.tixr.com/groups/cardparty/events/card-party-san-diego-2026-gen-4-160116", "note": "Listed as a partner event on May 29 and 30 2027 in San Diego. Not checked."},
+    {"name": "OKC Collects", "url": "https://www.okcollects.com/", "note": "Linked from TX Card Shows. Not fetched. Its four 2027 weekends are recorded at city level only."}
+  ],
+  "blocked": [],
+  "notes": "Search budget: 0 of 6 used, since every assigned promoter had a URL. Fetches: 58 of 60. robots.txt: apex.robots returned empty content and usacardshow.com/robots.txt returned 404; both were read as no rules. tickets.txcardshows.com disallows only /admin/, /scan/ and /api/. Nothing was blocked. No phone numbers recorded. Only organizer emails published for vendors are recorded: AlbanySportsCardShow@gmail.com and cardshows@greeniesportscards.com. Past editions use status scheduled because the status list has no held value. Series list specific dates in known_dates; past sized shows are editions. last_confirmed is left out everywhere: TX, Albany and TCG-Kon pages carry only 2025 or copyright footers, and no dated post was found, so the series are rated medium. VENUES: TX series use city level because the organizer does not publish one venue for all dates. Verified 2026 venues, all from ticket pages: Galveston Oct 24 and 25 2026, Moody Gardens Hotel and Convention Center, 7 Hope Boulevard, Galveston TX 77554, 400 plus tables (the homepage said 300 plus); Austin Oct 31 and Nov 1 2026, Hilton Austin, 500 East 4th Street, Austin TX 78701, 300 plus tables; The Woodlands Nov 28 and 29 2026, The Woodlands Waterway Marriott Hotel and Convention Center, 1601 Lake Robbins Drive, TX 77380, 300 plus tables; Lewisville Nov 14 and 15 2026 at NTX Arena, 2401 South Stemmons Freeway, Lewisville TX 75067, over 800 tables (homepage said 750 plus); Lewisville Dec 5 and 6 2026 at the same arena, 400 plus sports tables and 200 TCG corner tables; Fort Worth Dec 12 and 13 2026, Dickies Arena, 1911 Montgomery Street, Fort Worth TX 76107, 400 plus tables; Belton Nov 21 and 22 2026, Bell County Expo Center, 301 West Loop 121, Belton TX 76513, 400 plus tables. Verified weekend hours: Galveston 9 am Saturday to 4 pm Sunday; Nov 14 and 15 9 am Saturday to 4 pm Sunday; Dec 5 and 6 and Dec 12 and 13, 9 am to 4 pm both days. Kids 5 and under free at most TX shows; VIP tiers are extra. ALBANY: hours regular 9 am to 3 pm; two day expo Sat 10 am to 4 pm, Sun 10 am to 3 pm (used for the two day editions). Schenectady hours Sat 11 am to 6 pm, Sun 11 am to 5 pm. Albany and Saratoga use 110 booths (Albany) and admission 5 dollars, kids under 12 free. Saratoga page labels 2026 on May 16, Aug 29 and Oct 3, which fall on Saturdays in 2026; the schedule page gives those as 2027 Sundays, so only the 2027 dates are used. Saratoga Jan 2 and 3 2027 is taken from the schedule page. Syracuse appears only in navigation. Johnstown page says Moose Lodge and the schedule page says Moose Club; Lodge used. Johnstown early bird entry is 20 dollars at 4:30 pm. Johnstown 2027 details are assumed from the 2026 page. APEX: ticket pages give date and city but no venue, hours, admission or tables. Oct 24 and Nov 29 titles say Somerset NJ while the URL says Franklin NJ, so both are recorded at state level. Princeton is in leads only because of the date conflict. GREENIE: Great Northern Oct 2 and 3 2026 is a past edition (200 plus tables). Vendor links conflict between sources for Great Northern, so none is recorded. The Ohio State vendor form is forms.gle/VX2KfG5ZjPjDnb2SA on the homepage and calendar, but the show page gives forms.gle/rrfuyMN9Vystc4Uw8; the first is recorded and should be checked. Medina Oct 31 2026 vendor form is forms.gle/8L9osPC2MNSJ3Cmw9 and is not in the series. Kirtland 2027 dates were confirmed on the Kirtland page under year headings; all fall on Saturdays. Trade nights at Cards in the Land (Chagrin Falls) and Bomber Sports Cards (Broadview Heights) are third party stores and are not recorded. Greenie Medina June 4 2027 hours are TBD on the Friday. TCG-KON: venue names are on /events but no street addresses, hours, admission prices or table data appear on tcgkon.com; tickets are on Eventbrite (not fetched). Event type convention because each stop has guests, tournaments and artist alley. TCG NATIONAL: footer reads 2035, so the page date is unreliable; the 2027 event year is written. The address comes from the page footer and is not labeled as the venue address, so confirm before use. 1,600 plus tables recorded as 1600. Dealers get two passes per table. Dealers set up January 20 2027. SPORT CARD EXPO: the Toronto site lists November 5 to 8 2026 at the International Centre. Ticket prices are given without a currency, so admission is noted only. No table count or vendor pricing is published. USA CARD SHOW: the dates page has no year and no weekday beside any date, and the footer 2026 is not beside the dates, so nothing is recorded; listed in leads only. Vendor form is a Carrd page, not opened."
+}
