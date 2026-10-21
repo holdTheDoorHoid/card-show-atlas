@@ -87,15 +87,34 @@ export function zoneOffsetMs(instantMs: number, timeZone: string): number {
 const DATE_RE = /^(\d{4})-(\d{2})-(\d{2})$/;
 const TIME_RE = /^(\d{1,2}):(\d{2})$/;
 
+const dayCache = new Map<string, number>();
+
+function daysInMonth(y: number, mo: number): number {
+  if (mo === 2) return (y % 4 === 0 && y % 100 !== 0) || y % 400 === 0 ? 29 : 28;
+  return mo === 4 || mo === 6 || mo === 9 || mo === 11 ? 30 : 31;
+}
+
+/** Day number for a valid `YYYY-MM-DD`, or NaN. Cached because the same dates repeat a lot. */
+function parseDay(date: string): number {
+  const hit = dayCache.get(date);
+  if (hit !== undefined) return hit;
+  let out = Number.NaN;
+  const m = typeof date === 'string' ? DATE_RE.exec(date) : null;
+  if (m) {
+    const y = Number(m[1]);
+    const mo = Number(m[2]);
+    const d = Number(m[3]);
+    if (mo >= 1 && mo <= 12 && d >= 1 && d <= daysInMonth(y, mo)) {
+      out = Math.round(Date.UTC(y, mo - 1, d) / MS_PER_DAY);
+    }
+  }
+  if (dayCache.size > 50_000) dayCache.clear();
+  dayCache.set(date, out);
+  return out;
+}
+
 export function isValidDate(date: string): boolean {
-  const m = DATE_RE.exec(date);
-  if (!m) return false;
-  const y = Number(m[1]);
-  const mo = Number(m[2]);
-  const d = Number(m[3]);
-  if (mo < 1 || mo > 12 || d < 1) return false;
-  const t = new Date(Date.UTC(y, mo - 1, d));
-  return t.getUTCFullYear() === y && t.getUTCMonth() === mo - 1 && t.getUTCDate() === d;
+  return !Number.isNaN(parseDay(date));
 }
 
 export function isValidTime(time: string): boolean {
@@ -106,18 +125,25 @@ export function isValidTime(time: string): boolean {
   return h >= 0 && h <= 24 && mi >= 0 && mi < 60 && (h < 24 || mi === 0);
 }
 
+const timeCache = new Map<string, number>();
+
 /** Minutes after midnight for `HH:MM`. `24:00` is allowed and means midnight at the end of the day. */
 export function parseTime(time: string): number {
+  const hit = timeCache.get(time);
+  if (hit !== undefined) return hit;
   const m = TIME_RE.exec(time);
   if (!m || !isValidTime(time)) throw new PlannerError('bad_time', `"${time}" is not a time like 09:30.`);
-  return Number(m[1]) * 60 + Number(m[2]);
+  const out = Number(m[1]) * 60 + Number(m[2]);
+  if (timeCache.size > 10_000) timeCache.clear();
+  timeCache.set(time, out);
+  return out;
 }
 
 /** Days since 1970-01-01 for a local calendar date. Used as a day index; it is not an instant. */
 export function epochDay(date: string): number {
-  const m = DATE_RE.exec(date);
-  if (!m || !isValidDate(date)) throw new PlannerError('bad_date', `"${date}" is not a date like 2026-11-14.`);
-  return Math.round(Date.UTC(Number(m[1]), Number(m[2]) - 1, Number(m[3])) / MS_PER_DAY);
+  const d = parseDay(date);
+  if (Number.isNaN(d)) throw new PlannerError('bad_date', `"${date}" is not a date like 2026-11-14.`);
+  return d;
 }
 
 export function dateFromEpochDay(day: number): string {
@@ -147,6 +173,30 @@ export function monthIndex(date: string): number {
 export type Disambiguation = 'compatible' | 'earlier' | 'later';
 
 const instantCache = new Map<string, number>();
+const dayOffsetCache = new Map<string, Map<number, number | null>>();
+
+/**
+ * The zone's offset for a whole local day when it does not change during that day, else null.
+ * Offsets are sampled 15 hours before and 39 hours after the day's midnight read as UTC, which
+ * covers the local day in every zone (offsets run from minus 12 to plus 14 hours). Clocks change
+ * at most a few times a year, so equal samples mean a constant offset for the day.
+ */
+function constantDayOffset(day: number, timeZone: string): number | null {
+  let byDay = dayOffsetCache.get(timeZone);
+  if (!byDay) {
+    byDay = new Map();
+    dayOffsetCache.set(timeZone, byDay);
+  }
+  const hit = byDay.get(day);
+  if (hit !== undefined) return hit;
+  const midnight = day * MS_PER_DAY;
+  const a = zoneOffsetMs(midnight - 15 * MS_PER_HOUR, timeZone);
+  const b = zoneOffsetMs(midnight + 39 * MS_PER_HOUR, timeZone);
+  const out = a === b ? a : null;
+  if (byDay.size > 50_000) byDay.clear();
+  byDay.set(day, out);
+  return out;
+}
 
 /**
  * Absolute instant for a local date and time in an IANA zone.
@@ -161,13 +211,16 @@ export function zonedTimeToInstant(
   timeZone: string,
   disambiguation: Disambiguation = 'compatible',
 ): number {
-  const key = `${date}|${time}|${timeZone}|${disambiguation}`;
-  const cached = instantCache.get(key);
-  if (cached !== undefined) return cached;
-
   const day = epochDay(date);
   const minutes = parseTime(time);
   const localAsUtc = day * MS_PER_DAY + minutes * MS_PER_MINUTE;
+  if (minutes < 24 * 60) {
+    const constant = constantDayOffset(day, timeZone);
+    if (constant !== null) return localAsUtc - constant;
+  }
+  const key = `${date}|${time}|${timeZone}|${disambiguation}`;
+  const cached = instantCache.get(key);
+  if (cached !== undefined) return cached;
 
   const offBefore = zoneOffsetMs(localAsUtc - MS_PER_DAY, timeZone);
   const offAfter = zoneOffsetMs(localAsUtc + MS_PER_DAY, timeZone);

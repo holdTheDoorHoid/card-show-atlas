@@ -90,6 +90,19 @@ export function hoursForRoadMiles(roadMiles: number, model: TravelModel = DEFAUL
   return hours + model.overheadMinutes / 60;
 }
 
+/** Writes estimated road miles and hours into `out` without allocating. */
+export function estimateInto(a: LatLon, b: LatLon, model: TravelModel, out: { miles: number; hours: number }): void {
+  const straight = haversineMiles(a, b);
+  if (straight < 1e-6) {
+    out.miles = 0;
+    out.hours = 0;
+    return;
+  }
+  const miles = straight * model.roadFactor;
+  out.miles = miles;
+  out.hours = hoursForRoadMiles(miles, model);
+}
+
 /** Estimated leg between two points. */
 export function estimateLeg(a: LatLon, b: LatLon, model: TravelModel = DEFAULT_TRAVEL_MODEL): Leg {
   const straight = haversineMiles(a, b);
@@ -188,5 +201,16 @@ export class Travel {
 
   hasKnown(): boolean {
     return this.known.size > 0;
+  }
+
+  /** Miles and hours into `out`, without allocating when no known legs are loaded. */
+  fill(a: LatLon, b: LatLon, out: { miles: number; hours: number }): void {
+    if (this.known.size === 0) {
+      estimateInto(a, b, this.model, out);
+      return;
+    }
+    const l = this.leg(a, b);
+    out.miles = l.miles;
+    out.hours = l.hours;
   }
 }

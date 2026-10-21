@@ -9,6 +9,7 @@
  */
 import type { FetchLike } from './osrm.js';
 import { createWorkerState, handlePlannerRequest } from './protocol.js';
+import { isValidTimeZone } from './time.js';
 
 interface WorkerScope {
   onmessage: ((ev: { data: unknown }) => void) | null;
@@ -18,6 +19,9 @@ interface WorkerScope {
 
 const scope = globalThis as unknown as WorkerScope;
 const state = createWorkerState();
+
+// Load the time zone data now, while the page is still busy, rather than on the first plan.
+isValidTimeZone('America/New_York');
 
 scope.onmessage = (ev) => {
   const fetchFn: FetchLike | undefined = typeof scope.fetch === 'function' ? (url, init) => scope.fetch!(url, init) : undefined;

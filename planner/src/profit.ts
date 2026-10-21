@@ -57,12 +57,17 @@ export const DEFAULT_PROFIT_MODEL: ProfitModel = {
   matchFloor: 0.5,
 };
 
+const resolvedModels = new WeakSet<object>();
+
 export function resolveProfitModel(partial?: Partial<ProfitModel> | null): ProfitModel {
-  return {
+  if (partial && resolvedModels.has(partial)) return partial as ProfitModel;
+  const m: ProfitModel = {
     ...DEFAULT_PROFIT_MODEL,
     ...(partial ?? {}),
     assumedTablePrice: { ...DEFAULT_PROFIT_MODEL.assumedTablePrice, ...(partial?.assumedTablePrice ?? {}) },
   };
+  resolvedModels.add(m);
+  return m;
 }
 
 export interface Range {
@@ -129,6 +134,7 @@ export function estimateSales(
   show: PlannerShow,
   settings: VendorSettings,
   modelIn?: Partial<ProfitModel> | null,
+  withExplain = true,
 ): SalesEstimate | null {
   const ts = settings.typical_sales;
   if (!ts) return null;
@@ -137,7 +143,8 @@ export function estimateSales(
   const { sizeClass, assumed } = resolveSizeClass(show);
   const typical = Math.max(0, ts[sizeClass] ?? 0);
   const explain: string[] = [];
-  explain.push(
+  const say = withExplain;
+  if (say) explain.push(
     assumed
       ? `Show size is not known, so your typical sales at a medium show (${formatMoney(typical, currency)}) are used.`
       : `Your typical sales at a ${SIZE_WORDS[sizeClass]} show: ${formatMoney(typical, currency)}.`,
@@ -151,7 +158,7 @@ export function estimateSales(
       Math.max(model.trafficMin, (tpt / model.trafficReference) ** model.trafficExponent),
     );
     if (Math.abs(trafficFactor - 1) >= 0.05) {
-      explain.push(
+      if (say) explain.push(
         `About ${formatNumber(tpt, tpt < 10 ? 1 : 0)} visitors per table, so sales are adjusted ${trafficFactor > 1 ? 'up' : 'down'} ${Math.round(Math.abs(trafficFactor - 1) * 100)} percent.`,
       );
     }
@@ -163,7 +170,7 @@ export function estimateSales(
     const floor = Math.max(0, Math.min(1, model.matchFloor));
     matchFactor = floor + (1 - floor) * ms.score;
     if (matchFactor < 0.95) {
-      explain.push(
+      if (say) explain.push(
         ms.matched.length === 0
           ? `Little of what you sell is listed here, so sales are cut ${Math.round((1 - matchFactor) * 100)} percent.`
           : `Only part of what you sell is listed here, so sales are cut ${Math.round((1 - matchFactor) * 100)} percent.`,
@@ -180,7 +187,7 @@ export function estimateSales(
     historyAverage = past.reduce((s, x) => s + x, 0) / past.length;
     historyWeight = past.length / (past.length + model.historyPrior);
     mid = (1 - historyWeight) * typical * trafficFactor * matchFactor + historyWeight * historyAverage;
-    explain.push(
+    if (say) explain.push(
       `You averaged ${formatMoney(historyAverage, currency)} here over ${past.length} ${past.length === 1 ? 'show' : 'shows'}, which counts ${Math.round(historyWeight * 100)} percent.`,
     );
   }
@@ -194,14 +201,14 @@ export function estimateSales(
     low = mid * (att.low / att.mid) ** e;
     high = mid * (att.high / att.mid) ** e;
     rangeFrom = 'attendance';
-    explain.push(
+    if (say) explain.push(
       `Range follows the expected crowd of ${formatNumber(att.low)} to ${formatNumber(att.high)} people.`,
     );
   } else {
     low = mid * (1 - model.roughSpread);
     high = mid * (1 + model.roughSpread);
     rangeFrom = 'rough';
-    explain.push('Crowd size is a rough guess, so the range is wide.');
+    if (say) explain.push('Crowd size is a rough guess, so the range is wide.');
   }
   return {
     low,
@@ -380,6 +387,26 @@ export function tableCost(show: PlannerShow, settings: VendorSettings, modelIn?:
   if (typeof price === 'number' && price >= 0) return { amount: price, currency, assumed: false };
   const { sizeClass } = resolveSizeClass(show);
   return { amount: model.assumedTablePrice[sizeClass], currency, assumed: true };
+}
+
+/**
+ * Table fee plus extras for one show in the vendor currency, the same sum `addShowCosts` puts on
+ * a sheet, without building the lines. Null when a rate is missing.
+ */
+export function showFixedCost(
+  show: PlannerShow,
+  settings: VendorSettings,
+  rates: ExchangeRates | null | undefined,
+  modelIn?: Partial<ProfitModel> | null,
+): number | null {
+  const vc = vendorCurrency(settings);
+  const t = tableCost(show, settings, modelIn);
+  const rate = rateFor(t.currency, vc, rates);
+  const extras = show.vendor?.extras;
+  const listed = t.amount + (typeof extras === 'number' && extras > 0 ? extras : 0);
+  if (rate === null) return null;
+  const own = settings.extras_per_show ?? 0;
+  return listed * rate + (own > 0 ? own : 0);
 }
 
 /** Travel inputs for the cost lines. */

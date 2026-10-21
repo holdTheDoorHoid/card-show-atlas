@@ -114,20 +114,36 @@ export interface FactorContext {
   labels?: Record<string, string>;
   profitModel?: Partial<ProfitModel> | null;
   travelHalfLifeHours?: number;
+  /** Build the reason strings. Default true; the planners turn it off for speed. */
+  withReasons?: boolean;
+}
+
+/** Number of sorted values below x, and equal to x. */
+function rankIn(sorted: number[], x: number): { below: number; same: number } {
+  let lo = 0;
+  let hi = sorted.length;
+  while (lo < hi) {
+    const mid = (lo + hi) >> 1;
+    if (sorted[mid]! < x - 1e-9) lo = mid + 1;
+    else hi = mid;
+  }
+  let end = lo;
+  while (end < sorted.length && Math.abs(sorted[end]! - x) <= 1e-9) end += 1;
+  return { below: lo, same: end - lo };
 }
 
 export function vendorFactors(show: PlannerShow, ctx: FactorContext): VendorFactors {
   const settings = ctx.settings;
   const vc = vendorCurrency(settings);
+  const say = ctx.withReasons !== false;
 
   // Crowd.
   let crowd: Factor;
   const mid = show.estimate?.attendance?.mid;
   if (typeof mid === 'number' && mid > 0) {
     const value = Math.max(0, Math.min(1, Math.log10(mid / 100) / Math.log10(200)));
-    const about = `about ${formatNumber(Math.round(mid / 10) * 10)}`;
     const word = mid >= 5000 ? 'Big crowd' : mid >= 1500 ? 'Good crowd' : mid < 500 ? 'Small crowd' : 'Medium crowd';
-    crowd = { value, reason: `${word} expected (${about})`, known: true };
+    crowd = { value, reason: say ? `${word} expected (about ${formatNumber(Math.round(mid / 10) * 10)})` : null, known: true };
   } else {
     const sc = resolveSizeClass(show);
     crowd = sc.assumed
@@ -140,13 +156,16 @@ export function vendorFactors(show: PlannerShow, ctx: FactorContext): VendorFact
   const tpt = show.estimate?.traffic_per_table;
   const ref = ctx.profitModel?.trafficReference ?? 6;
   if (typeof tpt === 'number' && tpt > 0) {
-    const n = formatNumber(tpt, tpt < 10 ? 1 : 0).replace(/\.0$/, '');
-    const reason =
-      tpt >= ref * 1.7
-        ? `Busy room, about ${n} visitors per table`
-        : tpt <= ref * 0.5
-          ? `Quiet room, about ${n} visitors per table`
-          : `About ${n} visitors per table`;
+    let reason: string | null = null;
+    if (say) {
+      const n = formatNumber(tpt, tpt < 10 ? 1 : 0).replace(/\.0$/, '');
+      reason =
+        tpt >= ref * 1.7
+          ? `Busy room, about ${n} visitors per table`
+          : tpt <= ref * 0.5
+            ? `Quiet room, about ${n} visitors per table`
+            : `About ${n} visitors per table`;
+    }
     traffic = { value: tpt / (tpt + ref), reason, known: true };
   } else {
     traffic = { value: 0.5, reason: null, known: false };
@@ -160,22 +179,17 @@ export function vendorFactors(show: PlannerShow, ctx: FactorContext): VendorFact
     const conv = convert(t.amount, t.currency, vc, ctx.rates);
     const cur = conv ? vc : t.currency;
     const amount = conv ? conv.to.amount : t.amount;
-    const shown = formatMoney(Math.round(t.amount), t.currency);
+    const shown = say ? formatMoney(Math.round(t.amount), t.currency) : '';
     const peers = ctx.priceContext?.byCurrency.get(cur) ?? [];
     if (peers.length >= 5) {
-      let below = 0;
-      let same = 0;
-      for (const p of peers) {
-        if (p < amount - 1e-9) below += 1;
-        else if (Math.abs(p - amount) <= 1e-9) same += 1;
-      }
+      const { below, same } = rankIn(peers, amount);
       const q = (below + 0.5 * same) / peers.length;
       const word = q <= 0.33 ? 'cheaper than most' : q >= 0.67 ? 'pricier than most' : 'about average';
-      cost = { value: 1 - q, reason: `Table is ${shown}, ${word}`, known: true };
+      cost = { value: 1 - q, reason: say ? `Table is ${shown}, ${word}` : null, known: true };
     } else if (conv) {
-      cost = { value: 1 / (1 + amount / 150), reason: `Table is ${shown}`, known: true };
+      cost = { value: 1 / (1 + amount / 150), reason: say ? `Table is ${shown}` : null, known: true };
     } else {
-      cost = { value: 0.5, reason: `Table is ${shown} (no exchange rate set)`, known: false };
+      cost = { value: 0.5, reason: say ? `Table is ${shown} (no exchange rate set)` : null, known: false };
     }
   } else {
     cost = { value: 0.5, reason: 'Table price not listed', known: false };
@@ -187,7 +201,7 @@ export function vendorFactors(show: PlannerShow, ctx: FactorContext): VendorFact
     const from = ctx.fromName ? ` from ${ctx.fromName}` : '';
     travel = {
       value: closeness(ctx.hours, ctx.travelHalfLifeHours ?? 2),
-      reason: ctx.hours < 1 / 12 ? `Under 5 min drive${from}` : `${formatDuration(ctx.hours)} drive${from}`,
+      reason: !say ? null : ctx.hours < 1 / 12 ? `Under 5 min drive${from}` : `${formatDuration(ctx.hours)} drive${from}`,
       known: true,
     };
   } else {
@@ -200,8 +214,8 @@ export function vendorFactors(show: PlannerShow, ctx: FactorContext): VendorFact
   if (!ms.known) {
     match = { value: 0.5, reason: (show.sells ?? []).length === 0 ? 'What is sold is not listed' : null, known: false };
   } else if (ms.matched.length > 0) {
-    const names = ms.matched.slice(0, 3).map((id) => labelFor(id, ctx.labels));
-    match = { value: ms.score, reason: `Matches what you sell: ${joinWords(names)}`, known: true };
+    const reason = say ? `Matches what you sell: ${joinWords(ms.matched.slice(0, 3).map((id) => labelFor(id, ctx.labels)))}` : null;
+    match = { value: ms.score, reason, known: true };
   } else {
     match = { value: ms.score, reason: 'Little overlap with what you sell', known: true };
   }
@@ -214,7 +228,7 @@ export function vendorFactors(show: PlannerShow, ctx: FactorContext): VendorFact
     const reasons: string[] = [];
     if (typeof h.rating === 'number' && h.rating >= 1 && h.rating <= 5) {
       parts.push((h.rating - 1) / 4);
-      reasons.push(`You rated it ${formatNumber(h.rating, h.rating % 1 ? 1 : 0)} last time`);
+      if (say) reasons.push(`You rated it ${formatNumber(h.rating, h.rating % 1 ? 1 : 0)} last time`);
     }
     const past = (h.gross_sales ?? []).filter((x) => typeof x === 'number' && x >= 0);
     if (past.length > 0) {
@@ -224,12 +238,12 @@ export function vendorFactors(show: PlannerShow, ctx: FactorContext): VendorFact
         const typical = ts[resolveSizeClass(show).sizeClass];
         if (typical > 0) parts.push(avg / typical / (avg / typical + 1));
       }
-      reasons.push(`You averaged ${formatMoney(Math.round(avg), vc)} here`);
+      if (say) reasons.push(`You averaged ${formatMoney(Math.round(avg), vc)} here`);
     }
     if (parts.length > 0 || reasons.length > 0) {
       history = {
         value: parts.length > 0 ? parts.reduce((s, x) => s + x, 0) / parts.length : 0.5,
-        reason: joinWords(reasons),
+        reason: reasons.length ? joinWords(reasons) : null,
         known: parts.length > 0,
       };
     }

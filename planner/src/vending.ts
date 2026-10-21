@@ -34,6 +34,7 @@ import {
   estimateSales,
   finishEstimate,
   fuelCostPerMile,
+  showFixedCost,
   tableCost,
   vendorCurrency,
   type FuelCost,
@@ -124,7 +125,8 @@ export interface VNode {
   valueBase: number;
   sales: SalesEstimate | null;
   table: TableCost;
-  factors: VendorFactors;
+  /** Score mode only (without reason strings). */
+  factors: VendorFactors | null;
   warnings: string[];
 }
 
@@ -300,29 +302,26 @@ export class VendingEngine {
     const eveningCap = leaveAt.map((l, i) => clampH(latest[i]! - l));
 
     const settings = setup.settings;
-    const factors = vendorFactors(show, {
-      settings,
-      hours: null,
-      priceContext: setup.priceContext,
-      rates: setup.rates,
-      labels: setup.labels,
-      profitModel: setup.profitModel,
-      travelHalfLifeHours: setup.travelHalfLifeHours,
-    });
     const table = tableCost(show, settings, setup.profitModel);
-    const sales = estimateSales(show, settings, setup.profitModel);
+    const sales = estimateSales(show, settings, setup.profitModel, false);
     let valueBase: number;
+    let factors: VendorFactors | null = null;
     if (setup.objective === 'profit') {
       if (!sales) return 'Add your typical sales to plan by profit';
-      const sheet = new CostSheet(vendorCurrency(settings), setup.rates);
-      addShowCosts(sheet, show, settings, setup.profitModel);
-      const total = sheet.total();
-      if (total === null) {
-        const cur = sheet.lines.find((l) => !l.converted)?.currency ?? 'another currency';
-        return `Table price is in ${cur}. Add an exchange rate to include it.`;
-      }
+      const total = showFixedCost(show, settings, setup.rates, setup.profitModel);
+      if (total === null) return `Table price is in ${table.currency}. Add an exchange rate to include it.`;
       valueBase = (sales.mid * Math.max(0, Math.min(100, settings.margin_percent))) / 100 - total;
     } else {
+      factors = vendorFactors(show, {
+        settings,
+        hours: null,
+        priceContext: setup.priceContext,
+        rates: setup.rates,
+        labels: setup.labels,
+        profitModel: setup.profitModel,
+        travelHalfLifeHours: setup.travelHalfLifeHours,
+        withReasons: false,
+      });
       valueBase = pointsWithoutTravel(factors, setup.weights) - setup.minScore;
     }
     return {
@@ -405,8 +404,20 @@ export class VendingEngine {
     return false;
   }
 
+  private readonly departCache: (DepartOption[] | undefined)[][] = [[], []];
+
   /** Ways to leave the base for show i: `j` nights on the road before day one, `m` morning hours on day one. */
   departOptions(i: number, homeOnly: boolean): DepartOption[] {
+    const cache = this.departCache[homeOnly ? 1 : 0]!;
+    let hit = cache[i];
+    if (!hit) {
+      hit = this.computeDepartOptions(i, homeOnly);
+      cache[i] = hit;
+    }
+    return hit;
+  }
+
+  private computeDepartOptions(i: number, homeOnly: boolean): DepartOption[] {
     const T = this.nodes[i]!;
     const leg = this.legBase(i);
     const h = leg.hours;
@@ -546,12 +557,18 @@ export class VendingEngine {
     let labelCount = 0;
     let edgeCount = 0;
     const G = Math.min(s.maxChainGapDays, maxN);
+    const C = this.C;
+    const F = this.F;
+    const perMile = this.fuel.perMile;
+    const viaHome = this.sameBase;
+    const travel = s.travel;
+    const scratch = { miles: 0, hours: 0 };
 
     for (const i of this.order) {
       if (!usable(i)) continue;
       const T = nodes[i]!;
       finalize(T.first - 1 - hStart);
-      const inc = incoming[i]!;
+      const ins = incoming[i]!;
       incoming[i] = [];
 
       for (const opt of this.departOptions(i, homeOnly)) {
@@ -569,75 +586,85 @@ export class VendingEngine {
             k = !monthReset || monthOf[dRel] === T.month ? e.k + 1 : 1;
             if (k > K) continue;
           }
-          inc.push({
-            v: e.v + opt.gain - cf * opt.cost,
-            m: opt.m,
-            k,
-            na: j,
-            node: i,
-            kind: 'depart',
-            j,
-            prevHome: e,
-            prevOut: null,
-          });
+          insertIn(ins, e.v + opt.gain - cf * opt.cost, opt.m, k, j, i, 'depart', j, e, null);
         }
       }
-      if (inc.length === 0) continue;
-      const ins = prune(inc);
+      if (ins.length === 0) continue;
 
       const outs: OutLabel[] = [];
       for (const L of ins) {
         for (const vo of this.variantOptions(i, L.m, L.na, homeOnly, maxN)) {
-          outs.push({ v: L.v + T.valueBase - cf * vo.cost, m: vo.m, k: L.k, na: vo.na, node: i, variant: vo.variant, inL: L });
+          insertOut(outs, L.v + T.valueBase - cf * vo.cost, vo.m, L.k, vo.na, i, vo.variant, L);
         }
       }
       if (outs.length === 0) continue;
-      const kept = prune(outs);
-      labelCount += kept.length;
+      labelCount += outs.length;
 
-      for (const L of kept) {
+      const rets: (MoveOption | null)[] = new Array(outs.length);
+      for (let li = 0; li < outs.length; li++) {
+        const L = outs[li]!;
         const r = this.returnOption(i, L.m, homeOnly);
+        rets[li] = null;
         if (!r) continue;
         const rDay = T.last + r.j;
         if (rDay > hEnd) continue;
         if (r.j > 0 && (L.na + r.j > maxN || this.anyBlackout(T.last + 1, rDay))) continue;
+        rets[li] = r;
         const rRel = rDay - hStart;
         const kEff = monthReset && monthOf[rRel] !== T.month ? 0 : L.k;
         const entry: HomeEntry = { v: L.v - cf * r.cost, k: kEff, day: rDay, from: L, j: r.j };
-        if (this.sameBase) arrivals[rRel]!.push(entry);
+        if (viaHome) arrivals[rRel]!.push(entry);
         else endEntries.push(entry);
       }
 
       if (chain) {
+        const eveCap = T.eveningCap[T.eveningCap.length - 1]!;
         let pos = lowerBound(this.firstSorted, T.last + 1);
         for (; pos < this.order.length; pos++) {
           const u = this.order[pos]!;
           const U = nodes[u]!;
-          if (U.first > T.last + G) break;
-          if (!usable(u)) continue;
           const n = U.first - T.last;
+          if (n > G) break;
+          if (!usable(u)) continue;
           if (this.anyBlackout(T.last + 1, U.first - 1)) continue;
-          for (const L of kept) {
+          travel.fill(T.show, U.show, scratch);
+          const h = scratch.hours;
+          const free = (n - 1) * F;
+          const Mu = U.morningCap[0]!;
+          // Quick reject: even a full evening cannot make it.
+          if (h > Math.min(eveCap, C) + free + Mu + EPS) continue;
+          const cost = scratch.miles * perMile + n * this.hotel + (n - 1) * this.food;
+          const gain = this.travelGain(h);
+          const depU = viaHome ? this.departOptions(u, homeOnly) : null;
+          const inc = incoming[u]!;
+          for (let li = 0; li < outs.length; li++) {
+            const L = outs[li]!;
             if (L.na + n > maxN) continue;
-            const d = this.directOption(i, u, L.m);
-            if (!d) continue;
+            const E = Math.max(0, Math.min(eveCap, C - L.m));
+            const m = Math.max(0, h - E - free);
+            if (m > Mu + EPS) continue;
             let k = 0;
             if (capped) {
               k = !monthReset || U.month === T.month ? L.k + 1 : 1;
               if (k > K) continue;
             }
+            const v = L.v + gain - cf * cost;
+            // Exact skip: going home in between is at least as good on every count, and the
+            // home state will offer that label (or a better one) at U.
+            const r = rets[li];
+            if (depU && r) {
+              let beaten = false;
+              for (const o of depU) {
+                if (r.j + o.j > n - 1) continue;
+                if (L.v - cf * r.cost + o.gain - cf * o.cost >= v - EPS && o.m <= m + EPS) {
+                  beaten = true;
+                  break;
+                }
+              }
+              if (beaten) continue;
+            }
             edgeCount += 1;
-            incoming[u]!.push({
-              v: L.v + d.gain - cf * d.cost,
-              m: d.m,
-              k,
-              na: L.na + n,
-              node: u,
-              kind: 'direct',
-              j: n,
-              prevHome: null,
-              prevOut: L,
-            });
+            insertIn(inc, v, m, k, L.na + n, u, 'direct', n, null, L);
           }
         }
       }
@@ -669,17 +696,40 @@ function paretoHome(list: HomeEntry[]): HomeEntry[] {
   return out;
 }
 
-function prune<T extends { v: number; m: number; k: number; na: number }>(labels: T[]): T[] {
-  if (labels.length <= 1) return labels;
-  labels.sort((a, b) => b.v - a.v || a.m - b.m || a.k - b.k || a.na - b.na);
-  const kept: T[] = [];
-  outer: for (const L of labels) {
-    for (const K of kept) {
-      if (K.m <= L.m + EPS && K.k <= L.k && K.na <= L.na) continue outer;
-    }
-    kept.push(L);
+/** Adds a label unless another one is at least as good on every count; drops labels it beats. */
+function insertIn(
+  list: InLabel[],
+  v: number,
+  m: number,
+  k: number,
+  na: number,
+  node: number,
+  kind: 'depart' | 'direct',
+  j: number,
+  prevHome: HomeEntry | null,
+  prevOut: OutLabel | null,
+): void {
+  if (!admit(list, v, m, k, na)) return;
+  list.push({ v, m, k, na, node, kind, j, prevHome, prevOut });
+}
+
+function insertOut(list: OutLabel[], v: number, m: number, k: number, na: number, node: number, variant: Variant, inL: InLabel): void {
+  if (!admit(list, v, m, k, na)) return;
+  list.push({ v, m, k, na, node, variant, inL });
+}
+
+function admit(list: { v: number; m: number; k: number; na: number }[], v: number, m: number, k: number, na: number): boolean {
+  for (let x = 0; x < list.length; x++) {
+    const K = list[x]!;
+    if (K.v >= v - EPS && K.m <= m + EPS && K.k <= k && K.na <= na) return false;
   }
-  return kept;
+  let w = 0;
+  for (let x = 0; x < list.length; x++) {
+    const K = list[x]!;
+    if (!(v >= K.v - EPS && m <= K.m + EPS && k <= K.k && na <= K.na)) list[w++] = K;
+  }
+  list.length = w;
+  return true;
 }
 
 function lowerBound(arr: number[], x: number): number {
@@ -1190,18 +1240,16 @@ export function describeVending(engine: VendingEngine, sol: VendingSolution, tit
           ]);
         }
       }
-      const f = prevPointForScore
-        ? vendorFactors(sh, {
-            settings,
-            hours: prevPointForScore.hours,
-            fromName: prevPointForScore.name,
-            priceContext: s.priceContext,
-            rates: s.rates,
-            labels: s.labels,
-            profitModel: s.profitModel,
-            travelHalfLifeHours: s.travelHalfLifeHours,
-          })
-        : T.factors;
+      const f = vendorFactors(sh, {
+        settings,
+        hours: prevPointForScore ? prevPointForScore.hours : null,
+        fromName: prevPointForScore ? prevPointForScore.name : null,
+        priceContext: s.priceContext,
+        rates: s.rates,
+        labels: s.labels,
+        profitModel: s.profitModel,
+        travelHalfLifeHours: s.travelHalfLifeHours,
+      });
       const score =
         s.objective === 'score'
           ? Math.round(pointsWithoutTravel(f, s.weights) + 100 * s.weights.travel * f.travel.value)
@@ -1228,7 +1276,7 @@ export function describeVending(engine: VendingEngine, sol: VendingSolution, tit
         notes: T.flags.notes.slice(),
         deadline: sh.vendor?.deadline ?? null,
         vendorStatus: sh.vendor?.status ?? null,
-        sales: T.sales,
+        sales: T.sales ? estimateSales(sh, settings, s.profitModel) : null,
         table: T.table,
         score,
         reasons: [f.crowd.reason, f.cost.reason, f.travel.reason, f.history.reason].filter((x): x is string => !!x),
