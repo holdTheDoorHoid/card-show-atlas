@@ -60,7 +60,7 @@ def build_parser() -> argparse.ArgumentParser:
 
     sub.add_parser("build", help="write the site data files into site/public/data/ (stops if csa check finds errors)")
 
-    po = sub.add_parser("postal", help="download GeoNames postal codes and write site/public/data/postal/US.json and CA.json")
+    po = sub.add_parser("postal", help="download GeoNames postal codes and write data/postal/US.json and CA.json")
     po.add_argument("--refresh", action="store_true", help="ignore the cached download")
 
     st = sub.add_parser("stats", help="counts, and what upcoming shows are missing")

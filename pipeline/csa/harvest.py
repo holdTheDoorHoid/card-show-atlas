@@ -247,8 +247,11 @@ REGISTRY_SNIPPET = '''- id: {id}
 
 def scaffold_source(paths: Paths, source_id: str, name: str, url: str, today: date) -> tuple[Path, str]:
     import re
+    from .sourcesreg import RESERVED_IDS
     if not re.fullmatch(r"[a-z][a-z0-9_]*", source_id):
         raise ValueError("a source id uses lowercase letters, digits and underscores, and starts with a letter")
+    if source_id in RESERVED_IDS:
+        raise ValueError(f"{source_id!r} is reserved for the website's sample data")
     module = Path(__file__).parent / "sources" / f"{source_id}.py"
     if module.exists():
         raise FileExistsError(f"{module} already exists")

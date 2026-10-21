@@ -9,6 +9,7 @@ import yaml
 KINDS = {"aggregator", "promoter", "publisher", "platform", "venue", "community", "submission"}
 METHODS = {"script", "research", "manual"}
 REQUIRED = ("id", "name", "kind", "method")
+RESERVED_IDS = {"fixture"}  # the website uses this id for its sample data and refuses to build with it
 
 
 class RegistryError(ValueError):
@@ -31,6 +32,8 @@ def load_sources(path: Path) -> list[dict]:
         for key in REQUIRED:
             if not entry.get(key):
                 raise RegistryError(f"{path} entry {i + 1} ({entry.get('id', '?')}) is missing {key!r}")
+        if entry["id"] in RESERVED_IDS:
+            raise RegistryError(f"{path}: the source id {entry['id']!r} is reserved for the website's sample data")
         if entry["id"] in seen:
             raise RegistryError(f"{path} lists the source {entry['id']!r} twice")
         seen.add(entry["id"])

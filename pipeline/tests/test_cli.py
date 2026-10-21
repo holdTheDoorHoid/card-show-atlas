@@ -17,6 +17,7 @@ TODAY = "2026-10-21"
 def project(root, monkeypatch):
     """A repository root with the real registry, vocabulary, priors and policy, and offline stand-ins."""
     shutil.copy(REPO / "data" / "sources.yaml", root / "data" / "sources.yaml")
+    shutil.copytree(REPO / "data" / "postal", root / "data" / "postal")
     monkeypatch.setenv("CSA_TODAY", TODAY)
     return root
 
@@ -84,7 +85,8 @@ def test_the_whole_daily_run_offline(project, capsys, monkeypatch):
     assert "0 errors" in capsys.readouterr().out
     assert csa(project, "build") == 0
     data = project / "site/public/data"
-    assert sorted(p.name for p in data.iterdir()) == ["manifest.json", "promoters.json", "series.json", "shows.json", "store_events.json", "vocab.json"]
+    assert sorted(p.name for p in data.iterdir()) == ["manifest.json", "postal", "promoters.json", "series.json", "shows.json", "store_events.json", "vocab.json"]
+    assert sorted(p.name for p in (data / "postal").iterdir()) == ["CA.json", "US.json"]
     manifest = json.loads((data / "manifest.json").read_text())
     assert manifest["counts"]["shows"] == len(json.loads((data / "shows.json").read_text())) > 0
     assert {"example_calendar", "research", "github_issues"} <= {s["id"] for s in manifest["sources"]}

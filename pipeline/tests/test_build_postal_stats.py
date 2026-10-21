@@ -34,7 +34,8 @@ def show(sid, day, series=None, **over):
 
 
 @pytest.fixture
-def built_root(root):
+def built_root(root, monkeypatch):
+    monkeypatch.setenv("CSA_TODAY", "2026-10-21")   # makes the manifest's build time repeatable
     (root / "data" / "sources.yaml").write_text(
         "- {id: example_calendar, name: Example Calendar, url: 'https://calendar.example.org', kind: aggregator, method: script, credit: Listed by Example Calendar}\n"
         "- {id: research, name: Research, kind: community, method: research, credit: Found by research}\n"
@@ -70,11 +71,22 @@ def site(root, name):
 
 
 def test_build_writes_exactly_the_documented_files(built_root, vocab):
+    (built_root / "data/postal").mkdir()
+    (built_root / "data/postal/US.json").write_text('{"08837":[40.519,-74.352]}\n')
+    (built_root / "data/postal/CA.json").write_text('{"M5V":[43.641,-79.393]}\n')
     rep = build.run_build(Paths(built_root), vocab, TODAY)
-    files = sorted(p.name for p in (built_root / "site/public/data").iterdir())
-    assert files == ["manifest.json", "promoters.json", "series.json", "shows.json", "store_events.json", "vocab.json"]
-    assert sorted(rep.written) == files
-    assert not (built_root / "site" / "src").exists()  # nothing else in site/ was touched
+    base = built_root / "site/public/data"
+    files = sorted(str(p.relative_to(base)) for p in base.rglob("*") if p.is_file())
+    assert files == ["manifest.json", "postal/CA.json", "postal/US.json", "promoters.json", "series.json", "shows.json",
+                     "store_events.json", "vocab.json"]
+    assert sorted(rep.written) == files and rep.warnings == []
+    assert (base / "postal/US.json").read_text() == (built_root / "data/postal/US.json").read_text()
+    assert [p.name for p in (built_root / "site").iterdir()] == ["public"]  # nothing else in site/ was touched
+
+
+def test_missing_postal_files_are_a_warning_not_a_failure(built_root, vocab):
+    rep = build.run_build(Paths(built_root), vocab, TODAY)
+    assert len(rep.warnings) == 2 and "csa postal" in rep.warnings[0] and not (built_root / "site/public/data/postal").exists()
 
 
 def test_shows_json_covers_30_days_back_to_24_months_ahead(built_root, vocab):
@@ -92,33 +104,44 @@ def test_series_and_promoters_only_point_at_things_in_the_window(built_root, voc
     assert promoters[0]["series"] == ["recent-show", "soon-show", "far-show"] or sorted(promoters[0]["series"]) == ["far-show", "recent-show", "soon-show"]
 
 
-def test_store_events_are_a_separate_lighter_file(built_root, vocab):
+def test_store_events_are_a_separate_file_of_full_records(built_root, vocab):
     build.run_build(Paths(built_root), vocab, TODAY)
     ev = site(built_root, "store_events.json")
     assert [e["id"] for e in ev] == ["fnm-2026-10-23"]
-    for dropped in ("vendor", "size", "estimate", "summary"):
-        assert dropped not in ev[0]
-    for kept in ("name", "days", "venue", "sells", "event_type", "sources"):
-        assert kept in ev[0]
+    stored = read_jsonl_file(built_root / "data/store_events.jsonl")[0]
+    assert ev[0] == stored                       # the site makes its own compact index from full records
     assert all(s["event_type"] != "store_event" for s in site(built_root, "shows.json"))
 
 
 def test_manifest_has_counts_and_credit_text_for_the_sources_used(built_root, vocab):
     build.run_build(Paths(built_root), vocab, TODAY)
     m = site(built_root, "manifest.json")
-    assert m["built"] == "2026-10-21" and m["fixture"] is False
+    assert m["built"] == "2026-10-21T00:00:00Z" and m["fixture"] is False
     assert m["window"] == {"from": "2026-09-21", "to": "2028-10-21"}
     assert m["counts"]["shows"] == 3 and m["counts"]["store_events"] == 1
     assert m["counts"]["by_type"] == {"card_show": 3} and m["counts"]["by_country"] == {"CA": 1, "US": 2}
     ids = [s["id"] for s in m["sources"]]
     assert ids == ["example_calendar", "research"] and "unused" not in ids
-    assert m["sources"][0]["credit"] == "Listed by Example Calendar" and m["sources"][0]["shows"] == 4  # three shows and the store event
+    assert m["sources"][0] == {"id": "example_calendar", "name": "Example Calendar", "url": "https://calendar.example.org",
+                               "kind": "aggregator", "credit": "Listed by Example Calendar"}
+    assert m["counts"]["by_source"] == {"example_calendar": 4, "research": 1}   # three shows and the store event; one show
     assert any("GeoNames" in c["name"] and c["license"] == "CC BY 4.0" for c in m["credits"])
 
 
-def test_vocab_is_a_verbatim_copy(built_root, vocab):
+def test_vocab_has_the_three_groups_the_site_reads(built_root, vocab):
     build.run_build(Paths(built_root), vocab, TODAY)
-    assert (built_root / "site/public/data/vocab.json").read_text() == (built_root / "data/vocab.json").read_text()
+    v = site(built_root, "vocab.json")
+    assert list(v) == ["tcg", "sports", "other"]
+    assert {"id": "pokemon", "name": "Pokémon", "label": "Pokémon"} in v["tcg"]
+    assert {"id": "multi_sport", "name": "Sports cards (several sports)", "label": "Sports"} in v["sports"]
+    assert all(set(e) == {"id", "name", "label"} for g in v.values() for e in g)
+    assert [e["id"] for e in v["tcg"]] == vocab.group_ids("tcg")
+
+
+def test_built_data_never_looks_like_the_sites_sample_data(built_root, vocab):
+    build.run_build(Paths(built_root), vocab, TODAY)
+    text = " ".join((built_root / "site/public/data" / n).read_text() for n in ("shows.json", "store_events.json", "manifest.json"))
+    assert '"fixture":true' not in text.replace(" ", "") and "Sample" not in text
 
 
 def test_unchanged_files_are_not_rewritten(built_root, vocab):
@@ -179,11 +202,12 @@ def test_postal_files_are_compact_maps_with_three_decimals(root):
     zips = {"https://download.geonames.org/export/zip/US.zip": make_zip("US", US_ROWS),
             "https://download.geonames.org/export/zip/CA.zip": make_zip("CA", CA_ROWS)}
     rep = postal.run_postal(Paths(root), fetch=lambda url: zips[url])
-    us = json.loads((root / "site/public/data/postal/US.json").read_text())
-    ca = json.loads((root / "site/public/data/postal/CA.json").read_text())
+    us = json.loads((root / "data/postal/US.json").read_text())
+    ca = json.loads((root / "data/postal/CA.json").read_text())
     assert us == {"00501": [40.815, -73.045], "08837": [40.519, -74.352]}
     assert ca == {"H2X": [45.509, -73.588], "M5V": [43.641, -79.393]}   # M5V is averaged
-    text = (root / "site/public/data/postal/US.json").read_text()
+    text = (root / "data/postal/US.json").read_text()
+    assert not (root / "site").exists()          # the committed copy is under data/; build copies it into the site
     assert " " not in text.strip() and text.startswith('{"00501":[40.815,-73.045]')
     assert rep.counts == {"US": 2, "CA": 2} and "GeoNames" in rep.lines()[-1]
 

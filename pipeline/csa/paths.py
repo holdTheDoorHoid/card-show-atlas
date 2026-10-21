@@ -130,4 +130,9 @@ class Paths:
 
     @property
     def postal_dir(self) -> Path:
+        """GeoNames postal code maps, committed. `csa build` copies them into the site data folder."""
+        return self.data / "postal"
+
+    @property
+    def site_postal_dir(self) -> Path:
         return self.site_data / "postal"

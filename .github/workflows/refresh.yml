@@ -7,6 +7,9 @@
 # Research waves are not part of this run. Import a wave with `csa import-research <wave>` and commit
 # data/research/<wave>.jsonl, and the next refresh picks it up.
 #
+# Only data/ is committed. site/public/data/ is generated and ignored: the deploy workflow (pages.yml) runs
+# `csa build` itself. The build step below is a dry run that proves the data can be built.
+#
 # If main is protected, the push at the end needs a rule that lets github-actions[bot] push, or this job
 # should open a pull request instead.
 
@@ -60,7 +63,7 @@ jobs:
         run: csa estimate
       - name: Check (errors stop the run before anything is committed)
         run: csa check
-      - name: Build the site data
+      - name: Build the site data (not committed, only proves it builds)
         run: csa build
       - name: Counts
         run: csa stats
@@ -70,7 +73,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data site/public/data
+          git add data
           if git diff --cached --quiet; then
             echo "Nothing changed."
             echo "changed=false" >> "$GITHUB_OUTPUT"

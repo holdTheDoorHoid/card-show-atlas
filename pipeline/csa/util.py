@@ -9,7 +9,7 @@ import os
 import re
 import tempfile
 import unicodedata
-from datetime import date, datetime, timedelta
+from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 from typing import Any, Iterable, Iterator
 
@@ -20,6 +20,13 @@ def today() -> date:
     if env:
         return date.fromisoformat(env)
     return date.today()
+
+
+def now_iso() -> str:
+    """UTC time like 2026-10-21T04:00:00Z. With CSA_TODAY set it is midnight of that day, so runs repeat exactly."""
+    if os.environ.get("CSA_TODAY"):
+        return f"{today().isoformat()}T00:00:00Z"
+    return datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
 
 
 def iso(d: date | None) -> str | None:

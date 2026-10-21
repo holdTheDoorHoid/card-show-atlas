@@ -22,12 +22,13 @@ data/corrections.yaml (hand fixes, applied last)
         v   csa geocode        coordinates, precision, time zone   (cache: data/geocache.json)
         v   csa estimate       the crowd estimate on every show
         v   csa check          rules; errors stop the build
-        v   csa build      ->  site/public/data/*.json
+        v   csa build      ->  site/public/data/*.json   (generated, never committed)
 ```
 
 The daily run is `csa harvest all`, `csa import-issues`, `csa merge`, `csa geocode`, `csa estimate`,
-`csa check`, `csa build`. `.github/workflows/refresh.yml` does exactly that. Its schedule is off until the
-owner turns it on.
+`csa check`, `csa build`. `.github/workflows/refresh.yml` does exactly that and commits `data/`. Its schedule is off until the
+owner turns it on. The site deploy (`pages.yml`) runs `pip install -e pipeline && csa build` itself, so the
+built files in `site/public/data/` are never committed.
 
 Useful options for every command: `--root DIR` (or the `CSA_ROOT` variable) to point at another checkout,
 and `--today YYYY-MM-DD` (or `CSA_TODAY`) to pretend it is another day. Commands print plain sentences and
@@ -184,7 +185,7 @@ promoter:example-promotions:
 Fills `lat`, `lon` and `geo_precision` for every venue that lacks them, then the time zone from the
 coordinates. The ladder, stopping at the first answer: **address** (US Census Geocoder batch API, public
 domain; then Nominatim for Canada and Census misses), **venue** (Nominatim by venue name and town),
-**postal** (centre of the postal code from the GeoNames files made by `csa postal`), **city** (Nominatim for
+**postal** (centre of the postal code from the GeoNames files in `data/postal/`), **city** (Nominatim for
 the town). Nominatim is asked at most once per second with the project's user agent. Answers outside the
 stated state or province are refused. Every answer and every miss is kept in `data/geocache.json`, which is
 committed so a daily run never repeats work. Misses are retried after 60 days. If a service is down the
@@ -227,23 +228,27 @@ Prints findings, errors first. Errors block the build; `--strict` makes warnings
 ### `csa build`
 
 Runs `csa check` and stops if there are errors. Otherwise writes into `site/public/data/` (and nothing
-else in `site/`). All files are compact JSON, and a file whose content did not change is left alone.
+else in `site/`). That folder is generated and ignored by git. All JSON is compact, and a file whose content
+did not change is left alone. This is the contract the site's README describes.
 
 | File | What it holds |
 | --- | --- |
-| `shows.json` | A JSON array of full records for shows from 30 days ago to 24 months ahead, with `estimate`. |
-| `store_events.json` | A JSON array of the same records without `vendor`, `size`, `estimate`, `summary`, `first_seen`, `mix` and `organizer`. |
-| `series.json` | A JSON array. Series with an edition in the window; `editions` lists only ids that exist in `shows.json`; `history` keeps every past attendance point. |
-| `promoters.json` | A JSON array. Promoters of those series. |
-| `vocab.json` | A copy of `data/vocab.json`. |
-| `manifest.json` | `built` (date), `fixture: false`, `window`, `counts` (shows, store events, series, promoters, by type, by country), `sources` (id, name, url, kind, credit, number of shows) for every source actually used, and `credits` for GeoNames, OpenStreetMap and the Census geocoder. |
+| `shows.json` | A bare JSON array of full records for shows from 30 days ago to 24 months ahead, with `estimate`. `venue.lat` and `venue.lon` may be null. |
+| `store_events.json` | A bare JSON array of full records of the same shape (the site makes its own compact index). |
+| `series.json` | A bare JSON array. Series with an edition in the window; `editions` lists only ids that exist in `shows.json`; `history` keeps every past attendance point. |
+| `promoters.json` | A bare JSON array. Promoters of those series. |
+| `vocab.json` | `{"tcg": [{"id", "name", "label"}], "sports": [...], "other": [...]}`. |
+| `manifest.json` | `built` (UTC time, for example `2026-10-21T04:00:00Z`), `fixture: false`, `window`, `counts` (shows, store events, series, promoters, and by type, country and source), `sources` (`id`, `name`, `url`, `kind`, `credit`) for every source actually used, and `credits` for GeoNames, OpenStreetMap and the Census geocoder. |
+| `postal/US.json`, `postal/CA.json` | Copied from `data/postal/`. A warning, not an error, if they are missing. |
+
+The source id `fixture` is reserved for the site's own sample data and is refused in the registry.
 
 ### `csa postal`
 
 Downloads the GeoNames postal code files for the US and Canada (CC BY 4.0) and writes
-`site/public/data/postal/US.json` (`{"08837": [40.519, -74.352]}`) and `CA.json` (keyed by the first three
+`data/postal/US.json` (`{"08837": [40.519, -74.352]}`) and `CA.json` (keyed by the first three
 characters and averaged), with coordinates rounded to 3 decimals. Run it when you want fresh data; the
-files are committed. GeoNames' robots.txt turns crawlers away from its download server, but this fetches
+files are committed, and `csa build` copies them into the site's data folder. `csa geocode` also reads them. GeoNames' robots.txt turns crawlers away from its download server, but this fetches
 two named files that GeoNames publishes for download under CC BY 4.0, so robots.txt is not applied here and
 nothing else on that server is touched.
 
@@ -296,7 +301,8 @@ owner, and treat the site as a lead only.
 | `data/harvest/`, `data/research/`, `data/submissions/` | Inputs to the merge. |
 | `data/review/` | Things a person should look at: `possible_duplicates.jsonl`, `unplaced.jsonl`. |
 | `data/raw/` | Cached downloads (not committed). |
-| `site/public/data/` | What the site loads. |
+| `data/postal/` | GeoNames postal code maps (committed). |
+| `site/public/data/` | What the site loads (generated by `csa build`, not committed). |
 
 ## Privacy
 

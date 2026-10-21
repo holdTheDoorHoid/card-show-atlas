@@ -1,7 +1,8 @@
 """csa postal: postal code centres from GeoNames (CC BY 4.0) as compact maps for the website.
 
-Writes site/public/data/postal/US.json ({"08837": [40.52, -74.35]}) and CA.json (keyed by the first
-three characters, the forward sortation area, averaged). Coordinates are rounded to 3 decimals.
+Writes data/postal/US.json ({"08837": [40.52, -74.35]}) and CA.json (keyed by the first three
+characters, the forward sortation area, averaged). Coordinates are rounded to 3 decimals. The files are
+committed; `csa build` copies them into site/public/data/postal/ for the website.
 
 GeoNames publishes these two files for download at fixed addresses and asks for credit under
 CC BY 4.0. Its robots.txt turns crawlers away from the whole download server, but this is not
