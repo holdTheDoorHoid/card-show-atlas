@@ -56,6 +56,7 @@ STREET_WORDS = {"street": "st", "avenue": "ave", "road": "rd", "boulevard": "blv
                 "highway": "hwy", "route": "rt", "north": "n", "south": "s", "east": "e", "west": "w",
                 "court": "ct", "place": "pl", "parkway": "pkwy", "suite": "ste"}
 ATOMIC_PATHS = ("admission", "vendor.tables", "size.reported_attendance")
+STORE_EVENT_KEEP_DAYS = 7  # a store event that no source lists any more is forgotten this long after it ended
 
 
 # ---------------------------------------------------------------- data classes
@@ -558,6 +559,7 @@ def assign_identity(reg: Registry, members: list[Contribution], merged: dict, to
         entry["norm_name"] = cluster_name
         entry["norm_venue"] = _norm_venue_name(v.get("name"))
         entry["city"], entry["region"] = norm_text(v.get("city")), v.get("region")
+        _note_kind(entry, merged)
         reg.index(entry)
         return entry["id"], entry["series_id"], entry
 
@@ -571,9 +573,31 @@ def assign_identity(reg: Registry, members: list[Contribution], merged: dict, to
              "name": merged["name"], "norm_name": norm_text(merged["name"]),
              "norm_venue": _norm_venue_name(v.get("name")), "city": norm_text(v.get("city")),
              "region": v.get("region"), "keys": keys}
+    _note_kind(entry, merged)
     reg.entries.append(entry)
     reg.index(entry)
     return new_id, series_id, entry
+
+
+def _note_kind(entry: dict, merged: dict) -> None:
+    """Remember the card games and the kind of event, so a later edition only joins a series of its own kind."""
+    entry["tcg"] = sorted((merged.get("sells") or {}).get("tcg") or [])
+    entry["event_type"] = merged.get("event_type") or "card_show"  # the same default complete_show gives
+
+
+def _same_kind(entry: dict, merged: dict) -> bool:
+    """False when the two are plainly different things: other card games, or a tournament against a show.
+
+    Names alone cannot tell 'Baltimore Pokemon Regional Championships' from 'Magic Regional Championship Baltimore'
+    (they share the town and the word Regional), and a crowd estimate must never borrow another game's attendance."""
+    mine = set((merged.get("sells") or {}).get("tcg") or [])
+    theirs = set(entry.get("tcg") or [])
+    if mine and theirs and not (mine & theirs):
+        return False
+    a, b = entry.get("event_type"), merged.get("event_type") or "card_show"
+    if a and (a == "tournament") != (b == "tournament"):
+        return False
+    return True
 
 
 def _find_series(reg: Registry, merged: dict) -> str:
@@ -586,6 +610,8 @@ def _find_series(reg: Registry, merged: dict) -> str:
         if not e.get("series_id") or e.get("alias_of"):
             continue
         if nv and e.get("norm_venue") and e["norm_venue"] != nv:
+            continue
+        if not _same_kind(e, merged):
             continue
         if name_similarity(probe, Contribution({"name": e.get("name")}, 0, "", 0, 0, "")) >= NAME_STRONG - 5:
             return e["series_id"]
@@ -753,6 +779,10 @@ def run_merge(paths: Paths, vocab: Vocab, today: date | None = None) -> MergeRep
                 entry["suppressed"] = True
 
     prior = {r["id"]: r for r in read_jsonl(paths.shows) + read_jsonl(paths.store_events)}
+    for pid, rec in prior.items():  # registry entries from before the kind was recorded learn it from the last output
+        e = reg.by_id.get(pid)
+        if e is not None and "tcg" not in e:
+            _note_kind(e, rec)
     used_ids: set[str] = set()
     merged_shows: list[dict] = []
     cadence_hints: dict[str, str] = {}
@@ -784,6 +814,7 @@ def run_merge(paths: Paths, vocab: Vocab, today: date | None = None) -> MergeRep
     # carry forward anything we knew before that no source mentions today
     produced = {s["id"] for s in merged_shows}
     carried = []
+    forgotten: set[str] = set()
     for pid, rec in prior.items():
         if pid in produced:
             continue
@@ -793,6 +824,11 @@ def run_merge(paths: Paths, vocab: Vocab, today: date | None = None) -> MergeRep
             continue
         if entry and (entry.get("generated_tentative") or entry.get("alias_of")):
             continue  # a guess that is no longer made, or an edition now merged into another
+        if rec.get("event_type") == "store_event":
+            last = parse_iso_date((rec.get("days") or [{}])[-1].get("date"))
+            if last is None or last < today - timedelta(days=STORE_EVENT_KEEP_DAYS):
+                forgotten.add(pid)  # weekly shop events by the thousand would otherwise pile up for ever
+                continue
         rec = copy.deepcopy(rec)
         rec["estimate"] = None
         carried.append(rec)
@@ -850,6 +886,8 @@ def run_merge(paths: Paths, vocab: Vocab, today: date | None = None) -> MergeRep
     dup_rows = []
     for pr in near_pairs:
         a, b = contribs[pr["a"]], contribs[pr["b"]]
+        if a.rec.get("event_type") == "store_event" and b.rec.get("event_type") == "store_event":
+            continue  # two events at one shop on one day are usually two events, and there are thousands of them
         ida, idb = id_of_group.get(pr["a"]), id_of_group.get(pr["b"])
         if ida is None or idb is None or ida == idb:
             continue
@@ -885,6 +923,7 @@ def run_merge(paths: Paths, vocab: Vocab, today: date | None = None) -> MergeRep
         if corr:
             report.corrections_applied += apply_generic(pm, corr.get("set") or {})
 
+    reg.entries = [e for e in reg.entries if e["id"] not in forgotten]
     reg.entries.sort(key=lambda e: e["id"])
     write_jsonl(paths.registry, reg.entries, sort_keys=True)
     write_jsonl(paths.shows, shows)

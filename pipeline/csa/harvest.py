@@ -3,6 +3,12 @@
 A source is a module csa/sources/<id>.py with `harvest(ctx) -> Iterable[dict]`. The runner gives it
 a polite HTTP client, repairs and stamps what it yields, and writes the file only when the run
 finished well, so a broken or blocked run never wipes out the last good data.
+
+Records with event_type store_event do not go in data/harvest/ with the rest. They are written to
+data/store/<id>.jsonl, which is not committed (see csa/store.py). A source may give a record a
+`store_key`, a short text made from the source's own event id, and the store event's id is built from it.
+`--store` runs only the sources marked `store_events: true` in the registry, writes only their store
+files, and does not ask a website again on a day it already did.
 """
 
 from __future__ import annotations
@@ -16,7 +22,7 @@ from typing import Any, Callable
 
 import httpx
 
-from . import model
+from . import model, store
 from .domains import DomainPolicy
 from .http import BotChallenge, FetchError, HttpClient
 from .normalize import repair_edition
@@ -57,6 +63,8 @@ class HarvestResult:
     cache_hits: int = 0
     refused: list[str] = field(default_factory=list)
     skip_reasons: list[str] = field(default_factory=list)
+    store_records: int = 0  # store events written to data/store/ by this run
+    notes: list[str] = field(default_factory=list)  # what the source module logged with ctx.log(), for the report
 
     @property
     def ok(self) -> bool:
@@ -67,6 +75,8 @@ class HarvestResult:
         if self.status == "ok":
             bits.append(f"{self.records} records ({self.skipped} skipped), {self.network_requests} requests, "
                         f"{self.cache_hits} from cache")
+            if self.store_records:
+                bits.append(f"{self.store_records} store events (data/store, not committed)")
         if self.message:
             bits.append(self.message)
         return ", ".join(bits)
@@ -108,7 +118,10 @@ def stamp_record(raw: dict, entry: dict, vocab: Vocab, today: date) -> tuple[dic
 
 
 def _sort_key(rec: dict):
-    return (rec["days"][0]["date"], (rec.get("name") or "").lower(), (rec.get("venue") or {}).get("city") or "")
+    # The page address comes last so two events with the same date, name and town (weekly play at one shop) keep
+    # the same order from one run to the next, and the file does not change when nothing else did.
+    return (rec["days"][0]["date"], (rec.get("name") or "").lower(), (rec.get("venue") or {}).get("city") or "",
+            ((rec.get("sources") or [{}])[0].get("url")) or "")
 
 
 def _status_path(paths: Paths) -> Path:
@@ -132,6 +145,7 @@ def run_source(
     refresh: bool = False,
     force_disabled: bool = False,
     http_options: dict[str, Any] | None = None,
+    store_only: bool = False,
 ) -> HarvestResult:
     today = today or today_fn()
     registry = by_id(paths.sources_yaml)
@@ -142,6 +156,12 @@ def run_source(
         raise ValueError(f"{source_id} has method {entry['method']!r}; only script sources can be harvested")
     if not entry["enabled"] and not force_disabled:
         return HarvestResult(source_id, "disabled", message="enabled is false in sources.yaml")
+    if store_only:
+        if not entry.get("store_events"):
+            return HarvestResult(source_id, "disabled", message="this source lists no store events (store_events is not set in sources.yaml)")
+        have = None if refresh else store.done_today(paths, source_id, today)
+        if have is not None:
+            return HarvestResult(source_id, "ok", store_records=have, message="store events were already harvested today, so no website was asked")
     policy = DomainPolicy.load(paths.data / "never_use_domains.yaml")
     if entry.get("url") and policy.is_never_use(entry["url"]):
         res = HarvestResult(source_id, "error", message=f"{entry['url']} is on the never use list "
@@ -159,6 +179,7 @@ def run_source(
     try:
         module = load_module(entry)
         records: list[dict] = []
+        stores: list[tuple[dict, str | None]] = []
         for raw in module.harvest(ctx):
             rec, why = stamp_record(raw, entry, vocab, today)
             if rec is None:
@@ -166,16 +187,30 @@ def run_source(
                 if len(res.skip_reasons) < 10:
                     res.skip_reasons.append(why or "skipped")
                 continue
-            records.append(rec)
+            if rec.get("event_type") == "store_event":
+                stores.append((rec, raw.get("store_key") if isinstance(raw, dict) else None))
+            else:
+                records.append(rec)
         records.sort(key=_sort_key)
+        stores.sort(key=lambda pair: _sort_key(pair[0]))
         previous = len(read_jsonl(out_path))
-        if previous >= MIN_PREVIOUS_FOR_GUARD and len(records) < previous * MIN_KEEP_RATIO:
+        previous_stores = len(read_jsonl(store.store_path(paths, source_id)))
+        if previous >= MIN_PREVIOUS_FOR_GUARD and len(records) < previous * MIN_KEEP_RATIO and not store_only:
             res.status = "suspicious"
             res.message = (f"returned {len(records)} records but the last run had {previous}. "
                            "The old file was kept. Has the site layout changed?")
+        elif previous_stores >= MIN_PREVIOUS_FOR_GUARD and len(stores) < previous_stores * MIN_KEEP_RATIO:
+            res.status = "suspicious"
+            res.message = (f"returned {len(stores)} store events but the last run had {previous_stores}. "
+                           "The old files were kept. Has the site layout changed?")
         else:
-            write_jsonl(out_path, records)
-            res.records = len(records)
+            if not store_only:
+                write_jsonl(out_path, records)
+                res.records = len(records)
+            if stores or previous_stores or entry.get("store_events"):
+                finisher = store.Finisher(paths, today)
+                store.write(paths, source_id, [finisher.finish(rec, source_id, key) for rec, key in stores], today)
+                res.store_records = len(stores)
     except BotChallenge as exc:
         res.status = "blocked"
         res.message = str(exc)
@@ -187,6 +222,7 @@ def run_source(
         res.message = f"{type(exc).__name__}: {exc}"
         ctx.log(traceback.format_exc())
     finally:
+        res.notes = list(ctx.messages)
         res.network_requests = client.stats.network_requests
         res.cache_hits = client.stats.cache_hits
         res.refused = list(client.stats.refused)
@@ -195,12 +231,14 @@ def run_source(
     return res
 
 
-def run_all(paths: Paths, vocab: Vocab, **kw) -> list[HarvestResult]:
+def run_all(paths: Paths, vocab: Vocab, *, store_only: bool = False, **kw) -> list[HarvestResult]:
     sources = [s for s in load_sources(paths.sources_yaml) if s["method"] == "script"]
+    if store_only:
+        sources = [s for s in sources if s.get("store_events") and s["enabled"]]
     sources.sort(key=lambda s: (s["priority"], s["_order"]))
     results = []
     for s in sources:
-        results.append(run_source(paths, s["id"], vocab, **kw))
+        results.append(run_source(paths, s["id"], vocab, store_only=store_only, **kw))
     return results
 
 

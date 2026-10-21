@@ -1,0 +1,72 @@
+[
+{
+"id": "66b59042-00c1-4803-aebf-06219fba799f",
+"name": "Hyperia City Collection Quest",
+"description": "FR Market Collection Quest"
+},
+{
+"id": "90ffa746-317d-4c39-b825-5d3f2041eaaa",
+"name": "Learn-to-Play",
+"description": "North America event for Learn-to-Play during the Hyperia City Season"
+},
+{
+"id": "36363a54-a90a-4cf2-89bb-de4669a26f58",
+"name": "Format Coconut",
+"description": ""
+},
+{
+"id": "5597eb4b-aafa-45ef-b69c-06d745201ebe",
+"name": "Ink Sprint",
+"description": ""
+},
+{
+"id": "ea5a8924-6b4e-473c-bbee-597c7408c7c4",
+"name": "Side Events Template",
+"description": "3 Rounds of Swiss, Best of 3"
+},
+{
+"id": "4881658d-a6ef-4f98-9c2a-1baf9ef12b82",
+"name": "Last Chance Qualifier",
+"description": ""
+},
+{
+"id": "fa6de20e-925d-4700-9d58-e0cd4e2e286b",
+"name": "Unstructured / Player List Only",
+"description": "Free-form Disney Lorcana event with no structured rounds or tracking"
+},
+{
+"id": "7cd013ab-7eb6-4adc-9563-ce2a073628e8",
+"name": "Weekly Play (Draft)",
+"description": "Regular weekly Disney Lorcana play events with draft format and draft phase structure"
+},
+{
+"id": "810d4ea0-3ea8-4c67-9381-4c4840330cf8",
+"name": "Weekly Play (Constructed)",
+"description": "Regular weekly Disney Lorcana play events with classic constructed format and standard swiss structure"
+},
+{
+"id": "4a011d41-38f2-4860-90e4-62843c2ec2dd",
+"name": "Weekly Play (Sealed)",
+"description": "Regular weekly Disney Lorcana play events with sealed format and sealed phase structure"
+},
+{
+"id": "a1b77361-c19e-4942-8741-f6b96bb24a80",
+"name": "Disney Lorcana Challenge",
+"description": ""
+},
+{
+"id": "b8c2e34b-2ff2-45b6-b725-18528c56a7cc",
+"name": "Challenge Championship",
+"description": ""
+},
+{
+"id": "3737f5ab-caf5-488c-a9c3-25e3078fb4d5",
+"name": "Hyperia City Prerelease (Pack Rush)",
+"description": ""
+},
+{
+"id": "dd176223-2b48-4c5e-8cdc-cbe8bcfe8a81",
+"name": "Hyperia City Prerelease (Sealed)",
+"description": ""
+}
+]

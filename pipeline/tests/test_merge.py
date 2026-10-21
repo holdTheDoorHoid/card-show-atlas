@@ -399,3 +399,87 @@ def test_a_crowded_random_dataset_gives_the_same_answer_every_time(merge_root, v
         rep = run(merge_root, vocab)
         assert rep.carried_forward == 0
         assert first == {f: (merge_root / "data" / f).read_text() for f in first}
+
+
+# ---------------------------------------------------------------- series are of one kind
+
+def regional(name, day, game, city="Baltimore", region="MD", **extra):
+    rec = show(name=name, day=day, source="list_a", venue=None, address=None, city=city, region=region, event_type="tournament",
+               sells={"tcg": [game], "sports": [], "other": []}, **extra)
+    rec["venue"] = {"city": city, "region": region, "country": "US"}
+    return rec
+
+
+def test_two_card_games_in_one_town_never_share_a_series(merge_root, vocab):
+    """The names share the town and the word Regional, so they look alike to the name matcher; the game decides."""
+    write_jsonl_file(merge_root / "data/harvest/list_a.jsonl", [
+        regional("Baltimore Pokémon Regional Championships", "2026-09-18", "pokemon"),
+        regional("Magic Regional Championship Baltimore", "2026-09-11", "mtg", size={"reported_attendance": {"value": 1486, "year": 2026, "source_url": "https://mtg.example/p"}}),
+        regional("Baltimore Pokémon Regional Championships", "2027-09-17", "pokemon")])
+    run(merge_root, vocab)
+    out = {s["name"] + s["days"][0]["date"]: s for s in shows_of(merge_root)}
+    pokemon_a, magic, pokemon_b = (out["Baltimore Pokémon Regional Championships2026-09-18"], out["Magic Regional Championship Baltimore2026-09-11"],
+                                   out["Baltimore Pokémon Regional Championships2027-09-17"])
+    assert pokemon_a["series_id"] == pokemon_b["series_id"] != magic["series_id"]
+
+
+def test_a_tournament_does_not_join_the_series_of_a_card_show_in_the_same_town(merge_root, vocab):
+    write_jsonl_file(merge_root / "data/harvest/list_a.jsonl", [
+        show(name="Baltimore Show", day="2026-11-08", source="list_a", city="Baltimore", region="MD", venue="Hall", address="1 St"),
+        regional("Baltimore Pokémon Regional Championships", "2026-09-18", "pokemon")])
+    run(merge_root, vocab)
+    assert len({s["series_id"] for s in shows_of(merge_root)}) == 2
+
+
+def test_series_from_before_the_kind_was_recorded_learn_it_from_the_last_output(merge_root, vocab):
+    write_jsonl_file(merge_root / "data/harvest/list_a.jsonl", [regional("Baltimore Pokémon Regional Championships", "2026-09-18", "pokemon")])
+    run(merge_root, vocab)
+    # an older registry has no tcg or event_type on its entries
+    reg = read_jsonl_file(merge_root / "data/registry.jsonl")
+    for e in reg:
+        e.pop("tcg", None)
+        e.pop("event_type", None)
+    write_jsonl_file(merge_root / "data/registry.jsonl", reg)
+    write_jsonl_file(merge_root / "data/harvest/list_a.jsonl", [
+        regional("Magic Regional Championship Baltimore", "2026-10-09", "mtg"),
+        regional("Baltimore Pokémon Regional Championships", "2026-09-18", "pokemon")])
+    run(merge_root, vocab)
+    assert len({s["series_id"] for s in shows_of(merge_root)}) == 2
+    assert all(e.get("tcg") is not None and e.get("event_type") == "tournament" for e in read_jsonl_file(merge_root / "data/registry.jsonl"))
+
+
+# ---------------------------------------------------------------- store events do not pile up
+
+def store(name, day, venue="Game Haven", **extra):
+    return show(name=name, day=day, source="list_a", city="Erie", region="PA", venue=venue, address="3 Way", event_type="store_event", **extra)
+
+
+def test_store_events_that_ended_a_week_ago_are_forgotten_with_their_registry_entries(merge_root, vocab):
+    write_jsonl_file(merge_root / "data/harvest/list_a.jsonl", [store("Weekly Play", "2026-10-14"), store("Weekly Play Two", "2026-10-15", venue="Other Shop"),
+                                                                 store("Weekly Play Three", "2026-10-30", venue="Third Shop")])
+    run(merge_root, vocab, today=date(2026, 10, 14))
+    assert len(read_jsonl_file(merge_root / "data/store_events.jsonl")) == 3 and len(read_jsonl_file(merge_root / "data/registry.jsonl")) == 3
+    write_jsonl_file(merge_root / "data/harvest/list_a.jsonl", [store("Weekly Play Four", "2026-11-05", venue="Fourth Shop")])  # the source forgot all the others
+    rep = run(merge_root, vocab, today=date(2026, 10, 22))
+    names = sorted(e["name"] for e in read_jsonl_file(merge_root / "data/store_events.jsonl"))
+    assert names == ["Weekly Play Four", "Weekly Play Three", "Weekly Play Two"]  # Oct 14 ended 8 days ago and goes; Oct 15 stays
+    assert rep.carried_forward == 2
+    run(merge_root, vocab, today=date(2026, 10, 23))
+    assert sorted(e["name"] for e in read_jsonl_file(merge_root / "data/store_events.jsonl")) == ["Weekly Play Four", "Weekly Play Three"]
+    assert len(read_jsonl_file(merge_root / "data/registry.jsonl")) == 2  # the entries of the forgotten events are gone too
+
+
+def test_a_past_show_is_still_kept_for_ever_while_a_past_store_event_is_not(merge_root, vocab):
+    write_jsonl_file(merge_root / "data/harvest/list_a.jsonl", [store("Weekly Play", "2026-10-14"), show(name="Old Show", day="2026-09-01", source="list_a")])
+    run(merge_root, vocab, today=date(2026, 10, 14))
+    write_jsonl_file(merge_root / "data/harvest/list_a.jsonl", [])
+    run(merge_root, vocab, today=date(2026, 12, 1))
+    assert [s["name"] for s in shows_of(merge_root)] == ["Old Show"]
+    assert read_jsonl_file(merge_root / "data/store_events.jsonl") == []
+
+
+def test_two_events_at_one_shop_on_one_day_are_not_listed_as_possible_duplicates(merge_root, vocab):
+    write_jsonl_file(merge_root / "data/harvest/list_a.jsonl", [store("Hyperia Prerelease Sealed", "2026-10-25"), store("Casual Play Night Core", "2026-10-25")])
+    run(merge_root, vocab)
+    assert len(read_jsonl_file(merge_root / "data/store_events.jsonl")) == 2
+    assert read_jsonl_file(merge_root / "data/review/possible_duplicates.jsonl") == []

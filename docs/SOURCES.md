@@ -39,6 +39,26 @@ Show Atlas is built from:
 | Venue calendars with an open events API | For example Palm Beach County Convention Center | Probed venue by venue. |
 | cgccards.com news | "CGC on site at (show)" posts: a strong sign a show is mid size or larger | Robots allows. |
 
+### Which of these are running
+
+Eight of them are scripted now, in `pipeline/csa/sources/`, registered in `data/sources.yaml` and run by
+`csa harvest all` (the daily refresh):
+
+| Source id | Gives | Layer |
+| --- | --- | --- |
+| `collectacon` | Collect-A-Con tour dates, hours, venue, table counts, table prices and sold out flags | conventions |
+| `yugioh_events` | In person Yu-Gi-Oh! Championship Series events in the US and Canada | tournaments |
+| `pokemon_championships` | Pokémon Regionals and Specials in the US and Canada, with fees | tournaments |
+| `swu_calendar` | Star Wars Unlimited Sector Qualifiers (tournaments) and Planetary Qualifiers (store events) | both |
+| `mtg_premier` | Magic Regional Championships, Pro Tours, MagicCons, with reported attendance | tournaments |
+| `lorcana_playhub` | Lorcana events: big ones as tournaments, weekly play in the next 21 days as store events (kept in data/store, not committed) | both |
+| `riftbound_locator` | The same for Riftbound | both |
+| `limitless_results` | Player counts of past Pokémon and One Piece premier events, as history for the crowd estimate | tournaments (past) |
+
+The sources that are only listed above (Front Row, Dallas Card Show, venue calendars, CGC news, the Star Wars
+Unlimited store API) are not written yet. Each module says at the top what was checked and when, and each
+stops with a plain message, keeping the last good file, when the page it reads changes shape.
+
 ## Read by research agents (organizer pages)
 
 Promoter sites run on many builders (Wix, Squarespace, GoDaddy, Shopify, WordPress), so a script per

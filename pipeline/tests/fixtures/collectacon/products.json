@@ -1,0 +1,4882 @@
+[
+{
+"id": 22562,
+"name": "San Francisco &#8211; 2 Tables",
+"slug": "san-francisco-2-tables",
+"sku": "SF-TABL-0002-1",
+"type": "simple",
+"permalink": "https://collectaconusa.com/product/san-francisco-2-tables/",
+"prices": {
+"price": "75000",
+"regular_price": "75000",
+"sale_price": "75000",
+"price_range": null,
+"currency_code": "USD",
+"currency_symbol": "$",
+"currency_minor_unit": 2,
+"currency_decimal_separator": ".",
+"currency_thousand_separator": ",",
+"currency_prefix": "$",
+"currency_suffix": ""
+},
+"categories": [
+{
+"id": 36,
+"name": "2022",
+"slug": "2022"
+},
+{
+"id": 37,
+"name": "2023",
+"slug": "2023"
+},
+{
+"id": 38,
+"name": "2024",
+"slug": "2024"
+}
+],
+"is_in_stock": false,
+"is_purchasable": true
+},
+{
+"id": 22561,
+"name": "San Francisco &#8211; 3 Tables",
+"slug": "san-francisco-3-tables",
+"sku": "SF-TABL-0003-1",
+"type": "simple",
+"permalink": "https://collectaconusa.com/product/san-francisco-3-tables/",
+"prices": {
+"price": "97500",
+"regular_price": "97500",
+"sale_price": "97500",
+"price_range": null,
+"currency_code": "USD",
+"currency_symbol": "$",
+"currency_minor_unit": 2,
+"currency_decimal_separator": ".",
+"currency_thousand_separator": ",",
+"currency_prefix": "$",
+"currency_suffix": ""
+},
+"categories": [
+{
+"id": 36,
+"name": "2022",
+"slug": "2022"
+},
+{
+"id": 37,
+"name": "2023",
+"slug": "2023"
+},
+{
+"id": 38,
+"name": "2024",
+"slug": "2024"
+}
+],
+"is_in_stock": false,
+"is_purchasable": true
+},
+{
+"id": 22560,
+"name": "San Francisco &#8211; 5 Tables (Half Section)",
+"slug": "san-francisco-5-tables-half-section",
+"sku": "SF-TABL-0005-1",
+"type": "simple",
+"permalink": "https://collectaconusa.com/product/san-francisco-5-tables-half-section/",
+"prices": {
+"price": "185000",
+"regular_price": "185000",
+"sale_price": "185000",
+"price_range": null,
+"currency_code": "USD",
+"currency_symbol": "$",
+"currency_minor_unit": 2,
+"currency_decimal_separator": ".",
+"currency_thousand_separator": ",",
+"currency_prefix": "$",
+"currency_suffix": ""
+},
+"categories": [
+{
+"id": 36,
+"name": "2022",
+"slug": "2022"
+},
+{
+"id": 37,
+"name": "2023",
+"slug": "2023"
+},
+{
+"id": 38,
+"name": "2024",
+"slug": "2024"
+}
+],
+"is_in_stock": false,
+"is_purchasable": true
+},
+{
+"id": 22559,
+"name": "San Francisco &#8211; 10 Tables (Full Section)",
+"slug": "san-francisco-10-tables-full-section",
+"sku": "SF-TABL-0010-1",
+"type": "simple",
+"permalink": "https://collectaconusa.com/product/san-francisco-10-tables-full-section/",
+"prices": {
+"price": "349500",
+"regular_price": "349500",
+"sale_price": "349500",
+"price_range": null,
+"currency_code": "USD",
+"currency_symbol": "$",
+"currency_minor_unit": 2,
+"currency_decimal_separator": ".",
+"currency_thousand_separator": ",",
+"currency_prefix": "$",
+"currency_suffix": ""
+},
+"categories": [
+{
+"id": 36,
+"name": "2022",
+"slug": "2022"
+},
+{
+"id": 37,
+"name": "2023",
+"slug": "2023"
+},
+{
+"id": 38,
+"name": "2024",
+"slug": "2024"
+}
+],
+"is_in_stock": false,
+"is_purchasable": true
+},
+{
+"id": 21518,
+"name": "Minneapolis &#8211; 2 Tables",
+"slug": "minneapolis-2-tables",
+"sku": "MINN-TABL-0002",
+"type": "simple",
+"permalink": "https://collectaconusa.com/product/minneapolis-2-tables/",
+"prices": {
+"price": "75000",
+"regular_price": "75000",
+"sale_price": "75000",
+"price_range": null,
+"currency_code": "USD",
+"currency_symbol": "$",
+"currency_minor_unit": 2,
+"currency_decimal_separator": ".",
+"currency_thousand_separator": ",",
+"currency_prefix": "$",
+"currency_suffix": ""
+},
+"categories": [
+{
+"id": 36,
+"name": "2022",
+"slug": "2022"
+},
+{
+"id": 37,
+"name": "2023",
+"slug": "2023"
+},
+{
+"id": 38,
+"name": "2024",
+"slug": "2024"
+}
+],
+"is_in_stock": false,
+"is_purchasable": true
+},
+{
+"id": 21517,
+"name": "Minneapolis &#8211; 3 Tables",
+"slug": "minneapolis-3-tables",
+"sku": "MINN-TABL-0003",
+"type": "simple",
+"permalink": "https://collectaconusa.com/product/minneapolis-3-tables/",
+"prices": {
+"price": "97500",
+"regular_price": "97500",
+"sale_price": "97500",
+"price_range": null,
+"currency_code": "USD",
+"currency_symbol": "$",
+"currency_minor_unit": 2,
+"currency_decimal_separator": ".",
+"currency_thousand_separator": ",",
+"currency_prefix": "$",
+"currency_suffix": ""
+},
+"categories": [
+{
+"id": 36,
+"name": "2022",
+"slug": "2022"
+},
+{
+"id": 37,
+"name": "2023",
+"slug": "2023"
+},
+{
+"id": 38,
+"name": "2024",
+"slug": "2024"
+}
+],
+"is_in_stock": false,
+"is_purchasable": true
+},
+{
+"id": 21516,
+"name": "Minneapolis &#8211; 5 Tables (Half Section)",
+"slug": "minneapolis-5-tables-half-section",
+"sku": "MINN-TABL-0005",
+"type": "simple",
+"permalink": "https://collectaconusa.com/product/minneapolis-5-tables-half-section/",
+"prices": {
+"price": "185000",
+"regular_price": "185000",
+"sale_price": "185000",
+"price_range": null,
+"currency_code": "USD",
+"currency_symbol": "$",
+"currency_minor_unit": 2,
+"currency_decimal_separator": ".",
+"currency_thousand_separator": ",",
+"currency_prefix": "$",
+"currency_suffix": ""
+},
+"categories": [
+{
+"id": 36,
+"name": "2022",
+"slug": "2022"
+},
+{
+"id": 37,
+"name": "2023",
+"slug": "2023"
+},
+{
+"id": 38,
+"name": "2024",
+"slug": "2024"
+}
+],
+"is_in_stock": false,
+"is_purchasable": true
+},
+{
+"id": 21515,
+"name": "Minneapolis &#8211; 10 Tables (Full Section)",
+"slug": "minneapolis-10-tables-full-section",
+"sku": "MINN-TABL-0010",
+"type": "simple",
+"permalink": "https://collectaconusa.com/product/minneapolis-10-tables-full-section/",
+"prices": {
+"price": "349500",
+"regular_price": "349500",
+"sale_price": "349500",
+"price_range": null,
+"currency_code": "USD",
+"currency_symbol": "$",
+"currency_minor_unit": 2,
+"currency_decimal_separator": ".",
+"currency_thousand_separator": ",",
+"currency_prefix": "$",
+"currency_suffix": ""
+},
+"categories": [
+{
+"id": 36,
+"name": "2022",
+"slug": "2022"
+},
+{
+"id": 37,
+"name": "2023",
+"slug": "2023"
+},
+{
+"id": 38,
+"name": "2024",
+"slug": "2024"
+}
+],
+"is_in_stock": false,
+"is_purchasable": true
+},
+{
+"id": 21165,
+"name": "Las Vegas &#8211; 2 Tables",
+"slug": "las-vegas-2-tables",
+"sku": "LV-TABL-0002",
+"type": "simple",
+"permalink": "https://collectaconusa.com/product/las-vegas-2-tables/",
+"prices": {
+"price": "75000",
+"regular_price": "75000",
+"sale_price": "75000",
+"price_range": null,
+"currency_code": "USD",
+"currency_symbol": "$",
+"currency_minor_unit": 2,
+"currency_decimal_separator": ".",
+"currency_thousand_separator": ",",
+"currency_prefix": "$",
+"currency_suffix": ""
+},
+"categories": [
+{
+"id": 36,
+"name": "2022",
+"slug": "2022"
+},
+{
+"id": 37,
+"name": "2023",
+"slug": "2023"
+},
+{
+"id": 38,
+"name": "2024",
+"slug": "2024"
+}
+],
+"is_in_stock": false,
+"is_purchasable": true
+},
+{
+"id": 21164,
+"name": "Las Vegas &#8211; 3 Tables",
+"slug": "las-vegas-3-tables",
+"sku": "LV-TABL-0003",
+"type": "simple",
+"permalink": "https://collectaconusa.com/product/las-vegas-3-tables/",
+"prices": {
+"price": "97500",
+"regular_price": "97500",
+"sale_price": "97500",
+"price_range": null,
+"currency_code": "USD",
+"currency_symbol": "$",
+"currency_minor_unit": 2,
+"currency_decimal_separator": ".",
+"currency_thousand_separator": ",",
+"currency_prefix": "$",
+"currency_suffix": ""
+},
+"categories": [
+{
+"id": 36,
+"name": "2022",
+"slug": "2022"
+},
+{
+"id": 37,
+"name": "2023",
+"slug": "2023"
+},
+{
+"id": 38,
+"name": "2024",
+"slug": "2024"
+}
+],
+"is_in_stock": false,
+"is_purchasable": true
+},
+{
+"id": 21163,
+"name": "Las Vegas &#8211; 5 Tables (Half Section)",
+"slug": "las-vegas-5-tables-half-section",
+"sku": "LV-TABL-0005",
+"type": "simple",
+"permalink": "https://collectaconusa.com/product/las-vegas-5-tables-half-section/",
+"prices": {
+"price": "185000",
+"regular_price": "185000",
+"sale_price": "185000",
+"price_range": null,
+"currency_code": "USD",
+"currency_symbol": "$",
+"currency_minor_unit": 2,
+"currency_decimal_separator": ".",
+"currency_thousand_separator": ",",
+"currency_prefix": "$",
+"currency_suffix": ""
+},
+"categories": [
+{
+"id": 36,
+"name": "2022",
+"slug": "2022"
+},
+{
+"id": 37,
+"name": "2023",
+"slug": "2023"
+},
+{
+"id": 38,
+"name": "2024",
+"slug": "2024"
+}
+],
+"is_in_stock": false,
+"is_purchasable": true
+},
+{
+"id": 21162,
+"name": "Las Vegas &#8211; 10 Tables (Full Section)",
+"slug": "las-vegas-10-tables-full-section",
+"sku": "LV-TABL-0010",
+"type": "simple",
+"permalink": "https://collectaconusa.com/product/las-vegas-10-tables-full-section/",
+"prices": {
+"price": "349500",
+"regular_price": "349500",
+"sale_price": "349500",
+"price_range": null,
+"currency_code": "USD",
+"currency_symbol": "$",
+"currency_minor_unit": 2,
+"currency_decimal_separator": ".",
+"currency_thousand_separator": ",",
+"currency_prefix": "$",
+"currency_suffix": ""
+},
+"categories": [
+{
+"id": 36,
+"name": "2022",
+"slug": "2022"
+},
+{
+"id": 37,
+"name": "2023",
+"slug": "2023"
+},
+{
+"id": 38,
+"name": "2024",
+"slug": "2024"
+}
+],
+"is_in_stock": false,
+"is_purchasable": true
+},
+{
+"id": 20736,
+"name": "Phoenix &#8211; 2 Tables",
+"slug": "phoenix-2-tables",
+"sku": "PHO-TABL-0002",
+"type": "simple",
+"permalink": "https://collectaconusa.com/product/phoenix-2-tables/",
+"prices": {
+"price": "75000",
+"regular_price": "75000",
+"sale_price": "75000",
+"price_range": null,
+"currency_code": "USD",
+"currency_symbol": "$",
+"currency_minor_unit": 2,
+"currency_decimal_separator": ".",
+"currency_thousand_separator": ",",
+"currency_prefix": "$",
+"currency_suffix": ""
+},
+"categories": [
+{
+"id": 36,
+"name": "2022",
+"slug": "2022"
+},
+{
+"id": 37,
+"name": "2023",
+"slug": "2023"
+},
+{
+"id": 38,
+"name": "2024",
+"slug": "2024"
+}
+],
+"is_in_stock": false,
+"is_purchasable": true
+},
+{
+"id": 20735,
+"name": "Phoenix &#8211; 3 Tables",
+"slug": "phoenix-3-tables",
+"sku": "PHO-TABL-0003",
+"type": "simple",
+"permalink": "https://collectaconusa.com/product/phoenix-3-tables/",
+"prices": {
+"price": "97500",
+"regular_price": "97500",
+"sale_price": "97500",
+"price_range": null,
+"currency_code": "USD",
+"currency_symbol": "$",
+"currency_minor_unit": 2,
+"currency_decimal_separator": ".",
+"currency_thousand_separator": ",",
+"currency_prefix": "$",
+"currency_suffix": ""
+},
+"categories": [
+{
+"id": 36,
+"name": "2022",
+"slug": "2022"
+},
+{
+"id": 37,
+"name": "2023",
+"slug": "2023"
+},
+{
+"id": 38,
+"name": "2024",
+"slug": "2024"
+}
+],
+"is_in_stock": false,
+"is_purchasable": true
+},
+{
+"id": 20734,
+"name": "Phoenix &#8211; 5 Tables (Half Section)",
+"slug": "phoenix-5-tables-half-section",
+"sku": "PHO-TABL-0005",
+"type": "simple",
+"permalink": "https://collectaconusa.com/product/phoenix-5-tables-half-section/",
+"prices": {
+"price": "185000",
+"regular_price": "185000",
+"sale_price": "185000",
+"price_range": null,
+"currency_code": "USD",
+"currency_symbol": "$",
+"currency_minor_unit": 2,
+"currency_decimal_separator": ".",
+"currency_thousand_separator": ",",
+"currency_prefix": "$",
+"currency_suffix": ""
+},
+"categories": [
+{
+"id": 36,
+"name": "2022",
+"slug": "2022"
+},
+{
+"id": 37,
+"name": "2023",
+"slug": "2023"
+},
+{
+"id": 38,
+"name": "2024",
+"slug": "2024"
+}
+],
+"is_in_stock": false,
+"is_purchasable": true
+},
+{
+"id": 20733,
+"name": "Phoenix &#8211; 10 Tables (Full Section)",
+"slug": "phoenix-10-tables-full-section",
+"sku": "PHO-TABL-0010",
+"type": "simple",
+"permalink": "https://collectaconusa.com/product/phoenix-10-tables-full-section/",
+"prices": {
+"price": "349500",
+"regular_price": "349500",
+"sale_price": "349500",
+"price_range": null,
+"currency_code": "USD",
+"currency_symbol": "$",
+"currency_minor_unit": 2,
+"currency_decimal_separator": ".",
+"currency_thousand_separator": ",",
+"currency_prefix": "$",
+"currency_suffix": ""
+},
+"categories": [
+{
+"id": 36,
+"name": "2022",
+"slug": "2022"
+},
+{
+"id": 37,
+"name": "2023",
+"slug": "2023"
+},
+{
+"id": 38,
+"name": "2024",
+"slug": "2024"
+}
+],
+"is_in_stock": false,
+"is_purchasable": true
+},
+{
+"id": 16199,
+"name": "San Antonio &#8211; 10 Tables (Full Section)",
+"slug": "san-antonio-10-tables-full-section",
+"sku": "SANANTONIO-TABL-0010",
+"type": "simple",
+"permalink": "https://collectaconusa.com/product/san-antonio-10-tables-full-section/",
+"prices": {
+"price": "349500",
+"regular_price": "349500",
+"sale_price": "349500",
+"price_range": null,
+"currency_code": "USD",
+"currency_symbol": "$",
+"currency_minor_unit": 2,
+"currency_decimal_separator": ".",
+"currency_thousand_separator": ",",
+"currency_prefix": "$",
+"currency_suffix": ""
+},
+"categories": [
+{
+"id": 36,
+"name": "2022",
+"slug": "2022"
+},
+{
+"id": 37,
+"name": "2023",
+"slug": "2023"
+},
+{
+"id": 38,
+"name": "2024",
+"slug": "2024"
+}
+],
+"is_in_stock": false,
+"is_purchasable": true
+},
+{
+"id": 16198,
+"name": "San Antonio &#8211; 5 Tables (Half Section)",
+"slug": "san-antonio-5-tables-half-section",
+"sku": "SANANTONIO-TABL-0005",
+"type": "simple",
+"permalink": "https://collectaconusa.com/product/san-antonio-5-tables-half-section/",
+"prices": {
+"price": "185000",
+"regular_price": "185000",
+"sale_price": "185000",
+"price_range": null,
+"currency_code": "USD",
+"currency_symbol": "$",
+"currency_minor_unit": 2,
+"currency_decimal_separator": ".",
+"currency_thousand_separator": ",",
+"currency_prefix": "$",
+"currency_suffix": ""
+},
+"categories": [
+{
+"id": 36,
+"name": "2022",
+"slug": "2022"
+},
+{
+"id": 37,
+"name": "2023",
+"slug": "2023"
+},
+{
+"id": 38,
+"name": "2024",
+"slug": "2024"
+}
+],
+"is_in_stock": false,
+"is_purchasable": true
+},
+{
+"id": 16197,
+"name": "San Antonio &#8211; 3 Tables",
+"slug": "san-antonio-3-tables",
+"sku": "SANANTONIO-TABL-0003",
+"type": "simple",
+"permalink": "https://collectaconusa.com/product/san-antonio-3-tables/",
+"prices": {
+"price": "97500",
+"regular_price": "97500",
+"sale_price": "97500",
+"price_range": null,
+"currency_code": "USD",
+"currency_symbol": "$",
+"currency_minor_unit": 2,
+"currency_decimal_separator": ".",
+"currency_thousand_separator": ",",
+"currency_prefix": "$",
+"currency_suffix": ""
+},
+"categories": [
+{
+"id": 36,
+"name": "2022",
+"slug": "2022"
+},
+{
+"id": 37,
+"name": "2023",
+"slug": "2023"
+},
+{
+"id": 38,
+"name": "2024",
+"slug": "2024"
+}
+],
+"is_in_stock": false,
+"is_purchasable": true
+},
+{
+"id": 16196,
+"name": "San Antonio &#8211; 2 Tables",
+"slug": "san-antonio-2-tables",
+"sku": "SANANTONIO-TABL-0002",
+"type": "simple",
+"permalink": "https://collectaconusa.com/product/san-antonio-2-tables/",
+"prices": {
+"price": "75000",
+"regular_price": "75000",
+"sale_price": "75000",
+"price_range": null,
+"currency_code": "USD",
+"currency_symbol": "$",
+"currency_minor_unit": 2,
+"currency_decimal_separator": ".",
+"currency_thousand_separator": ",",
+"currency_prefix": "$",
+"currency_suffix": ""
+},
+"categories": [
+{
+"id": 36,
+"name": "2022",
+"slug": "2022"
+},
+{
+"id": 37,
+"name": "2023",
+"slug": "2023"
+},
+{
+"id": 38,
+"name": "2024",
+"slug": "2024"
+}
+],
+"is_in_stock": false,
+"is_purchasable": true
+},
+{
+"id": 13218,
+"name": "Cleveland &#8211; 2 Tables",
+"slug": "cleveland-2-tables",
+"sku": "CLE-TABL-0002",
+"type": "simple",
+"permalink": "https://collectaconusa.com/product/cleveland-2-tables/",
+"prices": {
+"price": "75000",
+"regular_price": "75000",
+"sale_price": "75000",
+"price_range": null,
+"currency_code": "USD",
+"currency_symbol": "$",
+"currency_minor_unit": 2,
+"currency_decimal_separator": ".",
+"currency_thousand_separator": ",",
+"currency_prefix": "$",
+"currency_suffix": ""
+},
+"categories": [
+{
+"id": 36,
+"name": "2022",
+"slug": "2022"
+},
+{
+"id": 37,
+"name": "2023",
+"slug": "2023"
+},
+{
+"id": 38,
+"name": "2024",
+"slug": "2024"
+}
+],
+"is_in_stock": false,
+"is_purchasable": true
+},
+{
+"id": 13217,
+"name": "Cleveland &#8211; 3 Tables",
+"slug": "cleveland-3-tables",
+"sku": "CLE-TABL-0003",
+"type": "simple",
+"permalink": "https://collectaconusa.com/product/cleveland-3-tables/",
+"prices": {
+"price": "97500",
+"regular_price": "97500",
+"sale_price": "97500",
+"price_range": null,
+"currency_code": "USD",
+"currency_symbol": "$",
+"currency_minor_unit": 2,
+"currency_decimal_separator": ".",
+"currency_thousand_separator": ",",
+"currency_prefix": "$",
+"currency_suffix": ""
+},
+"categories": [
+{
+"id": 36,
+"name": "2022",
+"slug": "2022"
+},
+{
+"id": 37,
+"name": "2023",
+"slug": "2023"
+},
+{
+"id": 38,
+"name": "2024",
+"slug": "2024"
+}
+],
+"is_in_stock": false,
+"is_purchasable": true
+},
+{
+"id": 13216,
+"name": "Cleveland &#8211; 5 Tables (Half Section)",
+"slug": "cleveland-5-tables-half-section",
+"sku": "CLE-TABL-0005",
+"type": "simple",
+"permalink": "https://collectaconusa.com/product/cleveland-5-tables-half-section/",
+"prices": {
+"price": "172500",
+"regular_price": "172500",
+"sale_price": "172500",
+"price_range": null,
+"currency_code": "USD",
+"currency_symbol": "$",
+"currency_minor_unit": 2,
+"currency_decimal_separator": ".",
+"currency_thousand_separator": ",",
+"currency_prefix": "$",
+"currency_suffix": ""
+},
+"categories": [
+{
+"id": 36,
+"name": "2022",
+"slug": "2022"
+},
+{
+"id": 37,
+"name": "2023",
+"slug": "2023"
+},
+{
+"id": 38,
+"name": "2024",
+"slug": "2024"
+}
+],
+"is_in_stock": false,
+"is_purchasable": true
+},
+{
+"id": 13215,
+"name": "Cleveland &#8211; 10 Tables (Full Section)",
+"slug": "cleveland-10-tables-full-section",
+"sku": "CLE-TABL-0010",
+"type": "simple",
+"permalink": "https://collectaconusa.com/product/cleveland-10-tables-full-section/",
+"prices": {
+"price": "327500",
+"regular_price": "327500",
+"sale_price": "327500",
+"price_range": null,
+"currency_code": "USD",
+"currency_symbol": "$",
+"currency_minor_unit": 2,
+"currency_decimal_separator": ".",
+"currency_thousand_separator": ",",
+"currency_prefix": "$",
+"currency_suffix": ""
+},
+"categories": [
+{
+"id": 36,
+"name": "2022",
+"slug": "2022"
+},
+{
+"id": 37,
+"name": "2023",
+"slug": "2023"
+},
+{
+"id": 38,
+"name": "2024",
+"slug": "2024"
+}
+],
+"is_in_stock": false,
+"is_purchasable": true
+},
+{
+"id": 11778,
+"name": "Miami &#8211; 2 Tables",
+"slug": "miami-2-tables",
+"sku": "MIAMI-TABL-0002-1",
+"type": "simple",
+"permalink": "https://collectaconusa.com/product/miami-2-tables/",
+"prices": {
+"price": "75000",
+"regular_price": "75000",
+"sale_price": "75000",
+"price_range": null,
+"currency_code": "USD",
+"currency_symbol": "$",
+"currency_minor_unit": 2,
+"currency_decimal_separator": ".",
+"currency_thousand_separator": ",",
+"currency_prefix": "$",
+"currency_suffix": ""
+},
+"categories": [
+{
+"id": 36,
+"name": "2022",
+"slug": "2022"
+},
+{
+"id": 37,
+"name": "2023",
+"slug": "2023"
+},
+{
+"id": 38,
+"name": "2024",
+"slug": "2024"
+}
+],
+"is_in_stock": false,
+"is_purchasable": true
+},
+{
+"id": 11777,
+"name": "Miami &#8211; 3 Tables",
+"slug": "miami-3-tables",
+"sku": "MIAMI-TABL-0003-1",
+"type": "simple",
+"permalink": "https://collectaconusa.com/product/miami-3-tables/",
+"prices": {
+"price": "97500",
+"regular_price": "97500",
+"sale_price": "97500",
+"price_range": null,
+"currency_code": "USD",
+"currency_symbol": "$",
+"currency_minor_unit": 2,
+"currency_decimal_separator": ".",
+"currency_thousand_separator": ",",
+"currency_prefix": "$",
+"currency_suffix": ""
+},
+"categories": [
+{
+"id": 36,
+"name": "2022",
+"slug": "2022"
+},
+{
+"id": 37,
+"name": "2023",
+"slug": "2023"
+},
+{
+"id": 38,
+"name": "2024",
+"slug": "2024"
+}
+],
+"is_in_stock": false,
+"is_purchasable": true
+},
+{
+"id": 11776,
+"name": "Miami &#8211; 5 Tables (Half Section)",
+"slug": "miami-5-tables-half-section",
+"sku": "MIAMI-TABL-0005-1",
+"type": "simple",
+"permalink": "https://collectaconusa.com/product/miami-5-tables-half-section/",
+"prices": {
+"price": "185000",
+"regular_price": "185000",
+"sale_price": "185000",
+"price_range": null,
+"currency_code": "USD",
+"currency_symbol": "$",
+"currency_minor_unit": 2,
+"currency_decimal_separator": ".",
+"currency_thousand_separator": ",",
+"currency_prefix": "$",
+"currency_suffix": ""
+},
+"categories": [
+{
+"id": 36,
+"name": "2022",
+"slug": "2022"
+},
+{
+"id": 37,
+"name": "2023",
+"slug": "2023"
+},
+{
+"id": 38,
+"name": "2024",
+"slug": "2024"
+}
+],
+"is_in_stock": false,
+"is_purchasable": true
+},
+{
+"id": 11775,
+"name": "Miami &#8211; 10 Tables (Full Section)",
+"slug": "miami-10-tables-full-section",
+"sku": "MIAMI-TABL-0010-1",
+"type": "simple",
+"permalink": "https://collectaconusa.com/product/miami-10-tables-full-section/",
+"prices": {
+"price": "325000",
+"regular_price": "325000",
+"sale_price": "325000",
+"price_range": null,
+"currency_code": "USD",
+"currency_symbol": "$",
+"currency_minor_unit": 2,
+"currency_decimal_separator": ".",
+"currency_thousand_separator": ",",
+"currency_prefix": "$",
+"currency_suffix": ""
+},
+"categories": [
+{
+"id": 36,
+"name": "2022",
+"slug": "2022"
+},
+{
+"id": 37,
+"name": "2023",
+"slug": "2023"
+},
+{
+"id": 38,
+"name": "2024",
+"slug": "2024"
+}
+],
+"is_in_stock": false,
+"is_purchasable": true
+},
+{
+"id": 9565,
+"name": "Richmond &#8211; 1 Table",
+"slug": "richmond-1-table",
+"sku": "RICHMOND-TABL-0001",
+"type": "simple",
+"permalink": "https://collectaconusa.com/product/richmond-1-table/",
+"prices": {
+"price": "45000",
+"regular_price": "45000",
+"sale_price": "45000",
+"price_range": null,
+"currency_code": "USD",
+"currency_symbol": "$",
+"currency_minor_unit": 2,
+"currency_decimal_separator": ".",
+"currency_thousand_separator": ",",
+"currency_prefix": "$",
+"currency_suffix": ""
+},
+"categories": [
+{
+"id": 36,
+"name": "2022",
+"slug": "2022"
+},
+{
+"id": 37,
+"name": "2023",
+"slug": "2023"
+}
+],
+"is_in_stock": false,
+"is_purchasable": true
+},
+{
+"id": 9108,
+"name": "Atlanta &#8211; 1 Table",
+"slug": "atlanta-1-table",
+"sku": "ATLANTA-TABL-0001",
+"type": "simple",
+"permalink": "https://collectaconusa.com/product/atlanta-1-table/",
+"prices": {
+"price": "45000",
+"regular_price": "45000",
+"sale_price": "45000",
+"price_range": null,
+"currency_code": "USD",
+"currency_symbol": "$",
+"currency_minor_unit": 2,
+"currency_decimal_separator": ".",
+"currency_thousand_separator": ",",
+"currency_prefix": "$",
+"currency_suffix": ""
+},
+"categories": [
+{
+"id": 36,
+"name": "2022",
+"slug": "2022"
+},
+{
+"id": 37,
+"name": "2023",
+"slug": "2023"
+}
+],
+"is_in_stock": false,
+"is_purchasable": true
+},
+{
+"id": 9096,
+"name": "Chicago &#8211; 10 Tables (Full Section)",
+"slug": "chicago-10-tables-full-section",
+"sku": "CHICAGO-TABL-0010",
+"type": "simple",
+"permalink": "https://collectaconusa.com/product/chicago-10-tables-full-section/",
+"prices": {
+"price": "349500",
+"regular_price": "349500",
+"sale_price": "349500",
+"price_range": null,
+"currency_code": "USD",
+"currency_symbol": "$",
+"currency_minor_unit": 2,
+"currency_decimal_separator": ".",
+"currency_thousand_separator": ",",
+"currency_prefix": "$",
+"currency_suffix": ""
+},
+"categories": [
+{
+"id": 36,
+"name": "2022",
+"slug": "2022"
+},
+{
+"id": 37,
+"name": "2023",
+"slug": "2023"
+},
+{
+"id": 38,
+"name": "2024",
+"slug": "2024"
+}
+],
+"is_in_stock": false,
+"is_purchasable": true
+},
+{
+"id": 9095,
+"name": "Chicago &#8211; 5 Tables (Half Section)",
+"slug": "chicago-5-tables-half-section",
+"sku": "CHICAGO-TABL-0005",
+"type": "simple",
+"permalink": "https://collectaconusa.com/product/chicago-5-tables-half-section/",
+"prices": {
+"price": "185000",
+"regular_price": "185000",
+"sale_price": "185000",
+"price_range": null,
+"currency_code": "USD",
+"currency_symbol": "$",
+"currency_minor_unit": 2,
+"currency_decimal_separator": ".",
+"currency_thousand_separator": ",",
+"currency_prefix": "$",
+"currency_suffix": ""
+},
+"categories": [
+{
+"id": 36,
+"name": "2022",
+"slug": "2022"
+},
+{
+"id": 37,
+"name": "2023",
+"slug": "2023"
+},
+{
+"id": 38,
+"name": "2024",
+"slug": "2024"
+}
+],
+"is_in_stock": false,
+"is_purchasable": true
+},
+{
+"id": 9094,
+"name": "Chicago &#8211; 3 Tables",
+"slug": "chicago-3-tables",
+"sku": "CHICAGO-TABL-0003",
+"type": "simple",
+"permalink": "https://collectaconusa.com/product/chicago-3-tables/",
+"prices": {
+"price": "97500",
+"regular_price": "97500",
+"sale_price": "97500",
+"price_range": null,
+"currency_code": "USD",
+"currency_symbol": "$",
+"currency_minor_unit": 2,
+"currency_decimal_separator": ".",
+"currency_thousand_separator": ",",
+"currency_prefix": "$",
+"currency_suffix": ""
+},
+"categories": [
+{
+"id": 36,
+"name": "2022",
+"slug": "2022"
+},
+{
+"id": 37,
+"name": "2023",
+"slug": "2023"
+},
+{
+"id": 38,
+"name": "2024",
+"slug": "2024"
+}
+],
+"is_in_stock": false,
+"is_purchasable": true
+},
+{
+"id": 9093,
+"name": "Chicago &#8211; 2 Tables",
+"slug": "chicago-2-tables",
+"sku": "CHICAGO-TABL-0002",
+"type": "simple",
+"permalink": "https://collectaconusa.com/product/chicago-2-tables/",
+"prices": {
+"price": "75000",
+"regular_price": "75000",
+"sale_price": "75000",
+"price_range": null,
+"currency_code": "USD",
+"currency_symbol": "$",
+"currency_minor_unit": 2,
+"currency_decimal_separator": ".",
+"currency_thousand_separator": ",",
+"currency_prefix": "$",
+"currency_suffix": ""
+},
+"categories": [
+{
+"id": 36,
+"name": "2022",
+"slug": "2022"
+},
+{
+"id": 37,
+"name": "2023",
+"slug": "2023"
+},
+{
+"id": 38,
+"name": "2024",
+"slug": "2024"
+}
+],
+"is_in_stock": false,
+"is_purchasable": true
+},
+{
+"id": 8970,
+"name": "Atlanta &#8211; 2 Tables",
+"slug": "atlanta-2-tables",
+"sku": "ATLANTA-TABL-0002",
+"type": "simple",
+"permalink": "https://collectaconusa.com/product/atlanta-2-tables/",
+"prices": {
+"price": "75000",
+"regular_price": "75000",
+"sale_price": "75000",
+"price_range": null,
+"currency_code": "USD",
+"currency_symbol": "$",
+"currency_minor_unit": 2,
+"currency_decimal_separator": ".",
+"currency_thousand_separator": ",",
+"currency_prefix": "$",
+"currency_suffix": ""
+},
+"categories": [
+{
+"id": 36,
+"name": "2022",
+"slug": "2022"
+},
+{
+"id": 37,
+"name": "2023",
+"slug": "2023"
+},
+{
+"id": 38,
+"name": "2024",
+"slug": "2024"
+}
+],
+"is_in_stock": false,
+"is_purchasable": true
+},
+{
+"id": 8969,
+"name": "Atlanta &#8211; 3 Tables",
+"slug": "atlanta-3-tables",
+"sku": "ATLANTA-TABL-0003",
+"type": "simple",
+"permalink": "https://collectaconusa.com/product/atlanta-3-tables/",
+"prices": {
+"price": "97500",
+"regular_price": "97500",
+"sale_price": "97500",
+"price_range": null,
+"currency_code": "USD",
+"currency_symbol": "$",
+"currency_minor_unit": 2,
+"currency_decimal_separator": ".",
+"currency_thousand_separator": ",",
+"currency_prefix": "$",
+"currency_suffix": ""
+},
+"categories": [
+{
+"id": 36,
+"name": "2022",
+"slug": "2022"
+},
+{
+"id": 37,
+"name": "2023",
+"slug": "2023"
+},
+{
+"id": 38,
+"name": "2024",
+"slug": "2024"
+}
+],
+"is_in_stock": false,
+"is_purchasable": true
+},
+{
+"id": 8968,
+"name": "Atlanta &#8211; 5 Tables (Half Section)",
+"slug": "atlanta-5-tables-half-section",
+"sku": "ATLANTA-TABL-0005",
+"type": "simple",
+"permalink": "https://collectaconusa.com/product/atlanta-5-tables-half-section/",
+"prices": {
+"price": "185000",
+"regular_price": "185000",
+"sale_price": "185000",
+"price_range": null,
+"currency_code": "USD",
+"currency_symbol": "$",
+"currency_minor_unit": 2,
+"currency_decimal_separator": ".",
+"currency_thousand_separator": ",",
+"currency_prefix": "$",
+"currency_suffix": ""
+},
+"categories": [
+{
+"id": 36,
+"name": "2022",
+"slug": "2022"
+},
+{
+"id": 37,
+"name": "2023",
+"slug": "2023"
+},
+{
+"id": 38,
+"name": "2024",
+"slug": "2024"
+}
+],
+"is_in_stock": false,
+"is_purchasable": true
+},
+{
+"id": 8967,
+"name": "Atlanta &#8211; 10 Tables (Full Section)",
+"slug": "atlanta-10-tables-full-section",
+"sku": "ATLANTA-TABL-0010",
+"type": "simple",
+"permalink": "https://collectaconusa.com/product/atlanta-10-tables-full-section/",
+"prices": {
+"price": "349500",
+"regular_price": "349500",
+"sale_price": "349500",
+"price_range": null,
+"currency_code": "USD",
+"currency_symbol": "$",
+"currency_minor_unit": 2,
+"currency_decimal_separator": ".",
+"currency_thousand_separator": ",",
+"currency_prefix": "$",
+"currency_suffix": ""
+},
+"categories": [
+{
+"id": 36,
+"name": "2022",
+"slug": "2022"
+},
+{
+"id": 37,
+"name": "2023",
+"slug": "2023"
+},
+{
+"id": 38,
+"name": "2024",
+"slug": "2024"
+}
+],
+"is_in_stock": false,
+"is_purchasable": true
+},
+{
+"id": 8666,
+"name": "Richmond &#8211; 10 Tables (Full Section)",
+"slug": "richmond-10-tables-full-section",
+"sku": "RICHMOND-TABL-0010-1-1",
+"type": "simple",
+"permalink": "https://collectaconusa.com/product/richmond-10-tables-full-section/",
+"prices": {
+"price": "349500",
+"regular_price": "349500",
+"sale_price": "349500",
+"price_range": null,
+"currency_code": "USD",
+"currency_symbol": "$",
+"currency_minor_unit": 2,
+"currency_decimal_separator": ".",
+"currency_thousand_separator": ",",
+"currency_prefix": "$",
+"currency_suffix": ""
+},
+"categories": [
+{
+"id": 36,
+"name": "2022",
+"slug": "2022"
+},
+{
+"id": 37,
+"name": "2023",
+"slug": "2023"
+},
+{
+"id": 38,
+"name": "2024",
+"slug": "2024"
+}
+],
+"is_in_stock": false,
+"is_purchasable": true
+},
+{
+"id": 8665,
+"name": "Richmond &#8211; 5 Tables (Half Section)",
+"slug": "richmond-5-tables-half-section",
+"sku": "RICHMOND-TABL-0005-1-1",
+"type": "simple",
+"permalink": "https://collectaconusa.com/product/richmond-5-tables-half-section/",
+"prices": {
+"price": "185000",
+"regular_price": "185000",
+"sale_price": "185000",
+"price_range": null,
+"currency_code": "USD",
+"currency_symbol": "$",
+"currency_minor_unit": 2,
+"currency_decimal_separator": ".",
+"currency_thousand_separator": ",",
+"currency_prefix": "$",
+"currency_suffix": ""
+},
+"categories": [
+{
+"id": 36,
+"name": "2022",
+"slug": "2022"
+},
+{
+"id": 37,
+"name": "2023",
+"slug": "2023"
+},
+{
+"id": 38,
+"name": "2024",
+"slug": "2024"
+}
+],
+"is_in_stock": false,
+"is_purchasable": true
+},
+{
+"id": 8664,
+"name": "Richmond &#8211; 3 Tables",
+"slug": "richmond-3-tables",
+"sku": "RICHMOND-TABL-0003-1-1",
+"type": "simple",
+"permalink": "https://collectaconusa.com/product/richmond-3-tables/",
+"prices": {
+"price": "97500",
+"regular_price": "97500",
+"sale_price": "97500",
+"price_range": null,
+"currency_code": "USD",
+"currency_symbol": "$",
+"currency_minor_unit": 2,
+"currency_decimal_separator": ".",
+"currency_thousand_separator": ",",
+"currency_prefix": "$",
+"currency_suffix": ""
+},
+"categories": [
+{
+"id": 36,
+"name": "2022",
+"slug": "2022"
+},
+{
+"id": 37,
+"name": "2023",
+"slug": "2023"
+},
+{
+"id": 38,
+"name": "2024",
+"slug": "2024"
+}
+],
+"is_in_stock": false,
+"is_purchasable": true
+},
+{
+"id": 8663,
+"name": "Richmond &#8211; 2 Tables",
+"slug": "richmond-2-tables",
+"sku": "RICHMOND-TABL-0002-1-1",
+"type": "simple",
+"permalink": "https://collectaconusa.com/product/richmond-2-tables/",
+"prices": {
+"price": "75000",
+"regular_price": "75000",
+"sale_price": "75000",
+"price_range": null,
+"currency_code": "USD",
+"currency_symbol": "$",
+"currency_minor_unit": 2,
+"currency_decimal_separator": ".",
+"currency_thousand_separator": ",",
+"currency_prefix": "$",
+"currency_suffix": ""
+},
+"categories": [
+{
+"id": 36,
+"name": "2022",
+"slug": "2022"
+},
+{
+"id": 37,
+"name": "2023",
+"slug": "2023"
+},
+{
+"id": 38,
+"name": "2024",
+"slug": "2024"
+}
+],
+"is_in_stock": false,
+"is_purchasable": true
+},
+{
+"id": 8035,
+"name": "New Jersey &#8211; 2 Tables",
+"slug": "new-jersey-2-tables",
+"sku": "NJ-TABL-0002-1",
+"type": "simple",
+"permalink": "https://collectaconusa.com/product/new-jersey-2-tables/",
+"prices": {
+"price": "75000",
+"regular_price": "75000",
+"sale_price": "75000",
+"price_range": null,
+"currency_code": "USD",
+"currency_symbol": "$",
+"currency_minor_unit": 2,
+"currency_decimal_separator": ".",
+"currency_thousand_separator": ",",
+"currency_prefix": "$",
+"currency_suffix": ""
+},
+"categories": [
+{
+"id": 36,
+"name": "2022",
+"slug": "2022"
+},
+{
+"id": 37,
+"name": "2023",
+"slug": "2023"
+},
+{
+"id": 38,
+"name": "2024",
+"slug": "2024"
+}
+],
+"is_in_stock": false,
+"is_purchasable": true
+},
+{
+"id": 8034,
+"name": "New Jersey &#8211; 3 Tables",
+"slug": "new-jersey-3-tables",
+"sku": "NJ-TABL-0003-1",
+"type": "simple",
+"permalink": "https://collectaconusa.com/product/new-jersey-3-tables/",
+"prices": {
+"price": "120000",
+"regular_price": "120000",
+"sale_price": "120000",
+"price_range": null,
+"currency_code": "USD",
+"currency_symbol": "$",
+"currency_minor_unit": 2,
+"currency_decimal_separator": ".",
+"currency_thousand_separator": ",",
+"currency_prefix": "$",
+"currency_suffix": ""
+},
+"categories": [
+{
+"id": 36,
+"name": "2022",
+"slug": "2022"
+},
+{
+"id": 37,
+"name": "2023",
+"slug": "2023"
+},
+{
+"id": 38,
+"name": "2024",
+"slug": "2024"
+}
+],
+"is_in_stock": false,
+"is_purchasable": true
+},
+{
+"id": 8033,
+"name": "New Jersey &#8211; 5 Tables (Half Section)",
+"slug": "new-jersey-5-tables-half-section",
+"sku": "NJ-TABL-0005-1",
+"type": "simple",
+"permalink": "https://collectaconusa.com/product/new-jersey-5-tables-half-section/",
+"prices": {
+"price": "225000",
+"regular_price": "225000",
+"sale_price": "225000",
+"price_range": null,
+"currency_code": "USD",
+"currency_symbol": "$",
+"currency_minor_unit": 2,
+"currency_decimal_separator": ".",
+"currency_thousand_separator": ",",
+"currency_prefix": "$",
+"currency_suffix": ""
+},
+"categories": [
+{
+"id": 36,
+"name": "2022",
+"slug": "2022"
+},
+{
+"id": 37,
+"name": "2023",
+"slug": "2023"
+},
+{
+"id": 38,
+"name": "2024",
+"slug": "2024"
+}
+],
+"is_in_stock": false,
+"is_purchasable": true
+},
+{
+"id": 8032,
+"name": "New Jersey &#8211; 10 Tables (Full Section)",
+"slug": "new-jersey-10-tables-full-section",
+"sku": "NJ-TABL-0010-1",
+"type": "simple",
+"permalink": "https://collectaconusa.com/product/new-jersey-10-tables-full-section/",
+"prices": {
+"price": "425000",
+"regular_price": "425000",
+"sale_price": "425000",
+"price_range": null,
+"currency_code": "USD",
+"currency_symbol": "$",
+"currency_minor_unit": 2,
+"currency_decimal_separator": ".",
+"currency_thousand_separator": ",",
+"currency_prefix": "$",
+"currency_suffix": ""
+},
+"categories": [
+{
+"id": 36,
+"name": "2022",
+"slug": "2022"
+},
+{
+"id": 37,
+"name": "2023",
+"slug": "2023"
+},
+{
+"id": 38,
+"name": "2024",
+"slug": "2024"
+}
+],
+"is_in_stock": false,
+"is_purchasable": true
+},
+{
+"id": 6638,
+"name": "Houston &#8211; Sports Card Zone &#8211; 10 Tables (Full Section)",
+"slug": "houston-sports-card-zone-10-tables-full-section-2",
+"sku": "HOUSTON-TABL-0010-S-APR",
+"type": "simple",
+"permalink": "https://collectaconusa.com/product/houston-sports-card-zone-10-tables-full-section-2/",
+"prices": {
+"price": "285000",
+"regular_price": "285000",
+"sale_price": "285000",
+"price_range": null,
+"currency_code": "USD",
+"currency_symbol": "$",
+"currency_minor_unit": 2,
+"currency_decimal_separator": ".",
+"currency_thousand_separator": ",",
+"currency_prefix": "$",
+"currency_suffix": ""
+},
+"categories": [
+{
+"id": 36,
+"name": "2022",
+"slug": "2022"
+},
+{
+"id": 37,
+"name": "2023",
+"slug": "2023"
+}
+],
+"is_in_stock": false,
+"is_purchasable": true
+},
+{
+"id": 6637,
+"name": "Houston &#8211; Sports Card Zone &#8211; 5 Tables (Half Section)",
+"slug": "houston-sports-card-zone-5-tables-half-section-2",
+"sku": "HOUSTON-TABL-0005-S-APR",
+"type": "simple",
+"permalink": "https://collectaconusa.com/product/houston-sports-card-zone-5-tables-half-section-2/",
+"prices": {
+"price": "157500",
+"regular_price": "157500",
+"sale_price": "157500",
+"price_range": null,
+"currency_code": "USD",
+"currency_symbol": "$",
+"currency_minor_unit": 2,
+"currency_decimal_separator": ".",
+"currency_thousand_separator": ",",
+"currency_prefix": "$",
+"currency_suffix": ""
+},
+"categories": [
+{
+"id": 36,
+"name": "2022",
+"slug": "2022"
+},
+{
+"id": 37,
+"name": "2023",
+"slug": "2023"
+}
+],
+"is_in_stock": false,
+"is_purchasable": true
+},
+{
+"id": 6636,
+"name": "Houston &#8211; Sports Card Zone &#8211; 3 Tables",
+"slug": "houston-sports-card-zone-3-tables-2",
+"sku": "HOUSTON-TABL-0003-S-APR",
+"type": "simple",
+"permalink": "https://collectaconusa.com/product/houston-sports-card-zone-3-tables-2/",
+"prices": {
+"price": "97500",
+"regular_price": "97500",
+"sale_price": "97500",
+"price_range": null,
+"currency_code": "USD",
+"currency_symbol": "$",
+"currency_minor_unit": 2,
+"currency_decimal_separator": ".",
+"currency_thousand_separator": ",",
+"currency_prefix": "$",
+"currency_suffix": ""
+},
+"categories": [
+{
+"id": 36,
+"name": "2022",
+"slug": "2022"
+},
+{
+"id": 37,
+"name": "2023",
+"slug": "2023"
+},
+{
+"id": 38,
+"name": "2024",
+"slug": "2024"
+}
+],
+"is_in_stock": false,
+"is_purchasable": true
+},
+{
+"id": 6635,
+"name": "Houston &#8211; Sports Card Zone &#8211; 2 Tables",
+"slug": "houston-sports-card-zone-2-tables-2",
+"sku": "HOUSTON-TABL-0002-S-APR",
+"type": "simple",
+"permalink": "https://collectaconusa.com/product/houston-sports-card-zone-2-tables-2/",
+"prices": {
+"price": "75000",
+"regular_price": "75000",
+"sale_price": "75000",
+"price_range": null,
+"currency_code": "USD",
+"currency_symbol": "$",
+"currency_minor_unit": 2,
+"currency_decimal_separator": ".",
+"currency_thousand_separator": ",",
+"currency_prefix": "$",
+"currency_suffix": ""
+},
+"categories": [
+{
+"id": 36,
+"name": "2022",
+"slug": "2022"
+},
+{
+"id": 37,
+"name": "2023",
+"slug": "2023"
+}
+],
+"is_in_stock": false,
+"is_purchasable": true
+},
+{
+"id": 6634,
+"name": "Houston &#8211; 10 Tables (Full Section)",
+"slug": "houston-10-tables-full-section-2",
+"sku": "HOUSTON-TABL-0010-APR",
+"type": "simple",
+"permalink": "https://collectaconusa.com/product/houston-10-tables-full-section-2/",
+"prices": {
+"price": "389500",
+"regular_price": "389500",
+"sale_price": "389500",
+"price_range": null,
+"currency_code": "USD",
+"currency_symbol": "$",
+"currency_minor_unit": 2,
+"currency_decimal_separator": ".",
+"currency_thousand_separator": ",",
+"currency_prefix": "$",
+"currency_suffix": ""
+},
+"categories": [
+{
+"id": 36,
+"name": "2022",
+"slug": "2022"
+},
+{
+"id": 37,
+"name": "2023",
+"slug": "2023"
+},
+{
+"id": 38,
+"name": "2024",
+"slug": "2024"
+}
+],
+"is_in_stock": false,
+"is_purchasable": true
+},
+{
+"id": 6633,
+"name": "Houston &#8211; 5 Tables (Half Section)",
+"slug": "houston-5-tables-half-section-2",
+"sku": "HOUSTON-TABL-0005-APR",
+"type": "simple",
+"permalink": "https://collectaconusa.com/product/houston-5-tables-half-section-2/",
+"prices": {
+"price": "197500",
+"regular_price": "197500",
+"sale_price": "197500",
+"price_range": null,
+"currency_code": "USD",
+"currency_symbol": "$",
+"currency_minor_unit": 2,
+"currency_decimal_separator": ".",
+"currency_thousand_separator": ",",
+"currency_prefix": "$",
+"currency_suffix": ""
+},
+"categories": [
+{
+"id": 36,
+"name": "2022",
+"slug": "2022"
+},
+{
+"id": 37,
+"name": "2023",
+"slug": "2023"
+},
+{
+"id": 38,
+"name": "2024",
+"slug": "2024"
+}
+],
+"is_in_stock": false,
+"is_purchasable": true
+},
+{
+"id": 6632,
+"name": "Houston &#8211; 3 Tables",
+"slug": "houston-3-tables-2",
+"sku": "HOUSTON-TABL-0003-APR",
+"type": "simple",
+"permalink": "https://collectaconusa.com/product/houston-3-tables-2/",
+"prices": {
+"price": "97500",
+"regular_price": "97500",
+"sale_price": "97500",
+"price_range": null,
+"currency_code": "USD",
+"currency_symbol": "$",
+"currency_minor_unit": 2,
+"currency_decimal_separator": ".",
+"currency_thousand_separator": ",",
+"currency_prefix": "$",
+"currency_suffix": ""
+},
+"categories": [
+{
+"id": 36,
+"name": "2022",
+"slug": "2022"
+},
+{
+"id": 37,
+"name": "2023",
+"slug": "2023"
+},
+{
+"id": 38,
+"name": "2024",
+"slug": "2024"
+}
+],
+"is_in_stock": false,
+"is_purchasable": true
+},
+{
+"id": 6631,
+"name": "Houston &#8211; 2 Tables",
+"slug": "houston-2-tables-2",
+"sku": "HOUSTON-TABL-0002-APR",
+"type": "simple",
+"permalink": "https://collectaconusa.com/product/houston-2-tables-2/",
+"prices": {
+"price": "75000",
+"regular_price": "75000",
+"sale_price": "75000",
+"price_range": null,
+"currency_code": "USD",
+"currency_symbol": "$",
+"currency_minor_unit": 2,
+"currency_decimal_separator": ".",
+"currency_thousand_separator": ",",
+"currency_prefix": "$",
+"currency_suffix": ""
+},
+"categories": [
+{
+"id": 36,
+"name": "2022",
+"slug": "2022"
+},
+{
+"id": 37,
+"name": "2023",
+"slug": "2023"
+},
+{
+"id": 38,
+"name": "2024",
+"slug": "2024"
+}
+],
+"is_in_stock": false,
+"is_purchasable": true
+},
+{
+"id": 6394,
+"name": "Los Angeles &#8211; Sports Card Zone &#8211; 3 Tables",
+"slug": "los-angeles-sports-card-zone-3-tables",
+"sku": "LA-TABL-0003-S",
+"type": "simple",
+"permalink": "https://collectaconusa.com/product/los-angeles-sports-card-zone-3-tables/",
+"prices": {
+"price": "97500",
+"regular_price": "97500",
+"sale_price": "97500",
+"price_range": null,
+"currency_code": "USD",
+"currency_symbol": "$",
+"currency_minor_unit": 2,
+"currency_decimal_separator": ".",
+"currency_thousand_separator": ",",
+"currency_prefix": "$",
+"currency_suffix": ""
+},
+"categories": [
+{
+"id": 36,
+"name": "2022",
+"slug": "2022"
+},
+{
+"id": 37,
+"name": "2023",
+"slug": "2023"
+}
+],
+"is_in_stock": false,
+"is_purchasable": true
+},
+{
+"id": 6393,
+"name": "Los Angeles &#8211; Sports Card Zone &#8211; 2 Tables",
+"slug": "los-angeles-sports-card-zone-2-tables",
+"sku": "LA-TABL-0002-S",
+"type": "simple",
+"permalink": "https://collectaconusa.com/product/los-angeles-sports-card-zone-2-tables/",
+"prices": {
+"price": "75000",
+"regular_price": "75000",
+"sale_price": "75000",
+"price_range": null,
+"currency_code": "USD",
+"currency_symbol": "$",
+"currency_minor_unit": 2,
+"currency_decimal_separator": ".",
+"currency_thousand_separator": ",",
+"currency_prefix": "$",
+"currency_suffix": ""
+},
+"categories": [
+{
+"id": 36,
+"name": "2022",
+"slug": "2022"
+},
+{
+"id": 37,
+"name": "2023",
+"slug": "2023"
+}
+],
+"is_in_stock": false,
+"is_purchasable": true
+},
+{
+"id": 6392,
+"name": "Los Angeles &#8211; Sports Card Zone &#8211; 5 Tables (Half Section)",
+"slug": "los-angeles-sports-card-zone-5-tables-half-section",
+"sku": "LA-TABL-0005-S",
+"type": "simple",
+"permalink": "https://collectaconusa.com/product/los-angeles-sports-card-zone-5-tables-half-section/",
+"prices": {
+"price": "159500",
+"regular_price": "159500",
+"sale_price": "159500",
+"price_range": null,
+"currency_code": "USD",
+"currency_symbol": "$",
+"currency_minor_unit": 2,
+"currency_decimal_separator": ".",
+"currency_thousand_separator": ",",
+"currency_prefix": "$",
+"currency_suffix": ""
+},
+"categories": [
+{
+"id": 36,
+"name": "2022",
+"slug": "2022"
+},
+{
+"id": 37,
+"name": "2023",
+"slug": "2023"
+}
+],
+"is_in_stock": false,
+"is_purchasable": true
+},
+{
+"id": 6391,
+"name": "Los Angeles &#8211; Sports Card Zone &#8211; 10 Tables (Full Section)",
+"slug": "los-angeles-sports-card-zone-10-tables-full-section",
+"sku": "LA-TABL-0010-S",
+"type": "simple",
+"permalink": "https://collectaconusa.com/product/los-angeles-sports-card-zone-10-tables-full-section/",
+"prices": {
+"price": "295000",
+"regular_price": "295000",
+"sale_price": "295000",
+"price_range": null,
+"currency_code": "USD",
+"currency_symbol": "$",
+"currency_minor_unit": 2,
+"currency_decimal_separator": ".",
+"currency_thousand_separator": ",",
+"currency_prefix": "$",
+"currency_suffix": ""
+},
+"categories": [
+{
+"id": 36,
+"name": "2022",
+"slug": "2022"
+},
+{
+"id": 37,
+"name": "2023",
+"slug": "2023"
+}
+],
+"is_in_stock": false,
+"is_purchasable": true
+},
+{
+"id": 6266,
+"name": "Los Angeles &#8211; 2 Tables",
+"slug": "los-angeles-2-tables",
+"sku": "LA-TABL-0002-1",
+"type": "simple",
+"permalink": "https://collectaconusa.com/product/los-angeles-2-tables/",
+"prices": {
+"price": "75000",
+"regular_price": "75000",
+"sale_price": "75000",
+"price_range": null,
+"currency_code": "USD",
+"currency_symbol": "$",
+"currency_minor_unit": 2,
+"currency_decimal_separator": ".",
+"currency_thousand_separator": ",",
+"currency_prefix": "$",
+"currency_suffix": ""
+},
+"categories": [
+{
+"id": 36,
+"name": "2022",
+"slug": "2022"
+},
+{
+"id": 37,
+"name": "2023",
+"slug": "2023"
+}
+],
+"is_in_stock": false,
+"is_purchasable": true
+},
+{
+"id": 6265,
+"name": "Los Angeles &#8211; 3 Tables",
+"slug": "los-angeles-3-tables",
+"sku": "LA-TABL-0003-1",
+"type": "simple",
+"permalink": "https://collectaconusa.com/product/los-angeles-3-tables/",
+"prices": {
+"price": "97500",
+"regular_price": "97500",
+"sale_price": "97500",
+"price_range": null,
+"currency_code": "USD",
+"currency_symbol": "$",
+"currency_minor_unit": 2,
+"currency_decimal_separator": ".",
+"currency_thousand_separator": ",",
+"currency_prefix": "$",
+"currency_suffix": ""
+},
+"categories": [
+{
+"id": 36,
+"name": "2022",
+"slug": "2022"
+},
+{
+"id": 37,
+"name": "2023",
+"slug": "2023"
+}
+],
+"is_in_stock": false,
+"is_purchasable": true
+},
+{
+"id": 6264,
+"name": "Los Angeles &#8211; 5 Tables (Half Section)",
+"slug": "los-angeles-5-tables-half-section",
+"sku": "LA-TABL-0005-1",
+"type": "simple",
+"permalink": "https://collectaconusa.com/product/los-angeles-5-tables-half-section/",
+"prices": {
+"price": "197500",
+"regular_price": "197500",
+"sale_price": "197500",
+"price_range": null,
+"currency_code": "USD",
+"currency_symbol": "$",
+"currency_minor_unit": 2,
+"currency_decimal_separator": ".",
+"currency_thousand_separator": ",",
+"currency_prefix": "$",
+"currency_suffix": ""
+},
+"categories": [
+{
+"id": 36,
+"name": "2022",
+"slug": "2022"
+},
+{
+"id": 37,
+"name": "2023",
+"slug": "2023"
+},
+{
+"id": 38,
+"name": "2024",
+"slug": "2024"
+},
+{
+"id": 39,
+"name": "2025",
+"slug": "2025"
+}
+],
+"is_in_stock": false,
+"is_purchasable": true
+},
+{
+"id": 6263,
+"name": "Los Angeles &#8211; 10 Tables (Full Section)",
+"slug": "los-angeles-10-tables-full-section",
+"sku": "LA-TABL-0010-1",
+"type": "simple",
+"permalink": "https://collectaconusa.com/product/los-angeles-10-tables-full-section/",
+"prices": {
+"price": "389500",
+"regular_price": "389500",
+"sale_price": "389500",
+"price_range": null,
+"currency_code": "USD",
+"currency_symbol": "$",
+"currency_minor_unit": 2,
+"currency_decimal_separator": ".",
+"currency_thousand_separator": ",",
+"currency_prefix": "$",
+"currency_suffix": ""
+},
+"categories": [
+{
+"id": 36,
+"name": "2022",
+"slug": "2022"
+},
+{
+"id": 37,
+"name": "2023",
+"slug": "2023"
+},
+{
+"id": 38,
+"name": "2024",
+"slug": "2024"
+},
+{
+"id": 39,
+"name": "2025",
+"slug": "2025"
+}
+],
+"is_in_stock": false,
+"is_purchasable": true
+},
+{
+"id": 6031,
+"name": "Dallas &#8211; Sports Card Zone &#8211; 10 Tables (Full Section)",
+"slug": "dallas-sports-card-zone-10-tables-full-section",
+"sku": "DALLAS-TABL-0010-S",
+"type": "simple",
+"permalink": "https://collectaconusa.com/product/dallas-sports-card-zone-10-tables-full-section/",
+"prices": {
+"price": "285000",
+"regular_price": "285000",
+"sale_price": "285000",
+"price_range": null,
+"currency_code": "USD",
+"currency_symbol": "$",
+"currency_minor_unit": 2,
+"currency_decimal_separator": ".",
+"currency_thousand_separator": ",",
+"currency_prefix": "$",
+"currency_suffix": ""
+},
+"categories": [
+{
+"id": 36,
+"name": "2022",
+"slug": "2022"
+},
+{
+"id": 37,
+"name": "2023",
+"slug": "2023"
+}
+],
+"is_in_stock": false,
+"is_purchasable": true
+},
+{
+"id": 6030,
+"name": "Dallas &#8211; Sports Card Zone &#8211; 5 Tables (Half Section)",
+"slug": "dallas-sports-card-zone-5-tables-half-section",
+"sku": "DALLAS-TABL-0005-S",
+"type": "simple",
+"permalink": "https://collectaconusa.com/product/dallas-sports-card-zone-5-tables-half-section/",
+"prices": {
+"price": "157500",
+"regular_price": "157500",
+"sale_price": "157500",
+"price_range": null,
+"currency_code": "USD",
+"currency_symbol": "$",
+"currency_minor_unit": 2,
+"currency_decimal_separator": ".",
+"currency_thousand_separator": ",",
+"currency_prefix": "$",
+"currency_suffix": ""
+},
+"categories": [
+{
+"id": 36,
+"name": "2022",
+"slug": "2022"
+},
+{
+"id": 37,
+"name": "2023",
+"slug": "2023"
+}
+],
+"is_in_stock": false,
+"is_purchasable": true
+},
+{
+"id": 6029,
+"name": "Dallas &#8211; Sports Card Zone &#8211; 3 Tables",
+"slug": "dallas-sports-card-zone-3-tables",
+"sku": "DALLAS-TABL-0003-S",
+"type": "simple",
+"permalink": "https://collectaconusa.com/product/dallas-sports-card-zone-3-tables/",
+"prices": {
+"price": "97500",
+"regular_price": "97500",
+"sale_price": "97500",
+"price_range": null,
+"currency_code": "USD",
+"currency_symbol": "$",
+"currency_minor_unit": 2,
+"currency_decimal_separator": ".",
+"currency_thousand_separator": ",",
+"currency_prefix": "$",
+"currency_suffix": ""
+},
+"categories": [
+{
+"id": 36,
+"name": "2022",
+"slug": "2022"
+},
+{
+"id": 37,
+"name": "2023",
+"slug": "2023"
+}
+],
+"is_in_stock": false,
+"is_purchasable": true
+},
+{
+"id": 6028,
+"name": "Dallas &#8211; Sports Card Zone &#8211; 2 Tables",
+"slug": "dallas-2-tables-copy",
+"sku": "DALLAS-TABL-0002-S",
+"type": "simple",
+"permalink": "https://collectaconusa.com/product/dallas-2-tables-copy/",
+"prices": {
+"price": "75000",
+"regular_price": "75000",
+"sale_price": "75000",
+"price_range": null,
+"currency_code": "USD",
+"currency_symbol": "$",
+"currency_minor_unit": 2,
+"currency_decimal_separator": ".",
+"currency_thousand_separator": ",",
+"currency_prefix": "$",
+"currency_suffix": ""
+},
+"categories": [
+{
+"id": 36,
+"name": "2022",
+"slug": "2022"
+},
+{
+"id": 37,
+"name": "2023",
+"slug": "2023"
+}
+],
+"is_in_stock": false,
+"is_purchasable": true
+},
+{
+"id": 6013,
+"name": "Dallas &#8211; 10 Tables (Full Section)",
+"slug": "dallas-10-tables-full-section",
+"sku": "DALLAS-TABL-0010",
+"type": "simple",
+"permalink": "https://collectaconusa.com/product/dallas-10-tables-full-section/",
+"prices": {
+"price": "389500",
+"regular_price": "389500",
+"sale_price": "389500",
+"price_range": null,
+"currency_code": "USD",
+"currency_symbol": "$",
+"currency_minor_unit": 2,
+"currency_decimal_separator": ".",
+"currency_thousand_separator": ",",
+"currency_prefix": "$",
+"currency_suffix": ""
+},
+"categories": [
+{
+"id": 36,
+"name": "2022",
+"slug": "2022"
+},
+{
+"id": 37,
+"name": "2023",
+"slug": "2023"
+},
+{
+"id": 38,
+"name": "2024",
+"slug": "2024"
+}
+],
+"is_in_stock": false,
+"is_purchasable": true
+},
+{
+"id": 6012,
+"name": "Dallas &#8211; 5 Tables (Half Section)",
+"slug": "dallas-5-tables-half-section",
+"sku": "DALLAS-TABL-0005",
+"type": "simple",
+"permalink": "https://collectaconusa.com/product/dallas-5-tables-half-section/",
+"prices": {
+"price": "197500",
+"regular_price": "197500",
+"sale_price": "197500",
+"price_range": null,
+"currency_code": "USD",
+"currency_symbol": "$",
+"currency_minor_unit": 2,
+"currency_decimal_separator": ".",
+"currency_thousand_separator": ",",
+"currency_prefix": "$",
+"currency_suffix": ""
+},
+"categories": [
+{
+"id": 36,
+"name": "2022",
+"slug": "2022"
+},
+{
+"id": 37,
+"name": "2023",
+"slug": "2023"
+},
+{
+"id": 38,
+"name": "2024",
+"slug": "2024"
+}
+],
+"is_in_stock": false,
+"is_purchasable": true
+},
+{
+"id": 6011,
+"name": "Dallas &#8211; 3 Tables",
+"slug": "dallas-3-tables",
+"sku": "DALLAS-TABL-0003",
+"type": "simple",
+"permalink": "https://collectaconusa.com/product/dallas-3-tables/",
+"prices": {
+"price": "97500",
+"regular_price": "97500",
+"sale_price": "97500",
+"price_range": null,
+"currency_code": "USD",
+"currency_symbol": "$",
+"currency_minor_unit": 2,
+"currency_decimal_separator": ".",
+"currency_thousand_separator": ",",
+"currency_prefix": "$",
+"currency_suffix": ""
+},
+"categories": [
+{
+"id": 36,
+"name": "2022",
+"slug": "2022"
+},
+{
+"id": 37,
+"name": "2023",
+"slug": "2023"
+},
+{
+"id": 38,
+"name": "2024",
+"slug": "2024"
+}
+],
+"is_in_stock": false,
+"is_purchasable": true
+},
+{
+"id": 6010,
+"name": "Dallas &#8211; 2 Tables",
+"slug": "dallas-2-tables",
+"sku": "DALLAS-TABL-0002",
+"type": "simple",
+"permalink": "https://collectaconusa.com/product/dallas-2-tables/",
+"prices": {
+"price": "75000",
+"regular_price": "75000",
+"sale_price": "75000",
+"price_range": null,
+"currency_code": "USD",
+"currency_symbol": "$",
+"currency_minor_unit": 2,
+"currency_decimal_separator": ".",
+"currency_thousand_separator": ",",
+"currency_prefix": "$",
+"currency_suffix": ""
+},
+"categories": [
+{
+"id": 36,
+"name": "2022",
+"slug": "2022"
+},
+{
+"id": 37,
+"name": "2023",
+"slug": "2023"
+},
+{
+"id": 38,
+"name": "2024",
+"slug": "2024"
+}
+],
+"is_in_stock": false,
+"is_purchasable": true
+},
+{
+"id": 5331,
+"name": "Collect-A-Con T-Shirt &#8211; Hunter",
+"slug": "collect-a-con-t-shirt-hunter",
+"sku": "COLL-MRCH-SHRT-HBXX",
+"type": "variable",
+"permalink": "https://collectaconusa.com/product/collect-a-con-t-shirt-hunter/",
+"prices": {
+"price": "2500",
+"regular_price": "2500",
+"sale_price": "2500",
+"price_range": null,
+"currency_code": "USD",
+"currency_symbol": "$",
+"currency_minor_unit": 2,
+"currency_decimal_separator": ".",
+"currency_thousand_separator": ",",
+"currency_prefix": "$",
+"currency_suffix": ""
+},
+"categories": [
+{
+"id": 60,
+"name": "Merchandise",
+"slug": "merchandise"
+}
+],
+"is_in_stock": false,
+"is_purchasable": true
+},
+{
+"id": 5321,
+"name": "Collect-A-Con Shirt &#8211; Official Logo",
+"slug": "collect-a-con-shirt-logo",
+"sku": "COLL-MRCH-SHRT-OBXX",
+"type": "variable",
+"permalink": "https://collectaconusa.com/product/collect-a-con-shirt-logo/",
+"prices": {
+"price": "2500",
+"regular_price": "2500",
+"sale_price": "2500",
+"price_range": null,
+"currency_code": "USD",
+"currency_symbol": "$",
+"currency_minor_unit": 2,
+"currency_decimal_separator": ".",
+"currency_thousand_separator": ",",
+"currency_prefix": "$",
+"currency_suffix": ""
+},
+"categories": [
+{
+"id": 60,
+"name": "Merchandise",
+"slug": "merchandise"
+}
+],
+"is_in_stock": false,
+"is_purchasable": true
+},
+{
+"id": 4826,
+"name": "Houston &#8211; Sports Card Zone &#8211; 2 Tables",
+"slug": "houston-sports-card-zone-2-tables",
+"sku": "HOUS-TABL-0002-1",
+"type": "simple",
+"permalink": "https://collectaconusa.com/product/houston-sports-card-zone-2-tables/",
+"prices": {
+"price": "70000",
+"regular_price": "70000",
+"sale_price": "70000",
+"price_range": null,
+"currency_code": "USD",
+"currency_symbol": "$",
+"currency_minor_unit": 2,
+"currency_decimal_separator": ".",
+"currency_thousand_separator": ",",
+"currency_prefix": "$",
+"currency_suffix": ""
+},
+"categories": [
+{
+"id": 36,
+"name": "2022",
+"slug": "2022"
+},
+{
+"id": 37,
+"name": "2023",
+"slug": "2023"
+}
+],
+"is_in_stock": false,
+"is_purchasable": true
+},
+{
+"id": 4825,
+"name": "Houston &#8211; Sports Card Zone &#8211; 3 Tables",
+"slug": "houston-sports-card-zone-3-tables",
+"sku": "HOUS-TABL-0003-1",
+"type": "simple",
+"permalink": "https://collectaconusa.com/product/houston-sports-card-zone-3-tables/",
+"prices": {
+"price": "95000",
+"regular_price": "95000",
+"sale_price": "95000",
+"price_range": null,
+"currency_code": "USD",
+"currency_symbol": "$",
+"currency_minor_unit": 2,
+"currency_decimal_separator": ".",
+"currency_thousand_separator": ",",
+"currency_prefix": "$",
+"currency_suffix": ""
+},
+"categories": [
+{
+"id": 36,
+"name": "2022",
+"slug": "2022"
+},
+{
+"id": 37,
+"name": "2023",
+"slug": "2023"
+}
+],
+"is_in_stock": false,
+"is_purchasable": true
+},
+{
+"id": 4824,
+"name": "Houston &#8211; Sports Card Zone &#8211; 10 Tables (Full Section)",
+"slug": "houston-sports-card-zone-10-tables-full-section",
+"sku": "HOUS-TABL-0010-1",
+"type": "simple",
+"permalink": "https://collectaconusa.com/product/houston-sports-card-zone-10-tables-full-section/",
+"prices": {
+"price": "270000",
+"regular_price": "270000",
+"sale_price": "270000",
+"price_range": null,
+"currency_code": "USD",
+"currency_symbol": "$",
+"currency_minor_unit": 2,
+"currency_decimal_separator": ".",
+"currency_thousand_separator": ",",
+"currency_prefix": "$",
+"currency_suffix": ""
+},
+"categories": [
+{
+"id": 36,
+"name": "2022",
+"slug": "2022"
+},
+{
+"id": 37,
+"name": "2023",
+"slug": "2023"
+}
+],
+"is_in_stock": false,
+"is_purchasable": true
+},
+{
+"id": 4823,
+"name": "Houston &#8211; Sports Card Zone &#8211; 5 Tables (Half Section)",
+"slug": "houston-sports-card-zone-5-tables-half-section",
+"sku": "HOUS-TABL-0005-1",
+"type": "simple",
+"permalink": "https://collectaconusa.com/product/houston-sports-card-zone-5-tables-half-section/",
+"prices": {
+"price": "150000",
+"regular_price": "150000",
+"sale_price": "150000",
+"price_range": null,
+"currency_code": "USD",
+"currency_symbol": "$",
+"currency_minor_unit": 2,
+"currency_decimal_separator": ".",
+"currency_thousand_separator": ",",
+"currency_prefix": "$",
+"currency_suffix": ""
+},
+"categories": [
+{
+"id": 36,
+"name": "2022",
+"slug": "2022"
+},
+{
+"id": 37,
+"name": "2023",
+"slug": "2023"
+}
+],
+"is_in_stock": false,
+"is_purchasable": true
+},
+{
+"id": 4566,
+"name": "Denver &#8211; Sports Card Zone &#8211; 2 Tables",
+"slug": "denver-sports-card-zone-2-tables",
+"sku": "DENV-TABL-0002-1",
+"type": "simple",
+"permalink": "https://collectaconusa.com/product/denver-sports-card-zone-2-tables/",
+"prices": {
+"price": "70000",
+"regular_price": "70000",
+"sale_price": "70000",
+"price_range": null,
+"currency_code": "USD",
+"currency_symbol": "$",
+"currency_minor_unit": 2,
+"currency_decimal_separator": ".",
+"currency_thousand_separator": ",",
+"currency_prefix": "$",
+"currency_suffix": ""
+},
+"categories": [
+{
+"id": 36,
+"name": "2022",
+"slug": "2022"
+},
+{
+"id": 37,
+"name": "2023",
+"slug": "2023"
+}
+],
+"is_in_stock": false,
+"is_purchasable": true
+},
+{
+"id": 4565,
+"name": "Denver &#8211; Sports Card Zone &#8211; 3 Tables",
+"slug": "denver-sports-card-zone-3-tables",
+"sku": "DENV-TABL-0003-1",
+"type": "simple",
+"permalink": "https://collectaconusa.com/product/denver-sports-card-zone-3-tables/",
+"prices": {
+"price": "95000",
+"regular_price": "95000",
+"sale_price": "95000",
+"price_range": null,
+"currency_code": "USD",
+"currency_symbol": "$",
+"currency_minor_unit": 2,
+"currency_decimal_separator": ".",
+"currency_thousand_separator": ",",
+"currency_prefix": "$",
+"currency_suffix": ""
+},
+"categories": [
+{
+"id": 36,
+"name": "2022",
+"slug": "2022"
+},
+{
+"id": 37,
+"name": "2023",
+"slug": "2023"
+}
+],
+"is_in_stock": false,
+"is_purchasable": true
+},
+{
+"id": 4564,
+"name": "Denver &#8211; Sports Card Zone &#8211; 5 Tables (Half Section)",
+"slug": "denver-sports-card-zone-5-tables-half-section",
+"sku": "DENV-TABL-0005-1",
+"type": "simple",
+"permalink": "https://collectaconusa.com/product/denver-sports-card-zone-5-tables-half-section/",
+"prices": {
+"price": "150000",
+"regular_price": "150000",
+"sale_price": "150000",
+"price_range": null,
+"currency_code": "USD",
+"currency_symbol": "$",
+"currency_minor_unit": 2,
+"currency_decimal_separator": ".",
+"currency_thousand_separator": ",",
+"currency_prefix": "$",
+"currency_suffix": ""
+},
+"categories": [
+{
+"id": 36,
+"name": "2022",
+"slug": "2022"
+},
+{
+"id": 37,
+"name": "2023",
+"slug": "2023"
+}
+],
+"is_in_stock": false,
+"is_purchasable": true
+},
+{
+"id": 4563,
+"name": "Denver &#8211; Sports Card Zone &#8211; 10 Tables (Full Section)",
+"slug": "denver-sports-card-zone-10-tables-full-section",
+"sku": "DENV-TABL-0010-1",
+"type": "simple",
+"permalink": "https://collectaconusa.com/product/denver-sports-card-zone-10-tables-full-section/",
+"prices": {
+"price": "270000",
+"regular_price": "270000",
+"sale_price": "270000",
+"price_range": null,
+"currency_code": "USD",
+"currency_symbol": "$",
+"currency_minor_unit": 2,
+"currency_decimal_separator": ".",
+"currency_thousand_separator": ",",
+"currency_prefix": "$",
+"currency_suffix": ""
+},
+"categories": [
+{
+"id": 36,
+"name": "2022",
+"slug": "2022"
+},
+{
+"id": 37,
+"name": "2023",
+"slug": "2023"
+}
+],
+"is_in_stock": false,
+"is_purchasable": true
+},
+{
+"id": 4388,
+"name": "Long Beach &#8211; Sports Zone &#8211; 10 Tables (Full Section)",
+"slug": "long-beach-sports-zone-10-tables-full-section",
+"sku": "LBCH-TABL-0010-1",
+"type": "simple",
+"permalink": "https://collectaconusa.com/product/long-beach-sports-zone-10-tables-full-section/",
+"prices": {
+"price": "250000",
+"regular_price": "250000",
+"sale_price": "250000",
+"price_range": null,
+"currency_code": "USD",
+"currency_symbol": "$",
+"currency_minor_unit": 2,
+"currency_decimal_separator": ".",
+"currency_thousand_separator": ",",
+"currency_prefix": "$",
+"currency_suffix": ""
+},
+"categories": [
+{
+"id": 36,
+"name": "2022",
+"slug": "2022"
+}
+],
+"is_in_stock": false,
+"is_purchasable": true
+},
+{
+"id": 4387,
+"name": "Long Beach &#8211; Sports Zone &#8211; 2 Tables",
+"slug": "long-beach-sports-zone-2-tables",
+"sku": "LBCH-TABL-0002-1",
+"type": "simple",
+"permalink": "https://collectaconusa.com/product/long-beach-sports-zone-2-tables/",
+"prices": {
+"price": "60000",
+"regular_price": "60000",
+"sale_price": "60000",
+"price_range": null,
+"currency_code": "USD",
+"currency_symbol": "$",
+"currency_minor_unit": 2,
+"currency_decimal_separator": ".",
+"currency_thousand_separator": ",",
+"currency_prefix": "$",
+"currency_suffix": ""
+},
+"categories": [
+{
+"id": 36,
+"name": "2022",
+"slug": "2022"
+}
+],
+"is_in_stock": false,
+"is_purchasable": true
+},
+{
+"id": 4386,
+"name": "Long Beach &#8211; Sports Zone &#8211; 3 Tables",
+"slug": "long-beach-sports-zone-3-tables",
+"sku": "LBCH-TABL-0003-1",
+"type": "simple",
+"permalink": "https://collectaconusa.com/product/long-beach-sports-zone-3-tables/",
+"prices": {
+"price": "85000",
+"regular_price": "85000",
+"sale_price": "85000",
+"price_range": null,
+"currency_code": "USD",
+"currency_symbol": "$",
+"currency_minor_unit": 2,
+"currency_decimal_separator": ".",
+"currency_thousand_separator": ",",
+"currency_prefix": "$",
+"currency_suffix": ""
+},
+"categories": [
+{
+"id": 36,
+"name": "2022",
+"slug": "2022"
+}
+],
+"is_in_stock": false,
+"is_purchasable": true
+},
+{
+"id": 4385,
+"name": "Long Beach &#8211; Sports Zone &#8211; 5 Tables (Half Section)",
+"slug": "long-beach-sports-zone-5-tables-half-section",
+"sku": "LBCH-TABL-0005-1",
+"type": "simple",
+"permalink": "https://collectaconusa.com/product/long-beach-sports-zone-5-tables-half-section/",
+"prices": {
+"price": "130000",
+"regular_price": "130000",
+"sale_price": "130000",
+"price_range": null,
+"currency_code": "USD",
+"currency_symbol": "$",
+"currency_minor_unit": 2,
+"currency_decimal_separator": ".",
+"currency_thousand_separator": ",",
+"currency_prefix": "$",
+"currency_suffix": ""
+},
+"categories": [
+{
+"id": 36,
+"name": "2022",
+"slug": "2022"
+}
+],
+"is_in_stock": false,
+"is_purchasable": true
+},
+{
+"id": 4377,
+"name": "Kansas City &#8211; Sports Card Zone &#8211; 5 Tables (Half Section)",
+"slug": "kansas-city-sports-card-zone-5-tables-half-section",
+"sku": "KANS-TABL-0005-1",
+"type": "simple",
+"permalink": "https://collectaconusa.com/product/kansas-city-sports-card-zone-5-tables-half-section/",
+"prices": {
+"price": "120000",
+"regular_price": "120000",
+"sale_price": "120000",
+"price_range": null,
+"currency_code": "USD",
+"currency_symbol": "$",
+"currency_minor_unit": 2,
+"currency_decimal_separator": ".",
+"currency_thousand_separator": ",",
+"currency_prefix": "$",
+"currency_suffix": ""
+},
+"categories": [
+{
+"id": 36,
+"name": "2022",
+"slug": "2022"
+},
+{
+"id": 37,
+"name": "2023",
+"slug": "2023"
+}
+],
+"is_in_stock": false,
+"is_purchasable": true
+},
+{
+"id": 4376,
+"name": "Kansas City &#8211; Sports Card Zone &#8211; 3 Tables",
+"slug": "kansas-city-sports-card-zone-3-tables",
+"sku": "KANS-TABL-0003-1",
+"type": "simple",
+"permalink": "https://collectaconusa.com/product/kansas-city-sports-card-zone-3-tables/",
+"prices": {
+"price": "75000",
+"regular_price": "75000",
+"sale_price": "75000",
+"price_range": null,
+"currency_code": "USD",
+"currency_symbol": "$",
+"currency_minor_unit": 2,
+"currency_decimal_separator": ".",
+"currency_thousand_separator": ",",
+"currency_prefix": "$",
+"currency_suffix": ""
+},
+"categories": [
+{
+"id": 36,
+"name": "2022",
+"slug": "2022"
+},
+{
+"id": 37,
+"name": "2023",
+"slug": "2023"
+}
+],
+"is_in_stock": false,
+"is_purchasable": true
+},
+{
+"id": 4375,
+"name": "Kansas City &#8211; Sports Card Zone &#8211; 2 Tables",
+"slug": "kansas-city-sports-card-zone-2-tables",
+"sku": "KANS-TABL-0002-1",
+"type": "simple",
+"permalink": "https://collectaconusa.com/product/kansas-city-sports-card-zone-2-tables/",
+"prices": {
+"price": "50000",
+"regular_price": "50000",
+"sale_price": "50000",
+"price_range": null,
+"currency_code": "USD",
+"currency_symbol": "$",
+"currency_minor_unit": 2,
+"currency_decimal_separator": ".",
+"currency_thousand_separator": ",",
+"currency_prefix": "$",
+"currency_suffix": ""
+},
+"categories": [
+{
+"id": 36,
+"name": "2022",
+"slug": "2022"
+},
+{
+"id": 37,
+"name": "2023",
+"slug": "2023"
+}
+],
+"is_in_stock": false,
+"is_purchasable": true
+},
+{
+"id": 3942,
+"name": "Kansas City &#8211; Sports Card Zone &#8211; 10 Tables (Full Section)",
+"slug": "kansas-city-10-tables-full-section-sports",
+"sku": "KANS-TABL-0010-SPORTS",
+"type": "simple",
+"permalink": "https://collectaconusa.com/product/kansas-city-10-tables-full-section-sports/",
+"prices": {
+"price": "230000",
+"regular_price": "230000",
+"sale_price": "230000",
+"price_range": null,
+"currency_code": "USD",
+"currency_symbol": "$",
+"currency_minor_unit": 2,
+"currency_decimal_separator": ".",
+"currency_thousand_separator": ",",
+"currency_prefix": "$",
+"currency_suffix": ""
+},
+"categories": [
+{
+"id": 36,
+"name": "2022",
+"slug": "2022"
+},
+{
+"id": 37,
+"name": "2023",
+"slug": "2023"
+}
+],
+"is_in_stock": false,
+"is_purchasable": true
+},
+{
+"id": 2654,
+"name": "Houston &#8211; 1 Table",
+"slug": "houston-1-table",
+"sku": "HOUS-TABL-0001",
+"type": "simple",
+"permalink": "https://collectaconusa.com/product/houston-1-table/",
+"prices": {
+"price": "22500",
+"regular_price": "22500",
+"sale_price": "22500",
+"price_range": null,
+"currency_code": "USD",
+"currency_symbol": "$",
+"currency_minor_unit": 2,
+"currency_decimal_separator": ".",
+"currency_thousand_separator": ",",
+"currency_prefix": "$",
+"currency_suffix": ""
+},
+"categories": [],
+"is_in_stock": false,
+"is_purchasable": true
+},
+{
+"id": 2653,
+"name": "Houston &#8211; 2 Tables",
+"slug": "houston-2-tables",
+"sku": "HOUS-TABL-0002",
+"type": "simple",
+"permalink": "https://collectaconusa.com/product/houston-2-tables/",
+"prices": {
+"price": "70000",
+"regular_price": "70000",
+"sale_price": "70000",
+"price_range": null,
+"currency_code": "USD",
+"currency_symbol": "$",
+"currency_minor_unit": 2,
+"currency_decimal_separator": ".",
+"currency_thousand_separator": ",",
+"currency_prefix": "$",
+"currency_suffix": ""
+},
+"categories": [
+{
+"id": 36,
+"name": "2022",
+"slug": "2022"
+},
+{
+"id": 37,
+"name": "2023",
+"slug": "2023"
+}
+],
+"is_in_stock": false,
+"is_purchasable": true
+},
+{
+"id": 2652,
+"name": "Houston &#8211; 3 Tables",
+"slug": "houston-3-tables",
+"sku": "HOUS-TABL-0003",
+"type": "simple",
+"permalink": "https://collectaconusa.com/product/houston-3-tables/",
+"prices": {
+"price": "95000",
+"regular_price": "95000",
+"sale_price": "95000",
+"price_range": null,
+"currency_code": "USD",
+"currency_symbol": "$",
+"currency_minor_unit": 2,
+"currency_decimal_separator": ".",
+"currency_thousand_separator": ",",
+"currency_prefix": "$",
+"currency_suffix": ""
+},
+"categories": [
+{
+"id": 36,
+"name": "2022",
+"slug": "2022"
+},
+{
+"id": 37,
+"name": "2023",
+"slug": "2023"
+}
+],
+"is_in_stock": false,
+"is_purchasable": true
+},
+{
+"id": 2651,
+"name": "Houston &#8211; 4 Tables",
+"slug": "houston-4-tables",
+"sku": "HOUS-TABL-0004",
+"type": "simple",
+"permalink": "https://collectaconusa.com/product/houston-4-tables/",
+"prices": {
+"price": "77500",
+"regular_price": "77500",
+"sale_price": "77500",
+"price_range": null,
+"currency_code": "USD",
+"currency_symbol": "$",
+"currency_minor_unit": 2,
+"currency_decimal_separator": ".",
+"currency_thousand_separator": ",",
+"currency_prefix": "$",
+"currency_suffix": ""
+},
+"categories": [],
+"is_in_stock": false,
+"is_purchasable": true
+},
+{
+"id": 2650,
+"name": "Houston &#8211; 5 Tables (Half Section)",
+"slug": "houston-5-tables-half-section",
+"sku": "HOUS-TABL-0005",
+"type": "simple",
+"permalink": "https://collectaconusa.com/product/houston-5-tables-half-section/",
+"prices": {
+"price": "150000",
+"regular_price": "150000",
+"sale_price": "150000",
+"price_range": null,
+"currency_code": "USD",
+"currency_symbol": "$",
+"currency_minor_unit": 2,
+"currency_decimal_separator": ".",
+"currency_thousand_separator": ",",
+"currency_prefix": "$",
+"currency_suffix": ""
+},
+"categories": [
+{
+"id": 36,
+"name": "2022",
+"slug": "2022"
+},
+{
+"id": 37,
+"name": "2023",
+"slug": "2023"
+}
+],
+"is_in_stock": false,
+"is_purchasable": true
+},
+{
+"id": 2649,
+"name": "Houston &#8211; 10 Tables (Full Section)",
+"slug": "houston-10-tables-full-section",
+"sku": "HOUS-TABL-0010",
+"type": "simple",
+"permalink": "https://collectaconusa.com/product/houston-10-tables-full-section/",
+"prices": {
+"price": "270000",
+"regular_price": "270000",
+"sale_price": "270000",
+"price_range": null,
+"currency_code": "USD",
+"currency_symbol": "$",
+"currency_minor_unit": 2,
+"currency_decimal_separator": ".",
+"currency_thousand_separator": ",",
+"currency_prefix": "$",
+"currency_suffix": ""
+},
+"categories": [
+{
+"id": 36,
+"name": "2022",
+"slug": "2022"
+},
+{
+"id": 37,
+"name": "2023",
+"slug": "2023"
+}
+],
+"is_in_stock": false,
+"is_purchasable": true
+},
+{
+"id": 2042,
+"name": "Denver &#8211; 10 Tables (Full Section)",
+"slug": "denver-10-tables-full-section",
+"sku": "DENV-TABL-0010",
+"type": "simple",
+"permalink": "https://collectaconusa.com/product/denver-10-tables-full-section/",
+"prices": {
+"price": "270000",
+"regular_price": "270000",
+"sale_price": "270000",
+"price_range": null,
+"currency_code": "USD",
+"currency_symbol": "$",
+"currency_minor_unit": 2,
+"currency_decimal_separator": ".",
+"currency_thousand_separator": ",",
+"currency_prefix": "$",
+"currency_suffix": ""
+},
+"categories": [
+{
+"id": 36,
+"name": "2022",
+"slug": "2022"
+},
+{
+"id": 37,
+"name": "2023",
+"slug": "2023"
+}
+],
+"is_in_stock": false,
+"is_purchasable": true
+},
+{
+"id": 2041,
+"name": "Denver &#8211; 5 Tables (Half Section)",
+"slug": "denver-5-tables-half-section",
+"sku": "DENV-TABL-0005",
+"type": "simple",
+"permalink": "https://collectaconusa.com/product/denver-5-tables-half-section/",
+"prices": {
+"price": "150000",
+"regular_price": "150000",
+"sale_price": "150000",
+"price_range": null,
+"currency_code": "USD",
+"currency_symbol": "$",
+"currency_minor_unit": 2,
+"currency_decimal_separator": ".",
+"currency_thousand_separator": ",",
+"currency_prefix": "$",
+"currency_suffix": ""
+},
+"categories": [
+{
+"id": 36,
+"name": "2022",
+"slug": "2022"
+},
+{
+"id": 37,
+"name": "2023",
+"slug": "2023"
+}
+],
+"is_in_stock": false,
+"is_purchasable": true
+},
+{
+"id": 2040,
+"name": "Denver &#8211; 4 Tables",
+"slug": "denver-4-tables",
+"sku": "DENV-TABL-0004",
+"type": "simple",
+"permalink": "https://collectaconusa.com/product/denver-4-tables/",
+"prices": {
+"price": "77500",
+"regular_price": "77500",
+"sale_price": "77500",
+"price_range": null,
+"currency_code": "USD",
+"currency_symbol": "$",
+"currency_minor_unit": 2,
+"currency_decimal_separator": ".",
+"currency_thousand_separator": ",",
+"currency_prefix": "$",
+"currency_suffix": ""
+},
+"categories": [
+{
+"id": 36,
+"name": "2022",
+"slug": "2022"
+},
+{
+"id": 37,
+"name": "2023",
+"slug": "2023"
+}
+],
+"is_in_stock": false,
+"is_purchasable": true
+},
+{
+"id": 2039,
+"name": "Denver &#8211; 3 Tables",
+"slug": "denver-3-tables",
+"sku": "DENV-TABL-0003",
+"type": "simple",
+"permalink": "https://collectaconusa.com/product/denver-3-tables/",
+"prices": {
+"price": "95000",
+"regular_price": "95000",
+"sale_price": "95000",
+"price_range": null,
+"currency_code": "USD",
+"currency_symbol": "$",
+"currency_minor_unit": 2,
+"currency_decimal_separator": ".",
+"currency_thousand_separator": ",",
+"currency_prefix": "$",
+"currency_suffix": ""
+},
+"categories": [
+{
+"id": 36,
+"name": "2022",
+"slug": "2022"
+},
+{
+"id": 37,
+"name": "2023",
+"slug": "2023"
+}
+],
+"is_in_stock": false,
+"is_purchasable": true
+},
+{
+"id": 2038,
+"name": "Denver &#8211; 2 Tables",
+"slug": "denver-2-tables",
+"sku": "DENV-TABL-0002",
+"type": "simple",
+"permalink": "https://collectaconusa.com/product/denver-2-tables/",
+"prices": {
+"price": "70000",
+"regular_price": "70000",
+"sale_price": "70000",
+"price_range": null,
+"currency_code": "USD",
+"currency_symbol": "$",
+"currency_minor_unit": 2,
+"currency_decimal_separator": ".",
+"currency_thousand_separator": ",",
+"currency_prefix": "$",
+"currency_suffix": ""
+},
+"categories": [
+{
+"id": 36,
+"name": "2022",
+"slug": "2022"
+},
+{
+"id": 37,
+"name": "2023",
+"slug": "2023"
+}
+],
+"is_in_stock": false,
+"is_purchasable": true
+},
+{
+"id": 2037,
+"name": "Denver &#8211; 1 Table",
+"slug": "denver-1-table",
+"sku": "DENV-TABL-0001",
+"type": "simple",
+"permalink": "https://collectaconusa.com/product/denver-1-table/",
+"prices": {
+"price": "22500",
+"regular_price": "22500",
+"sale_price": "22500",
+"price_range": null,
+"currency_code": "USD",
+"currency_symbol": "$",
+"currency_minor_unit": 2,
+"currency_decimal_separator": ".",
+"currency_thousand_separator": ",",
+"currency_prefix": "$",
+"currency_suffix": ""
+},
+"categories": [
+{
+"id": 36,
+"name": "2022",
+"slug": "2022"
+},
+{
+"id": 37,
+"name": "2023",
+"slug": "2023"
+}
+],
+"is_in_stock": false,
+"is_purchasable": true
+},
+{
+"id": 1565,
+"name": "Kansas City &#8211; 5 Tables (Half Section)",
+"slug": "kansas-city-5-tables-half-section",
+"sku": "KANS-TABL-0005",
+"type": "simple",
+"permalink": "https://collectaconusa.com/product/kansas-city-5-tables-half-section/",
+"prices": {
+"price": "185000",
+"regular_price": "185000",
+"sale_price": "185000",
+"price_range": null,
+"currency_code": "USD",
+"currency_symbol": "$",
+"currency_minor_unit": 2,
+"currency_decimal_separator": ".",
+"currency_thousand_separator": ",",
+"currency_prefix": "$",
+"currency_suffix": ""
+},
+"categories": [
+{
+"id": 36,
+"name": "2022",
+"slug": "2022"
+},
+{
+"id": 37,
+"name": "2023",
+"slug": "2023"
+},
+{
+"id": 38,
+"name": "2024",
+"slug": "2024"
+},
+{
+"id": 39,
+"name": "2025",
+"slug": "2025"
+}
+],
+"is_in_stock": false,
+"is_purchasable": true
+},
+{
+"id": 1564,
+"name": "Kansas City &#8211; 4 Tables",
+"slug": "kansas-city-4-tables",
+"sku": "KANS-TABL-0004",
+"type": "simple",
+"permalink": "https://collectaconusa.com/product/kansas-city-4-tables/",
+"prices": {
+"price": "77500",
+"regular_price": "77500",
+"sale_price": "77500",
+"price_range": null,
+"currency_code": "USD",
+"currency_symbol": "$",
+"currency_minor_unit": 2,
+"currency_decimal_separator": ".",
+"currency_thousand_separator": ",",
+"currency_prefix": "$",
+"currency_suffix": ""
+},
+"categories": [
+{
+"id": 36,
+"name": "2022",
+"slug": "2022"
+}
+],
+"is_in_stock": false,
+"is_purchasable": true
+},
+{
+"id": 1563,
+"name": "Kansas City &#8211; 3 Tables",
+"slug": "kansas-city-3-tables",
+"sku": "KANS-TABL-0003",
+"type": "simple",
+"permalink": "https://collectaconusa.com/product/kansas-city-3-tables/",
+"prices": {
+"price": "97500",
+"regular_price": "97500",
+"sale_price": "97500",
+"price_range": null,
+"currency_code": "USD",
+"currency_symbol": "$",
+"currency_minor_unit": 2,
+"currency_decimal_separator": ".",
+"currency_thousand_separator": ",",
+"currency_prefix": "$",
+"currency_suffix": ""
+},
+"categories": [
+{
+"id": 36,
+"name": "2022",
+"slug": "2022"
+},
+{
+"id": 37,
+"name": "2023",
+"slug": "2023"
+},
+{
+"id": 38,
+"name": "2024",
+"slug": "2024"
+},
+{
+"id": 39,
+"name": "2025",
+"slug": "2025"
+}
+],
+"is_in_stock": false,
+"is_purchasable": true
+},
+{
+"id": 1562,
+"name": "Kansas City &#8211; 2 Tables",
+"slug": "kansas-city-2-tables",
+"sku": "KANS-TABL-0002",
+"type": "simple",
+"permalink": "https://collectaconusa.com/product/kansas-city-2-tables/",
+"prices": {
+"price": "75000",
+"regular_price": "75000",
+"sale_price": "75000",
+"price_range": null,
+"currency_code": "USD",
+"currency_symbol": "$",
+"currency_minor_unit": 2,
+"currency_decimal_separator": ".",
+"currency_thousand_separator": ",",
+"currency_prefix": "$",
+"currency_suffix": ""
+},
+"categories": [
+{
+"id": 36,
+"name": "2022",
+"slug": "2022"
+},
+{
+"id": 37,
+"name": "2023",
+"slug": "2023"
+},
+{
+"id": 38,
+"name": "2024",
+"slug": "2024"
+},
+{
+"id": 39,
+"name": "2025",
+"slug": "2025"
+}
+],
+"is_in_stock": false,
+"is_purchasable": true
+},
+{
+"id": 1561,
+"name": "Kansas City &#8211; 10 Tables (Full Section)",
+"slug": "kansas-city-10-tables-full-section",
+"sku": "KANS-TABL-0010",
+"type": "simple",
+"permalink": "https://collectaconusa.com/product/kansas-city-10-tables-full-section/",
+"prices": {
+"price": "349500",
+"regular_price": "349500",
+"sale_price": "349500",
+"price_range": null,
+"currency_code": "USD",
+"currency_symbol": "$",
+"currency_minor_unit": 2,
+"currency_decimal_separator": ".",
+"currency_thousand_separator": ",",
+"currency_prefix": "$",
+"currency_suffix": ""
+},
+"categories": [
+{
+"id": 36,
+"name": "2022",
+"slug": "2022"
+},
+{
+"id": 37,
+"name": "2023",
+"slug": "2023"
+},
+{
+"id": 38,
+"name": "2024",
+"slug": "2024"
+},
+{
+"id": 39,
+"name": "2025",
+"slug": "2025"
+}
+],
+"is_in_stock": false,
+"is_purchasable": true
+},
+{
+"id": 1560,
+"name": "Kansas City &#8211; 1 Table",
+"slug": "kansas-city-1-table",
+"sku": "KANS-TABL-0001",
+"type": "simple",
+"permalink": "https://collectaconusa.com/product/kansas-city-1-table/",
+"prices": {
+"price": "22500",
+"regular_price": "22500",
+"sale_price": "22500",
+"price_range": null,
+"currency_code": "USD",
+"currency_symbol": "$",
+"currency_minor_unit": 2,
+"currency_decimal_separator": ".",
+"currency_thousand_separator": ",",
+"currency_prefix": "$",
+"currency_suffix": ""
+},
+"categories": [
+{
+"id": 36,
+"name": "2022",
+"slug": "2022"
+}
+],
+"is_in_stock": false,
+"is_purchasable": true
+},
+{
+"id": 1559,
+"name": "Long Beach &#8211; 5 Tables (Half Section)",
+"slug": "long-beach-5-tables-half-section",
+"sku": "LBCH-TABL-0005",
+"type": "simple",
+"permalink": "https://collectaconusa.com/product/long-beach-5-tables-half-section/",
+"prices": {
+"price": "130000",
+"regular_price": "130000",
+"sale_price": "130000",
+"price_range": null,
+"currency_code": "USD",
+"currency_symbol": "$",
+"currency_minor_unit": 2,
+"currency_decimal_separator": ".",
+"currency_thousand_separator": ",",
+"currency_prefix": "$",
+"currency_suffix": ""
+},
+"categories": [
+{
+"id": 36,
+"name": "2022",
+"slug": "2022"
+}
+],
+"is_in_stock": false,
+"is_purchasable": true
+},
+{
+"id": 1558,
+"name": "Long Beach &#8211; 4 Tables",
+"slug": "long-beach-4-tables",
+"sku": "LBCH-TABL-0004",
+"type": "simple",
+"permalink": "https://collectaconusa.com/product/long-beach-4-tables/",
+"prices": {
+"price": "77500",
+"regular_price": "77500",
+"sale_price": "77500",
+"price_range": null,
+"currency_code": "USD",
+"currency_symbol": "$",
+"currency_minor_unit": 2,
+"currency_decimal_separator": ".",
+"currency_thousand_separator": ",",
+"currency_prefix": "$",
+"currency_suffix": ""
+},
+"categories": [],
+"is_in_stock": false,
+"is_purchasable": true
+},
+{
+"id": 1557,
+"name": "Long Beach &#8211; 3 Tables",
+"slug": "long-beach-3-tables",
+"sku": "LBCH-TABL-0003",
+"type": "simple",
+"permalink": "https://collectaconusa.com/product/long-beach-3-tables/",
+"prices": {
+"price": "85000",
+"regular_price": "85000",
+"sale_price": "85000",
+"price_range": null,
+"currency_code": "USD",
+"currency_symbol": "$",
+"currency_minor_unit": 2,
+"currency_decimal_separator": ".",
+"currency_thousand_separator": ",",
+"currency_prefix": "$",
+"currency_suffix": ""
+},
+"categories": [
+{
+"id": 36,
+"name": "2022",
+"slug": "2022"
+}
+],
+"is_in_stock": false,
+"is_purchasable": true
+},
+{
+"id": 1556,
+"name": "Long Beach &#8211; 2 Tables",
+"slug": "long-beach-2-tables",
+"sku": "LBCH-TABL-0002",
+"type": "simple",
+"permalink": "https://collectaconusa.com/product/long-beach-2-tables/",
+"prices": {
+"price": "60000",
+"regular_price": "60000",
+"sale_price": "60000",
+"price_range": null,
+"currency_code": "USD",
+"currency_symbol": "$",
+"currency_minor_unit": 2,
+"currency_decimal_separator": ".",
+"currency_thousand_separator": ",",
+"currency_prefix": "$",
+"currency_suffix": ""
+},
+"categories": [
+{
+"id": 36,
+"name": "2022",
+"slug": "2022"
+}
+],
+"is_in_stock": false,
+"is_purchasable": true
+},
+{
+"id": 1555,
+"name": "Long Beach &#8211; 10 Tables (Full Section)",
+"slug": "long-beach-10-tables-full-section",
+"sku": "LBCH-TABL-0010",
+"type": "simple",
+"permalink": "https://collectaconusa.com/product/long-beach-10-tables-full-section/",
+"prices": {
+"price": "250000",
+"regular_price": "250000",
+"sale_price": "250000",
+"price_range": null,
+"currency_code": "USD",
+"currency_symbol": "$",
+"currency_minor_unit": 2,
+"currency_decimal_separator": ".",
+"currency_thousand_separator": ",",
+"currency_prefix": "$",
+"currency_suffix": ""
+},
+"categories": [
+{
+"id": 36,
+"name": "2022",
+"slug": "2022"
+}
+],
+"is_in_stock": false,
+"is_purchasable": true
+},
+{
+"id": 1554,
+"name": "Long Beach &#8211; 1 Table",
+"slug": "long-beach-1-table",
+"sku": "LBCH-TABL-0001",
+"type": "simple",
+"permalink": "https://collectaconusa.com/product/long-beach-1-table/",
+"prices": {
+"price": "22500",
+"regular_price": "22500",
+"sale_price": "22500",
+"price_range": null,
+"currency_code": "USD",
+"currency_symbol": "$",
+"currency_minor_unit": 2,
+"currency_decimal_separator": ".",
+"currency_thousand_separator": ",",
+"currency_prefix": "$",
+"currency_suffix": ""
+},
+"categories": [],
+"is_in_stock": false,
+"is_purchasable": true
+},
+{
+"id": 1406,
+"name": "Charlotte &#8211; 10 Tables (Full Section)",
+"slug": "charlotte-10-tables-full-section",
+"sku": "CHAR-TABL-0010",
+"type": "simple",
+"permalink": "https://collectaconusa.com/product/charlotte-10-tables-full-section/",
+"prices": {
+"price": "349500",
+"regular_price": "349500",
+"sale_price": "349500",
+"price_range": null,
+"currency_code": "USD",
+"currency_symbol": "$",
+"currency_minor_unit": 2,
+"currency_decimal_separator": ".",
+"currency_thousand_separator": ",",
+"currency_prefix": "$",
+"currency_suffix": ""
+},
+"categories": [
+{
+"id": 36,
+"name": "2022",
+"slug": "2022"
+},
+{
+"id": 37,
+"name": "2023",
+"slug": "2023"
+}
+],
+"is_in_stock": false,
+"is_purchasable": true
+},
+{
+"id": 1405,
+"name": "Charlotte &#8211; 5 Tables (Half Section)",
+"slug": "charlotte-5-tables-half-section",
+"sku": "CHAR-TABL-0005",
+"type": "simple",
+"permalink": "https://collectaconusa.com/product/charlotte-5-tables-half-section/",
+"prices": {
+"price": "185000",
+"regular_price": "185000",
+"sale_price": "185000",
+"price_range": null,
+"currency_code": "USD",
+"currency_symbol": "$",
+"currency_minor_unit": 2,
+"currency_decimal_separator": ".",
+"currency_thousand_separator": ",",
+"currency_prefix": "$",
+"currency_suffix": ""
+},
+"categories": [
+{
+"id": 36,
+"name": "2022",
+"slug": "2022"
+},
+{
+"id": 37,
+"name": "2023",
+"slug": "2023"
+}
+],
+"is_in_stock": false,
+"is_purchasable": true
+},
+{
+"id": 1404,
+"name": "Charlotte &#8211; 4 Tables",
+"slug": "charlotte-4-tables",
+"sku": "CHAR-TABL-0004",
+"type": "simple",
+"permalink": "https://collectaconusa.com/product/charlotte-4-tables/",
+"prices": {
+"price": "110000",
+"regular_price": "110000",
+"sale_price": "110000",
+"price_range": null,
+"currency_code": "USD",
+"currency_symbol": "$",
+"currency_minor_unit": 2,
+"currency_decimal_separator": ".",
+"currency_thousand_separator": ",",
+"currency_prefix": "$",
+"currency_suffix": ""
+},
+"categories": [
+{
+"id": 36,
+"name": "2022",
+"slug": "2022"
+},
+{
+"id": 37,
+"name": "2023",
+"slug": "2023"
+}
+],
+"is_in_stock": false,
+"is_purchasable": true
+},
+{
+"id": 1403,
+"name": "Charlotte &#8211; 3 Tables",
+"slug": "charlotte-3-tables",
+"sku": "CHAR-TABL-0003",
+"type": "simple",
+"permalink": "https://collectaconusa.com/product/charlotte-3-tables/",
+"prices": {
+"price": "97500",
+"regular_price": "97500",
+"sale_price": "97500",
+"price_range": null,
+"currency_code": "USD",
+"currency_symbol": "$",
+"currency_minor_unit": 2,
+"currency_decimal_separator": ".",
+"currency_thousand_separator": ",",
+"currency_prefix": "$",
+"currency_suffix": ""
+},
+"categories": [
+{
+"id": 36,
+"name": "2022",
+"slug": "2022"
+},
+{
+"id": 37,
+"name": "2023",
+"slug": "2023"
+}
+],
+"is_in_stock": false,
+"is_purchasable": true
+},
+{
+"id": 1402,
+"name": "Charlotte &#8211; 2 Tables",
+"slug": "charlotte-2-tables",
+"sku": "CHAR-TABL-0002",
+"type": "simple",
+"permalink": "https://collectaconusa.com/product/charlotte-2-tables/",
+"prices": {
+"price": "75000",
+"regular_price": "75000",
+"sale_price": "75000",
+"price_range": null,
+"currency_code": "USD",
+"currency_symbol": "$",
+"currency_minor_unit": 2,
+"currency_decimal_separator": ".",
+"currency_thousand_separator": ",",
+"currency_prefix": "$",
+"currency_suffix": ""
+},
+"categories": [
+{
+"id": 36,
+"name": "2022",
+"slug": "2022"
+},
+{
+"id": 37,
+"name": "2023",
+"slug": "2023"
+},
+{
+"id": 38,
+"name": "2024",
+"slug": "2024"
+}
+],
+"is_in_stock": false,
+"is_purchasable": true
+},
+{
+"id": 1401,
+"name": "Charlotte &#8211; 1 Table",
+"slug": "charlotte-1-table",
+"sku": "CHAR-TABL-0001",
+"type": "simple",
+"permalink": "https://collectaconusa.com/product/charlotte-1-table/",
+"prices": {
+"price": "40000",
+"regular_price": "40000",
+"sale_price": "40000",
+"price_range": null,
+"currency_code": "USD",
+"currency_symbol": "$",
+"currency_minor_unit": 2,
+"currency_decimal_separator": ".",
+"currency_thousand_separator": ",",
+"currency_prefix": "$",
+"currency_suffix": ""
+},
+"categories": [
+{
+"id": 36,
+"name": "2022",
+"slug": "2022"
+},
+{
+"id": 37,
+"name": "2023",
+"slug": "2023"
+}
+],
+"is_in_stock": false,
+"is_purchasable": true
+},
+{
+"id": 998,
+"name": "Test Product",
+"slug": "test-product",
+"sku": "2022-TEST-TABL-0001",
+"type": "simple",
+"permalink": "https://collectaconusa.com/product/test-product/",
+"prices": {
+"price": "100",
+"regular_price": "100",
+"sale_price": "100",
+"price_range": null,
+"currency_code": "USD",
+"currency_symbol": "$",
+"currency_minor_unit": 2,
+"currency_decimal_separator": ".",
+"currency_thousand_separator": ",",
+"currency_prefix": "$",
+"currency_suffix": ""
+},
+"categories": [],
+"is_in_stock": true,
+"is_purchasable": true
+},
+{
+"id": 828,
+"name": "DFW &#8211; 10 Tables (Full Section)",
+"slug": "dfw-10-tables-full-section",
+"sku": "DFWH-TABL-0010",
+"type": "simple",
+"permalink": "https://collectaconusa.com/product/dfw-10-tables-full-section/",
+"prices": {
+"price": "349500",
+"regular_price": "349500",
+"sale_price": "349500",
+"price_range": null,
+"currency_code": "USD",
+"currency_symbol": "$",
+"currency_minor_unit": 2,
+"currency_decimal_separator": ".",
+"currency_thousand_separator": ",",
+"currency_prefix": "$",
+"currency_suffix": ""
+},
+"categories": [
+{
+"id": 36,
+"name": "2022",
+"slug": "2022"
+},
+{
+"id": 37,
+"name": "2023",
+"slug": "2023"
+},
+{
+"id": 38,
+"name": "2024",
+"slug": "2024"
+},
+{
+"id": 39,
+"name": "2025",
+"slug": "2025"
+}
+],
+"is_in_stock": false,
+"is_purchasable": true
+},
+{
+"id": 827,
+"name": "DFW &#8211; 5 Tables (Half Section)",
+"slug": "dfw-5-tables-half-section",
+"sku": "DFWH-TABL-0005",
+"type": "simple",
+"permalink": "https://collectaconusa.com/product/dfw-5-tables-half-section/",
+"prices": {
+"price": "185000",
+"regular_price": "185000",
+"sale_price": "185000",
+"price_range": null,
+"currency_code": "USD",
+"currency_symbol": "$",
+"currency_minor_unit": 2,
+"currency_decimal_separator": ".",
+"currency_thousand_separator": ",",
+"currency_prefix": "$",
+"currency_suffix": ""
+},
+"categories": [
+{
+"id": 36,
+"name": "2022",
+"slug": "2022"
+},
+{
+"id": 37,
+"name": "2023",
+"slug": "2023"
+},
+{
+"id": 38,
+"name": "2024",
+"slug": "2024"
+},
+{
+"id": 39,
+"name": "2025",
+"slug": "2025"
+}
+],
+"is_in_stock": false,
+"is_purchasable": true
+},
+{
+"id": 826,
+"name": "DFW &#8211; 4 Tables",
+"slug": "dfw-4-tables",
+"sku": "DFWH-TABL-0004",
+"type": "simple",
+"permalink": "https://collectaconusa.com/product/dfw-4-tables/",
+"prices": {
+"price": "77500",
+"regular_price": "77500",
+"sale_price": "77500",
+"price_range": null,
+"currency_code": "USD",
+"currency_symbol": "$",
+"currency_minor_unit": 2,
+"currency_decimal_separator": ".",
+"currency_thousand_separator": ",",
+"currency_prefix": "$",
+"currency_suffix": ""
+},
+"categories": [
+{
+"id": 36,
+"name": "2022",
+"slug": "2022"
+},
+{
+"id": 37,
+"name": "2023",
+"slug": "2023"
+}
+],
+"is_in_stock": false,
+"is_purchasable": true
+},
+{
+"id": 825,
+"name": "DFW &#8211; 3 Tables",
+"slug": "dfw-3-tables",
+"sku": "DFWH-TABL-0003",
+"type": "simple",
+"permalink": "https://collectaconusa.com/product/dfw-3-tables/",
+"prices": {
+"price": "97500",
+"regular_price": "97500",
+"sale_price": "97500",
+"price_range": null,
+"currency_code": "USD",
+"currency_symbol": "$",
+"currency_minor_unit": 2,
+"currency_decimal_separator": ".",
+"currency_thousand_separator": ",",
+"currency_prefix": "$",
+"currency_suffix": ""
+},
+"categories": [
+{
+"id": 36,
+"name": "2022",
+"slug": "2022"
+},
+{
+"id": 37,
+"name": "2023",
+"slug": "2023"
+},
+{
+"id": 38,
+"name": "2024",
+"slug": "2024"
+},
+{
+"id": 39,
+"name": "2025",
+"slug": "2025"
+}
+],
+"is_in_stock": false,
+"is_purchasable": true
+},
+{
+"id": 824,
+"name": "DFW &#8211; 2 Tables",
+"slug": "dfw-2-tables",
+"sku": "DFWH-TABL-0002",
+"type": "simple",
+"permalink": "https://collectaconusa.com/product/dfw-2-tables/",
+"prices": {
+"price": "75000",
+"regular_price": "75000",
+"sale_price": "75000",
+"price_range": null,
+"currency_code": "USD",
+"currency_symbol": "$",
+"currency_minor_unit": 2,
+"currency_decimal_separator": ".",
+"currency_thousand_separator": ",",
+"currency_prefix": "$",
+"currency_suffix": ""
+},
+"categories": [
+{
+"id": 36,
+"name": "2022",
+"slug": "2022"
+},
+{
+"id": 37,
+"name": "2023",
+"slug": "2023"
+},
+{
+"id": 38,
+"name": "2024",
+"slug": "2024"
+},
+{
+"id": 39,
+"name": "2025",
+"slug": "2025"
+}
+],
+"is_in_stock": false,
+"is_purchasable": true
+},
+{
+"id": 823,
+"name": "DFW &#8211; 1 Table",
+"slug": "dfw-1-table",
+"sku": "DFWH-TABL-0001",
+"type": "simple",
+"permalink": "https://collectaconusa.com/product/dfw-1-table/",
+"prices": {
+"price": "22500",
+"regular_price": "22500",
+"sale_price": "22500",
+"price_range": null,
+"currency_code": "USD",
+"currency_symbol": "$",
+"currency_minor_unit": 2,
+"currency_decimal_separator": ".",
+"currency_thousand_separator": ",",
+"currency_prefix": "$",
+"currency_suffix": ""
+},
+"categories": [
+{
+"id": 36,
+"name": "2022",
+"slug": "2022"
+},
+{
+"id": 37,
+"name": "2023",
+"slug": "2023"
+}
+],
+"is_in_stock": false,
+"is_purchasable": true
+},
+{
+"id": 320,
+"name": "Orlando &#8211; 10 Tables (Full Section)",
+"slug": "10-tables-full-section",
+"sku": "ORLA-TABL-0010",
+"type": "simple",
+"permalink": "https://collectaconusa.com/product/10-tables-full-section/",
+"prices": {
+"price": "349500",
+"regular_price": "349500",
+"sale_price": "349500",
+"price_range": null,
+"currency_code": "USD",
+"currency_symbol": "$",
+"currency_minor_unit": 2,
+"currency_decimal_separator": ".",
+"currency_thousand_separator": ",",
+"currency_prefix": "$",
+"currency_suffix": ""
+},
+"categories": [
+{
+"id": 36,
+"name": "2022",
+"slug": "2022"
+},
+{
+"id": 37,
+"name": "2023",
+"slug": "2023"
+},
+{
+"id": 38,
+"name": "2024",
+"slug": "2024"
+},
+{
+"id": 39,
+"name": "2025",
+"slug": "2025"
+}
+],
+"is_in_stock": false,
+"is_purchasable": true
+},
+{
+"id": 319,
+"name": "Orlando &#8211; 5 Tables (Half Section)",
+"slug": "5-five-tables-half-section",
+"sku": "ORLA-TABL-0005",
+"type": "simple",
+"permalink": "https://collectaconusa.com/product/5-five-tables-half-section/",
+"prices": {
+"price": "185000",
+"regular_price": "185000",
+"sale_price": "185000",
+"price_range": null,
+"currency_code": "USD",
+"currency_symbol": "$",
+"currency_minor_unit": 2,
+"currency_decimal_separator": ".",
+"currency_thousand_separator": ",",
+"currency_prefix": "$",
+"currency_suffix": ""
+},
+"categories": [
+{
+"id": 36,
+"name": "2022",
+"slug": "2022"
+},
+{
+"id": 37,
+"name": "2023",
+"slug": "2023"
+},
+{
+"id": 38,
+"name": "2024",
+"slug": "2024"
+},
+{
+"id": 39,
+"name": "2025",
+"slug": "2025"
+}
+],
+"is_in_stock": false,
+"is_purchasable": true
+},
+{
+"id": 318,
+"name": "Orlando &#8211; 4 Tables",
+"slug": "4-four-tables",
+"sku": "ORLA-TABL-0004",
+"type": "simple",
+"permalink": "https://collectaconusa.com/product/4-four-tables/",
+"prices": {
+"price": "77500",
+"regular_price": "77500",
+"sale_price": "77500",
+"price_range": null,
+"currency_code": "USD",
+"currency_symbol": "$",
+"currency_minor_unit": 2,
+"currency_decimal_separator": ".",
+"currency_thousand_separator": ",",
+"currency_prefix": "$",
+"currency_suffix": ""
+},
+"categories": [
+{
+"id": 36,
+"name": "2022",
+"slug": "2022"
+},
+{
+"id": 37,
+"name": "2023",
+"slug": "2023"
+}
+],
+"is_in_stock": false,
+"is_purchasable": true
+},
+{
+"id": 317,
+"name": "Orlando &#8211; 3 Tables",
+"slug": "3-three-tables",
+"sku": "ORLA-TABL-0003",
+"type": "simple",
+"permalink": "https://collectaconusa.com/product/3-three-tables/",
+"prices": {
+"price": "97500",
+"regular_price": "97500",
+"sale_price": "97500",
+"price_range": null,
+"currency_code": "USD",
+"currency_symbol": "$",
+"currency_minor_unit": 2,
+"currency_decimal_separator": ".",
+"currency_thousand_separator": ",",
+"currency_prefix": "$",
+"currency_suffix": ""
+},
+"categories": [
+{
+"id": 36,
+"name": "2022",
+"slug": "2022"
+},
+{
+"id": 37,
+"name": "2023",
+"slug": "2023"
+},
+{
+"id": 38,
+"name": "2024",
+"slug": "2024"
+},
+{
+"id": 39,
+"name": "2025",
+"slug": "2025"
+}
+],
+"is_in_stock": false,
+"is_purchasable": true
+},
+{
+"id": 316,
+"name": "Orlando &#8211; 2 Tables",
+"slug": "2-two-tables",
+"sku": "ORLA-TABL-0002",
+"type": "simple",
+"permalink": "https://collectaconusa.com/product/2-two-tables/",
+"prices": {
+"price": "75000",
+"regular_price": "75000",
+"sale_price": "75000",
+"price_range": null,
+"currency_code": "USD",
+"currency_symbol": "$",
+"currency_minor_unit": 2,
+"currency_decimal_separator": ".",
+"currency_thousand_separator": ",",
+"currency_prefix": "$",
+"currency_suffix": ""
+},
+"categories": [
+{
+"id": 36,
+"name": "2022",
+"slug": "2022"
+},
+{
+"id": 37,
+"name": "2023",
+"slug": "2023"
+},
+{
+"id": 38,
+"name": "2024",
+"slug": "2024"
+},
+{
+"id": 39,
+"name": "2025",
+"slug": "2025"
+}
+],
+"is_in_stock": false,
+"is_purchasable": true
+},
+{
+"id": 315,
+"name": "Orlando &#8211; 1 Table",
+"slug": "1-one-table",
+"sku": "ORLA-TABL-0001",
+"type": "simple",
+"permalink": "https://collectaconusa.com/product/1-one-table/",
+"prices": {
+"price": "22500",
+"regular_price": "22500",
+"sale_price": "22500",
+"price_range": null,
+"currency_code": "USD",
+"currency_symbol": "$",
+"currency_minor_unit": 2,
+"currency_decimal_separator": ".",
+"currency_thousand_separator": ",",
+"currency_prefix": "$",
+"currency_suffix": ""
+},
+"categories": [
+{
+"id": 36,
+"name": "2022",
+"slug": "2022"
+},
+{
+"id": 37,
+"name": "2023",
+"slug": "2023"
+}
+],
+"is_in_stock": false,
+"is_purchasable": true
+}
+]

@@ -136,6 +136,11 @@ def test_unknown_things_are_clear_errors_not_tracebacks(project, capsys):
 def test_a_disabled_source_explains_how_to_run_it(project, capsys):
     assert csa(project, "harvest", "example_calendar") == 0
     assert "disabled" in capsys.readouterr().out
+    # 'all' with only the example source registered; the real registry would visit the real websites
+    import yaml
+    entries = yaml.safe_load((project / "data" / "sources.yaml").read_text())
+    keep = [e for e in entries if e["id"] in ("research", "github_issues", "example_calendar")]
+    (project / "data" / "sources.yaml").write_text(yaml.safe_dump(keep, sort_keys=False, allow_unicode=True))
     assert csa(project, "harvest", "all") == 0
 
 
@@ -159,3 +164,18 @@ def test_root_is_found_from_the_current_folder(project, monkeypatch):
     monkeypatch.setenv("CSA_ROOT", str(project / "data"))
     assert find_root() == (project / "data").resolve()
     assert find_root(str(project)) == project.resolve()
+
+
+def test_harvest_prints_what_a_source_logged(project, capsys, monkeypatch):
+    from csa import harvest
+
+    class Chatty:
+        @staticmethod
+        def harvest(ctx):
+            ctx.log("RC Canada (Xyzzyville): the city is not in the places list, skipped")
+            yield {"name": "Good", "days": ["2026-11-01"], "venue": {"city": "A", "region": "NJ"}}
+
+    monkeypatch.setattr(harvest, "load_module", lambda entry: Chatty)
+    assert csa(project, "harvest", "example_calendar", "--fixture-dir", str(FIXTURES / "example_calendar")) == 0
+    out = capsys.readouterr().out
+    assert "example_calendar: ok, 1 records" in out and "note: RC Canada (Xyzzyville): the city is not in the places list, skipped" in out

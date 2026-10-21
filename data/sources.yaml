@@ -7,6 +7,8 @@
 #
 # Real scripted sources are added here by the people who write their modules
 # (pipeline/csa/sources/<id>.py). See pipeline/README.md, "Adding a source".
+#
+# Scripted sources, in the order `csa harvest all` runs them (smaller priority first).
 
 - id: research
   name: Card Show Atlas research
@@ -43,3 +45,96 @@
   checked: 2026-10-21
   priority: 50
   enabled: false
+
+- id: collectacon
+  name: Collect-A-Con
+  url: https://collectaconusa.com
+  kind: promoter
+  method: script
+  credit: "From Collect-A-Con's own tour pages and vendor shop (collectaconusa.com)"
+  terms: "Organizer's own site. robots.txt only disallows /wp-admin/ (checked 2026-10-21). The project owner confirmed the WordPress REST API (wp-json) and the shop's public Store API may be used. Facts only: dates, hours, venue, table counts and prices, the organizer's support email. No guest lists, photos or prose."
+  fields: [name, event_type, days, venue, sells, admission, size, vendor, organizer, links]
+  checked: 2026-10-21
+  priority: 10
+
+- id: yugioh_events
+  name: Konami Yu-Gi-Oh! events
+  url: https://www.yugioh-card.com/en/events/
+  kind: promoter
+  method: script
+  credit: "Listed by Konami's Yu-Gi-Oh! TRADING CARD GAME events page (yugioh-card.com)"
+  terms: "Konami's own announcements of its own events. robots.txt redirects to a host that answers 404, so no limits are published (checked 2026-10-21). The terms of use were not reviewed; only dates and venue are taken, with a link back to Konami's page. In person US and Canada events only."
+  fields: [name, event_type, days, venue, sells, links]
+  checked: 2026-10-21
+  priority: 12
+
+- id: pokemon_championships
+  name: Pokémon Championships Events
+  url: https://www.trainerchampionships.com
+  kind: publisher
+  method: script
+  credit: "Listed by Pokémon Championships Events (trainerchampionships.com)"
+  terms: "robots.txt allows everything and names the sitemap (checked 2026-10-21). No automation clause found on the pages, which say they are not an official Pokémon site. Facts only: dates, venue, fees, the organizer's name and web address, with a link to the event page. Mexico is left out. The registration links go to RK9, which is on the never use list, so they are not kept."
+  fields: [name, event_type, days, venue, sells, admission, organizer, links]
+  checked: 2026-10-21
+  priority: 20
+
+- id: swu_calendar
+  name: Star Wars Unlimited organized play calendar
+  url: https://starwarsunlimited.com/organized-play-calendar
+  kind: publisher
+  method: script
+  credit: "Listed by the Star Wars: Unlimited organized play calendar (Fantasy Flight Games)"
+  terms: "No robots.txt (a missing file means no limits, checked 2026-10-21). The terms of use page is drawn by script and could not be read, so only the public calendar page is used, once a day. Facts only: dates, host or store name, city, state or province. Sector Qualifiers and Regional Championships are tournaments; Planetary Qualifiers (stores) go to the store events layer."
+  fields: [name, event_type, days, venue, sells, links]
+  checked: 2026-10-21
+  priority: 22
+  store_events: true      # its store events go to data/store (not committed); csa harvest --store runs it alone
+
+- id: mtg_premier
+  name: MTG Wiki Premier Play
+  url: https://mtg.wiki
+  kind: aggregator
+  method: script
+  credit: "Listed by the MTG Wiki Premier Play season pages (mtg.wiki, CC BY-NC-SA 4.0)"
+  terms: "robots.txt only turns away special and action pages (checked 2026-10-21). The wiki text is CC BY-NC-SA 4.0 (non commercial, share alike). We take only facts (event names, dates, the city, the attendance figure) and credit mtg.wiki on every record, with no prose and no player names. The wiki cites Wizards of the Coast announcements for these dates. Note the non commercial condition if this site is ever sold or carries advertising."
+  fields: [name, event_type, days, venue, sells, size]
+  checked: 2026-10-21
+  priority: 30
+
+- id: lorcana_playhub
+  name: Ravensburger Play Hub
+  url: https://tcg.ravensburgerplay.com
+  kind: platform
+  method: script
+  credit: "Listed by Ravensburger Play Hub"
+  terms: "Undocumented but open JSON API that the site's own pages call, no key needed. robots.txt on the site allows everything except /players/; the API host has none (checked 2026-10-21). No terms page could be found, so the client is gentle: one request per second, at most 200 requests a run, store e-mail addresses and phone numbers never read. A permission email is drafted and not yet sent."
+  fields: [name, event_type, status, days, timezone, venue, sells, admission, size, organizer, links]
+  checked: 2026-10-21
+  priority: 40
+  store_events: true      # its store events go to data/store (not committed); csa harvest --store runs it alone
+  min_interval: 1.2
+
+- id: riftbound_locator
+  name: Riftbound Gaming Network event locator
+  url: https://locator.riftbound.uvsgames.com
+  kind: platform
+  method: script
+  credit: "Listed by the Riftbound Gaming Network event locator"
+  terms: "Same event platform and client as the Ravensburger Play Hub. robots.txt on the locator allows everything except /players/; the API host has none (checked 2026-10-21). No terms page could be found. One request per second, at most 200 requests a run, no store contacts read."
+  fields: [name, event_type, status, days, timezone, venue, sells, admission, size, organizer, links]
+  checked: 2026-10-21
+  priority: 41
+  store_events: true      # its store events go to data/store (not committed); csa harvest --store runs it alone
+  min_interval: 1.2
+
+- id: limitless_results
+  name: Limitless TCG results
+  url: https://limitlesstcg.com
+  kind: aggregator
+  method: script
+  credit: "Player counts from Limitless TCG (limitlesstcg.com)"
+  terms: "robots.txt on both hosts allows everything (checked 2026-10-21); the site notice and terms carry no clause against automated reading. About four requests a run. Only event name, date, city and the number of players are taken; winners and other player names are never read. Past events only, kept as history for the crowd estimate."
+  fields: [name, event_type, days, venue, sells, size]
+  checked: 2026-10-21
+  priority: 70

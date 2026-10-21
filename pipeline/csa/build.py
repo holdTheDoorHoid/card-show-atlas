@@ -4,7 +4,8 @@ Errors from `csa check` stop the build before anything is written. Only the file
 written, and a file is left alone when its content has not changed.
 
   shows.json         full records, 30 days back to 24 months ahead (a bare JSON array)
-  store_events.json  the store events layer: full records in the same window (a bare JSON array)
+  store_events.json  the store events layer: full records in the same window (a bare JSON array), from
+                     data/store_events.jsonl and data/store/*.jsonl
   series.json        series with an edition in that window, editions limited to the window (a bare JSON array)
   promoters.json     promoters of those series (a bare JSON array)
   vocab.json         {"tcg": [...], "sports": [...], "other": [...]} of {id, name, label}
@@ -21,7 +22,7 @@ from dataclasses import dataclass, field
 from datetime import date, timedelta
 from pathlib import Path
 
-from . import __version__
+from . import __version__, store
 from .check import CheckReport, run_check
 from .paths import Paths
 from .sourcesreg import by_id
@@ -137,8 +138,10 @@ def run_build(paths: Paths, vocab: Vocab, today: date | None = None) -> BuildRep
     start, end = window(today)
     all_shows = read_jsonl(paths.shows)
     shows = sorted((s for s in all_shows if in_window(s, start, end)), key=lambda s: (s["days"][0]["date"], s["id"]))
-    events = sorted((e for e in read_jsonl(paths.store_events) if in_window(e, start, end)),
-                    key=lambda e: (e["days"][0]["date"], e["id"]))
+    # Store events come from two places: data/store_events.jsonl (merged from research, normally empty) and data/store/
+    # (the scripted sources, not committed). An id seen twice is kept once.
+    events_by_id = {e["id"]: e for e in read_jsonl(paths.store_events) + store.read_all(paths) if in_window(e, start, end)}
+    events = sorted(events_by_id.values(), key=lambda e: (e["days"][0]["date"], e["id"]))
     ids = {s["id"] for s in shows}
     series = []
     for sr in read_jsonl(paths.series):

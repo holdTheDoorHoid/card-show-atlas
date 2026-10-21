@@ -5,6 +5,7 @@ from __future__ import annotations
 from collections import Counter
 from datetime import date
 
+from . import store
 from .paths import Paths
 from .util import parse_iso_date, read_jsonl, today as today_fn
 
@@ -88,4 +89,4 @@ def render(stats: dict) -> list[str]:
 
 
 def run_stats(paths: Paths, today: date | None = None) -> dict:
-    return compute_stats(read_jsonl(paths.shows), read_jsonl(paths.store_events), today or today_fn())
+    return compute_stats(read_jsonl(paths.shows), read_jsonl(paths.store_events) + store.read_all(paths), today or today_fn())

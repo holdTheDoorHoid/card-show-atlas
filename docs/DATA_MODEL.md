@@ -19,6 +19,7 @@ data/shows.jsonl                canonical show editions, one JSON object per lin
 data/series.jsonl               recurring series
 data/promoters.jsonl            organizers and promoters
 data/store_events.jsonl         store events layer (kept apart, see DESIGN section 8)
+data/store/<source>.jsonl       store events of the scripted sources; not committed, rebuilt by csa harvest
    |
    v  csa estimate (crowd model)  ->  csa check (rules)  ->  csa build
 site/public/data/               what the site loads (see section 6)

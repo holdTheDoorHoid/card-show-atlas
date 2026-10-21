@@ -1,6 +1,7 @@
 """csa check: rules for the data. Errors block the build, warnings are listed.
 
-Run on data/shows.jsonl and data/store_events.jsonl (and the series and promoter files they point at).
+Run on data/shows.jsonl, data/store_events.jsonl and the store events in data/store/ (and the series and promoter files
+they point at).
 """
 
 from __future__ import annotations
@@ -12,7 +13,7 @@ from pathlib import Path
 from urllib.parse import urlsplit
 from zoneinfo import ZoneInfo, ZoneInfoNotFoundError
 
-from . import model, regions
+from . import model, regions, store
 from .domains import DomainPolicy
 from .paths import Paths
 from .sourcesreg import load_sources
@@ -320,7 +321,7 @@ def check_records(shows: list[dict], vocab: Vocab, known_sources: set[str], poli
 def run_check(paths: Paths, vocab: Vocab, today: date | None = None) -> CheckReport:
     today = today or today_fn()
     shows = read_jsonl(paths.shows)
-    events = read_jsonl(paths.store_events)
+    events = read_jsonl(paths.store_events) + store.read_all(paths)
     known = {s["id"] for s in load_sources(paths.sources_yaml)}
     policy = DomainPolicy.load(paths.data / "never_use_domains.yaml")
     series = read_jsonl(paths.series) if paths.series.exists() else None

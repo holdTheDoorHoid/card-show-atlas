@@ -12,3 +12,5 @@ site/.astro/
 # local only
 private/
 .env
+# store events from the scripted sources: rebuilt every day, never committed (pipeline/csa/store.py)
+data/store/

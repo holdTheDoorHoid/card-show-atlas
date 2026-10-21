@@ -1,8 +1,8 @@
-# DRAFT. Daily data refresh: harvest, import issues, merge, geocode, estimate, check, build, commit.
+# Daily data refresh: harvest, import issues, merge, geocode, estimate, check, build, commit.
 #
-# The schedule is switched off on purpose. The owner turns it on (remove the two # marks below) once
-# real scripted sources are enabled in data/sources.yaml. Until then this runs only when started by hand
-# from the Actions tab.
+# The schedule is on: the eight scripted sources in data/sources.yaml are enabled and `csa harvest all`
+# was run for real before it was switched on. It can also be started by hand from the Actions tab.
+# To pause the daily run, put a # in front of the two schedule lines below.
 #
 # Research waves are not part of this run. Import a wave with `csa import-research <wave>` and commit
 # data/research/<wave>.jsonl, and the next refresh picks it up.
@@ -17,8 +17,8 @@ name: Refresh data
 
 on:
   workflow_dispatch:
-  # schedule:
-  #   - cron: "17 9 * * *"   # every day at 09:17 UTC
+  schedule:
+    - cron: "23 10 * * *"   # every day at 10:23 UTC (an odd minute, so it does not queue with the top of the hour jobs)
 
 permissions:
   contents: write     # commit the refreshed data
@@ -47,18 +47,40 @@ jobs:
       - name: Install the pipeline
         run: pip install -e pipeline
 
+      # Store events (weekly play at card shops) are written to data/store/ by the harvest below. That folder is
+      # ignored by git and is never committed. The refresh keeps it in the Actions cache under today's date so the
+      # site deploy (pages.yml) can use it instead of asking the same websites again.
+      - name: Today's date (UTC), for the store events cache
+        id: today
+        run: echo "day=$(date -u +%Y-%m-%d)" >> "$GITHUB_OUTPUT"
+
       # A source that fails or is blocked must not stop the day. Its last good file stays in place.
       - name: Harvest scripted sources
+        id: harvest
         continue-on-error: true
         run: csa harvest all
+
       - name: Read open issues into the review queue
         continue-on-error: true
         run: csa import-issues
 
       - name: Merge
         run: csa merge
-      - name: Geocode
-        run: csa geocode
+      # Only places that have no answer in data/geocache.json are looked up (answers and misses are both
+      # kept in that file, which is committed below, and a miss is retried only after 60 days). Nominatim is
+      # asked once a second at most, and --limit stops one run from asking more than 300 times, so a day with
+      # many new places spreads over a few runs instead of hammering the service.
+      - name: Geocode (new places only)
+        run: csa geocode --limit 300
+
+      # Saved after the geocode step, which also places the store events that have no coordinates yet (it writes the
+      # answers into the committed data/geocache.json, not into any committed store file).
+      - name: Keep today's store events for the site deploy
+        if: steps.harvest.outcome == 'success'
+        uses: actions/cache/save@v4
+        with:
+          path: data/store
+          key: store-events-${{ steps.today.outputs.day }}
       - name: Estimate crowds
         run: csa estimate
       - name: Check (errors stop the run before anything is committed)
@@ -74,6 +96,7 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add data
+          git rm -r -q --cached --ignore-unmatch data/store   # store events are never committed, whatever .gitignore says
           if git diff --cached --quiet; then
             echo "Nothing changed."
             echo "changed=false" >> "$GITHUB_OUTPUT"

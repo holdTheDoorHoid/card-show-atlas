@@ -13,6 +13,17 @@ REPO = Path(__file__).resolve().parents[2]
 FIXTURES = Path(__file__).parent / "fixtures"
 
 
+@pytest.fixture(autouse=True)
+def no_real_network(monkeypatch):
+    """Tests run offline. Anything that would open a real connection fails at once instead of quietly asking a website.
+
+    (A test of 'harvest all' once did exactly that, against every registered source, until the registry held real ones.)
+    The mock and fixture transports the tests pass in are not affected."""
+    def refuse(self, request):
+        raise RuntimeError(f"a test tried to reach {request.url}; give the client a MockTransport or FixtureTransport")
+    monkeypatch.setattr(httpx.HTTPTransport, "handle_request", refuse)
+
+
 class FakeTime:
     """A clock whose sleep() moves it forward, so rate limits can be tested instantly."""
 
@@ -90,6 +101,13 @@ def root(tmp_path) -> Path:
 @pytest.fixture
 def paths(root) -> Paths:
     return Paths(root)
+
+
+@pytest.fixture
+def sroot(root) -> Path:
+    """A throwaway root that also holds the real sources registry, for the tests of the scripted sources."""
+    shutil.copy(REPO / "data" / "sources.yaml", root / "data" / "sources.yaml")
+    return root
 
 
 def write_jsonl_file(path: Path, rows: list[dict]) -> None:

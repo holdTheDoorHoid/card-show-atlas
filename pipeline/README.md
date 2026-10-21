@@ -13,6 +13,7 @@ cd pipeline && python -m pytest     # tests never touch the network
 
 ```
 scripted sources   csa harvest      ->  data/harvest/<source>.jsonl
+                                         data/store/<source>.jsonl     (store events only; NOT committed)
 research agents    csa import-research -> data/research/<wave>.jsonl
 GitHub issues      csa import-issues -> data/submissions/pending/*.json
                                          (you move reviewed files to data/submissions/approved/)
@@ -22,12 +23,13 @@ data/corrections.yaml (hand fixes, applied last)
         v   csa geocode        coordinates, precision, time zone   (cache: data/geocache.json)
         v   csa estimate       the crowd estimate on every show
         v   csa check          rules; errors stop the build
-        v   csa build      ->  site/public/data/*.json   (generated, never committed)
+        v   csa build      ->  site/public/data/*.json   (generated, never committed; also reads data/store/)
 ```
 
 The daily run is `csa harvest all`, `csa import-issues`, `csa merge`, `csa geocode`, `csa estimate`,
-`csa check`, `csa build`. `.github/workflows/refresh.yml` does exactly that and commits `data/`. Its schedule is off until the
-owner turns it on. The site deploy (`pages.yml`) runs `pip install -e pipeline && csa build` itself, so the
+`csa check`, `csa build`. `.github/workflows/refresh.yml` does exactly that and commits `data/`. It runs every day at
+10:23 UTC (and by hand from the Actions tab), and its geocode step only asks for places the cache does not know, at most 300
+a run. The site deploy (`pages.yml`) runs `pip install -e pipeline && csa build` itself, so the
 built files in `site/public/data/` are never committed.
 
 Useful options for every command: `--root DIR` (or the `CSA_ROOT` variable) to point at another checkout,
@@ -57,6 +59,19 @@ The HTTP client every source gets (`ctx.http`) does the polite things for you:
 * **stops dead on a bot challenge.** A Cloudflare or similar challenge page raises `BotChallenge`. The
   client never retries, never tries another route, and the source is reported as `blocked`. The last good
   file stays in place. The result is also recorded in `data/harvest/_status.json`.
+
+**Store events do not go in `data/harvest/`.** Weekly play at card shops comes by the thousand and changes every day,
+so it would add gigabytes to the repository over a year. A record with `event_type: store_event` is written to
+`data/store/<source>.jsonl` instead, and that folder is ignored by git. Such a record gets a complete shape and an id
+made from the source's own event id and the date (a source gives `store_key`, for example `lorcana-1103953`, and the
+id is `lorcana-1103953-2026-10-24`), so it needs no registry entry, no series and no merge. Coordinates come from the
+source, or from the committed `data/geocache.json` (nothing here asks a map service), and `csa geocode` places the rest.
+`csa check`, `csa geocode`, `csa stats` and `csa build` read the folder. A source that lists store events is marked
+`store_events: true` in the registry.
+
+`csa harvest all --store` (or just `csa harvest --store`) runs only those sources, writes only their store files, and
+does not ask a website again on a day it already did (`data/store/_status.json` remembers the day). `--refresh` asks
+again. The deploy workflow uses it with `data/store/` kept in the Actions cache under the UTC date.
 
 A run only replaces `data/harvest/<source>.jsonl` when it finished well. A crash, a block, or a run that
 suddenly finds less than a fifth of what the last run found keeps the old file and exits with code 3.
@@ -154,13 +169,20 @@ Combines every contribution into `data/shows.jsonl`, `series.jsonl`, `promoters.
   one source so numbers stay with their currency. Opening hours are filled day by day from other sources.
   The venue and its coordinates travel together.
 * **Stable ids.** `data/registry.jsonl` remembers which match keys belong to which id, so an id never changes
-  when a name is corrected or a venue renamed. Series ids are reused for the same show in the same place.
+  when a name is corrected or a venue renamed. Series ids are reused for the same show in the same place, but
+  only by an event of the same kind: the card games must overlap when both lists are known, and a tournament
+  never joins the series of a card show. (The names of "Baltimore Pokémon Regional Championships" and "Magic
+  Regional Championship Baltimore" look alike to the name matcher, and a crowd estimate must not borrow another
+  game's attendance.) The registry entry records `tcg` and `event_type` for this.
 * **Sources.** Every contributing source stays in `sources`, with the fields it supplied and the page it came
   from. `verification` is the best of them.
 * **History.** A show that no source mentions any more is kept as it was last seen (the site shows a "may be
   out of date" note from `last_checked`). The one exception is a tentative date made from a series rule: it
   goes away when the rule stops making it.
-* **Store events** go to `store_events.jsonl` and are left out of series and promoters.
+* **Store events** that come from research or submissions go to `store_events.jsonl` and are left out of series and
+  promoters. (Those from the scripted sources never reach the merge; see `csa harvest`.) They are not history:
+  one that no source lists any more is forgotten a week after it ended, together with its registry entry, and
+  two store events at one shop on one day are never listed as possible duplicates.
 * `estimate` from a source is ignored, and cached coordinates are applied so a merge never loses them.
 * Records without a usable date are listed in `data/review/unplaced.jsonl`.
 
@@ -277,6 +299,11 @@ site is not on `data/never_use_domains.yaml`.
    rate limits and the cache apply). Yield one dict per show with the fields of DATA_MODEL section 2 that the
    page really states, and `source_url` set to the page it came from. Helpers in `csa/htmlutil.py` read
    schema.org Event data (`jsonld_events`, `event_to_show`) and links (`find_links`). Do not copy prose.
+   `csa/sources/_common.py` has what the real sources share: `LayoutChanged` (raise it when a page no longer
+   looks the way the module expects; the run then stops with your message and keeps the last good file),
+   text helpers, `date_span`, and a list of cities with their state or province for sources that name a
+   city and nothing else. `ctx.log("...")` adds a line to the run's report (printed as `note:`), which is the
+   place to say what you skipped and why. Never catch `BotChallenge` and carry on: it must end the run.
 4. Save two or three real pages in a folder laid out like the site (`shows/index.html` for
    `https://my.example/shows/`, plus `robots.txt` if it has one) and run it offline:
    `csa harvest my_calendar --fixture-dir path/to/folder`.
@@ -299,6 +326,7 @@ owner, and treat the site as a lead only.
 | `data/geocache.json` | Geocoder answers (committed). |
 | `data/registry.jsonl` | Match keys to stable ids (committed). |
 | `data/harvest/`, `data/research/`, `data/submissions/` | Inputs to the merge. |
+| `data/store/` | Store events from the scripted sources, one file per source. Not committed. |
 | `data/review/` | Things a person should look at: `possible_duplicates.jsonl`, `unplaced.jsonl`. |
 | `data/raw/` | Cached downloads (not committed). |
 | `data/postal/` | GeoNames postal code maps (committed). |

@@ -44,10 +44,45 @@ jobs:
         with:
           python-version: '3.12'
 
+      - name: Install the pipeline
+        if: steps.pipeline.outputs.present == 'true'
+        run: pip install -e pipeline
+
+      # Store events (weekly play at card shops: Lorcana, Riftbound, Star Wars Unlimited rounds) are not committed to
+      # the repository, so every deploy has to bring them. The websites they come from are asked at most once a day,
+      # however many times the site is deployed: the day's files are kept in the Actions cache under a key made from
+      # the UTC date, and `csa harvest --store` also skips a source it already harvested today.
+      #
+      # This never blocks the deploy. If the harvest fails, or a website refuses, the site is built with whatever
+      # store events there are (none, on a day the cache is empty and the sites cannot be reached). The cache is
+      # saved only after a clean harvest, so a bad hour does not leave an empty store layer for the rest of the day.
+      - name: Today's date (UTC), for the store events cache
+        id: today
+        run: echo "day=$(date -u +%Y-%m-%d)" >> "$GITHUB_OUTPUT"
+
+      - name: Restore today's store events
+        id: store_cache
+        uses: actions/cache/restore@v4
+        with:
+          path: data/store
+          key: store-events-${{ steps.today.outputs.day }}
+
+      - name: Harvest the store events (only if not done today)
+        id: store
+        if: steps.pipeline.outputs.present == 'true' && steps.store_cache.outputs.cache-hit != 'true'
+        continue-on-error: true
+        run: csa harvest --store
+
+      - name: Keep today's store events for the next deploy
+        if: steps.store.outcome == 'success'
+        uses: actions/cache/save@v4
+        with:
+          path: data/store
+          key: store-events-${{ steps.today.outputs.day }}
+
       - name: Build the data (csa build)
         if: steps.pipeline.outputs.present == 'true'
         run: |
-          pip install -e pipeline
           if command -v csa >/dev/null 2>&1; then
             csa build
           else

@@ -24,7 +24,11 @@ def vocab(root):
 
 @pytest.fixture
 def hroot(root):
-    shutil.copy(Path(__file__).resolve().parents[2] / "data" / "sources.yaml", root / "data" / "sources.yaml")
+    """The real registry cut down to the example source, so these tests never run a real source."""
+    import yaml
+    entries = yaml.safe_load((Path(__file__).resolve().parents[2] / "data" / "sources.yaml").read_text())
+    keep = [e for e in entries if e["id"] in ("research", "github_issues", "example_calendar")]
+    (root / "data" / "sources.yaml").write_text(yaml.safe_dump(keep, sort_keys=False, allow_unicode=True, default_flow_style=None, width=1000))
     return root
 
 
@@ -193,3 +197,20 @@ def test_a_source_on_the_never_use_list_is_not_fetched(hroot, vocab):
     t = fixture_transport()
     res = harvest.run_source(Paths(hroot), "example_calendar", vocab, today=TODAY, transport=t, force_disabled=True, http_options=NO_SLEEP)
     assert res.status == "error" and "never use" in res.message and t.requests == []
+
+
+def test_records_that_tie_on_date_name_and_town_keep_the_same_order_every_run(hroot, vocab, monkeypatch):
+    rows = [{"name": "Weekly Play", "days": ["2026-11-01"], "venue": {"city": "A", "region": "NJ"}, "source_url": f"https://x.example/e/{n}"}
+            for n in (3, 1, 2)]
+
+    class Source:
+        @staticmethod
+        def harvest(ctx):
+            return iter(rows)
+    monkeypatch.setattr(harvest, "load_module", lambda entry: Source)
+    harvest.run_source(Paths(hroot), "example_calendar", vocab, today=TODAY, force_disabled=True, http_options=NO_SLEEP)
+    first = (hroot / "data/harvest/example_calendar.jsonl").read_text()
+    rows.reverse()
+    harvest.run_source(Paths(hroot), "example_calendar", vocab, today=TODAY, force_disabled=True, http_options=NO_SLEEP)
+    assert (hroot / "data/harvest/example_calendar.jsonl").read_text() == first
+    assert [r["sources"][0]["url"][-1] for r in read_jsonl_file(hroot / "data/harvest/example_calendar.jsonl")] == ["1", "2", "3"]

@@ -113,6 +113,11 @@ class Paths:
         return self.data / "store_events.jsonl"
 
     @property
+    def store_dir(self) -> Path:
+        """Store events from the scripted sources, one file per source. Not committed: see csa/store.py."""
+        return self.data / "store"
+
+    @property
     def review(self) -> Path:
         return self.data / "review"
 

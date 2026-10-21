@@ -28,7 +28,10 @@ def build_parser() -> argparse.ArgumentParser:
 
     h = sub.add_parser("harvest", help="run scripted sources and write data/harvest/<source>.jsonl",
                        description="Run a scripted source (or all enabled ones). Output is only replaced when the run finishes well.")
-    h.add_argument("source", help="a source id from data/sources.yaml, or 'all'")
+    h.add_argument("source", nargs="?", help="a source id from data/sources.yaml, or 'all'")
+    h.add_argument("--store", action="store_true",
+                   help="only the store events (data/store, not committed) of the sources that list them, and only if "
+                        "that was not already done today. Without a source it means 'all'.")
     h.add_argument("--refresh", action="store_true", help="ignore cached pages and fetch again")
     h.add_argument("--fixture-dir", help="serve pages from this folder instead of the network (for developing a source)")
 
@@ -81,15 +84,20 @@ def cmd_harvest(a, paths: Paths) -> int:
     from . import harvest
     from .http import FixtureTransport
     vocab = _vocab(paths)
+    if a.source is None:
+        if not a.store:
+            print("csa harvest: give a source id, or 'all' (or use --store)", file=sys.stderr)
+            return 2
+        a.source = "all"
     kw: dict = {"refresh": a.refresh}
     if a.fixture_dir:
         kw.update(transport=FixtureTransport(Path(a.fixture_dir)), http_options={"sleep": lambda s: None},
                   force_disabled=True)
     if a.source == "all":
-        results = harvest.run_all(paths, vocab, **kw)
+        results = harvest.run_all(paths, vocab, store_only=a.store, **kw)
     else:
         try:
-            results = [harvest.run_source(paths, a.source, vocab, **kw)]
+            results = [harvest.run_source(paths, a.source, vocab, store_only=a.store, **kw)]
         except KeyError as exc:  # an unknown source id
             print(f"csa harvest: {exc.args[0]}", file=sys.stderr)
             return 2
@@ -99,6 +107,10 @@ def cmd_harvest(a, paths: Paths) -> int:
             print(f"    skipped: {reason}")
         for refused in res.refused:
             print(f"    refused: {refused}")
+        for note in res.notes[:40]:
+            print(f"    note: {note}")
+        if len(res.notes) > 40:
+            print(f"    and {len(res.notes) - 40} more notes")
         if res.status == "disabled" and a.source != "all":
             print("    (use --fixture-dir to run it offline, or set enabled: true in data/sources.yaml)")
     bad = [r for r in results if not r.ok]

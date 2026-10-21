@@ -263,3 +263,51 @@ def test_stats_on_empty_data(root):
     s = stats.run_stats(Paths(root), TODAY)
     assert s["shows"] == 0 and s["upcoming_missing"]["coordinates"] == 0
     assert "0 shows" in "\n".join(stats.render(s))
+
+
+# ---------------------------------------------------------------- store events from data/store (not committed)
+
+def store_event(key, day, **over):
+    e = show(key, day, event_type="store_event", series=key)
+    e["id"] = f"{key}-{day}"
+    e["estimate"] = None
+    e.update(over)
+    return e
+
+
+def test_build_reads_store_events_from_the_store_folder_as_well(built_root, vocab):
+    write_jsonl_file(built_root / "data/store/lorcana_playhub.jsonl", [store_event("lorcana-1", "2026-10-24"), store_event("lorcana-2", "2026-10-25"),
+                                                                          store_event("lorcana-3", "2026-08-01")])   # the last is outside the window
+    write_jsonl_file(built_root / "data/store/riftbound_locator.jsonl", [store_event("riftbound-9", "2026-10-26")])
+    rep = build.run_build(Paths(built_root), vocab, TODAY)
+    ids = [e["id"] for e in site(built_root, "store_events.json")]
+    assert ids == ["fnm-2026-10-23", "lorcana-1-2026-10-24", "lorcana-2-2026-10-25", "riftbound-9-2026-10-26"]
+    assert rep.counts["store_events"] == 4
+
+
+def test_a_store_event_id_in_two_files_is_an_error(built_root, vocab):
+    write_jsonl_file(built_root / "data/store/a.jsonl", [store_event("same", "2026-10-24")])
+    write_jsonl_file(built_root / "data/store/b.jsonl", [store_event("same", "2026-10-24")])
+    with pytest.raises(build.BuildBlocked) as err:
+        build.run_build(Paths(built_root), vocab, TODAY)
+    assert any("appears 2 times" in f.message for f in err.value.report.errors)
+
+
+def test_a_build_without_the_store_folder_still_works(built_root, vocab):
+    assert not (built_root / "data/store").exists()
+    build.run_build(Paths(built_root), vocab, TODAY)
+    assert [e["id"] for e in site(built_root, "store_events.json")] == ["fnm-2026-10-23"]
+
+
+def test_check_covers_the_store_folder_and_blocks_a_build_on_an_error(built_root, vocab):
+    bad = store_event("lorcana-1", "2026-10-24")
+    bad["venue"]["region"] = "ZZ"
+    write_jsonl_file(built_root / "data/store/lorcana_playhub.jsonl", [bad])
+    with pytest.raises(build.BuildBlocked) as err:
+        build.run_build(Paths(built_root), vocab, TODAY)
+    assert any(f.show_id == "lorcana-1-2026-10-24" for f in err.value.report.errors)
+
+
+def test_stats_count_the_store_folder(built_root):
+    write_jsonl_file(built_root / "data/store/lorcana_playhub.jsonl", [store_event("lorcana-1", "2026-10-24")])
+    assert stats.run_stats(Paths(built_root), TODAY)["store_events"] == 2

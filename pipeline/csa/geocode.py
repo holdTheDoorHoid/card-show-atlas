@@ -300,9 +300,11 @@ def run_geocode(paths: Paths, services: Services, today: date | None = None, lim
     cache = GeoCache(paths.geocache, today)
     postal = PostalTable.load(paths.postal_dir)
     rep = GeocodeReport()
+    from . import store  # imported here: csa.store imports this module
     shows = read_jsonl(paths.shows)
     events = read_jsonl(paths.store_events)
-    records = shows + events
+    store_files = {f: read_jsonl(f) for f in store.files(paths)}  # data/store, written by `csa harvest`
+    records = shows + events + [r for rows in store_files.values() for r in rows]
     rep.shows = len(records)
 
     todo = [r for r in records if (r.get("venue") or {}).get("lat") is None or
@@ -379,4 +381,6 @@ def run_geocode(paths: Paths, services: Services, today: date | None = None, lim
     write_jsonl(paths.shows, shows)
     if events or paths.store_events.exists():
         write_jsonl(paths.store_events, events)
+    for f, rows in store_files.items():
+        write_jsonl(f, rows)
     return rep

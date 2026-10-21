@@ -51,6 +51,12 @@
 "lon": -112.264633,
 "on": "2026-10-21"
 },
+"addr|US|1 fannin st|houston|tx|77054": {
+"by": "nominatim",
+"lat": 29.670621,
+"lon": -95.403061,
+"on": "2026-10-21"
+},
 "addr|US|1 market pl|san diego|ca|92101": {
 "by": "census",
 "lat": 32.710839,
@@ -211,6 +217,18 @@
 "by": "census",
 "lat": 30.262453,
 "lon": -81.503096,
+"on": "2026-10-21"
+},
+"addr|US|1201 s figueroa st|los angeles|ca|90015": {
+"by": "census",
+"lat": 34.041914,
+"lon": -118.26693,
+"on": "2026-10-21"
+},
+"addr|US|12625 se 166th st|renton|wa|98058": {
+"by": "census",
+"lat": 47.454813,
+"lon": -122.172791,
 "on": "2026-10-21"
 },
 "addr|US|1301 second ave s|minneapolis|mn|55403": {
@@ -999,6 +1017,108 @@
 "lon": -98.603009,
 "on": "2026-10-21"
 },
+"city|CA|airdrie|ab": {
+"by": "nominatim",
+"lat": 51.28597,
+"lon": -114.01062,
+"on": "2026-10-21"
+},
+"city|CA|calgary|ab": {
+"by": "nominatim",
+"lat": 51.045606,
+"lon": -114.057541,
+"on": "2026-10-21"
+},
+"city|CA|concord|on": {
+"by": "nominatim",
+"lat": 43.800362,
+"lon": -79.499388,
+"on": "2026-10-21"
+},
+"city|CA|montreal|qc": {
+"by": "nominatim",
+"lat": 45.503182,
+"lon": -73.569806,
+"on": "2026-10-21"
+},
+"city|CA|mount pearl|nl": {
+"by": "nominatim",
+"lat": 47.523961,
+"lon": -52.811664,
+"on": "2026-10-21"
+},
+"city|CA|niagara falls|on": {
+"by": "nominatim",
+"lat": 43.10656,
+"lon": -79.063904,
+"on": "2026-10-21"
+},
+"city|CA|north bay|on": {
+"by": "nominatim",
+"lat": 46.309212,
+"lon": -79.460762,
+"on": "2026-10-21"
+},
+"city|CA|orangeville|on": {
+"by": "nominatim",
+"lat": 43.919317,
+"lon": -80.097375,
+"on": "2026-10-21"
+},
+"city|CA|ottawa|on": {
+"by": "nominatim",
+"lat": 45.420878,
+"lon": -75.690111,
+"on": "2026-10-21"
+},
+"city|CA|quebec|qc": {
+"by": "nominatim",
+"lat": 46.813743,
+"lon": -71.208406,
+"on": "2026-10-21"
+},
+"city|CA|saint hubert|qc": {
+"by": "nominatim",
+"lat": 45.504275,
+"lon": -73.421698,
+"on": "2026-10-21"
+},
+"city|CA|toronto|on": {
+"by": "nominatim",
+"lat": 43.653482,
+"lon": -79.383935,
+"on": "2026-10-21"
+},
+"city|CA|vancouver|bc": {
+"by": "nominatim",
+"lat": 49.260872,
+"lon": -123.113952,
+"on": "2026-10-21"
+},
+"city|CA|windsor|on": {
+"by": "nominatim",
+"lat": 42.31674,
+"lon": -83.037339,
+"on": "2026-10-21"
+},
+"city|US|altamonte springs|fl": {
+"by": "nominatim",
+"lat": 28.661915,
+"lon": -81.38859,
+"on": "2026-10-21"
+},
+"city|US|appleton|wi": {
+"by": "nominatim",
+"lat": 44.261397,
+"lon": -88.406974,
+"on": "2026-10-21"
+},
+"city|US|arlington|tx": {
+"by": "nominatim",
+"lat": 32.735582,
+"lon": -97.107119,
+"on": "2026-10-21"
+},
 "city|US|atlanta|ga": {
 "by": "nominatim",
 "lat": 33.754466,
@@ -1009,6 +1129,12 @@
 "by": "nominatim",
 "lat": 30.264926,
 "lon": -97.747409,
+"on": "2026-10-21"
+},
+"city|US|baltimore|md": {
+"by": "nominatim",
+"lat": 39.290882,
+"lon": -76.610759,
 "on": "2026-10-21"
 },
 "city|US|belton|tx": {
@@ -1035,6 +1161,12 @@
 "lon": -71.05783,
 "on": "2026-10-21"
 },
+"city|US|branson|mo": {
+"by": "nominatim",
+"lat": 36.644077,
+"lon": -93.216926,
+"on": "2026-10-21"
+},
 "city|US|cedar park|tx": {
 "by": "nominatim",
 "lat": 30.521712,
@@ -1053,10 +1185,28 @@
 "lon": -72.607112,
 "on": "2026-10-21"
 },
+"city|US|cincinnati|oh": {
+"by": "nominatim",
+"lat": 39.101281,
+"lon": -84.512741,
+"on": "2026-10-21"
+},
+"city|US|college park|md": {
+"by": "nominatim",
+"lat": 38.980666,
+"lon": -76.936919,
+"on": "2026-10-21"
+},
 "city|US|colonial heights|va": {
 "by": "nominatim",
 "lat": 37.255572,
 "lon": -77.411202,
+"on": "2026-10-21"
+},
+"city|US|cookeville|tn": {
+"by": "nominatim",
+"lat": 36.162389,
+"lon": -85.499706,
 "on": "2026-10-21"
 },
 "city|US|dallas|tx": {
@@ -1065,10 +1215,34 @@
 "lon": -96.796856,
 "on": "2026-10-21"
 },
+"city|US|denver|co": {
+"by": "nominatim",
+"lat": 39.739236,
+"lon": -104.984862,
+"on": "2026-10-21"
+},
+"city|US|enfield|ct": {
+"by": "nominatim",
+"lat": 41.976772,
+"lon": -72.591711,
+"on": "2026-10-21"
+},
+"city|US|florence|al": {
+"by": "nominatim",
+"lat": 34.79981,
+"lon": -87.677251,
+"on": "2026-10-21"
+},
 "city|US|fort worth|tx": {
 "by": "nominatim",
 "lat": 32.753177,
 "lon": -97.332746,
+"on": "2026-10-21"
+},
+"city|US|galesburg|il": {
+"by": "nominatim",
+"lat": 40.947565,
+"lon": -90.371217,
 "on": "2026-10-21"
 },
 "city|US|galveston|tx": {
@@ -1077,10 +1251,46 @@
 "lon": -94.793325,
 "on": "2026-10-21"
 },
+"city|US|garden city|mi": {
+"by": "nominatim",
+"lat": 42.325593,
+"lon": -83.331042,
+"on": "2026-10-21"
+},
+"city|US|goose creek|sc": {
+"by": "nominatim",
+"lat": 32.996104,
+"lon": -80.038729,
+"on": "2026-10-21"
+},
+"city|US|grand rapids|oh": {
+"by": "nominatim",
+"lat": 41.411996,
+"lon": -83.864385,
+"on": "2026-10-21"
+},
+"city|US|hallsville|tx": {
+"by": "nominatim",
+"lat": 32.504316,
+"lon": -94.574093,
+"on": "2026-10-21"
+},
+"city|US|hampton|va": {
+"by": "nominatim",
+"lat": 37.026441,
+"lon": -76.344285,
+"on": "2026-10-21"
+},
 "city|US|harrisonburg|va": {
 "by": "nominatim",
 "lat": 38.449331,
 "lon": -78.868883,
+"on": "2026-10-21"
+},
+"city|US|holt|mi": {
+"by": "nominatim",
+"lat": 42.636561,
+"lon": -84.522531,
 "on": "2026-10-21"
 },
 "city|US|houston|tx": {
@@ -1089,14 +1299,50 @@
 "lon": -95.367697,
 "on": "2026-10-21"
 },
+"city|US|idaho falls|id": {
+"by": "nominatim",
+"lat": 43.488791,
+"lon": -112.03628,
+"on": "2026-10-21"
+},
 "city|US|indianapolis|in": {
 "by": "nominatim",
 "lat": 39.768333,
 "lon": -86.15835,
 "on": "2026-10-21"
 },
+"city|US|jacksonville|fl": {
+"by": "nominatim",
+"lat": 30.326225,
+"lon": -81.657918,
+"on": "2026-10-21"
+},
+"city|US|kissimmee|fl": {
+"by": "nominatim",
+"lat": 28.291899,
+"lon": -81.407584,
+"on": "2026-10-21"
+},
+"city|US|knoxville|tn": {
+"by": "nominatim",
+"lat": 35.960395,
+"lon": -83.921026,
+"on": "2026-10-21"
+},
+"city|US|kyle|tx": {
+"by": "nominatim",
+"lat": 29.989282,
+"lon": -97.877174,
+"on": "2026-10-21"
+},
 "city|US|lake conroe|tx": {
 "miss": true,
+"on": "2026-10-21"
+},
+"city|US|lake park|fl": {
+"by": "nominatim",
+"lat": 26.800215,
+"lon": -80.066163,
 "on": "2026-10-21"
 },
 "city|US|lancaster|oh": {
@@ -1111,6 +1357,24 @@
 "lon": -115.148413,
 "on": "2026-10-21"
 },
+"city|US|lebanon|oh": {
+"by": "nominatim",
+"lat": 39.435337,
+"lon": -84.202992,
+"on": "2026-10-21"
+},
+"city|US|littleton|co": {
+"by": "nominatim",
+"lat": 39.613321,
+"lon": -105.016649,
+"on": "2026-10-21"
+},
+"city|US|los angeles|ca": {
+"by": "nominatim",
+"lat": 34.053692,
+"lon": -118.242768,
+"on": "2026-10-21"
+},
 "city|US|louisville|ky": {
 "by": "nominatim",
 "lat": 38.254238,
@@ -1123,16 +1387,118 @@
 "lon": -71.308533,
 "on": "2026-10-21"
 },
+"city|US|madison|wi": {
+"by": "nominatim",
+"lat": 43.07469,
+"lon": -89.384166,
+"on": "2026-10-21"
+},
+"city|US|matawan|nj": {
+"by": "nominatim",
+"lat": 40.41483,
+"lon": -74.229589,
+"on": "2026-10-21"
+},
+"city|US|mcallen|tx": {
+"by": "nominatim",
+"lat": 26.204114,
+"lon": -98.23006,
+"on": "2026-10-21"
+},
+"city|US|menifee|ca": {
+"by": "nominatim",
+"lat": 33.686399,
+"lon": -117.17786,
+"on": "2026-10-21"
+},
+"city|US|mesquite|tx": {
+"by": "nominatim",
+"lat": 32.76661,
+"lon": -96.599472,
+"on": "2026-10-21"
+},
+"city|US|miami|fl": {
+"by": "nominatim",
+"lat": 25.774157,
+"lon": -80.193597,
+"on": "2026-10-21"
+},
+"city|US|midlothian|va": {
+"by": "nominatim",
+"lat": 37.506267,
+"lon": -77.649268,
+"on": "2026-10-21"
+},
 "city|US|milwaukee|wi": {
 "by": "nominatim",
 "lat": 43.038648,
 "lon": -87.909075,
 "on": "2026-10-21"
 },
+"city|US|minneapolis|mn": {
+"by": "nominatim",
+"lat": 44.9773,
+"lon": -93.265469,
+"on": "2026-10-21"
+},
+"city|US|mishawaka|in": {
+"by": "nominatim",
+"lat": 41.661164,
+"lon": -86.180703,
+"on": "2026-10-21"
+},
+"city|US|mission|ks": {
+"by": "nominatim",
+"lat": 39.027783,
+"lon": -94.655791,
+"on": "2026-10-21"
+},
+"city|US|mobile|al": {
+"by": "nominatim",
+"lat": 30.691346,
+"lon": -88.043751,
+"on": "2026-10-21"
+},
+"city|US|montgomery|ny": {
+"by": "nominatim",
+"lat": 41.527594,
+"lon": -74.236816,
+"on": "2026-10-21"
+},
 "city|US|moorestown|nj": {
 "by": "nominatim",
 "lat": 39.967057,
 "lon": -74.942668,
+"on": "2026-10-21"
+},
+"city|US|morgantown|wv": {
+"by": "nominatim",
+"lat": 39.629681,
+"lon": -79.955944,
+"on": "2026-10-21"
+},
+"city|US|muncie|in": {
+"by": "nominatim",
+"lat": 40.193689,
+"lon": -85.386527,
+"on": "2026-10-21"
+},
+"city|US|national city|ca": {
+"by": "nominatim",
+"lat": 32.678109,
+"lon": -117.099197,
+"on": "2026-10-21"
+},
+"city|US|new orleans|la": {
+"by": "nominatim",
+"lat": 29.957466,
+"lon": -90.062949,
+"on": "2026-10-21"
+},
+"city|US|northridge|ca": {
+"by": "nominatim",
+"lat": 34.234561,
+"lon": -118.536932,
 "on": "2026-10-21"
 },
 "city|US|oklahoma city|ok": {
@@ -1147,10 +1513,40 @@
 "lon": -81.379045,
 "on": "2026-10-21"
 },
+"city|US|oviedo|fl": {
+"by": "nominatim",
+"lat": 28.670253,
+"lon": -81.208494,
+"on": "2026-10-21"
+},
+"city|US|pasadena|ca": {
+"by": "nominatim",
+"lat": 34.147651,
+"lon": -118.144155,
+"on": "2026-10-21"
+},
+"city|US|peoria|il": {
+"by": "nominatim",
+"lat": 40.693861,
+"lon": -89.589101,
+"on": "2026-10-21"
+},
+"city|US|phoenix|az": {
+"by": "nominatim",
+"lat": 33.448437,
+"lon": -112.074141,
+"on": "2026-10-21"
+},
 "city|US|pittsburgh|pa": {
 "by": "nominatim",
 "lat": 40.440697,
 "lon": -80.002567,
+"on": "2026-10-21"
+},
+"city|US|pomona|ca": {
+"by": "nominatim",
+"lat": 34.055381,
+"lon": -117.75175,
 "on": "2026-10-21"
 },
 "city|US|portland|me": {
@@ -1159,10 +1555,40 @@
 "lon": -70.258662,
 "on": "2026-10-21"
 },
+"city|US|portland|or": {
+"by": "nominatim",
+"lat": 45.520247,
+"lon": -122.674194,
+"on": "2026-10-21"
+},
+"city|US|portsmouth|nh": {
+"by": "nominatim",
+"lat": 43.075131,
+"lon": -70.760183,
+"on": "2026-10-21"
+},
 "city|US|raleigh|nc": {
 "by": "nominatim",
 "lat": 35.780398,
 "lon": -78.639099,
+"on": "2026-10-21"
+},
+"city|US|ridgeland|ms": {
+"by": "nominatim",
+"lat": 32.428476,
+"lon": -90.132309,
+"on": "2026-10-21"
+},
+"city|US|rochester|ny": {
+"by": "nominatim",
+"lat": 43.157285,
+"lon": -77.615214,
+"on": "2026-10-21"
+},
+"city|US|rocklin|ca": {
+"by": "nominatim",
+"lat": 38.790734,
+"lon": -121.235783,
 "on": "2026-10-21"
 },
 "city|US|rogers|ar": {
@@ -1177,16 +1603,46 @@
 "lon": -87.875674,
 "on": "2026-10-21"
 },
+"city|US|sacramento|ca": {
+"by": "nominatim",
+"lat": 38.581061,
+"lon": -121.493895,
+"on": "2026-10-21"
+},
+"city|US|saint albans|vt": {
+"by": "nominatim",
+"lat": 44.810791,
+"lon": -73.083361,
+"on": "2026-10-21"
+},
 "city|US|san antonio|tx": {
 "by": "nominatim",
 "lat": 29.4246,
 "lon": -98.495141,
 "on": "2026-10-21"
 },
+"city|US|san diego|ca": {
+"by": "nominatim",
+"lat": 32.715706,
+"lon": -117.163828,
+"on": "2026-10-21"
+},
 "city|US|sanborn|ny": {
 "by": "nominatim",
 "lat": 43.136723,
 "lon": -78.884761,
+"on": "2026-10-21"
+},
+"city|US|santa clara|ca": {
+"by": "nominatim",
+"lat": 37.354113,
+"lon": -121.955174,
+"on": "2026-10-21"
+},
+"city|US|seattle|wa": {
+"by": "nominatim",
+"lat": 47.603832,
+"lon": -122.330062,
 "on": "2026-10-21"
 },
 "city|US|short pump|va": {
@@ -1201,10 +1657,22 @@
 "lon": -93.747784,
 "on": "2026-10-21"
 },
+"city|US|spokane|wa": {
+"by": "nominatim",
+"lat": 47.657193,
+"lon": -117.42351,
+"on": "2026-10-21"
+},
 "city|US|st louis|mo": {
 "by": "nominatim",
 "lat": 38.625406,
 "lon": -90.190009,
+"on": "2026-10-21"
+},
+"city|US|stow|oh": {
+"by": "nominatim",
+"lat": 41.159626,
+"lon": -81.440626,
 "on": "2026-10-21"
 },
 "city|US|syracuse|ny": {
@@ -1225,6 +1693,18 @@
 "lon": -76.60238,
 "on": "2026-10-21"
 },
+"city|US|tucson|az": {
+"by": "nominatim",
+"lat": 32.222876,
+"lon": -110.974847,
+"on": "2026-10-21"
+},
+"city|US|tustin|ca": {
+"by": "nominatim",
+"lat": 33.745851,
+"lon": -117.826166,
+"on": "2026-10-21"
+},
 "city|US|tysons corner|va": {
 "by": "nominatim",
 "lat": 38.918592,
@@ -1235,6 +1715,18 @@
 "by": "nominatim",
 "lat": 40.709583,
 "lon": -73.592341,
+"on": "2026-10-21"
+},
+"city|US|virginia beach|va": {
+"by": "nominatim",
+"lat": 36.849658,
+"lon": -75.976075,
+"on": "2026-10-21"
+},
+"city|US|waconia|mn": {
+"by": "nominatim",
+"lat": 44.850796,
+"lon": -93.786909,
 "on": "2026-10-21"
 },
 "city|US|waco|tx": {
@@ -1249,10 +1741,28 @@
 "lon": -76.910658,
 "on": "2026-10-21"
 },
+"city|US|washington|dc": {
+"by": "nominatim",
+"lat": 38.895098,
+"lon": -77.036385,
+"on": "2026-10-21"
+},
+"city|US|webster|tx": {
+"by": "nominatim",
+"lat": 29.535172,
+"lon": -95.116156,
+"on": "2026-10-21"
+},
 "city|US|wesley chapel|fl": {
 "by": "nominatim",
 "lat": 28.186601,
 "lon": -82.366121,
+"on": "2026-10-21"
+},
+"city|US|wichita|ks": {
+"by": "nominatim",
+"lat": 37.692236,
+"lon": -97.337545,
 "on": "2026-10-21"
 },
 "city|US|worcester|ma": {
@@ -1267,6 +1777,38 @@
 "lon": -83.929653,
 "on": "2026-10-21"
 },
+"city|US|yukon|ok": {
+"by": "nominatim",
+"lat": 35.506726,
+"lon": -97.762539,
+"on": "2026-10-21"
+},
+"city|US|yuma|az": {
+"by": "nominatim",
+"lat": 32.721031,
+"lon": -114.620322,
+"on": "2026-10-21"
+},
+"venue|CA|401 games downtown|concord|on": {
+"miss": true,
+"on": "2026-10-21"
+},
+"venue|CA|401 games downtown|toronto|on": {
+"by": "nominatim",
+"lat": 43.660663,
+"lon": -79.382594,
+"on": "2026-10-21"
+},
+"venue|CA|401 games vaughan|concord|on": {
+"by": "nominatim",
+"lat": 43.798928,
+"lon": -79.499897,
+"on": "2026-10-21"
+},
+"venue|CA|boutique awesome|saint hubert|qc": {
+"miss": true,
+"on": "2026-10-21"
+},
 "venue|CA|centennial hall|london|on": {
 "by": "nominatim",
 "lat": 42.989174,
@@ -1277,10 +1819,48 @@
 "miss": true,
 "on": "2026-10-21"
 },
+"venue|CA|dragons den games|saskatoon|sk": {
+"by": "nominatim",
+"lat": 52.115774,
+"lon": -106.631389,
+"on": "2026-10-21"
+},
+"venue|CA|draw for turn games|richmond|bc": {
+"miss": true,
+"on": "2026-10-21"
+},
 "venue|CA|executive plaza hotel coquitlam|coquitlam|bc": {
 "by": "nominatim",
 "lat": 49.246684,
 "lon": -122.891368,
+"on": "2026-10-21"
+},
+"venue|CA|fantasy forged cards and collectibles|orangeville|on": {
+"miss": true,
+"on": "2026-10-21"
+},
+"venue|CA|kunai games|windsor|on": {
+"miss": true,
+"on": "2026-10-21"
+},
+"venue|CA|la boutique mythique|quebec|qc": {
+"miss": true,
+"on": "2026-10-21"
+},
+"venue|CA|metro toronto convention centre|toronto|on": {
+"miss": true,
+"on": "2026-10-21"
+},
+"venue|CA|midgard gaming|mount pearl|nl": {
+"miss": true,
+"on": "2026-10-21"
+},
+"venue|CA|morrison trading post|airdrie|ab": {
+"miss": true,
+"on": "2026-10-21"
+},
+"venue|CA|north bay games and hobbies|north bay|on": {
+"miss": true,
 "on": "2026-10-21"
 },
 "venue|CA|palais des congres de montreal|montreal|qc": {
@@ -1289,7 +1869,27 @@
 "lon": -73.560705,
 "on": "2026-10-21"
 },
+"venue|CA|reliquary cards|calgary|ab": {
+"miss": true,
+"on": "2026-10-21"
+},
+"venue|CA|taps games|edmonton|ab": {
+"by": "nominatim",
+"lat": 53.453027,
+"lon": -113.524743,
+"on": "2026-10-21"
+},
 "venue|CA|the international centre|mississauga|on": {
+"miss": true,
+"on": "2026-10-21"
+},
+"venue|US|3d cards and collectibles|hartselle|al": {
+"by": "nominatim",
+"lat": 34.443371,
+"lon": -86.934965,
+"on": "2026-10-21"
+},
+"venue|US|afk games|holt|mi": {
 "miss": true,
 "on": "2026-10-21"
 },
@@ -1323,16 +1923,46 @@
 "miss": true,
 "on": "2026-10-21"
 },
+"venue|US|at ease games|san diego|ca": {
+"by": "nominatim",
+"lat": 32.891873,
+"lon": -117.141629,
+"on": "2026-10-21"
+},
+"venue|US|atomic empire|durham|nc": {
+"by": "nominatim",
+"lat": 35.965971,
+"lon": -78.962944,
+"on": "2026-10-21"
+},
 "venue|US|bad astronaut|houston|tx": {
 "by": "nominatim",
 "lat": 29.773994,
 "lon": -95.356529,
 "on": "2026-10-21"
 },
+"venue|US|baird center|milwaukee|wi": {
+"by": "nominatim",
+"lat": 43.040168,
+"lon": -87.917494,
+"on": "2026-10-21"
+},
 "venue|US|baltimore convention center|baltimore|md": {
 "by": "nominatim",
 "lat": 39.285189,
 "lon": -76.616151,
+"on": "2026-10-21"
+},
+"venue|US|battlegroundsrva|midlothian|va": {
+"miss": true,
+"on": "2026-10-21"
+},
+"venue|US|bedrock city comic co|webster|tx": {
+"miss": true,
+"on": "2026-10-21"
+},
+"venue|US|better plays gaming|stow|oh": {
+"miss": true,
 "on": "2026-10-21"
 },
 "venue|US|branch park pavilion|austin|tx": {
@@ -1343,8 +1973,34 @@
 "miss": true,
 "on": "2026-10-21"
 },
+"venue|US|cardboard games|tustin|ca": {
+"miss": true,
+"on": "2026-10-21"
+},
+"venue|US|cardshq|atlanta|ga": {
+"by": "nominatim",
+"lat": 33.878602,
+"lon": -84.45693,
+"on": "2026-10-21"
+},
 "venue|US|castle shannon vfd|pittsburgh|pa": {
 "miss": true,
+"on": "2026-10-21"
+},
+"venue|US|cole street game vault|enumclaw|wa": {
+"by": "nominatim",
+"lat": 47.203645,
+"lon": -121.98955,
+"on": "2026-10-21"
+},
+"venue|US|collection realm|lake park|fl": {
+"miss": true,
+"on": "2026-10-21"
+},
+"venue|US|common ground games|dallas|tx": {
+"by": "nominatim",
+"lat": 32.805321,
+"lon": -96.8519,
 "on": "2026-10-21"
 },
 "venue|US|convergence fest venue hall not named|las vegas|nv": {
@@ -1369,11 +2025,35 @@
 "lon": -76.070892,
 "on": "2026-10-21"
 },
+"venue|US|day2|amarillo|tx": {
+"by": "nominatim",
+"lat": 35.163569,
+"lon": -101.864865,
+"on": "2026-10-21"
+},
+"venue|US|dice and dine|branson|mo": {
+"miss": true,
+"on": "2026-10-21"
+},
+"venue|US|diversions puzzles and games portsmouth nh|portsmouth|nh": {
+"miss": true,
+"on": "2026-10-21"
+},
 "venue|US|drury plaza|short pump|va": {
 "miss": true,
 "on": "2026-10-21"
 },
+"venue|US|dungeons and javas|colorado springs|co": {
+"by": "nominatim",
+"lat": 38.89733,
+"lon": -104.749872,
+"on": "2026-10-21"
+},
 "venue|US|embassy suites northwest arkansas hotel spa and rogers convention center|rogers|ar": {
+"miss": true,
+"on": "2026-10-21"
+},
+"venue|US|excel rc and hobbies|garden city|mi": {
 "miss": true,
 "on": "2026-10-21"
 },
@@ -1389,11 +2069,39 @@
 "miss": true,
 "on": "2026-10-21"
 },
+"venue|US|fire and dice|northridge|ca": {
+"miss": true,
+"on": "2026-10-21"
+},
+"venue|US|fire and ice games|rocklin|ca": {
+"miss": true,
+"on": "2026-10-21"
+},
+"venue|US|first turn games|cedar rapids|ia": {
+"by": "nominatim",
+"lat": 42.015307,
+"lon": -91.633422,
+"on": "2026-10-21"
+},
 "venue|US|florida state fairgrounds special events center|tampa|fl": {
 "miss": true,
 "on": "2026-10-21"
 },
+"venue|US|for the win|florence|al": {
+"miss": true,
+"on": "2026-10-21"
+},
 "venue|US|force sports center|san antonio|tx": {
+"miss": true,
+"on": "2026-10-21"
+},
+"venue|US|fort worth convention center|fort worth|tx": {
+"by": "nominatim",
+"lat": 32.749876,
+"lon": -97.328131,
+"on": "2026-10-21"
+},
+"venue|US|four horsemen comics and gaming|morgantown|wv": {
 "miss": true,
 "on": "2026-10-21"
 },
@@ -1403,8 +2111,84 @@
 "lon": -77.579112,
 "on": "2026-10-21"
 },
+"venue|US|galaxy of games billings|billings|mt": {
+"miss": true,
+"on": "2026-10-21"
+},
+"venue|US|galaxy of games|herriman|ut": {
+"by": "nominatim",
+"lat": 40.524401,
+"lon": -112.025206,
+"on": "2026-10-21"
+},
+"venue|US|game grid idaho falls|idaho falls|id": {
+"miss": true,
+"on": "2026-10-21"
+},
+"venue|US|game grid lehi|lehi|ut": {
+"by": "nominatim",
+"lat": 40.383424,
+"lon": -111.832782,
+"on": "2026-10-21"
+},
+"venue|US|game kastle austin|austin|tx": {
+"miss": true,
+"on": "2026-10-21"
+},
+"venue|US|game kastle redwood city|redwood city|ca": {
+"by": "nominatim",
+"lat": 37.490919,
+"lon": -122.224817,
+"on": "2026-10-21"
+},
+"venue|US|game nite|st louis|mo": {
+"by": "nominatim",
+"lat": 38.565196,
+"lon": -90.351719,
+"on": "2026-10-21"
+},
 "venue|US|game time sports and fitness|lowell|ma": {
 "miss": true,
+"on": "2026-10-21"
+},
+"venue|US|game vault el paso|el paso|tx": {
+"by": "nominatim",
+"lat": 31.754836,
+"lon": -106.341516,
+"on": "2026-10-21"
+},
+"venue|US|gamechefs llc|grand rapids|oh": {
+"miss": true,
+"on": "2026-10-21"
+},
+"venue|US|gamers corps ellicott city md|ellicott city|md": {
+"by": "nominatim",
+"lat": 39.267282,
+"lon": -76.797145,
+"on": "2026-10-21"
+},
+"venue|US|gamers corps fruit cove fl|jacksonville|fl": {
+"miss": true,
+"on": "2026-10-21"
+},
+"venue|US|gamers guild north phoenix|phoenix|az": {
+"miss": true,
+"on": "2026-10-21"
+},
+"venue|US|gamers n geeks|mobile|al": {
+"miss": true,
+"on": "2026-10-21"
+},
+"venue|US|gaming giant|fairfax|va": {
+"by": "nominatim",
+"lat": 38.847671,
+"lon": -77.306019,
+"on": "2026-10-21"
+},
+"venue|US|georgia world congress center|atlanta|ga": {
+"by": "nominatim",
+"lat": 33.760768,
+"lon": -84.401255,
 "on": "2026-10-21"
 },
 "venue|US|graham building nc state fairgrounds|raleigh|nc": {
@@ -1427,14 +2211,60 @@
 "miss": true,
 "on": "2026-10-21"
 },
+"venue|US|greenhouse games|augusta|me": {
+"by": "nominatim",
+"lat": 44.316926,
+"lon": -69.767944,
+"on": "2026-10-21"
+},
+"venue|US|griffonest|woodstock|il": {
+"by": "nominatim",
+"lat": 42.315403,
+"lon": -88.447957,
+"on": "2026-10-21"
+},
+"venue|US|guardian cards and comics|saint albans|vt": {
+"miss": true,
+"on": "2026-10-21"
+},
+"venue|US|guardian games aloha|aloha|or": {
+"by": "nominatim",
+"lat": 45.493927,
+"lon": -122.863084,
+"on": "2026-10-21"
+},
+"venue|US|guardian games|portland|or": {
+"by": "nominatim",
+"lat": 45.515439,
+"lon": -122.662065,
+"on": "2026-10-21"
+},
 "venue|US|harvard gordon indoor track|boston|ma": {
 "miss": true,
+"on": "2026-10-21"
+},
+"venue|US|henry b gonzalez convention center|san antonio|tx": {
+"by": "nominatim",
+"lat": 29.420533,
+"lon": -98.483647,
+"on": "2026-10-21"
+},
+"venue|US|hex and co|new york|ny": {
+"by": "nominatim",
+"lat": 40.770376,
+"lon": -73.95378,
 "on": "2026-10-21"
 },
 "venue|US|hickory metro convention center|hickory|nc": {
 "by": "nominatim",
 "lat": 35.709139,
 "lon": -81.303938,
+"on": "2026-10-21"
+},
+"venue|US|hobbytown lincoln|lincoln|ne": {
+"by": "nominatim",
+"lat": 40.771338,
+"lon": -96.623628,
 "on": "2026-10-21"
 },
 "venue|US|hogan campus center college of the holy cross|worcester|ma": {
@@ -1445,6 +2275,10 @@
 "by": "nominatim",
 "lat": 35.57337,
 "lon": -77.38758,
+"on": "2026-10-21"
+},
+"venue|US|holo horse games llc|hallsville|tx": {
+"miss": true,
 "on": "2026-10-21"
 },
 "venue|US|horizons edge campus|harrisonburg|va": {
@@ -1467,6 +2301,14 @@
 "miss": true,
 "on": "2026-10-21"
 },
+"venue|US|indianapolis convention center|indianapolis|in": {
+"miss": true,
+"on": "2026-10-21"
+},
+"venue|US|jackpot trading cards|galesburg|il": {
+"miss": true,
+"on": "2026-10-21"
+},
 "venue|US|k o p sports and entertainment center|san antonio|tx": {
 "miss": true,
 "on": "2026-10-21"
@@ -1479,8 +2321,24 @@
 "miss": true,
 "on": "2026-10-21"
 },
+"venue|US|knighthood games|cookeville|tn": {
+"miss": true,
+"on": "2026-10-21"
+},
 "venue|US|knights of columbus|chicopee|ma": {
 "miss": true,
+"on": "2026-10-21"
+},
+"venue|US|las vegas convention center|las vegas|nv": {
+"by": "nominatim",
+"lat": 36.13102,
+"lon": -115.15018,
+"on": "2026-10-21"
+},
+"venue|US|little big wars|fargo|nd": {
+"by": "nominatim",
+"lat": 46.883518,
+"lon": -96.820105,
 "on": "2026-10-21"
 },
 "venue|US|livonia elks lodge|livonia|mi": {
@@ -1489,10 +2347,18 @@
 "lon": -83.349929,
 "on": "2026-10-21"
 },
+"venue|US|lost empire games|yuma|az": {
+"miss": true,
+"on": "2026-10-21"
+},
 "venue|US|madison marriott south|madison|wi": {
 "by": "nominatim",
 "lat": 43.047528,
 "lon": -89.373152,
+"on": "2026-10-21"
+},
+"venue|US|many realms hub|las vegas|nv": {
+"miss": true,
 "on": "2026-10-21"
 },
 "venue|US|marriott watters creek|allen|tx": {
@@ -1505,10 +2371,20 @@
 "miss": true,
 "on": "2026-10-21"
 },
+"venue|US|millennium games|rochester|ny": {
+"by": "nominatim",
+"lat": 43.084378,
+"lon": -77.600841,
+"on": "2026-10-21"
+},
 "venue|US|minneapolis convention center|minneapolis|mn": {
 "by": "nominatim",
 "lat": 44.969333,
 "lon": -93.273714,
+"on": "2026-10-21"
+},
+"venue|US|mission board games kc north|mission|ks": {
+"miss": true,
 "on": "2026-10-21"
 },
 "venue|US|mississippi trade mart|jackson|ms": {
@@ -1517,10 +2393,20 @@
 "lon": -90.173345,
 "on": "2026-10-21"
 },
+"venue|US|misty mountain games|madison|wi": {
+"by": "nominatim",
+"lat": 43.085087,
+"lon": -89.301034,
+"on": "2026-10-21"
+},
 "venue|US|monroeville mall|monroeville|pa": {
 "by": "nominatim",
 "lat": 40.429146,
 "lon": -79.79551,
+"on": "2026-10-21"
+},
+"venue|US|moonblast games|mcallen|tx": {
+"miss": true,
 "on": "2026-10-21"
 },
 "venue|US|moorestown mall|moorestown|nj": {
@@ -1531,8 +2417,26 @@
 "miss": true,
 "on": "2026-10-21"
 },
+"venue|US|mystic fortress games llc|waconia|mn": {
+"miss": true,
+"on": "2026-10-21"
+},
+"venue|US|mythic games|littleton|co": {
+"miss": true,
+"on": "2026-10-21"
+},
+"venue|US|next level games|muncie|in": {
+"miss": true,
+"on": "2026-10-21"
+},
 "venue|US|nexus|waco|tx": {
 "miss": true,
+"on": "2026-10-21"
+},
+"venue|US|not just gamin|greer|sc": {
+"by": "nominatim",
+"lat": 34.937395,
+"lon": -82.226251,
 "on": "2026-10-21"
 },
 "venue|US|nys fairgrounds horticulture building|syracuse|ny": {
@@ -1543,10 +2447,18 @@
 "miss": true,
 "on": "2026-10-21"
 },
+"venue|US|pack rat gaming|enfield|ct": {
+"miss": true,
+"on": "2026-10-21"
+},
 "venue|US|palm beach county convention center|west palm beach|fl": {
 "by": "nominatim",
 "lat": 26.704805,
 "lon": -80.058817,
+"on": "2026-10-21"
+},
+"venue|US|papa joeys collectibles pb|national city|ca": {
+"miss": true,
 "on": "2026-10-21"
 },
 "venue|US|park expo and convention center|charlotte|nc": {
@@ -1559,10 +2471,34 @@
 "lon": -80.799227,
 "on": "2026-10-21"
 },
+"venue|US|pastimes comics and games|niles|il": {
+"by": "nominatim",
+"lat": 42.049244,
+"lon": -87.837888,
+"on": "2026-10-21"
+},
 "venue|US|pennsylvania convention center|philadelphia|pa": {
 "by": "nominatim",
 "lat": 39.955107,
 "lon": -75.160236,
+"on": "2026-10-21"
+},
+"venue|US|phoenix fire games|meridian|id": {
+"by": "nominatim",
+"lat": 43.620493,
+"lon": -116.392129,
+"on": "2026-10-21"
+},
+"venue|US|pink elephant games and cafe|wichita|ks": {
+"miss": true,
+"on": "2026-10-21"
+},
+"venue|US|primal nerds|yukon|ok": {
+"miss": true,
+"on": "2026-10-21"
+},
+"venue|US|pro play games|miami|fl": {
+"miss": true,
 "on": "2026-10-21"
 },
 "venue|US|quality inn|batavia|ny": {
@@ -1575,10 +2511,32 @@
 "miss": true,
 "on": "2026-10-21"
 },
+"venue|US|ready set game|menifee|ca": {
+"miss": true,
+"on": "2026-10-21"
+},
+"venue|US|red raccoon games|bloomington|il": {
+"by": "nominatim",
+"lat": 40.480556,
+"lon": -88.993499,
+"on": "2026-10-21"
+},
+"venue|US|red seal gaming|matawan|nj": {
+"miss": true,
+"on": "2026-10-21"
+},
 "venue|US|rio casino hotel|las vegas|nv": {
 "by": "nominatim",
 "lat": 36.117531,
 "lon": -115.188283,
+"on": "2026-10-21"
+},
+"venue|US|rivals gaming|mishawaka|in": {
+"miss": true,
+"on": "2026-10-21"
+},
+"venue|US|rochester ccg|rochester|ny": {
+"miss": true,
 "on": "2026-10-21"
 },
 "venue|US|royle hotel milwaukee airport|milwaukee|wi": {
@@ -1589,7 +2547,31 @@
 "miss": true,
 "on": "2026-10-21"
 },
+"venue|US|san diego convention center|san diego|ca": {
+"by": "nominatim",
+"lat": 32.706376,
+"lon": -117.161926,
+"on": "2026-10-21"
+},
+"venue|US|sanctuary books and games|irving|tx": {
+"by": "nominatim",
+"lat": 32.933483,
+"lon": -96.95166,
+"on": "2026-10-21"
+},
+"venue|US|scg hobby latrobe|latrobe|pa": {
+"miss": true,
+"on": "2026-10-21"
+},
+"venue|US|seattle convention center arch hall 4|seattle|wa": {
+"miss": true,
+"on": "2026-10-21"
+},
 "venue|US|sheraton baltimore north|towson|md": {
+"miss": true,
+"on": "2026-10-21"
+},
+"venue|US|silver sun games|montgomery|ny": {
 "miss": true,
 "on": "2026-10-21"
 },
@@ -1599,8 +2581,66 @@
 "lon": -96.750068,
 "on": "2026-10-21"
 },
+"venue|US|slick mimics|appleton|wi": {
+"miss": true,
+"on": "2026-10-21"
+},
+"venue|US|spellbound gaming and collectibles|lebanon|oh": {
+"miss": true,
+"on": "2026-10-21"
+},
 "venue|US|stueckle sky center|boise|id": {
 "miss": true,
+"on": "2026-10-21"
+},
+"venue|US|tabletop gaming center|newington|ct": {
+"by": "nominatim",
+"lat": 41.670968,
+"lon": -72.753459,
+"on": "2026-10-21"
+},
+"venue|US|tabletop village|seattle|wa": {
+"miss": true,
+"on": "2026-10-21"
+},
+"venue|US|tako games and collectibles|kyle|tx": {
+"miss": true,
+"on": "2026-10-21"
+},
+"venue|US|the bearded dragon|bernardsville|nj": {
+"by": "nominatim",
+"lat": 40.723804,
+"lon": -74.573458,
+"on": "2026-10-21"
+},
+"venue|US|the collective comics and games|altamonte springs|fl": {
+"miss": true,
+"on": "2026-10-21"
+},
+"venue|US|the fun collector|orem|ut": {
+"by": "nominatim",
+"lat": 40.314351,
+"lon": -111.728374,
+"on": "2026-10-21"
+},
+"venue|US|the gamers haven|spokane|wa": {
+"miss": true,
+"on": "2026-10-21"
+},
+"venue|US|the gamers xp|shreveport|la": {
+"miss": true,
+"on": "2026-10-21"
+},
+"venue|US|the gaming guild|evansville|in": {
+"by": "nominatim",
+"lat": 37.990378,
+"lon": -87.493969,
+"on": "2026-10-21"
+},
+"venue|US|the sorcerers inn|randolph|ma": {
+"by": "nominatim",
+"lat": 42.164852,
+"lon": -71.056925,
 "on": "2026-10-21"
 },
 "venue|US|the venue at coosa landing|gadsden|al": {
@@ -1613,7 +2653,27 @@
 "miss": true,
 "on": "2026-10-21"
 },
+"venue|US|titan games|caguas|pr": {
+"by": "nominatim",
+"lat": 18.235388,
+"lon": -66.035452,
+"on": "2026-10-21"
+},
+"venue|US|top deck games|cherry hill|nj": {
+"by": "nominatim",
+"lat": 39.880244,
+"lon": -75.005232,
+"on": "2026-10-21"
+},
 "venue|US|triple crown pavilion|louisville|ky": {
+"miss": true,
+"on": "2026-10-21"
+},
+"venue|US|tucson games and gadgets|tucson|az": {
+"miss": true,
+"on": "2026-10-21"
+},
+"venue|US|vans comics cards and games|ridgeland|ms": {
 "miss": true,
 "on": "2026-10-21"
 },
@@ -1625,6 +2685,16 @@
 "by": "nominatim",
 "lat": 41.059358,
 "lon": -73.832667,
+"on": "2026-10-21"
+},
+"venue|US|zenergy gamers|goose creek|sc": {
+"miss": true,
+"on": "2026-10-21"
+},
+"venue|US|zulus board game cafe|bothell|wa": {
+"by": "nominatim",
+"lat": 47.760496,
+"lon": -122.202364,
 "on": "2026-10-21"
 }
 }
