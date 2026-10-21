@@ -1,1 +1,1630 @@
-{}
+{
+"addr|CA|1001 pl jean paul riopelle 220b|montreal|qc|h2y 3x": {
+"miss": true,
+"on": "2026-10-21"
+},
+"addr|CA|1055 canada place|vancouver|bc|": {
+"by": "nominatim",
+"lat": 49.288907,
+"lon": -123.116077,
+"on": "2026-10-21"
+},
+"addr|CA|1055 canada pl|vancouver|bc|v6c 0c": {
+"by": "nominatim",
+"lat": 49.288907,
+"lon": -123.116077,
+"on": "2026-10-21"
+},
+"addr|CA|400 bayfield street unit 35|barrie|on|l4m 5a": {
+"miss": true,
+"on": "2026-10-21"
+},
+"addr|CA|405 north road 1|coquitlam|bc|": {
+"miss": true,
+"on": "2026-10-21"
+},
+"addr|CA|503 ruth street west|saskatoon|sk|s7k 4e": {
+"by": "nominatim",
+"lat": 52.099289,
+"lon": -106.676842,
+"on": "2026-10-21"
+},
+"addr|CA|6900 airport rd|mississauga|on|l4v 1e": {
+"miss": true,
+"on": "2026-10-21"
+},
+"addr|CA|703 terminal ave|vancouver|bc|v6a 2m": {
+"by": "nominatim",
+"lat": 49.271446,
+"lon": -123.089486,
+"on": "2026-10-21"
+},
+"addr|CA|955 av de bois de boulogne|laval|qc|h7n 4g": {
+"by": "nominatim",
+"lat": 45.575179,
+"lon": -73.703128,
+"on": "2026-10-21"
+},
+"addr|US|1 cardinals dr|glendale|az|85305": {
+"by": "census",
+"lat": 33.529134,
+"lon": -112.264633,
+"on": "2026-10-21"
+},
+"addr|US|1 market pl|san diego|ca|92101": {
+"by": "census",
+"lat": 32.710839,
+"lon": -117.168241,
+"on": "2026-10-21"
+},
+"addr|US|1 mohegan sun blvd|uncasville|ct|06382": {
+"by": "census",
+"lat": 41.492575,
+"lon": -72.096201,
+"on": "2026-10-21"
+},
+"addr|US|100 columbus blvd|hartford|ct|06103": {
+"by": "census",
+"lat": 41.762683,
+"lon": -72.669993,
+"on": "2026-10-21"
+},
+"addr|US|100 north third street|phoenix|az|85004": {
+"by": "census",
+"lat": 33.449322,
+"lon": -112.070021,
+"on": "2026-10-21"
+},
+"addr|US|100 south capital ave|indianapolis|in|46225": {
+"by": "census",
+"lat": 39.764268,
+"lon": -86.161898,
+"on": "2026-10-21"
+},
+"addr|US|100 station avenue|oaks|pa|19456": {
+"by": "nominatim",
+"lat": 40.126159,
+"lon": -75.458883,
+"on": "2026-10-21"
+},
+"addr|US|1000 ne multnomah st|portland|or|97232": {
+"by": "census",
+"lat": 45.531438,
+"lon": -122.655567,
+"on": "2026-10-21"
+},
+"addr|US|1000 northview rd|waukesha|wi|53188": {
+"by": "census",
+"lat": 43.032337,
+"lon": -88.241536,
+"on": "2026-10-21"
+},
+"addr|US|1001 avenida de las americas|houston|tx|77010": {
+"by": "census",
+"lat": 29.752627,
+"lon": -95.358541,
+"on": "2026-10-21"
+},
+"addr|US|1001 west market street|celina|oh|": {
+"by": "census",
+"lat": 40.549331,
+"lon": -84.582076,
+"on": "2026-10-21"
+},
+"addr|US|101 north atlantic avenue|daytona beach|fl|32118": {
+"by": "census",
+"lat": 29.228318,
+"lon": -81.009004,
+"on": "2026-10-21"
+},
+"addr|US|1011 n south st|mt airy|nc|27030": {
+"by": "census",
+"lat": 36.511355,
+"lon": -80.615211,
+"on": "2026-10-21"
+},
+"addr|US|1017 e sandusky st|findlay|oh|45840": {
+"by": "census",
+"lat": 41.036767,
+"lon": -83.630404,
+"on": "2026-10-21"
+},
+"addr|US|1045 lower gold camp rd|colorado springs|co|80905": {
+"by": "census",
+"lat": 38.816868,
+"lon": -104.881504,
+"on": "2026-10-21"
+},
+"addr|US|1050 north avenue|tallmadge|oh|44278": {
+"by": "census",
+"lat": 41.123508,
+"lon": -81.440021,
+"on": "2026-10-21"
+},
+"addr|US|109 s comrie ave|johnstown|ny|12095": {
+"by": "census",
+"lat": 43.001864,
+"lon": -74.358655,
+"on": "2026-10-21"
+},
+"addr|US|11 amboy rd|bordentown|nj|08505": {
+"by": "census",
+"lat": 40.160049,
+"lon": -74.69843,
+"on": "2026-10-21"
+},
+"addr|US|11 s dow st|falconer|ny|": {
+"by": "census",
+"lat": 42.112237,
+"lon": -79.20374,
+"on": "2026-10-21"
+},
+"addr|US|111 harbor drive|san diego|ca|92101": {
+"by": "census",
+"lat": 32.7089,
+"lon": -117.164393,
+"on": "2026-10-21"
+},
+"addr|US|1111 north ohio street|greenville|oh|": {
+"by": "census",
+"lat": 40.116401,
+"lon": -84.616536,
+"on": "2026-10-21"
+},
+"addr|US|1146 ohio 53|tiffin|oh|": {
+"by": "census",
+"lat": 41.140985,
+"lon": -83.169095,
+"on": "2026-10-21"
+},
+"addr|US|11787 us 50|fairfax|va|22033": {
+"by": "nominatim",
+"lat": 38.863449,
+"lon": -77.353448,
+"on": "2026-10-21"
+},
+"addr|US|1180 blowing rock rd|boone|nc|28607": {
+"by": "census",
+"lat": 36.203885,
+"lon": -81.666956,
+"on": "2026-10-21"
+},
+"addr|US|11825 technology drive|fishers|in|46038": {
+"by": "census",
+"lat": 39.963508,
+"lon": -86.008668,
+"on": "2026-10-21"
+},
+"addr|US|11999 harbor blvd|garden grove|ca|92840": {
+"by": "census",
+"lat": 33.789454,
+"lon": -117.914969,
+"on": "2026-10-21"
+},
+"addr|US|1200 mississippi st|jackson|ms|39202": {
+"by": "census",
+"lat": 32.301353,
+"lon": -90.171658,
+"on": "2026-10-21"
+},
+"addr|US|12000 alumni dr|jacksonville|fl|": {
+"by": "census",
+"lat": 30.262453,
+"lon": -81.503096,
+"on": "2026-10-21"
+},
+"addr|US|1301 second ave s|minneapolis|mn|55403": {
+"by": "census",
+"lat": 44.970322,
+"lon": -93.273906,
+"on": "2026-10-21"
+},
+"addr|US|1310 olean portville rd|olean|ny|": {
+"by": "census",
+"lat": 42.061241,
+"lon": -78.375698,
+"on": "2026-10-21"
+},
+"addr|US|1331 pennsylvania avenue nw|washington|dc|20004": {
+"by": "census",
+"lat": 38.895561,
+"lon": -77.030001,
+"on": "2026-10-21"
+},
+"addr|US|1333 old bayshore hwy|burlingame|ca|94010": {
+"by": "census",
+"lat": 37.594879,
+"lon": -122.364784,
+"on": "2026-10-21"
+},
+"addr|US|1340 mount vernon avenue|marion|oh|": {
+"by": "census",
+"lat": 40.581043,
+"lon": -83.094342,
+"on": "2026-10-21"
+},
+"addr|US|1346 saratoga dr|san mateo|ca|94403": {
+"by": "nominatim",
+"lat": 37.5451,
+"lon": -122.293564,
+"on": "2026-10-21"
+},
+"addr|US|1380 harbor island drive|san diego|ca|92101": {
+"by": "census",
+"lat": 32.726435,
+"lon": -117.196708,
+"on": "2026-10-21"
+},
+"addr|US|1500 commerce street|tacoma|wa|98402": {
+"by": "census",
+"lat": 47.249117,
+"lon": -122.438521,
+"on": "2026-10-21"
+},
+"addr|US|1501 ohio 522|wheelersburg|oh|": {
+"by": "census",
+"lat": 38.710805,
+"lon": -82.855241,
+"on": "2026-10-21"
+},
+"addr|US|151 southwood dr|mocksville|nc|27028": {
+"by": "census",
+"lat": 35.871304,
+"lon": -80.550837,
+"on": "2026-10-21"
+},
+"addr|US|1551 thoreau dr n|schaumburg|il|60173": {
+"by": "census",
+"lat": 42.062759,
+"lon": -88.042713,
+"on": "2026-10-21"
+},
+"addr|US|16000 bagley road|middleburg heights|oh|": {
+"by": "census",
+"lat": 41.371762,
+"lon": -81.811047,
+"on": "2026-10-21"
+},
+"addr|US|1630 east southern avenue|bucyrus|oh|": {
+"by": "census",
+"lat": 40.797976,
+"lon": -82.953154,
+"on": "2026-10-21"
+},
+"addr|US|1700 west international speedway boulevard|daytona beach|fl|32114": {
+"by": "census",
+"lat": 29.194589,
+"lon": -81.062894,
+"on": "2026-10-21"
+},
+"addr|US|1700 winkler st|wilkesboro|nc|28697": {
+"by": "census",
+"lat": 36.151518,
+"lon": -81.189843,
+"on": "2026-10-21"
+},
+"addr|US|175 west kellogg boulevard|saint paul|mn|55102": {
+"by": "census",
+"lat": 44.943606,
+"lon": -93.100169,
+"on": "2026-10-21"
+},
+"addr|US|1800 presidents st|reston|va|": {
+"by": "census",
+"lat": 38.958651,
+"lon": -77.355532,
+"on": "2026-10-21"
+},
+"addr|US|1801 kalakaua ave|honolulu|hi|96815": {
+"by": "nominatim",
+"lat": 21.29005,
+"lon": -157.836953,
+"on": "2026-10-21"
+},
+"addr|US|1900 e main street|danville|in|46122": {
+"by": "census",
+"lat": 39.76165,
+"lon": -86.48862,
+"on": "2026-10-21"
+},
+"addr|US|1900 military rd|niagara falls|ny|": {
+"by": "census",
+"lat": 43.098147,
+"lon": -78.97595,
+"on": "2026-10-21"
+},
+"addr|US|1945 elida road|lima|oh|": {
+"by": "census",
+"lat": 40.757915,
+"lon": -84.139027,
+"on": "2026-10-21"
+},
+"addr|US|1950 south eber road|holland|oh|": {
+"by": "census",
+"lat": 41.604785,
+"lon": -83.786366,
+"on": "2026-10-21"
+},
+"addr|US|199 vanover st|wooster|oh|44691": {
+"by": "nominatim",
+"lat": 40.7969,
+"lon": -81.94846,
+"on": "2026-10-21"
+},
+"addr|US|2 galleria parkway|atlanta|ga|30339": {
+"by": "census",
+"lat": 33.882758,
+"lon": -84.465335,
+"on": "2026-10-21"
+},
+"addr|US|200 civic center drive|charleston|wv|25301": {
+"by": "census",
+"lat": 38.355097,
+"lon": -81.641407,
+"on": "2026-10-21"
+},
+"addr|US|2000 civic center ln|waxahachie|tx|75165": {
+"by": "census",
+"lat": 32.422991,
+"lon": -96.864546,
+"on": "2026-10-21"
+},
+"addr|US|201 shotwell drive|franklin|oh|": {
+"by": "census",
+"lat": 39.535617,
+"lon": -84.287731,
+"on": "2026-10-21"
+},
+"addr|US|201 sw jefferson ave|peoria|il|61602": {
+"by": "census",
+"lat": 40.691189,
+"lon": -89.593259,
+"on": "2026-10-21"
+},
+"addr|US|205 elm street|london|oh|": {
+"by": "census",
+"lat": 39.896334,
+"lon": -83.446691,
+"on": "2026-10-21"
+},
+"addr|US|209 mall boulevard|monroeville|pa|": {
+"by": "census",
+"lat": 40.432251,
+"lon": -79.790675,
+"on": "2026-10-21"
+},
+"addr|US|209 mall plaza blvd|monroeville|pa|15146": {
+"by": "census",
+"lat": 40.432251,
+"lon": -79.790675,
+"on": "2026-10-21"
+},
+"addr|US|21850 oxnard st|woodland hills|ca|91367": {
+"by": "census",
+"lat": 34.17909,
+"lon": -118.603699,
+"on": "2026-10-21"
+},
+"addr|US|2200 york rd|timonium|md|21093": {
+"by": "census",
+"lat": 39.447287,
+"lon": -76.629308,
+"on": "2026-10-21"
+},
+"addr|US|2212 mall dr e|waterford township|mi|48328": {
+"by": "census",
+"lat": 42.647173,
+"lon": -83.328978,
+"on": "2026-10-21"
+},
+"addr|US|225 washington ave ext|albany|ny|12205": {
+"by": "census",
+"lat": 42.712662,
+"lon": -73.871343,
+"on": "2026-10-21"
+},
+"addr|US|2260 jimmy durante blvd|del mar|ca|92014": {
+"by": "census",
+"lat": 32.97135,
+"lon": -117.262057,
+"on": "2026-10-21"
+},
+"addr|US|2280 west william street|delaware|oh|": {
+"by": "nominatim",
+"lat": 40.299494,
+"lon": -83.083169,
+"on": "2026-10-21"
+},
+"addr|US|2299 cherry valley rd se ste 3|newark|oh|43055": {
+"by": "census",
+"lat": 40.050969,
+"lon": -82.478458,
+"on": "2026-10-21"
+},
+"addr|US|2299 cherry valley road southeast|newark|oh|": {
+"by": "census",
+"lat": 40.050969,
+"lon": -82.478458,
+"on": "2026-10-21"
+},
+"addr|US|236 scottwood ave|elmira|ny|": {
+"by": "census",
+"lat": 42.130192,
+"lon": -76.821083,
+"on": "2026-10-21"
+},
+"addr|US|2371 carl d silver pkwy|fredericksburg|va|22401": {
+"by": "census",
+"lat": 38.316011,
+"lon": -77.509602,
+"on": "2026-10-21"
+},
+"addr|US|2401 south stemmons freeway|lewisville|tx|75067": {
+"by": "nominatim",
+"lat": 33.006963,
+"lon": -96.971434,
+"on": "2026-10-21"
+},
+"addr|US|250 vernon road|shelby|oh|": {
+"by": "census",
+"lat": 40.875319,
+"lon": -82.677219,
+"on": "2026-10-21"
+},
+"addr|US|2510 milton ave|janesville|wi|53545": {
+"by": "census",
+"lat": 42.712765,
+"lon": -89.001253,
+"on": "2026-10-21"
+},
+"addr|US|2615 glenwood dr|twinsburg|oh|44087": {
+"by": "census",
+"lat": 41.340475,
+"lon": -81.434843,
+"on": "2026-10-21"
+},
+"addr|US|2701 cleveland road west|sandusky|oh|": {
+"by": "census",
+"lat": 41.43244,
+"lon": -82.659197,
+"on": "2026-10-21"
+},
+"addr|US|299 mercer st|seattle|wa|98109": {
+"by": "census",
+"lat": 47.624511,
+"lon": -122.351574,
+"on": "2026-10-21"
+},
+"addr|US|300 e green street|pasadena|ca|91101": {
+"by": "nominatim",
+"lat": 34.143483,
+"lon": -118.143419,
+"on": "2026-10-21"
+},
+"addr|US|300 s center st|statesville|nc|28677": {
+"by": "census",
+"lat": 35.782716,
+"lon": -80.887384,
+"on": "2026-10-21"
+},
+"addr|US|3005 nw 92nd avenue|doral|fl|33172": {
+"by": "nominatim",
+"lat": 25.792232,
+"lon": -80.344555,
+"on": "2026-10-21"
+},
+"addr|US|301 mount hope avenue|rockaway|nj|07866": {
+"by": "census",
+"lat": 40.908984,
+"lon": -74.547188,
+"on": "2026-10-21"
+},
+"addr|US|314 granville street|newark|oh|": {
+"by": "census",
+"lat": 40.06274,
+"lon": -82.418082,
+"on": "2026-10-21"
+},
+"addr|US|318 e fairmount ave|lakewood|ny|": {
+"by": "census",
+"lat": 42.098749,
+"lon": -79.304121,
+"on": "2026-10-21"
+},
+"addr|US|3253 south high street|columbus|oh|": {
+"by": "census",
+"lat": 39.895871,
+"lon": -82.995356,
+"on": "2026-10-21"
+},
+"addr|US|33 baldwin road|parsippany troy hills|nj|07054": {
+"by": "census",
+"lat": 40.862161,
+"lon": -74.39855,
+"on": "2026-10-21"
+},
+"addr|US|333 dick rd|depew|ny|": {
+"by": "census",
+"lat": 42.912277,
+"lon": -78.732453,
+"on": "2026-10-21"
+},
+"addr|US|343 northwest prima vista boulevard|port saint lucie|fl|34983": {
+"by": "census",
+"lat": 27.317888,
+"lon": -80.357334,
+"on": "2026-10-21"
+},
+"addr|US|3475 hero dr|oceanside|ca|92056": {
+"by": "nominatim",
+"lat": 33.207461,
+"lon": -117.314732,
+"on": "2026-10-21"
+},
+"addr|US|3615 hayes avenue|sandusky|oh|": {
+"by": "census",
+"lat": 41.415139,
+"lon": -82.723538,
+"on": "2026-10-21"
+},
+"addr|US|362 cooley st|springfield|ma|01128": {
+"by": "census",
+"lat": 42.096366,
+"lon": -72.497946,
+"on": "2026-10-21"
+},
+"addr|US|3635 fashion way|torrance|ca|90503": {
+"by": "census",
+"lat": 33.835274,
+"lon": -118.349853,
+"on": "2026-10-21"
+},
+"addr|US|3700 w flamingo road|las vegas|nv|89103": {
+"by": "census",
+"lat": 36.115284,
+"lon": -115.186854,
+"on": "2026-10-21"
+},
+"addr|US|3701 mckinley pkwy|blasdell|ny|": {
+"by": "census",
+"lat": 42.789698,
+"lon": -78.811011,
+"on": "2026-10-21"
+},
+"addr|US|380 social street|woonsocket|ri|": {
+"by": "census",
+"lat": 42.008342,
+"lon": -71.506769,
+"on": "2026-10-21"
+},
+"addr|US|3801 sumner blvd|raleigh|nc|27616": {
+"by": "census",
+"lat": 35.863479,
+"lon": -78.573868,
+"on": "2026-10-21"
+},
+"addr|US|3849 s delsea drive|vineland|nj|08360": {
+"by": "census",
+"lat": 39.431605,
+"lon": -75.040365,
+"on": "2026-10-21"
+},
+"addr|US|4 sheridan road|bath|me|04530": {
+"by": "census",
+"lat": 43.916306,
+"lon": -69.824663,
+"on": "2026-10-21"
+},
+"addr|US|400 w rt 38|moorestown|nj|": {
+"miss": true,
+"on": "2026-10-21"
+},
+"addr|US|4041 johnson road|norton|oh|": {
+"by": "census",
+"lat": 41.003989,
+"lon": -81.666623,
+"on": "2026-10-21"
+},
+"addr|US|415 summer st|boston|ma|02210": {
+"by": "census",
+"lat": 42.34735,
+"lon": -71.044446,
+"on": "2026-10-21"
+},
+"addr|US|419 twins wy|advance|nc|27006": {
+"by": "census",
+"lat": 36.016236,
+"lon": -80.420049,
+"on": "2026-10-21"
+},
+"addr|US|4310 hwy 36 south|rosenberg|tx|77471": {
+"by": "census",
+"lat": 29.518945,
+"lon": -95.807948,
+"on": "2026-10-21"
+},
+"addr|US|445 columbia ave|depew|ny|": {
+"by": "census",
+"lat": 42.920629,
+"lon": -78.68193,
+"on": "2026-10-21"
+},
+"addr|US|4601 eastgate boulevard|cincinnati|oh|": {
+"by": "census",
+"lat": 39.10446,
+"lon": -84.273864,
+"on": "2026-10-21"
+},
+"addr|US|46100 grand river ave|novi|mi|48374": {
+"by": "census",
+"lat": 42.486733,
+"lon": -83.501721,
+"on": "2026-10-21"
+},
+"addr|US|469 forry street|newark|oh|": {
+"by": "nominatim",
+"lat": 40.044259,
+"lon": -82.416811,
+"on": "2026-10-21"
+},
+"addr|US|475 s grand central parkway|las vegas|nv|89106": {
+"by": "census",
+"lat": 36.167148,
+"lon": -115.155437,
+"on": "2026-10-21"
+},
+"addr|US|48 e bath road|cuyahoga falls|oh|44223": {
+"by": "census",
+"lat": 41.158653,
+"lon": -81.508686,
+"on": "2026-10-21"
+},
+"addr|US|480 fry road|wooster|oh|": {
+"by": "census",
+"lat": 40.793263,
+"lon": -81.982619,
+"on": "2026-10-21"
+},
+"addr|US|4800 u s hwy 301 n|tampa|fl|33610": {
+"miss": true,
+"on": "2026-10-21"
+},
+"addr|US|4850 national western dr|denver|co|80216": {
+"by": "nominatim",
+"lat": 39.780538,
+"lon": -104.975464,
+"on": "2026-10-21"
+},
+"addr|US|4954 great northern mall|north olmsted|oh|44070": {
+"by": "census",
+"lat": 41.418663,
+"lon": -81.909592,
+"on": "2026-10-21"
+},
+"addr|US|500 hotel circle north|san diego|ca|92108": {
+"by": "census",
+"lat": 32.76128,
+"lon": -117.168576,
+"on": "2026-10-21"
+},
+"addr|US|5001 great america pkwy|santa clara|ca|95054": {
+"by": "nominatim",
+"lat": 37.404397,
+"lon": -121.975052,
+"on": "2026-10-21"
+},
+"addr|US|5025 e mill rd|broadview heights|oh|44147": {
+"by": "census",
+"lat": 41.341157,
+"lon": -81.648608,
+"on": "2026-10-21"
+},
+"addr|US|5027 northwest parkway|hilliard|oh|": {
+"by": "nominatim",
+"lat": 40.038069,
+"lon": -83.148755,
+"on": "2026-10-21"
+},
+"addr|US|522 broadway|saratoga springs|ny|12866": {
+"by": "census",
+"lat": 43.086682,
+"lon": -73.783273,
+"on": "2026-10-21"
+},
+"addr|US|5333 prairie stone pkwy|hoffman estates|il|60192": {
+"by": "nominatim",
+"lat": 42.069267,
+"lon": -88.212835,
+"on": "2026-10-21"
+},
+"addr|US|54 pine st|lockport|ny|": {
+"by": "census",
+"lat": 43.168897,
+"lon": -78.691908,
+"on": "2026-10-21"
+},
+"addr|US|5555 n river rd|rosemont|il|60018": {
+"by": "census",
+"lat": 41.979703,
+"lon": -87.862091,
+"on": "2026-10-21"
+},
+"addr|US|5555 n river road|rosemont|il|60018": {
+"by": "census",
+"lat": 41.979703,
+"lon": -87.862091,
+"on": "2026-10-21"
+},
+"addr|US|578 howard avenue|biloxi|ms|": {
+"by": "census",
+"lat": 30.396345,
+"lon": -88.880238,
+"on": "2026-10-21"
+},
+"addr|US|5939 stone hill rd|lakeville|ny|": {
+"by": "census",
+"lat": 42.837296,
+"lon": -77.698953,
+"on": "2026-10-21"
+},
+"addr|US|60 county street|norwalk|ct|06851": {
+"by": "census",
+"lat": 41.123683,
+"lon": -73.3898,
+"on": "2026-10-21"
+},
+"addr|US|601 w mckinley ave|pomona|ca|91768": {
+"by": "census",
+"lat": 34.077946,
+"lon": -117.761425,
+"on": "2026-10-21"
+},
+"addr|US|6205 ramada dr|clemmons|nc|27012": {
+"by": "census",
+"lat": 36.035505,
+"lon": -80.382687,
+"on": "2026-10-21"
+},
+"addr|US|6354 selig dr|independence|oh|44131": {
+"by": "census",
+"lat": 41.376494,
+"lon": -81.644403,
+"on": "2026-10-21"
+},
+"addr|US|650 s griffin st|dallas|tx|75202": {
+"by": "census",
+"lat": 32.775295,
+"lon": -96.801783,
+"on": "2026-10-21"
+},
+"addr|US|6525 ward rd|sanborn|ny|": {
+"by": "census",
+"lat": 43.105996,
+"lon": -78.889784,
+"on": "2026-10-21"
+},
+"addr|US|700 columbus avenue|new york|ny|10025": {
+"by": "census",
+"lat": 40.79164,
+"lon": -73.968496,
+"on": "2026-10-21"
+},
+"addr|US|701 convention plaza|st louis|mo|63101": {
+"by": "census",
+"lat": 38.631904,
+"lon": -90.189892,
+"on": "2026-10-21"
+},
+"addr|US|705 pike street|seattle|wa|98101": {
+"by": "census",
+"lat": 47.613999,
+"lon": -122.323286,
+"on": "2026-10-21"
+},
+"addr|US|7070 seneca st|elma|ny|": {
+"by": "census",
+"lat": 42.804234,
+"lon": -78.661354,
+"on": "2026-10-21"
+},
+"addr|US|711 nw 72nd ave|miami|fl|33126": {
+"by": "census",
+"lat": 25.78399,
+"lon": -80.312515,
+"on": "2026-10-21"
+},
+"addr|US|717 e 17th ave|columbus|oh|43211": {
+"by": "nominatim",
+"lat": 39.998249,
+"lon": -82.992963,
+"on": "2026-10-21"
+},
+"addr|US|735 american way|shreveport|la|71106": {
+"by": "census",
+"lat": 32.423792,
+"lon": -93.741056,
+"on": "2026-10-21"
+},
+"addr|US|735 lafayette road|medina|oh|44256": {
+"by": "census",
+"lat": 41.128615,
+"lon": -81.880945,
+"on": "2026-10-21"
+},
+"addr|US|7410 south avenue|boardman|oh|": {
+"by": "census",
+"lat": 41.0212,
+"lon": -80.634435,
+"on": "2026-10-21"
+},
+"addr|US|7671 auburn road|painesville|oh|": {
+"by": "census",
+"lat": 41.661803,
+"lon": -81.24406,
+"on": "2026-10-21"
+},
+"addr|US|77 e mill street|akron|oh|44308": {
+"by": "census",
+"lat": 41.082089,
+"lon": -81.515862,
+"on": "2026-10-21"
+},
+"addr|US|774 eastern pkwy|louisville|ky|40217": {
+"by": "census",
+"lat": 38.214382,
+"lon": -85.7434,
+"on": "2026-10-21"
+},
+"addr|US|777 ne martin luther king jr blvd|portland|or|97232": {
+"by": "census",
+"lat": 45.528459,
+"lon": -122.661769,
+"on": "2026-10-21"
+},
+"addr|US|78 center street|rutland|vt|05701": {
+"by": "census",
+"lat": 43.606878,
+"lon": -72.975429,
+"on": "2026-10-21"
+},
+"addr|US|7850 mentor avenue|mentor|oh|": {
+"by": "census",
+"lat": 41.661162,
+"lon": -81.360154,
+"on": "2026-10-21"
+},
+"addr|US|7900 euclid chardon rd|kirtland|oh|44094": {
+"by": "nominatim",
+"lat": 41.583853,
+"lon": -81.370774,
+"on": "2026-10-21"
+},
+"addr|US|8250 park rd|batavia|ny|": {
+"by": "census",
+"lat": 43.015697,
+"lon": -78.199314,
+"on": "2026-10-21"
+},
+"addr|US|873 state street|vermilion|oh|": {
+"by": "census",
+"lat": 41.417909,
+"lon": -82.365597,
+"on": "2026-10-21"
+},
+"addr|US|875 silver spur ln|kissimmee|fl|34744": {
+"miss": true,
+"on": "2026-10-21"
+},
+"addr|US|900 barton springs road|austin|tx|78704": {
+"by": "census",
+"lat": 30.259658,
+"lon": -97.753519,
+"on": "2026-10-21"
+},
+"addr|US|900 bellevue way ne|bellevue|wa|98004": {
+"by": "census",
+"lat": 47.618386,
+"lon": -122.201616,
+"on": "2026-10-21"
+},
+"addr|US|900 boylston st|boston|ma|": {
+"by": "census",
+"lat": 42.348307,
+"lon": -71.083795,
+"on": "2026-10-21"
+},
+"addr|US|900 w orman ave|pueblo|co|": {
+"by": "census",
+"lat": 38.262006,
+"lon": -104.636908,
+"on": "2026-10-21"
+},
+"addr|US|9091 e 126th st|fishers|in|46038": {
+"by": "census",
+"lat": 39.971479,
+"lon": -86.008615,
+"on": "2026-10-21"
+},
+"addr|US|93 w campbell road|schenectady|ny|12306": {
+"by": "census",
+"lat": 42.808655,
+"lon": -73.991971,
+"on": "2026-10-21"
+},
+"addr|US|940 fair road|norwalk|oh|": {
+"by": "census",
+"lat": 41.229578,
+"lon": -82.628251,
+"on": "2026-10-21"
+},
+"addr|US|9501 colerain avenue|cincinnati|oh|": {
+"by": "census",
+"lat": 39.244845,
+"lon": -84.595469,
+"on": "2026-10-21"
+},
+"addr|US|97 sunfield ave|edison|nj|08837": {
+"by": "census",
+"lat": 40.500955,
+"lon": -74.348193,
+"on": "2026-10-21"
+},
+"addr|US|9800 international dr|orlando|fl|32819": {
+"by": "census",
+"lat": 28.428664,
+"lon": -81.470196,
+"on": "2026-10-21"
+},
+"addr|US|9801 international drive|orlando|fl|32819": {
+"by": "census",
+"lat": 28.428685,
+"lon": -81.470068,
+"on": "2026-10-21"
+},
+"addr|US|988 cherry road northwest|massillon|oh|": {
+"by": "census",
+"lat": 40.801975,
+"lon": -81.536756,
+"on": "2026-10-21"
+},
+"addr|US|991 sand lake road|altamonte springs|fl|32714": {
+"by": "census",
+"lat": 28.680005,
+"lon": -81.422236,
+"on": "2026-10-21"
+},
+"addr|US|one utsa blvd|san antonio|tx|": {
+"by": "nominatim",
+"lat": 29.578052,
+"lon": -98.603009,
+"on": "2026-10-21"
+},
+"city|US|atlanta|ga": {
+"by": "nominatim",
+"lat": 33.754466,
+"lon": -84.389815,
+"on": "2026-10-21"
+},
+"city|US|austin|tx": {
+"by": "nominatim",
+"lat": 30.264926,
+"lon": -97.747409,
+"on": "2026-10-21"
+},
+"city|US|belton|tx": {
+"by": "nominatim",
+"lat": 31.056013,
+"lon": -97.464453,
+"on": "2026-10-21"
+},
+"city|US|billings|mt": {
+"by": "nominatim",
+"lat": 45.787496,
+"lon": -108.49607,
+"on": "2026-10-21"
+},
+"city|US|boise|id": {
+"by": "nominatim",
+"lat": 43.616616,
+"lon": -116.200886,
+"on": "2026-10-21"
+},
+"city|US|boston|ma": {
+"by": "nominatim",
+"lat": 42.358834,
+"lon": -71.05783,
+"on": "2026-10-21"
+},
+"city|US|cedar park|tx": {
+"by": "nominatim",
+"lat": 30.521712,
+"lon": -97.827833,
+"on": "2026-10-21"
+},
+"city|US|charlotte|nc": {
+"by": "nominatim",
+"lat": 35.227209,
+"lon": -80.843083,
+"on": "2026-10-21"
+},
+"city|US|chicopee|ma": {
+"by": "nominatim",
+"lat": 42.148769,
+"lon": -72.607112,
+"on": "2026-10-21"
+},
+"city|US|colonial heights|va": {
+"by": "nominatim",
+"lat": 37.255572,
+"lon": -77.411202,
+"on": "2026-10-21"
+},
+"city|US|dallas|tx": {
+"by": "nominatim",
+"lat": 32.776272,
+"lon": -96.796856,
+"on": "2026-10-21"
+},
+"city|US|fort worth|tx": {
+"by": "nominatim",
+"lat": 32.753177,
+"lon": -97.332746,
+"on": "2026-10-21"
+},
+"city|US|galveston|tx": {
+"by": "nominatim",
+"lat": 29.3057,
+"lon": -94.793325,
+"on": "2026-10-21"
+},
+"city|US|harrisonburg|va": {
+"by": "nominatim",
+"lat": 38.449331,
+"lon": -78.868883,
+"on": "2026-10-21"
+},
+"city|US|houston|tx": {
+"by": "nominatim",
+"lat": 29.758938,
+"lon": -95.367697,
+"on": "2026-10-21"
+},
+"city|US|indianapolis|in": {
+"by": "nominatim",
+"lat": 39.768333,
+"lon": -86.15835,
+"on": "2026-10-21"
+},
+"city|US|lake conroe|tx": {
+"miss": true,
+"on": "2026-10-21"
+},
+"city|US|lancaster|oh": {
+"by": "nominatim",
+"lat": 39.713675,
+"lon": -82.599329,
+"on": "2026-10-21"
+},
+"city|US|las vegas|nv": {
+"by": "nominatim",
+"lat": 36.167426,
+"lon": -115.148413,
+"on": "2026-10-21"
+},
+"city|US|louisville|ky": {
+"by": "nominatim",
+"lat": 38.254238,
+"lon": -85.759407,
+"on": "2026-10-21"
+},
+"city|US|lowell|ma": {
+"by": "nominatim",
+"lat": 42.641444,
+"lon": -71.308533,
+"on": "2026-10-21"
+},
+"city|US|milwaukee|wi": {
+"by": "nominatim",
+"lat": 43.038648,
+"lon": -87.909075,
+"on": "2026-10-21"
+},
+"city|US|moorestown|nj": {
+"by": "nominatim",
+"lat": 39.967057,
+"lon": -74.942668,
+"on": "2026-10-21"
+},
+"city|US|oklahoma city|ok": {
+"by": "nominatim",
+"lat": 35.472989,
+"lon": -97.517054,
+"on": "2026-10-21"
+},
+"city|US|orlando|fl": {
+"by": "nominatim",
+"lat": 28.542122,
+"lon": -81.379045,
+"on": "2026-10-21"
+},
+"city|US|pittsburgh|pa": {
+"by": "nominatim",
+"lat": 40.440697,
+"lon": -80.002567,
+"on": "2026-10-21"
+},
+"city|US|portland|me": {
+"by": "nominatim",
+"lat": 43.657361,
+"lon": -70.258662,
+"on": "2026-10-21"
+},
+"city|US|raleigh|nc": {
+"by": "nominatim",
+"lat": 35.780398,
+"lon": -78.639099,
+"on": "2026-10-21"
+},
+"city|US|rogers|ar": {
+"by": "nominatim",
+"lat": 36.334857,
+"lon": -94.119382,
+"on": "2026-10-21"
+},
+"city|US|rosemont|il": {
+"by": "nominatim",
+"lat": 41.994133,
+"lon": -87.875674,
+"on": "2026-10-21"
+},
+"city|US|san antonio|tx": {
+"by": "nominatim",
+"lat": 29.4246,
+"lon": -98.495141,
+"on": "2026-10-21"
+},
+"city|US|sanborn|ny": {
+"by": "nominatim",
+"lat": 43.136723,
+"lon": -78.884761,
+"on": "2026-10-21"
+},
+"city|US|short pump|va": {
+"by": "nominatim",
+"lat": 37.650609,
+"lon": -77.611946,
+"on": "2026-10-21"
+},
+"city|US|shreveport|la": {
+"by": "nominatim",
+"lat": 32.513536,
+"lon": -93.747784,
+"on": "2026-10-21"
+},
+"city|US|st louis|mo": {
+"by": "nominatim",
+"lat": 38.625406,
+"lon": -90.190009,
+"on": "2026-10-21"
+},
+"city|US|syracuse|ny": {
+"by": "nominatim",
+"lat": 43.048122,
+"lon": -76.147424,
+"on": "2026-10-21"
+},
+"city|US|the woodlands|tx": {
+"by": "nominatim",
+"lat": 30.173419,
+"lon": -95.504686,
+"on": "2026-10-21"
+},
+"city|US|towson|md": {
+"by": "nominatim",
+"lat": 39.401851,
+"lon": -76.60238,
+"on": "2026-10-21"
+},
+"city|US|tysons corner|va": {
+"by": "nominatim",
+"lat": 38.918592,
+"lon": -77.231472,
+"on": "2026-10-21"
+},
+"city|US|uniondale|ny": {
+"by": "nominatim",
+"lat": 40.709583,
+"lon": -73.592341,
+"on": "2026-10-21"
+},
+"city|US|waco|tx": {
+"by": "nominatim",
+"lat": 31.554515,
+"lon": -97.132562,
+"on": "2026-10-21"
+},
+"city|US|waldorf|md": {
+"by": "nominatim",
+"lat": 38.626388,
+"lon": -76.910658,
+"on": "2026-10-21"
+},
+"city|US|wesley chapel|fl": {
+"by": "nominatim",
+"lat": 28.186601,
+"lon": -82.366121,
+"on": "2026-10-21"
+},
+"city|US|worcester|ma": {
+"by": "nominatim",
+"lat": 42.262562,
+"lon": -71.801888,
+"on": "2026-10-21"
+},
+"city|US|xenia|oh": {
+"by": "nominatim",
+"lat": 39.684782,
+"lon": -83.929653,
+"on": "2026-10-21"
+},
+"venue|CA|centennial hall|london|on": {
+"by": "nominatim",
+"lat": 42.989174,
+"lon": -81.246587,
+"on": "2026-10-21"
+},
+"venue|CA|doug laurie sports kozlov centre|barrie|on": {
+"miss": true,
+"on": "2026-10-21"
+},
+"venue|CA|executive plaza hotel coquitlam|coquitlam|bc": {
+"by": "nominatim",
+"lat": 49.246684,
+"lon": -122.891368,
+"on": "2026-10-21"
+},
+"venue|CA|palais des congres de montreal|montreal|qc": {
+"by": "nominatim",
+"lat": 45.505125,
+"lon": -73.560705,
+"on": "2026-10-21"
+},
+"venue|CA|the international centre|mississauga|on": {
+"miss": true,
+"on": "2026-10-21"
+},
+"venue|US|alerus center|grand forks|nd": {
+"by": "nominatim",
+"lat": 47.9108,
+"lon": -97.091361,
+"on": "2026-10-21"
+},
+"venue|US|alliant energy center|madison|wi": {
+"by": "nominatim",
+"lat": 43.044131,
+"lon": -89.380491,
+"on": "2026-10-21"
+},
+"venue|US|american legion fredericksburg|fredericksburg|va": {
+"by": "nominatim",
+"lat": 38.315484,
+"lon": -77.476987,
+"on": "2026-10-21"
+},
+"venue|US|american legion tysons corner|tysons corner|va": {
+"miss": true,
+"on": "2026-10-21"
+},
+"venue|US|american legion|sanborn|ny": {
+"miss": true,
+"on": "2026-10-21"
+},
+"venue|US|ants beer cave|austin|tx": {
+"miss": true,
+"on": "2026-10-21"
+},
+"venue|US|bad astronaut|houston|tx": {
+"by": "nominatim",
+"lat": 29.773994,
+"lon": -95.356529,
+"on": "2026-10-21"
+},
+"venue|US|baltimore convention center|baltimore|md": {
+"by": "nominatim",
+"lat": 39.285189,
+"lon": -76.616151,
+"on": "2026-10-21"
+},
+"venue|US|branch park pavilion|austin|tx": {
+"miss": true,
+"on": "2026-10-21"
+},
+"venue|US|c and s companies science and industry building nys fairgrounds|syracuse|ny": {
+"miss": true,
+"on": "2026-10-21"
+},
+"venue|US|castle shannon vfd|pittsburgh|pa": {
+"miss": true,
+"on": "2026-10-21"
+},
+"venue|US|convergence fest venue hall not named|las vegas|nv": {
+"miss": true,
+"on": "2026-10-21"
+},
+"venue|US|crowne plaza woburn|woburn|ma": {
+"by": "nominatim",
+"lat": 42.497351,
+"lon": -71.158516,
+"on": "2026-10-21"
+},
+"venue|US|daphne civic center|daphne|al": {
+"by": "nominatim",
+"lat": 30.61703,
+"lon": -87.905917,
+"on": "2026-10-21"
+},
+"venue|US|dave and busters|virginia beach|va": {
+"by": "nominatim",
+"lat": 36.818311,
+"lon": -76.070892,
+"on": "2026-10-21"
+},
+"venue|US|drury plaza|short pump|va": {
+"miss": true,
+"on": "2026-10-21"
+},
+"venue|US|embassy suites northwest arkansas hotel spa and rogers convention center|rogers|ar": {
+"miss": true,
+"on": "2026-10-21"
+},
+"venue|US|expo building nc state fairgrounds|raleigh|nc": {
+"miss": true,
+"on": "2026-10-21"
+},
+"venue|US|exposition center nc state fairgrounds|raleigh|nc": {
+"miss": true,
+"on": "2026-10-21"
+},
+"venue|US|fairfield county fair grounds ed sands building|lancaster|oh": {
+"miss": true,
+"on": "2026-10-21"
+},
+"venue|US|florida state fairgrounds special events center|tampa|fl": {
+"miss": true,
+"on": "2026-10-21"
+},
+"venue|US|force sports center|san antonio|tx": {
+"miss": true,
+"on": "2026-10-21"
+},
+"venue|US|four points by sheraton|midlothian|va": {
+"by": "nominatim",
+"lat": 37.503619,
+"lon": -77.579112,
+"on": "2026-10-21"
+},
+"venue|US|game time sports and fitness|lowell|ma": {
+"miss": true,
+"on": "2026-10-21"
+},
+"venue|US|graham building nc state fairgrounds|raleigh|nc": {
+"miss": true,
+"on": "2026-10-21"
+},
+"venue|US|greater columbus convention center|columbus|oh": {
+"by": "nominatim",
+"lat": 39.971879,
+"lon": -83.001146,
+"on": "2026-10-21"
+},
+"venue|US|greater philadelphia expo center|oaks|pa": {
+"by": "nominatim",
+"lat": 40.123881,
+"lon": -75.458213,
+"on": "2026-10-21"
+},
+"venue|US|greene county expo center|xenia|oh": {
+"miss": true,
+"on": "2026-10-21"
+},
+"venue|US|harvard gordon indoor track|boston|ma": {
+"miss": true,
+"on": "2026-10-21"
+},
+"venue|US|hickory metro convention center|hickory|nc": {
+"by": "nominatim",
+"lat": 35.709139,
+"lon": -81.303938,
+"on": "2026-10-21"
+},
+"venue|US|hogan campus center college of the holy cross|worcester|ma": {
+"miss": true,
+"on": "2026-10-21"
+},
+"venue|US|holiday inn greenville|greenville|nc": {
+"by": "nominatim",
+"lat": 35.57337,
+"lon": -77.38758,
+"on": "2026-10-21"
+},
+"venue|US|horizons edge campus|harrisonburg|va": {
+"miss": true,
+"on": "2026-10-21"
+},
+"venue|US|huntington place|detroit|mi": {
+"by": "nominatim",
+"lat": 42.326756,
+"lon": -83.049726,
+"on": "2026-10-21"
+},
+"venue|US|hynes convention center|boston|ma": {
+"by": "nominatim",
+"lat": 42.347935,
+"lon": -71.088726,
+"on": "2026-10-21"
+},
+"venue|US|ice and field at the crossover|cedar park|tx": {
+"miss": true,
+"on": "2026-10-21"
+},
+"venue|US|k o p sports and entertainment center|san antonio|tx": {
+"miss": true,
+"on": "2026-10-21"
+},
+"venue|US|kay bailey convention center|dallas|tx": {
+"miss": true,
+"on": "2026-10-21"
+},
+"venue|US|kerr scott building nc state fairgrounds|raleigh|nc": {
+"miss": true,
+"on": "2026-10-21"
+},
+"venue|US|knights of columbus|chicopee|ma": {
+"miss": true,
+"on": "2026-10-21"
+},
+"venue|US|livonia elks lodge|livonia|mi": {
+"by": "nominatim",
+"lat": 42.368314,
+"lon": -83.349929,
+"on": "2026-10-21"
+},
+"venue|US|madison marriott south|madison|wi": {
+"by": "nominatim",
+"lat": 43.047528,
+"lon": -89.373152,
+"on": "2026-10-21"
+},
+"venue|US|marriott watters creek|allen|tx": {
+"by": "nominatim",
+"lat": 33.092407,
+"lon": -96.68282,
+"on": "2026-10-21"
+},
+"venue|US|metrapark montana pavilion|billings|mt": {
+"miss": true,
+"on": "2026-10-21"
+},
+"venue|US|minneapolis convention center|minneapolis|mn": {
+"by": "nominatim",
+"lat": 44.969333,
+"lon": -93.273714,
+"on": "2026-10-21"
+},
+"venue|US|mississippi trade mart|jackson|ms": {
+"by": "nominatim",
+"lat": 32.302408,
+"lon": -90.173345,
+"on": "2026-10-21"
+},
+"venue|US|monroeville mall|monroeville|pa": {
+"by": "nominatim",
+"lat": 40.429146,
+"lon": -79.79551,
+"on": "2026-10-21"
+},
+"venue|US|moorestown mall|moorestown|nj": {
+"miss": true,
+"on": "2026-10-21"
+},
+"venue|US|moose lodge|colonial heights|va": {
+"miss": true,
+"on": "2026-10-21"
+},
+"venue|US|nexus|waco|tx": {
+"miss": true,
+"on": "2026-10-21"
+},
+"venue|US|nys fairgrounds horticulture building|syracuse|ny": {
+"miss": true,
+"on": "2026-10-21"
+},
+"venue|US|osceola heritage park|kissimmee|fl": {
+"miss": true,
+"on": "2026-10-21"
+},
+"venue|US|palm beach county convention center|west palm beach|fl": {
+"by": "nominatim",
+"lat": 26.704805,
+"lon": -80.058817,
+"on": "2026-10-21"
+},
+"venue|US|park expo and convention center|charlotte|nc": {
+"miss": true,
+"on": "2026-10-21"
+},
+"venue|US|park expo center|charlotte|nc": {
+"by": "nominatim",
+"lat": 35.206071,
+"lon": -80.799227,
+"on": "2026-10-21"
+},
+"venue|US|pennsylvania convention center|philadelphia|pa": {
+"by": "nominatim",
+"lat": 39.955107,
+"lon": -75.160236,
+"on": "2026-10-21"
+},
+"venue|US|quality inn|batavia|ny": {
+"by": "nominatim",
+"lat": 43.016426,
+"lon": -78.199919,
+"on": "2026-10-21"
+},
+"venue|US|radisson st louis downtown convention hotel|st louis|mo": {
+"miss": true,
+"on": "2026-10-21"
+},
+"venue|US|rio casino hotel|las vegas|nv": {
+"by": "nominatim",
+"lat": 36.117531,
+"lon": -115.188283,
+"on": "2026-10-21"
+},
+"venue|US|royle hotel milwaukee airport|milwaukee|wi": {
+"miss": true,
+"on": "2026-10-21"
+},
+"venue|US|saddleback resort tampa|wesley chapel|fl": {
+"miss": true,
+"on": "2026-10-21"
+},
+"venue|US|sheraton baltimore north|towson|md": {
+"miss": true,
+"on": "2026-10-21"
+},
+"venue|US|sioux falls convention center|sioux falls|sd": {
+"by": "nominatim",
+"lat": 43.561623,
+"lon": -96.750068,
+"on": "2026-10-21"
+},
+"venue|US|stueckle sky center|boise|id": {
+"miss": true,
+"on": "2026-10-21"
+},
+"venue|US|the venue at coosa landing|gadsden|al": {
+"by": "nominatim",
+"lat": 34.006995,
+"lon": -85.996489,
+"on": "2026-10-21"
+},
+"venue|US|thompsons point|portland|me": {
+"miss": true,
+"on": "2026-10-21"
+},
+"venue|US|triple crown pavilion|louisville|ky": {
+"miss": true,
+"on": "2026-10-21"
+},
+"venue|US|waldorf old school|waldorf|md": {
+"miss": true,
+"on": "2026-10-21"
+},
+"venue|US|westchester marriott|tarrytown|ny": {
+"by": "nominatim",
+"lat": 41.059358,
+"lon": -73.832667,
+"on": "2026-10-21"
+}
+}

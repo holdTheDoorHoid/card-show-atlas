@@ -3,6 +3,10 @@ name: Deploy site
 on:
   push:
     branches: [main]
+    # Research notes and docs do not change the site.
+    paths-ignore:
+      - "research/**"
+      - "docs/**"
   workflow_dispatch:
 
 permissions:
