@@ -1,10 +1,12 @@
 // Distance and drive time estimates. Straight line distance times a road factor, at a speed that
-// is lower on short legs (DESIGN section 6.1). The route planner uses the same idea; keep the
-// constants in step with it.
+// is lower on short legs (DESIGN section 6.1). The numbers come from the route planner's own travel
+// model, so "about 1 h 20 min" in a list and in a plan are the same.
+
+import { DEFAULT_TRAVEL_MODEL, hoursForRoadMiles } from '../../../planner/src/travel.ts';
 
 export const EARTH_RADIUS_MI = 3958.7613;
 export const KM_PER_MILE = 1.609344;
-export const ROAD_FACTOR = 1.25;
+export const ROAD_FACTOR = DEFAULT_TRAVEL_MODEL.roadFactor;
 
 export interface LatLon {
   lat: number;
@@ -39,14 +41,14 @@ export function formatDistance(miles: number, unit: DistanceUnit): string {
 
 /** Average driving speed in mph for a trip whose road distance is the given number of miles. */
 export function averageSpeedMph(roadMiles: number): number {
-  return 58 - 36 * Math.exp(-roadMiles / 40);
+  const hours = hoursForRoadMiles(roadMiles);
+  return hours > 0 ? roadMiles / hours : 0;
 }
 
 /** Estimated driving time in minutes for a straight line distance in miles. */
 export function driveMinutes(straightMiles: number): number {
   if (straightMiles <= 0) return 0;
-  const road = straightMiles * ROAD_FACTOR;
-  return (road / averageSpeedMph(road)) * 60;
+  return hoursForRoadMiles(straightMiles * ROAD_FACTOR) * 60;
 }
 
 /** Whether a country code uses kilometres in this site. */

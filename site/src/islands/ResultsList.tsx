@@ -3,6 +3,7 @@ import type { Result } from '../lib/filters';
 import type { DistanceUnit } from '../lib/geo';
 import { isApproximate, precisionNote, SHOW_STATUS_LABEL } from '../lib/labels';
 import { distanceText, entryText, vendorNote } from '../lib/rowtext';
+import { scoreLine, type VendorRowInfo } from '../lib/vendor-rank';
 import { snapshotFromRow } from '../lib/myshows';
 import type { Vocab } from '../lib/types';
 import { showPath, withBase } from '../lib/urls';
@@ -14,15 +15,17 @@ interface Props {
   vocab: Vocab;
   unit: DistanceUnit;
   my: MyShowsApi;
+  /** vendor priority scores by show id, when "Best for my table" is the sort */
+  vendor?: Map<string, VendorRowInfo> | null;
 }
 
-export function ResultsList({ results, vocab, unit, my }: Props) {
+export function ResultsList({ results, vocab, unit, my, vendor }: Props) {
   return (
     <ul class="result-list">
       {results.map(({ row, miles, minutes }) => {
         const tracked = row.i in my.store.shows;
         const dist = distanceText(miles, minutes, unit);
-        const vendor = vendorNote(row);
+        const vendorLine = vendorNote(row);
         const note = isApproximate(row.g) ? precisionNote(row.g ?? 'city') : null;
         return (
           <li class="result" key={row.i}>
@@ -44,10 +47,30 @@ export function ResultsList({ results, vocab, unit, my }: Props) {
                 {row.vf === 'o' && <span class="badge badge-ok">Confirmed by organizer</span>}
               </span>
             </div>
+            {vendor && (
+              <div class="vendor-score">
+                {(() => {
+                  const info = vendor.get(row.i);
+                  if (!info) return <span class="score out">No score for your table: not enough information about this show</span>;
+                  return (
+                    <>
+                      <span class={`score${info.score === null ? ' out' : ''}`}>{scoreLine(info)}</span>
+                      {info.score !== null && info.reasons.length > 0 && (
+                        <ul>
+                          {info.reasons.map((r) => (
+                            <li>{r}</li>
+                          ))}
+                        </ul>
+                      )}
+                    </>
+                  );
+                })()}
+              </div>
+            )}
             <SellsChips ids={row.sl} vocab={vocab} />
             <div class="result-meta">
               <span>{entryText(row)}</span>
-              {vendor && <span class="result-vendor">{vendor}</span>}
+              {vendorLine && <span class="result-vendor">{vendorLine}</span>}
               {note && <span>{note}</span>}
             </div>
             <div class="result-actions">

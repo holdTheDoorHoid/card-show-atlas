@@ -21,11 +21,15 @@ import { postalErrorMessage } from '../lib/postal';
 import { STORAGE_KEYS } from '../lib/storage';
 import { withBase } from '../lib/urls';
 import { FilterBar } from './FilterBar';
-import { useIndex, useMyShows, usePersistedState, useToday } from './hooks';
+import { useIndex, useMyShows, usePersistedState, useToday, useVendorSettings } from './hooks';
 import { LazyMap } from './LazyMap';
 import type { MapView } from './MapCanvas';
 import { ResultsList } from './ResultsList';
 import { Legend } from './ui';
+import { loadPlannerRows, plainError, sharedSession } from './plannerSession';
+import { historyFromMyShows, seriesFromShowId, toPlannerSettings } from '../lib/planner-settings';
+import { labelMap, rankForTable, type VendorRowInfo } from '../lib/vendor-rank';
+import { DEFAULT_WEIGHT, sanitizeWeight, WEIGHT_PRESETS, type WeightPreset } from '../lib/weights';
 
 const PAGE = 30;
 
@@ -55,6 +59,12 @@ export default function FindApp({ emptyAtBuild = false }: { emptyAtBuild?: boole
   const [loc, setLoc] = usePersistedState<SavedLocation | null>(STORAGE_KEYS.location, null, sanitizeLocation);
   const [prefs, setPrefs] = usePersistedState(STORAGE_KEYS.find, DEFAULT_FIND_PREFS, sanitizePrefs);
   const [filters, setFilters] = usePersistedState<Filters>(STORAGE_KEYS.filters, DEFAULT_FILTERS, sanitizeFilters);
+  const vendor = useVendorSettings();
+  const [weight, setWeight] = usePersistedState<WeightPreset>(STORAGE_KEYS.weights, DEFAULT_WEIGHT, sanitizeWeight);
+  const [byPoints, setByPoints] = useState(false);
+  const [vendorInfo, setVendorInfo] = useState<Map<string, VendorRowInfo> | null>(null);
+  const [scoring, setScoring] = useState(false);
+  const [scoreError, setScoreError] = useState<string | null>(null);
   const [view, setView] = useState<'list' | 'map'>('list');
   const [shown, setShown] = useState(PAGE);
   const [zip, setZip] = useState('');
@@ -67,6 +77,10 @@ export default function FindApp({ emptyAtBuild = false }: { emptyAtBuild?: boole
   }, [loc?.label, loc?.source]);
 
   const index = idx.status === 'ready' ? idx.index : null;
+  // "Best for my table" needs a home in the vendor settings (the planner scores the drive from there).
+  const vendorAvailable = vendor.ready && vendor.settings.home.lat !== null;
+  const sortKey: SortKey = prefs.sort === 'vendor' && !vendorAvailable ? 'date' : prefs.sort;
+  const vendorPs = useMemo(() => (vendorAvailable ? toPlannerSettings(vendor.settings) : null), [vendorAvailable, vendor.settings]);
   const vocab = index?.vocab;
   const unit: DistanceUnit = prefs.unit ?? unitForCountry(loc?.country);
   const maxMiles = prefs.radiusMi;
@@ -76,12 +90,44 @@ export default function FindApp({ emptyAtBuild = false }: { emptyAtBuild?: boole
   const results = useMemo(() => {
     if (!index || !range) return [];
     const found = selectResults(index.rows, { filters, vocab: index.vocab, range, origin, maxMiles: origin ? maxMiles : null });
-    const sortKey: SortKey = !origin && (prefs.sort === 'distance') ? 'date' : prefs.sort;
-    return sortResults(found, sortKey, { today: today as string, selected: filters.sells, vocab: index.vocab });
+    const key: SortKey = !origin && sortKey === 'distance' ? 'date' : sortKey;
+    const vendorScores = vendorInfo ? new Map([...vendorInfo].map(([id, v]) => [id, v.score] as [string, number | null])) : undefined;
+    return sortResults(found, key, { today: today as string, selected: filters.sells, vocab: index.vocab, vendorScores });
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [index, filters, range?.from, range?.to, loc?.lat, loc?.lon, maxMiles, prefs.sort, today]);
+  }, [index, filters, range?.from, range?.to, loc?.lat, loc?.lon, maxMiles, sortKey, today, vendorInfo]);
 
-  const resultsKey = `${loc?.lat},${loc?.lon},${maxMiles},${range?.from},${range?.to},${prefs.sort},${JSON.stringify(filters)}`;
+  // The vendor scores come from the route planner, which runs in a worker. Its data is fetched only
+  // when someone picks "Best for my table", so the home page stays light for everyone else.
+  useEffect(() => {
+    if (sortKey !== 'vendor' || !vendorPs || !today || !index) return;
+    let alive = true;
+    setScoring(true);
+    setScoreError(null);
+    (async () => {
+      try {
+        const rows = await loadPlannerRows();
+        const byId = new Map(rows.map((r) => [r.id, r]));
+        const history = historyFromMyShows(my.store, (id) => byId.get(id)?.series_id ?? seriesFromShowId(id));
+        const withHistory = toPlannerSettings(vendor.settings, { history });
+        const info = await rankForTable(sharedSession(rows), withHistory.settings, {
+          today,
+          weights: weight,
+          scoreBy: byPoints ? 'points' : 'auto',
+          labels: labelMap(index.vocab),
+        });
+        if (alive) setVendorInfo(info);
+      } catch (e) {
+        if (alive) setScoreError(plainError(e));
+      } finally {
+        if (alive) setScoring(false);
+      }
+    })();
+    return () => {
+      alive = false;
+    };
+  }, [sortKey === 'vendor', vendorPs, today, index, weight, byPoints, my.ready]);
+
+  const resultsKey = `${loc?.lat},${loc?.lon},${maxMiles},${range?.from},${range?.to},${sortKey},${JSON.stringify(filters)}`;
   useEffect(() => setShown(PAGE), [resultsKey]);
 
   async function submitZip(e: Event) {
@@ -271,8 +317,8 @@ export default function FindApp({ emptyAtBuild = false }: { emptyAtBuild?: boole
             <div class="btn-row" style={{ margin: 0, alignItems: 'center' }}>
               <div class="sort-field">
                 <label for="sort">Sort by</label>
-                <select id="sort" value={prefs.sort} onChange={(e) => setPrefs({ ...prefs, sort: (e.currentTarget as HTMLSelectElement).value as SortKey })}>
-                  {(Object.keys(SORT_LABELS) as SortKey[]).map((k) => (
+                <select id="sort" value={sortKey} onChange={(e) => setPrefs({ ...prefs, sort: (e.currentTarget as HTMLSelectElement).value as SortKey })}>
+                  {(Object.keys(SORT_LABELS) as SortKey[]).filter((k) => k !== 'vendor' || vendorAvailable).map((k) => (
                     <option value={k} disabled={k === 'distance' && !loc}>
                       {SORT_LABELS[k]}
                       {k === 'distance' && !loc ? ' (set your place)' : ''}
@@ -290,6 +336,36 @@ export default function FindApp({ emptyAtBuild = false }: { emptyAtBuild?: boole
               </div>
             </div>
           </div>
+
+          {sortKey === 'vendor' && vendorPs && (
+            <div class="card vendor-tools">
+              <p style={{ margin: '0 0 0.4rem', fontWeight: 700 }}>Best for my table</p>
+              {vendorPs.profit ? (
+                <div class="chips" role="group" aria-label="Score shows by" style={{ marginBottom: '0.5rem' }}>
+                  <button type="button" class="chip" aria-pressed={!byPoints} onClick={() => setByPoints(false)}>
+                    Expected profit
+                  </button>
+                  <button type="button" class="chip" aria-pressed={byPoints} onClick={() => setByPoints(true)}>
+                    My priorities
+                  </button>
+                </div>
+              ) : (
+                <p class="hint" style={{ marginTop: 0 }}>
+                  Scored by your priorities. Fill in your <a href={withBase('my-shows/#settings')}>vendor settings</a> (sales, margin, fuel, hotel, food) to score by expected profit.
+                </p>
+              )}
+              <div class="chips" role="group" aria-label="What matters most">
+                {WEIGHT_PRESETS.map((p) => (
+                  <button type="button" class="chip" aria-pressed={weight === p.id} title={p.help} disabled={vendorPs.profit && !byPoints} onClick={() => setWeight(p.id)}>
+                    {p.label}
+                  </button>
+                ))}
+              </div>
+              <p class="hint" role="status" style={{ marginBottom: 0 }}>
+                {scoring ? 'Scoring shows for your table...' : scoreError ? scoreError : vendorPs.profit && !byPoints ? 'Scores come from the profit each show is expected to make you. Pick My priorities to use the presets.' : 'The score is out of 100. Each show says why.'}
+              </p>
+            </div>
+          )}
 
           {!loc && (
             <p class="hint">
@@ -319,7 +395,7 @@ export default function FindApp({ emptyAtBuild = false }: { emptyAtBuild?: boole
             </div>
           ) : view === 'list' ? (
             <>
-              <ResultsList results={results.slice(0, shown)} vocab={index.vocab} unit={unit} my={my} />
+              <ResultsList results={results.slice(0, shown)} vocab={index.vocab} unit={unit} my={my} vendor={sortKey === 'vendor' ? vendorInfo ?? new Map() : null} />
               {results.length > shown && (
                 <div class="btn-row" style={{ justifyContent: 'center' }}>
                   <button type="button" class="btn" onClick={() => setShown(shown + PAGE)}>

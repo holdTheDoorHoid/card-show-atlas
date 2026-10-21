@@ -37,6 +37,7 @@ generated and never committed. A step that runs before every `dev` and `build`, 
 | `postal/US.json`, `postal/CA.json` | pipeline | postal code lookup, loaded on demand |
 | `index.json` | prepare step | compact rows for the list and the map |
 | `store_index.json` | prepare step | compact store event rows, fetched only when the layer is switched on |
+| `planner.json` | prepare step | the route planner's rows (hours, time zone, table prices, estimates), fetched only by the Plan page and by "Best for my table" |
 
 ### Formats the site reads
 
@@ -89,6 +90,13 @@ fetches only that country's file, once, when the first code is typed. Source: Ge
 
 About 35 bytes per show once compressed: 12,000 shows download as roughly 420 KB.
 
+### The planner file (`planner.json`)
+
+`{"v": 1, "generated", "fixture", "count", "vocab", "rows": [...]}`. Each row is a `PlannerShow` (see
+`planner/src/types.ts`) built by `src/lib/planner-rows.ts` from the normalized show, with null values left out and put
+back on load (`expandPlannerRow`). A test keeps this in step with the planner's own `toPlannerShow`. Shows with no
+coordinates or time zone are left out (the prepare step says how many). About 50 bytes per show once compressed.
+
 ## The sample data safety rule
 
 Sample data must never reach the public site: someone could drive to a show that does not exist.
@@ -134,15 +142,43 @@ All in `src/lib/config.ts`:
 Everything a visitor saves stays in `localStorage` in their browser: `csa.location.v1`, `csa.filters.v1`, `csa.find.v1`,
 `csa.myshows.v1`, `csa.settings.v1`, `csa.lastbackup.v1`, `csa.theme.v1`.
 
-## For the route planner
+## The route planner
 
+The engine lives in `../planner` (a package with no dependencies, with its own README and tests). The site uses its
+source directly: Vite compiles it, the dev server is allowed to read the parent folder (`server.fs.allow` in
+`astro.config.mjs`), and the worker is built as an ES module (`worker.format`).
+
+* `src/islands/plannerSession.ts` owns the Web Worker (`planner/src/worker.ts`): it fetches `planner.json`, starts the
+  worker, sends the rows once (`setShows`), and `cancel()` ends the worker so a fresh one starts with the next call.
+* `src/islands/PlanApp.tsx` is the Plan page: two tabs (Weekend run, Season planner), the forms in `PlanForms.tsx`, and a
+  `PlanCard.tsx` for each plan (map, day by day, drives, money, deadlines, exports). `?show=<id>` makes that show a "must
+  include" chip. `#plan=<link>` opens a shared plan.
+* The glue is plain functions in `src/lib/`, tested against the real planner code: `planner-settings.ts` (My shows settings
+  to planner settings, what is missing, placeholders, the vendor's history from My shows), `plan-options.ts` (forms to
+  planner options), `plan-run.ts` (running a plan, the must include rule, exchange rates), `plan-share.ts`, `plan-ics.ts`,
+  `vendor-rank.ts` (the Find page score) and `planner-rows.ts`.
+* When a setting needed for profit is empty, the Plan page lists it with a link to its field on My shows and plans by
+  priority score instead (`objective: 'score'`). The planner's engine always wants a fuel economy and price, so placeholders
+  are used for those (and listed on the plan) rather than refusing to plan.
+* The planner has no "force this show in" switch. A must include show is handled in `plan-run.ts`: plans that contain it
+  come first; if none does, a plan with only that show (planned by score, so a losing show is still planned and says so)
+  comes first.
+* Numbers typed into a plan (table fee, hotel, fuel price) are for that plan only. Table fees change the rows sent to the
+  worker; the others change the settings passed with each call.
+* A share link goes in the part of the address after `#`, which browsers never send to a server. It carries the show ids
+  and the planning knobs, never sales, margin or costs, and the start point only when "Include my start point" is ticked.
+* "Check real drive times" is the only network request the planner makes, and only when tapped (one request to the public
+  OSRM demo server, from the worker). The result is kept as `knownLegs` for later plans.
+* "Best for my table" on Find appears when a home is saved in the vendor settings. It scores shows with the planner's
+  vendor priority score (expected profit when the settings allow it, otherwise the weighted points) and shows the score
+  out of 100 with its top reasons. The four weight presets only change the score when it is made from points, so a vendor
+  with full settings chooses between "Expected profit" and "My priorities".
 * The vendor settings type is `VendorSettings` in `src/lib/settings.ts`, saved under `csa.settings.v1`, with
   `fuelCostPerMile()` and `missingForProfit()` helpers.
 * My shows is in `src/lib/myshows.ts` (saved under `csa.myshows.v1`). Each tracked show keeps its table price, dates
   and the vendor's own results, which the planner can use as history.
-* Distance and drive time estimates (`src/lib/geo.ts`) use a road factor of 1.25 and an average speed that is lower on
-  short legs, as in DESIGN section 6.1. Keep the planner's constants in step with them.
-* `src/islands/PlanApp.tsx` is the placeholder to replace. It already reads `?show=<id>`.
+* Distance and drive time estimates for lists (`src/lib/geo.ts`) come straight from the planner's travel model, so a list
+  and a plan agree.
 
 ## Decisions worth knowing
 

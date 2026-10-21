@@ -18,5 +18,9 @@ export default defineConfig({
   ],
   vite: {
     plugins: [fixtureDataPlugin('/card-show-atlas/data/')],
+    // The route planner lives in ../planner (a package with no dependencies). The dev server may read
+    // it, and the worker is built as an ES module so it can import the planner's modules.
+    server: { fs: { allow: ['..'] } },
+    worker: { format: 'es' },
   },
 });

@@ -127,12 +127,13 @@ export function selectResults(rows: IndexRow[], opts: SelectOptions): Result[] {
   return out;
 }
 
-export type SortKey = 'date' | 'distance' | 'size' | 'match';
+export type SortKey = 'date' | 'distance' | 'size' | 'match' | 'vendor';
 export const SORT_LABELS: Record<SortKey, string> = {
   date: 'Date',
   distance: 'Distance',
   size: 'Size',
   match: 'Best match',
+  vendor: 'Best for my table',
 };
 
 const SIZE_FALLBACK: Record<SizeClass, number> = { small: 300, medium: 1000, large: 3000, major: 8000 };
@@ -177,7 +178,7 @@ const cmpNullLast = (a: number | null, b: number | null) => (a === null ? (b ===
 export function sortResults(
   results: Result[],
   sort: SortKey,
-  ctx: { today: string; selected: string[]; vocab: Vocab },
+  ctx: { today: string; selected: string[]; vocab: Vocab; /** vendor priority scores by show id, for "Best for my table" */ vendorScores?: ReadonlyMap<string, number | null> },
 ): Result[] {
   const byDate = (a: Result, b: Result) => cmpStr(a.row.d, b.row.d) || cmpNullLast(a.miles, b.miles) || cmpStr(a.row.i, b.row.i);
   const copy = [...results];
@@ -188,6 +189,12 @@ export function sortResults(
       return copy.sort((a, b) => cmpNullLast(a.miles, b.miles) || byDate(a, b));
     case 'size':
       return copy.sort((a, b) => cmpNullLast(negate(attendanceOf(a.row)), negate(attendanceOf(b.row))) || byDate(a, b));
+    case 'vendor': {
+      const scores = ctx.vendorScores;
+      if (!scores) return copy.sort(byDate);
+      // best score first; shows the planner left out (no score) go last, in date order
+      return copy.sort((a, b) => cmpNullLast(negate(scores.get(a.row.i) ?? null), negate(scores.get(b.row.i) ?? null)) || byDate(a, b));
+    }
     case 'match': {
       const scored = copy.map((r) => ({ r, s: bestMatchScore(r, ctx) }));
       return scored.sort((a, b) => b.s - a.s || byDate(a.r, b.r)).map((x) => x.r);

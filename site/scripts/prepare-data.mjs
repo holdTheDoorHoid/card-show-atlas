@@ -16,6 +16,7 @@ import { writeFixtures } from '../fixtures/make-fixtures.mjs';
 import { FixtureInProductionError } from '../src/lib/guard.ts';
 import { buildIndex, emptyIndex, splitStoreEvents } from '../src/lib/index-build.ts';
 import { normalizeShows, recordsFrom } from '../src/lib/normalize.ts';
+import { buildPlannerFile } from '../src/lib/planner-rows.ts';
 import { normalizeVocab } from '../src/lib/vocab.ts';
 import { readJsonFile, resolveDataSource } from '../src/server/datasource.ts';
 
@@ -64,6 +65,7 @@ if (source.kind === 'empty' || !source.dir) {
   const vocab = normalizeVocab(null);
   writeJson(path.join(publicDir, 'index.json'), emptyIndex(vocab, generated));
   writeJson(path.join(publicDir, 'store_index.json'), emptyIndex(vocab, generated));
+  writeJson(path.join(publicDir, 'planner.json'), buildPlannerFile([], vocab, { generated, fixture: false }));
   console.log(
     mode === 'build'
       ? 'prepare-data: no shows.json in public/data, so the site will build with its empty state ("Shows are being added").'
@@ -95,8 +97,14 @@ const stamp = manifest && typeof manifest.built === 'string' ? manifest.built : 
 writeJson(path.join(dir, 'index.json'), buildIndex(shows, vocab, { generated: stamp, fixture }));
 writeJson(path.join(dir, 'store_index.json'), buildIndex(storeEvents, vocab, { generated: stamp, fixture, withLink: true }));
 
+// The route planner's rows: more detail than the index (hours, time zone, table prices, estimates), so
+// they are a separate file, fetched only by the Plan page and by a vendor's "Best for my table" sort.
+const plannerFile = buildPlannerFile(shows, vocab, { generated: stamp, fixture });
+writeJson(path.join(dir, 'planner.json'), plannerFile);
+const unplannable = shows.length - plannerFile.count;
+
 const indexBytes = fs.statSync(path.join(dir, 'index.json')).size;
 console.log(
-  `prepare-data: ${source.kind} data from ${path.relative(root, dir)}: ${shows.length} shows (index ${(indexBytes / 1024).toFixed(0)} KB), ${storeEvents.length} store events.` +
+  `prepare-data: ${source.kind} data from ${path.relative(root, dir)}: ${shows.length} shows (index ${(indexBytes / 1024).toFixed(0)} KB, planner ${(fs.statSync(path.join(dir, 'planner.json')).size / 1024).toFixed(0)} KB, ${unplannable} without a place or time zone), ${storeEvents.length} store events.` +
     (fixture ? ' SAMPLE DATA: dev and tests only, never published.' : ''),
 );

@@ -24,6 +24,8 @@ export interface VendorSettings {
   version: 1;
   /** where trips start and end */
   home: HomeBase;
+  /** the money the numbers below are in: US or Canadian dollars */
+  currency: 'USD' | 'CAD';
   /** "mpg" (miles per US gallon) or "l_per_100km" (litres per 100 kilometres) */
   fuelEconomyUnit: FuelEconomyUnit;
   /** the vehicle's fuel economy, in the unit above */
@@ -47,6 +49,7 @@ export interface VendorSettings {
 export const DEFAULT_VENDOR_SETTINGS: VendorSettings = {
   version: 1,
   home: { postal: '', lat: null, lon: null, country: null },
+  currency: 'USD',
   fuelEconomyUnit: 'mpg',
   fuelEconomy: null,
   fuelPrice: null,
@@ -92,6 +95,7 @@ export function normalizeSettings(raw: unknown): VendorSettings {
       lon: hasPoint ? lon : null,
       country: home.country === 'US' || home.country === 'CA' ? home.country : null,
     },
+    currency: raw.currency === 'CAD' ? 'CAD' : 'USD',
     fuelEconomyUnit: raw.fuelEconomyUnit === 'l_per_100km' ? 'l_per_100km' : 'mpg',
     fuelEconomy: positive(raw.fuelEconomy),
     fuelPrice: nonNegative(raw.fuelPrice),

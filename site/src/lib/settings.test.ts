@@ -11,6 +11,7 @@ describe('vendor settings', () => {
 
   it('has exactly the fields the planner needs', () => {
     expect(Object.keys(DEFAULT_VENDOR_SETTINGS).sort()).toEqual([
+      'currency',
       'foodPerDay',
       'fuelEconomy',
       'fuelEconomyUnit',
@@ -24,6 +25,12 @@ describe('vendor settings', () => {
       'version',
     ]);
     expect(Object.keys(DEFAULT_VENDOR_SETTINGS.typicalSales).sort()).toEqual(['large', 'major', 'medium', 'small']);
+  });
+
+  it('keeps the currency to the two the data uses', () => {
+    expect(normalizeSettings({ currency: 'CAD' }).currency).toBe('CAD');
+    expect(normalizeSettings({ currency: 'EUR' }).currency).toBe('USD');
+    expect(normalizeSettings({}).currency).toBe('USD');
   });
 
   it('accepts numbers typed as text and rejects nonsense', () => {

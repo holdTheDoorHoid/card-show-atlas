@@ -1,6 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import { averageSpeedMph, driveMinutes, formatDistance, guessCountry, haversineMiles, kmToMiles, milesToKm, unitForCountry } from './geo.ts';
 import { formatDriveTime } from './format.ts';
+import { estimateLeg } from '../../../planner/src/travel.ts';
 
 describe('haversineMiles', () => {
   it('is zero for the same point', () => {
@@ -53,6 +54,12 @@ describe('units', () => {
 });
 
 describe('drive time', () => {
+  it('is the same estimate the route planner makes for a leg', () => {
+    const a = { lat: 39.9526, lon: -75.1652 };
+    const b = { lat: 40.7128, lon: -74.006 };
+    expect(driveMinutes(haversineMiles(a, b))).toBeCloseTo(estimateLeg(a, b).hours * 60, 6);
+  });
+
   it('is zero at zero distance and grows with distance', () => {
     expect(driveMinutes(0)).toBe(0);
     let last = 0;
@@ -66,7 +73,7 @@ describe('drive time', () => {
   it('is slower per mile on short trips than on long ones', () => {
     expect(averageSpeedMph(5)).toBeLessThan(averageSpeedMph(50));
     expect(averageSpeedMph(50)).toBeLessThan(averageSpeedMph(300));
-    expect(averageSpeedMph(1000)).toBeLessThanOrEqual(58);
+    expect(averageSpeedMph(1000)).toBeLessThanOrEqual(63);
   });
 
   it('gives a sensible two hour drive for about 100 straight line miles', () => {

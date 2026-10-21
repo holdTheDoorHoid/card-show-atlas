@@ -88,6 +88,13 @@ export function snapshotFromShow(show: Show): ShowSnapshot {
   };
 }
 
+/** Enough about a planner row to keep it on My shows. */
+export function snapshotFromPlanner(row: { name: string; days: { date: string }[]; city?: string | null; region?: string | null; country?: string | null; event_type: EventType }): ShowSnapshot {
+  const first = row.days[0]?.date ?? '';
+  const last = row.days[row.days.length - 1]?.date ?? first;
+  return { name: row.name, first, last, city: row.city ?? '', region: row.region ?? '', country: row.country ?? 'US', type: row.event_type };
+}
+
 function stamp(now: Date): string {
   return now.toISOString();
 }
