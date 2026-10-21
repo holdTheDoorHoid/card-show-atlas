@@ -1,0 +1,92 @@
+{
+  "version": 1,
+  "about": "Starting values for the crowd model in DESIGN.md section 4. Every entry carries a source note. Entries marked 'placeholder, tune when data arrives' have no published figure behind them yet. `csa estimate --calibrate` shows how real data compares, and the model switches to fitted values for a group once it has calibration.min_samples shows that publish both attendance and tables.",
+  "attendees_per_table": {
+    "card_show": {
+      "1": {"low": 3.3, "mid": 5.8, "high": 9.2,
+            "source": "DATA_MODEL.md section 4 worked example: 120 vendor tables gives 400, 700 and 1100 people at a one day card show",
+            "basis": "placeholder, tune when data arrives"},
+      "2": {"low": 5.3, "mid": 9.3, "high": 14.7,
+            "source": "one day figures times 1.6, an assumed weekend repeat rate",
+            "basis": "placeholder, tune when data arrives"},
+      "3+": {"low": 6.6, "mid": 11.6, "high": 18.4,
+             "source": "one day figures times 2.0, an assumed repeat rate",
+             "basis": "placeholder, tune when data arrives"}
+    },
+    "convention": {
+      "1": {"low": 8, "mid": 14, "high": 24, "source": "no published figure found yet", "basis": "placeholder, tune when data arrives"},
+      "2": {"low": 13, "mid": 22, "high": 38, "source": "no published figure found yet", "basis": "placeholder, tune when data arrives"},
+      "3+": {"low": 16, "mid": 28, "high": 48, "source": "no published figure found yet", "basis": "placeholder, tune when data arrives"}
+    },
+    "tournament": {
+      "1": {"low": 8, "mid": 14, "high": 24, "source": "no published figure found yet", "basis": "placeholder, tune when data arrives"},
+      "2": {"low": 13, "mid": 22, "high": 38, "source": "no published figure found yet", "basis": "placeholder, tune when data arrives"},
+      "3+": {"low": 16, "mid": 28, "high": 48, "source": "no published figure found yet", "basis": "placeholder, tune when data arrives"}
+    },
+    "pop_culture_con": {
+      "1": {"low": 20, "mid": 35, "high": 60, "source": "no published figure found yet", "basis": "placeholder, tune when data arrives"},
+      "2": {"low": 32, "mid": 56, "high": 96, "source": "no published figure found yet", "basis": "placeholder, tune when data arrives"},
+      "3+": {"low": 40, "mid": 70, "high": 120, "source": "no published figure found yet", "basis": "placeholder, tune when data arrives"}
+    }
+  },
+  "players_to_attendance": {
+    "low": 1.2, "mid": 1.8, "high": 2.6,
+    "source": "people through the doors per registered player, counting spectators, friends and vendor hall visitors",
+    "basis": "placeholder, tune when data arrives"
+  },
+  "attendees_per_1000_sqft_per_day": {
+    "low": 1.0, "mid": 2.5, "high": 5.0,
+    "source": "people per 1000 square feet of venue floor per day",
+    "basis": "placeholder, tune when data arrives"
+  },
+  "type_default": {
+    "card_show": {
+      "1": {"low": 200, "mid": 450, "high": 900, "source": "rough guess for a card show with no size information", "basis": "placeholder, tune when data arrives"},
+      "2": {"low": 350, "mid": 800, "high": 1600, "source": "rough guess for a card show with no size information", "basis": "placeholder, tune when data arrives"},
+      "3+": {"low": 500, "mid": 1200, "high": 2500, "source": "rough guess for a card show with no size information", "basis": "placeholder, tune when data arrives"}
+    },
+    "convention": {
+      "1": {"low": 800, "mid": 2500, "high": 6000, "source": "rough guess", "basis": "placeholder, tune when data arrives"},
+      "2": {"low": 1500, "mid": 5000, "high": 12000, "source": "rough guess", "basis": "placeholder, tune when data arrives"},
+      "3+": {"low": 3000, "mid": 9000, "high": 22000, "source": "rough guess", "basis": "placeholder, tune when data arrives"}
+    },
+    "tournament": {
+      "1": {"low": 500, "mid": 1500, "high": 4000, "source": "rough guess", "basis": "placeholder, tune when data arrives"},
+      "2": {"low": 1000, "mid": 3000, "high": 8000, "source": "rough guess", "basis": "placeholder, tune when data arrives"},
+      "3+": {"low": 1500, "mid": 5000, "high": 14000, "source": "rough guess", "basis": "placeholder, tune when data arrives"}
+    },
+    "pop_culture_con": {
+      "1": {"low": 1500, "mid": 5000, "high": 15000, "source": "rough guess", "basis": "placeholder, tune when data arrives"},
+      "2": {"low": 3000, "mid": 10000, "high": 30000, "source": "rough guess", "basis": "placeholder, tune when data arrives"},
+      "3+": {"low": 5000, "mid": 18000, "high": 60000, "source": "rough guess", "basis": "placeholder, tune when data arrives"}
+    }
+  },
+  "reported_band": {
+    "low": 0.9, "high": 1.1,
+    "source": "a reported figure is one number, so the range is plus or minus 10 percent",
+    "basis": "placeholder, tune when data arrives"
+  },
+  "history": {
+    "max_age_years": {"value": 5, "source": "older figures are ignored", "basis": "placeholder, tune when data arrives"},
+    "band": {"low": 0.75, "high": 1.3, "source": "range around a carried forward figure", "basis": "placeholder, tune when data arrives"},
+    "trend_clamp": {"low": 0.8, "high": 1.25, "source": "limit on how much one year of change may move the estimate", "basis": "placeholder, tune when data arrives"},
+    "table_ratio_clamp": {"low": 0.5, "high": 2.0, "source": "limit on scaling a past figure by the change in vendor tables", "basis": "placeholder, tune when data arrives"}
+  },
+  "size_classes": {
+    "small_max": {"value": 500, "source": "DESIGN.md section 4.2: small is under about 500 people"},
+    "medium_max": {"value": 2000, "source": "no published figure; DESIGN.md says tuned once real data arrives", "basis": "placeholder, tune when data arrives"},
+    "large_max": {"value": 6000, "source": "no published figure; major means thousands of people over a weekend (DESIGN.md section 4.2)", "basis": "placeholder, tune when data arrives"}
+  },
+  "calibration": {
+    "min_samples": {"value": 8, "source": "fewest shows reporting both attendance and tables before a fitted factor replaces the prior", "basis": "placeholder, tune when data arrives"}
+  },
+  "confidence_by_basis": {
+    "reported": "reported",
+    "players": "estimated",
+    "tables": "estimated",
+    "history": "estimated",
+    "area": "rough",
+    "type_default": "rough",
+    "source": "design decision for this model"
+  }
+}
