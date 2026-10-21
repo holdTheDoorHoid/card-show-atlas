@@ -1,0 +1,29 @@
+{
+  "home": {
+    "lat": 43.2557,
+    "lon": -79.8711,
+    "name": "Home",
+    "timezone": "America/Toronto"
+  },
+  "currency": "CAD",
+  "l_per_100km": 9.5,
+  "fuel_price": {
+    "amount": 1.55,
+    "unit": "litre",
+    "currency": "CAD"
+  },
+  "hotel_per_night": 170,
+  "food_per_day": 55,
+  "max_drive_hours_per_day": 7,
+  "typical_sales": {
+    "small": 700,
+    "medium": 1500,
+    "large": 3000,
+    "major": 6000
+  },
+  "margin_percent": 35,
+  "sells": [
+    "pokemon",
+    "hockey"
+  ]
+}
