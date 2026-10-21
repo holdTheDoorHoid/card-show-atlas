@@ -1,0 +1,20 @@
+# Hand fixes. `csa merge` applies these last, so they always win over every source.
+#
+# Keys are show ids, or "series:<series id>" or "promoter:<promoter id>". Under each key:
+#   set:   a map of field to new value. Use dots for nested fields and null to clear a field.
+#   drop:  true removes the show from the data (it stays out even if a source still lists it)
+#   note:  free text for the next person (ignored by the code)
+#
+# Example:
+#
+# garden-state-card-show-edison-nj-2026-11-14:
+#   set:
+#     venue.city: Edison
+#     days:
+#       - {date: "2026-11-14", open: "09:00", close: "14:00"}
+#     vendor.deadline: "2026-11-01"
+#   note: Organizer confirmed the new closing time by email on 2026-10-20.
+#
+# series:garden-state-card-show-edison-nj:
+#   set:
+#     cadence: Second Saturday of most months

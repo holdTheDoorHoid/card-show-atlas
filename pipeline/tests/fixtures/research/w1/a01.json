@@ -1,0 +1,32 @@
+{
+  "wave": "w1", "agent": "a01", "model": "haiku", "searches_used": 4, "fetches_used": 31,
+  "records": [
+    {"kind": "edition", "name": "Example Fall Card Show", "event_type": "card_show", "status": "scheduled",
+     "days": [{"date": "2026-11-14", "open": "9am", "close": "3pm"}],
+     "venue": {"name": "Example Fire Hall", "address": "12 Oak St", "city": "Media", "region": "Pennsylvania", "postal": "19063"},
+     "sells": {"tcg": ["Pokemon TCG", "One Piece"], "sports": ["sports cards"], "other": []},
+     "admission": {"free": false, "adult": "$5", "child": 0, "notes": "Kids under 10 free"},
+     "size": {"tables": "60+"},
+     "vendor": {"tables": [{"label": "8 ft table", "price": 75}], "deadline": "2026-11-01", "status": "open", "contact": "vendors@example.com or 610-555-0100"},
+     "organizer": {"name": "Example Promotions", "url": "https://example.com"},
+     "links": {"official": "https://example.com/fall-show"},
+     "evidence": [{"url": "https://example.com/fall-show", "seen": "2026-10-21", "supports": ["name", "days", "venue", "vendor.tables"]}],
+     "agent_confidence": "High"},
+    {"kind": "series", "name": "Example Monthly Card Show", "event_type": "card_show",
+     "venue": {"name": "VFW Post 123", "address": "1 Main St", "city": "Media", "region": "PA", "postal": "19063", "country": "US"},
+     "cadence": "Second Sunday of every month except July and August",
+     "rule": {"freq": "monthly", "weekday": "Sunday", "nth": "second", "skip_months": ["July", 8], "until": null},
+     "hours": {"open": "09:00", "close": "14:00"},
+     "known_dates": ["2026-11-08", "2026-12-13"], "cancelled_dates": [], "last_confirmed": "2026-10-15",
+     "evidence": [{"url": "https://example.org/schedule", "seen": "2026-10-21", "supports": ["cadence", "known_dates", "hours"]}],
+     "agent_confidence": "medium"},
+    {"kind": "edition", "name": "Facebook only show", "days": [{"date": "2026-11-20"}],
+     "venue": {"city": "Erie", "region": "PA"},
+     "evidence": [{"url": "https://www.facebook.com/x", "seen": "2026-10-21", "supports": ["days"]}], "agent_confidence": "low"},
+    {"kind": "edition", "name": "Old show", "days": [{"date": "2024-05-05"}], "venue": {"city": "Erie", "region": "PA"},
+     "evidence": [{"url": "https://example.net/old", "seen": "2026-10-21", "supports": ["days"]}], "agent_confidence": "low"}
+  ],
+  "leads_only": [{"name": "Another Show", "url": "https://www.facebook.com/another", "note": "Facebook only"}],
+  "blocked": [{"url": "https://example.org/x", "status": 403, "note": "bot check"}],
+  "notes": "fine"
+}

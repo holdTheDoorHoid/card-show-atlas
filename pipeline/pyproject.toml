@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "card-show-atlas-pipeline"
+version = "0.1.0"
+description = "Data pipeline for Card Show Atlas: harvest, merge, geocode, estimate, check, build."
+readme = "README.md"
+requires-python = ">=3.12"
+license = {text = "MIT"}
+dependencies = [
+  "pyyaml==6.0.3",        # sources.yaml, corrections.yaml, issue form templates
+  "httpx==0.28.1",        # HTTP client (has a mock transport, so tests never touch the network)
+  "rapidfuzz==3.14.6",    # name similarity for duplicate detection
+  "timezonefinder==9.1.0" # offline IANA time zone from coordinates (brings numpy)
+]
+
+[project.optional-dependencies]
+dev = ["pytest==9.1.1"]
+
+[project.scripts]
+csa = "csa.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["csa*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"

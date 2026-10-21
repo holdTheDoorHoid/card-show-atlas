@@ -1,0 +1,178 @@
+{
+  "version": 1,
+  "groups": {
+    "tcg": [
+      {"id": "pokemon", "name": "Pokémon", "label": "Pokémon"},
+      {"id": "mtg", "name": "Magic: The Gathering", "label": "Magic"},
+      {"id": "yugioh", "name": "Yu-Gi-Oh!", "label": "Yu-Gi-Oh"},
+      {"id": "one_piece", "name": "One Piece Card Game", "label": "One Piece"},
+      {"id": "lorcana", "name": "Disney Lorcana", "label": "Lorcana"},
+      {"id": "dragon_ball", "name": "Dragon Ball Super Card Game", "label": "Dragon Ball"},
+      {"id": "digimon", "name": "Digimon Card Game", "label": "Digimon"},
+      {"id": "fab", "name": "Flesh and Blood", "label": "Flesh and Blood"},
+      {"id": "swu", "name": "Star Wars: Unlimited", "label": "Star Wars"},
+      {"id": "weiss_schwarz", "name": "Weiss Schwarz", "label": "Weiss"},
+      {"id": "union_arena", "name": "Union Arena", "label": "Union Arena"},
+      {"id": "riftbound", "name": "Riftbound", "label": "Riftbound"},
+      {"id": "sorcery", "name": "Sorcery: Contested Realm", "label": "Sorcery"},
+      {"id": "gundam", "name": "Gundam Card Game", "label": "Gundam"},
+      {"id": "metazoo", "name": "MetaZoo", "label": "MetaZoo"},
+      {"id": "grand_archive", "name": "Grand Archive", "label": "Grand Archive"},
+      {"id": "vanguard", "name": "Cardfight!! Vanguard", "label": "Vanguard"},
+      {"id": "altered", "name": "Altered", "label": "Altered"},
+      {"id": "other_tcg", "name": "Other trading card games", "label": "Other TCG"}
+    ],
+    "sports": [
+      {"id": "baseball", "name": "Baseball cards", "label": "Baseball"},
+      {"id": "basketball", "name": "Basketball cards", "label": "Basketball"},
+      {"id": "football", "name": "Football cards", "label": "Football"},
+      {"id": "hockey", "name": "Hockey cards", "label": "Hockey"},
+      {"id": "soccer", "name": "Soccer cards", "label": "Soccer"},
+      {"id": "racing", "name": "Racing cards", "label": "Racing"},
+      {"id": "wrestling", "name": "Wrestling cards", "label": "Wrestling"},
+      {"id": "combat", "name": "Combat sports cards (boxing, MMA)", "label": "Combat"},
+      {"id": "golf", "name": "Golf cards", "label": "Golf"},
+      {"id": "multi_sport", "name": "Sports cards (several sports)", "label": "Sports"}
+    ],
+    "other": [
+      {"id": "non_sport", "name": "Non-sport cards", "label": "Non-sport"},
+      {"id": "comics", "name": "Comics", "label": "Comics"},
+      {"id": "toys", "name": "Toys and figures", "label": "Toys"},
+      {"id": "video_games", "name": "Video games", "label": "Games"},
+      {"id": "memorabilia", "name": "Memorabilia and collectibles", "label": "Memorabilia"},
+      {"id": "coins", "name": "Coins and currency", "label": "Coins"},
+      {"id": "anime", "name": "Anime and manga", "label": "Anime"}
+    ]
+  },
+  "event_types": [
+    {"id": "card_show", "name": "Card show", "label": "Card show"},
+    {"id": "convention", "name": "Collectibles or card convention", "label": "Convention"},
+    {"id": "tournament", "name": "Tournament with a vendor hall", "label": "Tournament"},
+    {"id": "pop_culture_con", "name": "Pop culture, comic or anime con", "label": "Pop culture"},
+    {"id": "store_event", "name": "Store event", "label": "Store event"}
+  ],
+  "statuses": [
+    {"id": "scheduled", "name": "Scheduled", "label": "Scheduled"},
+    {"id": "tentative", "name": "Tentative", "label": "Tentative"},
+    {"id": "postponed", "name": "Postponed", "label": "Postponed"},
+    {"id": "cancelled", "name": "Cancelled", "label": "Cancelled"}
+  ],
+  "vendor_statuses": [
+    {"id": "open", "name": "Tables available", "label": "Open"},
+    {"id": "waitlist", "name": "Waitlist", "label": "Waitlist"},
+    {"id": "sold_out", "name": "Sold out", "label": "Sold out"},
+    {"id": "closed", "name": "Applications closed", "label": "Closed"},
+    {"id": "unknown", "name": "Not known", "label": "Unknown"}
+  ],
+  "verifications": [
+    {"id": "organizer_confirmed", "name": "Confirmed by organizer", "label": "Confirmed"},
+    {"id": "listed", "name": "Listed by a source", "label": "Listed"},
+    {"id": "community", "name": "Community submitted", "label": "Community"},
+    {"id": "unverified", "name": "Not verified", "label": "Unverified"}
+  ],
+  "size_classes": [
+    {"id": "small", "name": "Small", "label": "Small"},
+    {"id": "medium", "name": "Medium", "label": "Medium"},
+    {"id": "large", "name": "Large", "label": "Large"},
+    {"id": "major", "name": "Major", "label": "Major"}
+  ],
+  "synonyms": {
+    "sells": {
+      "pokemon": "pokemon", "pokemon tcg": "pokemon", "pokemon cards": "pokemon", "pokemon trading card game": "pokemon",
+      "pokemon card game": "pokemon", "ptcg": "pokemon", "poke": "pokemon",
+      "mtg": "mtg", "magic": "mtg", "magic the gathering": "mtg", "magic gathering": "mtg", "magic cards": "mtg",
+      "magic tcg": "mtg", "mtg cards": "mtg",
+      "yu-gi-oh": "yugioh", "yu-gi-oh!": "yugioh", "yugioh": "yugioh", "yu gi oh": "yugioh", "ygo": "yugioh",
+      "yugioh tcg": "yugioh", "yu-gi-oh tcg": "yugioh", "yu-gi-oh cards": "yugioh",
+      "one piece": "one_piece", "one piece tcg": "one_piece", "one piece card game": "one_piece", "onepiece": "one_piece",
+      "op tcg": "one_piece",
+      "lorcana": "lorcana", "disney lorcana": "lorcana", "lorcana tcg": "lorcana",
+      "dragon ball": "dragon_ball", "dragonball": "dragon_ball", "dragon ball super": "dragon_ball", "dbs": "dragon_ball",
+      "dragon ball z": "dragon_ball", "dbz": "dragon_ball", "dragon ball super card game": "dragon_ball",
+      "dragon ball fusion world": "dragon_ball",
+      "digimon": "digimon", "digimon tcg": "digimon", "digimon card game": "digimon",
+      "flesh and blood": "fab", "flesh & blood": "fab", "fab": "fab", "fabtcg": "fab",
+      "star wars unlimited": "swu", "swu": "swu", "star wars": "swu",
+      "weiss schwarz": "weiss_schwarz", "weiss": "weiss_schwarz",
+      "union arena": "union_arena",
+      "riftbound": "riftbound", "league of legends tcg": "riftbound",
+      "sorcery": "sorcery", "sorcery contested realm": "sorcery",
+      "gundam": "gundam", "gundam card game": "gundam",
+      "metazoo": "metazoo", "meta zoo": "metazoo",
+      "grand archive": "grand_archive",
+      "vanguard": "vanguard", "cardfight vanguard": "vanguard", "cardfight!! vanguard": "vanguard",
+      "altered": "altered", "altered tcg": "altered",
+      "other tcg": "other_tcg", "other tcgs": "other_tcg", "other trading card games": "other_tcg",
+      "other trading card game": "other_tcg", "tcg": "other_tcg", "tcgs": "other_tcg", "trading card games": "other_tcg",
+      "trading card game": "other_tcg", "ccg": "other_tcg", "collectible card games": "other_tcg",
+      "card games": "other_tcg", "other card games": "other_tcg", "gaming cards": "other_tcg", "tcg singles": "other_tcg",
+      "baseball": "baseball", "baseball cards": "baseball", "mlb": "baseball",
+      "basketball": "basketball", "basketball cards": "basketball", "nba": "basketball",
+      "football": "football", "football cards": "football", "nfl": "football",
+      "hockey": "hockey", "hockey cards": "hockey", "nhl": "hockey",
+      "soccer": "soccer", "soccer cards": "soccer", "futbol": "soccer", "mls": "soccer",
+      "racing": "racing", "nascar": "racing", "formula 1": "racing", "f1": "racing",
+      "wrestling": "wrestling", "wwe": "wrestling", "wwf": "wrestling", "aew": "wrestling",
+      "combat": "combat", "combat sports": "combat", "mma": "combat", "ufc": "combat", "boxing": "combat",
+      "golf": "golf", "pga": "golf",
+      "sports": "multi_sport", "sports cards": "multi_sport", "sport cards": "multi_sport", "sports card": "multi_sport",
+      "sportscards": "multi_sport", "multi sport": "multi_sport", "multisport": "multi_sport",
+      "non sport": "non_sport", "non-sport": "non_sport", "nonsport": "non_sport", "non sport cards": "non_sport",
+      "entertainment cards": "non_sport",
+      "comics": "comics", "comic books": "comics", "comic book": "comics", "comic": "comics",
+      "toys": "toys", "action figures": "toys", "figures": "toys", "funko": "toys", "toys and figures": "toys",
+      "video games": "video_games", "video game": "video_games", "retro games": "video_games", "games": "video_games",
+      "memorabilia": "memorabilia", "collectibles": "memorabilia", "autographs": "memorabilia",
+      "sports memorabilia": "memorabilia", "signed memorabilia": "memorabilia",
+      "comics, toys or other collectibles": ["comics", "toys", "memorabilia"],
+      "comics toys or other collectibles": ["comics", "toys", "memorabilia"],
+      "coins": "coins", "numismatics": "coins", "currency": "coins", "coins and currency": "coins",
+      "anime": "anime", "manga": "anime", "anime and manga": "anime"
+    },
+    "event_type": {
+      "card show": "card_show", "card shows": "card_show", "cardshow": "card_show", "show": "card_show",
+      "sports card show": "card_show", "trading card show": "card_show", "tcg show": "card_show",
+      "collectibles show": "card_show", "card and collectibles show": "card_show", "card expo": "card_show",
+      "swap meet": "card_show", "trade show": "card_show", "trade day": "card_show", "card meet": "card_show",
+      "sportscard show": "card_show", "card sale": "card_show",
+      "convention": "convention", "collectibles convention": "convention", "card convention": "convention",
+      "expo": "convention", "collectors convention": "convention",
+      "tournament": "tournament", "regional": "tournament", "regionals": "tournament",
+      "regional championship": "tournament", "premier event": "tournament", "ycs": "tournament",
+      "magiccon": "tournament", "grand prix": "tournament", "championship": "tournament", "tcg tournament": "tournament",
+      "pop culture": "pop_culture_con", "pop culture con": "pop_culture_con", "pop culture convention": "pop_culture_con",
+      "comic con": "pop_culture_con", "comicon": "pop_culture_con", "comic convention": "pop_culture_con",
+      "anime convention": "pop_culture_con", "anime con": "pop_culture_con", "gaming convention": "pop_culture_con",
+      "gaming con": "pop_culture_con", "fan convention": "pop_culture_con", "con": "pop_culture_con",
+      "store event": "store_event", "prerelease": "store_event", "pre release": "store_event", "league": "store_event",
+      "fnm": "store_event", "friday night magic": "store_event", "weekly tournament": "store_event",
+      "game store event": "store_event", "release event": "store_event", "locals": "store_event"
+    },
+    "status": {
+      "scheduled": "scheduled", "confirmed": "scheduled", "on": "scheduled", "active": "scheduled", "happening": "scheduled",
+      "tentative": "tentative", "tbd": "tentative", "tba": "tentative", "to be confirmed": "tentative",
+      "tbc": "tentative", "unconfirmed": "tentative", "pending": "tentative", "usually": "tentative",
+      "postponed": "postponed", "delayed": "postponed", "rescheduled": "postponed", "moved": "postponed",
+      "cancelled": "cancelled", "canceled": "cancelled", "called off": "cancelled"
+    },
+    "vendor_status": {
+      "open": "open", "applications open": "open", "accepting applications": "open", "accepting vendors": "open",
+      "available": "open", "tables available": "open", "vendors wanted": "open",
+      "waitlist": "waitlist", "wait list": "waitlist", "waiting list": "waitlist", "waitlisted": "waitlist",
+      "sold out": "sold_out", "soldout": "sold_out", "full": "sold_out", "no tables": "sold_out",
+      "closed": "closed", "applications closed": "closed", "not accepting": "closed",
+      "unknown": "unknown", "tbd": "unknown", "n/a": "unknown", "na": "unknown"
+    },
+    "verification": {
+      "organizer confirmed": "organizer_confirmed", "organizer": "organizer_confirmed",
+      "organiser": "organizer_confirmed", "confirmed by organizer": "organizer_confirmed", "official": "organizer_confirmed",
+      "listed": "listed", "listing": "listed", "aggregator": "listed",
+      "community": "community", "submitted": "community", "user submitted": "community",
+      "unverified": "unverified", "none": "unverified"
+    },
+    "agent_confidence": {
+      "high": "high", "h": "high", "medium": "medium", "med": "medium", "m": "medium", "moderate": "medium",
+      "low": "low", "l": "low"
+    }
+  }
+}

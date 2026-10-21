@@ -1,0 +1,50 @@
+# Domain policy for everything that cites a web page (DATA_MODEL section 9, research evidence).
+# Subdomains match too: "collect.com" also covers "www.collect.com" and "shop.collect.com".
+# An entry ending in ".*" matches any ending: "eventbrite.*" covers eventbrite.com and eventbrite.ca.
+#
+# never_use_domains: sites whose terms forbid automated use. Nothing from these sites is used.
+#   `csa import-research` drops evidence from them and strips their addresses from every link field.
+#   A record is rejected when what is left does not support its name, its dates and its venue.
+#   `csa harvest` refuses to run a source whose registry url is on this list, and `csa check` warns
+#   when a published show links to one.
+#
+# link_only_domains: social and ticketing sites. A show may link to them, but they never count as
+#   evidence for a fact.
+
+never_use_domains:
+  - sportscollectorsdigest.com
+  - collect.com
+  - cardshowmap.com
+  - treasurehunter.show
+  - thecardshopfinder.com
+  - cardshowhub.com
+  - cardshowdirectory.com
+  - sportscardinvestor.com
+  - cardpulse.club
+  - beckett.com
+  - psacard.com
+  - sportscollectorsdaily.com
+  - locator.wizards.com
+  - rk9.gg
+  - melee.gg
+  - fancons.com
+  - animecons.com
+  - cantonfair.net
+  - 10times.com
+  - tradefest.io
+  - ontreasure.com
+  - ticketspice.com
+
+link_only_domains:
+  - facebook.com
+  - fb.com
+  - fb.me
+  - instagram.com
+  - tiktok.com
+  - x.com
+  - twitter.com
+  - t.co
+  - eventbrite.*
+  - meetup.com
+  - allevents.in
+  - reddit.com

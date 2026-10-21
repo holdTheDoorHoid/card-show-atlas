@@ -1,0 +1,45 @@
+# Sources registry (DATA_MODEL section 7).
+#
+# A source is only harvested if its robots.txt and terms allow it. `fields` is the list of show
+# fields we take from the source, and the harvester drops everything else a source module yields.
+# `priority` orders listing sites when they disagree: a smaller number wins.
+# `enabled: false` keeps a source in the registry but skips it in `csa harvest all`.
+#
+# Real scripted sources are added here by the people who write their modules
+# (pipeline/csa/sources/<id>.py). See pipeline/README.md, "Adding a source".
+
+- id: research
+  name: Card Show Atlas research
+  url: https://github.com/holdTheDoorHoid/card-show-atlas
+  kind: community
+  method: research
+  credit: "Found by Card Show Atlas research (each show links the page it came from)"
+  terms: "Facts only, from pages the research rules allow. Facebook, Instagram, Eventbrite, Meetup, TikTok, X and AllEvents are leads, never evidence."
+  fields: [name, days, venue, admission, sells, size, vendor, organizer, links, status, event_type]
+  checked: 2026-10-21
+  priority: 90
+
+- id: github_issues
+  name: Community submissions on GitHub
+  url: https://github.com/holdTheDoorHoid/card-show-atlas/issues
+  kind: submission
+  method: manual
+  credit: "Community submitted (reviewed before publishing)"
+  terms: "Submitted by visitors through the issue forms and reviewed by the owner. The submitter's name is never stored."
+  fields: [name, days, venue, admission, sells, size, vendor, organizer, links, status, event_type]
+  checked: 2026-10-21
+  priority: 95
+
+# The example source used by the tests. Run it offline with:
+#   csa harvest example_calendar --fixture-dir pipeline/tests/fixtures/example_calendar
+- id: example_calendar
+  name: Example Card Show Calendar
+  url: https://calendar.example.org
+  kind: aggregator
+  method: script
+  credit: "Listed by Example Card Show Calendar"
+  terms: "Example only. No real site is contacted unless this entry is enabled."
+  fields: [name, days, venue, admission, organizer, status]
+  checked: 2026-10-21
+  priority: 50
+  enabled: false

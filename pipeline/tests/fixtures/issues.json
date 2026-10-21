@@ -1,0 +1,16 @@
+[
+  {"number": 12, "title": "Add show: Pine Barrens Card Show", "state": "open", "created_at": "2026-10-20T14:00:00Z",
+   "user": {"login": "somebody-private"},
+   "labels": [{"name": "add-show"}],
+   "body": "### Show name\n\nPine Barrens Card Show\n\n### Date or dates\n\nNovember 22, 2026 and December 20, 2026\n\n### Opening hours\n\n10am to 4pm\n\n### Venue name and full address\n\nBrowns Mills Fire Hall, 12 Pemberton Rd, Browns Mills, NJ 08015\n\n### Link to the official page or post\n\nhttps://www.facebook.com/pinebarrenscards/posts/123\n\n### What is sold there?\n\n- [x] Pokémon\n- [x] Magic\n- [ ] Yu-Gi-Oh\n- [ ] One Piece\n- [ ] Lorcana\n- [ ] Other trading card games\n- [x] Sports cards\n- [ ] Comics, toys or other collectibles\n\n### Entry price\n\n$3, kids free\n\n### About how many vendor tables?\n\nabout 40\n\n### Vendor info\n\n8 ft table $60, apply at https://pinebarrens.example.com/vendors by Nov 10, 2026. Call Bob on 609-555-0142 or ping @somebody-private\n\n### Anything else\n\n_No response_"},
+  {"number": 13, "title": "Fix show: wrong hours", "state": "open", "created_at": "2026-10-20T15:00:00Z",
+   "labels": [{"name": "fix-show"}],
+   "body": "### Link to the show's page on Card Show Atlas\n\nhttps://holdthedoorhoid.github.io/card-show-atlas/shows/garden-state-card-show-edison-nj-2026-11-14/\n\n### What is wrong, and what should it say?\n\nIt closes at 2 pm, not 3 pm.\n\n### Where can we check it?\n\nhttps://example.com/show"},
+  {"number": 14, "title": "Organizer: Example Promotions", "state": "open", "created_at": "2026-10-21T09:00:00Z",
+   "labels": [{"name": "organizer"}],
+   "body": "### Show or series name\n\nExample Monthly Card Show\n\n### Your official page\n\nhttps://example.com\n\n### Upcoming dates and venues\n\nNov 8, 2026 VFW Post 123, 1 Main St, Media, PA 19063\nDec 13, 2026 VFW Post 123, 1 Main St, Media, PA 19063\n\n### Vendor info\n\n_No response_\n\n### Roughly how many people came last time? (optional)\n\n800"},
+  {"number": 15, "title": "Remove: please", "state": "open", "created_at": "2026-10-21T10:00:00Z",
+   "labels": [{"name": "removal"}],
+   "body": "### Link to the page on Card Show Atlas\n\nhttps://holdthedoorhoid.github.io/card-show-atlas/shows/some-show-2026-11-01/\n\n### What should be removed, and why?\n\nPlease remove my phone number."},
+  {"number": 16, "title": "a pull request", "state": "open", "labels": [{"name": "add-show"}], "pull_request": {}, "body": "x"}
+]
