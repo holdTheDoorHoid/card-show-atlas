@@ -1,12 +1,12 @@
-// The Leaflet map: OpenStreetMap tiles, clustered markers (supercluster copes with 10,000+ points),
+// The Leaflet map: OpenStreetMap tiles, clustered markers (grid clustering, see lib/cluster.ts, copes with 10,000+ points),
 // marker shape and colour by event type, softer markers for approximate places.
 // This file is loaded on demand (see LazyMap.tsx) so Leaflet stays out of pages that never show a map.
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
-import Supercluster from 'supercluster';
 import { useEffect, useRef } from 'preact/hooks';
 import { DEFAULT_MAP_CENTER, DEFAULT_MAP_ZOOM, TILE_ATTRIBUTION, TILE_MAX_ZOOM, TILE_URL } from '../lib/config';
 import { markerSvg } from '../lib/labels';
+import { clusterPoints, itemsInView, type ClusterItem, type PlacePoint } from '../lib/cluster';
 import { groupPlaces, popupHtml, type Place } from '../lib/map-data';
 import type { IndexRow } from '../lib/types';
 import { showPath, withBase } from '../lib/urls';
@@ -31,7 +31,6 @@ interface LayerPlace extends Place {
   store: boolean;
 }
 
-const CLUSTER_MAX_ZOOM = 17;
 const iconCache = new Map<string, L.DivIcon>();
 
 function pinIcon(place: LayerPlace): L.DivIcon {
@@ -82,8 +81,10 @@ export function MapCanvas(props: MapCanvasProps) {
     map: L.Map;
     markers: L.LayerGroup;
     here: L.LayerGroup;
-    index: Supercluster<{ n: number }, { n: number }> | null;
     places: LayerPlace[];
+    points: PlacePoint[];
+    items: ClusterItem[];
+    itemsZoom: number;
     render: () => void;
   } | null>(null);
   const propsRef = useRef(props);
@@ -99,32 +100,92 @@ export function MapCanvas(props: MapCanvasProps) {
     const here = L.layerGroup().addTo(map);
     applyView(map, propsRef.current.view);
 
-    const state = { map, markers, here, index: null as Supercluster<{ n: number }, { n: number }> | null, places: [] as LayerPlace[], render: () => {} };
+    const state = { map, markers, here, places: [] as LayerPlace[], points: [] as PlacePoint[], items: [] as ClusterItem[], itemsZoom: -1, render: () => {} };
     live.current = state;
 
+    // Markers are reused from one render to the next, so dragging the time window only adds and
+    // removes the markers that really changed instead of rebuilding them all.
+    interface Slot {
+      marker: L.Marker;
+      iconKey: string;
+      /** the current place or cluster: read by the click handlers, so a reused marker stays correct */
+      ref: { place?: LayerPlace; cluster?: Extract<ClusterItem, { kind: 'cluster' }> };
+    }
+    const slots = new Map<string, Slot>();
+
     const render = () => {
-      markers.clearLayers();
-      if (!state.index) return;
+      if (state.places.length === 0) {
+        markers.clearLayers();
+        slots.clear();
+        return;
+      }
+      const zoom = Math.round(map.getZoom());
+      if (state.itemsZoom !== zoom) {
+        state.items = clusterPoints(state.points, zoom);
+        state.itemsZoom = zoom;
+      }
       const b = map.getBounds();
-      const bbox: [number, number, number, number] = [Math.max(-180, b.getWest()), Math.max(-85, b.getSouth()), Math.min(180, b.getEast()), Math.min(85, b.getNorth())];
-      const clusters = state.index.getClusters(bbox, Math.round(map.getZoom()));
-      for (const c of clusters) {
-        const [lon, lat] = c.geometry.coordinates as [number, number];
-        const props = c.properties as { cluster?: boolean; cluster_id?: number; n: number; idx?: number };
-        if (props.cluster && props.cluster_id !== undefined) {
-          const id = props.cluster_id;
-          const m = L.marker([lat, lon], { icon: clusterIcon(props.n), keyboard: true, title: `${props.n} shows. Zoom in.`, alt: `${props.n} shows, zoom in` });
+      const visible = itemsInView(state.items, state.points, { south: b.getSouth(), west: b.getWest(), north: b.getNorth(), east: b.getEast() });
+      const keep = new Set<string>();
+      for (const item of visible) {
+        if (item.kind === 'cluster') {
+          const key = `c${item.lat.toFixed(4)},${item.lon.toFixed(4)}`;
+          keep.add(key);
+          const iconKey = `c${item.count}`;
+          const slot = slots.get(key);
+          if (slot) {
+            slot.ref.cluster = item;
+            if (slot.iconKey !== iconKey) {
+              slot.marker.setIcon(clusterIcon(item.count));
+              slot.iconKey = iconKey;
+            }
+            continue;
+          }
+          const ref: Slot['ref'] = { cluster: item };
+          const m = L.marker([item.lat, item.lon], { icon: clusterIcon(item.count), keyboard: true, title: `${item.count} shows. Zoom in.`, alt: `${item.count} shows, zoom in` });
           m.on('click', () => {
-            const z = Math.min(state.index?.getClusterExpansionZoom(id) ?? map.getZoom() + 2, TILE_MAX_ZOOM - 1);
-            map.setView([lat, lon], z);
+            const c = ref.cluster;
+            if (!c) return;
+            const [[s, w], [n, e]] = c.bounds;
+            if (s === n && w === e) map.setView([c.lat, c.lon], Math.min(map.getZoom() + 2, TILE_MAX_ZOOM - 1));
+            else map.fitBounds([[s, w], [n, e]], { padding: [48, 48], maxZoom: TILE_MAX_ZOOM - 1 });
           });
           m.addTo(markers);
-        } else if (props.idx !== undefined) {
-          const place = state.places[props.idx];
+          slots.set(key, { marker: m, iconKey, ref });
+        } else {
+          const place = state.places[item.index];
           if (!place) continue;
-          const m = L.marker([lat, lon], { icon: pinIcon(place), keyboard: true, title: placeLabel(place), alt: placeLabel(place), riseOnHover: true });
-          m.bindPopup(popupHtml(place, { showHref: (id) => withBase(showPath(id)), isStoreLayer: place.store, refYear: new Date().getFullYear() }), { maxWidth: 290, autoPanPadding: [30, 30] });
+          const key = `p${place.key}`;
+          keep.add(key);
+          const iconKey = `${place.type}|${place.soft}|${Math.min(place.rows.length, 99)}`;
+          const slot = slots.get(key);
+          if (slot) {
+            slot.ref.place = place;
+            if (slot.iconKey !== iconKey) {
+              slot.marker.setIcon(pinIcon(place));
+              slot.iconKey = iconKey;
+            }
+            slot.marker.options.title = placeLabel(place);
+            continue;
+          }
+          const ref: Slot['ref'] = { place };
+          const m = L.marker([place.lat, place.lon], { icon: pinIcon(place), keyboard: true, title: placeLabel(place), alt: placeLabel(place), riseOnHover: true });
+          // The card is built only when it is opened.
+          m.bindPopup(
+            () => {
+              const p = ref.place;
+              return p ? popupHtml(p, { showHref: (id) => withBase(showPath(id)), isStoreLayer: p.store, refYear: new Date().getFullYear() }) : '';
+            },
+            { maxWidth: 290, autoPanPadding: [30, 30] },
+          );
           m.addTo(markers);
+          slots.set(key, { marker: m, iconKey, ref });
+        }
+      }
+      for (const [key, slot] of slots) {
+        if (!keep.has(key)) {
+          markers.removeLayer(slot.marker);
+          slots.delete(key);
         }
       }
     };
@@ -161,23 +222,8 @@ export function MapCanvas(props: MapCanvasProps) {
     const stores: LayerPlace[] = p.storeRows ? groupPlaces(p.storeRows).map((x) => ({ ...x, store: true })) : [];
     const places = [...shows, ...stores];
     state.places = places;
-    const index = new Supercluster<{ n: number }, { n: number }>({
-      radius: 56,
-      maxZoom: CLUSTER_MAX_ZOOM,
-      minPoints: 3,
-      map: (pr) => ({ n: pr.n }),
-      reduce: (acc, pr) => {
-        acc.n += pr.n;
-      },
-    });
-    index.load(
-      places.map((pl, idx) => ({
-        type: 'Feature' as const,
-        properties: { n: pl.rows.length, idx } as { n: number },
-        geometry: { type: 'Point' as const, coordinates: [pl.lon, pl.lat] },
-      })),
-    );
-    state.index = index;
+    state.points = places.map((pl) => ({ lat: pl.lat, lon: pl.lon, count: pl.rows.length }));
+    state.itemsZoom = -1;
     state.render();
   }
 

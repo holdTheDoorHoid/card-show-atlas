@@ -19,7 +19,7 @@ import { normalizeShows, recordsFrom } from '../src/lib/normalize.ts';
 import { normalizeVocab } from '../src/lib/vocab.ts';
 import { readJsonFile, resolveDataSource } from '../src/server/datasource.ts';
 
-const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
+const root = process.env.CSA_SITE_ROOT ?? path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const mode = process.argv.includes('--build') ? 'build' : 'dev';
 const publicDir = path.join(root, 'public', 'data');
 
@@ -41,7 +41,7 @@ function refreshFixturesIfStale() {
   const base = manifest && typeof manifest.fixture_base === 'string' ? manifest.fixture_base : null;
   const age = base ? (Date.parse(today) - Date.parse(base)) / 86400000 : Infinity;
   if (age > 14 || age < 0) {
-    writeFixtures({ base: today });
+    writeFixtures({ base: today, dir: path.join(root, 'fixtures', 'data') });
     console.log(`prepare-data: sample data was ${base ?? 'missing'}, regenerated for ${today}.`);
   }
 }

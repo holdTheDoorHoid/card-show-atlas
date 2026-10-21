@@ -22,10 +22,49 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
-      # Until the real site lands, publish the placeholder page.
+
+      # The data pipeline writes site/public/data (shows.json and friends). Until it exists the
+      # site builds with its empty state ("Shows are being added"). Sample data is never used here.
+      - name: Look for the data pipeline
+        id: pipeline
+        run: |
+          if [ -f pipeline/pyproject.toml ]; then
+            echo "present=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "present=false" >> "$GITHUB_OUTPUT"
+            echo "::notice::There is no pipeline/ yet, so there is no show data. The site will build with its empty state."
+          fi
+
+      - uses: actions/setup-python@v5
+        if: steps.pipeline.outputs.present == 'true'
+        with:
+          python-version: '3.12'
+
+      - name: Build the data (csa build)
+        if: steps.pipeline.outputs.present == 'true'
+        run: |
+          pip install -e pipeline
+          if command -v csa >/dev/null 2>&1; then
+            csa build
+          else
+            echo "::notice::pipeline/ has no csa command yet, so the data build was skipped. The site will build with its empty state."
+          fi
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+          cache-dependency-path: site/package-lock.json
+
+      - name: Build the site
+        working-directory: site
+        run: |
+          npm ci
+          npm run build
+
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: placeholder
+          path: site/dist
       - id: deployment
         uses: actions/deploy-pages@v4

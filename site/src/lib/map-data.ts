@@ -20,13 +20,14 @@ export interface Place {
 
 /** Shows at the same venue share one marker. Coordinates are matched to about 10 metres. */
 export function groupPlaces(rows: IndexRow[]): Place[] {
-  const map = new Map<string, Place>();
+  const map = new Map<number, Place>();
   for (const row of rows) {
     if (!row.ll) continue;
-    const key = `${row.ll[0].toFixed(4)},${row.ll[1].toFixed(4)}`;
-    const place = map.get(key);
+    // a number key per place: no strings are built for rows that join a place that already exists
+    const num = Math.round(row.ll[0] * 1e4) * 4e6 + Math.round(row.ll[1] * 1e4);
+    const place = map.get(num);
     if (place) place.rows.push(row);
-    else map.set(key, { key, lat: row.ll[0], lon: row.ll[1], rows: [row], type: row.t, soft: isApproximate(row.g) });
+    else map.set(num, { key: `${row.ll[0].toFixed(4)},${row.ll[1].toFixed(4)}`, lat: row.ll[0], lon: row.ll[1], rows: [row], type: row.t, soft: isApproximate(row.g) });
   }
   const places = [...map.values()];
   for (const p of places) {

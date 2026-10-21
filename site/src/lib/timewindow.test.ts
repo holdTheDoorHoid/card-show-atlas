@@ -14,6 +14,8 @@ import {
   windowDates,
 } from './timewindow.ts';
 import { makeRow } from './testing.ts';
+import { addDays as addDaysISO } from './dates.ts';
+import { rowOverlaps } from './index-build.ts';
 
 const today = '2026-10-21';
 
@@ -110,5 +112,28 @@ describe('month marks', () => {
     expect(marks.some((m) => m.label === 'Jan 2027')).toBe(true);
     expect(marks.length).toBeGreaterThanOrEqual(12);
     expect(marks.every((m) => m.offset < 365)).toBe(true);
+  });
+});
+
+describe('finding the window in sorted rows (the fast path)', () => {
+  it('gives the same answer as checking every row', () => {
+    let seed = 11;
+    const rnd = () => (seed = (seed * 16807) % 2147483647) / 2147483647;
+    const rows = Array.from({ length: 3000 }, (_, k) => {
+      const offset = Math.floor(rnd() * 380) - 10;
+      const span = rnd() < 0.3 ? Math.floor(rnd() * 4) : 0; // some multi day shows, up to four days
+      const d = addDaysISO(today, offset);
+      return makeRow({ i: `r${k}`, d, ...(span ? { e: addDaysISO(d, span) } : {}) });
+    }).sort((a, b) => (a.d < b.d ? -1 : a.d > b.d ? 1 : 0));
+    for (const w of [{ start: 0, width: 7 }, { start: 100, width: 1 }, { start: 359, width: 6 }, { start: 30, width: 92 }, { start: 200, width: 14 }]) {
+      const { from, to } = windowDates(today, w);
+      const naive = rows.filter((r) => rowOverlaps(r, from, to)).map((r) => r.i);
+      expect(rowsInWindow(rows, today, w).map((r) => r.i)).toEqual(naive);
+    }
+  });
+
+  it('still works when the rows are not sorted', () => {
+    const rows = [makeRow({ i: 'b', d: '2026-10-25' }), makeRow({ i: 'a', d: '2026-10-22' })];
+    expect(rowsInWindow(rows, today, { start: 0, width: 7 }).map((r) => r.i)).toEqual(['b', 'a']);
   });
 });

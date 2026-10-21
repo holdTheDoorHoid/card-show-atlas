@@ -1,6 +1,6 @@
 // Logic for the map's time window bar: a 12 month timeline with a window you drag along it.
 import { MAX_WINDOW_DAYS, TIMELINE_DAYS } from './config.ts';
-import { addDays, MONTHS_SHORT, formatMonthDay, parseISODate } from './dates.ts';
+import { addDays, daysBetween, MONTHS_SHORT, formatMonthDay, parseISODate } from './dates.ts';
 import { rowDays, rowOverlaps } from './index-build.ts';
 import type { IndexRow } from './types.ts';
 
@@ -75,9 +75,59 @@ export function dayCounts(rows: IndexRow[], today: string, total: number = TIMEL
   return counts;
 }
 
+interface RowStats {
+  /** rows are in order of first day, so a window can be found by binary search */
+  sorted: boolean;
+  /** the longest show, in days */
+  maxSpan: number;
+}
+
+const statsCache = new WeakMap<readonly IndexRow[], RowStats>();
+
+function statsFor(rows: readonly IndexRow[]): RowStats {
+  let s = statsCache.get(rows);
+  if (!s) {
+    let sorted = true;
+    let maxSpan = 1;
+    for (let i = 0; i < rows.length; i++) {
+      const r = rows[i] as IndexRow;
+      if (i > 0 && (rows[i - 1] as IndexRow).d > r.d) sorted = false;
+      if (r.e) maxSpan = Math.max(maxSpan, daysBetween(r.d, r.e) + 1);
+    }
+    s = { sorted, maxSpan };
+    statsCache.set(rows, s);
+  }
+  return s;
+}
+
+/** First index whose first day is on or after `date`, in rows sorted by first day. */
+function lowerBound(rows: readonly IndexRow[], date: string): number {
+  let lo = 0;
+  let hi = rows.length;
+  while (lo < hi) {
+    const mid = (lo + hi) >>> 1;
+    if ((rows[mid] as IndexRow).d < date) lo = mid + 1;
+    else hi = mid;
+  }
+  return lo;
+}
+
+/**
+ * The shows with a day inside the window. Rows from the index are sorted by first day, so only the
+ * rows near the window are looked at, which keeps dragging the window cheap with 10,000+ shows.
+ */
 export function rowsInWindow(rows: IndexRow[], today: string, w: TimeWindow): IndexRow[] {
   const { from, to } = windowDates(today, w);
-  return rows.filter((r) => rowOverlaps(r, from, to));
+  const stats = statsFor(rows);
+  if (!stats.sorted) return rows.filter((r) => rowOverlaps(r, from, to));
+  const out: IndexRow[] = [];
+  const start = lowerBound(rows, addDays(from, -(stats.maxSpan - 1)));
+  for (let i = start; i < rows.length; i++) {
+    const r = rows[i] as IndexRow;
+    if (r.d > to) break;
+    if (rowOverlaps(r, from, to)) out.push(r);
+  }
+  return out;
 }
 
 /** Month labels along the timeline: the day offset where each month starts, and its name. */

@@ -147,6 +147,8 @@ export default function FindApp({ emptyAtBuild = false }: { emptyAtBuild?: boole
 
   const noShowsAtAll = (index && index.count === 0) || (emptyAtBuild && idx.status !== 'ready');
 
+  if (noShowsAtAll) return <EmptyShows />;
+
   return (
     <div>
       <section class="find-controls card" aria-label="Search for shows">
@@ -247,11 +249,7 @@ export default function FindApp({ emptyAtBuild = false }: { emptyAtBuild?: boole
 
       {vocab && <FilterBar filters={filters} onChange={setFilters} vocab={vocab} idPrefix="find" />}
 
-      {noShowsAtAll ? (
-        <div style={{ marginTop: '1.2rem' }}>
-          <EmptyShows />
-        </div>
-      ) : idx.status === 'error' ? (
+      {idx.status === 'error' ? (
         <div class="notice notice-warn" role="alert" style={{ marginTop: '1.2rem' }}>
           The list of shows could not be loaded. Check your connection and reload the page.
         </div>

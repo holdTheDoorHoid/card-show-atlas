@@ -29,6 +29,7 @@ export default function MapApp() {
   const [storeRows, setStoreRows] = useState<IndexRow[] | null>(null);
   const [storeLoading, setStoreLoading] = useState(false);
   const [storeMissing, setStoreMissing] = useState(false);
+  const [listOpen, setListOpen] = useState(false);
 
   // The store events layer is fetched only when it is switched on.
   useEffect(() => {
@@ -71,11 +72,12 @@ export default function MapApp() {
   const origin = loc ? { lat: loc.lat, lon: loc.lon } : null;
   const empty = index && index.count === 0;
 
-  const listed = useMemo(() => [...visible].sort((a, b) => (a.d < b.d ? -1 : a.d > b.d ? 1 : a.i < b.i ? -1 : 1)), [visible]);
+  // The index is sorted by first day and the window keeps that order, so the list needs no sorting.
+  const listed = visible;
 
   return (
     <div>
-      {index && (
+      {index && !empty && (
         <FilterBar
           filters={filters}
           onChange={setFilters}
@@ -119,11 +121,11 @@ export default function MapApp() {
             </p>
           )}
           {index && (
-            <details class="card" style={{ marginTop: '1rem' }}>
+            <details class="card" style={{ marginTop: '1rem' }} onToggle={(e) => setListOpen((e.currentTarget as HTMLDetailsElement).open)}>
               <summary style={{ cursor: 'pointer', fontWeight: 700, minHeight: 44, display: 'flex', alignItems: 'center' }}>
                 List of the {plural(visible.length, 'show')} in this window
               </summary>
-              {listed.length === 0 ? (
+              {!listOpen ? null : listed.length === 0 ? (
                 <p class="muted">Nothing in this window. Drag it along the timeline.</p>
               ) : (
                 <ul class="plain-list">
