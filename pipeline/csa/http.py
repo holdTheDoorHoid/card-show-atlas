@@ -191,8 +191,8 @@ class HttpClient:
             return None
         host = urlsplit(url).netloc.replace(":", "_")
         digest = hashlib.sha1(url.encode()).hexdigest()[:16]
-        base = self.raw_dir / f"{host}__{digest}"
-        return base.with_suffix(".body"), base.with_suffix(".json")
+        name = f"{host}__{digest}"
+        return self.raw_dir / (name + ".body"), self.raw_dir / (name + ".json")
 
     def _cache_read(self, url: str) -> Response | None:
         paths = self._cache_paths(url)

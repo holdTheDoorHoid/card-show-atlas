@@ -139,6 +139,13 @@ def find_dates(text: str, today: date | None = None, default_year: int | None = 
     return out
 
 
+def strip_dates(text: str) -> str:
+    """The text with every calendar date removed."""
+    for rx in (_ISO, _SLASH_YMD, _MDY, _DMY, _NUM):
+        text = rx.sub(" ", text)
+    return re.sub(r"\s+", " ", text).strip()
+
+
 def parse_date_text(text: Any, today: date | None = None, default_year: int | None = None) -> date | None:
     """One date from text, or None when there is none or the text holds several."""
     if text is None:

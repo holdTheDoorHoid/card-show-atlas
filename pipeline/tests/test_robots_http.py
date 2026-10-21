@@ -124,6 +124,16 @@ def test_cache_means_no_second_request(make_site, fake_time, tmp_path):
     assert list((tmp_path / "t").glob("*.body"))
 
 
+def test_cache_keeps_different_pages_on_one_host_apart(make_site, fake_time, tmp_path):
+    site = make_site({"/a": "page a", "/b": "page b"})
+    with client(site, fake_time, raw=tmp_path) as c:
+        c.get("https://calendar.example.org/a")
+        c.get("https://calendar.example.org/b")
+        assert c.get("https://calendar.example.org/a").text == "page a"
+        assert c.get("https://calendar.example.org/b").text == "page b"
+        assert c.get("https://calendar.example.org/a", params={"page": 2}).from_cache is False
+
+
 def test_cache_expires_and_refresh_bypasses_it(make_site, fake_time, tmp_path):
     site = make_site({"/a": "x"})
     with client(site, fake_time, raw=tmp_path, cache_ttl_hours=1) as c:

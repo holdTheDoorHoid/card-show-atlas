@@ -1,0 +1,19 @@
+<!doctype html>
+<html><head><title>Example Card Show Calendar</title>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@graph": [
+  {"@type": "Event", "name": "Garden State Card Show", "startDate": "2026-11-14T09:00:00-05:00", "endDate": "2026-11-15T14:00:00-05:00",
+   "eventStatus": "https://schema.org/EventScheduled",
+   "url": "/shows/123",
+   "location": {"@type": "Place", "name": "Example Expo Hall",
+     "address": {"@type": "PostalAddress", "streetAddress": "97 Sunfield Ave", "addressLocality": "Edison", "addressRegion": "NJ", "postalCode": "08837", "addressCountry": "US"}},
+   "offers": {"@type": "Offer", "price": "5", "priceCurrency": "USD"},
+   "organizer": {"@type": "Organization", "name": "Example Promotions", "url": "https://example.com"},
+   "description": "A long write up that must never be copied into the data."},
+  {"@type": "Event", "name": "Maple Leaf Card Expo", "startDate": "2026-12-05",
+   "location": {"@type": "Place", "name": "Toronto Hall", "address": {"streetAddress": "255 Front St W", "addressLocality": "Toronto", "addressRegion": "Ontario", "postalCode": "M5V 2W6", "addressCountry": "CA"}},
+   "isAccessibleForFree": true},
+  {"@type": "Event", "name": "Event with no date", "location": {"name": "Nowhere"}}
+]}
+</script></head>
+<body><h1>Upcoming shows</h1><a href="/shows/page2.html">Next</a></body></html>
