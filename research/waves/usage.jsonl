@@ -1,3 +1,4 @@
 {"wave": "baseline", "time": "2026-10-21T17:13:00Z", "weekly": 47, "five_hour": 37, "note": "before first research wave"}
 {"wave": "w1", "time": "2026-10-21T17:55:00Z", "before": 47, "after": 48, "agents": 7, "records": 142}
 {"wave": "w2-regions", "time": "2026-10-21T17:42:00Z", "before": 48, "after": 50, "agents": 8, "records": 131, "note": "includes builder agents running in parallel"}
+{"wave": "w3-regions", "time": "2026-10-21T17:55:00Z", "before": 50, "after": 51, "agents": 10, "records": 89}
