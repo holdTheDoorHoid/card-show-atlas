@@ -117,6 +117,11 @@ export interface VendorSettings {
   sells: string[];
   /** The vendor's own extra cost per show (extra badge, parking), in the vendor currency. */
   extras_per_show?: number;
+  /**
+   * What an hour behind the wheel is worth to the vendor, in the vendor currency. Optional, default 0.
+   * When set, plans made by profit count driving time as a cost ("Your time driving").
+   */
+  time_value_per_hour?: number | null;
   /** Own history keyed by `series_id`. */
   history?: Record<string, SeriesHistory>;
 }

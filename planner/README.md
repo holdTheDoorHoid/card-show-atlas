@@ -122,9 +122,13 @@ interface VendorSettings {
   margin_percent: number;            // 0 to 100
   sells: string[];                   // vocabulary ids
   extras_per_show?: number;          // own extra cost per show (badge, parking)
+  time_value_per_hour?: number | null; // optional: what an hour of driving is worth to you; default 0
   history?: Record<string, { gross_sales: number[]; rating?: number | null }>;  // by series_id
 }
 ```
+
+When hotel or food is not filled in, the site passes placeholders (140 USD or 180 CAD a night,
+35 USD or 45 CAD a day) and lists them on the plan, so a hotel never looks free.
 
 ### Options every planner accepts (`CommonPlanOptions`)
 
@@ -143,6 +147,8 @@ interface VendorSettings {
 | `skipIds`, `onlyIds` | Leave shows out, or plan only these. |
 | `labels` | Display names for vocabulary ids (from `vocab.json`). Defaults are built in. |
 | `minScore` | Score mode only: points a show must beat to be worth a spot. Default 0. |
+| `mindDriving` | "How much do you mind driving?": `little`, `some` (default) or `lot`. Sets the points an hour of driving and a hotel night cost a plan made by score, and every shopping plan (section 5.7). |
+| `penalties` | Your own `{ perDriveHour, perHotelNight }` in points, instead of a `mindDriving` preset. |
 
 Timing rules (`PlanningRules`), all local to the show:
 
@@ -245,8 +251,10 @@ planWeekendRun(shows, settings, {
   overnight: 'stay',                // or 'home': back home every night
   maxShows: 3,
   alternatives: 3,
+  mindDriving: 'some',               // score mode and shopping: how much driving and hotels count
   // shopping only:
   dwellMinutes: 90, interests: ['pokemon'], values: { 'some-show-id': 80 }, people: 1, exactLimit: 10, seed: 1,
+  farHours: 3, farFactor: 1.5,       // the far stop rule, section 5.6
 });
 // { mode, best: Plan | null, alternatives: Plan[], excluded: [{ id, name, reason }], warnings, candidates, exact, ms }
 ```
@@ -256,7 +264,12 @@ and from each other: "One fewer show", "Home by Saturday night", "No hotel night
 (show)". Each has a `note` such as "About 90 USD less profit, 1 show fewer, 4 h 25 min less
 driving".
 
-In `stay` mode hotels are allowed and home is used whenever it is cheaper and fits. In `home` mode
+The best plan is always on top: if an alternative turns out at least as good as the best plan on
+every measure plans are ranked by (its value, its hours of driving and its total cost), it becomes
+the best plan and the plan it beat is dropped. Alternatives that tie on all three are dropped too.
+
+In `stay` mode hotels are allowed and home is used whenever it is better and fits (also when
+shopping: each night is at home or near the day's last stop, whichever is better). In `home` mode
 every night is at home; a show too far for that is left out. A run can cover up to 14 days.
 
 ### 3.5 Season planner
@@ -351,7 +364,8 @@ interface Plan {
   stops: PlanStop[];              // shows in order, with arrive and leave times, sales, table fee, notes
   legs: PlanLeg[];                // from, to, miles, km, hours, source, and the drive split by day
   days: PlanDay[];                // each day: items such as "6:10 AM: drive 2 h 20 min to Edison, NJ (140 miles)",
-                                  // "Vend at Garden State Card Show, 9:00 AM to 3:00 PM (be there by 7:00 AM)", the night
+                                  // "Vend at Garden State Card Show, 9:00 AM to 3:00 PM (be there by 7:00 AM)",
+                                  // and `night` (the night is not repeated in the items)
   nights: PlanNight[];            // where = 'home' | 'hotel'; label "Hotel near Edison, NJ" or "Hotel on the road near Harrisburg, PA"
   trips: TripSummary[];           // each trip from home and back
   money: ProfitEstimate;          // the itemized money for the whole plan, see 3.3
@@ -362,8 +376,9 @@ interface Plan {
   hotelNights: number;
   driveHours: number;
   miles: number;
-  value: number;                  // what the search maximized
+  value: number;                  // what the search maximized (profit, or score after penalties)
   objective: 'profit' | 'score' | 'visits';
+  scoreLine: string | null;       // "Plan score 88: stops worth 121, minus 33 for 3 h 15 min of driving"
   driveTimes: { source: 'estimate' | 'osrm' | 'given'; label: string };
   start: PlanPoint;
   end: PlanPoint;
@@ -459,9 +474,11 @@ above zero, staying away a week to avoid driving home is rarely the better choic
 higher to search more. Season travel may start up to `min(7, maxNightsAway)` days (at least 2) before
 the range and end that long after it; the shows themselves are always inside the range.
 
-**Objective.** Expected profit (the mid value) when typical sales are set. Otherwise the sum of the
-shows' priority scores, where the travel factor uses the leg actually driven to each show; costs then
-only break ties. Waitlisted and tentative shows are planned and marked, not penalized.
+**Objective.** With typical sales set: expected profit (the mid value), minus your time if you gave
+it a value (`time_value_per_hour`, default 0; it shows up as a "Your time driving" cost). Without
+sales: the shows' priority scores minus a penalty for every hour of driving and every hotel night
+(section 5.7), so a plan does not chase stops it has to drive hours for. Money only breaks ties in
+that mode. Waitlisted and tentative shows are planned and marked, not penalized.
 
 **Speed.** Season benchmark (`npm run bench`, about 2,000 candidates over six months, five cases on
 fresh data in one fresh process, so the first case also pays for JIT warm up): across several runs the first case took
@@ -480,22 +497,60 @@ any trigonometry (a latitude only bound decides); and the hot loops avoid alloca
 ### 5.6 Shopping (orienteering with time windows)
 
 Several shows a day, a set time at each (default 90 minutes), inside opening hours, with the daily
-driving cap and window, home each night or a hotel near the last stop. The goal is the most valuable
-set of visits (value from size, what you collect and free entry, or your own `values`), then the
-least driving.
+driving cap and window. Each night is at home, or (in `stay` mode) in a hotel near the day's last
+stop when that is better. The goal is the most worthwhile weekend: the value of the visits (from
+size, what you collect and free entry, or your own `values`, 0 to 100 each) minus the driving and
+night penalties of section 5.7, with less driving breaking ties.
+
+Two sanity rules, so the planner does not drive 6 hours to shop for 90 minutes:
+
+* **No drive longer than your daily limit.** Every drive between two stops fits inside one day's
+  driving limit, and `verifyPlan` checks it.
+* **The far stop rule.** A show more than 3 hours from your start point is only considered when it
+  is worth at least one and a half times the best show within 3 hours (for example a major show
+  against a small local one). If nothing is within 3 hours, far shows are all considered. Shows left
+  out say so ("5 h 35 min away, and not at least one and a half times as good as the best show
+  within 3 h"). One and a half rather than twice, because values stop at 100: with twice, a far
+  show could only ever win against near shows scoring under 50. Change it with `farHours` and
+  `farFactor`.
 
 * **Exact** up to `exactLimit` candidates (10): label setting over (visited set, position, day) with
-  dominance on time, hours driven today and total driving. Equal to brute force (every order and every
-  split into days) on 300 random instances. Its worst case (every show open every day, close
+  dominance on time, hours driven today and penalty so far, and both night choices at the end of
+  each day. Equal to brute force (every order, every split into days and every home or hotel choice
+  each night) on 300 random instances with random penalties. Its worst case (every show open every day, close
   together, equal value) grows fast past 10, which is why the default stops there.
-* **Heuristic** beyond that: three greedy insertion starts (value squared per added hour, value per
-  added hour, value first), then local search (2 opt within a day, relocate and swap stops anywhere,
-  swap a visited stop for a better unvisited one, drop one or two stops and refill), inside an
-  iterated local search that removes a few random stops and repairs, with a seeded random generator so
-  the same input gives the same plan. It always returns a feasible plan. On 150 random instances with
-  5 to 10 candidates (where the exact answer is known) it found the optimum on about 93 percent, with
-  an average shortfall of about 0.4 percent of the best value; the test requires at least 88 percent
-  and under 1 percent. It stops after a run of rounds without improvement or 400 ms.
+* **Heuristic** beyond that: three greedy insertion starts (value squared per added penalty, gain per
+  added penalty, biggest gain first; a stop goes in only when it makes the plan better), then local
+  search (2 opt within a day, relocate and swap stops anywhere, swap a visited stop for a better
+  unvisited one, drop one or two stops and refill), inside an iterated local search that removes a
+  few random stops and repairs, with a seeded random generator so the same input gives the same
+  plan. The nights for each candidate route are chosen exactly (two places to be each night). It
+  always returns a feasible plan. On 150 random instances with 5 to 10 candidates and random
+  penalties (where the exact answer is known) it found the optimum on about 95 percent, with an
+  average shortfall of about 0.3 percent; the test requires at least 88 percent and under 1 percent.
+  It stops after a run of rounds without improvement or 400 ms (150 ms for each alternative).
+
+### 5.7 How much driving counts ("How much do you mind driving?")
+
+Plans made by score, and all shopping plans, take points off for driving and hotel nights. Show
+scores and visit values run from 0 to 100.
+
+| Setting | Per hour of driving | Per hotel night |
+| --- | --- | --- |
+| A little (`little`) | 2 points | 5 points |
+| Some (`some`, default) | 10 points | 25 points |
+| A lot (`lot`) | 20 points | 50 points |
+
+With "Some", a 3 hour drive each way costs 60 points, so a far show has to be worth that much more
+than staying close. Every plan made this way says how its score adds up (`scoreLine`, for example
+"Plan score 88: stops worth 121, minus 33 for 3 h 15 min of driving"). Plans made by profit count
+money instead; give your time a value (`time_value_per_hour`) to make driving cost something there
+too.
+
+On the case that prompted this (shopping from 19103, Philadelphia, October 23 to 25, 2026, no
+vendor settings, Balanced), the old plan drove 973 miles in 17 hours with two hotel nights to visit
+4 shows, as far as Buffalo. With "Some" it now visits 3 shows near Philadelphia in 123 miles and
+3 h 15 min, with no hotel nights.
 
 ## 6. Money and currencies
 

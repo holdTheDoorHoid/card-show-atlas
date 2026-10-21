@@ -164,6 +164,7 @@ export function seasonEngine(
     travelSlackDays: travelSlack(maxNights),
     minScore: options.minScore ?? 0,
     travelHalfLifeHours: 2,
+    penalties: r.penalties,
   });
 }
 

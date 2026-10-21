@@ -2,7 +2,7 @@
 import { useState } from 'preact/hooks';
 import { addDays, formatMonthDay } from '../lib/dates';
 import { toggled } from '../lib/filters';
-import type { PlanPlace, SeasonForm, SeasonSpan, WeekendForm } from '../lib/plan-options';
+import { MIND_DRIVING_OPTIONS, type MindDriving, type PlanPlace, type SeasonForm, type SeasonSpan, type WeekendForm } from '../lib/plan-options';
 import type { VendorSettings } from '../lib/settings';
 import type { Vocab } from '../lib/types';
 import { allVocabEntries } from '../lib/vocab';
@@ -41,6 +41,18 @@ function WeightChips({ value, onChange }: { value: WeightPreset; onChange: (w: W
         ))}
       </div>
       <span class="hint">Used to rank shows when expected profit is not available, and for the score on each show.</span>
+    </div>
+  );
+}
+
+function MindDrivingChoice({ value, onChange, name }: { value: MindDriving; onChange: (v: MindDriving) => void; name: string }) {
+  return (
+    <div>
+      <Choice label="How much do you mind driving?" name={name} value={value} onChange={onChange} options={MIND_DRIVING_OPTIONS} />
+      <span class="hint" style={{ display: 'block', marginTop: '-0.4rem', marginBottom: '0.8rem' }}>
+        Each hour of driving and each hotel night counts against a plan ranked by score, and every shopping plan. With your sales filled in, plans count money
+        instead; you can also give your time a value in your vendor settings.
+      </span>
     </div>
   );
 }
@@ -202,6 +214,7 @@ export function WeekendFormView({
         ]}
       />
       <DriveHours value={form.maxDriveHours} fromSettings={settings.maxDrivingHoursPerDay} onChange={(maxDriveHours) => set({ maxDriveHours })} />
+      <MindDrivingChoice name="wk-mind" value={form.mindDriving} onChange={(mindDriving) => set({ mindDriving })} />
       <SellsPicker vocab={vocab} value={form.sells} fromSettings={settings.sells} onChange={(sells) => set({ sells })} />
       <WeightChips value={form.weights} onChange={(weights) => set({ weights })} />
     </div>
@@ -345,6 +358,7 @@ export function SeasonFormView({ form, onChange, vocab, settings, hasHome, today
       />
       <DriveHours value={form.maxDriveHours} fromSettings={settings.maxDrivingHoursPerDay} onChange={(maxDriveHours) => set({ maxDriveHours })} />
       <SellsPicker vocab={vocab} value={form.sells} fromSettings={settings.sells} onChange={(sells) => set({ sells })} />
+      <MindDrivingChoice name="se-mind" value={form.mindDriving} onChange={(mindDriving) => set({ mindDriving })} />
       <WeightChips value={form.weights} onChange={(weights) => set({ weights })} />
     </div>
   );

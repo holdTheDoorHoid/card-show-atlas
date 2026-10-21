@@ -63,8 +63,12 @@ export async function runWeekend(planner: PlannerCaller, input: WeekendRunInput)
       plans.sort((a, b) => Number(has(b.plan)) - Number(has(a.plan)));
       notices.push(`The best plan for these dates does not include ${mustInclude.name}. Plans that do are listed first.`);
     } else if (withIt.length === 0) {
-      // planned by score, so a show that is expected to lose money is still planned (and says so)
-      const alone = await planner.call('weekendRun', { settings, options: { ...options, onlyIds: [mustInclude.id], alternatives: 0, objective: 'score' } });
+      // planned by score with no driving penalty, so a show that is expected to lose money, or is a
+      // long way off, is still planned (and the plan says what it costs)
+      const alone = await planner.call('weekendRun', {
+        settings,
+        options: { ...options, onlyIds: [mustInclude.id], alternatives: 0, objective: 'score', penalties: { perDriveHour: 0, perHotelNight: 0 }, farHours: 1000 },
+      });
       const why = res.excluded.find((x) => x.id === mustInclude.id)?.reason;
       if (alone.best) {
         plans.unshift({ id: 'forced', plan: { ...alone.best, title: `Just ${mustInclude.name}`, note: 'The best plans for these dates leave this show out, so here it is on its own.' }, role: 'forced' });

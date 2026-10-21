@@ -12,6 +12,7 @@ import {
   formatDuration,
   formatLocalClock,
   formatMoney,
+  formatNumber,
   formatWeekday,
   townLabel,
 } from './format.js';
@@ -25,6 +26,7 @@ import { PlannerError } from './types.js';
 import {
   deadlineFor,
   describeVending,
+  scoreLine,
   planSignature,
   sortDeadlines,
   summaryLine,
@@ -64,6 +66,10 @@ export interface WeekendRunOptions extends CommonPlanOptions {
   exactLimit?: number;
   /** Shopping heuristic seed, for repeatable results. Default 1. */
   seed?: number;
+  /** Shopping: a stop farther than this many hours from the start is "far". Default 3. */
+  farHours?: number;
+  /** Shopping: a far stop must be worth this many times the best nearer stop. Default 1.5. */
+  farFactor?: number;
   blackout?: string[];
 }
 
@@ -118,11 +124,12 @@ export function planWeekendRun(shows: PlannerShow[], settings: VendorSettings, o
   const best = sol.steps.length > 0 ? describeVending(engine, sol, 'Best plan') : null;
   const warnings = [...engine.warnings];
   if (!best) warnings.push(noPlanReason(kept.length, engine.nodes.length, r.objective === 'profit'));
-  const alternatives = best ? vendingAlternatives(engine, sol, best, altCount, options.dates.start) : [];
+  const alts = best ? vendingAlternatives(engine, sol, best, altCount, options.dates.start) : [];
+  const fixed = best ? keepBestOnTop(best, alts) : { best, alternatives: alts };
   return {
     mode: 'vending',
-    best,
-    alternatives,
+    best: fixed.best,
+    alternatives: fixed.alternatives,
     excluded: [...excluded, ...engine.excluded],
     warnings,
     candidates: engine.nodes.length,
@@ -168,6 +175,7 @@ export function weekendEngine(
     travelSlackDays: 0,
     minScore: options.minScore ?? 0,
     travelHalfLifeHours: 2,
+    penalties: r.penalties,
   });
 }
 
@@ -198,6 +206,54 @@ function compareNote(p: Plan, best: Plan): string {
   if (Math.abs(dh) >= 0.25) parts.push(`${formatDuration(Math.abs(dh))} ${dh < 0 ? 'less' : 'more'} driving`);
   if (p.returnDate && best.returnDate && p.returnDate < best.returnDate) parts.push(`home by ${formatWeekday(p.returnDate)} night`);
   return parts.length ? parts.join(', ').replace(/^./, (c) => c.toUpperCase()) : 'Same totals, different shows';
+}
+
+const SAME = 1e-6;
+
+/**
+ * True when plan `a` is at least as good as plan `b` on every measure plans are ranked by: the
+ * value the search maximizes (profit, or score after the driving and night penalties), the hours
+ * of driving, and the total cost (when both are in one currency).
+ */
+export function atLeastAsGood(a: Plan, b: Plan): boolean {
+  if (a.value < b.value - SAME) return false;
+  if (a.driveHours > b.driveHours + SAME) return false;
+  const ca = a.money.totalCost;
+  const cb = b.money.totalCost;
+  if (ca !== null && cb !== null && ca > cb + 0.005) return false;
+  return true;
+}
+
+function strictlyBetterSomewhere(a: Plan, b: Plan): boolean {
+  return (
+    a.value > b.value + SAME ||
+    a.driveHours < b.driveHours - SAME ||
+    (a.money.totalCost !== null && b.money.totalCost !== null && a.money.totalCost < b.money.totalCost - 0.005)
+  );
+}
+
+/**
+ * Never show an alternative that is at least as good as the best plan on every measure: if one
+ * exists, it is the best plan. It takes the top spot, the plan it beat is dropped, and the notes on
+ * the other alternatives are written again against the new best plan.
+ */
+export function keepBestOnTop(best: Plan, alternatives: Plan[]): { best: Plan; alternatives: Plan[] } {
+  let top = best;
+  let rest = alternatives.slice();
+  let changed = false;
+  for (let guard = 0; guard < 10; guard++) {
+    const winner = rest.find((p) => atLeastAsGood(p, top) && strictlyBetterSomewhere(p, top));
+    if (!winner) break;
+    rest = rest.filter((p) => p !== winner);
+    top = { ...winner, title: 'Best plan', note: undefined };
+    changed = true;
+  }
+  // Exact ties on every measure are the same plan as far as the person can tell: drop them.
+  const same = rest.filter((p) => atLeastAsGood(p, top) && atLeastAsGood(top, p));
+  if (!changed && same.length === 0) return { best, alternatives };
+  rest = rest.filter((p) => !atLeastAsGood(p, top));
+  for (const p of rest) p.note = compareNote(p, top);
+  return { best: top, alternatives: rest };
 }
 
 function vendingAlternatives(engine: VendingEngine, bestSol: VendingSolution, best: Plan, max: number, rangeStart: string): Plan[] {
@@ -246,6 +302,46 @@ interface ShopMeta {
   points: PlanPoint[];
 }
 
+/** Visit value of a show when shopping: your own value if you gave one, else size, match and free entry. */
+export function shopValue(show: PlannerShow, settings: VendorSettings, options: WeekendRunOptions): number {
+  const v = options.values?.[show.id];
+  if (typeof v === 'number' && Number.isFinite(v) && v >= 0) return v;
+  return visitValue(show, options.interests ?? settings.sells ?? []);
+}
+
+/**
+ * The far stop rule: a show more than `farHours` (3) of driving from the start is only considered
+ * when it is worth at least `farFactor` (1.5) times the best show within that distance. When nothing
+ * is near, far shows are all considered. Returns the shows kept and the ones left out, with a reason.
+ */
+export function applyFarRule(
+  cands: Candidate[],
+  settings: VendorSettings,
+  options: WeekendRunOptions,
+  start: Place,
+  r: ReturnType<typeof resolveCommon>,
+): { kept: Candidate[]; excluded: Excluded[] } {
+  const farHours = options.farHours ?? 3;
+  const factor = options.farFactor ?? 1.5;
+  const info = cands.map((c) => ({ c, value: shopValue(c.show, settings, options), hours: r.travel.leg(start, c.show).hours }));
+  const near = info.filter((x) => x.hours <= farHours + 1e-9);
+  if (near.length === 0) return { kept: cands, excluded: [] };
+  const bestNear = Math.max(...near.map((x) => x.value));
+  const kept: Candidate[] = [];
+  const excluded: Excluded[] = [];
+  for (const x of info) {
+    if (x.hours <= farHours + 1e-9 || x.value >= factor * bestNear - 1e-9) kept.push(x.c);
+    else {
+      excluded.push({
+        id: x.c.show.id,
+        name: x.c.show.name,
+        reason: `${formatDuration(x.hours)} away, and not at least ${factor === 1.5 ? 'one and a half' : formatNumber(factor, 1)} times as good as the best show within ${formatDuration(farHours)}`,
+      });
+    }
+  }
+  return { kept, excluded };
+}
+
 export function buildShopInstance(
   cands: Candidate[],
   settings: VendorSettings,
@@ -273,11 +369,7 @@ export function buildShopInstance(
   const legs: Leg[][] = points.map((a) => points.map((b) => r.travel.leg(a, b)));
   const dwell = (options.dwellMinutes ?? 90) / 60;
   if (!(dwell > 0 && dwell <= 12)) throw new PlannerError('bad_dwell', 'Time at each show must be between 1 minute and 12 hours.');
-  const interests = options.interests ?? settings.sells ?? [];
-  const value = shows.map((s) => {
-    const v = options.values?.[s.id];
-    return typeof v === 'number' && Number.isFinite(v) && v >= 0 ? v : visitValue(s, interests);
-  });
+  const value = shows.map((s) => shopValue(s, settings, options));
   const win = cands.map((c) =>
     dates.map((date) => {
       const day = c.days.find((d) => d.date === date);
@@ -303,6 +395,8 @@ export function buildShopInstance(
     cap: settings.max_drive_hours_per_day,
     mode,
     maxStops,
+    hourPenalty: r.pointPenalties.perDriveHour,
+    nightPenalty: r.pointPenalties.perHotelNight,
   };
   return { inst, meta: { cands, legs, origin, baseZone, endZone, dates, points } };
 }
@@ -312,8 +406,8 @@ function sameSpot(a: Place, b: Place): boolean {
 }
 
 function shoppingRun(
-  kept: Candidate[],
-  excluded: Excluded[],
+  keptIn: Candidate[],
+  excludedIn: Excluded[],
   settings: VendorSettings,
   options: WeekendRunOptions,
   start: Place,
@@ -325,6 +419,9 @@ function shoppingRun(
   const overnight = options.overnight ?? 'stay';
   const exactLimit = options.exactLimit ?? 10;
   const maxStops = options.maxShows ?? Infinity;
+  const far = applyFarRule(keptIn, settings, options, start, r);
+  const kept = far.kept;
+  const excluded = [...excludedIn, ...far.excluded];
   // The best plan gets the full heuristic budget; each alternative a smaller one, so a run with
   // alternatives stays around a second even above the exact limit.
   const solveWith = (stops: number, mode: 'home' | 'stay', lastDate: string, skip: Set<string>, budgetMs = 150) => {
@@ -335,30 +432,41 @@ function shoppingRun(
   };
   const first = solveWith(maxStops, overnight, options.dates.end, new Set(), 400);
   const describe = (x: ReturnType<typeof solveWith>, title: string) => describeShopping(x.built.inst, x.built.meta, x.sol, settings, r, options, title);
-  const best = first.sol.value > 0 ? describe(first, 'Best plan') : null;
+  let best = first.sol.value > 0 ? describe(first, 'Best plan') : null;
   const warnings: string[] = [];
-  if (!best) warnings.push(kept.length === 0 ? 'No shows are open on these dates.' : 'No stop fits your driving limit and opening hours.');
-  const alternatives: Plan[] = [];
+  if (!best) {
+    warnings.push(
+      kept.length === 0
+        ? 'No shows are open on these dates.'
+        : 'No stop is worth the drive with these settings. Try minding the driving a little less, or a longer stay.',
+    );
+  }
+  let alternatives: Plan[] = [];
   if (best && altCount > 0) {
-    const seen = new Set([planSignature(best)]);
+    const first0: Plan = best;
+    const seen = new Set([planSignature(first0)]);
     const tryAdd = (make: () => ReturnType<typeof solveWith>, title: string) => {
       if (alternatives.length >= altCount) return;
       const x = make();
-      if (x.sol.value <= 0) return;
+      const top = best;
+      if (x.sol.value <= 0 || !top) return;
       const p = describe(x, title);
       const sig = planSignature(p);
       if (seen.has(sig)) return;
       seen.add(sig);
-      p.note = compareNote(p, best);
+      p.note = compareNote(p, top);
       alternatives.push(p);
     };
-    if (best.stops.length >= 2) tryAdd(() => solveWith(best.stops.length - 1, overnight, options.dates.end, new Set()), 'One fewer stop');
+    if (first0.stops.length >= 2) tryAdd(() => solveWith(first0.stops.length - 1, overnight, options.dates.end, new Set()), 'One fewer stop');
     if (options.dates.end > options.dates.start) {
       const earlier = addDays(options.dates.end, -1);
       tryAdd(() => solveWith(maxStops, overnight, earlier, new Set()), `Home by ${formatWeekday(earlier)} night`);
     }
-    if (best.hotelNights > 0 && sameSpot(start, end)) tryAdd(() => solveWith(maxStops, 'home', options.dates.end, new Set()), 'No hotel nights');
-    for (const st of best.stops) tryAdd(() => solveWith(maxStops, overnight, options.dates.end, new Set([st.showId])), `Without ${st.name}`);
+    if (first0.hotelNights > 0 && sameSpot(start, end)) tryAdd(() => solveWith(maxStops, 'home', options.dates.end, new Set()), 'No hotel nights');
+    for (const st of first0.stops) tryAdd(() => solveWith(maxStops, overnight, options.dates.end, new Set([st.showId])), `Without ${st.name}`);
+    const fixed = keepBestOnTop(first0, alternatives);
+    best = fixed.best;
+    alternatives = fixed.alternatives;
   }
   return {
     mode: 'shopping',
@@ -498,7 +606,6 @@ function describeShopping(
       if (hotel) hotelNights += 1;
       prevNightHotel = hotel;
       nights.push(night);
-      items.push(`Night: ${night.label}`);
     }
     if (away || night) {
       days.push({ date: meta.dates[t]!, label: formatDayLabel(meta.dates[t]!), items, driveHours, night, away });
@@ -516,7 +623,7 @@ function describeShopping(
   } catch (e) {
     warnings.push(e instanceof PlannerError ? e.message : 'Fuel cost could not be worked out.');
   }
-  if (fuel) addTripCosts(sheet, { miles, hotelNights, foodDays }, settings, fuel);
+  if (fuel) addTripCosts(sheet, { miles, hotelNights, foodDays, driveHours }, settings, fuel);
   const people = Math.max(1, Math.floor(options.people ?? 1));
   for (const st of stops) {
     const sh = meta.cands.find((c) => c.show.id === st.showId)!.show;
@@ -558,8 +665,9 @@ function describeShopping(
     hotelNights,
     driveHours,
     miles,
-    value: sol.value,
+    value: sol.objective,
     objective: 'visits',
+    scoreLine: scoreLine(sol.value, sol.objective, driveHours, hotelNights, r.pointPenalties, 'stops'),
     driveTimes: {
       source,
       label: source === 'osrm' ? 'Real drive times from OpenStreetMap routing (OSRM)' : 'Estimated drive times (straight line distance times a road factor)',

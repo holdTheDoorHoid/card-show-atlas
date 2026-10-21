@@ -7,6 +7,20 @@ import type { Plan } from '../../../planner/src/vending.ts';
 import { addDays, isISODate, weekday } from './dates.ts';
 import type { VendorSettings } from './settings.ts';
 import { DEFAULT_WEIGHT, sanitizeWeight, type WeightPreset } from './weights.ts';
+import type { MindDriving } from '../../../planner/src/common.ts';
+
+export type { MindDriving };
+
+/** "How much do you mind driving?" Used when plans are ranked by score, and for every shopping plan. */
+export const MIND_DRIVING_OPTIONS: { id: MindDriving; title: string; text: string }[] = [
+  { id: 'little', title: 'A little', text: 'Long drives are fine for a better show.' },
+  { id: 'some', title: 'Some', text: 'A far show has to be clearly better.' },
+  { id: 'lot', title: 'A lot', text: 'Stay close to home.' },
+];
+
+export function sanitizeMindDriving(raw: unknown): MindDriving {
+  return raw === 'little' || raw === 'lot' ? raw : 'some';
+}
 
 export interface PlanPlace {
   lat: number;
@@ -37,6 +51,8 @@ export interface WeekendForm {
   mustIncludeId: string | null;
   /** shopping only: minutes at each show */
   dwellMinutes: number;
+  /** how much driving and hotel nights count against a plan made by score */
+  mindDriving: MindDriving;
 }
 
 export type SeasonSpan = '3m' | '6m' | 'custom';
@@ -59,19 +75,22 @@ export interface SeasonForm {
   sells: string[] | null;
   weights: WeightPreset;
   startPlace: PlanPlace | null;
+  mindDriving: MindDriving;
 }
 
-/** Numbers typed into the plan itself (table fee, hotel, fuel price) for this plan only. */
+/** Numbers typed into the plan itself (table fee, hotel, food, fuel price) for this plan only. */
 export interface PlanOverrides {
   tableFees: Record<string, number>;
   hotel: number | null;
+  /** optional so older callers that know only hotel and fuel keep working */
+  food?: number | null;
   fuelPrice: number | null;
 }
 
-export const NO_OVERRIDES: PlanOverrides = { tableFees: {}, hotel: null, fuelPrice: null };
+export const NO_OVERRIDES: PlanOverrides = { tableFees: {}, hotel: null, food: null, fuelPrice: null };
 
 export function hasOverrides(o: PlanOverrides): boolean {
-  return Object.keys(o.tableFees).length > 0 || o.hotel !== null || o.fuelPrice !== null;
+  return Object.keys(o.tableFees).length > 0 || o.hotel !== null || (o.food ?? null) !== null || o.fuelPrice !== null;
 }
 
 /** The coming Friday through Sunday: today's Friday, or the next one from Saturday on. */
@@ -97,6 +116,7 @@ export function defaultWeekendForm(today: string): WeekendForm {
     weights: DEFAULT_WEIGHT,
     mustIncludeId: null,
     dwellMinutes: 90,
+    mindDriving: 'some',
   };
 }
 
@@ -116,6 +136,7 @@ export function defaultSeasonForm(today: string): SeasonForm {
     sells: null,
     weights: DEFAULT_WEIGHT,
     startPlace: null,
+    mindDriving: 'some',
   };
 }
 
@@ -156,6 +177,7 @@ export function sanitizeWeekendForm(raw: unknown, today: string): WeekendForm {
     weights: sanitizeWeight(raw.weights),
     mustIncludeId: null, // never remembered: it comes from the link that opened the page
     dwellMinutes: num(raw.dwellMinutes, 15, 480) ?? 90,
+    mindDriving: sanitizeMindDriving(raw.mindDriving),
   };
 }
 
@@ -183,6 +205,7 @@ export function sanitizeSeasonForm(raw: unknown, today: string): SeasonForm {
     sells: strList(raw.sells),
     weights: sanitizeWeight(raw.weights),
     startPlace: cleanPlace(raw.startPlace),
+    mindDriving: sanitizeMindDriving(raw.mindDriving),
   };
 }
 
@@ -197,6 +220,7 @@ export function settingsForPlan(
   return {
     ...base,
     hotelPerNight: overrides.hotel ?? base.hotelPerNight,
+    foodPerDay: overrides.food ?? base.foodPerDay,
     fuelPrice: overrides.fuelPrice ?? base.fuelPrice,
     maxDrivingHoursPerDay: form.maxDriveHours ?? base.maxDrivingHoursPerDay,
     sells: form.sells ?? base.sells,
@@ -224,6 +248,7 @@ export function buildWeekendOptions(form: WeekendForm, ctx: BuildContext, extra:
     alternatives: extra.alternatives ?? 3,
     today: ctx.today,
     weights: form.weights as PresetName,
+    mindDriving: form.mindDriving,
   };
   if (start) o.start = start;
   if (end) o.end = end;
@@ -251,6 +276,7 @@ export function buildSeasonOptions(form: SeasonForm, ctx: BuildContext, extra: {
     keepPastDeadline: form.keepPastDeadline,
     today: ctx.today,
     weights: form.weights as PresetName,
+    mindDriving: form.mindDriving,
   };
   if (ctx.rates && Object.keys(ctx.rates).length > 0) o.rates = ctx.rates;
   if (ctx.labels) o.labels = ctx.labels;

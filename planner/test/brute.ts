@@ -31,7 +31,6 @@ export function bruteVending(engine: VendingEngine, o: BruteVendingOptions): num
   if (nodes.length > 11) throw new Error('too many for brute force');
   const order = nodes.map((_, i) => i).sort((a, b) => nodes[a]!.first - nodes[b]!.first);
   const maxN = o.maxNights ?? Infinity;
-  const cf = engine.costFactor;
   let best = 0;
 
   const countOk = (seq: number[]): boolean => {
@@ -56,7 +55,7 @@ export function bruteVending(engine: VendingEngine, o: BruteVendingOptions): num
         if (o.tripWithinRange && T.first - opt.j < o.rangeStart) continue;
         if (engine.anyBlackout(T.first - opt.j, T.first - 1)) continue;
       }
-      out.push({ m: opt.m, na: opt.j, v: v + opt.gain - cf * opt.cost });
+      out.push({ m: opt.m, na: opt.j, v: v + opt.gain - opt.loss });
     }
     return out;
   };
@@ -68,7 +67,7 @@ export function bruteVending(engine: VendingEngine, o: BruteVendingOptions): num
     const rDay = S.last + r.j;
     if (rDay > o.hEnd) return null;
     if (r.j > 0 && (st.na + r.j > maxN || engine.anyBlackout(S.last + 1, rDay))) return null;
-    return { night: rDay, v: st.v - cf * r.cost };
+    return { night: rDay, v: st.v - r.loss };
   };
 
   const rec = (seq: number[], pos: number, st: State): number => {
@@ -87,7 +86,7 @@ export function bruteVending(engine: VendingEngine, o: BruteVendingOptions): num
       const gap = T.first - S.last;
       if (o.chain && !o.homeOnly && gap >= 1 && gap <= o.maxGap && st.na + gap <= maxN && !engine.anyBlackout(S.last + 1, T.first - 1)) {
         const d = engine.directOption(st.i, t, st.m);
-        if (d) arrivals.push({ m: d.m, na: st.na + gap, v: st.v + d.gain - cf * d.cost });
+        if (d) arrivals.push({ m: d.m, na: st.na + gap, v: st.v + d.gain - d.loss });
       }
       if (engine.sameBase) {
         const h = goHome(st);
@@ -97,7 +96,7 @@ export function bruteVending(engine: VendingEngine, o: BruteVendingOptions): num
     let bestV = -Infinity;
     for (const a of arrivals) {
       for (const vo of engine.variantOptions(t, a.m, a.na, o.homeOnly, maxN)) {
-        const v = rec(seq, pos + 1, { kind: 'show', i: t, m: vo.m, na: vo.na, v: a.v + T.valueBase - cf * vo.cost });
+        const v = rec(seq, pos + 1, { kind: 'show', i: t, m: vo.m, na: vo.na, v: a.v + T.valueBase - vo.loss });
         if (v > bestV) bestV = v;
       }
     }
@@ -121,53 +120,53 @@ export function bruteVending(engine: VendingEngine, o: BruteVendingOptions): num
   return best;
 }
 
-/** Best value, then least driving, by exhaustive depth first search. */
-export function bruteShop(inst: ShopInstance): { value: number; drive: number } {
+/**
+ * Best objective (visit value minus driving and night penalties, with less driving breaking ties)
+ * by exhaustive depth first search over every order of visits, every split into days and, when
+ * staying is allowed, every choice of home or hotel each night.
+ */
+export function bruteShop(inst: ShopInstance): { objective: number; value: number; drive: number } {
   const { n, D, tt, win, dwell, cap, mode } = inst;
   const BASE = n;
   const END = n + 1;
-  let bestV = 0;
-  let bestDrive = Infinity;
+  const ph = (inst.hourPenalty ?? 0) + 1e-6;
+  const pn = inst.nightPenalty ?? 0;
+  let best = { objective: -Infinity, value: 0, drive: 0 };
   const used = new Array<boolean>(n).fill(false);
 
-  // Value zero and no driving is always possible only if staying put all trip is allowed.
-  const offer = (v: number, drive: number) => {
-    if (v > bestV + 1e-9 || (Math.abs(v - bestV) <= 1e-9 && drive < bestDrive - 1e-9)) {
-      bestV = v;
-      bestDrive = drive;
-    }
-  };
-
-  const dfs = (day: number, loc: number, time: number, dd: number, total: number, v: number, count: number): void => {
-    // Option: end the day here.
+  const dfs = (day: number, loc: number, time: number, dd: number, pen: number, drive: number, v: number, count: number): void => {
     const lastDay = day === D - 1;
-    if (mode === 'home' || lastDay) {
-      const target = lastDay ? END : BASE;
-      const h = tt[loc]![target]!;
-      const okCap = dd + h <= cap + 1e-9;
-      const okTime = h === 0 || time + h <= inst.dayEnd[day]![target]! + 1e-9;
-      if (okCap && okTime) {
-        if (lastDay) offer(v, total + h);
-        else dfs(day + 1, BASE, inst.dayStart[day + 1]![BASE]!, 0, total + h, v, count);
+    // End the day by driving home (or to the end point on the last day).
+    const target = lastDay ? END : BASE;
+    const h = tt[loc]![target]!;
+    if (dd + h <= cap + 1e-9 && (h === 0 || time + h <= inst.dayEnd[day]![target]! + 1e-9)) {
+      const p = pen + ph * (dd + h);
+      if (lastDay) {
+        if (v - p > best.objective + 1e-9) best = { objective: v - p, value: v, drive: drive + dd + h };
+      } else {
+        dfs(day + 1, BASE, inst.dayStart[day + 1]![BASE]!, 0, p, drive + dd + h, v, count);
       }
-    } else {
-      dfs(day + 1, loc, inst.dayStart[day + 1]![loc]!, 0, total, v, count);
     }
-    // Option: visit another show today.
+    // Or sleep near the last stop.
+    if (!lastDay && mode === 'stay' && loc !== BASE) {
+      dfs(day + 1, loc, inst.dayStart[day + 1]![loc]!, 0, pen + ph * dd + pn, drive + dd, v, count);
+    }
+    // Or visit another show today.
     if (count >= inst.maxStops) return;
     for (let s = 0; s < n; s++) {
       if (used[s]) continue;
       const w = win[s]![day];
       if (!w) continue;
-      const h = tt[loc]![s]!;
-      if (dd + h > cap + 1e-9) continue;
-      const start = Math.max(time + h, w[0]);
+      const hs = tt[loc]![s]!;
+      if (dd + hs > cap + 1e-9) continue;
+      const start = Math.max(time + hs, w[0]);
       if (start > w[1] + 1e-9) continue;
       used[s] = true;
-      dfs(day, s, start + dwell, dd + h, total + h, v + inst.value[s]!, count + 1);
+      dfs(day, s, start + dwell, dd + hs, pen, drive, v + inst.value[s]!, count + 1);
       used[s] = false;
     }
   };
-  dfs(0, BASE, inst.dayStart[0]![BASE]!, 0, 0, 0, 0);
-  return { value: bestV, drive: bestDrive === Infinity ? 0 : bestDrive };
+  dfs(0, BASE, inst.dayStart[0]![BASE]!, 0, 0, 0, 0, 0);
+  if (best.objective === -Infinity) best = { objective: 0, value: 0, drive: 0 };
+  return best;
 }

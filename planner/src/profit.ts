@@ -13,7 +13,7 @@
  * conversion is listed. When a rate is missing the totals stay split by currency.
  */
 import { convert, MoneyBag, rateFor, type Conversion, type Money } from './money.js';
-import { formatDistance, formatMoney, formatNumber } from './format.js';
+import { formatDistance, formatDuration, formatMoney, formatNumber } from './format.js';
 import type { Currency, ExchangeRates, PlannerShow, SizeClass, VendorSettings } from './types.js';
 import { PlannerError } from './types.js';
 import { matchSells } from './vocab.js';
@@ -228,7 +228,7 @@ export function estimateSales(
   };
 }
 
-export type CostKind = 'table' | 'extras' | 'fuel' | 'hotel' | 'food' | 'admission';
+export type CostKind = 'table' | 'extras' | 'fuel' | 'hotel' | 'food' | 'admission' | 'time';
 
 export interface CostLine {
   kind: CostKind;
@@ -414,6 +414,8 @@ export interface TripCosts {
   miles: number;
   hotelNights: number;
   foodDays: number;
+  /** Hours behind the wheel; priced only when the vendor gave their time a value. */
+  driveHours?: number;
   /** "Home, Edison and back". */
   describe?: string;
 }
@@ -472,6 +474,16 @@ export function addTripCosts(
       trip.foodDays * settings.food_per_day,
       currency,
       `${trip.foodDays} ${trip.foodDays === 1 ? 'day' : 'days'} at ${formatMoney(settings.food_per_day, currency)}`,
+    );
+  }
+  const rate = settings.time_value_per_hour ?? 0;
+  if (rate > 0 && (trip.driveHours ?? 0) > 0) {
+    sheet.add(
+      'time',
+      'Your time driving',
+      (trip.driveHours ?? 0) * rate,
+      currency,
+      `${formatDuration(trip.driveHours ?? 0)} at ${formatMoney(rate, currency)} an hour`,
     );
   }
 }

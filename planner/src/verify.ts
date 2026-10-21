@@ -66,6 +66,7 @@ export function verifyPlan(plan: Plan, shows: PlannerShow[], opts: VerifyOptions
 
   // Drives.
   plan.legs.forEach((leg, li) => {
+    if (plan.kind === 'shopping' && leg.hours > cap + TOL_H) problems.push(`The drive to ${leg.to.name} is longer than your daily limit.`);
     const sum = leg.segments.reduce((a, s) => a + s.hours, 0);
     if (Math.abs(sum - leg.hours) > 1e-6) problems.push(`Drive to ${leg.to.name} is split into parts that do not add up.`);
     if (leg.source === 'estimate') {

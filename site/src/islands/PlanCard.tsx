@@ -10,6 +10,7 @@ import { fileNameFor } from '../lib/ics';
 import { snapshotFromPlanner } from '../lib/myshows';
 import { planCalendar } from '../lib/plan-ics';
 import { hasOverrides, type PlanOverrides } from '../lib/plan-options';
+import { foodFor, hotelFor } from '../lib/planner-settings';
 import type { PlanEntry, PlannerCaller, RunOutput } from '../lib/plan-run';
 import { makeShareLink, shareUrl, type ShareSource } from '../lib/plan-share';
 import { deadlinesInOrder, legText, legTitle, money, orderedCosts, stopsByMonth, summaryText } from '../lib/plan-view';
@@ -57,6 +58,8 @@ function numberOrNull(v: string): number | null {
 export function PlanCard(p: Props) {
   const { entry, run, unit, rows, today, settings } = p;
   const plan = entry.plan;
+  const hotel = hotelFor(settings);
+  const food = foodFor(settings);
   const isSeason = run.kind === 'season';
   const [links, setLinks] = useState<MapsLink[] | null>(null);
   const [shareOpen, setShareOpen] = useState(false);
@@ -342,9 +345,11 @@ export function PlanCard(p: Props) {
                 {!d.away && <span class="badge" style={{ marginLeft: '0.5rem' }}>At home</span>}
               </h5>
               <ul class="day-items">
-                {d.items.map((it) => (
-                  <li>{it}</li>
-                ))}
+                {d.items
+                  .filter((it) => !it.startsWith('Night: '))
+                  .map((it) => (
+                    <li>{it}</li>
+                  ))}
                 {d.night && <li class="night">Night: {d.night.label}</li>}
               </ul>
             </div>
@@ -409,6 +414,9 @@ export function PlanCard(p: Props) {
                 <td>
                   {c.label}
                   {c.assumed && <span class="badge" style={{ marginLeft: '0.4rem' }}>assumed</span>}
+                  {((c.kind === 'hotel' && hotel.placeholder && p.overrides.hotel === null) || (c.kind === 'food' && food.placeholder && (p.overrides.food ?? null) === null)) && (
+                    <span class="badge badge-warn" style={{ marginLeft: '0.4rem' }}>placeholder</span>
+                  )}
                   {c.detail && <div class="muted small">{c.detail}</div>}
                 </td>
                 <td>{c.converted ? money(c.amount, c.currency) : `${money(c.amount, c.currency)} (not converted)`}</td>
@@ -450,9 +458,34 @@ export function PlanCard(p: Props) {
                 min={0}
                 step="any"
                 value={p.overrides.hotel ?? settings.hotelPerNight ?? ''}
-                placeholder="0"
+                placeholder={String(hotel.amount)}
+                aria-describedby={hotel.placeholder ? `hotel-${entry.id}-hint` : undefined}
                 onInput={(e) => p.onOverrides({ ...p.overrides, hotel: numberOrNull((e.currentTarget as HTMLInputElement).value) })}
               />
+              {hotel.placeholder && p.overrides.hotel === null && (
+                <span class="hint" id={`hotel-${entry.id}-hint`}>
+                  Using a placeholder of {money(hotel.amount, settings.currency)} a night.
+                </span>
+              )}
+            </div>
+            <div class="field">
+              <label for={`food-${entry.id}`}>Food per day ({settings.currency})</label>
+              <input
+                id={`food-${entry.id}`}
+                type="number"
+                inputMode="decimal"
+                min={0}
+                step="any"
+                value={p.overrides.food ?? settings.foodPerDay ?? ''}
+                placeholder={String(food.amount)}
+                aria-describedby={food.placeholder ? `food-${entry.id}-hint` : undefined}
+                onInput={(e) => p.onOverrides({ ...p.overrides, food: numberOrNull((e.currentTarget as HTMLInputElement).value) })}
+              />
+              {food.placeholder && (p.overrides.food ?? null) === null && (
+                <span class="hint" id={`food-${entry.id}-hint`}>
+                  Using a placeholder of {money(food.amount, settings.currency)} a day.
+                </span>
+              )}
             </div>
             <div class="field">
               <label for={`fuel-${entry.id}`}>
@@ -514,6 +547,7 @@ export function PlanCard(p: Props) {
             <h3>{plan.title}</h3>
             <p class="plan-summary">{summaryText(plan.summary, unit)}</p>
             <p class="plan-profit">{m.label}</p>
+            {plan.scoreLine && <p class="hint plan-score">{plan.scoreLine}</p>}
             <p class="hint">Drive times: {plan.driveTimes.label}. {formatMonthDay(plan.departDate ?? today)}{plan.returnDate && plan.returnDate !== plan.departDate ? ` to ${formatMonthDay(plan.returnDate)}` : ''}</p>
           </header>
           {body}
@@ -524,6 +558,7 @@ export function PlanCard(p: Props) {
             <span class="plan-title">{plan.title}</span>
             <span class="plan-summary">{summaryText(plan.summary, unit)}</span>
             <span class="plan-profit">{m.label}</span>
+            {plan.scoreLine && <span class="muted small">{plan.scoreLine}</span>}
             {plan.note && <span class="muted small">{plan.note}</span>}
           </summary>
           {opened && body}

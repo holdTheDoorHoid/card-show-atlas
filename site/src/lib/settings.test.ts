@@ -21,6 +21,7 @@ describe('vendor settings', () => {
       'marginPercent',
       'maxDrivingHoursPerDay',
       'sells',
+      'timeValuePerHour',
       'typicalSales',
       'version',
     ]);
