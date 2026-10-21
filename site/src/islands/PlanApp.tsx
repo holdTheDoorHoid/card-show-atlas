@@ -181,10 +181,10 @@ export default function PlanApp() {
     () => settingsForPlan(vendor.settings, { maxDriveHours: form?.maxDriveHours ?? null, sells: form?.sells ?? null }, overrides),
     [vendor.settings, form?.maxDriveHours, form?.sells, overrides],
   );
-  const history = useMemo(() => historyFromMyShows(my.store, (id) => byId.get(id)?.series_id ?? seriesFromShowId(id)), [my.store, byId]);
+  const vendorHistory = useMemo(() => historyFromMyShows(my.store, (id) => byId.get(id)?.series_id ?? seriesFromShowId(id)), [my.store, byId]);
   const ps = useMemo(
-    () => toPlannerSettings(siteSettings, { home: startPlace ? { lat: startPlace.lat, lon: startPlace.lon, name: startPlace.label } : null, history }),
-    [siteSettings, startPlace, history],
+    () => toPlannerSettings(siteSettings, { home: startPlace ? { lat: startPlace.lat, lon: startPlace.lon, name: startPlace.label } : null, history: vendorHistory }),
+    [siteSettings, startPlace, vendorHistory],
   );
   const unit: DistanceUnit = (startPlace?.country ?? vendor.settings.home.country) === 'CA' ? 'km' : 'mi';
   const hasHome = vendor.settings.home.lat !== null;
@@ -287,7 +287,7 @@ export default function PlanApp() {
     setShared(null);
     setRun(null);
     setPendingShared(false);
-    if (typeof history_ !== 'undefined') history_.replaceState(null, '', withBase('plan/'));
+    window.history.replaceState(null, '', withBase('plan/'));
   }
 
   // ---- what the share button needs
@@ -500,6 +500,3 @@ export default function PlanApp() {
     </div>
   );
 }
-
-// `history` in this file means My shows' results, so the browser's history object is reached this way.
-const history_ = typeof window !== 'undefined' ? window.history : undefined;

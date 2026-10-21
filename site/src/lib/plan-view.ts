@@ -62,3 +62,9 @@ export function tripStops(plan: Plan): { label: string; stops: PlanStop[] }[] {
   if (plan.trips.length === 0) return [{ label: plan.title, stops: plan.stops }];
   return plan.trips.map((t) => ({ label: t.label, stops: plan.stops.filter((s) => t.showIds.includes(s.showId)) }));
 }
+
+/** The planner writes its summary in miles ("2 shows, 1 hotel night, 410 miles, 7 h 30 min of driving"). Kilometres for Canada. */
+export function summaryText(summary: string, unit: DistanceUnit): string {
+  if (unit !== 'km') return summary;
+  return summary.replace(/([\d,]+) miles?\b/, (_m, n: string) => `${Math.round(Number(n.replace(/,/g, '')) * 1.609344).toLocaleString('en-US')} km`);
+}

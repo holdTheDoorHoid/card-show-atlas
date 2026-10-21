@@ -12,7 +12,7 @@ import { planCalendar } from '../lib/plan-ics';
 import { hasOverrides, type PlanOverrides } from '../lib/plan-options';
 import type { PlanEntry, PlannerCaller, RunOutput } from '../lib/plan-run';
 import { makeShareLink, shareUrl, type ShareSource } from '../lib/plan-share';
-import { deadlinesInOrder, legText, legTitle, money, orderedCosts, stopsByMonth } from '../lib/plan-view';
+import { deadlinesInOrder, legText, legTitle, money, orderedCosts, stopsByMonth, summaryText } from '../lib/plan-view';
 import type { DistanceUnit } from '../lib/geo';
 import type { VendorSettings } from '../lib/settings';
 import { showPath, withBase } from '../lib/urls';
@@ -512,7 +512,7 @@ export function PlanCard(p: Props) {
         <>
           <header class="plan-head">
             <h3>{plan.title}</h3>
-            <p class="plan-summary">{plan.summary}</p>
+            <p class="plan-summary">{summaryText(plan.summary, unit)}</p>
             <p class="plan-profit">{m.label}</p>
             <p class="hint">Drive times: {plan.driveTimes.label}. {formatMonthDay(plan.departDate ?? today)}{plan.returnDate && plan.returnDate !== plan.departDate ? ` to ${formatMonthDay(plan.returnDate)}` : ''}</p>
           </header>
@@ -522,7 +522,7 @@ export function PlanCard(p: Props) {
         <details onToggle={(e) => setOpened((e.currentTarget as HTMLDetailsElement).open)}>
           <summary class="plan-summary-row">
             <span class="plan-title">{plan.title}</span>
-            <span class="plan-summary">{plan.summary}</span>
+            <span class="plan-summary">{summaryText(plan.summary, unit)}</span>
             <span class="plan-profit">{m.label}</span>
             {plan.note && <span class="muted small">{plan.note}</span>}
           </summary>

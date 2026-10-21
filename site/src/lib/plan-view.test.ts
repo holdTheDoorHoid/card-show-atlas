@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { deadlinesInOrder, legText, legTitle, monthTitle, money, orderedCosts, stopsByMonth, tripStops } from './plan-view.ts';
+import { summaryText, deadlinesInOrder, legText, legTitle, monthTitle, money, orderedCosts, stopsByMonth, tripStops } from './plan-view.ts';
 
 const stop = (id: string, first: string) => ({ showId: id, name: id, firstDate: first, lastDate: first }) as never;
 
@@ -43,6 +43,14 @@ describe('showing a plan', () => {
     expect(tripStops({ title: 'Best plan', trips: [], stops: [a, b] } as never)).toHaveLength(1);
     const trips = tripStops({ title: 'Season', trips: [{ label: 'Trip 1', showIds: ['a'] }, { label: 'Trip 2', showIds: ['b'] }], stops: [a, b] } as never);
     expect(trips.map((t) => t.stops.map((s) => s.showId))).toEqual([['a'], ['b']]);
+  });
+
+  it('turns the planner summary into kilometres for Canada', () => {
+    const text = '2 shows, 1 hotel night, 410 miles, 7 h 30 min of driving';
+    expect(summaryText(text, 'mi')).toBe(text);
+    expect(summaryText(text, 'km')).toBe('2 shows, 1 hotel night, 660 km, 7 h 30 min of driving');
+    expect(summaryText('26 shows, 15 hotel nights, 9,463 miles, 168 h 50 min of driving', 'km')).toBe('26 shows, 15 hotel nights, 15,229 km, 168 h 50 min of driving');
+    expect(summaryText('1 show, no hotel nights, 1 mile, 5 min of driving', 'km')).toContain('2 km');
   });
 
   it('formats money the way the planner does', () => {
