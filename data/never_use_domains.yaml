@@ -32,6 +32,8 @@ never_use_domains:
   - cantonfair.net
   - 10times.com
   - tradefest.io
+  - ontreasure.com
+  - ticketspice.com
 
 link_only_domains:
   - facebook.com
@@ -45,3 +47,4 @@ link_only_domains:
   - eventbrite.*
   - meetup.com
   - allevents.in
+  - reddit.com

@@ -49,6 +49,7 @@ def _atomic_write(path: Path, text: str) -> None:
     try:
         with os.fdopen(fd, "w", encoding="utf-8", newline="\n") as fh:
             fh.write(text)
+        os.chmod(tmp, 0o644)  # mkstemp makes files private; data files are ordinary public files
         os.replace(tmp, path)
     except BaseException:
         if os.path.exists(tmp):

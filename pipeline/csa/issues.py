@@ -430,6 +430,7 @@ def import_issues(paths: Paths, vocab: Vocab, fetcher: Fetcher | None = None, re
     specs = load_forms(paths.issue_templates)
     if issues is None:
         issues = fetch_open_issues(fetcher, repo)
+    issues = [i for i in issues if "pull_request" not in i]
     show_ids = {r.get("id") for r in read_jsonl(paths.shows)}
     rep = IssueReport(fetched=len(issues))
     open_numbers = set()

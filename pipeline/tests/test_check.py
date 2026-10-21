@@ -215,6 +215,12 @@ def test_money_needs_a_currency(vocab):
     assert "USD or CAD" in one(s, vocab, "money", ERROR).message
 
 
+def test_free_entry_needs_no_currency(vocab):
+    s = good()
+    s["admission"].update(free=True, adult=0, child=0, currency=None)
+    assert not [f for f in findings(s, vocab) if f.rule == "money"]
+
+
 def test_odd_prices(vocab):
     s = good()
     s["admission"]["adult"] = -1

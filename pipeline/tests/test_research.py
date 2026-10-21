@@ -229,7 +229,7 @@ def test_rejected_file_goes_away_when_nothing_is_rejected(root, vocab, wave):
 
 # ---------------------------------------------------------------- never use and link only sites
 
-NEVER = ["https://www.beckett.com/news/x", "https://shows.collect.com/a", "https://10times.com/e/1", "https://rk9.gg/event/1",
+NEVER = ["https://www.ontreasure.com/events/x", "https://app.ticketspice.com/e/1", "https://www.beckett.com/news/x", "https://shows.collect.com/a", "https://10times.com/e/1", "https://rk9.gg/event/1",
          "https://locator.wizards.com/store/1", "https://www.cardshowmap.com/s", "https://x.cardpulse.club/y"]
 
 
@@ -355,8 +355,9 @@ def test_the_shipped_policy_lists_every_required_domain():
     pol = DomainPolicy.load(REPO / "data" / "never_use_domains.yaml")
     for d in ["sportscollectorsdigest.com", "collect.com", "cardshowmap.com", "treasurehunter.show", "thecardshopfinder.com", "cardshowhub.com",
               "cardshowdirectory.com", "sportscardinvestor.com", "cardpulse.club", "beckett.com", "psacard.com", "sportscollectorsdaily.com",
-              "locator.wizards.com", "rk9.gg", "melee.gg", "fancons.com", "animecons.com", "cantonfair.net", "10times.com", "tradefest.io"]:
+              "locator.wizards.com", "rk9.gg", "melee.gg", "fancons.com", "animecons.com", "cantonfair.net", "10times.com", "tradefest.io",
+              "ontreasure.com", "ticketspice.com"]:
         assert pol.is_never_use("https://www." + d + "/x") and pol.is_never_use("https://sub." + d), d
-    for d in ["facebook.com", "instagram.com", "tiktok.com", "x.com", "twitter.com", "eventbrite.com", "eventbrite.de", "meetup.com", "allevents.in"]:
+    for d in ["facebook.com", "instagram.com", "tiktok.com", "x.com", "twitter.com", "eventbrite.com", "eventbrite.de", "meetup.com", "allevents.in", "reddit.com", "old.reddit.com"]:
         assert pol.is_link_only("https://www." + d + "/x"), d
     assert not pol.is_never_use("https://example.com") and not pol.is_link_only("https://box.com/x") and not pol.is_never_use("https://wizards.com")

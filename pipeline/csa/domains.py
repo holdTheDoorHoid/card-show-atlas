@@ -11,7 +11,7 @@ import yaml
 from .textparse import host_of
 
 DEFAULT_LINK_ONLY = ("facebook.com", "fb.com", "fb.me", "instagram.com", "tiktok.com", "x.com", "twitter.com",
-                     "t.co", "eventbrite.*", "meetup.com", "allevents.in")
+                     "t.co", "eventbrite.*", "meetup.com", "allevents.in", "reddit.com")
 
 
 def _compile(pattern: str) -> re.Pattern:

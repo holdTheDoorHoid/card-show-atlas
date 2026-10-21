@@ -207,7 +207,7 @@ def check_show(s: dict, vocab: Vocab, known_sources: set[str], policy: DomainPol
             err("money", f"vendor.tables[{i}].currency {t['currency']!r} must be USD or CAD")
         elif t.get("currency") and cur_country and t["currency"] != cur_country:
             warn("money", f"vendor.tables[{i}] is priced in {t['currency']} for a show in {v.get('country')}. Check it.")
-    if any(val is not None for name, val in prices[:2]):
+    if any(val not in (None, 0) for name, val in prices[:2]):  # a price of zero needs no currency
         if not adm.get("currency"):
             err("money", "admission has a price but no currency")
         elif adm["currency"] not in model.CURRENCIES:
@@ -323,8 +323,8 @@ def run_check(paths: Paths, vocab: Vocab, today: date | None = None) -> CheckRep
     events = read_jsonl(paths.store_events)
     known = {s["id"] for s in load_sources(paths.sources_yaml)}
     policy = DomainPolicy.load(paths.data / "never_use_domains.yaml")
-    series = read_jsonl(paths.series)
-    promoters = read_jsonl(paths.promoters)
+    series = read_jsonl(paths.series) if paths.series.exists() else None
+    promoters = read_jsonl(paths.promoters) if paths.promoters.exists() else None
     rep = check_records(shows + events, vocab, known, policy, today, series, promoters)
     # store events are not part of series
     return rep
