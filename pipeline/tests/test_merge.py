@@ -343,3 +343,59 @@ def test_cadence_inference_helper():
     assert merge.infer_cadence([d(2026, 11, 7), d(2026, 11, 14), d(2026, 11, 21), d(2026, 11, 28)]) == "Every Saturday"
     assert merge.infer_cadence([d(2026, 11, 7)]) is None
     assert merge.infer_cadence([d(2026, 11, 7), d(2026, 12, 16), d(2027, 2, 3)]) is None
+    # fifth Saturdays are always the last Saturday of their month (this once crashed)
+    assert merge.infer_cadence([d(2026, 10, 31), d(2027, 1, 30), d(2027, 5, 29)]) == "Last Saturday of most months"
+
+
+def snapshot(root):
+    return {f: (root / "data" / f).read_text() for f in ("shows.jsonl", "series.jsonl", "registry.jsonl", "possible_duplicates.jsonl".replace("possible_duplicates.jsonl", "series.jsonl"))}
+
+
+def test_ids_do_not_swap_between_runs_when_two_editions_share_a_venue_and_date(merge_root, vocab):
+    """Two shows at one venue on one day look alike to the registry. Each must keep its own id."""
+    rows = [show(name="Philly Card Show", source="list_a", city="Philadelphia", region="PA"),
+            show(name="Philadelphia Sports Card Show", source="list_a", city="Philadelphia", region="PA", address="2 Other Entrance")]
+    write_jsonl_file(merge_root / "data/harvest/list_a.jsonl", rows)
+    run(merge_root, vocab)
+    first = {s["name"]: s["id"] for s in shows_of(merge_root)}
+    assert len(first) == 2
+    for _ in range(3):
+        run(merge_root, vocab)
+        assert {s["name"]: s["id"] for s in shows_of(merge_root)} == first
+    assert len(read_jsonl_file(merge_root / "data/registry.jsonl")) == 2
+
+
+def test_two_sources_can_bridge_two_old_editions_into_one(merge_root, vocab):
+    a = show(name="Garden State Card Show", source="list_a", venue="Hall One", address="1 First St")
+    b = show(name="Garden State Sports Show", source="list_b", venue="Hall Two", address="2 Second St")
+    b["venue"]["name"] = "Hall Two"
+    write_jsonl_file(merge_root / "data/harvest/list_a.jsonl", [a])
+    write_jsonl_file(merge_root / "data/harvest/list_b.jsonl", [b])
+    run(merge_root, vocab)
+    assert len(shows_of(merge_root)) == 2
+    # list_b now gives the same venue and address as list_a: the two records are one edition
+    b2 = show(name="Garden State Sports Show", source="list_b", venue="Hall One", address="1 First St")
+    write_jsonl_file(merge_root / "data/harvest/list_b.jsonl", [b2])
+    run(merge_root, vocab)
+    out = shows_of(merge_root)
+    assert len(out) == 1  # the entry that no longer has a record of its own is not kept as a stale twin
+    run(merge_root, vocab)
+    assert [s["id"] for s in shows_of(merge_root)] == [out[0]["id"]]
+
+
+def test_a_crowded_random_dataset_gives_the_same_answer_every_time(merge_root, vocab):
+    import random
+    rnd = random.Random(7)
+    rows = []
+    for i in range(400):
+        city = rnd.choice(["Erie", "Media", "Edison"])
+        rows.append(show(name=f"{city} {rnd.choice(['Card Show', 'Sports Expo', 'Trade Day', 'Pokemon Day'])} {rnd.randint(1, 3)}",
+                         day=f"2026-11-{rnd.randint(1, 6):02d}", venue=f"Hall {rnd.randint(1, 3)}", city=city,
+                         region="PA" if city != "Edison" else "NJ", address=f"{rnd.randint(1, 4)} Main St", source="list_a"))
+    write_jsonl_file(merge_root / "data/harvest/list_a.jsonl", rows)
+    run(merge_root, vocab)
+    first = {f: (merge_root / "data" / f).read_text() for f in ("shows.jsonl", "series.jsonl", "registry.jsonl")}
+    for _ in range(2):
+        rep = run(merge_root, vocab)
+        assert rep.carried_forward == 0
+        assert first == {f: (merge_root / "data" / f).read_text() for f in first}

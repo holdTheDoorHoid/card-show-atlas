@@ -15,6 +15,7 @@ from __future__ import annotations
 
 import bisect
 import copy
+import functools
 import statistics
 from collections import Counter, defaultdict
 from dataclasses import dataclass, field
@@ -135,6 +136,7 @@ def _norm_street(address: str | None) -> str:
     return " ".join(STREET_WORDS.get(t, t) for t in norm_text(address).split())
 
 
+@functools.lru_cache(maxsize=1 << 16)
 def _stripped_name(name: str | None) -> str:
     toks = [t for t in norm_text(name).split() if t not in GENERIC_WORDS]
     return " ".join(toks)
@@ -192,9 +194,11 @@ def load_contributions(paths: Paths, vocab: Vocab, today: date,
     unplaced: list[dict] = []
     order = 0
 
-    def add(rec: dict, tier: int, source: str, origin: str, generated: str | None = None, cadence: str | None = None):
+    def add(rec: dict, tier: int, source: str, origin: str, generated: str | None = None, cadence: str | None = None,
+            repair: bool = True):
         nonlocal order
-        rec, _ = repair_edition(rec, vocab, today)
+        if repair:  # harvest and research rows were repaired when they were filed; hand edited ones are repaired again
+            rec, _ = repair_edition(rec, vocab, today)
         days = rec.get("days") or []
         if not days or not (rec.get("venue") or {}).get("city") and not (rec.get("venue") or {}).get("lat"):
             report.unplaced += 1
@@ -211,7 +215,7 @@ def load_contributions(paths: Paths, vocab: Vocab, today: date,
         for rec in read_jsonl(p):
             src = (rec.get("sources") or [{}])[0].get("source") or p.stem
             kind = registry.get(src, {}).get("kind")
-            add(rec, TIER_PROMOTER if kind == "promoter" else TIER_LISTING, src, p.name)
+            add(rec, TIER_PROMOTER if kind == "promoter" else TIER_LISTING, src, p.name, repair=False)
 
     # research agents
     for p in sorted(paths.research.glob("*.jsonl")) if paths.research.exists() else []:
@@ -220,9 +224,11 @@ def load_contributions(paths: Paths, vocab: Vocab, today: date,
                 for ed in expand_series(rec, today):
                     gen, cad = ed.pop("_generated", None), ed.pop("_cadence", None)
                     ed.pop("_series_name", None)
-                    add(ed, _tier_for(ed.get("verification"), TIER_RESEARCH), "research", f"{p.name}:{rec.get('research_id')}", gen, cad)
+                    add(ed, _tier_for(ed.get("verification"), TIER_RESEARCH), "research", f"{p.name}:{rec.get('research_id')}", gen, cad,
+                        repair=False)
             else:
-                add(rec, _tier_for(rec.get("verification"), TIER_RESEARCH), "research", f"{p.name}:{rec.get('research_id')}")
+                add(rec, _tier_for(rec.get("verification"), TIER_RESEARCH), "research", f"{p.name}:{rec.get('research_id')}",
+                    repair=False)
 
     # approved submissions
     patches: list[dict] = []
@@ -505,6 +511,9 @@ def match_keys(members: list[Contribution]) -> list[str]:
         if m.coords():
             lat, lon = m.coords()  # type: ignore[misc]
             keys.append(f"{base}|g:{lat:.3f},{lon:.3f}")
+        for src in m.rec.get("sources") or []:
+            if src.get("source") and src.get("url"):
+                keys.append(f"{m.start.isoformat()}|u:{src['source']}|{src['url']}")
     return sorted(set(keys))
 
 
@@ -512,27 +521,41 @@ def assign_identity(reg: Registry, members: list[Contribution], merged: dict, to
                     used_ids: set[str]) -> tuple[str, str, dict]:
     """Return (id, series_id, registry entry) for a cluster, creating a new entry when nothing matches."""
     keys = match_keys(members)
+    key_set = set(keys)
+    cluster_name = norm_text(merged["name"])
     name_probe = Contribution({"name": merged["name"]}, 0, "", 0, 0, "")
-    candidates: dict[str, dict] = {}
+    candidates: dict[str, tuple] = {}
     for k in keys:
         for e in reg.by_key.get(k, []):
             e = reg.resolve(e)
-            if e["id"] in used_ids:
+            if e["id"] in used_ids or e["id"] in candidates:
                 continue
-            probe = Contribution({"name": e.get("name")}, 0, "", 0, 0, "")
-            if e.get("norm_name") == norm_text(merged["name"]) or name_similarity(name_probe, probe) >= NAME_NEAR:
-                candidates[e["id"]] = e
+            sim = name_similarity(name_probe, Contribution({"name": e.get("name")}, 0, "", 0, 0, ""))
+            exact = e.get("norm_name") == cluster_name
+            if not exact and sim < NAME_NEAR:
+                continue
+            shared = len(key_set & set(e.get("keys", [])))
+            # Best match first: most shared keys, then the same name, then the most similar name, then the oldest.
+            candidates[e["id"]] = (-shared, not exact, -sim, e.get("first_seen") or "9999", e["id"], e)
     start = merged["days"][0]["date"]
     v = merged["venue"]
     if candidates:
-        entry = sorted(candidates.values(), key=lambda e: (e.get("first_seen") or "9999", e["id"]))[0]
-        for other in candidates.values():
-            if other is not entry:
+        entry = sorted(candidates.values(), key=lambda t: t[:5])[0][5]
+        entry["keys"] = sorted(set(entry.get("keys", [])) | key_set)
+        # Another entry whose keys are all covered by this edition has been absorbed into it (two records that
+        # used to look like different editions are now known to be one).
+        cluster_urls = {k for k in key_set if "|u:" in k}
+        for _, _, _, _, oid, other in candidates.values():
+            if other is entry:
+                continue
+            other_keys = set(other.get("keys", []))
+            other_urls = {k for k in other_keys if "|u:" in k}
+            same_show = (other.get("city") == norm_text(v.get("city")) or not other.get("city")) and \
+                name_similarity(name_probe, Contribution({"name": other.get("name")}, 0, "", 0, 0, "")) >= NAME_MATCH
+            if other_keys <= set(entry["keys"]) or (other_urls and other_urls <= cluster_urls and same_show):
                 other["alias_of"] = entry["id"]
-                entry["keys"] = sorted(set(entry.get("keys", [])) | set(other.get("keys", [])))
-        entry["keys"] = sorted(set(entry.get("keys", [])) | set(keys))
         entry["name"] = merged["name"]
-        entry["norm_name"] = norm_text(merged["name"])
+        entry["norm_name"] = cluster_name
         entry["norm_venue"] = _norm_venue_name(v.get("name"))
         entry["city"], entry["region"] = norm_text(v.get("city")), v.get("region")
         reg.index(entry)
@@ -621,8 +644,10 @@ def infer_cadence(dates: list[date]) -> str | None:
         return None
     nths = Counter()
     for d in mine:
-        nths[(d.day - 1) // 7 + 1] += 1
-        if d.day + 7 > _days_in_month(d):
+        n = (d.day - 1) // 7 + 1
+        if n <= 4:
+            nths[n] += 1
+        if d.day + 7 > _days_in_month(d):  # the last one of its weekday in the month (a fifth is always the last)
             nths[-1] += 1
     nth, count = nths.most_common(1)[0]
     if count / len(mine) < 0.6:
@@ -766,8 +791,8 @@ def run_merge(paths: Paths, vocab: Vocab, today: date | None = None) -> MergeRep
         if entry and entry.get("suppressed"):
             report.suppressed += 1
             continue
-        if entry and entry.get("generated_tentative"):
-            continue
+        if entry and (entry.get("generated_tentative") or entry.get("alias_of")):
+            continue  # a guess that is no longer made, or an edition now merged into another
         rec = copy.deepcopy(rec)
         rec["estimate"] = None
         carried.append(rec)

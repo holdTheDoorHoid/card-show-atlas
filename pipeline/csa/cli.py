@@ -88,7 +88,11 @@ def cmd_harvest(a, paths: Paths) -> int:
     if a.source == "all":
         results = harvest.run_all(paths, vocab, **kw)
     else:
-        results = [harvest.run_source(paths, a.source, vocab, **kw)]
+        try:
+            results = [harvest.run_source(paths, a.source, vocab, **kw)]
+        except KeyError as exc:  # an unknown source id
+            print(f"csa harvest: {exc.args[0]}", file=sys.stderr)
+            return 2
     for res in results:
         print(res.line())
         for reason in res.skip_reasons:
@@ -214,7 +218,7 @@ def main(argv: list[str] | None = None) -> int:
     paths = Paths(find_root(args.root))
     try:
         return COMMANDS[args.command](args, paths)
-    except (FileNotFoundError, KeyError, ValueError, FileExistsError) as exc:
+    except (FileNotFoundError, ValueError, FileExistsError) as exc:
         print(f"csa {args.command}: {exc}", file=sys.stderr)
         return 2
 

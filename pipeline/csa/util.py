@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import functools
 import json
 import math
 import os
@@ -100,6 +101,13 @@ def iter_jsonl_files(directory: Path) -> Iterator[tuple[Path, list[dict]]]:
 
 def strip_accents(text: str) -> str:
     return "".join(c for c in unicodedata.normalize("NFKD", text) if not unicodedata.combining(c))
+
+
+@functools.lru_cache(maxsize=1 << 16)
+def _norm_cached(text: str) -> str:
+    text = strip_accents(text).lower().replace("&", " and ")
+    text = text.replace("'", "").replace("\u2019", "")
+    return re.sub(r"[^a-z0-9]+", " ", text).strip()
 
 
 def norm_text(text: str | None) -> str:
