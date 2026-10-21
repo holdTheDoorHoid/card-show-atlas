@@ -1,0 +1,188 @@
+{
+ "tcg": [
+  {
+   "id": "pokemon",
+   "name": "Pokémon",
+   "label": "Pokémon"
+  },
+  {
+   "id": "mtg",
+   "name": "Magic: The Gathering",
+   "label": "Magic"
+  },
+  {
+   "id": "yugioh",
+   "name": "Yu-Gi-Oh!",
+   "label": "Yu-Gi-Oh"
+  },
+  {
+   "id": "one_piece",
+   "name": "One Piece",
+   "label": "One Piece"
+  },
+  {
+   "id": "lorcana",
+   "name": "Disney Lorcana",
+   "label": "Lorcana"
+  },
+  {
+   "id": "dragon_ball",
+   "name": "Dragon Ball Super",
+   "label": "Dragon Ball"
+  },
+  {
+   "id": "digimon",
+   "name": "Digimon",
+   "label": "Digimon"
+  },
+  {
+   "id": "fab",
+   "name": "Flesh and Blood",
+   "label": "Flesh and Blood"
+  },
+  {
+   "id": "swu",
+   "name": "Star Wars: Unlimited",
+   "label": "Star Wars Unlimited"
+  },
+  {
+   "id": "weiss_schwarz",
+   "name": "Weiss Schwarz",
+   "label": "Weiss Schwarz"
+  },
+  {
+   "id": "union_arena",
+   "name": "Union Arena",
+   "label": "Union Arena"
+  },
+  {
+   "id": "riftbound",
+   "name": "Riftbound",
+   "label": "Riftbound"
+  },
+  {
+   "id": "sorcery",
+   "name": "Sorcery: Contested Realm",
+   "label": "Sorcery"
+  },
+  {
+   "id": "gundam",
+   "name": "Gundam Card Game",
+   "label": "Gundam"
+  },
+  {
+   "id": "metazoo",
+   "name": "MetaZoo",
+   "label": "MetaZoo"
+  },
+  {
+   "id": "grand_archive",
+   "name": "Grand Archive",
+   "label": "Grand Archive"
+  },
+  {
+   "id": "vanguard",
+   "name": "Cardfight!! Vanguard",
+   "label": "Vanguard"
+  },
+  {
+   "id": "altered",
+   "name": "Altered",
+   "label": "Altered"
+  },
+  {
+   "id": "other_tcg",
+   "name": "Other card games",
+   "label": "Other card games"
+  }
+ ],
+ "sports": [
+  {
+   "id": "baseball",
+   "name": "Baseball cards",
+   "label": "Baseball"
+  },
+  {
+   "id": "basketball",
+   "name": "Basketball cards",
+   "label": "Basketball"
+  },
+  {
+   "id": "football",
+   "name": "Football cards",
+   "label": "Football"
+  },
+  {
+   "id": "hockey",
+   "name": "Hockey cards",
+   "label": "Hockey"
+  },
+  {
+   "id": "soccer",
+   "name": "Soccer cards",
+   "label": "Soccer"
+  },
+  {
+   "id": "racing",
+   "name": "Racing cards",
+   "label": "Racing"
+  },
+  {
+   "id": "wrestling",
+   "name": "Wrestling cards",
+   "label": "Wrestling"
+  },
+  {
+   "id": "combat",
+   "name": "Combat sports cards",
+   "label": "Combat sports"
+  },
+  {
+   "id": "golf",
+   "name": "Golf cards",
+   "label": "Golf"
+  },
+  {
+   "id": "multi_sport",
+   "name": "Multi sport cards",
+   "label": "Multi sport"
+  }
+ ],
+ "other": [
+  {
+   "id": "non_sport",
+   "name": "Non-sport cards",
+   "label": "Non-sport"
+  },
+  {
+   "id": "comics",
+   "name": "Comics",
+   "label": "Comics"
+  },
+  {
+   "id": "toys",
+   "name": "Toys",
+   "label": "Toys"
+  },
+  {
+   "id": "video_games",
+   "name": "Video games",
+   "label": "Video games"
+  },
+  {
+   "id": "memorabilia",
+   "name": "Memorabilia",
+   "label": "Memorabilia"
+  },
+  {
+   "id": "coins",
+   "name": "Coins",
+   "label": "Coins"
+  },
+  {
+   "id": "anime",
+   "name": "Anime",
+   "label": "Anime"
+  }
+ ]
+}

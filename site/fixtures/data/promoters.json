@@ -1,0 +1,528 @@
+[
+ {
+  "id": "sample-garden-promotions",
+  "name": "Sample Garden Promotions",
+  "url": "https://example.com/promoters/garden",
+  "region": null,
+  "series": [
+   "sample-oklahoma-city-sports-card-show-oklahoma-city-ok",
+   "sample-boston-sports-card-show-boston-ma",
+   "sample-victoria-trading-card-expo-2-victoria-bc"
+  ],
+  "links": {
+   "facebook": null,
+   "instagram": null
+  },
+  "public_contact": "info@example.com"
+ },
+ {
+  "id": "sample-keystone-promotions",
+  "name": "Sample Keystone Promotions",
+  "url": "https://example.com/promoters/keystone",
+  "region": null,
+  "series": [
+   "sample-raleigh-comic-and-anime-con-raleigh-nc",
+   "sample-fredericton-national-card-expo-fredericton-nb",
+   "sample-san-diego-card-game-challenge-san-diego-ca",
+   "sample-jackson-sports-card-show-jackson-ms"
+  ],
+  "links": {
+   "facebook": null,
+   "instagram": null
+  },
+  "public_contact": "info@example.com"
+ },
+ {
+  "id": "sample-lakeshore-promotions",
+  "name": "Sample Lakeshore Promotions",
+  "url": "https://example.com/promoters/lakeshore",
+  "region": null,
+  "series": [
+   "sample-cherry-hill-sports-card-show-cherry-hill-nj",
+   "sample-vancouver-card-and-collectibles-show-vancouver-bc",
+   "sample-syracuse-collectors-convention-syracuse-ny"
+  ],
+  "links": {
+   "facebook": null,
+   "instagram": null
+  },
+  "public_contact": "info@example.com"
+ },
+ {
+  "id": "sample-prairie-promotions",
+  "name": "Sample Prairie Promotions",
+  "url": "https://example.com/promoters/prairie",
+  "region": null,
+  "series": [
+   "sample-edmonton-card-show-edmonton-ab",
+   "sample-edison-gaming-and-collectibles-con-edison-nj",
+   "sample-orlando-pop-culture-con-orlando-fl",
+   "sample-phoenix-sports-card-show-phoenix-az",
+   "sample-washington-regional-championships-washington-dc",
+   "sample-billings-card-show-billings-mt",
+   "sample-toronto-card-collectors-expo-toronto-on",
+   "sample-philadelphia-sports-card-show-philadelphia-pa"
+  ],
+  "links": {
+   "facebook": null,
+   "instagram": null
+  },
+  "public_contact": "info@example.com"
+ },
+ {
+  "id": "sample-summit-promotions",
+  "name": "Sample Summit Promotions",
+  "url": "https://example.com/promoters/summit",
+  "region": null,
+  "series": [
+   "sample-portland-sports-card-show-portland-or",
+   "sample-regina-pop-culture-con-regina-sk",
+   "sample-cheyenne-card-bash-cheyenne-wy",
+   "sample-st-louis-card-bash-st-louis-mo"
+  ],
+  "links": {
+   "facebook": null,
+   "instagram": null
+  },
+  "public_contact": "info@example.com"
+ },
+ {
+  "id": "sample-harbor-promotions",
+  "name": "Sample Harbor Promotions",
+  "url": "https://example.com/promoters/harbor",
+  "region": null,
+  "series": [
+   "sample-baltimore-sports-card-show-baltimore-md",
+   "sample-boston-card-bash-boston-ma",
+   "sample-san-jose-card-show-san-jose-ca",
+   "sample-philadelphia-card-show-philadelphia-pa",
+   "sample-grand-rapids-trading-card-expo-grand-rapids-mi",
+   "sample-newark-card-and-collectibles-show-newark-nj",
+   "sample-albuquerque-pop-culture-con-albuquerque-nm"
+  ],
+  "links": {
+   "facebook": null,
+   "instagram": null
+  },
+  "public_contact": "info@example.com"
+ },
+ {
+  "id": "sample-pioneer-promotions",
+  "name": "Sample Pioneer Promotions",
+  "url": "https://example.com/promoters/pioneer",
+  "region": null,
+  "series": [
+   "sample-san-antonio-card-and-collectibles-show-san-antonio-tx",
+   "sample-detroit-collectors-convention-detroit-mi",
+   "sample-dallas-national-card-expo-dallas-tx",
+   "sample-victoria-card-bash-victoria-bc",
+   "sample-richmond-regional-championships-richmond-va",
+   "sample-rochester-card-and-collectibles-show-rochester-ny",
+   "sample-cleveland-card-bash-cleveland-oh"
+  ],
+  "links": {
+   "facebook": null,
+   "instagram": null
+  },
+  "public_contact": "info@example.com"
+ },
+ {
+  "id": "sample-maple-promotions",
+  "name": "Sample Maple Promotions",
+  "url": "https://example.com/promoters/maple",
+  "region": null,
+  "series": [
+   "sample-las-vegas-card-and-collectibles-show-las-vegas-nv",
+   "sample-new-orleans-trading-card-expo-new-orleans-la",
+   "sample-hamilton-card-and-collectibles-show-hamilton-on",
+   "sample-st-louis-national-card-expo-st-louis-mo",
+   "sample-des-moines-trading-card-expo-des-moines-ia",
+   "sample-miami-comic-and-anime-con-miami-fl",
+   "sample-new-orleans-card-bash-new-orleans-la",
+   "sample-los-angeles-card-bash-los-angeles-ca"
+  ],
+  "links": {
+   "facebook": null,
+   "instagram": null
+  },
+  "public_contact": "info@example.com"
+ },
+ {
+  "id": "sample-cedar-promotions",
+  "name": "Sample Cedar Promotions",
+  "url": "https://example.com/promoters/cedar",
+  "region": null,
+  "series": [
+   "sample-salt-lake-city-card-bash-salt-lake-city-ut",
+   "sample-charleston-card-show-charleston-wv",
+   "sample-portland-regional-championships-portland-me",
+   "sample-halifax-card-show-halifax-ns",
+   "sample-vancouver-gaming-and-collectibles-con-vancouver-bc",
+   "sample-montreal-card-game-challenge-montreal-qc"
+  ],
+  "links": {
+   "facebook": null,
+   "instagram": null
+  },
+  "public_contact": "info@example.com"
+ },
+ {
+  "id": "sample-granite-promotions",
+  "name": "Sample Granite Promotions",
+  "url": "https://example.com/promoters/granite",
+  "region": null,
+  "series": [
+   "sample-fargo-card-and-collectibles-show-fargo-nd",
+   "sample-saskatoon-open-tournament-weekend-saskatoon-sk",
+   "sample-ottawa-card-collectors-expo-ottawa-on",
+   "sample-albany-sports-card-show-albany-ny",
+   "sample-calgary-trading-card-expo-calgary-ab",
+   "sample-detroit-comic-and-anime-con-detroit-mi"
+  ],
+  "links": {
+   "facebook": null,
+   "instagram": null
+  },
+  "public_contact": "info@example.com"
+ },
+ {
+  "id": "sample-riverbend-promotions",
+  "name": "Sample Riverbend Promotions",
+  "url": "https://example.com/promoters/riverbend",
+  "region": null,
+  "series": [
+   "sample-toronto-sports-card-show-toronto-on"
+  ],
+  "links": {
+   "facebook": null,
+   "instagram": null
+  },
+  "public_contact": "info@example.com"
+ },
+ {
+  "id": "sample-sunrise-promotions",
+  "name": "Sample Sunrise Promotions",
+  "url": "https://example.com/promoters/sunrise",
+  "region": null,
+  "series": [
+   "sample-milwaukee-card-bash-milwaukee-wi",
+   "sample-winnipeg-card-bash-winnipeg-mb",
+   "sample-little-rock-card-and-collectibles-show-little-rock-ar",
+   "sample-las-vegas-national-card-expo-las-vegas-nv",
+   "sample-hamilton-card-show-2-hamilton-on"
+  ],
+  "links": {
+   "facebook": null,
+   "instagram": null
+  },
+  "public_contact": "info@example.com"
+ },
+ {
+  "id": "sample-northstar-promotions",
+  "name": "Sample Northstar Promotions",
+  "url": "https://example.com/promoters/northstar",
+  "region": null,
+  "series": [
+   "sample-anaheim-national-card-expo-anaheim-ca"
+  ],
+  "links": {
+   "facebook": null,
+   "instagram": null
+  },
+  "public_contact": "info@example.com"
+ },
+ {
+  "id": "sample-bluegrass-promotions",
+  "name": "Sample Bluegrass Promotions",
+  "url": "https://example.com/promoters/bluegrass",
+  "region": null,
+  "series": [
+   "sample-cheyenne-trading-card-expo-cheyenne-wy",
+   "sample-kansas-city-card-collectors-expo-kansas-city-mo"
+  ],
+  "links": {
+   "facebook": null,
+   "instagram": null
+  },
+  "public_contact": "info@example.com"
+ },
+ {
+  "id": "sample-lone-star-promotions",
+  "name": "Sample Lone Star Promotions",
+  "url": "https://example.com/promoters/lone-star",
+  "region": null,
+  "series": [
+   "sample-seattle-card-and-collectibles-show-seattle-wa",
+   "sample-allentown-regional-championships-allentown-pa"
+  ],
+  "links": {
+   "facebook": null,
+   "instagram": null
+  },
+  "public_contact": "info@example.com"
+ },
+ {
+  "id": "sample-evergreen-promotions",
+  "name": "Sample Evergreen Promotions",
+  "url": "https://example.com/promoters/evergreen",
+  "region": null,
+  "series": [
+   "sample-burlington-card-and-collectibles-show-burlington-vt",
+   "sample-buffalo-regional-championships-buffalo-ny",
+   "sample-boise-card-collectors-expo-boise-id",
+   "sample-sioux-falls-national-card-expo-sioux-falls-sd"
+  ],
+  "links": {
+   "facebook": null,
+   "instagram": null
+  },
+  "public_contact": "info@example.com"
+ },
+ {
+  "id": "sample-silver-promotions",
+  "name": "Sample Silver Promotions",
+  "url": "https://example.com/promoters/silver",
+  "region": null,
+  "series": [
+   "sample-billings-trading-card-expo-billings-mt",
+   "sample-harrisburg-trading-card-expo-harrisburg-pa",
+   "sample-quebec-city-gaming-and-collectibles-con-quebec-city-qc",
+   "sample-providence-card-and-collectibles-show-providence-ri",
+   "sample-hartford-card-and-collectibles-show-hartford-ct",
+   "sample-wilmington-trading-card-expo-wilmington-de",
+   "sample-omaha-card-show-omaha-ne",
+   "sample-minneapolis-open-tournament-weekend-minneapolis-mn",
+   "sample-salt-lake-city-trading-card-expo-salt-lake-city-ut"
+  ],
+  "links": {
+   "facebook": null,
+   "instagram": null
+  },
+  "public_contact": "info@example.com"
+ },
+ {
+  "id": "sample-copper-promotions",
+  "name": "Sample Copper Promotions",
+  "url": "https://example.com/promoters/copper",
+  "region": null,
+  "series": [
+   "sample-atlanta-card-show-atlanta-ga",
+   "sample-jackson-card-bash-jackson-ms",
+   "sample-indianapolis-gaming-and-collectibles-con-indianapolis-in",
+   "sample-cherry-hill-regional-championships-cherry-hill-nj"
+  ],
+  "links": {
+   "facebook": null,
+   "instagram": null
+  },
+  "public_contact": "info@example.com"
+ },
+ {
+  "id": "sample-atlantic-promotions",
+  "name": "Sample Atlantic Promotions",
+  "url": "https://example.com/promoters/atlantic",
+  "region": null,
+  "series": [
+   "sample-cincinnati-card-collectors-expo-cincinnati-oh",
+   "sample-harrisburg-open-tournament-weekend-harrisburg-pa"
+  ],
+  "links": {
+   "facebook": null,
+   "instagram": null
+  },
+  "public_contact": "info@example.com"
+ },
+ {
+  "id": "sample-pacific-promotions",
+  "name": "Sample Pacific Promotions",
+  "url": "https://example.com/promoters/pacific",
+  "region": null,
+  "series": [
+   "sample-anchorage-card-bash-anchorage-ak",
+   "sample-houston-comic-and-anime-con-houston-tx",
+   "sample-austin-gaming-and-collectibles-con-austin-tx",
+   "sample-anchorage-sports-card-show-2-anchorage-ak",
+   "sample-columbus-card-show-columbus-oh",
+   "sample-charlottetown-card-collectors-expo-charlottetown-pe",
+   "sample-san-antonio-open-tournament-weekend-san-antonio-tx"
+  ],
+  "links": {
+   "facebook": null,
+   "instagram": null
+  },
+  "public_contact": "info@example.com"
+ },
+ {
+  "id": "sample-heartland-promotions",
+  "name": "Sample Heartland Promotions",
+  "url": "https://example.com/promoters/heartland",
+  "region": null,
+  "series": [
+   "sample-atlanta-pop-culture-con-atlanta-ga"
+  ],
+  "links": {
+   "facebook": null,
+   "instagram": null
+  },
+  "public_contact": "info@example.com"
+ },
+ {
+  "id": "sample-capital-promotions",
+  "name": "Sample Capital Promotions",
+  "url": "https://example.com/promoters/capital",
+  "region": null,
+  "series": [
+   "sample-mississauga-comic-and-anime-con-mississauga-on",
+   "sample-jacksonville-card-bash-jacksonville-fl",
+   "sample-birmingham-pop-culture-con-birmingham-al"
+  ],
+  "links": {
+   "facebook": null,
+   "instagram": null
+  },
+  "public_contact": "info@example.com"
+ },
+ {
+  "id": "sample-foothills-promotions",
+  "name": "Sample Foothills Promotions",
+  "url": "https://example.com/promoters/foothills",
+  "region": null,
+  "series": [
+   "sample-louisville-comic-and-anime-con-louisville-ky"
+  ],
+  "links": {
+   "facebook": null,
+   "instagram": null
+  },
+  "public_contact": "info@example.com"
+ },
+ {
+  "id": "sample-bayou-promotions",
+  "name": "Sample Bayou Promotions",
+  "url": "https://example.com/promoters/bayou",
+  "region": null,
+  "series": [
+   "sample-los-angeles-card-and-collectibles-show-los-angeles-ca",
+   "sample-montreal-trading-card-expo-montreal-qc",
+   "sample-charleston-collectors-convention-charleston-sc",
+   "sample-spokane-card-game-challenge-spokane-wa",
+   "sample-new-york-gaming-and-collectibles-con-new-york-ny",
+   "sample-milwaukee-collectors-convention-milwaukee-wi"
+  ],
+  "links": {
+   "facebook": null,
+   "instagram": null
+  },
+  "public_contact": "info@example.com"
+ },
+ {
+  "id": "sample-mesa-promotions",
+  "name": "Sample Mesa Promotions",
+  "url": "https://example.com/promoters/mesa",
+  "region": null,
+  "series": [
+   "sample-denver-card-bash-denver-co",
+   "sample-worcester-card-show-worcester-ma",
+   "sample-edmonton-card-show-2-edmonton-ab",
+   "sample-baltimore-trading-card-expo-baltimore-md",
+   "sample-seattle-trading-card-expo-2-seattle-wa"
+  ],
+  "links": {
+   "facebook": null,
+   "instagram": null
+  },
+  "public_contact": "info@example.com"
+ },
+ {
+  "id": "sample-redwood-promotions",
+  "name": "Sample Redwood Promotions",
+  "url": "https://example.com/promoters/redwood",
+  "region": null,
+  "series": [
+   "sample-virginia-beach-open-tournament-weekend-virginia-beach-va",
+   "sample-chicago-gaming-and-collectibles-con-chicago-il",
+   "sample-san-jose-open-tournament-weekend-san-jose-ca"
+  ],
+  "links": {
+   "facebook": null,
+   "instagram": null
+  },
+  "public_contact": "info@example.com"
+ },
+ {
+  "id": "sample-great-lakes-promotions",
+  "name": "Sample Great Lakes Promotions",
+  "url": "https://example.com/promoters/great-lakes",
+  "region": null,
+  "series": [
+   "sample-washington-card-bash-washington-dc",
+   "sample-anaheim-trading-card-expo-anaheim-ca",
+   "sample-manchester-card-game-challenge-manchester-nh",
+   "sample-tampa-pop-culture-con-tampa-fl",
+   "sample-fargo-open-tournament-weekend-fargo-nd",
+   "sample-oklahoma-city-trading-card-expo-oklahoma-city-ok"
+  ],
+  "links": {
+   "facebook": null,
+   "instagram": null
+  },
+  "public_contact": "info@example.com"
+ },
+ {
+  "id": "sample-tidewater-promotions",
+  "name": "Sample Tidewater Promotions",
+  "url": "https://example.com/promoters/tidewater",
+  "region": null,
+  "series": [
+   "sample-honolulu-card-bash-honolulu-hi",
+   "sample-st-john-s-card-show-st-john-s-nl",
+   "sample-pittsburgh-collectors-convention-pittsburgh-pa",
+   "sample-memphis-card-and-collectibles-show-memphis-tn",
+   "sample-london-trading-card-expo-london-on",
+   "sample-charleston-card-game-challenge-charleston-wv",
+   "sample-regina-card-show-regina-sk"
+  ],
+  "links": {
+   "facebook": null,
+   "instagram": null
+  },
+  "public_contact": "info@example.com"
+ },
+ {
+  "id": "sample-cascade-promotions",
+  "name": "Sample Cascade Promotions",
+  "url": "https://example.com/promoters/cascade",
+  "region": null,
+  "series": [
+   "sample-columbus-trading-card-expo-columbus-oh",
+   "sample-sioux-falls-sports-card-show-sioux-falls-sd",
+   "sample-sacramento-sports-card-show-sacramento-ca",
+   "sample-wichita-pop-culture-con-wichita-ks",
+   "sample-burlington-trading-card-expo-burlington-vt"
+  ],
+  "links": {
+   "facebook": null,
+   "instagram": null
+  },
+  "public_contact": "info@example.com"
+ },
+ {
+  "id": "sample-boardwalk-promotions",
+  "name": "Sample Boardwalk Promotions",
+  "url": "https://example.com/promoters/boardwalk",
+  "region": null,
+  "series": [
+   "sample-charlottetown-card-bash-charlottetown-pe",
+   "sample-nashville-trading-card-expo-nashville-tn",
+   "sample-charlotte-collectors-convention-charlotte-nc",
+   "sample-portland-pop-culture-con-portland-or",
+   "sample-winnipeg-national-card-expo-winnipeg-mb",
+   "sample-dallas-open-tournament-weekend-dallas-tx"
+  ],
+  "links": {
+   "facebook": null,
+   "instagram": null
+  },
+  "public_contact": "info@example.com"
+ }
+]
