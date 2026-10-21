@@ -290,6 +290,23 @@ function scoreOne(show: PlannerShow, ctx: ScoreShared, flags: { waitlist: boolea
     };
   }
   const est = profit.estimate;
+  if (!est.profit && est.totalCost === null) {
+    const cur = est.costs.find((c) => !c.converted)?.currency ?? 'another currency';
+    const reason = `Table price is in ${cur}. Add an exchange rate to compare it.`;
+    return {
+      showId: show.id,
+      score: null,
+      mode: 'profit',
+      excluded: true,
+      excludedReason: reason,
+      waitlist: flags.waitlist,
+      reasons: [...reasons, reason],
+      factors: f,
+      hours: leg.hours,
+      miles: leg.miles,
+      profit: est,
+    };
+  }
   if (est.profit) reasons.push(est.label);
   else reasons.push(...est.notes.slice(1, 2));
   reasons.push(...rankedReasons(f, ctx.weights, 4));

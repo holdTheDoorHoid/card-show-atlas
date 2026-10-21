@@ -145,7 +145,7 @@ export function bruteShop(inst: ShopInstance): { value: number; drive: number } 
       const target = lastDay ? END : BASE;
       const h = tt[loc]![target]!;
       const okCap = dd + h <= cap + 1e-9;
-      const okTime = (h === 0 && loc === target) || time + h <= inst.dayEnd[day]![target]! + 1e-9;
+      const okTime = h === 0 || time + h <= inst.dayEnd[day]![target]! + 1e-9;
       if (okCap && okTime) {
         if (lastDay) offer(v, total + h);
         else dfs(day + 1, BASE, inst.dayStart[day + 1]![BASE]!, 0, total + h, v, count);

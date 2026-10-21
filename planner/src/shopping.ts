@@ -114,7 +114,7 @@ export function simulateShop(inst: ShopInstance, routes: number[][]): ShopSim {
       const h = tt[loc]![target]!;
       dd += h;
       if (dd > cap + EPS) return fail('over the driving cap');
-      if (h > 0 || loc !== target) {
+      if (h > 0) {
         const arr = time + h;
         if (arr > inst.dayEnd[t]![target]! + EPS) return fail('home too late');
         day.endDepart = time;
@@ -229,7 +229,7 @@ export function solveShopExact(inst: ShopInstance): ShopSolution {
           const target = last ? END : BASE;
           const h = tt[L.loc]![target]!;
           if (L.dd + h > cap + EPS) continue;
-          if ((h > 0 || L.loc !== target) && L.time + h > inst.dayEnd[t]![target]! + EPS) continue;
+          if (h > 0 && L.time + h > inst.dayEnd[t]![target]! + EPS) continue;
           offer({ mask: L.mask, loc: target, total: L.total + h, back: L, prevState: L.start });
         } else {
           offer({ mask: L.mask, loc: L.loc, total: L.total, back: L, prevState: L.start });
@@ -279,169 +279,398 @@ export function seededRandom(seed: number): () => number {
   };
 }
 
-interface Evaluated {
+/** Total driving when the routes are feasible, else minus one. Allocation free, for the heuristic. */
+function quickDrive(inst: ShopInstance, routes: number[][]): number {
+  const { n, D, tt, win, dwell, cap } = inst;
+  const BASE = n;
+  const END = n + 1;
+  let loc = BASE;
+  let drive = 0;
+  let count = 0;
+  for (let t = 0; t < D; t++) {
+    const route = routes[t]!;
+    let time = inst.dayStart[t]![loc]!;
+    let dd = 0;
+    for (let i = 0; i < route.length; i++) {
+      const st = route[i]!;
+      const h = tt[loc]![st]!;
+      dd += h;
+      if (dd > cap + EPS) return -1;
+      const w = win[st]![t];
+      if (!w) return -1;
+      const arrive = time + h;
+      const start = arrive > w[0] ? arrive : w[0];
+      if (start > w[1] + EPS) return -1;
+      time = start + dwell;
+      loc = st;
+    }
+    count += route.length;
+    if (count > inst.maxStops) return -1;
+    if (inst.mode === 'home' || t === D - 1) {
+      const target = t === D - 1 ? END : BASE;
+      const h = tt[loc]![target]!;
+      if (h > 0) {
+        dd += h;
+        if (dd > cap + EPS) return -1;
+        if (time + h > inst.dayEnd[t]![target]! + EPS) return -1;
+      }
+      loc = target;
+    }
+    drive += dd;
+  }
+  return drive;
+}
+
+interface Sol {
   routes: number[][];
+  used: boolean[];
   value: number;
   drive: number;
 }
 
-function better(a: Evaluated, b: Evaluated): boolean {
+function better(a: Sol, b: Sol): boolean {
   if (a.value > b.value + EPS) return true;
   if (a.value < b.value - EPS) return false;
   return a.drive < b.drive - 1e-7;
 }
 
-function clone(r: number[][]): number[][] {
-  return r.map((d) => d.slice());
+function cloneSol(x: Sol): Sol {
+  return { routes: x.routes.map((d) => d.slice()), used: x.used.slice(), value: x.value, drive: x.drive };
 }
 
-function evaluate(inst: ShopInstance, routes: number[][]): Evaluated | null {
-  const sim = simulateShop(inst, routes);
-  return sim.feasible ? { routes, value: sim.value, drive: sim.drive } : null;
-}
+type Criterion = 0 | 1 | 2;
 
-/** Inserts unvisited stops one at a time, best value squared per added hour first. */
-function insertGreedy(inst: ShopInstance, startSol: Evaluated): Evaluated {
-  let cur = startSol;
+/** Adds stops one at a time until none fits. 0: value squared per added hour, 1: value per added hour, 2: value first. */
+function construct(inst: ShopInstance, sol: Sol, crit: Criterion): boolean {
+  let changed = false;
   for (;;) {
-    const used = new Set(cur.routes.flat());
-    if (used.size >= inst.maxStops) return cur;
-    let bestCand: Evaluated | null = null;
-    let bestScore = -Infinity;
+    let count = 0;
+    for (const d of sol.routes) count += d.length;
+    if (count >= inst.maxStops) return changed;
+    let bs = -1;
+    let bt = -1;
+    let bp = -1;
+    let bd = 0;
+    let bScore = -Infinity;
     for (let s = 0; s < inst.n; s++) {
-      if (used.has(s) || inst.value[s]! <= 0) continue;
+      const v = inst.value[s]!;
+      if (sol.used[s] || v <= 0) continue;
       for (let t = 0; t < inst.D; t++) {
         if (!inst.win[s]![t]) continue;
-        const day = cur.routes[t]!;
-        for (let pos = 0; pos <= day.length; pos++) {
-          const routes = clone(cur.routes);
-          routes[t]!.splice(pos, 0, s);
-          const ev = evaluate(inst, routes);
-          if (!ev) continue;
-          const added = Math.max(0, ev.drive - cur.drive);
-          const score = (inst.value[s]! * inst.value[s]!) / (added + 0.05);
-          if (score > bestScore + EPS || (Math.abs(score - bestScore) <= EPS && bestCand && ev.drive < bestCand.drive)) {
-            bestScore = score;
-            bestCand = ev;
+        const r = sol.routes[t]!;
+        for (let pos = 0; pos <= r.length; pos++) {
+          r.splice(pos, 0, s);
+          const d = quickDrive(inst, sol.routes);
+          r.splice(pos, 1);
+          if (d < 0) continue;
+          const added = Math.max(0, d - sol.drive);
+          const score = crit === 0 ? (v * v) / (added + 0.05) : crit === 1 ? v / (added + 0.05) : v * 1e6 - added;
+          if (score > bScore + EPS || (Math.abs(score - bScore) <= EPS && d < bd)) {
+            bScore = score;
+            bs = s;
+            bt = t;
+            bp = pos;
+            bd = d;
           }
         }
       }
     }
-    if (!bestCand) return cur;
-    cur = bestCand;
+    if (bs < 0) return changed;
+    sol.routes[bt]!.splice(bp, 0, bs);
+    sol.used[bs] = true;
+    sol.value += inst.value[bs]!;
+    sol.drive = bd;
+    changed = true;
   }
 }
 
-/** Shorter drives without changing the set: 2 opt inside a day and relocating a stop anywhere. */
-function tighten(inst: ShopInstance, startSol: Evaluated): Evaluated {
-  let cur = startSol;
+/** Shorter driving for the same stops: 2 opt inside a day, relocate and swap anywhere. */
+function tighten(inst: ShopInstance, sol: Sol): boolean {
+  let any = false;
   let improved = true;
   let guard = 0;
-  while (improved && guard++ < 200) {
+  while (improved && guard++ < 100) {
     improved = false;
-    for (let t = 0; t < inst.D && !improved; t++) {
-      const day = cur.routes[t]!;
-      for (let i = 0; i < day.length - 1 && !improved; i++) {
-        for (let j = i + 1; j < day.length && !improved; j++) {
-          const routes = clone(cur.routes);
-          const seg = routes[t]!.slice(i, j + 1).reverse();
-          routes[t]!.splice(i, j - i + 1, ...seg);
-          const ev = evaluate(inst, routes);
-          if (ev && better(ev, cur)) {
-            cur = ev;
+    for (let t = 0; t < inst.D; t++) {
+      const day = sol.routes[t]!;
+      for (let i = 0; i < day.length - 1; i++) {
+        for (let j = i + 1; j < day.length; j++) {
+          reverse(day, i, j);
+          const d = quickDrive(inst, sol.routes);
+          if (d >= 0 && d < sol.drive - 1e-7) {
+            sol.drive = d;
             improved = true;
+          } else {
+            reverse(day, i, j);
           }
         }
       }
     }
-    for (let t = 0; t < inst.D && !improved; t++) {
-      for (let i = 0; i < cur.routes[t]!.length && !improved; i++) {
-        const s = cur.routes[t]![i]!;
-        for (let t2 = 0; t2 < inst.D && !improved; t2++) {
-          if (!inst.win[s]![t2]) continue;
-          const len = cur.routes[t2]!.length - (t2 === t ? 1 : 0);
-          for (let pos = 0; pos <= len && !improved; pos++) {
-            const routes = clone(cur.routes);
-            routes[t]!.splice(i, 1);
-            routes[t2]!.splice(pos, 0, s);
-            const ev = evaluate(inst, routes);
-            if (ev && better(ev, cur)) {
-              cur = ev;
+    for (let t = 0; t < inst.D; t++) {
+      for (let i = 0; i < sol.routes[t]!.length; i++) {
+        const st = sol.routes[t]![i]!;
+        sol.routes[t]!.splice(i, 1);
+        let bt = t;
+        let bp = i;
+        let bd = sol.drive;
+        for (let t2 = 0; t2 < inst.D; t2++) {
+          if (!inst.win[st]![t2]) continue;
+          const r = sol.routes[t2]!;
+          for (let pos = 0; pos <= r.length; pos++) {
+            if (t2 === t && pos === i) continue;
+            r.splice(pos, 0, st);
+            const d = quickDrive(inst, sol.routes);
+            r.splice(pos, 1);
+            if (d >= 0 && d < bd - 1e-7) {
+              bd = d;
+              bt = t2;
+              bp = pos;
+            }
+          }
+        }
+        sol.routes[bt]!.splice(bp, 0, st);
+        if (bt !== t || bp !== i) {
+          sol.drive = bd;
+          improved = true;
+        }
+      }
+    }
+    for (let t = 0; t < inst.D; t++) {
+      for (let i = 0; i < sol.routes[t]!.length; i++) {
+        for (let t2 = t; t2 < inst.D; t2++) {
+          for (let j = t2 === t ? i + 1 : 0; j < sol.routes[t2]!.length; j++) {
+            const a = sol.routes[t]![i]!;
+            const b = sol.routes[t2]![j]!;
+            if (!inst.win[a]![t2] || !inst.win[b]![t]) continue;
+            sol.routes[t]![i] = b;
+            sol.routes[t2]![j] = a;
+            const d = quickDrive(inst, sol.routes);
+            if (d >= 0 && d < sol.drive - 1e-7) {
+              sol.drive = d;
               improved = true;
+            } else {
+              sol.routes[t]![i] = a;
+              sol.routes[t2]![j] = b;
             }
           }
         }
       }
     }
+    if (improved) any = true;
   }
-  return cur;
+  return any;
 }
 
-/** Try removing one stop and refilling; keeps the change when the result is better. */
-function replaceMoves(inst: ShopInstance, startSol: Evaluated): Evaluated {
-  let cur = startSol;
-  let improved = true;
-  let guard = 0;
-  while (improved && guard++ < 50) {
-    improved = false;
-    for (let t = 0; t < inst.D && !improved; t++) {
-      for (let i = 0; i < cur.routes[t]!.length && !improved; i++) {
-        const routes = clone(cur.routes);
-        routes[t]!.splice(i, 1);
-        const base = evaluate(inst, routes);
-        if (!base) continue;
-        const refilled = tighten(inst, insertGreedy(inst, base));
-        if (better(refilled, cur)) {
-          cur = refilled;
-          improved = true;
+function reverse(a: number[], i: number, j: number): void {
+  while (i < j) {
+    const x = a[i]!;
+    a[i] = a[j]!;
+    a[j] = x;
+    i += 1;
+    j -= 1;
+  }
+}
+
+/** Swap a visited stop for a better unvisited one, at the best position anywhere. */
+function swapIn(inst: ShopInstance, sol: Sol): boolean {
+  for (let t = 0; t < inst.D; t++) {
+    for (let i = 0; i < sol.routes[t]!.length; i++) {
+      const st = sol.routes[t]![i]!;
+      const vs = inst.value[st]!;
+      sol.routes[t]!.splice(i, 1);
+      let bu = -1;
+      let bt = -1;
+      let bp = -1;
+      let bd = 0;
+      let bv = vs;
+      for (let u = 0; u < inst.n; u++) {
+        const vu = inst.value[u]!;
+        if (sol.used[u] || vu < bv - EPS) continue;
+        for (let t2 = 0; t2 < inst.D; t2++) {
+          if (!inst.win[u]![t2]) continue;
+          const r = sol.routes[t2]!;
+          for (let pos = 0; pos <= r.length; pos++) {
+            r.splice(pos, 0, u);
+            const d = quickDrive(inst, sol.routes);
+            r.splice(pos, 1);
+            if (d < 0) continue;
+            const gain = vu > bv + EPS || (Math.abs(vu - bv) <= EPS && d < (bu < 0 ? sol.drive : bd) - 1e-7);
+            if (gain) {
+              bu = u;
+              bt = t2;
+              bp = pos;
+              bd = d;
+              bv = vu;
+            }
+          }
         }
+      }
+      if (bu >= 0) {
+        sol.routes[bt]!.splice(bp, 0, bu);
+        sol.used[st] = false;
+        sol.used[bu] = true;
+        sol.value += inst.value[bu]! - vs;
+        sol.drive = bd;
+        return true;
+      }
+      sol.routes[t]!.splice(i, 0, st);
+    }
+  }
+  return false;
+}
+
+/** Refill after a removal with each insertion rule and keep the best result. */
+function refill(inst: ShopInstance, base: Sol, banned: number[]): Sol {
+  let best: Sol | null = null;
+  for (const crit of [0, 1, 2] as Criterion[]) {
+    const trial = cloneSol(base);
+    // Do not let the removed stops straight back in where they were.
+    const keep = banned.map((st) => inst.value[st]!);
+    for (const st of banned) inst.value[st] = 0;
+    construct(inst, trial, crit);
+    banned.forEach((st, k) => (inst.value[st] = keep[k]!));
+    construct(inst, trial, crit);
+    tighten(inst, trial);
+    if (!best || better(trial, best)) best = trial;
+  }
+  return best!;
+}
+
+function removeAt(inst: ShopInstance, sol: Sol, at: [number, number][]): Sol | null {
+  const trial = cloneSol(sol);
+  const removed: number[] = [];
+  for (const [t, i] of [...at].sort((a, b) => b[0] - a[0] || b[1] - a[1])) {
+    const st = trial.routes[t]!.splice(i, 1)[0]!;
+    trial.used[st] = false;
+    trial.value -= inst.value[st]!;
+    removed.push(st);
+  }
+  const d = quickDrive(inst, trial.routes);
+  if (d < 0) return null;
+  trial.drive = d;
+  return trial;
+}
+
+/** Remove one stop, or two, and refill; keep the change when the result is better. */
+function dropAndRefill(inst: ShopInstance, sol: Sol, pairs: boolean, deadline: number): boolean {
+  const visits: [number, number][] = [];
+  sol.routes.forEach((d, t) => d.forEach((_, i) => visits.push([t, i])));
+  for (let a = 0; a < visits.length; a++) {
+    const one = removeAt(inst, sol, [visits[a]!]);
+    if (one) {
+      const r = refill(inst, one, [sol.routes[visits[a]![0]]![visits[a]![1]]!]);
+      if (better(r, sol)) {
+        Object.assign(sol, r);
+        return true;
+      }
+    }
+    if (!pairs) continue;
+    for (let b = a + 1; b < visits.length; b++) {
+      if (Date.now() > deadline) return false;
+      const two = removeAt(inst, sol, [visits[a]!, visits[b]!]);
+      if (!two) continue;
+      const banned = [sol.routes[visits[a]![0]]![visits[a]![1]]!, sol.routes[visits[b]![0]]![visits[b]![1]]!];
+      const r = refill(inst, two, banned);
+      if (better(r, sol)) {
+        Object.assign(sol, r);
+        return true;
       }
     }
   }
-  return cur;
+  return false;
+}
+
+function localSearch(inst: ShopInstance, sol: Sol, deadline: number, pairs: boolean): void {
+  let guard = 0;
+  while (guard++ < 200) {
+    tighten(inst, sol);
+    if (construct(inst, sol, 0)) continue;
+    if (swapIn(inst, sol)) continue;
+    if (Date.now() > deadline) return;
+    if (dropAndRefill(inst, sol, false, deadline)) continue;
+    if (pairs && dropAndRefill(inst, sol, true, deadline)) continue;
+    return;
+  }
 }
 
 export interface HeuristicOptions {
   seed?: number;
-  /** Rounds of perturb and repair. Default 60 plus 4 per candidate. */
+  /** Rounds of perturb and repair. Default 100 plus 10 per candidate. */
   iterations?: number;
   /** Stop early after this long. Default 400 ms. */
   timeBudgetMs?: number;
+  /** Stop after this many rounds without a better plan. Default 25, or 3 per candidate if more. */
+  patience?: number;
 }
 
-/** Insertion plus local search inside an iterated local search. Always returns a feasible plan. */
+function emptySol(inst: ShopInstance): Sol {
+  const routes = Array.from({ length: inst.D }, () => [] as number[]);
+  const d = quickDrive(inst, routes);
+  return { routes, used: new Array<boolean>(inst.n).fill(false), value: 0, drive: d < 0 ? 0 : d };
+}
+
+/**
+ * Insertion plus local search inside an iterated local search. Three greedy starts (value squared
+ * per hour, value per hour, value first), then rounds that remove a few random stops and repair.
+ * Always returns a feasible plan; repeats exactly for the same seed when the time budget is not hit.
+ */
 export function solveShopHeuristic(inst: ShopInstance, opts: HeuristicOptions = {}): ShopSolution {
   const rnd = seededRandom(opts.seed ?? 1);
-  const empty: Evaluated = { routes: Array.from({ length: inst.D }, () => []), value: 0, drive: 0 };
-  const emptyEval = evaluate(inst, empty.routes) ?? empty;
   const deadline = Date.now() + (opts.timeBudgetMs ?? 400);
-  const iterations = opts.iterations ?? 60 + 4 * inst.n;
-
-  const polish = (e: Evaluated) => replaceMoves(inst, tighten(inst, insertGreedy(inst, tighten(inst, e))));
-  let best = polish(emptyEval);
-  let cur = best;
-  for (let it = 0; it < iterations; it++) {
-    if (Date.now() > deadline) break;
-    const routes = clone(cur.routes);
-    const visits: [number, number][] = [];
-    routes.forEach((d, t) => d.forEach((_, i) => visits.push([t, i])));
-    const k = visits.length === 0 ? 0 : 1 + Math.floor(rnd() * Math.min(3, visits.length));
-    const picked = new Set<number>();
-    while (picked.size < k) picked.add(Math.floor(rnd() * visits.length));
-    const remove = [...picked].map((x) => visits[x]!).sort((a, b) => b[0] - a[0] || b[1] - a[1]);
-    for (const [t, i] of remove) routes[t]!.splice(i, 1);
-    let start = evaluate(inst, routes) ?? emptyEval;
-    if (rnd() < 0.3) {
-      const flipped = clone(start.routes);
-      flipped[Math.floor(rnd() * inst.D)]!.reverse();
-      start = evaluate(inst, flipped) ?? start;
-    }
-    const cand = polish(start);
-    if (better(cand, best)) best = cand;
-    // Accept sideways moves sometimes so the search does not stall.
-    cur = better(cand, cur) || rnd() < 0.2 ? cand : best;
+  const iterations = opts.iterations ?? 100 + 10 * inst.n;
+  if (quickDrive(inst, Array.from({ length: inst.D }, () => [])) < 0) {
+    return { routes: Array.from({ length: inst.D }, () => []), value: 0, drive: 0, exact: false };
   }
-  return { routes: best.routes, value: best.value, drive: best.drive, exact: false };
+  let best: Sol | null = null;
+  for (const crit of [0, 1, 2] as Criterion[]) {
+    const sol = emptySol(inst);
+    construct(inst, sol, crit);
+    localSearch(inst, sol, deadline, true);
+    if (!best || better(sol, best)) best = sol;
+  }
+  let cur = cloneSol(best!);
+  const patience = opts.patience ?? Math.max(25, 3 * inst.n);
+  let stale = 0;
+  for (let it = 0; it < iterations && stale < patience; it++) {
+    if (Date.now() > deadline) break;
+    stale += 1;
+    const cand = cloneSol(cur);
+    const visits: [number, number][] = [];
+    cand.routes.forEach((d, t) => d.forEach((_, i) => visits.push([t, i])));
+    if (visits.length > 0) {
+      if (rnd() < 0.15) {
+        const t = Math.floor(rnd() * inst.D);
+        for (const st of cand.routes[t]!) {
+          cand.used[st] = false;
+          cand.value -= inst.value[st]!;
+        }
+        cand.routes[t] = [];
+      } else {
+        const k = 1 + Math.floor(rnd() * Math.min(3, visits.length));
+        const picked = new Set<number>();
+        while (picked.size < k) picked.add(Math.floor(rnd() * visits.length));
+        const remove = [...picked].map((x) => visits[x]!).sort((a, b) => b[0] - a[0] || b[1] - a[1]);
+        for (const [t, i] of remove) {
+          const st = cand.routes[t]!.splice(i, 1)[0]!;
+          cand.used[st] = false;
+          cand.value -= inst.value[st]!;
+        }
+      }
+    }
+    const d = quickDrive(inst, cand.routes);
+    const start = d >= 0 ? (cand.drive = d, cand) : emptySol(inst);
+    const crit = (Math.floor(rnd() * 3) % 3) as Criterion;
+    construct(inst, start, crit);
+    localSearch(inst, start, deadline, false);
+    if (better(start, best!)) {
+      best = cloneSol(start);
+      stale = 0;
+    }
+    cur = better(start, cur) || rnd() < 0.1 ? start : cloneSol(best!);
+  }
+  const b = best!;
+  localSearch(inst, b, deadline, true);
+  return { routes: b.routes, value: b.value, drive: b.drive, exact: false };
 }
 
 /** Exact search for small sets, heuristic beyond `exactLimit`. */

@@ -53,7 +53,9 @@ export function standaloneProfit(show: PlannerShow, ctx: StandaloneContext): { e
     countCap: null,
     countReset: 'never',
     blackout: [],
-    objective: ctx.settings.typical_sales ? 'profit' : 'score',
+    // The trip is chosen by cost alone (the show is forced in below), so a show priced in
+    // another currency can still be estimated, with its costs kept apart by currency.
+    objective: 'score',
     rules: ctx.rules,
     travel: ctx.travel,
     rates: ctx.rates,
