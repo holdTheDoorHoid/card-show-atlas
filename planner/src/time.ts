@@ -57,8 +57,48 @@ export interface ZonedParts {
   weekday: number;
 }
 
+const QUARTER_HOUR = 900_000;
+const offsetBuckets = new Map<string, Map<number, number>>();
+
+/**
+ * Offset of a zone at an instant, cached per quarter hour. Clock changes happen on quarter hours in
+ * every current zone, but the cache only keeps a bucket when the offset is the same at both of its
+ * ends, so an odd change still gets the exact answer.
+ */
+function cachedOffset(instantMs: number, timeZone: string): number {
+  let byBucket = offsetBuckets.get(timeZone);
+  if (!byBucket) {
+    byBucket = new Map();
+    offsetBuckets.set(timeZone, byBucket);
+  }
+  const bucket = Math.floor(instantMs / QUARTER_HOUR);
+  const hit = byBucket.get(bucket);
+  if (hit !== undefined) return hit;
+  const a = exactOffset(bucket * QUARTER_HOUR, timeZone);
+  const b = exactOffset((bucket + 1) * QUARTER_HOUR - 1000, timeZone);
+  if (a !== b) return exactOffset(instantMs, timeZone);
+  if (byBucket.size > 200_000) byBucket.clear();
+  byBucket.set(bucket, a);
+  return a;
+}
+
 /** Wall clock parts of an instant in a zone. */
 export function zonedParts(instantMs: number, timeZone: string): ZonedParts {
+  const whole = Math.floor(instantMs / 1000) * 1000;
+  const d = new Date(whole + cachedOffset(whole, timeZone));
+  return {
+    year: d.getUTCFullYear(),
+    month: d.getUTCMonth() + 1,
+    day: d.getUTCDate(),
+    hour: d.getUTCHours(),
+    minute: d.getUTCMinutes(),
+    second: d.getUTCSeconds(),
+    weekday: d.getUTCDay(),
+  };
+}
+
+/** Wall clock parts straight from Intl, without any cache. */
+function intlParts(instantMs: number, timeZone: string): ZonedParts {
   const parts = formatterFor(timeZone).formatToParts(new Date(instantMs));
   const out: ZonedParts = { year: 0, month: 0, day: 0, hour: 0, minute: 0, second: 0, weekday: 0 };
   for (const p of parts) {
@@ -76,12 +116,16 @@ export function zonedParts(instantMs: number, timeZone: string): ZonedParts {
   return out;
 }
 
-/** Offset of the zone from UTC at an instant, in milliseconds (local minus UTC). */
-export function zoneOffsetMs(instantMs: number, timeZone: string): number {
+function exactOffset(instantMs: number, timeZone: string): number {
   const whole = Math.floor(instantMs / 1000) * 1000;
-  const p = zonedParts(whole, timeZone);
+  const p = intlParts(whole, timeZone);
   const asUtc = Date.UTC(p.year, p.month - 1, p.day, p.hour, p.minute, p.second);
   return asUtc - whole;
+}
+
+/** Offset of the zone from UTC at an instant, in milliseconds (local minus UTC). */
+export function zoneOffsetMs(instantMs: number, timeZone: string): number {
+  return cachedOffset(Math.floor(instantMs / 1000) * 1000, timeZone);
 }
 
 const DATE_RE = /^(\d{4})-(\d{2})-(\d{2})$/;

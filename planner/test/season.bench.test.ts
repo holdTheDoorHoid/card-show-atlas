@@ -1,15 +1,29 @@
-import { describe, expect, it } from 'vitest';
+import { beforeAll, describe, expect, it } from 'vitest';
 import { planSeason, verifyPlan, type SeasonOptions } from '../src/index.js';
 import { genShows, genVendor, rng } from './gen.js';
 import { longestAway } from './helpers.js';
 
 declare const console: { log(...args: unknown[]): void };
 
+interface Proc {
+  threadCpuUsage?: (prev?: { user: number; system: number }) => { user: number; system: number };
+  cpuUsage: (prev?: { user: number; system: number }) => { user: number; system: number };
+}
+const proc = (globalThis as unknown as { process: Proc }).process;
+const cpuUsage = (prev?: { user: number; system: number }) => (proc.threadCpuUsage ? proc.threadCpuUsage(prev) : proc.cpuUsage(prev));
+
 /**
  * DESIGN 6.4 performance target: about 2,000 candidate shows over 6 months in a browser worker in
  * under 2 seconds. Node runs the same JavaScript engine as Chrome, so this is a fair proxy.
+ *
+ * Each case is a cold run of its own data. The planner's own CPU time (this thread) must stay under
+ * the limit. Wall time must too, unless the machine is overloaded by other work (load average above
+ * the number of cores), when wall time measures the other work and is only logged.
  */
 const LIMIT_MS = 2000;
+let overloaded = false;
+let cores = 1;
+let load = 0;
 
 function bench(label: string, dense: boolean, options: Partial<SeasonOptions>, seed: number) {
   const r = rng(seed);
@@ -35,17 +49,28 @@ function bench(label: string, dense: boolean, options: Partial<SeasonOptions>, s
     keepPastDeadline: true,
     ...options,
   };
+  const c0 = cpuUsage();
   const t0 = Date.now();
   const res = planSeason(shows, settings, opts);
   const ms = Date.now() - t0;
+  const c1 = cpuUsage(c0);
+  const cpuMs = Math.round((c1.user + c1.system) / 1000);
   console.log(
-    `[bench] ${label}: ${ms} ms, ${res.stats.candidates} candidates, ${res.stats.labels} labels, ${res.stats.edges} edges, ` +
+    `[bench] ${label}: ${ms} ms wall, ${cpuMs} ms cpu (load ${load.toFixed(1)} on ${cores} cores), ` +
+      `${res.stats.candidates} candidates, ${res.stats.labels} labels, ${res.stats.edges} edges, ` +
       `${res.plan.stops.length} shows in ${res.plan.trips.length} trips, ${res.plan.money.label}`,
   );
-  return { res, ms, shows, settings, opts };
+  return { res, ms, cpuMs, shows, settings, opts };
 }
 
 describe('season planner benchmark (about 2,000 candidate shows, 6 months)', () => {
+  beforeAll(async () => {
+    const os = (await import('node:os' as string)) as { loadavg(): number[]; availableParallelism?(): number; cpus(): unknown[] };
+    cores = os.availableParallelism ? os.availableParallelism() : os.cpus().length;
+    load = os.loadavg()[0] ?? 0;
+    overloaded = load > cores;
+  });
+
   const cases: [string, boolean, Partial<SeasonOptions>][] = [
     ['dense region, 4 a month, 5 nights away, chained', true, { maxShowsPerMonth: 4, maxNightsAway: 5, chain: true }],
     ['dense region, no limits, chained', true, { chain: true }],
@@ -55,8 +80,9 @@ describe('season planner benchmark (about 2,000 candidate shows, 6 months)', () 
   ];
   for (const [label, dense, options] of cases) {
     it(`${label}: under ${LIMIT_MS} ms and feasible`, () => {
-      const { res, ms, shows, settings, opts } = bench(label, dense, options, 77);
-      expect(ms).toBeLessThan(LIMIT_MS);
+      const { res, ms, cpuMs, shows, settings, opts } = bench(label, dense, options, 77);
+      expect(cpuMs).toBeLessThan(LIMIT_MS);
+      if (!overloaded) expect(ms).toBeLessThan(LIMIT_MS);
       expect(res.stats.candidates).toBeGreaterThanOrEqual(1950);
       expect(res.plan.stops.length).toBeGreaterThan(0);
       expect(verifyPlan(res.plan, shows, { settings, blackout: opts.blackout })).toEqual([]);

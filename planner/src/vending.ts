@@ -54,7 +54,7 @@ import {
   toZonedIso,
   zonedTimeToInstant,
 } from './time.js';
-import { haversineMiles, type Leg, type LegSource, type Travel } from './travel.js';
+import { cosLatitude, haversineCos, haversineMiles, latitudeGapMiles, roadMilesForHours, type Leg, type LegSource, type Travel } from './travel.js';
 import type { ExchangeRates, LatLon, Place, PlannerShow, PlanningRules, VendorSettings, VendorStatus } from './types.js';
 import { PlannerError } from './types.js';
 
@@ -547,7 +547,8 @@ export class VendingEngine {
             list = prev.slice();
           }
         }
-        for (const a of arrivals[d]!) list.push(a);
+        const arr = arrivals[d]!;
+        for (let x = 0; x < arr.length; x++) list.push(arr[x]!);
         H[d] = paretoHome(list);
       }
       if (upTo > fin) fin = upTo;
@@ -563,6 +564,14 @@ export class VendingEngine {
     const viaHome = this.sameBase;
     const travel = s.travel;
     const scratch = { miles: 0, hours: 0 };
+    const depart: DepartOption[][] = nodes.map((_, i) => (usable(i) ? this.departOptions(i, homeOnly) : []));
+    // Pair drive times: the estimate from precomputed cosines (same numbers as travel.leg), or the
+    // travel object when real drive times are loaded.
+    const fast = !travel.hasKnown();
+    const lat = nodes.map((nd) => nd.show.lat);
+    const lon = nodes.map((nd) => nd.show.lon);
+    const cosLat = lat.map(cosLatitude);
+    const roadFactor = travel.model.roadFactor;
 
     for (const i of this.order) {
       if (!usable(i)) continue;
@@ -571,7 +580,9 @@ export class VendingEngine {
       const ins = incoming[i]!;
       incoming[i] = [];
 
-      for (const opt of this.departOptions(i, homeOnly)) {
+      const opts = depart[i]!;
+      for (let oi = 0; oi < opts.length; oi++) {
+        const opt = opts[oi]!;
         const j = opt.j;
         if (j > 0) {
           if (j > maxN) continue;
@@ -580,7 +591,9 @@ export class VendingEngine {
         }
         const dRel = T.first - 1 - j - hStart;
         if (dRel < 0) continue;
-        for (const e of H[dRel]!) {
+        const homes = H[dRel]!;
+        for (let hi = 0; hi < homes.length; hi++) {
+          const e = homes[hi]!;
           let k = 0;
           if (capped) {
             k = !monthReset || monthOf[dRel] === T.month ? e.k + 1 : 1;
@@ -592,8 +605,11 @@ export class VendingEngine {
       if (ins.length === 0) continue;
 
       const outs: OutLabel[] = [];
-      for (const L of ins) {
-        for (const vo of this.variantOptions(i, L.m, L.na, homeOnly, maxN)) {
+      for (let li = 0; li < ins.length; li++) {
+        const L = ins[li]!;
+        const vos = this.variantOptions(i, L.m, L.na, homeOnly, maxN);
+        for (let vi = 0; vi < vos.length; vi++) {
+          const vo = vos[vi]!;
           insertOut(outs, L.v + T.valueBase - cf * vo.cost, vo.m, L.k, vo.na, i, vo.variant, L);
         }
       }
@@ -619,6 +635,16 @@ export class VendingEngine {
 
       if (chain) {
         const eveCap = T.eveningCap[T.eveningCap.length - 1]!;
+        // Label independent shortcuts (exact). The worst label for going home is the one with the
+        // most morning driving; if even it, plus the cheapest way back out with no morning drive,
+        // costs no more than the hotel nights alone, every straight drive to U is beaten.
+        let maxM = 0;
+        for (let li = 0; li < outs.length; li++) if (outs[li]!.m > maxM) maxM = outs[li]!.m;
+        const worstHome = viaHome && s.objective === 'profit' ? this.returnOption(i, maxM, homeOnly) : null;
+        const reachMiles: number[] = [];
+        for (let g = 1; g <= G && g <= 400; g++) {
+          reachMiles[g] = roadMilesForHours(Math.min(eveCap, C) + (g - 1) * F + C + EPS, travel.model) + 1e-6;
+        }
         let pos = lowerBound(this.firstSorted, T.last + 1);
         for (; pos < this.order.length; pos++) {
           const u = this.order[pos]!;
@@ -627,15 +653,31 @@ export class VendingEngine {
           if (n > G) break;
           if (!usable(u)) continue;
           if (this.anyBlackout(T.last + 1, U.first - 1)) continue;
-          travel.fill(T.show, U.show, scratch);
-          const h = scratch.hours;
           const free = (n - 1) * F;
           const Mu = U.morningCap[0]!;
+          const maxHours = Math.min(eveCap, C) + free + Mu + EPS;
+          if (fast) {
+            // Quick checks on latitude alone, before any trigonometry.
+            const lower = latitudeGapMiles(lat[i]!, lat[u]!) * roadFactor;
+            if (n <= 400 && lower > reachMiles[n]!) continue;
+            if (worstHome) {
+              const out0 = depart[u]!;
+              const last = out0[out0.length - 1];
+              if (last && last.m <= EPS && worstHome.j + last.j <= n - 1) {
+                const directFloor = lower * perMile + n * this.hotel + (n - 1) * this.food;
+                if (worstHome.cost + last.cost <= directFloor + 1e-9) continue;
+              }
+            }
+            travel.fromStraight(haversineCos(lat[i]!, lon[i]!, cosLat[i]!, lat[u]!, lon[u]!, cosLat[u]!), scratch);
+          } else {
+            travel.fill(T.show, U.show, scratch);
+          }
+          const h = scratch.hours;
           // Quick reject: even a full evening cannot make it.
-          if (h > Math.min(eveCap, C) + free + Mu + EPS) continue;
+          if (h > maxHours) continue;
           const cost = scratch.miles * perMile + n * this.hotel + (n - 1) * this.food;
           const gain = this.travelGain(h);
-          const depU = viaHome ? this.departOptions(u, homeOnly) : null;
+          const depU = viaHome ? depart[u]! : null;
           const inc = incoming[u]!;
           for (let li = 0; li < outs.length; li++) {
             const L = outs[li]!;
@@ -654,7 +696,8 @@ export class VendingEngine {
             const r = rets[li];
             if (depU && r) {
               let beaten = false;
-              for (const o of depU) {
+              for (let oi = 0; oi < depU.length; oi++) {
+                const o = depU[oi]!;
                 if (r.j + o.j > n - 1) continue;
                 if (L.v - cf * r.cost + o.gain - cf * o.cost >= v - EPS && o.m <= m + EPS) {
                   beaten = true;

@@ -79,3 +79,27 @@ describe('travel model', () => {
     expect(m.miles[2]![2]).toBe(0);
   });
 });
+
+describe('pair estimates used by the search', () => {
+  it('give exactly the same numbers as the shared estimate', async () => {
+    const { cosLatitude, haversineCos, latitudeGapMiles } = await import('../src/travel.js');
+    const r = rng(8);
+    for (let i = 0; i < 5000; i++) {
+      const a = { lat: 25 + r() * 25, lon: -125 + r() * 60 };
+      const b = { lat: 25 + r() * 25, lon: -125 + r() * 60 };
+      expect(haversineCos(a.lat, a.lon, cosLatitude(a.lat), b.lat, b.lon, cosLatitude(b.lat))).toBe(haversineMiles(a, b));
+      expect(latitudeGapMiles(a.lat, b.lat)).toBeLessThanOrEqual(haversineMiles(a, b) + 1e-9);
+      const out = { miles: 0, hours: 0 };
+      new Travel().fromStraight(haversineMiles(a, b), out);
+      expect(out.hours).toBe(estimateLeg(a, b).hours);
+    }
+  });
+});
+
+describe('road miles for hours', () => {
+  it('inverts the speed bands', async () => {
+    const { roadMilesForHours } = await import('../src/travel.js');
+    for (let mi = 0.5; mi < 3000; mi *= 1.17) expect(roadMilesForHours(hoursForRoadMiles(mi))).toBeCloseTo(mi, 6);
+    expect(roadMilesForHours(0)).toBe(0);
+  });
+});

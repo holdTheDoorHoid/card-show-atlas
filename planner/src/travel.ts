@@ -65,29 +65,52 @@ export function resolveTravelModel(partial?: Partial<TravelModel> | null): Trave
   return m;
 }
 
+const TO_RAD = Math.PI / 180;
+
 /** Great circle distance in miles. */
 export function haversineMiles(a: LatLon, b: LatLon): number {
-  const toRad = Math.PI / 180;
-  const dLat = (b.lat - a.lat) * toRad;
-  const dLon = (b.lon - a.lon) * toRad;
-  const s =
-    Math.sin(dLat / 2) ** 2 + Math.cos(a.lat * toRad) * Math.cos(b.lat * toRad) * Math.sin(dLon / 2) ** 2;
+  return haversineCos(a.lat, a.lon, Math.cos(a.lat * TO_RAD), b.lat, b.lon, Math.cos(b.lat * TO_RAD));
+}
+
+/**
+ * The same great circle distance with the cosine of each latitude passed in, so callers that
+ * compare many pairs can compute it once per point. Gives exactly the same number as
+ * `haversineMiles`.
+ */
+export function haversineCos(latA: number, lonA: number, cosA: number, latB: number, lonB: number, cosB: number): number {
+  const dLat = (latB - latA) * TO_RAD;
+  const dLon = (lonB - lonA) * TO_RAD;
+  const s = Math.sin(dLat / 2) ** 2 + cosA * cosB * Math.sin(dLon / 2) ** 2;
   return 2 * EARTH_RADIUS_MILES * Math.asin(Math.min(1, Math.sqrt(s)));
 }
 
+/** Cosine of a latitude in degrees, exactly as `haversineMiles` computes it. */
+export function cosLatitude(lat: number): number {
+  return Math.cos(lat * TO_RAD);
+}
+
+/** A lower bound on the great circle distance from the latitudes alone (no trigonometry). */
+export function latitudeGapMiles(latA: number, latB: number): number {
+  return Math.abs(latB - latA) * TO_RAD * EARTH_RADIUS_MILES;
+}
+
 /** Hours to drive a number of road miles under the model. */
-export function hoursForRoadMiles(roadMiles: number, model: TravelModel = DEFAULT_TRAVEL_MODEL): number {
+export function hoursForRoadMiles(roadMiles: number, model?: TravelModel): number {
   if (!(roadMiles > 0)) return 0;
+  const m = model ?? DEFAULT_TRAVEL_MODEL;
+  const bands = m.bands;
   let left = roadMiles;
   let hours = 0;
-  for (const band of model.bands) {
-    const d = Math.min(left, band.miles);
+  // A plain indexed loop: this runs for every pair of shows, often before the code is optimized.
+  for (let i = 0; i < bands.length; i++) {
+    const band = bands[i]!;
+    const d = left < band.miles ? left : band.miles;
     hours += d / band.mph;
     left -= d;
     if (left <= 0) break;
   }
-  if (left > 0) hours += left / model.cruiseMph;
-  return hours + model.overheadMinutes / 60;
+  if (left > 0) hours += left / m.cruiseMph;
+  return hours + m.overheadMinutes / 60;
 }
 
 /** Writes estimated road miles and hours into `out` without allocating. */
@@ -101,6 +124,23 @@ export function estimateInto(a: LatLon, b: LatLon, model: TravelModel, out: { mi
   const miles = straight * model.roadFactor;
   out.miles = miles;
   out.hours = hoursForRoadMiles(miles, model);
+}
+
+/** The longest road distance that takes at most `hours` under the model (inverse of the above). */
+export function roadMilesForHours(hours: number, model?: TravelModel): number {
+  const m = model ?? DEFAULT_TRAVEL_MODEL;
+  let left = hours - m.overheadMinutes / 60;
+  if (!(left > 0)) return 0;
+  let miles = 0;
+  const bands = m.bands;
+  for (let i = 0; i < bands.length; i++) {
+    const band = bands[i]!;
+    const t = band.miles / band.mph;
+    if (left <= t) return miles + left * band.mph;
+    miles += band.miles;
+    left -= t;
+  }
+  return miles + left * m.cruiseMph;
 }
 
 /** Estimated leg between two points. */
@@ -201,6 +241,18 @@ export class Travel {
 
   hasKnown(): boolean {
     return this.known.size > 0;
+  }
+
+  /** Road miles and hours from a straight line distance, under this model. */
+  fromStraight(straight: number, out: { miles: number; hours: number }): void {
+    if (straight < 1e-6) {
+      out.miles = 0;
+      out.hours = 0;
+      return;
+    }
+    const miles = straight * this.model.roadFactor;
+    out.miles = miles;
+    out.hours = hoursForRoadMiles(miles, this.model);
   }
 
   /** Miles and hours into `out`, without allocating when no known legs are loaded. */
