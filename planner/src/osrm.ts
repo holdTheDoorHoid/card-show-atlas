@@ -85,7 +85,10 @@ export class OsrmRouteProvider implements RouteProvider {
     if (typeof opts.fetch !== 'function') {
       throw new PlannerError('no_fetch', 'The routing adapter needs a fetch function.');
     }
-    this.fetchFn = opts.fetch;
+    // Call it as a plain function: a browser's native fetch throws when called as a method of
+    // another object.
+    const f = opts.fetch;
+    this.fetchFn = (url, init) => f(url, init);
     this.baseUrl = (opts.baseUrl ?? 'https://router.project-osrm.org').replace(/\/+$/, '');
     this.profile = opts.profile ?? 'driving';
     this.timeoutMs = opts.timeoutMs ?? 10_000;

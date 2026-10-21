@@ -282,7 +282,7 @@ organizer").
 ### 3.6 Real drive times
 
 ```ts
-const provider = new OsrmRouteProvider({ fetch: globalThis.fetch.bind(globalThis) });
+const provider = new OsrmRouteProvider({ fetch });
 const check = await checkRealDriveTimes(plan, { kind: 'weekend', shows, settings, options }, provider);
 // { ok, source: 'osrm' | 'estimate', label, plan, matrix, changes: ['Drive to Edison, NJ is 1 h 40 min, 15 min more than estimated.'], problems: [] }
 ```
@@ -463,11 +463,19 @@ the range and end that long after it; the shows themselves are always inside the
 shows' priority scores, where the travel factor uses the leg actually driven to each show; costs then
 only break ties. Waitlisted and tentative shows are planned and marked, not penalized.
 
-**Speed.** Season benchmark (`npm run bench`, about 2,000 candidates over six months, one thread):
-on this machine a cold run took about 0.4 s with the machine idle and about 1.1 s with the machine at a
-load average near 20; warm runs take 0.2 to 0.7 s. The five benchmark cases cover a dense region with
-and without limits, a nationwide spread across four time zones, going home between shows, and score
-mode. The test fails above 2 seconds.
+**Speed.** Season benchmark (`npm run bench`, about 2,000 candidates over six months, five cases on
+fresh data in one fresh process, so the first case also pays for JIT warm up): the first case took
+about 0.4 s of CPU and 0.7 to 1.1 s of wall clock time while other work held the machine at a load
+average of 33 to 43 on 8 cores; the other cases took 0.1 to 0.3 s of CPU. The five cases cover a
+dense region with and without limits, a nationwide spread across four time zones, going home
+between shows, and score mode. The test fails when the planner's own CPU time passes 2 seconds, and
+also when wall time does unless the machine is overloaded (load average above the core count), in
+which case wall time is only logged.
+
+What makes it fast: shows are prepared once (instants, capacities, value); time zone offsets are
+cached per day and per quarter hour; labels are checked for dominance before they are created;
+straight drives are skipped, exactly, when a trip home in between is at least as good, often before
+any trigonometry (a latitude only bound decides); and the hot loops avoid allocation.
 
 ### 5.6 Shopping (orienteering with time windows)
 

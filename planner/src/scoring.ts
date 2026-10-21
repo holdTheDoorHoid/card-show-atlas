@@ -23,14 +23,8 @@ import {
 } from './factors.js';
 import { formatDuration, formatMoney, formatNumber, formatWhen, joinWords } from './format.js';
 import {
-  addShowCosts,
-  addTripCosts,
-  CostSheet,
-  estimateSales,
-  finishEstimate,
   resolveProfitModel,
   resolveSizeClass,
-  vendorCurrency,
   type ProfitEstimate,
   type ProfitModel,
 } from './profit.js';
