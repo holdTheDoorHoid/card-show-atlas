@@ -17,5 +17,5 @@
     "rootDir": ".",
     "noEmit": true
   },
-  "include": ["src", "test", "fixtures", "vitest.config.ts"]
+  "include": ["src", "test", "fixtures", "vitest.config.ts", "vitest.bench.config.ts"]
 }

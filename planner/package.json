@@ -27,9 +27,10 @@
   "scripts": {
     "build": "tsc -p tsconfig.build.json",
     "typecheck": "tsc -p tsconfig.json --noEmit",
-    "test": "npm run typecheck && vitest run",
+    "test": "npm run typecheck && vitest run && npm run bench",
+    "test:unit": "vitest run",
     "test:watch": "vitest",
-    "bench": "vitest run test/season.bench.test.ts"
+    "bench": "vitest run --config vitest.bench.config.ts --disableConsoleIntercept"
   },
   "engines": {
     "node": ">=20"
