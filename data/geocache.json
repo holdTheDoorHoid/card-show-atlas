@@ -417,6 +417,12 @@
 "lon": -79.790675,
 "on": "2026-10-21"
 },
+"addr|US|209 s main st|bryan|oh|43506": {
+"by": "census",
+"lat": 41.473147,
+"lon": -84.550966,
+"on": "2026-10-30"
+},
 "addr|US|21850 oxnard st|woodland hills|ca|91367": {
 "by": "census",
 "lat": 34.17909,
