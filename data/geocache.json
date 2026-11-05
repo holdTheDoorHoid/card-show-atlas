@@ -1023,6 +1023,10 @@
 "lon": -98.603009,
 "on": "2026-10-21"
 },
+"addr|US|south concourse hall sb|orlando|fl|32819": {
+"miss": true,
+"on": "2026-11-05"
+},
 "city|CA|airdrie|ab": {
 "by": "nominatim",
 "lat": 51.28597,
@@ -2448,6 +2452,12 @@
 "venue|US|nys fairgrounds horticulture building|syracuse|ny": {
 "miss": true,
 "on": "2026-10-21"
+},
+"venue|US|orange county convention center|orlando|fl": {
+"by": "nominatim",
+"lat": 28.424724,
+"lon": -81.469196,
+"on": "2026-11-05"
 },
 "venue|US|osceola heritage park|kissimmee|fl": {
 "miss": true,
