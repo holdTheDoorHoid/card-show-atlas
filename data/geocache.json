@@ -1373,6 +1373,12 @@
 "lon": -84.202992,
 "on": "2026-10-21"
 },
+"city|US|lehighton|pa": {
+"by": "nominatim",
+"lat": 40.833991,
+"lon": -75.713557,
+"on": "2026-11-11"
+},
 "city|US|littleton|co": {
 "by": "nominatim",
 "lat": 39.613321,
@@ -2318,6 +2324,10 @@
 "venue|US|jackpot trading cards|galesburg|il": {
 "miss": true,
 "on": "2026-10-21"
+},
+"venue|US|jokers are wild game cafe|lehighton|pa": {
+"miss": true,
+"on": "2026-11-11"
 },
 "venue|US|k o p sports and entertainment center|san antonio|tx": {
 "miss": true,

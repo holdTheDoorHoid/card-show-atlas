@@ -1,55 +1,55 @@
 {
   "collectacon": {
-    "date": "2026-11-10",
+    "date": "2026-11-11",
     "message": "",
     "records": 2,
     "skipped": 0,
     "status": "ok"
   },
   "limitless_results": {
-    "date": "2026-11-10",
+    "date": "2026-11-11",
     "message": "",
-    "records": 82,
+    "records": 81,
     "skipped": 0,
     "status": "ok"
   },
   "lorcana_playhub": {
-    "date": "2026-11-10",
+    "date": "2026-11-11",
     "message": "",
     "records": 17,
     "skipped": 0,
     "status": "ok"
   },
   "mtg_premier": {
-    "date": "2026-11-10",
+    "date": "2026-11-11",
     "message": "",
     "records": 19,
     "skipped": 0,
     "status": "ok"
   },
   "pokemon_championships": {
-    "date": "2026-11-10",
+    "date": "2026-11-11",
     "message": "",
     "records": 7,
     "skipped": 0,
     "status": "ok"
   },
   "riftbound_locator": {
-    "date": "2026-11-10",
+    "date": "2026-11-11",
     "message": "LayoutChanged: riftbound_locator: the page https://api.cloudflare.riftbound.uvsgames.com/hydraproxy/api/v2/events/ no longer looks as expected (upcoming events for the US and Canada); found none at all. The layout may have changed, so nothing was written and the last good file was kept.",
     "records": 0,
     "skipped": 0,
     "status": "error"
   },
   "swu_calendar": {
-    "date": "2026-11-10",
+    "date": "2026-11-11",
     "message": "",
     "records": 4,
     "skipped": 0,
     "status": "ok"
   },
   "yugioh_events": {
-    "date": "2026-11-10",
+    "date": "2026-11-11",
     "message": "",
     "records": 1,
     "skipped": 0,
