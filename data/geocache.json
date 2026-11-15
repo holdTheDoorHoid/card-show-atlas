@@ -1231,6 +1231,12 @@
 "lon": -104.984862,
 "on": "2026-10-21"
 },
+"city|US|detroit|mi": {
+"by": "nominatim",
+"lat": 42.331551,
+"lon": -83.04664,
+"on": "2026-11-15"
+},
 "city|US|enfield|ct": {
 "by": "nominatim",
 "lat": 41.976772,
